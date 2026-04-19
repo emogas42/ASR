@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə.">
+<title>ASR Development Consulting Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =========================================
+   RESET & BASE
+========================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #FFFFFF;
+  color: #1A1A2E;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea { font-family: inherit; }
+
+/* =========================================
+   CSS VARIABLES
+========================================= */
+:root {
+  --navy:        #0B1F3A;
+  --navy-dark:   #071426;
+  --navy-mid:    #142D52;
+  --navy-light:  #1B4280;
+  --gold:        #C8922A;
+  --gold-bright: #E4A832;
+  --gold-pale:   #F3E0B0;
+  --orange:      #CF5E12;
+  --white:       #FFFFFF;
+  --off-white:   #F7F5F0;
+  --border:      #E2DDD4;
+  --gray-light:  #EAE6DE;
+  --gray-mid:    #9C9487;
+  --gray-dark:   #4E4840;
+  --text:        #1A1810;
+  --text-muted:  #64594E;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --shadow-sm:   0 2px 8px rgba(11,31,58,0.08);
+  --shadow-md:   0 8px 32px rgba(11,31,58,0.12);
+  --shadow-lg:   0 20px 60px rgba(11,31,58,0.18);
+  --transition:  0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================
+   UTILITY
+========================================= */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.section-desc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  max-width: 560px;
+}
+.section-header-center { text-align: center; margin-bottom: 3.5rem; }
+.section-header-center .section-desc { margin: 0 auto; }
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  border: none;
+  transition: var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(200,146,42,0.3);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200,146,42,0.45);
+}
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.35);
+}
+.btn-outline-white:hover {
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+  background: rgba(200,146,42,0.06);
+}
+.btn-outline-navy {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+.btn-outline-navy:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: rgba(11,31,58,0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(200,146,42,0.15);
+  transition: var(--transition);
+}
+#navbar.scrolled {
+  background: rgba(7,20,38,0.99);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: 11px; }
+.logo-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.logo-icon svg { width: 22px; height: 22px; }
+.logo-text-wrap { line-height: 1; }
+.logo-name {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+}
+.logo-tagline {
+  font-size: 0.5625rem;
+  font-weight: 500;
+  color: var(--gold-bright);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.nav-item { position: relative; }
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 13px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--gold-bright);
+  background: rgba(200,146,42,0.1);
+}
+.nav-chevron {
+  width: 10px; height: 10px;
+  transition: transform var(--transition);
+  flex-shrink: 0;
+}
+.nav-item:hover .nav-chevron { transform: rotate(180deg); }
+
+/* Dropdown */
+.nav-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: var(--navy-dark);
+  border: 1px solid rgba(200,146,42,0.2);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  min-width: 200px;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+}
+.nav-item:hover .nav-dropdown { display: block; }
+.nav-dropdown a {
+  display: block;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  letter-spacing: 0.04em;
+}
+.nav-dropdown a:hover { color: var(--gold-bright); background: rgba(200,146,42,0.1); }
+
+/* Mega Menu */
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy-dark);
+  border: 1px solid rgba(200,146,42,0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  width: 640px;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.nav-item:hover .mega-menu { display: grid; }
+.mega-col-title {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(200,146,42,0.2);
+}
+.mega-col a {
+  display: block;
+  color: rgba(255,255,255,0.68);
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 6px 0;
+  transition: var(--transition);
+  letter-spacing: 0.03em;
+}
+.mega-col a:hover { color: var(--gold-bright); padding-left: 6px; }
+
+/* CTA nav button */
+.nav-cta {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+  color: var(--white) !important;
+  font-size: 0.625rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  padding: 10px 20px !important;
+  border-radius: var(--radius-md) !important;
+  border: none !important;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 3px 12px rgba(200,146,42,0.3);
+}
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(200,146,42,0.45) !important;
+  background: rgba(200,146,42,0.1) !important;
+  color: var(--gold-bright) !important;
+  background: linear-gradient(135deg, var(--gold-bright) 0%, var(--orange) 100%) !important;
+}
+
+/* Mobile toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 72px; left: 0; right: 0; bottom: 0;
+  background: var(--navy-dark);
+  z-index: 9998;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+.mobile-nav.open { display: block; }
+.mobile-nav-link {
+  display: block;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.mobile-sub { padding-left: 1rem; }
+.mobile-sub a {
+  display: block;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.8125rem;
+  font-weight: 400;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.mobile-nav .btn-gold { width: 100%; justify-content: center; margin-top: 1.5rem; }
+
+/* =========================================
+   HERO
+========================================= */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--navy-dark);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg-geo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-bg-geo::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 70%;
+  height: 140%;
+  background: linear-gradient(135deg, rgba(27,66,128,0.45) 0%, transparent 60%);
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.hero-bg-geo::after {
+  content: '';
+  position: absolute;
+  bottom: -5%;
+  left: 5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200,146,42,0.06) 0%, transparent 70%);
+}
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 9rem 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+.hero-left {}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(200,146,42,0.12);
+  border: 1px solid rgba(200,146,42,0.28);
+  border-radius: 50px;
+  padding: 7px 16px;
+  margin-bottom: 1.75rem;
+}
+.hero-badge-dot {
+  width: 6px; height: 6px;
+  background: var(--gold-bright);
+  border-radius: 50%;
+  animation: blink 2.2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+.hero-badge span {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+.hero-title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+.hero-title .gold { color: var(--gold-bright); }
+.hero-title .line2 { display: block; }
+.hero-sub {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.9;
+  max-width: 460px;
+  margin-bottom: 2.75rem;
+  font-weight: 400;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+.hero-stats { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.hero-stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.hero-stat-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.42);
+  margin-top: 4px;
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-visual {
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+}
+.hero-card-main {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,146,42,0.18);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+.hero-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.hero-card-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.hero-card-icon svg { width: 22px; height: 22px; fill: white; }
+.hero-card-title { font-size: 0.875rem; font-weight: 700; color: var(--white); }
+.hero-card-sub { font-size: 0.6875rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+.hero-cert-list { display: flex; flex-direction: column; gap: 10px; }
+.hero-cert-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-sm);
+}
+.cert-dot {
+  width: 8px; height: 8px;
+  background: var(--gold-bright);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cert-name { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.78); }
+.cert-status { margin-left: auto; font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.08em; color: #4CAF50; background: rgba(76,175,80,0.12); padding: 3px 8px; border-radius: 50px; }
+.hero-float-badge {
+  position: absolute;
+  bottom: -18px;
+  left: -24px;
+  background: var(--navy);
+  border: 1px solid rgba(200,146,42,0.25);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-md);
+}
+.float-num { font-size: 1.25rem; font-weight: 900; color: var(--gold-bright); }
+.float-text { font-size: 0.625rem; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.4; }
+
+/* =========================================
+   TRUST BAR
+========================================= */
+#trust {
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+  overflow: hidden;
+}
+.trust-label {
+  text-align: center;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: 1.25rem;
+}
+.trust-track-wrapper { overflow: hidden; position: relative; }
+.trust-track {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 28s linear infinite;
+  width: max-content;
+}
+.trust-track:hover { animation-play-state: paused; }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 22px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.trust-item-icon {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.trust-item-icon svg { width: 14px; height: 14px; fill: var(--gold-bright); }
+.trust-item-name { font-size: 0.6875rem; font-weight: 700; color: var(--gray-dark); letter-spacing: 0.06em; }
+
+/* =========================================
+   LEAD MAGNET
+========================================= */
+#lead-magnet {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 2rem;
+}
+.lead-bg-shape {
+  position: absolute;
+  top: -30%;
+  right: -5%;
+  width: 55%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(27,66,128,0.35) 0%, transparent 60%);
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  pointer-events: none;
+}
+.lead-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.lead-left {}
+.lead-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(200,146,42,0.15);
+  border: 1px solid rgba(200,146,42,0.3);
+  border-radius: 50px;
+  padding: 6px 14px;
+  margin-bottom: 1.5rem;
+}
+.lead-badge-pill span {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+.lead-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.125rem;
+}
+.lead-desc {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.85;
+  margin-bottom: 2rem;
+  max-width: 440px;
+}
+.lead-checks { display: flex; flex-direction: column; gap: 10px; }
+.lead-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.65);
+}
+.lead-check-icon {
+  width: 20px; height: 20px;
+  background: rgba(200,146,42,0.18);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--gold-bright);
+  font-weight: 700;
+}
+.lead-right {}
+.lead-form-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(200,146,42,0.2);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  backdrop-filter: blur(8px);
+}
+.lead-form-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.lead-form-card p {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
+}
+.form-group { margin-bottom: 1rem; }
+.form-group label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.form-group input::placeholder { color: rgba(255,255,255,0.3); }
+.form-group input:focus,
+.form-group select:focus {
+  border-color: rgba(200,146,42,0.55);
+}
+.form-group select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23aaa' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.form-group select option { background: var(--navy-dark); color: var(--white); }
+.lead-form-card .btn-gold { width: 100%; justify-content: center; font-size: 0.6875rem; padding: 15px; }
+.lead-note {
+  margin-top: 12px;
+  font-size: 0.625rem;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+/* =========================================
+   SERVICES
+========================================= */
+#xidmetler { padding: 6rem 2rem; background: var(--white); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--orange));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.service-card:hover::after { transform: scaleX(1); }
+.service-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+.service-icon svg { width: 26px; height: 26px; }
+.si-blue { background: rgba(11,31,58,0.08); }
+.si-blue svg { fill: var(--navy); }
+.si-gold { background: rgba(200,146,42,0.1); }
+.si-gold svg { fill: var(--gold); }
+.si-orange { background: rgba(207,94,18,0.08); }
+.si-orange svg { fill: var(--orange); }
+.si-teal { background: rgba(0,128,128,0.08); }
+.si-teal svg { fill: #007878; }
+.service-name { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.625rem; }
+.service-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 1.25rem; }
+.service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: var(--off-white);
+  color: var(--gray-dark);
+  border: 1px solid var(--border);
+}
+
+/* =========================================
+   COUNTERS
+========================================= */
+#counters {
+  background: var(--navy);
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+#counters::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.counters-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.counter-item {
+  background: var(--navy);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.counter-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+.counter-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+#haqqimizda { padding: 6rem 2rem; background: var(--off-white); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.about-timeline { margin-top: 2rem; }
+.timeline-item { display: flex; gap: 1.25rem; margin-bottom: 1.75rem; }
+.timeline-left { display: flex; flex-direction: column; align-items: center; }
+.timeline-year {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  background: var(--gold-pale);
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+.timeline-line {
+  width: 1px;
+  flex: 1;
+  background: var(--border);
+  margin-top: 6px;
+}
+.timeline-content {}
+.timeline-title { font-size: 0.875rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.timeline-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.7; }
+
+.about-right {}
+.certs-section-title {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+}
+.certs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.cert-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+  transition: var(--transition);
+}
+.cert-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.cert-card-icon {
+  width: 48px; height: 48px;
+  margin: 0 auto 0.75rem;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.cert-card-icon svg { width: 26px; height: 26px; fill: var(--gold-bright); }
+.cert-card-name { font-size: 0.75rem; font-weight: 700; color: var(--navy); }
+.cert-card-type { font-size: 0.5625rem; color: var(--gray-mid); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
+
+.awards-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.award-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+.award-item:hover { border-color: var(--gold-pale); background: #FFFDF7; }
+.award-icon { color: var(--gold); font-size: 1.125rem; flex-shrink: 0; }
+.award-text { font-size: 0.8125rem; font-weight: 500; color: var(--text); }
+
+/* =========================================
+   SERVICES DETAIL
+========================================= */
+#xidmetler-detail { padding: 6rem 2rem; background: var(--white); }
+.services-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.svc-detail-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.svc-detail-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-detail-head {
+  background: var(--navy);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.svc-detail-head::after {
+  content: '';
+  position: absolute;
+  bottom: -20px; right: -20px;
+  width: 90px; height: 90px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+}
+.svc-detail-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.06);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.04em;
+}
+.svc-detail-name { font-size: 1.0625rem; font-weight: 800; color: var(--white); margin-bottom: 0.375rem; }
+.svc-detail-sub { font-size: 0.6875rem; color: var(--gold-bright); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.svc-detail-body { padding: 1.75rem; }
+.svc-detail-body p { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem; }
+.svc-detail-list { display: flex; flex-direction: column; gap: 8px; }
+.svc-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+.svc-list-item::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+.svc-highlight {
+  margin-top: 1.25rem;
+  padding: 12px 14px;
+  background: rgba(200,146,42,0.06);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* =========================================
+   PROJECTS
+========================================= */
+#tecrubekm { padding: 6rem 2rem; background: var(--off-white); }
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.project-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.project-industry {
+  padding: 0.625rem 1.25rem;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.project-industry-name {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+}
+.project-year {
+  font-size: 0.5625rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+.project-body { padding: 1.5rem; }
+.project-label {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  margin-bottom: 4px;
+  margin-top: 14px;
+}
+.project-label:first-child { margin-top: 0; }
+.project-text { font-size: 0.8125rem; color: var(--text); line-height: 1.7; }
+.project-result-text {
+  font-size: 0.8125rem;
+  color: #197A3A;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.project-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 12px 0;
+}
+
+/* =========================================
+   GALLERY
+========================================= */
+#qalereya { padding: 6rem 2rem; background: var(--navy-dark); }
+#qalereya .section-title { color: var(--white); }
+.gallery-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.gallery-tab {
+  padding: 9px 20px;
+  border-radius: 50px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  transition: var(--transition);
+}
+.gallery-tab.active, .gallery-tab:hover {
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  border-color: transparent;
+  color: var(--white);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.gallery-item:hover { transform: scale(1.02); }
+.gallery-item-inner {
+  text-align: center;
+  padding: 1.5rem;
+}
+.gallery-icon { font-size: 2rem; margin-bottom: 0.75rem; opacity: 0.4; }
+.gallery-item-title { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.6); }
+.gallery-item-cat { font-size: 0.5625rem; color: var(--gold-bright); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-top: 4px; }
+.gallery-item:nth-child(1) { grid-column: span 2; }
+
+/* =========================================
+   RESOURCES
+========================================= */
+#bilik-merkezi { padding: 6rem 2rem; background: var(--white); }
+.resources-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.resources-col-title {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.resource-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.resource-item:hover { border-color: var(--gold-pale); background: #FFFDF7; transform: translateX(4px); }
+.resource-item-icon {
+  width: 42px; height: 42px;
+  background: linear-gradient(135deg, var(--navy), var(--navy-light));
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.resource-item-icon svg { width: 20px; height: 20px; fill: var(--gold-bright); }
+.resource-item-name { font-size: 0.875rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.resource-item-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; }
+.resource-dl {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--gold);
+  gap: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.blog-item {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.blog-item:hover { border-color: var(--gold-pale); background: #FFFDF7; }
+.blog-date { font-size: 0.5625rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.blog-title { font-size: 0.9375rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.4; }
+.blog-excerpt { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.7; }
+.blog-read-more { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-top: 0.75rem; display: inline-block; }
+
+/* =========================================
+   FOOTER
+========================================= */
+#footer { background: var(--navy-dark); }
+.footer-top {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+.footer-brand {}
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 1.25rem; }
+.footer-logo-icon {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.footer-logo-icon svg { width: 20px; height: 20px; }
+.footer-logo-text { font-size: 0.75rem; font-weight: 800; color: var(--white); letter-spacing: 0.1em; text-transform: uppercase; }
+.footer-tagline-txt { font-size: 0.8125rem; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 1.5rem; }
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 0.875rem;
+}
+.footer-contact-icon { color: var(--gold-bright); font-size: 0.875rem; flex-shrink: 0; margin-top: 2px; }
+.footer-contact-text { font-size: 0.8125rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+.footer-wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: #25D366;
+  color: white;
+  border-radius: var(--radius-md);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 1.25rem;
+  transition: var(--transition);
+}
+.footer-wa-btn:hover { background: #20B858; transform: translateY(-1px); }
+
+.footer-col-title {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 1.25rem;
+}
+.footer-col-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-col-links a {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.5);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer-col-links a::before {
+  content: '';
+  width: 4px; height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.footer-col-links a:hover { color: var(--gold-bright); padding-left: 4px; }
+
+.footer-expert-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,146,42,0.18);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 0.5rem;
+}
+.footer-expert-form h4 { font-size: 0.75rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.footer-expert-form p { font-size: 0.6875rem; color: rgba(255,255,255,0.4); margin-bottom: 1rem; line-height: 1.6; }
+.footer-expert-form input {
+  width: 100%;
+  padding: 10px 13px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8125rem;
+  outline: none;
+  margin-bottom: 8px;
+  transition: border-color var(--transition);
+}
+.footer-expert-form input::placeholder { color: rgba(255,255,255,0.28); }
+.footer-expert-form input:focus { border-color: rgba(200,146,42,0.45); }
+.footer-expert-form button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.footer-expert-form button:hover { opacity: 0.9; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy { font-size: 0.6875rem; color: rgba(255,255,255,0.3); }
+.trust-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.trust-badge {
+  padding: 5px 12px;
+  border: 1px solid rgba(200,146,42,0.2);
+  border-radius: 50px;
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(200,146,42,0.7);
+  text-transform: uppercase;
+}
+
+/* =========================================
+   SCROLL ANIMATIONS
+========================================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1100px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-detail-grid { grid-template-columns: repeat(2, 1fr); }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .counters-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; gap: 3rem; }
+  .hero-right { display: none; }
+  .about-grid { grid-template-columns: 1fr; }
+  .lead-inner { grid-template-columns: 1fr; }
+  .resources-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-menu { display: none; }
+  .nav-cta { display: none; }
+  .nav-toggle { display: flex; }
+  .services-grid { grid-template-columns: 1fr; }
+  .services-detail-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .counters-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-item:nth-child(1) { grid-column: span 1; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .certs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .counters-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item:nth-child(1) { grid-column: span 1; }
+}
+</style>
+</head>
+<body>
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="#hero" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 7V12C3 16.5 7 20.7 12 22C17 20.7 21 16.5 21 12V7L12 2Z" fill="#0B1F3A"/>
+          <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">ASR Development</span>
+        <span class="logo-tagline">Consulting Group</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-menu">
+      <!-- Haqqımızda -->
+      <li class="nav-item">
+        <button class="nav-link">
+          Haqqımızda
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="nav-dropdown">
+          <a href="#haqqimizda">Şirkət Profili</a>
+          <a href="#haqqimizda">Tariximiz (2009–2019)</a>
+          <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
+        </div>
+      </li>
+
+      <!-- Xidmətlər Mega -->
+      <li class="nav-item">
+        <button class="nav-link">
+          Xidmətlər
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="mega-menu">
+          <div class="mega-col">
+            <div class="mega-col-title">Qida Təhlükəsizliyi</div>
+            <a href="#xidmetler-detail">ISO 22000</a>
+            <a href="#xidmetler-detail">HACCP</a>
+            <a href="#xidmetler-detail">BRCGS</a>
+            <a href="#xidmetler-detail">IFS Standartı</a>
+            <a href="#xidmetler-detail">Texnoloji Audit</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">Strateji İdarəetmə</div>
+            <a href="#xidmetler-detail">MQ Sistemləri</a>
+            <a href="#xidmetler-detail">Strateji Planlaşdırma</a>
+            <a href="#xidmetler-detail">HR Audit</a>
+          </div>
+          <div class="mega-col">
+            <div class="mega-col-title">İqtisadi-Hüquqi</div>
+            <a href="#xidmetler-detail">Qanunvericilik Ekspertizası</a>
+            <a href="#xidmetler-detail">Feasibility Analizləri</a>
+            <a href="#xidmetler-detail">RIA Xidmətləri</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Təcrübəmiz -->
+      <li class="nav-item">
+        <button class="nav-link">
+          Təcrübəmiz
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="nav-dropdown">
+          <a href="#tecrubekm">Uğurlu Layihələr</a>
+          <a href="#tecrubekm">Ət Sənayesi</a>
+          <a href="#tecrubekm">Süd Sənayesi</a>
+          <a href="#tecrubekm">HoReCa Sektoru</a>
+        </div>
+      </li>
+
+      <!-- Media -->
+      <li class="nav-item">
+        <button class="nav-link">
+          Daxili Mətbəx
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="nav-dropdown">
+          <a href="#qalereya">Foto Qalereya</a>
+          <a href="#qalereya">Video İcmallar</a>
+          <a href="#bilik-merkezi">Xəbərlər</a>
+        </div>
+      </li>
+
+      <!-- Bilik Mərkəzi -->
+      <li class="nav-item">
+        <button class="nav-link">
+          Bilik Mərkəzi
+          <svg class="nav-chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="nav-dropdown">
+          <a href="#bilik-merkezi">Ekspert Bloqu</a>
+          <a href="#bilik-merkezi">Pulsuz Yükləmələr</a>
+        </div>
+      </li>
+
+      <!-- Əlaqə -->
+      <li class="nav-item">
+        <a href="#footer" class="nav-link">Əlaqə</a>
+      </li>
+    </ul>
+
+    <a href="#lead-magnet" class="btn nav-cta">Pulsuz Diaqnostika</a>
+
+    <!-- Mobile Toggle -->
+    <button class="nav-toggle" id="mobileToggle" aria-label="Menyu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#haqqimizda" class="mobile-nav-link">Haqqımızda</a>
+    <div class="mobile-sub">
+      <a href="#haqqimizda">Şirkət Profili</a>
+      <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
+    </div>
+    <a href="#xidmetler" class="mobile-nav-link">Xidmətlər</a>
+    <div class="mobile-sub">
+      <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+      <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+      <a href="#xidmetler-detail">İqtisadi-Hüquqi</a>
+    </div>
+    <a href="#tecrubekm" class="mobile-nav-link">Təcrübəmiz</a>
+    <a href="#qalereya" class="mobile-nav-link">Daxili Mətbəx</a>
+    <a href="#bilik-merkezi" class="mobile-nav-link">Bilik Mərkəzi</a>
+    <a href="#footer" class="mobile-nav-link">Əlaqə</a>
+    <a href="#lead-magnet" class="btn btn-gold">Pulsuz Diaqnostika</a>
+  </div>
+</nav>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+<section id="hero">
+  <div class="hero-bg-geo"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>2009-dan bəri fəaliyyətdəyik — 15 il Təcrübə</span>
+      </div>
+      <h1 class="hero-title">
+        Strateji Həllər,<br>
+        <span class="gold">Dayanıqlı</span>
+        <span class="line2">İnkişaf.</span>
+      </h1>
+      <p class="hero-sub">
+        Qida təhlükəsizliyi, strateji idarəetmə və hüquqi ekspertiza sahəsində beynəlxalq sertifikatlı mütəxəssislərlə biznesinizi gələcəyə hazırlayırıq.
+      </p>
+      <div class="hero-actions">
+        <a href="#lead-magnet" class="btn btn-gold">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 12H15M12 9V15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          Pulsuz Diaqnostika
+        </a>
+        <a href="#xidmetler" class="btn btn-outline-white">Xidmətlər →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">50+</div>
+          <div class="hero-stat-label">Ekspert</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100+</div>
+          <div class="hero-stat-label">Tamamlanmış Layihə</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">15</div>
+          <div class="hero-stat-label">İl Təcrübə</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">12+</div>
+          <div class="hero-stat-label">Beynəlxalq Sertifikat</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <div class="hero-card-header">
+            <div class="hero-card-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12L11 14L15 10M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.052-.143-2.072-.404-3.016z"/></svg>
+            </div>
+            <div>
+              <div class="hero-card-title">Aktiv Sertifikatlar</div>
+              <div class="hero-card-sub">Beynəlxalq tanınma</div>
+            </div>
+          </div>
+          <div class="hero-cert-list">
+            <div class="hero-cert-item">
+              <div class="cert-dot" style="background:#4CAF50"></div>
+              <span class="cert-name">ISO 22000 Lead Auditor</span>
+              <span class="cert-status">Aktiv</span>
+            </div>
+            <div class="hero-cert-item">
+              <div class="cert-dot" style="background:#4CAF50"></div>
+              <span class="cert-name">HACCP Sertifikatı</span>
+              <span class="cert-status">Aktiv</span>
+            </div>
+            <div class="hero-cert-item">
+              <div class="cert-dot" style="background:#4CAF50"></div>
+              <span class="cert-name">BRCGS İcazə Auditor</span>
+              <span class="cert-status">Aktiv</span>
+            </div>
+            <div class="hero-cert-item">
+              <div class="cert-dot" style="background:#E8A832"></div>
+              <span class="cert-name">IFS Food Standartı</span>
+              <span class="cert-status" style="color:#E8A832;background:rgba(232,168,50,0.12)">Yenilənir</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-float-badge">
+          <div class="float-num">15+</div>
+          <div class="float-text">İllik<br>Təcrübə</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     TRUST BAR
+========================================= -->
+<div id="trust">
+  <p class="trust-label">Etibarlı Tərəfdaşlarımız &amp; Müştərilərimiz</p>
+  <div class="trust-track-wrapper">
+    <div class="trust-track">
+      <!-- Set 1 -->
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L3 7v10l9 5 9-5V7L12 2z"/></svg></div><span class="trust-item-name">AQTA Tərəfdaşı</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><span class="trust-item-name">ISO Akkreditasiya</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/></svg></div><span class="trust-item-name">Dövlət Qurumları</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><span class="trust-item-name">Ərzaq Holdinqləri</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg></div><span class="trust-item-name">Süd Müəssisələri</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div><span class="trust-item-name">HoReCa Şəbəkəsi</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div><span class="trust-item-name">Ət İstehsalçıları</span></div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L3 7v10l9 5 9-5V7L12 2z"/></svg></div><span class="trust-item-name">AQTA Tərəfdaşı</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><span class="trust-item-name">ISO Akkreditasiya</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/></svg></div><span class="trust-item-name">Dövlət Qurumları</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div><span class="trust-item-name">Ərzaq Holdinqləri</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/></svg></div><span class="trust-item-name">Süd Müəssisələri</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg></div><span class="trust-item-name">HoReCa Şəbəkəsi</span></div>
+      <div class="trust-item"><div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div><span class="trust-item-name">Ət İstehsalçıları</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- =========================================
+     LEAD MAGNET
+========================================= -->
+<section id="lead-magnet">
+  <div class="lead-bg-shape"></div>
+  <div class="lead-inner">
+    <div class="lead-left fade-in">
+      <div class="lead-badge-pill">
+        <span>&#127775; Pulsuz Resurs</span>
+      </div>
+      <h2 class="section-title" style="color:white;">Müəssisəniz Beynəlxalq Auditə Hazırdırmı?</h2>
+      <p class="lead-desc">AQTA və ISO standartlarına uyğunluq üçün hazırladığımız 10 addımlıq ekspert Checklist-ini pulsuz yükləyin.</p>
+      <div class="lead-checks">
+        <div class="lead-check"><div class="lead-check-icon">✓</div>AQTA tələblərinə uyğunluq yoxlaması</div>
+        <div class="lead-check"><div class="lead-check-icon">✓</div>ISO 22000 audit hazırlıq siyahısı</div>
+        <div class="lead-check"><div class="lead-check-icon">✓</div>HACCP kritik nöqtələrinin qiymətləndirilməsi</div>
+        <div class="lead-check"><div class="lead-check-icon">✓</div>Sənədləşdirmə tələbləri üzrə bələdçi</div>
+      </div>
+    </div>
+    <div class="lead-right fade-in fade-in-delay-2">
+      <div class="lead-form-card">
+        <h3>10 Addımlıq Ekspert Checklist</h3>
+        <p>Məlumatlarınızı daxil edin, checklist dərhal e-mailinizə göndərilsin.</p>
+        <div class="form-group">
+          <label>Ad Soyad</label>
+          <input type="text" placeholder="Adınızı daxil edin">
+        </div>
+        <div class="form-group">
+          <label>Korporativ E-mail</label>
+          <input type="email" placeholder="email@muessise.az">
+        </div>
+        <div class="form-group">
+          <label>Fəaliyyət Sahəsi</label>
+          <select>
+            <option value="">Seçin...</option>
+            <option>Ət Emalı</option>
+            <option>Süd Məhsulları</option>
+            <option>HoReCa</option>
+            <option>Çörəkçilik</option>
+            <option>İçki İstehsalı</option>
+            <option>Digər</option>
+          </select>
+        </div>
+        <button class="btn btn-gold" onclick="this.textContent='✓  Göndərildi!'">Checklist-i Pulsuz Yüklə →</button>
+        <p class="lead-note">&#128274; Məlumatlarınız tamamilə gizli saxlanılır. Spam yoxdur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     SERVICES OVERVIEW
+========================================= -->
+<section id="xidmetler">
+  <div class="container">
+    <div class="section-header-center fade-in">
+      <span class="section-eyebrow">Xidmətlər</span>
+      <h2 class="section-title">Kompleks Konsaltinq Həlləri</h2>
+      <p class="section-desc">Qida sənayesindən strateji idarəetməyə qədər geniş spektrdə peşəkar dəstək göstəririk.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in fade-in-delay-1">
+        <div class="service-icon si-blue">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div class="service-name">Qida Təhlükəsizliyi</div>
+        <p class="service-desc">Beynəlxalq standartlara uyğun audit, sertifikasiya və texnoloji ekspertiza xidmətləri.</p>
+        <div class="service-tags">
+          <span class="tag">ISO 22000</span>
+          <span class="tag">HACCP</span>
+          <span class="tag">BRCGS</span>
+          <span class="tag">IFS</span>
+        </div>
+      </div>
+      <div class="service-card fade-in fade-in-delay-2">
+        <div class="service-icon si-gold">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="service-name">Strateji İdarəetmə</div>
+        <p class="service-desc">MQ sistemlərinin qurulması, strateji planlaşdırma və insan resursları auditi.</p>
+        <div class="service-tags">
+          <span class="tag">MQ Sistemləri</span>
+          <span class="tag">HR Audit</span>
+          <span class="tag">Planlaşdırma</span>
+        </div>
+      </div>
+      <div class="service-card fade-in fade-in-delay-3">
+        <div class="service-icon si-orange">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+        </div>
+        <div class="service-name">Hüquqi Ekspertiza</div>
+        <p class="service-desc">Qanunvericilik ekspertizası, hüquqi risklərin qiymətləndirilməsi və RIA xidmətləri.</p>
+        <div class="service-tags">
+          <span class="tag">RIA</span>
+          <span class="tag">Qanun Layihəsi</span>
+          <span class="tag">Feasibility</span>
+        </div>
+      </div>
+      <div class="service-card fade-in fade-in-delay-4">
+        <div class="service-icon si-teal">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+        </div>
+        <div class="service-name">Təlim &amp; Sertifikasiya</div>
+        <p class="service-desc">İşçi heyəti üçün beynəlxalq sertifikat proqramları, seminar və praktik təlimlər.</p>
+        <div class="service-tags">
+          <span class="tag">Lead Auditor</span>
+          <span class="tag">Seminar</span>
+          <span class="tag">Sertifikat</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     COUNTERS
+========================================= -->
+<section id="counters">
+  <div class="counters-grid">
+    <div class="counter-item fade-in">
+      <div class="counter-num" data-target="50">0+</div>
+      <div class="counter-label">Sertifikatlı Ekspert</div>
+    </div>
+    <div class="counter-item fade-in fade-in-delay-1">
+      <div class="counter-num" data-target="100">0+</div>
+      <div class="counter-label">Tamamlanmış Layihə</div>
+    </div>
+    <div class="counter-item fade-in fade-in-delay-2">
+      <div class="counter-num" data-target="15">0</div>
+      <div class="counter-label">İl Bazar Təcrübəsi</div>
+    </div>
+    <div class="counter-item fade-in fade-in-delay-3">
+      <div class="counter-num" data-target="12">0+</div>
+      <div class="counter-label">Beynəlxalq Sertifikat</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+<section id="haqqimizda">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-in">
+        <span class="section-eyebrow">Haqqımızda</span>
+        <h2 class="section-title">Rebrendinqdən Liderliyə: ASR-in Hekayəsi</h2>
+        <p class="section-desc">2009-cu ildə Azərbaycanda qida sənayesinin sürətlə inkişaf etdiyi dövrdə qurulan şirkətimiz, 2019-cu ilə qədər aparılan islahat dalgasına çevik reaksiya verərək tam rebrendinq prosesindən keçdi.</p>
+        <div class="about-timeline">
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-year">2009</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Şirkətin Əsası Qoyulur</div>
+              <div class="timeline-desc">Qida sənayesi üçün yerli konsaltinq ehtiyacına cavab olaraq fəaliyyət başlandı. İlk layihələr ət emalı sektorunda icra edildi.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-year">2013</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Beynəlxalq Sertifikasiya</div>
+              <div class="timeline-desc">İlk Lead Auditor sertifikatları alındı. ISO 22000 üzrə beynəlxalq akkreditasiya prosesi uğurla tamamlandı.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-year">2019</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Tam Rebrendinq &amp; Genişlənmə</div>
+              <div class="timeline-desc">Yeni qida təhlükəsizliyi qanunvericiliyinə cavab olaraq şirkət yenidən brendləndi, xidmət portfeli stratejik sahələri əhatə etdi.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-year">2024</div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-title">Regional Lider Mövqe</div>
+              <div class="timeline-desc">50+ ekspert, 100+ uğurlu layihə ilə Azərbaycanın ən böyük konsaltinq qruplarından birinə çevrildi.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right fade-in fade-in-delay-2">
+        <div class="certs-section-title">Beynəlxalq Sertifikatlar</div>
+        <div class="certs-grid">
+          <div class="cert-card">
+            <div class="cert-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div class="cert-card-name">ISO 22000</div>
+            <div class="cert-card-type">Lead Auditor</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <div class="cert-card-name">HACCP</div>
+            <div class="cert-card-type">Sertifikatlı</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <div class="cert-card-name">BRCGS</div>
+            <div class="cert-card-type">İcazəli Auditor</div>
+          </div>
+          <div class="cert-card">
+            <div class="cert-card-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            </div>
+            <div class="cert-card-name">IFS Food</div>
+            <div class="cert-card-type">Standart</div>
+          </div>
+        </div>
+
+        <div class="certs-section-title" style="margin-top:1.75rem;">Dövlət Rəsmi Təşəkkürnamələri</div>
+        <div class="awards-list">
+          <div class="award-item">
+            <div class="award-icon">🏛️</div>
+            <div class="award-text">AQTA tərəfindən "Etibarlı Konsaltinq Tərəfdaşı" sertifikatı</div>
+          </div>
+          <div class="award-item">
+            <div class="award-icon">🏆</div>
+            <div class="award-text">Azərbaycan Sahibkarlar Konfederasiyası — Fəxri fərman</div>
+          </div>
+          <div class="award-item">
+            <div class="award-icon">📜</div>
+            <div class="award-text">Kənd Təsərrüfatı Nazirliyi Rəsmi Təşəkkürnaməsi — 2022</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     SERVICES DETAIL
+========================================= -->
+<section id="xidmetler-detail">
+  <div class="container">
+    <div class="section-header-center fade-in">
+      <span class="section-eyebrow">Ətraflı Xidmətlər</span>
+      <h2 class="section-title">Hər Sahədə Dərin Ekspertiza</h2>
+      <p class="section-desc">Hər bir xidmət sahəsini sektora xas detallar üzrə həyata keçiririk.</p>
+    </div>
+    <div class="services-detail-grid">
+      <div class="svc-detail-card fade-in fade-in-delay-1">
+        <div class="svc-detail-head">
+          <div class="svc-detail-num">01</div>
+          <div class="svc-detail-name">Qida Təhlükəsizliyi</div>
+          <div class="svc-detail-sub">ISO · HACCP · BRCGS · IFS</div>
+        </div>
+        <div class="svc-detail-body">
+          <p>Müəssisənizi beynəlxalq auditlərə hazırlayır, sertifikasiya prosesini başdan sona idarə edirik.</p>
+          <div class="svc-detail-list">
+            <div class="svc-list-item">ISO 22000 üzrə tam audit xidməti</div>
+            <div class="svc-list-item">HACCP planının hazırlanması</div>
+            <div class="svc-list-item">BRCGS &amp; IFS sertifikasiya dəstəyi</div>
+            <div class="svc-list-item">Texnoloji audit və proses optimallaşdırması</div>
+          </div>
+          <div class="svc-highlight">
+            ★ AQTA-da iş təcrübəsi olan mütəxəssislərin birbaşa nəzarəti altında icra edilir. Dar ixtisaslı texnoloqların layihəyə cəlb olunması təmin edilir.
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-detail-card fade-in fade-in-delay-2">
+        <div class="svc-detail-head" style="background: linear-gradient(135deg, #1B2A0A 0%, #2E4A10 100%);">
+          <div class="svc-detail-num">02</div>
+          <div class="svc-detail-name">Strateji İdarəetmə</div>
+          <div class="svc-detail-sub">MQ · HR · Planlaşdırma</div>
+        </div>
+        <div class="svc-detail-body">
+          <p>Uzunmüddətli inkişaf üçün idarəetmə sistemlərini qururuq, insan resurslarını gücləndiririk.</p>
+          <div class="svc-detail-list">
+            <div class="svc-list-item">Monitorinq və Qiymətləndirmə (MQ) sistemlərinin qurulması</div>
+            <div class="svc-list-item">Strateji planlaşdırma sessiyaları</div>
+            <div class="svc-list-item">HR audit və kadr strukturunun optimallaşdırılması</div>
+            <div class="svc-list-item">KPI sistemlərinin tətbiqi</div>
+          </div>
+          <div class="svc-highlight" style="border-color:#7DC45A;">
+            ★ Dövlət strukturları ilə iş təcrübəsi sayəsində MQ sistemlərini beynəlxalq metodologiya ilə qururuq.
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-detail-card fade-in fade-in-delay-3">
+        <div class="svc-detail-head" style="background: linear-gradient(135deg, #2A1205 0%, #4A2210 100%);">
+          <div class="svc-detail-num">03</div>
+          <div class="svc-detail-name">İqtisadi-Hüquqi</div>
+          <div class="svc-detail-sub">RIA · Feasibility · Ekspertiza</div>
+        </div>
+        <div class="svc-detail-body">
+          <p>Qanunvericilik mühitini analiz edərək biznesiniz üçün hüquqi risklərə qarşı mühafizə yaradırıq.</p>
+          <div class="svc-detail-list">
+            <div class="svc-list-item">Qanun layihələrinin linqvistik ekspertizası</div>
+            <div class="svc-list-item">Hüquqi ekspertiza (RIA metodologiyası)</div>
+            <div class="svc-list-item">Feasibility Study hazırlanması</div>
+            <div class="svc-list-item">Regulyativ uyğunluq qiymətləndirilməsi</div>
+          </div>
+          <div class="svc-highlight" style="border-color:var(--orange);">
+            ★ Qanun layihələrinin həm linqvistik, həm də hüquqi ekspertizasını eyni komanda daxilində icra edirik.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     PROJECTS
+========================================= -->
+<section id="tecrubekm">
+  <div class="container">
+    <div class="section-header-center fade-in">
+      <span class="section-eyebrow">Təcrübəmizdən</span>
+      <h2 class="section-title">Uğurlu Layihə Nümunələri</h2>
+      <p class="section-desc">Real problemlər, tətbiq etdiyimiz həllər və ölçülə bilən nəticələr.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card fade-in fade-in-delay-1">
+        <div class="project-industry">
+          <span class="project-industry-name">Ət Emalı Müəssisəsi</span>
+          <span class="project-year">2023</span>
+        </div>
+        <div class="project-body">
+          <div class="project-label">Problem</div>
+          <p class="project-text">Müəssisə HACCP tələblərini tam yerinə yetirmirdi. Soyuq zəncirdə kritik pozuntular aşkarlanmış, AQTA tərəfindən xəbərdarlıq alınmışdı.</p>
+          <div class="project-divider"></div>
+          <div class="project-label">Tətbiq Olunan Həll</div>
+          <p class="project-text">Tam HACCP planı hazırlandı, 4 kritik nöqtə üçün real vaxt monitorinq sistemi quruldu, heyət 40 saatlıq təlim proqramından keçirildi.</p>
+          <div class="project-divider"></div>
+          <div class="project-label">Nəticə</div>
+          <p class="project-result-text">✓ İstehsal itkiləri 20% azaldı. ISO 22000 sertifikatı 8 ayda alındı. AQTA yoxlaması müsbət başa çatdı.</p>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-2">
+        <div class="project-industry">
+          <span class="project-industry-name">Süd İstehsalçısı</span>
+          <span class="project-year">2022</span>
+        </div>
+        <div class="project-body">
+          <div class="project-label">Problem</div>
+          <p class="project-text">Şirkətin IFS sertifikasiyasına hazırlığı yox idi. Avropa bazarına ixrac planları sertifikasiya tələbinə görə bloklanmışdı.</p>
+          <div class="project-divider"></div>
+          <div class="project-label">Tətbiq Olunan Həll</div>
+          <p class="project-text">Gap analysis aparıldı, 6 aylıq hazırlıq yol xəritəsi hazırlandı, sənəd bazası beynəlxalq standarta uyğunlaşdırıldı.</p>
+          <div class="project-divider"></div>
+          <div class="project-label">Nəticə</div>
+          <p class="project-result-text">✓ IFS sertifikatı alındı. İlk il ixracat həcmi 35% artdı. Avropa distribütoru ilə müqavilə imzalandı.</p>
+        </div>
+      </div>
+
+      <div class="project-card fade-in fade-in-delay-3">
+        <div class="project-industry">
+          <span class="project-industry-name">HoReCa Şəbəkəsi</span>
+          <span class="project-year">2023</span>
+        </div>
+        <div class="project-body">
+          <div class="project-label">Problem</div>
+          <p class="project-text">12 filialı olan restoran şəbəkəsinin insan resursları strukturu səmərəsiz idi. Kadr dövriyyəsi yüksək, müştəri şikayəti sayı artmışdı.</p>
+          <div class="project-divider"></div>
+          <div class="project-label">Tətbiq Olunan Həll</div>
+          <p class="project-text">HR audit aparıldı, iş təsvirləri yenidən hazırlandı, performans qiymətləndirmə sistemi quruldu, idarəetmə təlimləri keçirildi.</p>
+          <div class="project-divider"></div>
+          <div class="project-label">Nəticə</div>
+          <p class="project-result-text">✓ Kadr dövriyyəsi 45% azaldı. Müştəri məmnuniyyəti 28% yüksəldi. Əməliyyat xərcləri 15% optimallaşdı.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     GALLERY
+========================================= -->
+<section id="qalereya">
+  <div class="container">
+    <div class="section-header-center fade-in">
+      <span class="section-eyebrow" style="color:var(--gold-bright);">Daxili Mətbəx</span>
+      <h2 class="section-title" style="color:white;">Real İş, Real Nəticə</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.5);">Audit prosesindən təlim salonuna qədər komandamızın gündəlik işi.</p>
+    </div>
+    <div class="gallery-tabs" id="galleryTabs">
+      <button class="gallery-tab active" data-cat="all">Hamısı</button>
+      <button class="gallery-tab" data-cat="audit">Real Audit</button>
+      <button class="gallery-tab" data-cat="telim">Real Təlim</button>
+      <button class="gallery-tab" data-cat="ofis">Real Ofis</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-cat="audit">
+        <div class="gallery-item-inner">
+          <div class="gallery-icon">🏭</div>
+          <div class="gallery-item-title">İstehsalat Sahəsinin Audit Yoxlaması</div>
+          <div class="gallery-item-cat">Real Audit</div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="telim">
+        <div class="gallery-item-inner">
+          <div class="gallery-icon">🎓</div>
+          <div class="gallery-item-title">ISO 22000 Sertifikat Təqdimatı</div>
+          <div class="gallery-item-cat">Real Təlim</div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="audit">
+        <div class="gallery-item-inner">
+          <div class="gallery-icon">🔬</div>
+          <div class="gallery-item-title">Laboratoriya Yoxlama Prosesi</div>
+          <div class="gallery-item-cat">Real Audit</div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="ofis">
+        <div class="gallery-item-inner">
+          <div class="gallery-icon">💼</div>
+          <div class="gallery-item-title">Komanda Strateji Sessiyas</div>
+          <div class="gallery-item-cat">Real Ofis</div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="telim">
+        <div class="gallery-item-inner">
+          <div class="gallery-icon">📋</div>
+          <div class="gallery-item-title">HACCP Praktik Seminar</div>
+          <div class="gallery-item-cat">Real Təlim</div>
+        </div>
+      </div>
+      <div class="gallery-item" data-cat="ofis">
+        <div class="gallery-item-inner">
+          <div class="gallery-icon">🤝</div>
+          <div class="gallery-item-title">Müştəri İclas və Prezentasiya</div>
+          <div class="gallery-item-cat">Real Ofis</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     RESOURCES
+========================================= -->
+<section id="bilik-merkezi">
+  <div class="container">
+    <div class="section-header-center fade-in">
+      <span class="section-eyebrow">Bilik Mərkəzi</span>
+      <h2 class="section-title">Pulsuz Resurslar &amp; Ekspert Bloqu</h2>
+      <p class="section-desc">Sektora aid analitik məlumatlar, qanunvericilik bələdçiləri və audit şablonları.</p>
+    </div>
+    <div class="resources-grid">
+      <div class="fade-in">
+        <div class="resources-col-title">Pulsuz Yükləmələr</div>
+        <div class="resource-item">
+          <div class="resource-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <div>
+            <div class="resource-item-name">Yeni Qida Təhlükəsizliyi Qanunu Bələdçisi</div>
+            <div class="resource-item-desc">2023-cü il dəyişiklikləri, müəssisənizə təsiri və uyğunlaşma addımları. 28 səhifəlik ətraflı bələdçi.</div>
+          </div>
+          <div class="resource-dl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <div class="resource-item-name">Daxili Audit Şablonu</div>
+            <div class="resource-item-desc">Müəssisəniz üçün hazır daxili audit forması. ISO 22000 tələblərinə tam uyğun struktur.</div>
+          </div>
+          <div class="resource-dl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            XLSX
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <div class="resource-item-name">Audit Hazırlıq Checklist — 10 Addım</div>
+            <div class="resource-item-desc">Beynəlxalq auditə hazırlıq üçün addım-addım yoxlama siyahısı. AQTA &amp; ISO standartları əsasında.</div>
+          </div>
+          <div class="resource-dl">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-in fade-in-delay-2">
+        <div class="resources-col-title">Ekspert Bloqu</div>
+        <div class="blog-item">
+          <div class="blog-date">12 Yanvar 2025</div>
+          <div class="blog-title">Azərbaycanda Qida Sənayesinin 2025 Trendi: Nə Gözləyir?</div>
+          <div class="blog-excerpt">AQTA regulyasiyalarının gücləndiriləcəyi, ixracat tələblərin artacağı 2025-ci ildə müəssisələr nələrə hazır olmalıdır?</div>
+          <span class="blog-read-more">Davam et →</span>
+        </div>
+        <div class="blog-item">
+          <div class="blog-date">28 Noyabr 2024</div>
+          <div class="blog-title">ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası</div>
+          <div class="blog-excerpt">Yeni versiyaya keçid üçün praktik bələdçi. Müəssisənizin audit hazırlığını qiymətləndirin.</div>
+          <span class="blog-read-more">Davam et →</span>
+        </div>
+        <div class="blog-item">
+          <div class="blog-date">5 Oktyabr 2024</div>
+          <div class="blog-title">HoReCa Sektorunda Qida Təhlükəsizliyi: 5 Kritik Nöqtə</div>
+          <div class="blog-excerpt">Restoran və otel sektorunda ən çox görülən pozuntular, onlardan qorunma üsulları.</div>
+          <span class="blog-read-more">Davam et →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="footer-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+            <path d="M12 2L3 7V12C3 16.5 7 20.7 12 22C17 20.7 21 16.5 21 12V7L12 2Z" fill="#0B1F3A"/>
+            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="footer-logo-text">ASR Development Consulting Group</span>
+      </div>
+      <p class="footer-tagline-txt">Strateji Həllər, Dayanıqlı İnkişaf. Qida təhlükəsizliyi, idarəetmə və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.</p>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📍</span>
+        <span class="footer-contact-text">Bakı, Nizami küçəsi 65,<br>AZ1010, Azərbaycan</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">📞</span>
+        <span class="footer-contact-text">+994 12 XXX XX XX</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-icon">✉️</span>
+        <span class="footer-contact-text">info@asr-consulting.az</span>
+      </div>
+      <a href="https://wa.me/994XXXXXXXXX" class="footer-wa-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.162.576 4.186 1.576 5.927L0 24l6.242-1.537C7.916 23.456 9.908 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.898 0-3.662-.514-5.178-1.408l-.362-.214-3.75.923.963-3.66-.235-.377C2.542 15.7 2 13.916 2 12 2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp ilə Yazın
+      </a>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Xidmətlər</div>
+      <div class="footer-col-links">
+        <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+        <a href="#xidmetler-detail">ISO 22000 Audit</a>
+        <a href="#xidmetler-detail">HACCP Tətbiqi</a>
+        <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+        <a href="#xidmetler-detail">HR Audit</a>
+        <a href="#xidmetler-detail">Hüquqi Ekspertiza</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Şirkət</div>
+      <div class="footer-col-links">
+        <a href="#haqqimizda">Haqqımızda</a>
+        <a href="#haqqimizda">Tariximiz</a>
+        <a href="#haqqimizda">Sertifikatlar</a>
+        <a href="#tecrubekm">Layihələr</a>
+        <a href="#qalereya">Qalereya</a>
+        <a href="#bilik-merkezi">Bloq</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Ekspert Hovuzu</div>
+      <div class="footer-expert-form">
+        <h4>Komandamıza Qoşulun</h4>
+        <p>Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı göndərin.</p>
+        <input type="text" placeholder="Ad Soyad">
+        <input type="email" placeholder="E-mail ünvanınız" style="margin-top:0;">
+        <input type="text" placeholder="İxtisas sahəniz" style="margin-top:8px;">
+        <button onclick="this.textContent='✓ Göndərildi!'">Müraciət Et →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2024 ASR Development Consulting Group. Bütün hüquqlar qorunur.</span>
+    <div class="trust-badges">
+      <span class="trust-badge">ISO Akkreditasiyalı</span>
+      <span class="trust-badge">HACCP Sertifikatlı</span>
+      <span class="trust-badge">AQTA Tərəfdaşı</span>
+      <span class="trust-badge">BRCGS İcazəli</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+<script>
+// Navbar scroll
+window.addEventListener('scroll', function() {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 40) { nav.classList.add('scrolled'); }
+  else { nav.classList.remove('scrolled'); }
+});
+
+// Mobile toggle
+document.getElementById('mobileToggle').addEventListener('click', function() {
+  document.getElementById('mobileNav').classList.toggle('open');
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.mobile-nav a, .mobile-nav .btn').forEach(function(el) {
+  el.addEventListener('click', function() {
+    document.getElementById('mobileNav').classList.remove('open');
+  });
+});
+
+// Scroll animations
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+// Counter animation
+var countersTriggered = false;
+function animateCounters() {
+  if (countersTriggered) return;
+  var section = document.getElementById('counters');
+  if (!section) return;
+  var rect = section.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 80) {
+    countersTriggered = true;
+    document.querySelectorAll('.counter-num[data-target]').forEach(function(el) {
+      var target = parseInt(el.getAttribute('data-target'));
+      var suffix = el.textContent.indexOf('+') !== -1 ? '+' : '';
+      var start = 0;
+      var duration = 1800;
+      var startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        var progress = Math.min((ts - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(step);
+    });
+  }
+}
+window.addEventListener('scroll', animateCounters);
+animateCounters();
+
+// Gallery filter
+document.querySelectorAll('.gallery-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.gallery-tab').forEach(function(t) { t.classList.remove('active'); });
+    this.classList.add('active');
+    var cat = this.getAttribute('data-cat');
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+      if (cat === 'all' || item.getAttribute('data-cat') === cat) {
+        item.style.display = 'flex';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+    // Reset span on filter
+    var items = document.querySelectorAll('.gallery-item[style*="flex"]');
+    items.forEach(function(item, idx) {
+      item.style.gridColumn = (idx === 0 && cat === 'all') ? 'span 2' : '';
+    });
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      var offset = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
