@@ -353,6 +353,21 @@
       letter-spacing: 0.04em;
     }
 
+    .whatsapp-icon {
+      position: fixed;
+      right: 45px;
+      bottom: 45px;
+      scale: 3;
+      transition: .4s;
+      z-index: 99;
+    }
+
+    .whatsapp-icon:hover {
+      scale: 3.5;
+      transform: translateY(-1px);
+      color: red
+    }
+
     .nav-dropdown a:hover {
       color: var(--gold-bright);
       background: rgba(200, 146, 42, 0.1);
@@ -374,6 +389,17 @@
       z-index: 100;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
+    }
+    .haqqimizda-sekil{
+      background-attachment: fixed;
+
+      background-image: url("images/collaboration.jpg");
+      width: 100%;
+      height: 70vh;
+      background-size: cover;
+      background-position: center;
+ 
+      
     }
 
     .mega-menu::before {
@@ -599,7 +625,7 @@
       width: 100%;
     }
 
-    .hero-left {}
+
 
     .hero-badge {
       display: inline-flex;
@@ -2335,7 +2361,7 @@
 
     @media (max-width: 768px) {
 
-      
+
       .timeline-item {
         flex-direction: column;
         gap: 0.5rem;
@@ -2354,7 +2380,7 @@
         margin-bottom: 5px;
       }
 
-    
+
       .timeline-line {
         position: absolute;
         left: 0;
@@ -2363,7 +2389,7 @@
         margin-top: 0;
       }
 
-    
+
       .timeline-content {
         margin-top: 5px;
       }
@@ -2373,11 +2399,12 @@
       .footer-copy {
         text-align: center;
       }
-      .hero-stats{
-         justify-content: center;
+
+      .hero-stats {
+        justify-content: center;
       }
 
-    
+
       .timeline-item {
         flex-direction: column;
 
@@ -2385,7 +2412,7 @@
         position: relative;
       }
 
-     
+
       .timeline-left {
         align-items: flex-start;
       }
@@ -2396,7 +2423,7 @@
         margin-bottom: 5px;
       }
 
-     
+
       .timeline-line {
         position: absolute;
         left: 0;
@@ -2405,7 +2432,7 @@
         margin-top: 0;
       }
 
-  
+
       .timeline-content {
         margin-top: 5px;
       }
@@ -2571,7 +2598,7 @@
           </a>
           <a href="#xidmetler" class="btn btn-outline-white">Xidmətlər →</a>
         </div>
-        <div class="hero-stats" > 
+        <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-num">50+</div>
             <div class="hero-stat-label">Ekspert</div>
@@ -2603,12 +2630,12 @@
             clip-path: polygon(16.3% 0%, 100% 0%, 100% 100%, 0% 100%);
             z-index: 1;
           ">
-        <img src="images/charles-forerunner-3fPXt37X6UQ-unsplash.jpg" alt="ASR Consulting" style="
+        <img class="entrance-photo" src="images/buildings.jpg" alt="ASR Consulting" style="
               width: 100%;
               height: 100%;
               object-fit: cover;
               object-position: center;
-              opacity: 0.35;
+              opacity: 1;
               filter: grayscale(30%);
             " />
 
@@ -2645,7 +2672,7 @@
     </p>
     <div class="trust-track-wrapper">
       <div class="trust-track">
-      
+
         <div class="trust-item">
           <div class="trust-item-icon" style="background: transparent">
             <img src="images/aqta logo.jpg" alt="AQTA" style="
@@ -2741,7 +2768,7 @@
           </div>
           <span class="trust-item-name">Ət İstehsalçıları</span>
         </div>
-  
+
         <div class="trust-item">
           <div class="trust-item-icon" style="background: transparent">
             <img src="images/aqta logo.jpg" alt="AQTA" style="
@@ -2856,7 +2883,7 @@
                 display: block;
                 opacity: 0.55;
               " />
-    
+
           <div style="
                 position: absolute;
                 inset: 0;
@@ -2869,7 +2896,7 @@
                 );
                 z-index: 4;
               "></div>
-     
+
           <div style="
                 position: absolute;
                 inset: 0;
@@ -3094,15 +3121,48 @@
       </div>
     </div>
   </section>
+          <div id="cert-lightbox" style="
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background: rgba(11, 31, 58, 0.95); 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    cursor: pointer;" 
+    onclick="closeLightbox()">
+    
+    <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold;">&times;</span>
+    
+    <img id="cert-lightbox-img" style="
+        max-width: 90%; 
+        max-height: 80%; 
+        border-radius: 8px; 
+        box-shadow: 0 0 30px rgba(0,0,0,0.5); 
+        transform: scale(0.9); 
+        transition: transform 0.3s ease;">
+    
+    <div id="cert-lightbox-caption" style="
+        color: white; 
+        margin-top: 20px; 
+        font-family: sans-serif; 
+        font-size: 1.1rem; 
+        font-weight: 600;"></div>
+</div>
 
   <!-- =========================================
      ABOUT
 ========================================= -->
   <section id="haqqimizda">
+       <div class="haqqimizda-sekil" >
+            
+          </div> 
     <div class="container">
       <div class="fade-in" style="max-width: 1280px; margin: 0 auto 5rem">
         <div class="timeline-all" style="margin: auto;">
-          <div class="timeline-content" style="margin: auto;" > 
+          <div class="timeline-content" style="margin: auto;">
 
             <span class="section-eyebrow">Haqqımızda</span>
             <div style="
@@ -3125,7 +3185,8 @@
               </div>
             </div>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 0 ; margin-top: 2rem;" class="timeline">
+          
+           <div style="display: flex; flex-direction: column; gap: 0 ;display: inline-block; margin-top: 2rem; display: inline-block;" class="timeline"> 
             <div style="
                   display: flex;
                   gap: 1.25rem;
@@ -3333,8 +3394,9 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+        
+          </div> 
+        
       </div>
       <div class="fade-in">
         <div style="
@@ -3399,6 +3461,7 @@
             </button>
           </div>
         </div>
+
         <div id="certsTrack" style="
               display: flex;
               gap: 1.25rem;
@@ -3408,10 +3471,10 @@
               scrollbar-width: none;
               -ms-overflow-style: none;
             ">
-    
+
           <div onclick="
                 openLightbox(
-                  'images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg',
+                  'images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg  ',
                   'ISO 22000 — Lead Auditor',
                 )
               " style="
@@ -3430,13 +3493,13 @@
                 this.style.transform = '';
                 this.style.boxShadow = '';
               ">
-            <div style="
+            <div class="lightbox-img"  style="
                   height: 140px;
                   background: url(&quot;images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg&quot;)
                     center/contain no-repeat #f8f9fb;
                   border-bottom: 1px solid var(--border);
                 "></div>
-            <div style="padding: 1rem">
+            <div class="lightbox-content" style="padding: 1rem">
               <div style="
                     font-size: 0.75rem;
                     font-weight: 800;
@@ -3651,7 +3714,7 @@
             </div>
           </div>
 
-          
+
           <div style="
                 flex-shrink: 0;
                 width: 220px;
@@ -4134,7 +4197,7 @@
           </div>
         </div>
 
-        <div class="project-card fade-in fade-in-delay-3">
+        <div class="project-card fade-in-delay-3">
           <div class="project-industry">
             <span class="project-industry-name">HoReCa Şəbəkəsi</span>
             <span class="project-year">2023</span>
@@ -4186,7 +4249,7 @@
         <button class="gallery-tab" data-cat="ofis">İş Prosesi</button>
       </div>
       <div class="gallery-grid" id="galleryGrid">
-       
+
         <div class="gallery-item" data-cat="audit" style="
               background-image: url(&quot;images/CMI-Level-5-Award-In-Management-Consulting-Practice-course.webp&quot;);
             ">
@@ -4204,7 +4267,7 @@
           </div>
         </div>
 
-    
+
         <div class="gallery-item" data-cat="telim" style="
               background-image: url(&quot;images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg&quot;);
             ">
@@ -4356,6 +4419,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="footer-logo">
+
           <div class="footer-logo" style="margin-bottom: 1.25rem">
             <img src="images/asr logo.png" alt="ASR Development Consulting Group" style="
                   height: 48px;
@@ -4398,6 +4462,8 @@
           <a href="#xidmetler-detail">Strateji İdarəetmə</a>
           <a href="#xidmetler-detail">HR Audit</a>
           <a href="#xidmetler-detail">Hüquqi Ekspertiza</a>
+          <a href="https://wa.me/994504040000"><i class="fa-brands fa-whatsapp whatsapp-icon"
+              style="color: rgb(0, 255, 37); cursor: pointer; "></i></a>
         </div>
       </div>
 
@@ -4587,21 +4653,42 @@
       });
     });
 
-    function openLightbox(src, caption) {
-      var lb = document.getElementById("cert-lightbox");
-      document.getElementById("cert-lightbox-img").src = src;
-      document.getElementById("cert-lightbox-caption").textContent = caption;
-      lb.style.display = "flex";
-      document.body.style.overflow = "hidden";
-    }
-    function closeLightbox() {
-      document.getElementById("cert-lightbox").style.display = "none";
-      document.body.style.overflow = "";
-    }
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeLightbox();
-    });
+function openLightbox(src, caption) {
+    const lb = document.getElementById("cert-lightbox");
+    const img = document.getElementById("cert-lightbox-img");
+    const cap = document.getElementById("cert-lightbox-caption");
 
+    // Şəklin yolunu təmizləyirik (boşluqları silirik)
+    img.src = src.trim();
+    cap.textContent = caption;
+
+    // Modalı göstəririk
+    lb.style.display = "flex";
+    
+    // Animasiya üçün kiçik gecikmə
+    setTimeout(() => {
+        img.style.transform = "scale(1)";
+    }, 10);
+
+    // Arxa fonun scroll olmasını dayandırırıq
+    document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+    const lb = document.getElementById("cert-lightbox");
+    const img = document.getElementById("cert-lightbox-img");
+    
+    img.style.transform = "scale(0.9)";
+    lb.style.display = "none";
+    
+    // Scroll-u bərpa edirik
+    document.body.style.overflow = "auto";
+}
+
+// Klaviaturada ESC düyməsi ilə bağlamaq üçün
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeLightbox();
+});
     //footer 
     let date = new Date()
     let year = date.getFullYear()
