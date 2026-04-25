@@ -139,19 +139,15 @@
       const img = document.getElementById("cert-lightbox-img");
       const cap = document.getElementById("cert-lightbox-caption");
 
-      // Şəklin yolunu təmizləyirik (boşluqları silirik)
       img.src = src.trim();
       cap.textContent = caption;
 
-      // Modalı göstəririk
       lb.style.display = "flex";
 
-      // Animasiya üçün kiçik gecikmə
       setTimeout(() => {
         img.style.transform = "scale(1)";
       }, 10);
 
-      // Arxa fonun scroll olmasını dayandırırıq
       document.body.style.overflow = "hidden";
     }
 
@@ -162,11 +158,9 @@
       img.style.transform = "scale(0.9)";
       lb.style.display = "none";
 
-      // Scroll-u bərpa edirik
       document.body.style.overflow = "auto";
     }
 
-    // Klaviaturada ESC düyməsi ilə bağlamaq üçün
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeLightbox();
     });
@@ -238,4 +232,81 @@ root.addEventListener('touchend', e => {
 });
 
 startAuto();
+
+  function toggleItem(element) {
+    const allItems = document.querySelectorAll('.accordion-item');
+    allItems.forEach(item => {
+      if (item !== element) {
+        item.classList.remove('active');
+      }
+    });
+
+    element.classList.toggle('active');
+  }
+const blogItems = document.querySelectorAll('.blog-item');
+const modal = document.getElementById('blogModal');
+
+blogItems.forEach(item => {
+  item.addEventListener('click', function() {
+    const date = this.querySelector('.blog-date').innerText;
+    const title = this.querySelector('.blog-title').innerText;
+    const excerpt = this.querySelector('.blog-excerpt').innerText;
+
+    document.getElementById('modalDate').innerText = date;
+    document.getElementById('modalTitle').innerText = title;
+    
+    document.getElementById('modalContent').innerHTML = `
+      <p>${excerpt}</p>
+      <p style="margin-top:1rem">Bu mövzu haqqında daha ətraflı analitik məlumat və qanunvericilik tələbləri tezliklə tam versiyada təqdim olunacaqdır.</p>
+    `;
+
+    modal.style.display = 'flex';
+    document.body.classList.add('modal-open');
+  });
+});
+
+function closeModal() {
+  modal.style.display = 'none';
+  document.body.classList.remove('modal-open');
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+
+const backToTopBtn = document.getElementById("backToTop");
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    backToTopBtn.classList.add("show");
+  } else {
+    backToTopBtn.classList.remove("show");
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" 
+  });
+}
+// Language Toggle
+(function () {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const btnAZ = document.getElementById('langAZ');
+  const btnEN = document.getElementById('langEN');
+
+  if (!btnAZ || !btnEN) return;
+
+  if (currentPage === 'index-en.html') {
+    btnEN.classList.add('active');
+    btnAZ.classList.remove('active');
+  } else {
+    btnAZ.classList.add('active');
+    btnEN.classList.remove('active');
+  }
+})();
   

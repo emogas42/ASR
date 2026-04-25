@@ -78,6 +78,14 @@
       --shadow-md: 0 8px 32px rgba(11, 31, 58, 0.12);
       --shadow-lg: 0 30px 60px rgba(11, 31, 58, 0.12);
       --transition: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+         
+    --gold-pale: #fcf9ec;
+    --border: #e0e0e0;
+    --text: #333;
+    --gray-mid: #999;
+    --white: #ffffff;
+    --radius-md: 8px;
+    --transition: all 0.3s ease;
     }
 
     .container {
@@ -338,13 +346,13 @@
       position: fixed;
       right: 3%;
       bottom: 7%;
-      scale: 4;
+      scale: 3.5;
       transition: .4s;
       z-index: 99;
     }
 
     .whatsapp-icon:hover {
-      scale: 4.2;
+      scale: 3.9;
       transform: translateY(-1px);
       color: red
     }
@@ -2520,11 +2528,11 @@
 
 .slide-content{
   position:absolute;
-  inset:0;
+  inset:0 ;
   display:flex;
   flex-direction:column;
   justify-content:center;
-  padding:0 52px;
+  padding:0 52px 0 7%; 
   max-width:640px;
   z-index:5;
 }
@@ -3046,14 +3054,12 @@
       line-height: 1.4;
     }
 
-/* Ok Butonları Genel Stili */
 .arrow-btn {
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Glassmorphism etkisi */
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(200, 146, 42, 0.2); 
     border-radius: var(--radius-md);
@@ -3065,9 +3071,7 @@
     z-index: 10;
 }
 
-/* Hover (Üzerine Gelme) Durumu */
 .arrow-btn:hover {
-    /* Dosyadaki altın-turuncu gradyanı kullanımı */
     background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
     border-color: transparent;
     transform: translateY(-29px);
@@ -3075,7 +3079,6 @@
     color: var(--white);
 }
 
-/* Buton İçindeki İkonların Ayarı */
 .arrow-btn svg {
     width: 22px;
     height: 22px;
@@ -3083,22 +3086,254 @@
     transition: transform var(--transition);
 }
 
-/* Next Butonu Hareket Efekti */
 .arrow-btn.next:hover svg {
     transform: translateX(4px);
 }
 
-/* Prev Butonu Hareket Efekti */
 .arrow-btn.prev:hover svg {
     transform: translateX(-4px);
 }
 
-/* Tıklama Hissi */
 .arrow-btn:active {
-    transform: translateY(-1px) scale(0.96);
+    transform: translateY(-20px) scale(0.96);
 }
  @media (max-width: 768px){
   .arrow-btn{
     display: none;
   }
  }
+:root {
+    --white: #ffffff;
+    --border: #e0e0e0; 
+    --radius-md: 12px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --gold: #d4af37;
+    --gold-pale: #fcf9ec;
+    --text: #333;
+    --gray-mid: #999;
+  }
+
+  .accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .accordion-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .accordion-item:hover {
+    border-color: var(--gold-pale);
+    background: #fffdf7;
+  }
+
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    user-select: none;
+  }
+
+  .accordion-header i.main-icon {
+    color: var(--gold);
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+
+  .accordion-header .title-text {
+    flex: 1;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .chevron-icon {
+    color: var(--gray-mid);
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-item.active .chevron-icon {
+    transform: rotate(90deg);
+  }
+
+  .accordion-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+    padding: 0 18px;
+    font-size: 0.78rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  .accordion-item.active .accordion-content {
+    max-height: 200px; 
+    opacity: 1;
+    padding-bottom: 18px;
+    padding-left: 45px; 
+  }
+  
+.modal-overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.6); 
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: var(--transition);
+}
+
+.modal-card {
+  background: var(--white);
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--radius-md);
+  position: relative;
+  padding: 3rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  border-top: 4px solid var(--gold);
+  transform: translateY(20px);
+  animation: modalFadeIn 0.4s forwards;
+}
+
+@keyframes modalFadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--navy);
+  cursor: pointer;
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--gold);
+  transform: rotate(90deg);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 13%;
+  right: 2%;
+  width: 45px;
+  height: 45px;
+  background-color: var(--navy); 
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+@media(max-width:768px){
+  .back-to-top{
+    bottom: 10%;
+    right: 6%;
+  }
+}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: var(--gold);
+  color: var(--navy);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* Language Toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 146, 42, 0.25);
+  border-radius: 6px;
+  padding: 3px;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.lang-btn {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--gold-bright);
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+  color: var(--white);
+  box-shadow: 0 2px 8px rgba(200, 146, 42, 0.35);
+}
+
+.lang-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(200, 146, 42, 0.2);
+  flex-shrink: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .lang-toggle {
+    margin-left: 0;
+    margin-right: 0.75rem;
+  }
+  .lang-toggle-desktop{
+    display: none;
+  }
+ 
+}
