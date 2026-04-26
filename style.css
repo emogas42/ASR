@@ -331,6 +331,7 @@
       display: block;
     }
 
+
     .nav-dropdown a {
       display: block;
       color: rgba(255, 255, 255, 0.72);
@@ -346,7 +347,7 @@
       position: fixed;
       right: 3%;
       bottom: 7%;
-      scale: 3.5;
+      scale: 3.2;
       transition: .4s;
       z-index: 99;
     }
@@ -1039,7 +1040,7 @@
     .lead-form-card h3 {
       font-size: 1rem;
       font-weight: 700;
-      color: var(--white);
+      color: var(--gray-mid);
       margin-bottom: 0.5rem;
     }
 
@@ -1085,6 +1086,10 @@
     .form-group input:focus,
     .form-group select:focus {
       border-color: rgba(200, 146, 42, 0.55);
+    }
+
+    .form-group .select-options{
+      color: rgb(255, 255, 255);
     }
 
     .form-group select {
@@ -1602,10 +1607,11 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       transition: var(--transition);
+      transition: 0.4s;
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-40px);
       box-shadow: var(--shadow-lg);
     }
 
@@ -1651,7 +1657,7 @@
 
     .project-text {
       font-size: 0.8125rem;
-      color: var(--text);
+      color: var(--navy);
       line-height: 1.7;
     }
 
@@ -1822,7 +1828,7 @@
 ========================================= */
     #bilik-merkezi {
       padding: 6rem 2rem;
-      background: var(--white);
+      background: var(--off-white);
     }
 
     .resources-grid {
@@ -1852,8 +1858,8 @@
     }
 
     .resource-item:hover {
-      border-color: var(--gold-pale);
-      background: #fffdf7;
+      border-color: var(--gray-dark);
+      
       transform: translateX(4px);
     }
 
@@ -1877,7 +1883,7 @@
     .resource-item-name {
       font-size: 0.875rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--text);
       margin-bottom: 4px;
     }
 
@@ -1908,11 +1914,12 @@
       margin-bottom: 1rem;
       transition: var(--transition);
       cursor: pointer;
+
     }
 
     .blog-item:hover {
-      border-color: var(--gold-pale);
-      background: #fffdf7;
+      border-color: var(--text);
+      transform: translateX(10px);
     }
 
     .blog-date {
@@ -1927,7 +1934,7 @@
     .blog-title {
       font-size: 0.9375rem;
       font-weight: 700;
-      color: var(--navy);
+      color: var(--text);
       margin-bottom: 0.5rem;
       line-height: 1.4;
     }
@@ -3113,6 +3120,8 @@
     --gray-mid: #999;
   }
 
+  
+
   .accordion-wrapper {
     display: flex;
     flex-direction: column;
@@ -3152,7 +3161,7 @@
     flex: 1;
     font-size: 0.8125rem;
     font-weight: 500;
-    color: var(--text);
+    color: var(--navy);
   }
 
   .chevron-icon {
@@ -3172,7 +3181,7 @@
     transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
     padding: 0 18px;
     font-size: 0.78rem;
-    color: #666;
+    color:  var(--navy);
     line-height: 1.6;
   }
 
@@ -3181,6 +3190,7 @@
     opacity: 1;
     padding-bottom: 18px;
     padding-left: 45px; 
+    color: var(--off-white);
   }
   
 .modal-overlay {
@@ -3337,3 +3347,110 @@ body.modal-open {
   }
  
 }
+/* =========================================
+   DARK MODE CLASS
+========================================= */
+
+
+.dark-mode {
+  --navy:        #030d1a;
+  --navy-dark:   #020b18;
+  --navy-mid:    #0a1e36;
+  --navy-light:  #0f2d56;
+  --gold:        #d4a040;
+  --gold-bright: #e8b84b;
+  --gold-pale:   #1e1608;
+  --orange:      #d96820;
+  --white:       #e8e0d0;
+  --off-white:   #0d1a2b;
+  --border:      #1a3150;
+  --gray-light:  #111e2e;
+  --gray-mid:    #6a7f96;
+  --gray-dark:   #b0bfcc;
+  --text:        #dcd5c5;
+  --text-muted:  #8a9bb0;
+  --shadow-sm:   0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md:   0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-lg:   0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Background-lar */
+.dark-mode body                    { background: #020b18; color: var(--text); }
+.dark-mode #trust                  { background: #0d1a2b; border-color: #1a3150; }
+.dark-mode #xidmetler,
+.dark-mode #xidmetler-detail       { background: #0b1828; }
+.dark-mode #haqqimizda             { background: #0d1a2b; }
+
+/* Kartlar */
+.dark-mode .service-card           { background: #0d1f35; border-color: #1a3150; }
+.dark-mode .service-card:hover     { border-color: transparent; }
+.dark-mode .cert-card              { background: #0d1f35; border-color: #1a3150; }
+.dark-mode .award-item             { background: #0d1f35; border-color: #1a3150; }
+.dark-mode .award-item:hover       { background: #0f2240; border-color: #2a4a6a; }
+.dark-mode .trust-item             { background: #0d1f35; border-color: #1a3150; }
+.dark-mode .svc-detail-card        { background: #0d1f35; border-color: #1a3150; }
+
+/* Mətn rəngləri */
+.dark-mode .section-title          { color: #e8e0d0; }
+.dark-mode .section-desc           { color: #8a9bb0; }
+.dark-mode .service-name           { color: #e8e0d0; }
+.dark-mode .service-desc           { color: #8a9bb0; }
+.dark-mode .cert-card-name         { color: #e8e0d0; }
+.dark-mode .cert-card-type         { color: #6a7f96; }
+.dark-mode .award-text             { color: #c0ccd8; }
+.dark-mode .timeline-title         { color: #e8e0d0; }
+.dark-mode .timeline-desc          { color: #8a9bb0; }
+.dark-mode .timeline-year          { background: #1a2e14; color: #d4a040; }
+.dark-mode .timeline-line          { background: #1a3150; }
+
+/* Tag-lar */
+.dark-mode .tag                    { background: #111e2e; color: #8a9bb0; border-color: #1a3150; }
+
+/* Lead form */
+.dark-mode .lead-form-card         { background: rgba(255,255,255,0.03); border-color: rgba(200,146,42,0.15); }
+.dark-mode .form-group input,
+.dark-mode .form-group select      { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); }
+
+/* Trust label */
+.dark-mode .trust-label            { color: #4a5f75; }
+
+
+    #theme-switch{
+      border: none;
+      height: 40px;
+      width: 40px;
+      padding: 0;
+      border-radius: 50%;
+      background-color: var(--gray-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 13px;
+      right: 20px;
+    }
+    @media (max-width:768px){
+
+      #theme-switch{
+        right: 18%;
+        top: 16px;
+      }
+    }
+      
+    
+    #theme-switch i{
+      color: var(--text);
+    }
+    
+    #theme-switch i:last-child{
+      display: none;
+      
+    
+    }
+    .dark-mode  #theme-switch i:first-child{
+      display: none;
+      
+    }
+    .dark-mode #theme-switch i:last-child{
+      display: block;
+    }

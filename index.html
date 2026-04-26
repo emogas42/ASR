@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class=""> 
   <!--  NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
@@ -92,7 +92,7 @@
 
         <li class="nav-item">
           <a href="#qalereya" class="nav-link">
-            Daxili Mətbəx
+            Daxili Mətbəx 
             <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="nav-dropdown">
@@ -123,6 +123,14 @@
   <span class="lang-divider"></span>
   <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
 </div>
+
+  <button id="theme-switch">
+    <i class="fa-regular fa-moon" ></i>
+    <i class="fa-solid fa-sun" ></i>
+  </button>
+
+
+
 
 
 
@@ -255,7 +263,7 @@
       </div>
 
       <div class="slide-counter"><span id="currentNum">2</span> / 3</div>
-      <div class="stats-bar" style="z-index: 99;position: absolute; top: 540px;">
+      <div class="stats-bar" style="z-index: 2;position: absolute; top: 99%; height: 80px;">
         <div class="stat-item">
           <div class="stat-num">50+</div>
           <div class="stat-label">Ekspert</div>
@@ -567,13 +575,13 @@ TRUST BAR
           <div class="form-group">
             <label>Fəaliyyət Sahəsi</label>
             <select>
-              <option value="">Seçin...</option>
-              <option>Ət Emalı</option>
-              <option>Süd Məhsulları</option>
-              <option>HoReCa</option>
-              <option>Çörəkçilik</option>
-              <option>İçki İstehsalı</option>
-              <option>Digər</option>
+              <option value="" class="select-options">Seçin...</option>
+              <option class="select-options">Ət Emalı</option>
+              <option calss="select-options" style="color: white;">Süd Məhsulları</option>
+              <option class="select-options">HoReCa</option>
+              <option class="select-options">Çörəkçilik</option>
+              <option class="select-options">İçki İstehsalı</option>
+              <option class="select-options">Digər</option>
             </select>
           </div>
           <button class="btn btn-gold" onclick="this.textContent = '✓  Göndərildi!'">
@@ -841,7 +849,7 @@ TRUST BAR
                 <div style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--navy);
+                      color: var(--white);
                       margin-bottom: 4px;
                     ">
                   Şirkətin Əsası Qoyulur
@@ -894,7 +902,7 @@ TRUST BAR
                 <div style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--navy);
+                      color: var(--white);
                       margin-bottom: 4px;
                     ">
                   Beynəlxalq Sertifikasiya
@@ -946,7 +954,7 @@ TRUST BAR
                 <div style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--navy);
+                      color: var(--white);
                       margin-bottom: 4px;
                     ">
                   Tam Rebrendinq &amp; Genişlənmə
@@ -997,7 +1005,7 @@ TRUST BAR
                 <div style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--navy);
+                      color: var(--white);
                       margin-bottom: 4px;
                     ">
                   Regional Lider Mövqe
@@ -1028,7 +1036,7 @@ TRUST BAR
               <h3 style="
                   font-size: 1.25rem;
                   font-weight: 800;
-                  color: var(--navy);
+                  color: var(--white);
                   margin: 0;
                 ">
                 Şirkət &amp; Auditor Sertifikatları
@@ -1695,12 +1703,12 @@ TRUST BAR
         </p>
       </div>
       <div class="projects-grid">
-        <div class="project-card fade-in fade-in-delay-1">
+        <div class="project-card fade-in fade-in-delay-1" >
           <div class="project-industry">
             <span class="project-industry-name">Ət Emalı Müəssisəsi</span>
             <span class="project-year">2023</span>
           </div>
-          <div class="project-body">
+          <div class="project-body" >
             <div class="project-label">Problem</div>
             <p class="project-text">
               Müəssisə HACCP tələblərini tam yerinə yetirmirdi. Soyuq zəncirdə
@@ -1750,7 +1758,7 @@ TRUST BAR
           </div>
         </div>
 
-        <div class="project-card fade-in-delay-3">
+        <div class="project-card fade-in fade-in-delay-3">
           <div class="project-industry">
             <span class="project-industry-name">HoReCa Şəbəkəsi</span>
             <span class="project-year">2023</span>
@@ -2080,6 +2088,8 @@ TRUST BAR
 </button>
 
   <script src="app.js"></script>
+    <script type="text/javascript" src="darkmode.js"></script>
+
 
 
 
