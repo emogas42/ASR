@@ -3347,9 +3347,7 @@ body.modal-open {
   }
  
 }
-/* =========================================
-   DARK MODE CLASS
-========================================= */
+/* ========== DARK MODE CLASS ======== */
 
 
 .dark-mode {
@@ -3374,14 +3372,11 @@ body.modal-open {
   --shadow-lg:   0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
-/* Background-lar */
 .dark-mode body                    { background: #020b18; color: var(--text); }
 .dark-mode #trust                  { background: #0d1a2b; border-color: #1a3150; }
 .dark-mode #xidmetler,
 .dark-mode #xidmetler-detail       { background: #0b1828; }
 .dark-mode #haqqimizda             { background: #0d1a2b; }
-
-/* Kartlar */
 .dark-mode .service-card           { background: #0d1f35; border-color: #1a3150; }
 .dark-mode .service-card:hover     { border-color: transparent; }
 .dark-mode .cert-card              { background: #0d1f35; border-color: #1a3150; }
@@ -3389,8 +3384,6 @@ body.modal-open {
 .dark-mode .award-item:hover       { background: #0f2240; border-color: #2a4a6a; }
 .dark-mode .trust-item             { background: #0d1f35; border-color: #1a3150; }
 .dark-mode .svc-detail-card        { background: #0d1f35; border-color: #1a3150; }
-
-/* Mətn rəngləri */
 .dark-mode .section-title          { color: #e8e0d0; }
 .dark-mode .section-desc           { color: #8a9bb0; }
 .dark-mode .service-name           { color: #e8e0d0; }
@@ -3402,16 +3395,12 @@ body.modal-open {
 .dark-mode .timeline-desc          { color: #8a9bb0; }
 .dark-mode .timeline-year          { background: #1a2e14; color: #d4a040; }
 .dark-mode .timeline-line          { background: #1a3150; }
-
-/* Tag-lar */
 .dark-mode .tag                    { background: #111e2e; color: #8a9bb0; border-color: #1a3150; }
-
-/* Lead form */
 .dark-mode .lead-form-card         { background: rgba(255,255,255,0.03); border-color: rgba(200,146,42,0.15); }
 .dark-mode .form-group input,
 .dark-mode .form-group select      { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); }
 
-/* Trust label */
+
 .dark-mode .trust-label            { color: #4a5f75; }
 
 
