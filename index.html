@@ -1,512 +1,690 @@
 <!doctype html>
 <html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə."
+    />
+    <title>ASR Development Consulting Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/asr group png.png" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə." />
-  <title>ASR Development Consulting Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" type="image/png" href="images/asr group png.png">
+    <link rel="apple-touch-icon" href="images/asr logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <link rel="apple-touch-icon" href="images/asr logo.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body class=""> 
-  <!--  NAVIGATION -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <!-- Logo -->
-      <a href="#hero" class="logo">
-        <img src="images/asr logo.png" alt="ASR Development Consulting Group" style="
+  <body class="">
+    <!--  NAVIGATION -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#hero" class="logo">
+          <img
+            src="images/asr logo.png"
+            alt="ASR Development Consulting Group"
+            style="
               height: 60px;
               margin-top: 3px;
               width: auto;
               object-fit: contain;
               filter: brightness(0) invert(1);
-            " />
-      </a>
+            "
+          />
+        </a>
 
-      <ul class="nav-menu" style="margin: auto">
-
-        <li class="nav-item">
-          <a href="#haqqimizda" class="nav-link">
-            Haqqımızda
-            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="#haqqimizda">Şirkət Profili</a>
-            <a href="#haqqimizda">Tariximiz (2009–2019)</a>
-            <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a href="#xidmetler" class="nav-link">
-            Xidmətlər
-            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
-          </a>
-          <div class="mega-menu">
-            <div class="mega-col">
-              <div class="mega-col-title">Qida Təhlükəsizliyi</div>
-              <a href="#xidmetler-detail">ISO 22000</a>
-              <a href="#xidmetler-detail">HACCP</a>
-              <a href="#xidmetler-detail">BRCGS</a>
-              <a href="#xidmetler-detail">IFS Standartı</a>
-              <a href="#xidmetler-detail">Texnoloji Audit</a>
+        <ul class="nav-menu" style="margin: auto">
+          <li class="nav-item">
+            <a href="#haqqimizda" class="nav-link">
+              Haqqımızda
+              <i
+                class="fa-solid fa-chevron-down nav-chevron"
+                style="font-size: 10px"
+              ></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="#haqqimizda">Şirkət Profili</a>
+              <a href="#haqqimizda">Tariximiz (2009–2019)</a>
+              <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
             </div>
-            <div class="mega-col">
-              <div class="mega-col-title">Strateji İdarəetmə</div>
-              <a href="#xidmetler-detail">MQ Sistemləri</a>
-              <a href="#xidmetler-detail">Strateji Planlaşdırma</a>
-              <a href="#xidmetler-detail">HR Audit</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#xidmetler" class="nav-link">
+              Xidmətlər
+              <i
+                class="fa-solid fa-chevron-down nav-chevron"
+                style="font-size: 10px"
+              ></i>
+            </a>
+            <div class="mega-menu">
+              <div class="mega-col">
+                <div class="mega-col-title">Qida Təhlükəsizliyi</div>
+                <a href="#xidmetler-detail">ISO 22000</a>
+                <a href="#xidmetler-detail">HACCP</a>
+                <a href="#xidmetler-detail">BRCGS</a>
+                <a href="#xidmetler-detail">IFS Standartı</a>
+                <a href="#xidmetler-detail">Texnoloji Audit</a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-col-title">Strateji İdarəetmə</div>
+                <a href="#xidmetler-detail">MQ Sistemləri</a>
+                <a href="#xidmetler-detail">Strateji Planlaşdırma</a>
+                <a href="#xidmetler-detail">HR Audit</a>
+              </div>
+              <div class="mega-col">
+                <div class="mega-col-title">İqtisadi-Hüquqi</div>
+                <a href="#xidmetler-detail">Qanunvericilik Ekspertizası</a>
+                <a href="#xidmetler-detail">Feasibility Analizləri</a>
+                <a href="#xidmetler-detail">RIA Xidmətləri</a>
+              </div>
             </div>
-            <div class="mega-col">
-              <div class="mega-col-title">İqtisadi-Hüquqi</div>
-              <a href="#xidmetler-detail">Qanunvericilik Ekspertizası</a>
-              <a href="#xidmetler-detail">Feasibility Analizləri</a>
-              <a href="#xidmetler-detail">RIA Xidmətləri</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#tecrubekm" class="nav-link">
+              Təcrübəmiz
+              <i
+                class="fa-solid fa-chevron-down nav-chevron"
+                style="font-size: 10px"
+              ></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="#tecrubekm">Uğurlu Layihələr</a>
+              <a href="#tecrubekm">Ət Sənayesi</a>
+              <a href="#tecrubekm">Süd Sənayesi</a>
+              <a href="#tecrubekm">HoReCa Sektoru</a>
             </div>
-          </div>
-        </li>
+          </li>
 
+          <li class="nav-item">
+            <a href="#qalereya" class="nav-link">
+              Daxili Mətbəx
+              <i
+                class="fa-solid fa-chevron-down nav-chevron"
+                style="font-size: 10px"
+              ></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="#qalereya">Foto Qalereya</a>
+              <a href="#qalereya">Video İcmallar</a>
+              <a href="#bilik-merkezi">Xəbərlər</a>
+            </div>
+          </li>
 
-        <li class="nav-item">
-          <a href="#tecrubekm" class="nav-link">
-            Təcrübəmiz
-            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="#tecrubekm">Uğurlu Layihələr</a>
-            <a href="#tecrubekm">Ət Sənayesi</a>
-            <a href="#tecrubekm">Süd Sənayesi</a>
-            <a href="#tecrubekm">HoReCa Sektoru</a>
-          </div>
-        </li>
+          <li class="nav-item">
+            <a href="#bilik-merkezi" class="nav-link">
+              Bilik Mərkəzi
+              <i
+                class="fa-solid fa-chevron-down nav-chevron"
+                style="font-size: 10px"
+              ></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="#bilik-merkezi">Ekspert Bloqu</a>
+              <a href="#bilik-merkezi">Pulsuz Yükləmələr</a>
+            </div>
+          </li>
 
+          <li class="nav-item">
+            <a href="#footer" class="nav-link">Əlaqə</a>
+          </li>
+        </ul>
+        <!-- Language Toggle -->
+        <div class="lang-toggle lang-toggle-desktop">
+          <a href="index.html" class="lang-btn lang-az active" id="langAZ"
+            >AZ</a
+          >
+          <span class="lang-divider"></span>
+          <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
+        </div>
 
-        <li class="nav-item">
-          <a href="#qalereya" class="nav-link">
-            Daxili Mətbəx 
-            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="#qalereya">Foto Qalereya</a>
-            <a href="#qalereya">Video İcmallar</a>
-            <a href="#bilik-merkezi">Xəbərlər</a>
-          </div>
-        </li>
+        <button id="theme-switch">
+          <i class="fa-regular fa-moon"></i>
+          <i class="fa-solid fa-sun"></i>
+        </button>
 
-        <li class="nav-item">
-          <a href="#bilik-merkezi" class="nav-link">
-            Bilik Mərkəzi
-            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
-          </a>
-          <div class="nav-dropdown">
-            <a href="#bilik-merkezi">Ekspert Bloqu</a>
-            <a href="#bilik-merkezi">Pulsuz Yükləmələr</a>
-          </div>
-        </li>
+        <button class="nav-toggle" id="mobileToggle" aria-label="Menyu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
 
-        <li class="nav-item">
-          <a href="#footer" class="nav-link">Əlaqə</a>
-        </li>
-      </ul>
-      <!-- Language Toggle -->
-<div class="lang-toggle lang-toggle-desktop">
-  <a href="index.html" class="lang-btn lang-az active" id="langAZ">AZ</a>
-  <span class="lang-divider"></span>
-  <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
-</div>
-
-  <button id="theme-switch">
-    <i class="fa-regular fa-moon" ></i>
-    <i class="fa-solid fa-sun" ></i>
-  </button>
-
-
-
-
-
-
-      <button class="nav-toggle" id="mobileToggle" aria-label="Menyu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#haqqimizda" class="mobile-nav-link">Haqqımızda</a>
+      <div class="mobile-sub">
+        <a href="#haqqimizda">Şirkət Profili</a>
+        <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
+      </div>
+      <a href="#xidmetler" class="mobile-nav-link">Xidmətlər</a>
+      <div class="mobile-sub">
+        <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+        <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+        <a href="#xidmetler-detail">İqtisadi-Hüquqi</a>
+      </div>
+      <a href="#tecrubekm" class="mobile-nav-link">Təcrübəmiz</a>
+      <a href="#qalereya" class="mobile-nav-link">Daxili Mətbəx</a>
+      <a href="#bilik-merkezi" class="mobile-nav-link">Bilik Mərkəzi</a>
+      <a href="#footer" class="mobile-nav-link">Əlaqə</a>
+      <div class="lang-toggle" style="width: 80px; margin-top: 10px">
+        <a href="index.html" class="lang-btn lang-az active" id="langAZ">AZ</a>
+        <span class="lang-divider"></span>
+        <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
+      </div>
     </div>
-    
-  </nav>
 
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#haqqimizda" class="mobile-nav-link">Haqqımızda</a>
-    <div class="mobile-sub">
-      <a href="#haqqimizda">Şirkət Profili</a>
-      <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
-    </div>
-    <a href="#xidmetler" class="mobile-nav-link">Xidmətlər</a>
-    <div class="mobile-sub">
-      <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
-      <a href="#xidmetler-detail">Strateji İdarəetmə</a>
-      <a href="#xidmetler-detail">İqtisadi-Hüquqi</a>
-    </div>
-    <a href="#tecrubekm" class="mobile-nav-link">Təcrübəmiz</a>
-    <a href="#qalereya" class="mobile-nav-link">Daxili Mətbəx</a>
-    <a href="#bilik-merkezi" class="mobile-nav-link">Bilik Mərkəzi</a>
-    <a href="#footer" class="mobile-nav-link">Əlaqə</a>
-    <div class="lang-toggle " style="width: 80px; margin-top: 10px;">
-  <a href="index.html" class="lang-btn lang-az active" id="langAZ">AZ</a>
-  <span class="lang-divider"></span>
-  <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
-</div>
-  </div>
-
-  <!-- =========================================
+    <!-- =========================================
      HERO
 ========================================= -->
-  <section id="hero">
-    <div class="carousel-root" id="heroCarousel">
+    <section id="hero">
+      <div class="carousel-root" id="heroCarousel">
+        <div
+          class="slides-track"
+          id="slidesTrack"
+          style="transform: translateX(-100%)"
+        >
+          <div class="slide" id="slide-0">
+            <img
+              class="slide-img"
+              src="images/buildings.jpg"
+              alt="Slide 1"
+              onerror="
+                this.style.background =
+                  'linear-gradient(135deg,#0d2040,#071426)';
+                this.style.opacity = '1';
+              "
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgb(13, 32, 64),
+                  rgb(7, 20, 38)
+                );
+                opacity: 1;
+              "
+            />
+            <div class="slide-overlay-left"></div>
+            <div class="slide-overlay-bottom"></div>
+            <div class="slide-geo"></div>
+            <div class="slide-content">
+              <div class="slide-tag">Strateji İdarəetmə</div>
+              <h2 class="slide-title">
+                Strateji Həllər,<br /><span>Dayanıqlı</span> İnkişaf.
+              </h2>
+              <p class="slide-desc">
+                Qida təhlükəsizliyi, strateji idarəetmə və hüquqi ekspertiza
+                sahəsində beynəlxalq sertifikatlı mütəxəssislərlə biznesinizi
+                gələcəyə hazırlayırıq.
+              </p>
+              <div class="slide-btns">
+                <a href="#lead-magnet" class="btn-primary">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 12H15M12 9V15M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                  Pulsuz Diaqnostika
+                </a>
+                <a href="#xidmetler" class="btn-secondary">Xidmətlər →</a>
+              </div>
+            </div>
+          </div>
 
-      <div class="slides-track" id="slidesTrack" style="transform: translateX(-100%);">
+          <div class="slide active" id="slide-1">
+            <img
+              class="slide-img"
+              src="images/team.jpg"
+              alt="Slide 2"
+              onerror="
+                this.style.background =
+                  'linear-gradient(135deg,#0a1e38,#071426)';
+                this.style.opacity = '1';
+              "
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgb(10, 30, 56),
+                  rgb(7, 20, 38)
+                );
+                opacity: 1;
+              "
+            />
+            <div class="slide-overlay-left"></div>
+            <div class="slide-overlay-bottom"></div>
+            <div class="slide-geo"></div>
+            <div class="slide-content">
+              <div class="slide-tag">Ekspert Komanda</div>
+              <h2 class="slide-title">
+                50+ Sertifikatlı<br /><span>Mütəxəssis</span> Yanınızda.
+              </h2>
+              <p class="slide-desc">
+                15 illik təcrübəyə sahib komandamız, biznesinizin hər
+                mərhələsində dünyaca tanınmış standartlarla xidmətinizdədir.
+              </p>
+              <div class="slide-btns">
+                <a href="#komanda" class="btn-primary">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  Komandamıza Bax
+                </a>
+                <a href="#haqqimizda" class="btn-ghost">Daha Ətraflı →</a>
+              </div>
+            </div>
+          </div>
 
-        <div class="slide" id="slide-0">
-          <img class="slide-img" src="images/buildings.jpg" alt="Slide 1"
-            onerror="this.style.background='linear-gradient(135deg,#0d2040,#071426)';this.style.opacity='1'"
-            style="background: linear-gradient(135deg, rgb(13, 32, 64), rgb(7, 20, 38)); opacity: 1;">
-          <div class="slide-overlay-left"></div>
-          <div class="slide-overlay-bottom"></div>
-          <div class="slide-geo"></div>
-          <div class="slide-content">
-            <div class="slide-tag">Strateji İdarəetmə</div>
-            <h2 class="slide-title">Strateji Həllər,<br><span>Dayanıqlı</span> İnkişaf.</h2>
-            <p class="slide-desc">Qida təhlükəsizliyi, strateji idarəetmə və hüquqi ekspertiza sahəsində beynəlxalq
-              sertifikatlı mütəxəssislərlə biznesinizi gələcəyə hazırlayırıq.</p>
-            <div class="slide-btns">
-              <a href="#lead-magnet" class="btn-primary">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 12H15M12 9V15M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"></path>
-                </svg>
-                Pulsuz Diaqnostika
-              </a>
-              <a href="#xidmetler" class="btn-secondary">Xidmətlər →</a>
+          <div class="slide" id="slide-2">
+            <img
+              class="slide-img"
+              src="images/certification.jpg"
+              alt="Slide 3"
+              onerror="
+                this.style.background =
+                  'linear-gradient(135deg,#071e35,#071426)';
+                this.style.opacity = '1';
+              "
+              style="
+                background: linear-gradient(
+                  135deg,
+                  rgb(7, 30, 53),
+                  rgb(7, 20, 38)
+                );
+                opacity: 1;
+              "
+            />
+            <div class="slide-overlay-left"></div>
+            <div class="slide-overlay-bottom"></div>
+            <div class="slide-geo"></div>
+            <div class="slide-content">
+              <div class="slide-tag">Beynəlxalq Sertifikatlar</div>
+              <h2 class="slide-title">
+                12+ Beynəlxalq<br /><span>Standart</span> ilə Zəmanət.
+              </h2>
+              <p class="slide-desc">
+                ISO, HACCP, GMP və digər beynəlxalq sertifikatlarla təsdiqlənmiş
+                keyfiyyətimiz — sizin uğurunuzun əsasıdır.
+              </p>
+              <div class="slide-btns">
+                <a href="#sertifikatlar" class="btn-primary">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                  Sertifikatlarımız
+                </a>
+                <a href="#xidmetler" class="btn-secondary">Xidmətlər →</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="slide active" id="slide-1">
-          <img class="slide-img" src="images/team.jpg" alt="Slide 2"
-            onerror="this.style.background='linear-gradient(135deg,#0a1e38,#071426)';this.style.opacity='1'"
-            style="background: linear-gradient(135deg, rgb(10, 30, 56), rgb(7, 20, 38)); opacity: 1;">
-          <div class="slide-overlay-left"></div>
-          <div class="slide-overlay-bottom"></div>
-          <div class="slide-geo"></div>
-          <div class="slide-content">
-            <div class="slide-tag">Ekspert Komanda</div>
-            <h2 class="slide-title">50+ Sertifikatlı<br><span>Mütəxəssis</span> Yanınızda.</h2>
-            <p class="slide-desc">15 illik təcrübəyə sahib komandamız, biznesinizin hər mərhələsində dünyaca tanınmış
-              standartlarla xidmətinizdədir.</p>
-            <div class="slide-btns">
-              <a href="#komanda" class="btn-primary">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Komandamıza Bax
-              </a>
-              <a href="#haqqimizda" class="btn-ghost">Daha Ətraflı →</a>
-            </div>
+        <button
+          class="arrow-btn arrow-prev"
+          id="arrowPrev"
+          aria-label="Əvvəlki"
+        >
+          ←
+        </button>
+        <button
+          class="arrow-btn arrow-next"
+          id="arrowNext"
+          aria-label="Növbəti"
+        >
+          →
+        </button>
+
+        <div class="carousel-nav" id="carouselNav">
+          <button class="nav-dot" data-index="0" aria-label="Slide 1"></button>
+          <button
+            class="nav-dot active"
+            data-index="1"
+            aria-label="Slide 2"
+          ></button>
+          <button class="nav-dot" data-index="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="slide-counter"><span id="currentNum">2</span> / 3</div>
+        <div
+          class="stats-bar"
+          style="z-index: 2; position: absolute; top: 99%; height: 80px"
+        >
+          <div class="stat-item">
+            <div class="stat-num">50+</div>
+            <div class="stat-label">Ekspert</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">100+</div>
+            <div class="stat-label">Tamamlanmış Layihə</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">15</div>
+            <div class="stat-label">İl Təcrübə</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">12+</div>
+            <div class="stat-label">Beynəlxalq Sertifikat</div>
           </div>
         </div>
 
-        <div class="slide" id="slide-2">
-          <img class="slide-img" src="images/certification.jpg" alt="Slide 3"
-            onerror="this.style.background='linear-gradient(135deg,#071e35,#071426)';this.style.opacity='1'"
-            style="background: linear-gradient(135deg, rgb(7, 30, 53), rgb(7, 20, 38)); opacity: 1;">
-          <div class="slide-overlay-left"></div>
-          <div class="slide-overlay-bottom"></div>
-          <div class="slide-geo"></div>
-          <div class="slide-content">
-            <div class="slide-tag">Beynəlxalq Sertifikatlar</div>
-            <h2 class="slide-title">12+ Beynəlxalq<br><span>Standart</span> ilə Zəmanət.</h2>
-            <p class="slide-desc">ISO, HACCP, GMP və digər beynəlxalq sertifikatlarla təsdiqlənmiş keyfiyyətimiz — sizin
-              uğurunuzun əsasıdır.</p>
-            <div class="slide-btns">
-              <a href="#sertifikatlar" class="btn-primary">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-                Sertifikatlarımız
-              </a>
-              <a href="#xidmetler" class="btn-secondary">Xidmətlər →</a>
+        <div
+          class="progress-line"
+          id="progressLine"
+          style="width: 100%; transition: width 5000ms linear"
+        ></div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <div id="trust">
+      <p class="trust-label" style="font-size: 12px">
+        Etibarlı Tərəfdaşlarımız &amp; Müştərilərimiz
+      </p>
+      <div class="trust-track-wrapper">
+        <div class="trust-track">
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/aqta logo.jpg"
+                alt="AQTA"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
             </div>
+            <span class="trust-item-name">AQTA Tərəfdaşı</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/ISO-accredidation.png"
+                alt="ISO"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">ISO Akkreditasiya</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/Emblem_of_Azerbaijan.svg.webp"
+                alt="Dövlət Qurumu"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">Dövlət Qurumları</span>
+          </div>
+          <div class="trust-item">
+            <div
+              class="trust-item-icon"
+              style="
+                color: #a0abc0;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="images/ingredient logo.jpg"
+                alt="Dövlət Qurumu"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">Ərzaq Holdinqləri</span>
+          </div>
+          <div class="trust-item">
+            <div
+              class="trust-item-icon"
+              style="
+                color: #a0abc0;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="images/cowmilk.png"
+                alt="HoReCa"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">Süd Müəssisələri</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/horeca-vector-logo-flat-design-260nw-2141752203.webp"
+                alt="HoReCa"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">HoReCa Şəbəkəsi</span>
+          </div>
+          <div class="trust-item">
+            <div
+              class="trust-item-icon"
+              style="
+                color: #a0abc0;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <img
+                src="images/meatlogo.png"
+                alt="HoReCa"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">Ət İstehsalçıları</span>
+          </div>
+
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/aqta logo.jpg"
+                alt="AQTA"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">AQTA Tərəfdaşı</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/ISO-accredidation.png"
+                alt="ISO"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">ISO Akkreditasiya</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/Emblem_of_Azerbaijan.svg.webp"
+                alt="Dövlət Qurumu"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">Dövlət Qurumları</span>
+          </div>
+          <div class="trust-item">
+            <div
+              class="trust-item-icon"
+              style="
+                color: #a0abc0;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+            <span class="trust-item-name">Ərzaq Holdinqləri</span>
+          </div>
+          <div class="trust-item">
+            <div
+              class="trust-item-icon"
+              style="
+                color: #a0abc0;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-cow"></i>
+            </div>
+            <span class="trust-item-name">Süd Müəssisələri</span>
+          </div>
+          <div class="trust-item">
+            <div class="trust-item-icon" style="background: transparent">
+              <img
+                src="images/horeca-vector-logo-flat-design-260nw-2141752203.webp"
+                alt="HoReCa"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  border-radius: 6px;
+                "
+              />
+            </div>
+            <span class="trust-item-name">HoReCa Şəbəkəsi</span>
+          </div>
+          <div class="trust-item">
+            <div
+              class="trust-item-icon"
+              style="
+                color: #a0abc0;
+                font-size: 1.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <i class="fa-solid fa-drumstick-bite"></i>
+            </div>
+            <span class="trust-item-name">Ət İstehsalçıları</span>
           </div>
         </div>
-
       </div>
-
-      <button class="arrow-btn arrow-prev" id="arrowPrev" aria-label="Əvvəlki">←</button>
-      <button class="arrow-btn arrow-next" id="arrowNext" aria-label="Növbəti">→</button>
-
-      <div class="carousel-nav" id="carouselNav">
-        <button class="nav-dot" data-index="0" aria-label="Slide 1"></button>
-        <button class="nav-dot active" data-index="1" aria-label="Slide 2"></button>
-        <button class="nav-dot" data-index="2" aria-label="Slide 3"></button>
-      </div>
-
-      <div class="slide-counter"><span id="currentNum">2</span> / 3</div>
-      <div class="stats-bar" style="z-index: 2;position: absolute; top: 99%; height: 80px;">
-        <div class="stat-item">
-          <div class="stat-num">50+</div>
-          <div class="stat-label">Ekspert</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">100+</div>
-          <div class="stat-label">Tamamlanmış Layihə</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">15</div>
-          <div class="stat-label">İl Təcrübə</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">Beynəlxalq Sertifikat</div>
-        </div>
-      </div>
-
-
-      <div class="progress-line" id="progressLine" style="width: 100%; transition: width 5000ms linear;"></div>
     </div>
-  </section>
 
-  <!-- ===== TRUST BAR ===== -->
-  <div id="trust">
-    <p class="trust-label" style="font-size: 12px">
-      Etibarlı Tərəfdaşlarımız &amp; Müştərilərimiz
-    </p>
-    <div class="trust-track-wrapper">
-      <div class="trust-track">
-
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/aqta logo.jpg" alt="AQTA" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">AQTA Tərəfdaşı</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/ISO-accredidation.png" alt="ISO" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">ISO Akkreditasiya</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/Emblem_of_Azerbaijan.svg.webp" alt="Dövlət Qurumu" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">Dövlət Qurumları</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="
-                color: #a0abc0;
-                font-size: 1.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
-            <img src="images/ingredient logo.jpg" alt="Dövlət Qurumu" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">Ərzaq Holdinqləri</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="
-                color: #a0abc0;
-                font-size: 1.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
-            <img src="images/cowmilk.png" alt="HoReCa" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">Süd Müəssisələri</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/horeca-vector-logo-flat-design-260nw-2141752203.webp" alt="HoReCa" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">HoReCa Şəbəkəsi</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="
-                color: #a0abc0;
-                font-size: 1.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
-            <img src="images/meatlogo.png" alt="HoReCa" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">Ət İstehsalçıları</span>
-        </div>
-
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/aqta logo.jpg" alt="AQTA" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">AQTA Tərəfdaşı</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/ISO-accredidation.png" alt="ISO" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">ISO Akkreditasiya</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/Emblem_of_Azerbaijan.svg.webp" alt="Dövlət Qurumu" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">Dövlət Qurumları</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="
-                color: #a0abc0;
-                font-size: 1.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
-            <i class="fa-solid fa-boxes-stacked"></i>
-          </div>
-          <span class="trust-item-name">Ərzaq Holdinqləri</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="
-                color: #a0abc0;
-                font-size: 1.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
-            <i class="fa-solid fa-cow"></i>
-          </div>
-          <span class="trust-item-name">Süd Müəssisələri</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="background: transparent">
-            <img src="images/horeca-vector-logo-flat-design-260nw-2141752203.webp" alt="HoReCa" style="
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                  border-radius: 6px;
-                " />
-          </div>
-          <span class="trust-item-name">HoReCa Şəbəkəsi</span>
-        </div>
-        <div class="trust-item">
-          <div class="trust-item-icon" style="
-                color: #a0abc0;
-                font-size: 1.25rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              ">
-            <i class="fa-solid fa-drumstick-bite"></i>
-          </div>
-          <span class="trust-item-name">Ət İstehsalçıları</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- =========================================
+    <!-- =========================================
      LEAD MAGNET
 ========================================= -->
-  <section id="lead-magnet">
-    <div class="lead-bg-shape"></div>
-    <div class="lead-inner">
-      <div class="lead-left fade-in" style="position: relative">
-        <div class="lead-badge-pill">
-          <span>✦ Pulsuz Resurs</span>
-        </div>
+    <section id="lead-magnet">
+      <div class="lead-bg-shape"></div>
+      <div class="lead-inner">
+        <div class="lead-left fade-in" style="position: relative">
+          <div class="lead-badge-pill">
+            <span>✦ Pulsuz Resurs</span>
+          </div>
 
-        <h2 class="section-title" style="color: white">
-          Müəssisəniz Beynəlxalq Auditə Hazırdırmı?
-        </h2>
+          <h2 class="section-title" style="color: white">
+            Müəssisəniz Beynəlxalq Auditə Hazırdırmı?
+          </h2>
 
-        <div style="
+          <div
+            style="
               position: relative;
               margin-bottom: 1.5rem;
               border-radius: 12px;
               overflow: hidden;
               clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
-            ">
-          <img src="images/microsoft-365-oUbzU87d1Gc-unsplash.jpg" alt="" style="
+            "
+          >
+            <img
+              src="images/microsoft-365-oUbzU87d1Gc-unsplash.jpg"
+              alt=""
+              style="
                 width: 100%;
                 height: 260px;
                 object-fit: cover;
                 object-position: center;
                 display: block;
                 opacity: 0.55;
-              " />
+              "
+            />
 
-          <div style="
+            <div
+              style="
                 position: absolute;
                 inset: 0;
                 background: linear-gradient(
@@ -517,9 +695,11 @@
                   var(--navy) 100%
                 );
                 z-index: 4;
-              "></div>
+              "
+            ></div>
 
-          <div style="
+            <div
+              style="
                 position: absolute;
                 inset: 0;
                 background: linear-gradient(
@@ -527,291 +707,404 @@
                   var(--navy) 0%,
                   transparent 50%
                 );
-              "></div>
+              "
+            ></div>
+          </div>
+
+          <p class="lead-desc">
+            AQTA və ISO standartlarına uyğunluq üçün hazırladığımız 10 addımlıq
+            ekspert Checklist-ini pulsuz yükləyin.
+          </p>
+
+          <div class="lead-checks">
+            <div class="lead-check">
+              <div class="lead-check-icon">✓</div>
+              AQTA tələblərinə uyğunluq yoxlaması
+            </div>
+            <div class="lead-check">
+              <div class="lead-check-icon">✓</div>
+              ISO 22000 audit hazırlıq siyahısı
+            </div>
+            <div class="lead-check">
+              <div class="lead-check-icon">✓</div>
+              HACCP kritik nöqtələrinin qiymətləndirilməsi
+            </div>
+            <div class="lead-check">
+              <div class="lead-check-icon">✓</div>
+              Sənədləşdirmə tələbləri üzrə bələdçi
+            </div>
+          </div>
         </div>
 
-        <p class="lead-desc">
-          AQTA və ISO standartlarına uyğunluq üçün hazırladığımız 10 addımlıq
-          ekspert Checklist-ini pulsuz yükləyin.
-        </p>
-
-        <div class="lead-checks">
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            AQTA tələblərinə uyğunluq yoxlaması
-          </div>
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            ISO 22000 audit hazırlıq siyahısı
-          </div>
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            HACCP kritik nöqtələrinin qiymətləndirilməsi
-          </div>
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            Sənədləşdirmə tələbləri üzrə bələdçi
+        <div class="lead-right fade-in fade-in-delay-2">
+          <div class="lead-form-card">
+            <h3>10 Addımlıq Ekspert Checklist</h3>
+            <p>
+              Məlumatlarınızı daxil edin, checklist dərhal e-mailinizə
+              göndərilsin.
+            </p>
+            <div class="form-group">
+              <label>Ad Soyad</label>
+              <input type="text" placeholder="Adınızı daxil edin" />
+            </div>
+            <div class="form-group">
+              <label>Korporativ E-mail</label>
+              <input type="email" placeholder="Emailinizi daxil edin" />
+            </div>
+            <div class="form-group">
+              <label>Fəaliyyət Sahəsi</label>
+              <select>
+                <option value="" class="select-options">Seçin...</option>
+                <option class="select-options">Ət Emalı</option>
+                <option calss="select-options" style="color: white">
+                  Süd Məhsulları
+                </option>
+                <option class="select-options">HoReCa</option>
+                <option class="select-options">Çörəkçilik</option>
+                <option class="select-options">İçki İstehsalı</option>
+                <option class="select-options">Digər</option>
+              </select>
+            </div>
+            <button
+              class="btn btn-gold"
+              onclick="this.textContent = '✓  Göndərildi!'"
+            >
+              Checklist-i Yüklə →
+            </button>
+            <p class="lead-note">
+              <i class="fa-solid fa-lock"></i> Məlumatlarınız tamamilə gizli
+              saxlanılır. Spam yoxdur.
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="lead-right fade-in fade-in-delay-2">
-        <div class="lead-form-card">
-          <h3>10 Addımlıq Ekspert Checklist</h3>
-          <p>
-            Məlumatlarınızı daxil edin, checklist dərhal e-mailinizə
-            göndərilsin.
-          </p>
-          <div class="form-group">
-            <label>Ad Soyad</label>
-            <input type="text" placeholder="Adınızı daxil edin" />
-          </div>
-          <div class="form-group">
-            <label>Korporativ E-mail</label>
-            <input type="email" placeholder="Emailinizi daxil edin" />
-          </div>
-          <div class="form-group">
-            <label>Fəaliyyət Sahəsi</label>
-            <select>
-              <option value="" class="select-options">Seçin...</option>
-              <option class="select-options">Ət Emalı</option>
-              <option calss="select-options" style="color: white;">Süd Məhsulları</option>
-              <option class="select-options">HoReCa</option>
-              <option class="select-options">Çörəkçilik</option>
-              <option class="select-options">İçki İstehsalı</option>
-              <option class="select-options">Digər</option>
-            </select>
-          </div>
-          <button class="btn btn-gold" onclick="this.textContent = '✓  Göndərildi!'">
-            Checklist-i Yüklə →
-          </button>
-          <p class="lead-note">
-            <i class="fa-solid fa-lock"></i> Məlumatlarınız tamamilə gizli
-            saxlanılır. Spam yoxdur.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================================
+    <!-- =========================================
       SERVICES OVERVIEW
 ========================================= -->
-  <section id="xidmetler">
-    <div class="container">
-      <div class="section-header-center fade-in">
-        <span class="section-eyebrow">Xidmətlər</span>
-        <h2 class="section-title">Kompleks Konsaltinq Həlləri</h2>
-        <p class="section-desc">
-          Qida sənayesindən strateji idarəetməyə qədər geniş spektrdə peşəkar
-          dəstək göstəririk.
-        </p>
+    <section id="xidmetler">
+      <div class="container">
+        <div class="section-header-center fade-in">
+          <span class="section-eyebrow">Xidmətlər</span>
+          <h2 class="section-title">Kompleks Konsaltinq Həlləri</h2>
+          <p class="section-desc">
+            Qida sənayesindən strateji idarəetməyə qədər geniş spektrdə peşəkar
+            dəstək göstəririk.
+          </p>
+        </div>
+        <div class="services-grid">
+          <div
+            class="service-card fade-in fade-in-delay-1"
+            style="--card-color: rgb(177, 151, 252)"
+          >
+            <div class="service-icon si-blue">
+              <i
+                class="fa-solid fa-shield-halved"
+                style="font-size: 24px; color: rgb(238, 185, 40)"
+              ></i>
+            </div>
+            <div class="service-name" style="color: rgb(238, 185, 40)">
+              Qida Təhlükəsizliyi
+            </div>
+            <p class="service-desc">
+              Beynəlxalq standartlara uyğun audit, sertifikasiya və texnoloji
+              ekspertiza xidmətləri.
+            </p>
+            <div class="service-tags">
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >ISO 22000</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >HACCP</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >BRCGS</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >IFS</span
+              >
+            </div>
+          </div>
+          <div
+            class="service-card fade-in fade-in-delay-2"
+            style="--card-color: rgb(116, 192, 252)"
+          >
+            <div class="service-icon si-gold">
+              <i
+                class="fa-solid fa-chess-knight"
+                style="font-size: 24px; color: rgb(238, 185, 40)"
+              ></i>
+            </div>
+            <div class="service-name" style="color: rgb(238, 185, 40)">
+              Strateji İdarəetmə
+            </div>
+            <p class="service-desc">
+              MQ sistemlərinin qurulması, strateji planlaşdırma və insan
+              resursları auditi.
+            </p>
+            <div class="service-tags">
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >MQ Sistemləri</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >HR Audit</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >Planlaşdırma</span
+              >
+            </div>
+          </div>
+          <div
+            class="service-card fade-in fade-in-delay-3"
+            style="--card-color: rgb(255, 212, 59)"
+          >
+            <div class="service-icon si-orange">
+              <i
+                class="fa-solid fa-scale-balanced"
+                style="font-size: 24px; color: rgb(238, 185, 40)"
+              ></i>
+            </div>
+            <div class="service-name" style="color: rgb(238, 185, 40)">
+              Hüquqi Ekspertiza
+            </div>
+            <p class="service-desc">
+              Qanunvericilik ekspertizası, hüquqi risklərin qiymətləndirilməsi
+              və RIA xidmətləri.
+            </p>
+            <div class="service-tags">
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >RIA</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >Qanun Layihəsi</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >Feasibility</span
+              >
+            </div>
+          </div>
+          <div
+            class="service-card fade-in fade-in-delay-4"
+            style="--card-color: rgb(99, 230, 190)"
+          >
+            <div class="service-icon si-teal">
+              <i
+                class="fa-solid fa-user-graduate"
+                style="font-size: 24px; color: rgb(238, 185, 40)"
+              ></i>
+            </div>
+            <div class="service-name" style="color: rgb(238, 185, 40)">
+              Təlim &amp; Sertifikasiya
+            </div>
+            <p class="service-desc">
+              İşçi heyəti üçün beynəlxalq sertifikat proqramları, seminar və
+              praktik təlimlər.
+            </p>
+            <div class="service-tags">
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >Lead Auditor</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >Seminar</span
+              >
+              <span
+                class="tag"
+                style="
+                  color: rgb(238, 185, 40);
+                  border: 1px solid rgb(238, 185, 40);
+                "
+                >Sertifikat</span
+              >
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="services-grid">
-        <div class="service-card fade-in fade-in-delay-1" style="--card-color: rgb(177, 151, 252)">
-          <div class="service-icon si-blue">
-            <i class="fa-solid fa-shield-halved" style="font-size: 24px; color: rgb(238, 185, 40)"></i>
-          </div>
-          <div class="service-name" style="color: rgb(238, 185, 40)">
-            Qida Təhlükəsizliyi
-          </div>
-          <p class="service-desc">
-            Beynəlxalq standartlara uyğun audit, sertifikasiya və texnoloji
-            ekspertiza xidmətləri.
-          </p>
-          <div class="service-tags">
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">ISO 22000</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">HACCP</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">BRCGS</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">IFS</span>
-          </div>
-        </div>
-        <div class="service-card fade-in fade-in-delay-2" style="--card-color: rgb(116, 192, 252)">
-          <div class="service-icon si-gold">
-            <i class="fa-solid fa-chess-knight" style="font-size: 24px; color: rgb(238, 185, 40)"></i>
-          </div>
-          <div class="service-name" style="color: rgb(238, 185, 40)">
-            Strateji İdarəetmə
-          </div>
-          <p class="service-desc">
-            MQ sistemlərinin qurulması, strateji planlaşdırma və insan
-            resursları auditi.
-          </p>
-          <div class="service-tags">
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">MQ Sistemləri</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">HR Audit</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">Planlaşdırma</span>
-          </div>
-        </div>
-        <div class="service-card fade-in fade-in-delay-3" style="--card-color: rgb(255, 212, 59)">
-          <div class="service-icon si-orange">
-            <i class="fa-solid fa-scale-balanced" style="font-size: 24px; color: rgb(238, 185, 40)"></i>
-          </div>
-          <div class="service-name" style="color: rgb(238, 185, 40)">
-            Hüquqi Ekspertiza
-          </div>
-          <p class="service-desc">
-            Qanunvericilik ekspertizası, hüquqi risklərin qiymətləndirilməsi
-            və RIA xidmətləri.
-          </p>
-          <div class="service-tags">
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">RIA</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">Qanun Layihəsi</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">Feasibility</span>
-          </div>
-        </div>
-        <div class="service-card fade-in fade-in-delay-4" style="--card-color: rgb(99, 230, 190)">
-          <div class="service-icon si-teal">
-            <i class="fa-solid fa-user-graduate" style="font-size: 24px; color: rgb(238, 185, 40)"></i>
-          </div>
-          <div class="service-name" style="color: rgb(238, 185, 40)">
-            Təlim &amp; Sertifikasiya
-          </div>
-          <p class="service-desc">
-            İşçi heyəti üçün beynəlxalq sertifikat proqramları, seminar və
-            praktik təlimlər.
-          </p>
-          <div class="service-tags">
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">Lead Auditor</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">Seminar</span>
-            <span class="tag" style="
-                  color: rgb(238, 185, 40);
-                  border: 1px solid rgb(238, 185, 40);
-                ">Sertifikat</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================
+    <!-- =========================================
      COUNTERS
 ========================================= -->
-  <section id="counters">
-    <div class="counters-grid">
-      <div class="counter-item fade-in">
-        <div class="counter-num" data-target="50">0+</div>
-        <div class="counter-label">Sertifikatlı Ekspert</div>
+    <section id="counters">
+      <div class="counters-grid">
+        <div class="counter-item fade-in">
+          <div class="counter-num" data-target="50">0+</div>
+          <div class="counter-label">Sertifikatlı Ekspert</div>
+        </div>
+        <div class="counter-item fade-in fade-in-delay-1">
+          <div class="counter-num" data-target="100">0+</div>
+          <div class="counter-label">Tamamlanmış Layihə</div>
+        </div>
+        <div class="counter-item fade-in fade-in-delay-2">
+          <div class="counter-num" data-target="15">0</div>
+          <div class="counter-label">İl Bazar Təcrübəsi</div>
+        </div>
+        <div class="counter-item fade-in fade-in-delay-3">
+          <div class="counter-num" data-target="12">0+</div>
+          <div class="counter-label">Beynəlxalq Sertifikat</div>
+        </div>
       </div>
-      <div class="counter-item fade-in fade-in-delay-1">
-        <div class="counter-num" data-target="100">0+</div>
-        <div class="counter-label">Tamamlanmış Layihə</div>
-      </div>
-      <div class="counter-item fade-in fade-in-delay-2">
-        <div class="counter-num" data-target="15">0</div>
-        <div class="counter-label">İl Bazar Təcrübəsi</div>
-      </div>
-      <div class="counter-item fade-in fade-in-delay-3">
-        <div class="counter-num" data-target="12">0+</div>
-        <div class="counter-label">Beynəlxalq Sertifikat</div>
-      </div>
+    </section>
+    <div
+      id="cert-lightbox"
+      style="
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(11, 31, 58, 0.95);
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+      "
+      onclick="closeLightbox()"
+    >
+      <span
+        style="
+          position: absolute;
+          top: 20px;
+          right: 30px;
+          color: white;
+          font-size: 40px;
+          font-weight: bold;
+        "
+        >&times;</span
+      >
+
+      <img
+        id="cert-lightbox-img"
+        style="
+          max-width: 90%;
+          max-height: 80%;
+          border-radius: 8px;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          transform: scale(0.9);
+          transition: transform 0.3s ease;
+        "
+      />
+
+      <div
+        id="cert-lightbox-caption"
+        style="
+          color: white;
+          margin-top: 20px;
+          font-family: sans-serif;
+          font-size: 1.1rem;
+          font-weight: 600;
+        "
+      ></div>
     </div>
-  </section>
-  <div id="cert-lightbox" style="
-    display: none; 
-    position: fixed; 
-    z-index: 9999; 
-    top: 0; left: 0; 
-    width: 100%; height: 100%; 
-    background: rgba(11, 31, 58, 0.95); 
-    align-items: center; 
-    justify-content: center; 
-    flex-direction: column; 
-    cursor: pointer;" onclick="closeLightbox()">
 
-    <span
-      style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold;">&times;</span>
-
-    <img id="cert-lightbox-img" style="
-        max-width: 90%; 
-        max-height: 80%; 
-        border-radius: 8px; 
-        box-shadow: 0 0 30px rgba(0,0,0,0.5); 
-        transform: scale(0.9); 
-        transition: transform 0.3s ease;">
-
-    <div id="cert-lightbox-caption" style="
-        color: white; 
-        margin-top: 20px; 
-        font-family: sans-serif; 
-        font-size: 1.1rem; 
-        font-weight: 600;"></div>
-  </div>
-
-  <!-- =========================================
+    <!-- =========================================
      ABOUT
 ========================================= -->
-  <div class="haqqimizda-sekil">
-
-  </div>
-  <section id="haqqimizda">
-    <div class="container">
-      <div class="fade-in" style="max-width: 1280px; margin: 0 auto 5rem">
-        <div class="timeline-all" style="margin: auto;">
-          <div class="timeline-content" style="margin: auto;">
-
-            <span class="section-eyebrow">Haqqımızda</span>
-            <div style="
-              display: flex;
-              flex-direction: column;
-              gap: 5rem;
-              align-items: start;
-              width: 100%;
-            ">
-              <div>
-                <h2 class="section-title">
-                  Rebrendinqdən Liderliyə: ASR-in Hekayəsi
-                </h2>
-                <p class="section-desc" style="max-width: 100%">
-                  2009-cu ildə Azərbaycanda qida sənayesinin sürətlə inkişaf
-                  etdiyi dövrdə qurulan şirkətimiz, 2019-cu ilə qədər aparılan
-                  islahat dalgasına çevik reaksiya verərək tam rebrendinq
-                  prosesindən keçdi.
-                </p>
+    <div class="haqqimizda-sekil"></div>
+    <section id="haqqimizda">
+      <div class="container">
+        <div class="fade-in" style="max-width: 1280px; margin: 0 auto 5rem">
+          <div class="timeline-all" style="margin: auto">
+            <div class="timeline-content" style="margin: auto">
+              <span class="section-eyebrow">Haqqımızda</span>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  gap: 5rem;
+                  align-items: start;
+                  width: 100%;
+                "
+              >
+                <div>
+                  <h2 class="section-title">
+                    Rebrendinqdən Liderliyə: ASR-in Hekayəsi
+                  </h2>
+                  <p class="section-desc" style="max-width: 100%">
+                    2009-cu ildə Azərbaycanda qida sənayesinin sürətlə inkişaf
+                    etdiyi dövrdə qurulan şirkətimiz, 2019-cu ilə qədər aparılan
+                    islahat dalgasına çevik reaksiya verərək tam rebrendinq
+                    prosesindən keçdi.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div
-            style="display: flex; flex-direction: column; gap: 0 ;display: inline-block; margin-top: 2rem; display: inline-block;"
-            class="timeline">
-            <div style="
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                display: inline-block;
+                margin-top: 2rem;
+                display: inline-block;
+              "
+              class="timeline"
+            >
+              <div
+                style="
                   display: flex;
                   gap: 1.25rem;
                   padding-bottom: 1.75rem;
@@ -819,8 +1112,11 @@
                   padding-left: 1.5rem;
                   margin-left: 0.5rem;
                   position: relative;
-                " class="">
-              <div style="
+                "
+                class=""
+              >
+                <div
+                  style="
                     position: absolute;
                     left: -9px;
                     top: 0;
@@ -829,9 +1125,12 @@
                     background: var(--gold);
                     border-radius: 50%;
                     border: 3px solid var(--off-white);
-                  " class="dot"></div>
-              <div>
-                <div style="
+                  "
+                  class="dot"
+                ></div>
+                <div>
+                  <div
+                    style="
                       font-size: 0.625rem;
                       font-weight: 800;
                       letter-spacing: 0.1em;
@@ -841,30 +1140,36 @@
                       border-radius: 4px;
                       display: inline-block;
                       margin-bottom: 6px;
-                    ">
-                  2009
-                </div>
-                <div style="
+                    "
+                  >
+                    2009
+                  </div>
+                  <div
+                    style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--white);
+                      color: var(--haqqimizda-title);
                       margin-bottom: 4px;
-                    ">
-                  Şirkətin Əsası Qoyulur
-                </div>
-                <div style="
+                    "
+                  >
+                    Şirkətin Əsası Qoyulur
+                  </div>
+                  <div
+                    style="
                       font-size: 0.8125rem;
                       color: var(--text-muted);
                       line-height: 1.7;
-                    ">
-                  Qida sənayesi üçün yerli konsaltinq ehtiyacına cavab olaraq
-                  fəaliyyət başlandı. İlk layihələr ət emalı sektorunda icra
-                  edildi.
+                    "
+                  >
+                    Qida sənayesi üçün yerli konsaltinq ehtiyacına cavab olaraq
+                    fəaliyyət başlandı. İlk layihələr ət emalı sektorunda icra
+                    edildi.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div style="
+              <div
+                style="
                   display: flex;
                   gap: 1.25rem;
                   padding-bottom: 1.75rem;
@@ -872,8 +1177,11 @@
                   padding-left: 1.5rem;
                   margin-left: 0.5rem;
                   position: relative;
-                " class="">
-              <div style="
+                "
+                class=""
+              >
+                <div
+                  style="
                     position: absolute;
                     left: -9px;
                     top: 0;
@@ -882,9 +1190,11 @@
                     background: var(--gold);
                     border-radius: 50%;
                     border: 3px solid var(--off-white);
-                  "></div>
-              <div>
-                <div style="
+                  "
+                ></div>
+                <div>
+                  <div
+                    style="
                       font-size: 0.625rem;
                       font-weight: 800;
                       letter-spacing: 0.1em;
@@ -894,29 +1204,35 @@
                       border-radius: 4px;
                       display: inline-block;
                       margin-bottom: 6px;
-                    ">
-                  2013
-                </div>
-                <div style="
+                    "
+                  >
+                    2013
+                  </div>
+                  <div
+                    style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--white);
+                      color: var(--haqqimizda-title);
                       margin-bottom: 4px;
-                    ">
-                  Beynəlxalq Sertifikasiya
-                </div>
-                <div style="
+                    "
+                  >
+                    Beynəlxalq Sertifikasiya
+                  </div>
+                  <div
+                    style="
                       font-size: 0.8125rem;
                       color: var(--text-muted);
                       line-height: 1.7;
-                    ">
-                  İlk Lead Auditor sertifikatları alındı. ISO 22000 üzrə
-                  beynəlxalq akkreditasiya prosesi uğurla tamamlandı.
+                    "
+                  >
+                    İlk Lead Auditor sertifikatları alındı. ISO 22000 üzrə
+                    beynəlxalq akkreditasiya prosesi uğurla tamamlandı.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div style="
+              <div
+                style="
                   display: flex;
                   gap: 1.25rem;
                   padding-bottom: 1.75rem;
@@ -924,8 +1240,11 @@
                   padding-left: 1.5rem;
                   margin-left: 0.5rem;
                   position: relative;
-                " class="">
-              <div style="
+                "
+                class=""
+              >
+                <div
+                  style="
                     position: absolute;
                     left: -9px;
                     top: 0;
@@ -934,9 +1253,11 @@
                     background: var(--gold);
                     border-radius: 50%;
                     border: 3px solid var(--off-white);
-                  "></div>
-              <div>
-                <div style="
+                  "
+                ></div>
+                <div>
+                  <div
+                    style="
                       font-size: 0.625rem;
                       font-weight: 800;
                       letter-spacing: 0.1em;
@@ -946,37 +1267,46 @@
                       border-radius: 4px;
                       display: inline-block;
                       margin-bottom: 6px;
-                    ">
-                  2019
-                </div>
-                <div style="
+                    "
+                  >
+                    2019
+                  </div>
+                  <div
+                    style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--white);
+                      color: var(--haqqimizda-title);
                       margin-bottom: 4px;
-                    ">
-                  Tam Rebrendinq &amp; Genişlənmə
-                </div>
-                <div style="
+                    "
+                  >
+                    Tam Rebrendinq &amp; Genişlənmə
+                  </div>
+                  <div
+                    style="
                       font-size: 0.8125rem;
                       color: var(--text-muted);
                       line-height: 1.7;
-                    ">
-                  Yeni qida təhlükəsizliyi qanunvericiliyinə cavab olaraq
-                  şirkət yenidən brendləndi, xidmət portfeli stratejik
-                  sahələri əhatə etdi.
+                    "
+                  >
+                    Yeni qida təhlükəsizliyi qanunvericiliyinə cavab olaraq
+                    şirkət yenidən brendləndi, xidmət portfeli stratejik
+                    sahələri əhatə etdi.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div style="
+              <div
+                style="
                   display: flex;
                   gap: 1.25rem;
                   padding-left: 1.5rem;
                   margin-left: 0.5rem;
                   position: relative;
-                " class="">
-              <div style="
+                "
+                class=""
+              >
+                <div
+                  style="
                     position: absolute;
                     left: -9px;
                     top: 0;
@@ -985,9 +1315,11 @@
                     background: var(--navy);
                     border-radius: 50%;
                     border: 3px solid var(--off-white);
-                  "></div>
-              <div>
-                <div style="
+                  "
+                ></div>
+                <div>
+                  <div
+                    style="
                       font-size: 0.625rem;
                       font-weight: 800;
                       letter-spacing: 0.1em;
@@ -997,465 +1329,561 @@
                       border-radius: 4px;
                       display: inline-block;
                       margin-bottom: 6px;
-                    ">
-                  2024
-                </div>
-                <div style="
+                    "
+                  >
+                    2024
+                  </div>
+                  <div
+                    style="
                       font-size: 0.875rem;
                       font-weight: 700;
-                      color: var(--white);
+                      color: var(--haqqimizda-title);
                       margin-bottom: 4px;
-                    ">
-                  Regional Lider Mövqe
-                </div>
-                <div style="
+                    "
+                  >
+                    Regional Lider Mövqe
+                  </div>
+                  <div
+                    style="
                       font-size: 0.8125rem;
                       color: var(--text-muted);
                       line-height: 1.7;
-                    ">
-                  50+ ekspert, 100+ uğurlu layihə ilə Azərbaycanın ən böyük
-                  konsaltinq qruplarından birinə çevrildi.
+                    "
+                  >
+                    50+ ekspert, 100+ uğurlu layihə ilə Azərbaycanın ən böyük
+                    konsaltinq qruplarından birinə çevrildi.
+                  </div>
                 </div>
               </div>
             </div>
-
           </div>
-
-        </div>
-        <div class="fade-in">
-          <div style="
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-bottom: 2rem;
-            ">
-            <div>
-              <span class="section-eyebrow">Beynəlxalq Sertifikatlar</span>
-              <h3 style="
-                  font-size: 1.25rem;
-                  font-weight: 800;
-                  color: var(--white);
-                  margin: 0;
-                ">
-                Şirkət &amp; Auditor Sertifikatları
-              </h3>
+          <div class="fade-in">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+              "
+            >
+              <div>
+                <span class="section-eyebrow">Beynəlxalq Sertifikatlar</span>
+                <h3
+                  style="
+                    font-size: 1.25rem;
+                    font-weight: 800;
+                    color: var(--haqqimizda-title);
+                    margin: 0;
+                  "
+                >
+                  Şirkət &amp; Auditor Sertifikatları
+                </h3>
+              </div>
+              <div style="display: flex; gap: 8px">
+                <button
+                  onclick="scrollCerts(-1)"
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1.5px solid var(--border);
+                    background: var(--white);
+                    cursor: pointer;
+                    font-size: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: var(--transition);
+                  "
+                  onmouseover="
+                    this.style.background = 'var(--navy)';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'var(--white)';
+                    this.style.color = 'inherit';
+                  "
+                >
+                  ←
+                </button>
+                <button
+                  onclick="scrollCerts(1)"
+                  style="
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1.5px solid var(--border);
+                    background: var(--white);
+                    cursor: pointer;
+                    font-size: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: var(--transition);
+                  "
+                  onmouseover="
+                    this.style.background = 'var(--navy)';
+                    this.style.color = 'white';
+                  "
+                  onmouseout="
+                    this.style.background = 'var(--white)';
+                    this.style.color = 'inherit';
+                  "
+                >
+                  →
+                </button>
+              </div>
             </div>
-            <div style="display: flex; gap: 8px">
-              <button onclick="scrollCerts(-1)" style="
-                  width: 40px;
-                  height: 40px;
-                  border-radius: 50%;
-                  border: 1.5px solid var(--border);
+
+            <div
+              id="certsTrack"
+              style="
+                display: flex;
+                gap: 1.25rem;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                padding-bottom: 1rem;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+              "
+            >
+              <div
+                onclick="
+                  openLightbox(
+                    'images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg  ',
+                    'ISO 22000 — Lead Auditor',
+                  )
+                "
+                style="
+                  flex-shrink: 0;
+                  width: 220px;
                   background: var(--white);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-lg);
+                  overflow: hidden;
                   cursor: pointer;
-                  font-size: 1rem;
+                  transition: var(--transition);
+                "
+                onmouseover="
+                  this.style.transform = 'translateY(-4px)';
+                  this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
+                "
+                onmouseout="
+                  this.style.transform = '';
+                  this.style.boxShadow = '';
+                "
+              >
+                <div
+                  class="lightbox-img"
+                  style="
+                    height: 140px;
+                    background: url(&quot;images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg&quot;)
+                      center/contain no-repeat #f8f9fb;
+                    border-bottom: 1px solid var(--border);
+                  "
+                ></div>
+                <div class="lightbox-content" style="padding: 1rem">
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      font-weight: 800;
+                      color: var(--navy);
+                    "
+                  >
+                    ISO 22000
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.625rem;
+                      color: var(--gray-mid);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      margin-top: 3px;
+                    "
+                  >
+                    Lead Auditor
+                  </div>
+                  <div
+                    style="
+                      margin-top: 8px;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                      font-size: 0.5625rem;
+                      font-weight: 700;
+                      color: #197a3a;
+                      background: rgba(25, 122, 58, 0.08);
+                      padding: 3px 8px;
+                      border-radius: 50px;
+                    "
+                  >
+                    ● Aktiv
+                  </div>
+                </div>
+              </div>
+              <div
+                onclick="
+                  openLightbox(
+                    'images/HACCP_Certificate.jpg',
+                    'HACCP Sertifikatı',
+                  )
+                "
+                style="
+                  flex-shrink: 0;
+                  width: 220px;
+                  background: var(--white);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-lg);
+                  overflow: hidden;
+                  cursor: pointer;
+                  transition: var(--transition);
+                "
+                onmouseover="
+                  this.style.transform = 'translateY(-4px)';
+                  this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
+                "
+                onmouseout="
+                  this.style.transform = '';
+                  this.style.boxShadow = '';
+                "
+              >
+                <div
+                  style="
+                    height: 140px;
+                    background: url(&quot;images/HACCP_Certificate.jpg&quot;)
+                      center/contain no-repeat #f8f9fb;
+                    border-bottom: 1px solid var(--border);
+                  "
+                ></div>
+                <div style="padding: 1rem">
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      font-weight: 800;
+                      color: var(--navy);
+                    "
+                  >
+                    HACCP
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.625rem;
+                      color: var(--gray-mid);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      margin-top: 3px;
+                    "
+                  >
+                    Sertifikatlı
+                  </div>
+                  <div
+                    style="
+                      margin-top: 8px;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                      font-size: 0.5625rem;
+                      font-weight: 700;
+                      color: #197a3a;
+                      background: rgba(25, 122, 58, 0.08);
+                      padding: 3px 8px;
+                      border-radius: 50px;
+                    "
+                  >
+                    ● Aktiv
+                  </div>
+                </div>
+              </div>
+              <div
+                onclick="
+                  openLightbox(
+                    'images/CMI-Level-5-Award-In-Management-Consulting-Practice-course.webp',
+                    'BRCGS — İcazəli Auditor',
+                  )
+                "
+                style="
+                  flex-shrink: 0;
+                  width: 220px;
+                  background: var(--white);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-lg);
+                  overflow: hidden;
+                  cursor: pointer;
+                  transition: var(--transition);
+                "
+                onmouseover="
+                  this.style.transform = 'translateY(-4px)';
+                  this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
+                "
+                onmouseout="
+                  this.style.transform = '';
+                  this.style.boxShadow = '';
+                "
+              >
+                <div
+                  style="
+                    height: 140px;
+                    background: url(&quot;images/CMI-Level-5-Award-In-Management-Consulting-Practice-course.webp&quot;)
+                      center/contain no-repeat #f8f9fb;
+                    border-bottom: 1px solid var(--border);
+                  "
+                ></div>
+                <div style="padding: 1rem">
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      font-weight: 800;
+                      color: var(--navy);
+                    "
+                  >
+                    BRCGS
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.625rem;
+                      color: var(--gray-mid);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      margin-top: 3px;
+                    "
+                  >
+                    İcazəli Auditor
+                  </div>
+                  <div
+                    style="
+                      margin-top: 8px;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                      font-size: 0.5625rem;
+                      font-weight: 700;
+                      color: #197a3a;
+                      background: rgba(25, 122, 58, 0.08);
+                      padding: 3px 8px;
+                      border-radius: 50px;
+                    "
+                  >
+                    ● Aktiv
+                  </div>
+                </div>
+              </div>
+
+              <div
+                onclick="
+                  openLightbox(
+                    'images/IFS-Certificate-Lasta-2022-webp-500px.webp',
+                    'IFS Food Standart',
+                  )
+                "
+                style="
+                  flex-shrink: 0;
+                  width: 220px;
+                  background: var(--white);
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius-lg);
+                  overflow: hidden;
+                  cursor: pointer;
+                  transition: var(--transition);
+                "
+                onmouseover="
+                  this.style.transform = 'translateY(-4px)';
+                  this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
+                "
+                onmouseout="
+                  this.style.transform = '';
+                  this.style.boxShadow = '';
+                "
+              >
+                <div
+                  style="
+                    height: 140px;
+                    background: url(&quot;images/IFS-Certificate-Lasta-2022-webp-500px.webp&quot;)
+                      center/contain no-repeat #f8f9fb;
+                    border-bottom: 1px solid var(--border);
+                  "
+                ></div>
+                <div style="padding: 1rem">
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      font-weight: 800;
+                      color: var(--navy);
+                    "
+                  >
+                    IFS Food
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.625rem;
+                      color: var(--gray-mid);
+                      letter-spacing: 0.08em;
+                      text-transform: uppercase;
+                      margin-top: 3px;
+                    "
+                  >
+                    Standart
+                  </div>
+                  <div
+                    style="
+                      margin-top: 8px;
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 4px;
+                      font-size: 0.5625rem;
+                      font-weight: 700;
+                      color: #197a3a;
+                      background: rgba(25, 122, 58, 0.08);
+                      padding: 3px 8px;
+                      border-radius: 50px;
+                    "
+                  >
+                    ● Aktiv
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  flex-shrink: 0;
+                  width: 220px;
+                  background: var(--off-white);
+                  border: 1.5px dashed var(--border);
+                  border-radius: var(--radius-lg);
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  transition: var(--transition);
-                " onmouseover="
-                  this.style.background = 'var(--navy)';
-                  this.style.color = 'white';
-                " onmouseout="
-                  this.style.background = 'var(--white)';
-                  this.style.color = 'inherit';
-                ">
-                ←
-              </button>
-              <button onclick="scrollCerts(1)" style="
-                  width: 40px;
-                  height: 40px;
-                  border-radius: 50%;
-                  border: 1.5px solid var(--border);
-                  background: var(--white);
-                  cursor: pointer;
-                  font-size: 1rem;
+                  min-height: 220px;
+                  gap: 8px;
+                "
+              >
+                <div style="font-size: 1.5rem; color: var(--border)">+</div>
+                <div
+                  style="
+                    font-size: 0.6875rem;
+                    color: var(--gray-mid);
+                    text-align: center;
+                    padding: 0 1rem;
+                    line-height: 1.5;
+                  "
+                >
+                  Auditor sertifikatı tezliklə əlavə ediləcək
+                </div>
+              </div>
+
+              <div
+                style="
+                  flex-shrink: 0;
+                  width: 220px;
+                  background: var(--off-white);
+                  border: 1.5px dashed var(--border);
+                  border-radius: var(--radius-lg);
                   display: flex;
+                  flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  transition: var(--transition);
-                " onmouseover="
-                  this.style.background = 'var(--navy)';
-                  this.style.color = 'white';
-                " onmouseout="
-                  this.style.background = 'var(--white)';
-                  this.style.color = 'inherit';
-                ">
-                →
-              </button>
-            </div>
-          </div>
-
-          <div id="certsTrack" style="
-              display: flex;
-              gap: 1.25rem;
-              overflow-x: auto;
-              scroll-behavior: smooth;
-              padding-bottom: 1rem;
-              scrollbar-width: none;
-              -ms-overflow-style: none;
-            ">
-
-            <div onclick="
-                openLightbox(
-                  'images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg  ',
-                  'ISO 22000 — Lead Auditor',
-                )
-              " style="
-                flex-shrink: 0;
-                width: 220px;
-                background: var(--white);
-                border: 1px solid var(--border);
-                border-radius: var(--radius-lg);
-                overflow: hidden;
-                cursor: pointer;
-                transition: var(--transition);
-              " onmouseover="
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
-              " onmouseout="
-                this.style.transform = '';
-                this.style.boxShadow = '';
-              ">
-              <div class="lightbox-img" style="
-                  height: 140px;
-                  background: url(&quot;images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg&quot;)
-                    center/contain no-repeat #f8f9fb;
-                  border-bottom: 1px solid var(--border);
-                "></div>
-              <div class="lightbox-content" style="padding: 1rem">
-                <div style="
-                    font-size: 0.75rem;
-                    font-weight: 800;
-                    color: var(--navy);
-                  ">
-                  ISO 22000
-                </div>
-                <div style="
-                    font-size: 0.625rem;
+                  min-height: 220px;
+                  gap: 8px;
+                "
+              >
+                <div style="font-size: 1.5rem; color: var(--border)">+</div>
+                <div
+                  style="
+                    font-size: 0.6875rem;
                     color: var(--gray-mid);
-                    letter-spacing: 0.08em;
-                    text-transform: uppercase;
-                    margin-top: 3px;
-                  ">
-                  Lead Auditor
-                </div>
-                <div style="
-                    margin-top: 8px;
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 4px;
-                    font-size: 0.5625rem;
-                    font-weight: 700;
-                    color: #197a3a;
-                    background: rgba(25, 122, 58, 0.08);
-                    padding: 3px 8px;
-                    border-radius: 50px;
-                  ">
-                  ● Aktiv
-                </div>
-              </div>
-            </div>
-            <div onclick="
-                openLightbox(
-                  'images/HACCP_Certificate.jpg',
-                  'HACCP Sertifikatı',
-                )
-              " style="
-                flex-shrink: 0;
-                width: 220px;
-                background: var(--white);
-                border: 1px solid var(--border);
-                border-radius: var(--radius-lg);
-                overflow: hidden;
-                cursor: pointer;
-                transition: var(--transition);
-              " onmouseover="
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
-              " onmouseout="
-                this.style.transform = '';
-                this.style.boxShadow = '';
-              ">
-              <div style="
-                  height: 140px;
-                  background: url(&quot;images/HACCP_Certificate.jpg&quot;)
-                    center/contain no-repeat #f8f9fb;
-                  border-bottom: 1px solid var(--border);
-                "></div>
-              <div style="padding: 1rem">
-                <div style="
-                    font-size: 0.75rem;
-                    font-weight: 800;
-                    color: var(--navy);
-                  ">
-                  HACCP
-                </div>
-                <div style="
-                    font-size: 0.625rem;
-                    color: var(--gray-mid);
-                    letter-spacing: 0.08em;
-                    text-transform: uppercase;
-                    margin-top: 3px;
-                  ">
-                  Sertifikatlı
-                </div>
-                <div style="
-                    margin-top: 8px;
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 4px;
-                    font-size: 0.5625rem;
-                    font-weight: 700;
-                    color: #197a3a;
-                    background: rgba(25, 122, 58, 0.08);
-                    padding: 3px 8px;
-                    border-radius: 50px;
-                  ">
-                  ● Aktiv
-                </div>
-              </div>
-            </div>
-            <div onclick="
-                openLightbox(
-                  'images/CMI-Level-5-Award-In-Management-Consulting-Practice-course.webp',
-                  'BRCGS — İcazəli Auditor',
-                )
-              " style="
-                flex-shrink: 0;
-                width: 220px;
-                background: var(--white);
-                border: 1px solid var(--border);
-                border-radius: var(--radius-lg);
-                overflow: hidden;
-                cursor: pointer;
-                transition: var(--transition);
-              " onmouseover="
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
-              " onmouseout="
-                this.style.transform = '';
-                this.style.boxShadow = '';
-              ">
-              <div style="
-                  height: 140px;
-                  background: url(&quot;images/CMI-Level-5-Award-In-Management-Consulting-Practice-course.webp&quot;)
-                    center/contain no-repeat #f8f9fb;
-                  border-bottom: 1px solid var(--border);
-                "></div>
-              <div style="padding: 1rem">
-                <div style="
-                    font-size: 0.75rem;
-                    font-weight: 800;
-                    color: var(--navy);
-                  ">
-                  BRCGS
-                </div>
-                <div style="
-                    font-size: 0.625rem;
-                    color: var(--gray-mid);
-                    letter-spacing: 0.08em;
-                    text-transform: uppercase;
-                    margin-top: 3px;
-                  ">
-                  İcazəli Auditor
-                </div>
-                <div style="
-                    margin-top: 8px;
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 4px;
-                    font-size: 0.5625rem;
-                    font-weight: 700;
-                    color: #197a3a;
-                    background: rgba(25, 122, 58, 0.08);
-                    padding: 3px 8px;
-                    border-radius: 50px;
-                  ">
-                  ● Aktiv
+                    text-align: center;
+                    padding: 0 1rem;
+                    line-height: 1.5;
+                  "
+                >
+                  Dövlət təşəkkürnaməsi tezliklə əlavə ediləcək
                 </div>
               </div>
             </div>
 
-            <div onclick="
-                openLightbox(
-                  'images/IFS-Certificate-Lasta-2022-webp-500px.webp',
-                  'IFS Food Standart',
-                )
-              " style="
-                flex-shrink: 0;
-                width: 220px;
-                background: var(--white);
-                border: 1px solid var(--border);
-                border-radius: var(--radius-lg);
-                overflow: hidden;
-                cursor: pointer;
-                transition: var(--transition);
-              " onmouseover="
-                this.style.transform = 'translateY(-4px)';
-                this.style.boxShadow = '0 12px 32px rgba(11,31,58,0.12)';
-              " onmouseout="
-                this.style.transform = '';
-                this.style.boxShadow = '';
-              ">
-              <div style="
-                  height: 140px;
-                  background: url(&quot;images/IFS-Certificate-Lasta-2022-webp-500px.webp&quot;)
-                    center/contain no-repeat #f8f9fb;
-                  border-bottom: 1px solid var(--border);
-                "></div>
-              <div style="padding: 1rem">
-                <div style="
-                    font-size: 0.75rem;
-                    font-weight: 800;
-                    color: var(--navy);
-                  ">
-                  IFS Food
+            <div style="margin-top: 3rem">
+              <span class="section-eyebrow">Dövlət Rəsmi Təşəkkürnamələri</span>
+              <div class="accordion-wrapper">
+                <div class="accordion-item" onclick="toggleItem(this)">
+                  <div class="accordion-header">
+                    <i class="fa-solid fa-award main-icon"></i>
+                    <div class="title-text">
+                      AQTA tərəfindən "Etibarlı Konsaltinq Tərəfdaşı"
+                      sertifikatı
+                    </div>
+                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                  </div>
+                  <div class="accordion-content">
+                    Bu sertifikat qida təhlükəsizliyi sahəsindəki beynəlxalq
+                    standartlara uyğun xidmət göstərən müəssisələrə təqdim
+                    olunur. Bizim komandamız bütün audit mərhələlərini uğurla
+                    keçmişdir.
+                  </div>
                 </div>
-                <div style="
-                    font-size: 0.625rem;
-                    color: var(--gray-mid);
-                    letter-spacing: 0.08em;
-                    text-transform: uppercase;
-                    margin-top: 3px;
-                  ">
-                  Standart
-                </div>
-                <div style="
-                    margin-top: 8px;
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 4px;
-                    font-size: 0.5625rem;
-                    font-weight: 700;
-                    color: #197a3a;
-                    background: rgba(25, 122, 58, 0.08);
-                    padding: 3px 8px;
-                    border-radius: 50px;
-                  ">
-                  ● Aktiv
-                </div>
-              </div>
-            </div>
 
-
-            <div style="
-                flex-shrink: 0;
-                width: 220px;
-                background: var(--off-white);
-                border: 1.5px dashed var(--border);
-                border-radius: var(--radius-lg);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 220px;
-                gap: 8px;
-              ">
-              <div style="font-size: 1.5rem; color: var(--border)">+</div>
-              <div style="
-                  font-size: 0.6875rem;
-                  color: var(--gray-mid);
-                  text-align: center;
-                  padding: 0 1rem;
-                  line-height: 1.5;
-                ">
-                Auditor sertifikatı tezliklə əlavə ediləcək
-              </div>
-            </div>
-
-            <div style="
-                flex-shrink: 0;
-                width: 220px;
-                background: var(--off-white);
-                border: 1.5px dashed var(--border);
-                border-radius: var(--radius-lg);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 220px;
-                gap: 8px;
-              ">
-              <div style="font-size: 1.5rem; color: var(--border)">+</div>
-              <div style="
-                  font-size: 0.6875rem;
-                  color: var(--gray-mid);
-                  text-align: center;
-                  padding: 0 1rem;
-                  line-height: 1.5;
-                ">
-                Dövlət təşəkkürnaməsi tezliklə əlavə ediləcək
-              </div>
-            </div>
-          </div>
-
-          <div style="margin-top: 3rem">
-            <span class="section-eyebrow">Dövlət Rəsmi Təşəkkürnamələri</span>
-            <div class="accordion-wrapper">
-              <div class="accordion-item" onclick="toggleItem(this)">
-                <div class="accordion-header">
-                  <i class="fa-solid fa-award main-icon"></i>
-                  <div class="title-text">AQTA tərəfindən "Etibarlı Konsaltinq Tərəfdaşı" sertifikatı</div>
-                  <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                <div class="accordion-item" onclick="toggleItem(this)">
+                  <div class="accordion-header">
+                    <i class="fa-solid fa-trophy main-icon"></i>
+                    <div class="title-text">
+                      Azərbaycan Sahibkarlar Konfederasiyası — Fəxri fərman
+                    </div>
+                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                  </div>
+                  <div class="accordion-content">
+                    Sahibkarlıq fəaliyyətinin inkişafında göstərilən xidmətlərə
+                    və innovativ yanaşmalara görə 2023-cü ildə təqdim
+                    edilmişdir.
+                  </div>
                 </div>
-                <div class="accordion-content">
-                  Bu sertifikat qida təhlükəsizliyi sahəsindəki beynəlxalq standartlara uyğun xidmət göstərən
-                  müəssisələrə təqdim olunur. Bizim komandamız bütün audit mərhələlərini uğurla keçmişdir.
-                </div>
-              </div>
 
-              <div class="accordion-item" onclick="toggleItem(this)">
-                <div class="accordion-header">
-                  <i class="fa-solid fa-trophy main-icon"></i>
-                  <div class="title-text">Azərbaycan Sahibkarlar Konfederasiyası — Fəxri fərman</div>
-                  <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
-                <div class="accordion-content">
-                  Sahibkarlıq fəaliyyətinin inkişafında göstərilən xidmətlərə və innovativ yanaşmalara görə 2023-cü ildə
-                  təqdim edilmişdir.
-                </div>
-              </div>
-
-              <div class="accordion-item" onclick="toggleItem(this)">
-                <div class="accordion-header">
-                  <i class="fa-solid fa-medal main-icon"></i>
-                  <div class="title-text">Kənd Təsərrüfatı Nazirliyi Rəsmi Təşəkkürnaməsi — 2022</div>
-                  <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
-                <div class="accordion-content">
-                  Regionlarda aqrar məsləhət xidmətlərinin təşkilindəki aktiv iştiraka görə nazirlik tərəfindən verilən
-                  rəsmi təşəkkür sənədidir.
+                <div class="accordion-item" onclick="toggleItem(this)">
+                  <div class="accordion-header">
+                    <i class="fa-solid fa-medal main-icon"></i>
+                    <div class="title-text">
+                      Kənd Təsərrüfatı Nazirliyi Rəsmi Təşəkkürnaməsi — 2022
+                    </div>
+                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                  </div>
+                  <div class="accordion-content">
+                    Regionlarda aqrar məsləhət xidmətlərinin təşkilindəki aktiv
+                    iştiraka görə nazirlik tərəfindən verilən rəsmi təşəkkür
+                    sənədidir.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  </section>
+    </section>
 
-  <!-- =========================================
+    <!-- =========================================
      SERVICES DETAIL
 ========================================= -->
-  <section id="xidmetler-detail">
-    <div class="container">
-      <div class="section-header-center fade-in">
-        <span class="section-eyebrow">Ətraflı Xidmətlər</span>
-        <h2 class="section-title">Hər Sahədə Dərin Ekspertiza</h2>
-        <p class="section-desc">
-          Hər bir xidmət sahəsini sektora xas detallar üzrə həyata keçiririk.
-        </p>
-      </div>
-      <div class="services-detail-grid">
-        <div class="svc-detail-card fade-in fade-in-delay-1">
-          <div style="position: relative; height: 280px; overflow: hidden">
-            <img src="images/qida muhendisliyi.jpg" alt="" style="
+    <section id="xidmetler-detail">
+      <div class="container">
+        <div class="section-header-center fade-in">
+          <span class="section-eyebrow">Ətraflı Xidmətlər</span>
+          <h2 class="section-title">Hər Sahədə Dərin Ekspertiza</h2>
+          <p class="section-desc">
+            Hər bir xidmət sahəsini sektora xas detallar üzrə həyata keçiririk.
+          </p>
+        </div>
+        <div class="services-detail-grid">
+          <div class="svc-detail-card fade-in fade-in-delay-1">
+            <div style="position: relative; height: 280px; overflow: hidden">
+              <img
+                src="images/qida muhendisliyi.jpg"
+                alt=""
+                style="
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
                   display: block;
-                " />
-            <div style="
+                "
+              />
+              <div
+                style="
                   position: absolute;
                   inset: 0;
                   background: linear-gradient(
@@ -1465,77 +1893,91 @@
                     rgba(11, 31, 58, 0.75) 65%,
                     var(--navy) 100%
                   );
-                "></div>
-            <div style="
+                "
+              ></div>
+              <div
+                style="
                   position: absolute;
                   bottom: 0;
                   left: 0;
                   right: 0;
                   padding: 1.75rem;
-                ">
-              <div style="
+                "
+              >
+                <div
+                  style="
                     font-size: 3rem;
                     font-weight: 900;
                     color: rgba(255, 255, 255, 0.06);
                     line-height: 1;
                     margin-bottom: 0.5rem;
                     letter-spacing: -0.04em;
-                  ">
-                01
-              </div>
-              <div style="
+                  "
+                >
+                  01
+                </div>
+                <div
+                  style="
                     font-size: 1.0625rem;
                     font-weight: 800;
                     color: var(--white);
                     margin-bottom: 0.375rem;
-                  ">
-                Qida Təhlükəsizliyi
-              </div>
-              <div style="
+                  "
+                >
+                  Qida Təhlükəsizliyi
+                </div>
+                <div
+                  style="
                     font-size: 0.6875rem;
                     color: var(--gold-bright);
                     font-weight: 600;
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
-                  ">
-                ISO · HACCP · BRCGS · IFS
+                  "
+                >
+                  ISO · HACCP · BRCGS · IFS
+                </div>
+              </div>
+            </div>
+            <div class="svc-detail-body">
+              <p>
+                Müəssisənizi beynəlxalq auditlərə hazırlayır, sertifikasiya
+                prosesini başdan sona idarə edirik.
+              </p>
+              <div class="svc-detail-list">
+                <div class="svc-list-item">
+                  ISO 22000 üzrə tam audit xidməti
+                </div>
+                <div class="svc-list-item">HACCP planının hazırlanması</div>
+                <div class="svc-list-item">
+                  BRCGS &amp; IFS sertifikasiya dəstəyi
+                </div>
+                <div class="svc-list-item">
+                  Texnoloji audit və proses optimallaşdırması
+                </div>
+              </div>
+              <div class="svc-highlight">
+                ★ AQTA-da iş təcrübəsi olan mütəxəssislərin birbaşa nəzarəti
+                altında icra edilir. Dar ixtisaslı texnoloqların layihəyə cəlb
+                olunması təmin edilir.
               </div>
             </div>
           </div>
-          <div class="svc-detail-body">
-            <p>
-              Müəssisənizi beynəlxalq auditlərə hazırlayır, sertifikasiya
-              prosesini başdan sona idarə edirik.
-            </p>
-            <div class="svc-detail-list">
-              <div class="svc-list-item">
-                ISO 22000 üzrə tam audit xidməti
-              </div>
-              <div class="svc-list-item">HACCP planının hazırlanması</div>
-              <div class="svc-list-item">
-                BRCGS &amp; IFS sertifikasiya dəstəyi
-              </div>
-              <div class="svc-list-item">
-                Texnoloji audit və proses optimallaşdırması
-              </div>
-            </div>
-            <div class="svc-highlight">
-              ★ AQTA-da iş təcrübəsi olan mütəxəssislərin birbaşa nəzarəti
-              altında icra edilir. Dar ixtisaslı texnoloqların layihəyə cəlb
-              olunması təmin edilir.
-            </div>
-          </div>
-        </div>
 
-        <div class="svc-detail-card fade-in fade-in-delay-2">
-          <div style="position: relative; height: 280px; overflow: hidden">
-            <img src="images/strategic idaretme.jpg" alt="" style="
+          <div class="svc-detail-card fade-in fade-in-delay-2">
+            <div style="position: relative; height: 280px; overflow: hidden">
+              <img
+                src="images/strategic idaretme.jpg"
+                alt=""
+                style="
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
                   display: block;
-                " />
-            <div style="
+                "
+              />
+              <div
+                style="
                   position: absolute;
                   inset: 0;
                   background: linear-gradient(
@@ -1545,76 +1987,90 @@
                     rgba(27, 42, 10, 0.75) 65%,
                     #1b2a0a 100%
                   );
-                "></div>
-            <div style="
+                "
+              ></div>
+              <div
+                style="
                   position: absolute;
                   bottom: 0;
                   left: 0;
                   right: 0;
                   padding: 1.75rem;
-                ">
-              <div style="
+                "
+              >
+                <div
+                  style="
                     font-size: 3rem;
                     font-weight: 900;
                     color: rgba(255, 255, 255, 0.06);
                     line-height: 1;
                     margin-bottom: 0.5rem;
                     letter-spacing: -0.04em;
-                  ">
-                02
-              </div>
-              <div style="
+                  "
+                >
+                  02
+                </div>
+                <div
+                  style="
                     font-size: 1.0625rem;
                     font-weight: 800;
                     color: var(--white);
                     margin-bottom: 0.375rem;
-                  ">
-                Strateji İdarəetmə
-              </div>
-              <div style="
+                  "
+                >
+                  Strateji İdarəetmə
+                </div>
+                <div
+                  style="
                     font-size: 0.6875rem;
                     color: var(--gold-bright);
                     font-weight: 600;
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
-                  ">
-                MQ · HR · Planlaşdırma
+                  "
+                >
+                  MQ · HR · Planlaşdırma
+                </div>
+              </div>
+            </div>
+            <div class="svc-detail-body">
+              <p>
+                Uzunmüddətli inkişaf üçün idarəetmə sistemlərini qururuq, insan
+                resurslarını gücləndiririk.
+              </p>
+              <div class="svc-detail-list">
+                <div class="svc-list-item">
+                  Monitorinq və Qiymətləndirmə (MQ) sistemlərinin qurulması
+                </div>
+                <div class="svc-list-item">
+                  Strateji planlaşdırma sessiyaları
+                </div>
+                <div class="svc-list-item">
+                  HR audit və kadr strukturunun optimallaşdırılması
+                </div>
+                <div class="svc-list-item">KPI sistemlərinin tətbiqi</div>
+              </div>
+              <div class="svc-highlight" style="border-color: #7dc45a">
+                ★ Dövlət strukturları ilə iş təcrübəsi sayəsində MQ sistemlərini
+                beynəlxalq metodologiya ilə qururuq.
               </div>
             </div>
           </div>
-          <div class="svc-detail-body">
-            <p>
-              Uzunmüddətli inkişaf üçün idarəetmə sistemlərini qururuq, insan
-              resurslarını gücləndiririk.
-            </p>
-            <div class="svc-detail-list">
-              <div class="svc-list-item">
-                Monitorinq və Qiymətləndirmə (MQ) sistemlərinin qurulması
-              </div>
-              <div class="svc-list-item">
-                Strateji planlaşdırma sessiyaları
-              </div>
-              <div class="svc-list-item">
-                HR audit və kadr strukturunun optimallaşdırılması
-              </div>
-              <div class="svc-list-item">KPI sistemlərinin tətbiqi</div>
-            </div>
-            <div class="svc-highlight" style="border-color: #7dc45a">
-              ★ Dövlət strukturları ilə iş təcrübəsi sayəsində MQ sistemlərini
-              beynəlxalq metodologiya ilə qururuq.
-            </div>
-          </div>
-        </div>
 
-        <div class="svc-detail-card fade-in fade-in-delay-3">
-          <div style="position: relative; height: 280px; overflow: hidden">
-            <img src="images/iqtisadi-huquqi.jpg" alt="" style="
+          <div class="svc-detail-card fade-in fade-in-delay-3">
+            <div style="position: relative; height: 280px; overflow: hidden">
+              <img
+                src="images/iqtisadi-huquqi.jpg"
+                alt=""
+                style="
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
                   display: block;
-                " />
-            <div style="
+                "
+              />
+              <div
+                style="
                   position: absolute;
                   inset: 0;
                   background: linear-gradient(
@@ -1624,473 +2080,561 @@
                     rgba(42, 18, 5, 0.75) 65%,
                     #2a1205 100%
                   );
-                "></div>
-            <div style="
+                "
+              ></div>
+              <div
+                style="
                   position: absolute;
                   bottom: 0;
                   left: 0;
                   right: 0;
                   padding: 1.75rem;
-                ">
-              <div style="
+                "
+              >
+                <div
+                  style="
                     font-size: 3rem;
                     font-weight: 900;
                     color: rgba(255, 255, 255, 0.06);
                     line-height: 1;
                     margin-bottom: 0.5rem;
                     letter-spacing: -0.04em;
-                  ">
-                03
-              </div>
-              <div style="
+                  "
+                >
+                  03
+                </div>
+                <div
+                  style="
                     font-size: 1.0625rem;
                     font-weight: 800;
                     color: var(--white);
                     margin-bottom: 0.375rem;
-                  ">
-                İqtisadi-Hüquqi
-              </div>
-              <div style="
+                  "
+                >
+                  İqtisadi-Hüquqi
+                </div>
+                <div
+                  style="
                     font-size: 0.6875rem;
                     color: var(--gold-bright);
                     font-weight: 600;
                     letter-spacing: 0.1em;
                     text-transform: uppercase;
-                  ">
-                RIA · Feasibility · Ekspertiza
+                  "
+                >
+                  RIA · Feasibility · Ekspertiza
+                </div>
               </div>
             </div>
-          </div>
-          <div class="svc-detail-body">
-            <p>
-              Qanunvericilik mühitini analiz edərək biznesiniz üçün hüquqi
-              risklərə qarşı mühafizə yaradırıq.
-            </p>
-            <div class="svc-detail-list">
-              <div class="svc-list-item">
-                Qanun layihələrinin linqvistik ekspertizası
+            <div class="svc-detail-body">
+              <p>
+                Qanunvericilik mühitini analiz edərək biznesiniz üçün hüquqi
+                risklərə qarşı mühafizə yaradırıq.
+              </p>
+              <div class="svc-detail-list">
+                <div class="svc-list-item">
+                  Qanun layihələrinin linqvistik ekspertizası
+                </div>
+                <div class="svc-list-item">
+                  Hüquqi ekspertiza (RIA metodologiyası)
+                </div>
+                <div class="svc-list-item">Feasibility Study hazırlanması</div>
+                <div class="svc-list-item">
+                  Regulyativ uyğunluq qiymətləndirilməsi
+                </div>
               </div>
-              <div class="svc-list-item">
-                Hüquqi ekspertiza (RIA metodologiyası)
+              <div class="svc-highlight" style="border-color: var(--orange)">
+                ★ Qanun layihələrinin həm linqvistik, həm də hüquqi
+                ekspertizasını eyni komanda daxilində icra edirik.
               </div>
-              <div class="svc-list-item">Feasibility Study hazırlanması</div>
-              <div class="svc-list-item">
-                Regulyativ uyğunluq qiymətləndirilməsi
-              </div>
-            </div>
-            <div class="svc-highlight" style="border-color: var(--orange)">
-              ★ Qanun layihələrinin həm linqvistik, həm də hüquqi
-              ekspertizasını eyni komanda daxilində icra edirik.
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================
+    <!-- =========================================
      PROJECTS
 ========================================= -->
-  <section id="tecrubekm">
-    <div class="container">
-      <div class="section-header-center fade-in">
-        <span class="section-eyebrow">Təcrübəmizdən</span>
-        <h2 class="section-title">Uğurlu Layihə Nümunələri</h2>
-        <p class="section-desc">
-          Real problemlər, tətbiq etdiyimiz həllər və ölçülə bilən nəticələr.
-        </p>
-      </div>
-      <div class="projects-grid">
-        <div class="project-card fade-in fade-in-delay-1" >
-          <div class="project-industry">
-            <span class="project-industry-name">Ət Emalı Müəssisəsi</span>
-            <span class="project-year">2023</span>
+    <section id="tecrubekm">
+      <div class="container">
+        <div class="section-header-center fade-in">
+          <span class="section-eyebrow">Təcrübəmizdən</span>
+          <h2 class="section-title">Uğurlu Layihə Nümunələri</h2>
+          <p class="section-desc">
+            Real problemlər, tətbiq etdiyimiz həllər və ölçülə bilən nəticələr.
+          </p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card fade-in fade-in-delay-1">
+            <div class="project-industry">
+              <span class="project-industry-name">Ət Emalı Müəssisəsi</span>
+              <span class="project-year">2023</span>
+            </div>
+            <div class="project-body">
+              <div class="project-label">Problem</div>
+              <p class="project-text">
+                Müəssisə HACCP tələblərini tam yerinə yetirmirdi. Soyuq zəncirdə
+                kritik pozuntular aşkarlanmış, AQTA tərəfindən xəbərdarlıq
+                alınmışdı.
+              </p>
+              <div class="project-divider"></div>
+              <div class="project-label">Tətbiq Olunan Həll</div>
+              <p class="project-text">
+                Tam HACCP planı hazırlandı, 4 kritik nöqtə üçün real vaxt
+                monitorinq sistemi quruldu, heyət 40 saatlıq təlim proqramından
+                keçirildi.
+              </p>
+              <div class="project-divider"></div>
+              <div class="project-label">Nəticə</div>
+              <p class="project-result-text">
+                ✓ İstehsal itkiləri 20% azaldı. ISO 22000 sertifikatı 8 ayda
+                alındı. AQTA yoxlaması müsbət başa çatdı.
+              </p>
+            </div>
           </div>
-          <div class="project-body" >
-            <div class="project-label">Problem</div>
-            <p class="project-text">
-              Müəssisə HACCP tələblərini tam yerinə yetirmirdi. Soyuq zəncirdə
-              kritik pozuntular aşkarlanmış, AQTA tərəfindən xəbərdarlıq
-              alınmışdı.
-            </p>
-            <div class="project-divider"></div>
-            <div class="project-label">Tətbiq Olunan Həll</div>
-            <p class="project-text">
-              Tam HACCP planı hazırlandı, 4 kritik nöqtə üçün real vaxt
-              monitorinq sistemi quruldu, heyət 40 saatlıq təlim proqramından
-              keçirildi.
-            </p>
-            <div class="project-divider"></div>
-            <div class="project-label">Nəticə</div>
-            <p class="project-result-text">
-              ✓ İstehsal itkiləri 20% azaldı. ISO 22000 sertifikatı 8 ayda
-              alındı. AQTA yoxlaması müsbət başa çatdı.
-            </p>
+
+          <div class="project-card fade-in fade-in-delay-2">
+            <div class="project-industry">
+              <span class="project-industry-name">Süd İstehsalçısı</span>
+              <span class="project-year">2022</span>
+            </div>
+            <div class="project-body">
+              <div class="project-label">Problem</div>
+              <p class="project-text">
+                Şirkətin IFS sertifikasiyasına hazırlığı yox idi. Avropa
+                bazarına ixrac planları sertifikasiya tələbinə görə
+                bloklanmışdı.
+              </p>
+              <div class="project-divider"></div>
+              <div class="project-label">Tətbiq Olunan Həll</div>
+              <p class="project-text">
+                Gap analysis aparıldı, 6 aylıq hazırlıq yol xəritəsi hazırlandı,
+                sənəd bazası beynəlxalq standarta uyğunlaşdırıldı.
+              </p>
+              <div class="project-divider"></div>
+              <div class="project-label">Nəticə</div>
+              <p class="project-result-text">
+                ✓ IFS sertifikatı alındı. İlk il ixracat həcmi 35% artdı. Avropa
+                distribütoru ilə müqavilə imzalandı.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-card fade-in fade-in-delay-3">
+            <div class="project-industry">
+              <span class="project-industry-name">HoReCa Şəbəkəsi</span>
+              <span class="project-year">2023</span>
+            </div>
+            <div class="project-body">
+              <div class="project-label">Problem</div>
+              <p class="project-text">
+                12 filialı olan restoran şəbəkəsinin insan resursları strukturu
+                səmərəsiz idi. Kadr dövriyyəsi yüksək, müştəri şikayəti sayı
+                artmışdı.
+              </p>
+              <div class="project-divider"></div>
+              <div class="project-label">Tətbiq Olunan Həll</div>
+              <p class="project-text">
+                HR audit aparıldı, iş təsvirləri yenidən hazırlandı, performans
+                qiymətləndirmə sistemi quruldu, idarəetmə təlimləri keçirildi.
+              </p>
+              <div class="project-divider"></div>
+              <div class="project-label">Nəticə</div>
+              <p class="project-result-text">
+                ✓ Kadr dövriyyəsi 45% azaldı. Müştəri məmnuniyyəti 28% yüksəldi.
+                Əməliyyat xərcləri 15% optimallaşdı.
+              </p>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="project-card fade-in fade-in-delay-2">
-          <div class="project-industry">
-            <span class="project-industry-name">Süd İstehsalçısı</span>
-            <span class="project-year">2022</span>
-          </div>
-          <div class="project-body">
-            <div class="project-label">Problem</div>
-            <p class="project-text">
-              Şirkətin IFS sertifikasiyasına hazırlığı yox idi. Avropa
-              bazarına ixrac planları sertifikasiya tələbinə görə
-              bloklanmışdı.
-            </p>
-            <div class="project-divider"></div>
-            <div class="project-label">Tətbiq Olunan Həll</div>
-            <p class="project-text">
-              Gap analysis aparıldı, 6 aylıq hazırlıq yol xəritəsi hazırlandı,
-              sənəd bazası beynəlxalq standarta uyğunlaşdırıldı.
-            </p>
-            <div class="project-divider"></div>
-            <div class="project-label">Nəticə</div>
-            <p class="project-result-text">
-              ✓ IFS sertifikatı alındı. İlk il ixracat həcmi 35% artdı. Avropa
-              distribütoru ilə müqavilə imzalandı.
-            </p>
-          </div>
+    <!-- ====  GALLERY ==== -->
+    <section id="qalereya">
+      <div class="container">
+        <div class="section-header-center fade-in">
+          <span class="section-eyebrow" style="color: var(--gold-bright)"
+            >Daxili Mətbəx</span
+          >
+          <h2 class="section-title" style="color: white">
+            Tam Peşəkar Yanaşma
+          </h2>
+          <p class="section-desc" style="color: rgba(255, 255, 255, 0.5)">
+            Audit prosesindən təlim salonuna qədər komandamızın gündəlik
+            fəaliyyəti.
+          </p>
         </div>
-
-        <div class="project-card fade-in fade-in-delay-3">
-          <div class="project-industry">
-            <span class="project-industry-name">HoReCa Şəbəkəsi</span>
-            <span class="project-year">2023</span>
-          </div>
-          <div class="project-body">
-            <div class="project-label">Problem</div>
-            <p class="project-text">
-              12 filialı olan restoran şəbəkəsinin insan resursları strukturu
-              səmərəsiz idi. Kadr dövriyyəsi yüksək, müştəri şikayəti sayı
-              artmışdı.
-            </p>
-            <div class="project-divider"></div>
-            <div class="project-label">Tətbiq Olunan Həll</div>
-            <p class="project-text">
-              HR audit aparıldı, iş təsvirləri yenidən hazırlandı, performans
-              qiymətləndirmə sistemi quruldu, idarəetmə təlimləri keçirildi.
-            </p>
-            <div class="project-divider"></div>
-            <div class="project-label">Nəticə</div>
-            <p class="project-result-text">
-              ✓ Kadr dövriyyəsi 45% azaldı. Müştəri məmnuniyyəti 28% yüksəldi.
-              Əməliyyat xərcləri 15% optimallaşdı.
-            </p>
-          </div>
+        <div class="gallery-tabs" id="galleryTabs">
+          <button class="gallery-tab active" data-cat="all">Hamısı</button>
+          <button class="gallery-tab" data-cat="audit">Sahə Auditləri</button>
+          <button class="gallery-tab" data-cat="telim">Təlimlərimiz</button>
+          <button class="gallery-tab" data-cat="ofis">İş Prosesi</button>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====  GALLERY ==== -->
-  <section id="qalereya">
-    <div class="container">
-      <div class="section-header-center fade-in">
-        <span class="section-eyebrow" style="color: var(--gold-bright)">Daxili Mətbəx</span>
-        <h2 class="section-title" style="color: white">
-          Tam Peşəkar Yanaşma
-        </h2>
-        <p class="section-desc" style="color: rgba(255, 255, 255, 0.5)">
-          Audit prosesindən təlim salonuna qədər komandamızın gündəlik
-          fəaliyyəti.
-        </p>
-      </div>
-      <div class="gallery-tabs" id="galleryTabs">
-        <button class="gallery-tab active" data-cat="all">Hamısı</button>
-        <button class="gallery-tab" data-cat="audit">Sahə Auditləri</button>
-        <button class="gallery-tab" data-cat="telim">Təlimlərimiz</button>
-        <button class="gallery-tab" data-cat="ofis">İş Prosesi</button>
-      </div>
-      <div class="gallery-grid" id="galleryGrid">
-
-        <div class="gallery-item" data-cat="audit" style="
+        <div class="gallery-grid" id="galleryGrid">
+          <div
+            class="gallery-item"
+            data-cat="audit"
+            style="
               background-image: url(&quot;images/CMI-Level-5-Award-In-Management-Consulting-Practice-course.webp&quot;);
-            ">
-          <div class="gallery-item-inner">
-            <span class="gallery-item-cat">Sahə Auditi</span>
-            <span class="gallery-item-title">İstehsalat Sahəsinin Audit Yoxlaması</span>
+            "
+          >
+            <div class="gallery-item-inner">
+              <span class="gallery-item-cat">Sahə Auditi</span>
+              <span class="gallery-item-title"
+                >İstehsalat Sahəsinin Audit Yoxlaması</span
+              >
+            </div>
           </div>
-        </div>
-        <div class="gallery-item" data-cat="audit" style="
+          <div
+            class="gallery-item"
+            data-cat="audit"
+            style="
               background-image: url(&quot;images/HACCP_Certificate.jpg&quot;);
-            ">
-          <div class="gallery-item-inner">
-            <span class="gallery-item-cat">Sahə Auditi</span>
-            <span class="gallery-item-title">Laboratoriya Yoxlama Prosesi</span>
+            "
+          >
+            <div class="gallery-item-inner">
+              <span class="gallery-item-cat">Sahə Auditi</span>
+              <span class="gallery-item-title"
+                >Laboratoriya Yoxlama Prosesi</span
+              >
+            </div>
           </div>
-        </div>
 
-
-        <div class="gallery-item" data-cat="telim" style="
+          <div
+            class="gallery-item"
+            data-cat="telim"
+            style="
               background-image: url(&quot;images/iso-22000-food-safety-management-systems-lead-auditor-training.jpg&quot;);
-            ">
-          <div class="gallery-item-inner">
-            <span class="gallery-item-cat">Təlim Prosesi</span>
-            <span class="gallery-item-title">HACCP Praktik Seminar</span>
+            "
+          >
+            <div class="gallery-item-inner">
+              <span class="gallery-item-cat">Təlim Prosesi</span>
+              <span class="gallery-item-title">HACCP Praktik Seminar</span>
+            </div>
           </div>
-        </div>
-        <div class="gallery-item" data-cat="telim" style="
+          <div
+            class="gallery-item"
+            data-cat="telim"
+            style="
               background-image: url(&quot;images/IFS-Certificate-Lasta-2022-webp-500px.webp&quot;);
-            ">
-          <div class="gallery-item-inner">
-            <span class="gallery-item-cat">Təlim Prosesi</span>
-            <span class="gallery-item-title">ISO 22000 Sertifikat Təqdimatı</span>
+            "
+          >
+            <div class="gallery-item-inner">
+              <span class="gallery-item-cat">Təlim Prosesi</span>
+              <span class="gallery-item-title"
+                >ISO 22000 Sertifikat Təqdimatı</span
+              >
+            </div>
           </div>
-        </div>
 
-
-        <div class="gallery-item" data-cat="ofis" style="background-image: url(&quot;images/Consultants.jpg&quot;)">
-          <div class="gallery-item-inner">
-            <span class="gallery-item-cat">Komanda İşi</span>
-            <span class="gallery-item-title">Komanda Strateji Sessiyası</span>
+          <div
+            class="gallery-item"
+            data-cat="ofis"
+            style="background-image: url(&quot;images/Consultants.jpg&quot;)"
+          >
+            <div class="gallery-item-inner">
+              <span class="gallery-item-cat">Komanda İşi</span>
+              <span class="gallery-item-title">Komanda Strateji Sessiyası</span>
+            </div>
           </div>
-        </div>
-        <div class="gallery-item" data-cat="ofis" style="background-image: url(&quot;images/agreement%27.jpg&quot;)">
-          <div class="gallery-item-inner">
-            <span class="gallery-item-cat">Komanda İşi</span>
-            <span class="gallery-item-title">Müştəri İclas və Prezentasiya</span>
+          <div
+            class="gallery-item"
+            data-cat="ofis"
+            style="background-image: url(&quot;images/agreement%27.jpg&quot;)"
+          >
+            <div class="gallery-item-inner">
+              <span class="gallery-item-cat">Komanda İşi</span>
+              <span class="gallery-item-title"
+                >Müştəri İclas və Prezentasiya</span
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- =========================================
+    <!-- =========================================
      RESOURCES
 ========================================= -->
-  <section id="bilik-merkezi">
-    <div class="container">
-      <div class="section-header-center fade-in">
-        <span class="section-eyebrow">Bilik Mərkəzi</span>
-        <h2 class="section-title">Pulsuz Resurslar &amp; Ekspert Bloqu</h2>
-        <p class="section-desc">
-          Sektora aid analitik məlumatlar, qanunvericilik bələdçiləri və audit
-          şablonları.
-        </p>
-      </div>
-      <div class="resources-grid">
-        <div class="fade-in">
-          <div class="resources-col-title">Pulsuz Yükləmələr</div>
-          <div class="resource-item">
-            <div class="resource-item-icon">
-              <i class="fa-solid fa-file-pdf" style="font-size: 24px; color: var(--navy-light)"></i>
-            </div>
-            <div>
-              <div class="resource-item-name">
-                Yeni Qida Təhlükəsizliyi Qanunu Bələdçisi
-              </div>
-              <div class="resource-item-desc">
-                2023-cü il dəyişiklikləri, müəssisənizə təsiri və uyğunlaşma
-                addımları. 28 səhifəlik ətraflı bələdçi.
-              </div>
-            </div>
-            <div class="resource-dl">
-              <i class="fa-solid fa-download"></i>
-              PDF
-            </div>
-          </div>
-          <div class="resource-item">
-            <div class="resource-item-icon">
-              <i class="fa-solid fa-file-excel" style="font-size: 24px; color: var(--gold-bright)"></i>
-            </div>
-            <div>
-              <div class="resource-item-name">Daxili Audit Şablonu</div>
-              <div class="resource-item-desc">
-                Müəssisəniz üçün hazır daxili audit forması. ISO 22000
-                tələblərinə tam uyğun struktur.
-              </div>
-            </div>
-            <div class="resource-dl">
-              <i class="fa-solid fa-download"></i>
-              XLSX
-            </div>
-          </div>
-          <div class="resource-item">
-            <div class="resource-item-icon">
-              <i class="fa-solid fa-file-lines" style="font-size: 24px; color: var(--orange)"></i>
-            </div>
-            <div>
-              <div class="resource-item-name">
-                Audit Hazırlıq Checklist — 10 Addım
-              </div>
-              <div class="resource-item-desc">
-                Beynəlxalq auditə hazırlıq üçün addım-addım yoxlama siyahısı.
-                AQTA &amp; ISO standartları əsasında.
-              </div>
-            </div>
-            <div class="resource-dl">
-              <i class="fa-solid fa-download"></i>
-              PDF
-            </div>
-          </div>
+    <section id="bilik-merkezi">
+      <div class="container">
+        <div class="section-header-center fade-in">
+          <span class="section-eyebrow">Bilik Mərkəzi</span>
+          <h2 class="section-title">Pulsuz Resurslar &amp; Ekspert Bloqu</h2>
+          <p class="section-desc">
+            Sektora aid analitik məlumatlar, qanunvericilik bələdçiləri və audit
+            şablonları.
+          </p>
         </div>
+        <div class="resources-grid">
+          <div class="fade-in">
+            <div class="resources-col-title">Pulsuz Yükləmələr</div>
+            <div class="resource-item">
+              <div class="resource-item-icon">
+                <i
+                  class="fa-solid fa-file-pdf"
+                  style="font-size: 24px; color: var(--navy-light)"
+                ></i>
+              </div>
+              <div>
+                <div class="resource-item-name">
+                  Yeni Qida Təhlükəsizliyi Qanunu Bələdçisi
+                </div>
+                <div class="resource-item-desc">
+                  2023-cü il dəyişiklikləri, müəssisənizə təsiri və uyğunlaşma
+                  addımları. 28 səhifəlik ətraflı bələdçi.
+                </div>
+              </div>
+              <div class="resource-dl">
+                <i class="fa-solid fa-download"></i>
+                PDF
+              </div>
+            </div>
+            <div class="resource-item">
+              <div class="resource-item-icon">
+                <i
+                  class="fa-solid fa-file-excel"
+                  style="font-size: 24px; color: var(--gold-bright)"
+                ></i>
+              </div>
+              <div>
+                <div class="resource-item-name">Daxili Audit Şablonu</div>
+                <div class="resource-item-desc">
+                  Müəssisəniz üçün hazır daxili audit forması. ISO 22000
+                  tələblərinə tam uyğun struktur.
+                </div>
+              </div>
+              <div class="resource-dl">
+                <i class="fa-solid fa-download"></i>
+                XLSX
+              </div>
+            </div>
+            <div class="resource-item">
+              <div class="resource-item-icon">
+                <i
+                  class="fa-solid fa-file-lines"
+                  style="font-size: 24px; color: var(--orange)"
+                ></i>
+              </div>
+              <div>
+                <div class="resource-item-name">
+                  Audit Hazırlıq Checklist — 10 Addım
+                </div>
+                <div class="resource-item-desc">
+                  Beynəlxalq auditə hazırlıq üçün addım-addım yoxlama siyahısı.
+                  AQTA &amp; ISO standartları əsasında.
+                </div>
+              </div>
+              <div class="resource-dl">
+                <i class="fa-solid fa-download"></i>
+                PDF
+              </div>
+            </div>
+          </div>
 
-        <div class="fade-in fade-in-delay-2">
-          <div class="resources-col-title">Ekspert Bloqu</div>
-          <div class="blog-item">
-            <div class="blog-date">12 Yanvar 2025</div>
-            <div class="blog-title">
-              Azərbaycanda Qida Sənayesinin 2025 Trendi: Nə Gözləyir?
+          <div class="fade-in fade-in-delay-2">
+            <div class="resources-col-title">Ekspert Bloqu</div>
+            <div class="blog-item">
+              <div class="blog-date">12 Yanvar 2025</div>
+              <div class="blog-title">
+                Azərbaycanda Qida Sənayesinin 2025 Trendi: Nə Gözləyir?
+              </div>
+              <div class="blog-excerpt">
+                AQTA regulyasiyalarının gücləndiriləcəyi, ixracat tələblərin
+                artacağı 2025-ci ildə müəssisələr nələrə hazır olmalıdır?
+              </div>
+              <span class="blog-read-more">Davam et →</span>
             </div>
-            <div class="blog-excerpt">
-              AQTA regulyasiyalarının gücləndiriləcəyi, ixracat tələblərin
-              artacağı 2025-ci ildə müəssisələr nələrə hazır olmalıdır?
+            <div class="blog-item">
+              <div class="blog-date">28 Noyabr 2024</div>
+              <div class="blog-title">
+                ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası
+              </div>
+              <div class="blog-excerpt">
+                Yeni versiyaya keçid üçün praktik bələdçi. Müəssisənizin audit
+                hazırlığını qiymətləndirin.
+              </div>
+              <span class="blog-read-more">Davam et →</span>
             </div>
-            <span class="blog-read-more">Davam et →</span>
+            <div class="blog-item">
+              <div class="blog-date">5 Oktyabr 2024</div>
+              <div class="blog-title">
+                HoReCa Sektorunda Qida Təhlükəsizliyi: 5 Kritik Nöqtə
+              </div>
+              <div class="blog-excerpt">
+                Restoran və otel sektorunda ən çox görülən pozuntular, onlardan
+                qorunma üsulları.
+              </div>
+              <span class="blog-read-more">Davam et →</span>
+            </div>
           </div>
-          <div class="blog-item">
-            <div class="blog-date">28 Noyabr 2024</div>
-            <div class="blog-title">
-              ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası
-            </div>
-            <div class="blog-excerpt">
-              Yeni versiyaya keçid üçün praktik bələdçi. Müəssisənizin audit
-              hazırlığını qiymətləndirin.
-            </div>
-            <span class="blog-read-more">Davam et →</span>
-          </div>
-          <div class="blog-item">
-            <div class="blog-date">5 Oktyabr 2024</div>
-            <div class="blog-title">
-              HoReCa Sektorunda Qida Təhlükəsizliyi: 5 Kritik Nöqtə
-            </div>
-            <div class="blog-excerpt">
-              Restoran və otel sektorunda ən çox görülən pozuntular, onlardan
-              qorunma üsulları.
-            </div>
-            <span class="blog-read-more">Davam et →</span>
-          </div>
-        
+        </div>
+      </div>
+    </section>
+    <div id="blogModal" class="modal-overlay">
+      <div class="modal-card">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-body">
+          <div id="modalDate" class="blog-date"></div>
+          <h2
+            id="modalTitle"
+            class="blog-title"
+            style="font-size: 1.5rem; margin-bottom: 1rem"
+          ></h2>
+          <div
+            id="modalContent"
+            class="blog-excerpt"
+            style="font-size: 1rem; color: var(--text)"
+          ></div>
         </div>
       </div>
     </div>
-  </section>
-  <div id="blogModal" class="modal-overlay">
-  <div class="modal-card">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <div class="modal-body">
-      <div id="modalDate" class="blog-date"></div>
-      <h2 id="modalTitle" class="blog-title" style="font-size: 1.5rem; margin-bottom: 1rem;"></h2>
-      <div id="modalContent" class="blog-excerpt" style="font-size: 1rem; color: var(--text);">
-        </div>
-    </div>
-  </div>
-</div>
-  <!-- =========================================
+    <!-- =========================================
      FOOTER
 ========================================= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-
-          <div class="footer-logo" style="margin-bottom: 1.25rem">
-            <img src="images/asr logo.png" alt="ASR Development Consulting Group" style="
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo" style="margin-bottom: 1.25rem">
+              <img
+                src="images/asr logo.png"
+                alt="ASR Development Consulting Group"
+                style="
                   height: 48px;
                   width: auto;
                   object-fit: contain;
                   filter: brightness(0) invert(1);
-                " />
+                "
+              />
+            </div>
+          </div>
+          <p class="footer-tagline-txt">
+            Strateji Həllər, Dayanıqlı İnkişaf. Qida təhlükəsizliyi, idarəetmə
+            və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.
+          </p>
+          <div class="footer-contact-item">
+            <i
+              class="fa-solid fa-location-dot"
+              style="color: rgb(255, 255, 255); position: relative; top: 10px"
+            ></i>
+            <span class="footer-contact-text"
+              >Bakı, Nizami küçəsi 65,<br />AZ1010, Azərbaycan</span
+            >
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255)"></i>
+            <span class="footer-contact-text">+994 12 404 00 00</span>
+          </div>
+          <div class="footer-contact-item">
+            <i
+              class="fa-solid fa-envelope"
+              style="color: rgb(255, 255, 255)"
+            ></i>
+
+            <span
+              class="footer-contact-text"
+              style="margin-left: -15px; position: relative; bottom: 3px"
+              >info@asr-consulting.az</span
+            >
+          </div>
+          <a href="https://wa.me/994504040000" class="footer-wa-btn">
+            <i
+              class="fa-brands fa-whatsapp"
+              style="font-size: 16px; margin-right: 4px"
+            ></i>
+            WhatsApp ilə Yazın
+          </a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Xidmətlər</div>
+          <div class="footer-col-links">
+            <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+            <a href="#xidmetler-detail">ISO 22000 Audit</a>
+            <a href="#xidmetler-detail">HACCP Tətbiqi</a>
+            <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+            <a href="#xidmetler-detail">HR Audit</a>
+            <a href="#xidmetler-detail">Hüquqi Ekspertiza</a>
+          </div>
+          <a href="https://wa.me/994504040000"
+            ><i
+              class="fa-brands fa-whatsapp whatsapp-icon"
+              style="color: rgb(0, 255, 37); cursor: pointer"
+            ></i
+          ></a>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Şirkət</div>
+          <div class="footer-col-links">
+            <a href="#haqqimizda">Haqqımızda</a>
+            <a href="#haqqimizda">Tariximiz</a>
+            <a href="#haqqimizda">Sertifikatlar</a>
+            <a href="#tecrubekm">Layihələr</a>
+            <a href="#qalereya">Qalereya</a>
+            <a href="#bilik-merkezi">Bloq</a>
           </div>
         </div>
-        <p class="footer-tagline-txt">
-          Strateji Həllər, Dayanıqlı İnkişaf. Qida təhlükəsizliyi, idarəetmə
-          və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.
-        </p>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255); position: relative;top: 10px;"></i>
-          <span class="footer-contact-text">Bakı, Nizami küçəsi 65,<br />AZ1010, Azərbaycan</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-phone" style="color: rgb(255,255,255);"></i>
-          <span class="footer-contact-text">+994 12 404 00 00</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-envelope" style="color: rgb(255, 255, 255);"></i>
-          ></span>
-          <span class="footer-contact-text"
-            style="margin-left: -15px; position: relative;bottom: 3px;">info@asr-consulting.az</span>
-        </div>
-        <a href="https://wa.me/994504040000" class="footer-wa-btn">
-          <i class="fa-brands fa-whatsapp" style="font-size: 16px; margin-right: 4px"></i>
-          WhatsApp ilə Yazın
-        </a>
-      </div>
 
-      <div>
-        <div class="footer-col-title">Xidmətlər</div>
-        <div class="footer-col-links">
-          <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
-          <a href="#xidmetler-detail">ISO 22000 Audit</a>
-          <a href="#xidmetler-detail">HACCP Tətbiqi</a>
-          <a href="#xidmetler-detail">Strateji İdarəetmə</a>
-          <a href="#xidmetler-detail">HR Audit</a>
-          <a href="#xidmetler-detail">Hüquqi Ekspertiza</a>
-        </div>
-        <a href="https://wa.me/994504040000"><i class="fa-brands fa-whatsapp whatsapp-icon"
-            style="color: rgb(0, 255, 37); cursor: pointer; "></i></a>
-      </div>
-
-      <div>
-        <div class="footer-col-title">Şirkət</div>
-        <div class="footer-col-links">
-          <a href="#haqqimizda">Haqqımızda</a>
-          <a href="#haqqimizda">Tariximiz</a>
-          <a href="#haqqimizda">Sertifikatlar</a>
-          <a href="#tecrubekm">Layihələr</a>
-          <a href="#qalereya">Qalereya</a>
-          <a href="#bilik-merkezi">Bloq</a>
+        <div>
+          <div class="footer-col-title">Ekspert Hovuzu</div>
+          <div class="footer-expert-form">
+            <h4>Komandamıza Qoşulun</h4>
+            <p>
+              Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı
+              göndərin.
+            </p>
+            <input type="text" placeholder="Ad Soyad" />
+            <input
+              type="email"
+              placeholder="E-mail ünvanınız"
+              style="margin-top: 0"
+            />
+            <input
+              type="text"
+              placeholder="İxtisas sahəniz"
+              style="margin-top: 8px"
+            />
+            <button onclick="this.textContent = '✓ Göndərildi!'">
+              Müraciət Et →
+            </button>
+          </div>
         </div>
       </div>
-
-      <div>
-        <div class="footer-col-title">Ekspert Hovuzu</div>
-        <div class="footer-expert-form">
-          <h4>Komandamıza Qoşulun</h4>
-          <p>
-            Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı
-            göndərin.
-          </p>
-          <input type="text" placeholder="Ad Soyad" />
-          <input type="email" placeholder="E-mail ünvanınız" style="margin-top: 0" />
-          <input type="text" placeholder="İxtisas sahəniz" style="margin-top: 8px" />
-          <button onclick="this.textContent = '✓ Göndərildi!'">
-            Müraciət Et →
-          </button>
-        </div>
+      <div class="trust-badges">
+        <span class="trust-badge">ISO Akkreditasiyalı</span>
+        <span class="trust-badge">HACCP Sertifikatlı</span>
+        <span class="trust-badge">AQTA Tərəfdaşı</span>
+        <span class="trust-badge">BRCGS İcazəli</span>
       </div>
-    </div>
-    <div class="trust-badges">
-      <span class="trust-badge">ISO Akkreditasiyalı</span>
-      <span class="trust-badge">HACCP Sertifikatlı</span>
-      <span class="trust-badge">AQTA Tərəfdaşı</span>
-      <span class="trust-badge">BRCGS İcazəli</span>
-    </div>
 
-    <div class="footer-bottom" style="margin: auto;">
-      <span class="footer-copy" style=" margin: auto;">© <span id="footer-year"></span> ASR Development Consulting
-        Group. Bütün hüquqlar
-        qorunur. </span>
+      <div class="footer-bottom" style="margin: auto">
+        <span class="footer-copy" style="margin: auto"
+          >© <span id="footer-year"></span> ASR Development Consulting Group.
+          Bütün hüquqlar qorunur.
+        </span>
+      </div>
+      <p
+        style="
+          text-align: center;
+          font-size: 12px;
+          font-weight: 600;
+          color: #aaacac;
+          position: relative;
+          bottom: 20px;
+        "
+      >
+        Designed By Elmaddin
+      </p>
+    </footer>
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
-
-    </div>
-    <p style="text-align: center;font-size:  12px; font-weight: 600; color: #aaacac;position: relative; bottom: 20px">
-      Designed By Elmaddin</p>
-  </footer>
-  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
-  <i class="fa-solid fa-chevron-up"></i>
-</button>
-
-  <script src="app.js"></script>
+    <script src="app.js"></script>
     <script type="text/javascript" src="darkmode.js"></script>
-
-
-
-
-</body>
-
+  </body>
 </html>
