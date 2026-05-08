@@ -333,4 +333,90 @@ themeSwitch.addEventListener("click", ()=>{
         disableDarkmode();
     }
 })
+
+(function() {
+  var section  = document.getElementById('komanda');
+  if (!section) return;
+
+  var expTrack    = section.querySelector('.experts-track');
+  var expDots     = section.querySelector('.exp-dots');
+  var expBtnPrev  = section.querySelector('.exp-prev');
+  var expBtnNext  = section.querySelector('.exp-next');
+  var expOuter    = section.querySelector('.experts-track-outer');
+  var expCards    = Array.from(expTrack.querySelectorAll('.exp-card'));
+
+  var expCurrent   = 0;
+  var expAutoTimer = null;
+
+  function expPerView() {
+    if (window.innerWidth <= 640)  return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+
+  function expGetTotal() { return Math.ceil(expCards.length / expPerView()); }
+
+  function expBuildDots() {
+    expDots.innerHTML = '';
+    for (var i = 0; i < expGetTotal(); i++) {
+      (function(idx) {
+        var d = document.createElement('button');
+        d.className = 'exp-dot' + (idx === expCurrent ? ' active' : '');
+        d.setAttribute('aria-label', 'Səhifə ' + (idx + 1));
+        d.addEventListener('click', function() { expGoTo(idx); expResetAuto(); });
+        expDots.appendChild(d);
+      })(i);
+    }
+  }
+
+  function expGoTo(idx) {
+    var pv    = expPerView();
+    var total = expGetTotal();
+    expCurrent = ((idx % total) + total) % total;
+    var outerW = expOuter.offsetWidth;
+    var gap    = 24;
+    var cardW  = (outerW - (pv - 1) * gap) / pv;
+    expTrack.style.transform = 'translateX(-' + (expCurrent * pv * (cardW + gap)) + 'px)';
+    expDots.querySelectorAll('.exp-dot').forEach(function(d, i) {
+      d.classList.toggle('active', i === expCurrent);
+    });
+  }
+
+  function expNext() { expGoTo(expCurrent + 1); }
+  function expPrev() { expGoTo(expCurrent - 1); }
+
+  function expStartAuto() {
+    clearInterval(expAutoTimer);
+    expAutoTimer = setInterval(expNext, 5000);
+  }
+
+  function expResetAuto() { expStartAuto(); }
+
+  expBtnPrev.addEventListener('click', function() { expPrev(); expResetAuto(); });
+  expBtnNext.addEventListener('click', function() { expNext(); expResetAuto(); });
+
+  var expTouchStartX = 0;
+  expOuter.addEventListener('touchstart', function(e) {
+    expTouchStartX = e.touches[0].clientX;
+  }, { passive: true });
+  expOuter.addEventListener('touchend', function(e) {
+    var diff = expTouchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { diff > 0 ? expNext() : expPrev(); expResetAuto(); }
+  });
+
+  var expResizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(expResizeTimer);
+    expResizeTimer = setTimeout(function() { expBuildDots(); expGoTo(expCurrent); }, 200);
+  });
+
+  expBuildDots();
+  expGoTo(0);
+  expStartAuto();
+})();
+
+
+
+
+
   

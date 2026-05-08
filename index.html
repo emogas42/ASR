@@ -20,10 +20,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body class="">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!--  NAVIGATION -->
     <nav id="navbar">
       <div class="nav-inner">
@@ -37,7 +40,7 @@
               margin-top: 3px;
               width: auto;
               object-fit: contain;
-              filter: brightness(0) invert(1);
+             
             "
           />
         </a>
@@ -367,27 +370,7 @@
         </div>
 
         <div class="slide-counter"><span id="currentNum">2</span> / 3</div>
-        <div
-          class="stats-bar"
-          style="z-index: 2; position: absolute; top: 99%; height: 80px"
-        >
-          <div class="stat-item">
-            <div class="stat-num">50+</div>
-            <div class="stat-label">Ekspert</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">100+</div>
-            <div class="stat-label">Tamamlanmış Layihə</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">15</div>
-            <div class="stat-label">İl Təcrübə</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-num">12+</div>
-            <div class="stat-label">Beynəlxalq Sertifikat</div>
-          </div>
-        </div>
+  
 
         <div
           class="progress-line"
@@ -657,19 +640,11 @@
             <span>✦ Pulsuz Resurs</span>
           </div>
 
-          <h2 class="section-title" style="color: white">
+          <h2 class="section-title" >
             Müəssisəniz Beynəlxalq Auditə Hazırdırmı?
           </h2>
 
-          <div
-            style="
-              position: relative;
-              margin-bottom: 1.5rem;
-              border-radius: 12px;
-              overflow: hidden;
-              clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
-            "
-          >
+          <div style="position: relative; margin-bottom: 1.5rem; border-radius: 12px; overflow: hidden; clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%); ">
             <img
               src="images/microsoft-365-oUbzU87d1Gc-unsplash.jpg"
               alt=""
@@ -687,28 +662,12 @@
               style="
                 position: absolute;
                 inset: 0;
-                background: linear-gradient(
-                  to bottom,
-                  var(--navy) -20%,
-                  transparent 25%,
-                  transparent 65%,
-                  var(--navy) 100%
-                );
+             
                 z-index: 4;
               "
             ></div>
 
-            <div
-              style="
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(
-                  to right,
-                  var(--navy) 0%,
-                  transparent 50%
-                );
-              "
-            ></div>
+          
           </div>
 
           <p class="lead-desc">
@@ -756,7 +715,7 @@
               <select>
                 <option value="" class="select-options">Seçin...</option>
                 <option class="select-options">Ət Emalı</option>
-                <option calss="select-options" style="color: white">
+                <option calss="select-options" >
                   Süd Məhsulları
                 </option>
                 <option class="select-options">HoReCa</option>
@@ -1487,7 +1446,7 @@
                     style="
                       font-size: 0.75rem;
                       font-weight: 800;
-                      color: var(--navy);
+                      
                     "
                   >
                     ISO 22000
@@ -1560,7 +1519,7 @@
                     style="
                       font-size: 0.75rem;
                       font-weight: 800;
-                      color: var(--navy);
+                     
                     "
                   >
                     HACCP
@@ -1633,7 +1592,7 @@
                     style="
                       font-size: 0.75rem;
                       font-weight: 800;
-                      color: var(--navy);
+                     
                     "
                   >
                     BRCGS
@@ -1707,7 +1666,7 @@
                     style="
                       font-size: 0.75rem;
                       font-weight: 800;
-                      color: var(--navy);
+                      
                     "
                   >
                     IFS Food
@@ -1920,7 +1879,7 @@
                   style="
                     font-size: 1.0625rem;
                     font-weight: 800;
-                    color: var(--white);
+                    color: white;
                     margin-bottom: 0.375rem;
                   "
                 >
@@ -2014,7 +1973,7 @@
                   style="
                     font-size: 1.0625rem;
                     font-weight: 800;
-                    color: var(--white);
+                    color: white;
                     margin-bottom: 0.375rem;
                   "
                 >
@@ -2107,7 +2066,7 @@
                   style="
                     font-size: 1.0625rem;
                     font-weight: 800;
-                    color: var(--white);
+                    color: white;
                     margin-bottom: 0.375rem;
                   "
                 >
@@ -2258,10 +2217,10 @@
           <span class="section-eyebrow" style="color: var(--gold-bright)"
             >Daxili Mətbəx</span
           >
-          <h2 class="section-title" style="color: white">
+          <h2 class="section-title">
             Tam Peşəkar Yanaşma
           </h2>
-          <p class="section-desc" style="color: rgba(255, 255, 255, 0.5)">
+          <p class="section-desc">
             Audit prosesindən təlim salonuna qədər komandamızın gündəlik
             fəaliyyəti.
           </p>
@@ -2491,6 +2450,164 @@
         </div>
       </div>
     </div>
+<!-- =========================================
+     EKSPERT KOMANDAsı — AUTO CAROUSEL
+========================================= -->
+<section id="komanda">
+  <div class="container">
+    <div class="section-header-center fade-in">
+      <span class="section-eyebrow">Komandamız</span>
+      <h2 class="section-title">Ekspert Heyətimiz</h2>
+      <p class="section-desc">
+        Hər sahədə sertifikatlı, təcrübəli mütəxəssislərdən ibarət komandamız.
+      </p>
+    </div>
+  </div>
+
+  <div class="experts-carousel-wrap">
+    <button class="exp-arrow exp-prev" aria-label="Əvvəlki">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="exp-arrow exp-next" aria-label="Növbəti">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="experts-track-outer">
+      <div class="experts-track">
+
+        <!-- Card 1 -->
+        <div class="exp-card">
+          <div class="exp-card-img-wrap">
+            <img src="images/accountphoto.png" alt="Rəşad Əliyev" class="exp-card-img" />
+            <div class="exp-card-overlay">
+              <div class="exp-overlay-tags">
+                <span>ISO 22000</span><span>HACCP</span><span>GMP</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-card-role">Baş Direktor</div>
+            <h3 class="exp-card-name">Rəşad Əliyev</h3>
+            <p class="exp-card-desc">Qida təhlükəsizliyi və strateji idarəetmə sahəsində 15+ il təcrübə. ISO 22000 baş auditor.</p>
+            <div class="exp-card-certs">
+              <span class="exp-cert-badge"><i class="fa-solid fa-medal"></i> ISO Lead Auditor</span>
+              <span class="exp-cert-badge"><i class="fa-solid fa-certificate"></i> HACCP Expert</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="exp-card">
+          <div class="exp-card-img-wrap">
+            <img src="images/accountphoto.png" alt="Səbinə Hüseynova" class="exp-card-img" />
+            <div class="exp-card-overlay">
+              <div class="exp-overlay-tags">
+                <span>Hüquq</span><span>RIA</span><span>Qanunvericilik</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-card-role">Hüquq Eksperti</div>
+            <h3 class="exp-card-name">Səbinə Hüseynova</h3>
+            <p class="exp-card-desc">Qida hüququ, tənzimləmə uyğunluğu və qanun layihəsi ekspertizası üzrə ixtisaslaşmış hüquqşünas.</p>
+            <div class="exp-card-certs">
+              <span class="exp-cert-badge"><i class="fa-solid fa-scale-balanced"></i> LLM Hüquq</span>
+              <span class="exp-cert-badge"><i class="fa-solid fa-gavel"></i> RIA Metodologiyası</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="exp-card">
+          <div class="exp-card-img-wrap">
+            <img src="images/accountphoto.png" alt="Elnur Məmmədov" class="exp-card-img" />
+            <div class="exp-card-overlay">
+              <div class="exp-overlay-tags">
+                <span>ISO 9001</span><span>Strateji</span><span>Audit</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-card-role">Strateji İdarəetmə Eksperti</div>
+            <h3 class="exp-card-name">Elnur Məmmədov</h3>
+            <p class="exp-card-desc">Müəssisə idarəetməsi, daxili audit prosesləri və strateji planlaşdırma üzrə 12 illik praktik bilgi.</p>
+            <div class="exp-card-certs">
+              <span class="exp-cert-badge"><i class="fa-solid fa-chart-line"></i> MBA Strateji</span>
+              <span class="exp-cert-badge"><i class="fa-solid fa-award"></i> ISO 9001 Auditor</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="exp-card">
+          <div class="exp-card-img-wrap">
+            <img src="images/accountphoto.png" alt="Nigar Quliyeva" class="exp-card-img" />
+            <div class="exp-card-overlay">
+              <div class="exp-overlay-tags">
+                <span>Laboratoriya</span><span>Mikrobioloji</span><span>Analiz</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-card-role">Laboratoriya Analitiki</div>
+            <h3 class="exp-card-name">Nigar Quliyeva</h3>
+            <p class="exp-card-desc">Qida analizi, mikrobioloji testlər və laboratoriya akkreditasiyası sahəsində beynəlxalq təcrübə.</p>
+            <div class="exp-card-certs">
+              <span class="exp-cert-badge"><i class="fa-solid fa-flask"></i> Ph.D. Biokimya</span>
+              <span class="exp-cert-badge"><i class="fa-solid fa-microscope"></i> ISO 17025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="exp-card">
+          <div class="exp-card-img-wrap">
+            <img src="images/accountphoto.png" alt="Tural Babayev" class="exp-card-img" />
+            <div class="exp-card-overlay">
+              <div class="exp-overlay-tags">
+                <span>Təlim</span><span>E-learning</span><span>Sertifikasiya</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-card-role">Təlim Koordinatoru</div>
+            <h3 class="exp-card-name">Tural Babayev</h3>
+            <p class="exp-card-desc">Korporativ təlim proqramları, e-öyrənmə platformaları və peşəkar sertifikasiya üzrə mütəxəssis.</p>
+            <div class="exp-card-certs">
+              <span class="exp-cert-badge"><i class="fa-solid fa-chalkboard-user"></i> CMI Level 5</span>
+              <span class="exp-cert-badge"><i class="fa-solid fa-graduation-cap"></i> Train the Trainer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="exp-card">
+          <div class="exp-card-img-wrap">
+            <img src="images/accountphoto.png " alt="Aytən Nəsirova" class="exp-card-img" />
+            <div class="exp-card-overlay">
+              <div class="exp-overlay-tags">
+                <span>Ekologiya</span><span>Ətraf Mühit</span><span>ISO 14001</span>
+              </div>
+            </div>
+          </div>
+          <div class="exp-card-body">
+            <div class="exp-card-role">Ekoloji Ekspert</div>
+            <h3 class="exp-card-name">Aytən Nəsirova</h3>
+            <p class="exp-card-desc">Ətraf mühit idarəetməsi, ekoloji uyğunluq auditləri və davamlı inkişaf strategiyaları üzrə ekspert.</p>
+            <div class="exp-card-certs">
+              <span class="exp-cert-badge"><i class="fa-solid fa-leaf"></i> ISO 14001</span>
+              <span class="exp-cert-badge"><i class="fa-solid fa-earth-europe"></i> EIA Ekspert</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /experts-track -->
+    </div><!-- /experts-track-outer -->
+
+    <div class="exp-dots"></div>
+  </div><!-- /experts-carousel-wrap -->
+</section>
+
     <!-- =========================================
      FOOTER
 ========================================= -->
@@ -2536,7 +2653,7 @@
 
             <span
               class="footer-contact-text"
-              style="margin-left: -15px; position: relative; bottom: 3px"
+              style=" position: relative; bottom: 3px"
               >info@asr-consulting.az</span
             >
           </div>
@@ -2634,7 +2751,7 @@
       <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <script src="app.js"></script>
+    <script src="app copy.js"></script>
     <script type="text/javascript" src="darkmode.js"></script>
   </body>
 </html>

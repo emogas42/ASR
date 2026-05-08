@@ -1,0 +1,363 @@
+/* ============================================================
+   ASR DEVELOPMENT — PROFESSIONAL LIGHT MODE FIX
+   Bu faylı style.css-dən SONRA əlavə edin:
+   <link rel="stylesheet" href="lightmode-fix.css" />
+   ============================================================ */
+
+/* ── LIGHT MODE RƏNG PALETİ ── */
+body:not(.dark-mode) {
+  --lm-bg:          #f0f4f9;       /* Səhifə fonu — yüngül mavi-boz */
+  --lm-surface:     #ffffff;       /* Kartlar, panellər */
+  --lm-surface-2:   #e8eef6;       /* İkinci səviyyə səth */
+  --lm-navy:        #0b1f3a;       /* Başlıqlar, əsas metin */
+  --lm-navy-mid:    #1b4280;       /* Vurğu navy */
+  --lm-gold:        #c8922a;
+  --lm-gold-bright: #e4a832;
+  --lm-border:      #cdd8e8;       /* Kart sərhədləri */
+  --lm-text:        #1a2940;
+  --lm-text-muted:  #4d6380;
+  --lm-hero-bg:     #dde6f2;       /* Hero section fon */
+  --lm-overlay-l:   rgba(220,232,248,0.82);
+  --lm-overlay-b:   rgba(208,222,240,0.72);
+}
+
+/* ============================================================
+   NAVBAR — light
+   ============================================================ */
+body:not(.dark-mode) #navbar {
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-bottom: 1px solid var(--lm-border) !important;
+  box-shadow: 0 2px 16px rgba(11, 31, 58, 0.08) !important;
+}
+
+body:not(.dark-mode) #navbar.scrolled {
+  background: rgba(255, 255, 255, 0.99) !important;
+  box-shadow: 0 4px 24px rgba(11, 31, 58, 0.12) !important;
+}
+
+body:not(.dark-mode) .nav-link {
+  color: var(--lm-navy) !important;
+}
+
+body:not(.dark-mode) .nav-link:hover,
+body:not(.dark-mode) .nav-link.active {
+  color: var(--lm-gold) !important;
+  background: rgba(200, 146, 42, 0.08) !important;
+}
+
+body:not(.dark-mode) .nav-toggle span {
+  background: var(--lm-navy) !important;
+}
+
+body:not(.dark-mode) .nav-dropdown,
+body:not(.dark-mode) .mega-menu {
+  background: #ffffff !important;
+  border-color: var(--lm-border) !important;
+  box-shadow: 0 12px 40px rgba(11, 31, 58, 0.12) !important;
+}
+
+body:not(.dark-mode) .nav-dropdown a,
+body:not(.dark-mode) .mega-col a {
+  color: var(--lm-text-muted) !important;
+}
+
+body:not(.dark-mode) .nav-dropdown a:hover,
+body:not(.dark-mode) .mega-col a:hover {
+  color: var(--lm-gold) !important;
+  background: rgba(200, 146, 42, 0.06) !important;
+}
+
+body:not(.dark-mode) .mega-col-title {
+  color: var(--lm-gold) !important;
+  border-bottom-color: var(--lm-border) !important;
+}
+
+/* Logo — light modda tünd görsənsın */
+body:not(.dark-mode) .logo img {
+  filter: brightness(0) !important;   /* Tam qara/tünd logo */
+}
+
+/* Mobile nav — light */
+body:not(.dark-mode) .mobile-nav {
+  background: #ffffff !important;
+}
+
+body:not(.dark-mode) .mobile-nav-link {
+  color: var(--lm-navy) !important;
+  border-bottom-color: var(--lm-border) !important;
+}
+
+body:not(.dark-mode) .mobile-sub a {
+  color: var(--lm-text-muted) !important;
+  border-bottom-color: var(--lm-border) !important;
+}
+
+/* Lang toggle — light */
+body:not(.dark-mode) .lang-btn {
+  color: var(--lm-navy) !important;
+}
+
+body:not(.dark-mode) .lang-divider {
+  background: var(--lm-border) !important;
+}
+
+/* ============================================================
+   HERO CAROUSEL (SLIDE SECTION) — tam light blue
+   ============================================================ */
+body:not(.dark-mode) #hero,
+body:not(.dark-mode) .carousel-root {
+  background: var(--lm-hero-bg) !important;
+}
+
+/* Slide üzərindəki tünd gradient overlay-ləri açıq mavi ilə əvəz et */
+body:not(.dark-mode) .slide-overlay-left {
+  background: linear-gradient(
+    to right,
+    rgba(208, 225, 248, 0.92) 0%,
+    rgba(208, 225, 248, 0.65) 45%,
+    transparent 100%
+  ) !important;
+}
+
+body:not(.dark-mode) .slide-overlay-bottom {
+  background: linear-gradient(
+    to top,
+    rgba(200, 220, 245, 0.88) 0%,
+    transparent 50%
+  ) !important;
+}
+
+/* Şəklin özünü daha işıqlı et */
+body:not(.dark-mode) .slide-img {
+  filter: grayscale(10%) brightness(0.82) !important;
+}
+
+/* Slide mətn rəngləri */
+body:not(.dark-mode) .slide-title {
+  color: var(--lm-navy) !important;
+  text-shadow: 0 1px 8px rgba(255,255,255,0.5) !important;
+}
+
+body:not(.dark-mode) .slide-title span {
+  color: var(--lm-gold) !important;
+}
+
+body:not(.dark-mode) .slide-desc {
+  color: rgba(11, 31, 58, 0.72) !important;
+}
+
+body:not(.dark-mode) .slide-tag {
+  color: var(--lm-gold) !important;
+}
+
+body:not(.dark-mode) .slide-tag::before {
+  background: var(--lm-gold) !important;
+}
+
+/* Slide geo dairəsi */
+body:not(.dark-mode) .slide-geo {
+  border-color: rgba(200, 146, 42, 0.18) !important;
+}
+
+body:not(.dark-mode) .slide-geo::before {
+  border-color: rgba(200, 146, 42, 0.1) !important;
+}
+
+/* Slide düymələri */
+body:not(.dark-mode) .btn-secondary {
+  color: var(--lm-navy) !important;
+  border-color: rgba(11, 31, 58, 0.3) !important;
+}
+
+body:not(.dark-mode) .btn-secondary:hover {
+  border-color: var(--lm-gold) !important;
+  color: var(--lm-gold) !important;
+}
+
+/* Stats bar — slide altındakı statistika paneli */
+body:not(.dark-mode) .stats-bar {
+  border-top-color: rgba(11, 31, 58, 0.1) !important;
+}
+
+body:not(.dark-mode) .stat-item {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-right-color: var(--lm-border) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+body:not(.dark-mode) .stat-num {
+  color: var(--lm-gold) !important;
+}
+
+body:not(.dark-mode) .stat-label {
+  color: var(--lm-text-muted) !important;
+}
+
+/* Carousel navigation dots / arrows */
+body:not(.dark-mode) .carousel-dot {
+  background: rgba(11, 31, 58, 0.25) !important;
+}
+
+body:not(.dark-mode) .carousel-dot.active {
+  background: var(--lm-gold) !important;
+}
+
+body:not(.dark-mode) .carousel-arrow,
+body:not(.dark-mode) .carousel-prev,
+body:not(.dark-mode) .carousel-next,
+body:not(.dark-mode) .hero-arrow {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: var(--lm-navy) !important;
+  border-color: var(--lm-border) !important;
+}
+
+/* ============================================================
+   HERO (STATIC SECTION — if used alongside carousel)
+   ============================================================ */
+body:not(.dark-mode) #hero .hero-bg-geo::before {
+  background: linear-gradient(
+    135deg,
+    rgba(27, 66, 128, 0.06) 0%,
+    transparent 60%
+  ) !important;
+}
+
+body:not(.dark-mode) #hero .hero-dots {
+  background-image: radial-gradient(
+    rgba(11, 31, 58, 0.04) 1px,
+    transparent 1px
+  ) !important;
+}
+
+body:not(.dark-mode) .hero-badge {
+  background: rgba(200, 146, 42, 0.1) !important;
+  border-color: rgba(200, 146, 42, 0.25) !important;
+}
+
+/* ============================================================
+   DAXİLİ MƏTBƏX / QALEREYA — light mavi, şəkilli galereya
+   ============================================================ */
+body:not(.dark-mode) #qalereya {
+  background: #1a2e4a !important;   
+  /* Qalereya şəkillər üçün nəzərdə tutulub — çox açıq fon şəkilləri öldürür.
+     Buna görə professional tünd-mavi saxlanır, lakin köhnə qara #060e1c 
+     əvəzinə daha zəngin navy istifadə edirik. */
+}
+
+body:not(.dark-mode) #qalereya .section-eyebrow {
+  color: var(--lm-gold-bright) !important;
+}
+
+body:not(.dark-mode) #qalereya .section-title {
+  color: #ffffff !important;
+}
+
+body:not(.dark-mode) #qalereya .section-desc {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* Gallery tab düymələri */
+body:not(.dark-mode) .gallery-tab {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(200, 146, 42, 0.3) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+body:not(.dark-mode) .gallery-tab.active,
+body:not(.dark-mode) .gallery-tab:hover {
+  background: linear-gradient(135deg, var(--lm-gold), #cf5e12) !important;
+  color: #ffffff !important;
+}
+
+/* Gallery item overlay daha incə */
+body:not(.dark-mode) .gallery-item::before {
+  background: linear-gradient(
+    to top,
+    rgba(10, 25, 50, 0.88) 0%,
+    rgba(10, 25, 50, 0.45) 45%,
+    rgba(10, 25, 50, 0.1) 100%
+  ) !important;
+}
+
+body:not(.dark-mode) .gallery-item {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.28) !important;
+}
+
+body:not(.dark-mode) .gallery-item:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+body:not(.dark-mode) .gallery-item-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+body:not(.dark-mode) .gallery-item-cat {
+  color: var(--lm-gold-bright) !important;
+}
+
+/* ============================================================
+   SƏHIFƏ ÜMUMI FONU
+   ============================================================ */
+body:not(.dark-mode) {
+  background: var(--lm-bg) !important;
+}
+
+/* ============================================================
+   COUNTERS / LEAD-MAGNET — branded navy saxlanır
+   (intentional dark band — brend identifikasiyası üçün)
+   ============================================================ */
+body:not(.dark-mode) #counters {
+  background: var(--lm-navy-mid) !important;
+}
+
+body:not(.dark-mode) .counter-num {
+  color: var(--lm-gold-bright) !important;
+}
+
+body:not(.dark-mode) .counter-label {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+body:not(.dark-mode) #lead-magnet {
+  background: var(--lm-navy) !important;
+}
+
+/* ============================================================
+   FOOTER LOGO — light modda ağ qal (tünd fon üzərindədir)
+   ============================================================ */
+body:not(.dark-mode) #footer img {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* ============================================================
+   SCROLL BAR (Chrome/Edge) — light mavi ton
+   ============================================================ */
+body:not(.dark-mode)::-webkit-scrollbar {
+  width: 8px;
+}
+
+body:not(.dark-mode)::-webkit-scrollbar-track {
+  background: var(--lm-bg);
+}
+
+body:not(.dark-mode)::-webkit-scrollbar-thumb {
+  background: var(--lm-border);
+  border-radius: 4px;
+}
+
+body:not(.dark-mode)::-webkit-scrollbar-thumb:hover {
+  background: var(--lm-navy-mid);
+}
+
+/* ============================================================
+   THEME SWITCH DÜYMƏSİ — light modda görünsün
+   ============================================================ */
+body:not(.dark-mode) #theme-switch {
+  background: var(--lm-surface-2) !important;
+  border: 1px solid var(--lm-border) !important;
+}
+
+body:not(.dark-mode) #theme-switch i {
+  color: var(--lm-navy) !important;
+}
