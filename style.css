@@ -975,6 +975,8 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
 #xidmetler { padding: 6rem 2rem; background: var(--bg); }
 .services-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
 .service-card {
+  width: 400px;
+  height: 400px;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -983,12 +985,12 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
   overflow: hidden;
   transition: var(--transition);
   cursor: pointer;
+
 }
 .service-card::after {
   content: "";
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 3px;
   background: var(--card-color, var(--orange));
   transform: scaleX(0);
   transform-origin: left;
@@ -996,12 +998,6 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
 }
 .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
 .service-card:hover::after { transform: scaleX(1); }
-.service-icon {
-  width: 52px; height: 52px;
-  border-radius: var(--radius-md);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 1.5rem;
-}
 .si-blue   { background: rgba(27,66,128,0.07); }
 .si-gold   { background: rgba(200,146,42,0.08); }
 .si-orange { background: rgba(207,94,18,0.07); }
@@ -1889,3 +1885,6 @@ body.dark-mode .exp-arrow:hover {
 .btn-primary:hover::before {
   width: 100%;
 }
+
+
+
