@@ -1,9 +1,4 @@
-/* ============================================================
-   ASR DEVELOPMENT CONSULTING GROUP
-   Light Mode (default) + Dark Mode via .dark-mode class
-   ============================================================ */
 
-/* ── Reset & Base ───────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { overflow-x: hidden; position: relative; width: 100%; }
 html { scroll-behavior: smooth; font-size: 16px; }
@@ -20,9 +15,6 @@ a { text-decoration: none; }
 ul { list-style: none; }
 button, input, textarea, select { font-family: inherit; cursor: pointer; }
 
-/* ============================================================
-   CSS VARIABLES — LIGHT MODE (default)
-   ============================================================ */
 :root {
   --navy:         #1b4280;
   --navy-dark:    #0b1f3a;
@@ -67,9 +59,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   --gray-mid:     #9c9487;
 }
 
-/* ============================================================
-   CSS VARIABLES — DARK MODE
-   ============================================================ */
+
 .dark-mode {
   --navy:         #030d1a;
   --navy-dark:    #020b18;
@@ -454,7 +444,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   transition: 0.4s;
   z-index: 99;
 }
-.whatsapp-icon:hover { scale: 3.9; transform: translateY(-1px); }
+.whatsapp-icon:hover { scale: 3.3; transform: translateY(-1px); }
 
 /* Back to top */
 .back-to-top {
@@ -609,12 +599,12 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
 
 }
 .dark-mode .slide-title { color: #f5f0e8; }
-.slide-title span { color: var(--gold); font-weight: 600; text-shadow: 0 2px 8px rgba(200, 146, 42, 0.3);}
+.slide-title span { color: white(--white); font-weight: 600; text-shadow: 0 2px 8px rgba(200, 146, 42, 0.3);}
 .slide-desc {
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 1.75;
-  color: #ffffff;
+  color: #000000;
   max-width: 480px;
   margin-bottom: 32px;
   opacity: 0;
@@ -641,8 +631,8 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--gold);
-  color: #071426;
+  background-color: black;
+  color: black;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
