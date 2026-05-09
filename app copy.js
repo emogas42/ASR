@@ -370,4 +370,21 @@ themeSwitch.addEventListener("click", function() {
   expGoTo(0);
   expRestart();
 })();
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
+// Səhifə 150px aşağı sürüşdürüldükdə düyməni göstər
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    scrollToTopBtn.style.display = "flex";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
+
+// Kliklədikdə səlis şəkildə yuxarı qalx
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

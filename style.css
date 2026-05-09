@@ -959,7 +959,6 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
 .dark-mode .form-group input:focus,
 .dark-mode .form-group select:focus { border-color: rgba(200,146,42,0.55); }
 .form-group select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23aaa' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 14px center;
 }
@@ -975,8 +974,12 @@ body:not(.dark-mode) .slide-tag::before { background: white; }
 #xidmetler { padding: 6rem 2rem; background: var(--bg); }
 .services-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
 .service-card {
-  width: 400px;
-  height: 400px;
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 20px;
+  width: 350px;
+  height: 350px;
+  background: center;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -1886,5 +1889,159 @@ body.dark-mode .exp-arrow:hover {
   width: 100%;
 }
 
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #ECA336; /* Saytdakı Müraciət Et düyməsinin rəngi */
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Sayt açılanda gizli olur */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999; /* Hər şeyin üstündə görünməsi üçün */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-right: 5px;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #d88c24; /* Üzərinə gəldikdə bir az tündləşir */
+  transform: translateY(-3px);
+}
+.footer-socials{
+    width: 500px;
+    max-width: 760px;
+    display: flex;
+    gap: 28px;
+    margin-left: 450px;
+    border: 1px solid rgba(212, 161, 74, 0.18);
+    border-radius: 28px;
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+/* SOCIAL CARD */
+
+.social-card{
+    width: 120px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    text-decoration: none;
+    border-radius: 22px;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ICON */
+
+.social-card i{
+    font-size: 42px;
+    transition: 0.35s ease;
+}
+
+/* TEXT */
+
+.social-card span{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #555;
+    transition: 0.35s ease;
+}
+
+/* HOVER */
+
+.social-card:hover{
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.55);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* COLORS */
+
+.instagram i{
+    background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tiktok i{
+    color: #111;
+}
+
+.linkedin i{
+    color: #0077b5;
+}
+
+.facebook i{
+    color: #1877f2;
+}
+
+/* DARK MODE */
+
+.dark-mode .footer-socials{
+    background: rgba(20,20,20,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark-mode .social-card span{
+    color: #f2f2f2;
+}
+
+.dark-mode .social-card:hover{
+    background: rgba(255,255,255,0.06);
+}
+
+.dark-mode .tiktok i{
+    color: #fff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+    .footer-socials{
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .social-card{
+        width: 130px;
+        height: 95px;
+    }
+
+    .social-card i{
+        font-size: 34px;
+    }
+
+    .social-card span{
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .footer-socials{
+        gap: 14px;
+        border-radius: 20px;
+    }
+
+    .social-card{
+        width: 45%;
+    }
+}
 
 
