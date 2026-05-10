@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İnkişaf Layihələrinin İdarəolunması — ASR Development Consulting Group</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="xidmetler.css">
+
+</head>
+<body>
+  <a class="back-link" href="index.html">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    Geri
+  </a>
+  <button class="dm-toggle" id="dmToggle" aria-label="Dark mode">
+    <svg id="dmIcon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+  </button>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-geo">
+      <div class="hero-geo-circle"></div>
+      <div class="hero-geo-circle"></div>
+    </div>
+    <div class="hero-image-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge" id="heroBadge">
+          <span class="hero-badge-dot"></span>
+          Xidmət 01 · Layihə İdarəetməsi
+        </div>
+        <div class="hero-eyebrow" id="heroEyebrow">
+          <span class="hero-eyebrow-dot"></span>
+          ASR Development Consulting Group
+        </div>
+        <h1 class="hero-title" id="heroTitle">İnkişaf <em>Layihələrinin</em><br/>İdarəolunması</h1>
+        <p class="hero-desc" id="heroDesc">Podratçı və ya subpodratçı qismində inkişaf layihələrinin idarə edilməsi, seminarlar, konfranslar və tədbirlərin peşəkar şəkildə təşkili.</p>
+        <div class="hero-cta-group" id="heroCta">
+          <a href="#cta" class="btn-primary">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016 17.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0124 19z"/></svg>
+            Müraciət Et
+          </a>
+          <a href="#services" class="btn-ghost">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+            Xidmətlərə Bax
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" id="heroVisual">
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+          <div><div class="hero-stat-value">2009</div><div class="hero-stat-label">Təsis ilindən bəri</div></div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div><div class="hero-stat-value">50+</div><div class="hero-stat-label">Tamamlanmış Layihə</div></div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <div><div class="hero-stat-value">15+</div><div class="hero-stat-label">İllik Təcrübə</div></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="hero-scroll"><span>Aşağı</span><div class="hero-scroll-line"></div></div> -->
+  </section>
+
+  <!-- SERVİCES -->
+  <section class="section features-section" id="services">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Xidmət Paketi</div>
+        <h2 class="section-title">Layihə İdarəetməsi<br/><em>Xidmətləri</em></h2>
+        <p class="section-subtitle">İnkişaf layihələrinin həyata keçirilməsinin bütün mərhələlərini əhatə edən kompleks dəstək.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+          <div class="feature-title">Layihə İdarəetməsi</div>
+          <div class="feature-desc">Podratçı və ya subpodratçı qismində inkişaf layihələrinin tam idarə edilməsi, işin planlanması və nəzarəti.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="feature-title">Konsaltinq Xidmətləri</div>
+          <div class="feature-desc">Hökumət orqanlarına yüksək ixtisaslı yerli və beynəlxalq konsultantların köməyi ilə iqtisadi siyasət sahəsində məsləhət.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div class="feature-title">Tədbirlər və Təlimlər</div>
+          <div class="feature-desc">Seminarlar, konfranslar, dəyirmi masalar və layihə çərçivəsindəki digər tədbirlərin peşəkar təşkili.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="feature-title">Sosial-İqtisadi Tədqiqatlar</div>
+          <div class="feature-desc">Məlumat toplanması, sorğular, müsahibələr və əhatəli hesabatların hazırlanması da daxil olmaqla kəmiyyət və keyfiyyət tədqiqatları.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="feature-title">Material Hazırlanması</div>
+          <div class="feature-desc">Layihə çərçivəsində təqdimat və təlim materiallarının hazırlanması, çapı və peşəkar tərcüməsi.</div>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="feature-title">Monitorinq və Qiymətləndirmə</div>
+          <div class="feature-desc">Layihənin daxili və ya kənar monitorinqi və qiymətləndirilməsinin aparılması, hesabatların hazırlanması.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROSES -->
+  <section class="section process-section" id="process">
+    <div class="section-inner">
+      <div class="section-header reveal">
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>İş Prosesi</div>
+        <h2 class="section-title">Layihənin <em>İdarəetmə</em> Mərhələləri</h2>
+        <p class="section-subtitle">Layihənin planlaşdırılmasından bağlanmasına qədər strukturlaşdırılmış proses.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-step-num">1</div>
+          <div class="process-step-body">
+            <span class="process-step-tag">Başlanğıc</span>
+            <div class="process-step-title">Layihənin Tərifi və Planlaşdırma</div>
+            <div class="process-step-desc">Layihənin məqsəd, əhatə dairəsi, vaxt çərçivəsi və resursların müəyyənləşdirilməsi. İş planı, büdcə və rəhbər komandanın formalaşdırılması.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">2</div>
+          <div class="process-step-body">
+            <span class="process-step-tag">Hazırlıq</span>
+            <div class="process-step-title">Maraqlı Tərəflərlə Əlaqənin Qurulması</div>
+            <div class="process-step-desc">Benefisiar hökumət orqanları, donor təşkilatlar və digər maraqlı tərəflərlə koordinasiya mexanizmlərinin qurulması.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">3</div>
+          <div class="process-step-body">
+            <span class="process-step-tag">İcra</span>
+            <div class="process-step-title">Tədqiqat, Məsləhət və Tədbirlər</div>
+            <div class="process-step-desc">Sosial-iqtisadi tədqiqatların aparılması, hökumət orqanlarına konsaltinq xidmətlərinin göstərilməsi, seminar və konfransların keçirilməsi.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">4</div>
+          <div class="process-step-body">
+            <span class="process-step-tag">Nəzarət</span>
+            <div class="process-step-title">Monitorinq, Hesabatlılıq və Qiymətləndirmə</div>
+            <div class="process-step-desc">Fəaliyyətin daimi izlənilməsi, donor hesabatlarının hazırlanması, aralıq qiymətləndirmə.</div>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">5</div>
+          <div class="process-step-body">
+            <span class="process-step-tag">Yekun</span>
+            <div class="process-step-title">Final Qiymətləndirmə və Bağlanma</div>
+            <div class="process-step-desc">Layihənin nəticələrinin yekun qiymətləndirilməsi, final hesabatların hazırlanması, sənədləşdirmə və biliklərin transferi.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="cta-card reveal">
+        <div>
+          <div class="cta-eyebrow"><span class="cta-eyebrow-dot"></span>Müraciət</div>
+          <h2 class="cta-title">Layihənizi <em>Bizimlə</em><br/>Uğurla Həyata Keçirin</h2>
+          <p class="cta-desc">İnkişaf layihənizin bütün mərhələlərini peşəkar şəkildə idarə etmək üçün bizimlə əlaqə saxlayın.</p>
+          <div class="cta-contact-block">
+            <div class="cta-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016 17.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0124 19z"/></svg>
+              <a href="tel:+994502085838">(+99450) 208 58 38</a>
+            </div>
+            <div class="cta-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:office@asrgroup.az">office@asrgroup.az</a>
+            </div>
+            <div class="cta-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Global Plaza, Bakı
+            </div>
+          </div>
+        </div>
+        <div class="cta-actions">
+          <a href="tel:+994502085838" class="btn-primary">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016 17.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0124 19z"/></svg>
+            Zəng Et
+          </a>
+          <a href="mailto:office@asrgroup.az" class="btn-ghost">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            E-poçt Göndər
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="xidmetler.js"></script>
+</body>
+</html>
