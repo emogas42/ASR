@@ -537,6 +537,18 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
+    295deg,
+    rgba(5, 14, 28, 0.52) 0%,
+    rgba(5, 14, 28, 0.25) 50%,
+    rgba(5, 14, 28, 0.18) 100%
+  );
+  filter: blur(.15px);
+  z-index: 1;
+}
+.dark-mode .slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
     105deg,
     rgba(5, 14, 28, 0.82) 0%,
     rgba(5, 14, 28, 0.55) 50%,
@@ -1944,3 +1956,87 @@ body.dark-mode .exp-arrow:hover {
 .btn-primary:hover::before {
   width: 100%;
 }
+.btn-premium-diag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+  color: white !important; /* Mətni qızılı edirik */
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2;
+}
+
+.btn-content i {
+  font-size: 1.1rem;
+  transition: transform 0.4s ease;
+}
+
+/* Parıltı Animasiyası (Shimmer) */
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(200, 146, 42, 0.2),
+    transparent
+  );
+  transition: none;
+  z-index: 1;
+}
+
+/* Hover Effektləri */
+.btn-premium-diag:hover {
+  color: #fff !important;
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(200, 146, 42, 0.3);
+}
+
+.btn-premium-diag:hover .btn-content i {
+  transform: rotate(15deg) scale(1.1);
+  color: #fff;
+}
+
+.btn-premium-diag:hover .shimmer {
+  left: 100%;
+  transition: all 0.8s ease;
+}
+
+/* Aktiv sıxılma effekti */
+.btn-premium-diag:active {
+  transform: translateY(-1px);
+}
+
+/* Dark Mode üçün incə düzəliş */
+.dark-mode .btn-premium-diag {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+  border: 1.5px solid var(--gold);
+}
+
+/* .dark-mode .btn-premium-diag:hover {
+  background: var(--gold);
+} */
+
