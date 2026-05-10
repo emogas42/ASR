@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə." />
+    <title>ASR Development Consulting Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/asr group png.png" />
+
+    <link rel="apple-touch-icon" href="images/asr logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!--  NAVIGATION -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="images/asr logo.png" alt="ASR Development Consulting Group" style="
+              height: 60px;
+              margin-top: 3px;
+              width: auto;
+              object-fit: contain;
+            " />
+            </a>
+
+            <ul class="nav-menu" style="margin: auto">
+                <li class="nav-item">
+                    <a href="haqqimizda.html" class="nav-link">
+                        Haqqımızda
+                        <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#haqqimizda">Şirkət Profili</a>
+                        <a href="#haqqimizda">Tariximiz (2009–2019)</a>
+                        <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#xidmetler-full" class="nav-link">
+                        Xidmətlər
+                        <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
+                    </a>
+                    <div class="mega-menu">
+                        <div class="mega-col">
+                            <div class="mega-col-title">Qida Təhlükəsizliyi</div>
+                            <a href="#xidmetler-detail">ISO 22000</a>
+                            <a href="#xidmetler-detail">HACCP</a>
+                            <a href="#xidmetler-detail">BRCGS</a>
+                            <a href="#xidmetler-detail">IFS Standartı</a>
+                            <a href="#xidmetler-detail">Texnoloji Audit</a>
+                        </div>
+                        <div class="mega-col">
+                            <div class="mega-col-title">Strateji İdarəetmə</div>
+                            <a href="#xidmetler-detail">MQ Sistemləri</a>
+                            <a href="#xidmetler-detail">Strateji Planlaşdırma</a>
+                            <a href="#xidmetler-detail">HR Audit</a>
+                        </div>
+                        <div class="mega-col">
+                            <div class="mega-col-title">İqtisadi-Hüquqi</div>
+                            <a href="#xidmetler-detail">Qanunvericilik Ekspertizası</a>
+                            <a href="#xidmetler-detail">Feasibility Analizləri</a>
+                            <a href="#xidmetler-detail">RIA Xidmətləri</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#tecrubekm" class="nav-link">
+                        Təcrübəmiz
+                        <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#tecrubekm">Uğurlu Layihələr</a>
+                        <a href="#tecrubekm">Ət Sənayesi</a>
+                        <a href="#tecrubekm">Süd Sənayesi</a>
+                        <a href="#tecrubekm">HoReCa Sektoru</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="index.html#bilik-merkezi" class="nav-link">
+                        Bilik Mərkəzi
+                        <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#bilik-merkezi">Ekspert Bloqu</a>
+                        <a href="#bilik-merkezi">Pulsuz Yükləmələr</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#qalereya" class="nav-link">
+                        Media
+                        <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
+                    </a>
+                    <div class="nav-dropdown">
+                        <a href="#qalereya">Foto Qalereya</a>
+                        <a href="#qalereya">Video İcmallar</a>
+                        <a href="#bilik-merkezi">Xəbərlər</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#footer" class="nav-link">Əlaqə</a>
+                </li>
+            </ul>
+            <a href="#elaqe" class="btn-premium-diag ">
+                <span class="btn-content">
+                    <i class="fa-solid fa-microscope"></i>
+                    <span>Pulsuz Diaqnostika</span>
+                </span>
+                <div class="shimmer"></div>
+            </a>
+            <button id="theme-switch">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-solid fa-sun"></i>
+            </button>
+
+            <button class="nav-toggle" id="mobileToggle" aria-label="Menyu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#haqqimizda" class="mobile-nav-link">Haqqımızda</a>
+        <div class="mobile-sub">
+            <a href="#haqqimizda">Şirkət Profili</a>
+            <a href="#haqqimizda">Sertifikatlar &amp; Təltiflər</a>
+        </div>
+        <a href="#xidmetler" class="mobile-nav-link">Xidmətlər</a>
+        <div class="mobile-sub">
+            <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+            <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+            <a href="#xidmetler-detail">İqtisadi-Hüquqi</a>
+        </div>
+        <a href="#tecrubekm" class="mobile-nav-link">Təcrübəmiz</a>
+        <a href="#qalereya" class="mobile-nav-link">Daxili Mətbəx</a>
+        <a href="#bilik-merkezi" class="mobile-nav-link">Bilik Mərkəzi</a>
+        <a href="#footer" class="mobile-nav-link">Əlaqə</a>
+        <div class="lang-toggle" style="width: 80px; margin-top: 10px">
+            <a href="index.html" class="lang-btn lang-az active" id="langAZ">AZ</a>
+            <span class="lang-divider"></span>
+            <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
+
+        </div>
+        <a href="#elaqe" class="btn-premium-diag">
+            <span class="btn-content">
+                <i class="fa-solid fa-microscope"></i>
+                <span>Pulsuz Diaqnostika</span>
+            </span>
+            <div class="shimmer"></div>
+        </a>
+    </div>
+
+
+    <section id="lead-magnet">
+        <div class="lead-bg-shape"></div>
+        <div class="lead-inner">
+            <div class="lead-left fade-in" style="position: relative">
+                <div class="lead-badge-pill">
+                    <span>✦ Pulsuz Resurs</span>
+                </div>
+
+                <h2 class="section-title">
+                    Müəssisəniz Beynəlxalq Auditə Hazırdırmı?
+                </h2>
+
+                <div
+                    style="position: relative; margin-bottom: 1.5rem; border-radius: 12px; overflow: hidden; clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%); ">
+                    <img src="images/microsoft-365-oUbzU87d1Gc-unsplash.jpg" alt="" style="
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+                opacity: 0.55;
+              " />
+
+                    <div style="
+                position: absolute;
+                inset: 0;
+             
+                z-index: 4;
+              "></div>
+
+
+                </div>
+
+                <p class="lead-desc">
+                    AQTA və ISO standartlarına uyğunluq üçün hazırladığımız 10 addımlıq
+                    ekspert Checklist-ini pulsuz yükləyin.
+                </p>
+
+                <div class="lead-checks">
+                    <div class="lead-check">
+                        <div class="lead-check-icon">✓</div>
+                        AQTA tələblərinə uyğunluq yoxlaması
+                    </div>
+                    <div class="lead-check">
+                        <div class="lead-check-icon">✓</div>
+                        ISO 22000 audit hazırlıq siyahısı
+                    </div>
+                    <div class="lead-check">
+                        <div class="lead-check-icon">✓</div>
+                        HACCP kritik nöqtələrinin qiymətləndirilməsi
+                    </div>
+                    <div class="lead-check">
+                        <div class="lead-check-icon">✓</div>
+                        Sənədləşdirmə tələbləri üzrə bələdçi
+                    </div>
+                </div>
+            </div>
+
+            <div class="lead-right fade-in fade-in-delay-2">
+                <div class="lead-form-card">
+                    <h3>10 Addımlıq Ekspert Checklist</h3>
+                    <p>
+                        Məlumatlarınızı daxil edin, checklist dərhal e-mailinizə
+                        göndərilsin.
+                    </p>
+                    <div class="form-group">
+                        <label>Ad Soyad</label>
+                        <input type="text" placeholder="Adınızı daxil edin" />
+                    </div>
+                    <div class="form-group">
+                        <label>Korporativ E-mail</label>
+                        <input type="email" placeholder="Emailinizi daxil edin" />
+                    </div>
+                    <div class="form-group">
+                        <label>Fəaliyyət Sahəsi</label>
+                        <select>
+                            <option value="" class="select-options">Seçin...</option>
+                            <option class="select-options">Ət Emalı</option>
+                            <option calss="select-options">
+                                Süd Məhsulları
+                            </option>
+                            <option class="select-options">HoReCa</option>
+                            <option class="select-options">Çörəkçilik</option>
+                            <option class="select-options">İçki İstehsalı</option>
+                            <option class="select-options">Digər</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-gold" onclick="this.textContent = '✓  Göndərildi!'">
+                        Checklist-i Yüklə →
+                    </button>
+                    <p class="lead-note">
+                        <i class="fa-solid fa-lock"></i> Məlumatlarınız tamamilə gizli
+                        saxlanılır. Spam yoxdur.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================
+     FOOTER
+========================================= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo" style="margin-bottom: 1.25rem">
+                        <img src="images/asr logo.png" alt="ASR Development Consulting Group"
+                            style="height: 48px; width: auto; object-fit: contain" />
+                    </div>
+                </div>
+                <p class="footer-tagline-txt">
+                    Strateji Həllər, Dayanıqlı İnkişaf. Qida təhlükəsizliyi, idarəetmə
+                    və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.
+                </p>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"
+                        style="color: rgb(255, 255, 255); position: relative; top: 10px"></i>
+                    <span class="footer-contact-text">Bakı, Nizami küçəsi 65,<br />AZ1010, Azərbaycan</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255)"></i>
+                    <span class="footer-contact-text">+994 12 404 00 00</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope" style="color: rgb(255, 255, 255)"></i>
+
+                    <span class="footer-contact-text"
+                        style="position: relative; bottom: 3px">info@asr-consulting.az</span>
+                </div>
+                <div class="social-icons-container">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:info@asr-consulting.az" class="social-link" aria-label="Email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div>
+                <div class="footer-col-title">Xidmətlər</div>
+                <div class="footer-col-links">
+                    <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+                    <a href="#xidmetler-detail">ISO 22000 Audit</a>
+                    <a href="#xidmetler-detail">HACCP Tətbiqi</a>
+                    <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+                    <a href="#xidmetler-detail">HR Audit</a>
+                    <a href="#xidmetler-detail">Hüquqi Ekspertiza</a>
+                </div>
+                <a href="https://wa.me/994504040000"><i class="fa-brands fa-whatsapp whatsapp-icon"
+                        style="color: rgb(0, 255, 37); cursor: pointer"></i></a>
+            </div>
+
+            <div>
+                <div class="footer-col-title">Şirkət</div>
+                <div class="footer-col-links">
+                    <a href="#haqqimizda">Haqqımızda</a>
+                    <a href="#haqqimizda">Tariximiz</a>
+                    <a href="#haqqimizda">Sertifikatlar</a>
+                    <a href="#tecrubekm">Layihələr</a>
+                    <a href="#qalereya">Qalereya</a>
+                    <a href="#bilik-merkezi">Bloq</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer-col-title">Ekspert Hovuzu</div>
+                <div class="footer-expert-form">
+                    <h4>Komandamıza Qoşulun</h4>
+                    <p>
+                        Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı
+                        göndərin.
+                    </p>
+                    <input type="text" placeholder="Ad Soyad" />
+                    <input type="email" placeholder="E-mail ünvanınız" style="margin-top: 0" />
+                    <input type="text" placeholder="İxtisas sahəniz" style="margin-top: 8px" />
+                    <button onclick="this.textContent = '✓ Göndərildi!'">
+                        Müraciət Et →
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="trust-badges">
+            <span class="trust-badge">ISO Akkreditasiyalı</span>
+            <span class="trust-badge">HACCP Sertifikatlı</span>
+            <span class="trust-badge">AQTA Tərəfdaşı</span>
+            <span class="trust-badge">BRCGS İcazəli</span>
+        </div>
+
+        <div class="footer-bottom" style="margin: auto">
+            <span class="footer-copy" style="margin: auto">© <span id="footer-year"></span> ASR Development Consulting
+                Group.
+                Bütün hüquqlar qorunur.
+            </span>
+        </div>
+        <p style="
+          text-align: center;
+          font-size: 12px;
+          font-weight: 600;
+          color: #aaacac;
+          position: relative;
+          bottom: 20px;
+        ">
+            Designed By Elmaddin
+        </p>
+    </footer>
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="app.js"></script>
+    <script type="text/javascript" src="darkmode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
