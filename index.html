@@ -98,14 +98,14 @@
           </div>
         </li>
         <li class="nav-item">
-          <a href="qalereya.html" class="nav-link">
+          <a href="media.html" class="nav-link">
             Media
             <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="nav-dropdown">
-            <a href="qalereya.html#foto-qalereya">Foto Qalereya</a>
-            <a href="qalereya.html#video-icmallar">Video İcmallar</a>
-            <a href="qalereya.html#xebərlər">Xəbərlər</a>
+            <a href="media.html">Foto Qalereya</a>
+            <a href="media.html">Video İcmallar</a>
+            <a href="media.html">Xəbərlər</a>
           </div>
         </li>
 
@@ -218,9 +218,9 @@
       </button>
     </div>
     <div class="mobile-sub">
-      <a href="media.html#foto-qalereya"><i class="fa-regular fa-images"></i>Foto Qalereya</a>
-      <a href="media.html#video-icmallar"><i class="fa-solid fa-film"></i>Video İcmallar</a>
-      <a href="media.html#xeberler"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
+      <a href="media.html"><i class="fa-regular fa-images"></i>Foto Qalereya</a>
+      <a href="media.html"><i class="fa-solid fa-film"></i>Video İcmallar</a>
+      <a href="media.html"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
     </div>
   </div>
 
@@ -1718,66 +1718,12 @@
         </p>
       </div>
       <div class="resources-grid">
-        <div class="fade-in">
-          <div class="resources-col-title">Pulsuz Yükləmələr</div>
-          <div class="resource-item">
-            <div class="resource-item-icon">
-              <i class="fa-solid fa-file-pdf" style="font-size: 24px; color: var(--navy-light)"></i>
-            </div>
-            <div>
-              <div class="resource-item-name">
-                Yeni Qida Təhlükəsizliyi Qanunu Bələdçisi
-              </div>
-              <div class="resource-item-desc">
-                2023-cü il dəyişiklikləri, müəssisənizə təsiri və uyğunlaşma
-                addımları. 28 səhifəlik ətraflı bələdçi.
-              </div>
-            </div>
-            <div class="resource-dl">
-              <i class="fa-solid fa-download"></i>
-              PDF
-            </div>
-          </div>
-          <div class="resource-item">
-            <div class="resource-item-icon">
-              <i class="fa-solid fa-file-excel" style="font-size: 24px; color: var(--gold-bright)"></i>
-            </div>
-            <div>
-              <div class="resource-item-name">Daxili Audit Şablonu</div>
-              <div class="resource-item-desc">
-                Müəssisəniz üçün hazır daxili audit forması. ISO 22000
-                tələblərinə tam uyğun struktur.
-              </div>
-            </div>
-            <div class="resource-dl">
-              <i class="fa-solid fa-download"></i>
-              XLSX
-            </div>
-          </div>
-          <div class="resource-item">
-            <div class="resource-item-icon">
-              <i class="fa-solid fa-file-lines" style="font-size: 24px; color: var(--orange)"></i>
-            </div>
-            <div>
-              <div class="resource-item-name">
-                Audit Hazırlıq Checklist — 10 Addım
-              </div>
-              <div class="resource-item-desc">
-                Beynəlxalq auditə hazırlıq üçün addım-addım yoxlama siyahısı.
-                AQTA &amp; ISO standartları əsasında.
-              </div>
-            </div>
-            <div class="resource-dl">
-              <i class="fa-solid fa-download"></i>
-              PDF
-            </div>
-          </div>
-        </div>
 
         <div class="fade-in fade-in-delay-2">
           <div class="resources-col-title">Ekspert Bloqu</div>
           <div class="blog-item">
-            <div class="blog-date">12 Yanvar 2025</div>
+            <a href="bloq1.html">
+              <div class="blog-date">12 Yanvar 2025</div>
             <div class="blog-title">
               Azərbaycanda Qida Sənayesinin 2025 Trendi: Nə Gözləyir?
             </div>
@@ -1787,7 +1733,9 @@
             </div>
             <span class="blog-read-more">Davam et →</span>
           </div>
-          <div class="blog-item">
+            </a>
+            <a href="bloq2.html">
+              <div class="blog-item">
             <div class="blog-date">28 Noyabr 2024</div>
             <div class="blog-title">
               ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası
@@ -1797,8 +1745,12 @@
               hazırlığını qiymətləndirin.
             </div>
             <span class="blog-read-more">Davam et →</span>
+
           </div>
-          <div class="blog-item">
+            </a>
+
+            <a href="bloq3.html">
+              <div class="blog-item">
             <div class="blog-date">5 Oktyabr 2024</div>
             <div class="blog-title">
               HoReCa Sektorunda Qida Təhlükəsizliyi: 5 Kritik Nöqtə
@@ -1809,20 +1761,13 @@
             </div>
             <span class="blog-read-more">Davam et →</span>
           </div>
+            </a>
+          
         </div>
       </div>
     </div>
   </section>
-  <div id="blogModal" class="modal-overlay">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeModal()">&times;</button>
-      <div class="modal-body">
-        <div id="modalDate" class="blog-date"></div>
-        <h2 id="modalTitle" class="blog-title" style="font-size: 1.5rem; margin-bottom: 1rem"></h2>
-        <div id="modalContent" class="blog-excerpt" style="font-size: 1rem; color: var(--text)"></div>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- =========================================
      FOOTER
