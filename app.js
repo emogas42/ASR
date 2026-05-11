@@ -33,16 +33,59 @@ window.addEventListener("scroll", updateSpy);
 window.addEventListener("load", updateSpy);
  
 // Mobile toggle
-document.getElementById("mobileToggle").addEventListener("click", function () {
-  this.classList.toggle("open");
-  document.getElementById("mobileNav").classList.toggle("open");
-});
-document.querySelectorAll(".mobile-nav a, .mobile-nav .btn").forEach(function (el) {
-  el.addEventListener("click", function () {
-    document.getElementById("mobileToggle").classList.remove("open");
-    document.getElementById("mobileNav").classList.remove("open");
+(function () {
+  var toggle  = document.getElementById('mobileToggle');
+  var mobileNav = document.getElementById('mobileNav');
+
+  // ── Open / close the drawer ──
+  toggle.addEventListener('click', function () {
+    var isOpen = mobileNav.classList.contains('open');
+    toggle.classList.toggle('open', !isOpen);
+    mobileNav.classList.toggle('open', !isOpen);
+    toggle.setAttribute('aria-expanded', String(!isOpen));
   });
-});
+
+  function closeDrawer() {
+    toggle.classList.remove('open');
+    mobileNav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    // close all subs too
+    document.querySelectorAll('.mobile-sub.open').forEach(function (s) {
+      s.classList.remove('open');
+    });
+    document.querySelectorAll('.mobile-chevron-btn[aria-expanded="true"]').forEach(function (b) {
+      b.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  // ── Chevron buttons — accordion sub-menu ──
+  document.querySelectorAll('.mobile-chevron-btn.has-dropdown').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var row = this.closest('.mobile-nav-row');
+      var sub = row.parentElement.querySelector('.mobile-sub');
+      var isOpen = sub.classList.contains('open');
+
+      // Close all other open subs
+      document.querySelectorAll('.mobile-sub.open').forEach(function (s) {
+        if (s !== sub) s.classList.remove('open');
+      });
+      document.querySelectorAll('.mobile-chevron-btn[aria-expanded="true"]').forEach(function (b) {
+        if (b !== btn) b.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle this one
+      sub.classList.toggle('open', !isOpen);
+      this.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  // ── Close drawer when any link inside mobile-nav is clicked ──
+  document.querySelectorAll('.mobile-nav a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      closeDrawer();
+    });
+  });
+})();
  
 // Fade-in observer
 var observer = new IntersectionObserver(function (entries) {
