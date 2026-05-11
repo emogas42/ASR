@@ -194,6 +194,10 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1);
+  animation: fade-in-up 0.65s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+@keyframes fade-in-up {
+  to { opacity: 1; transform: translateY(0); }
 }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 .fade-in-delay-1 { transition-delay: 0.1s; }
@@ -1239,7 +1243,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 /* ============================================================
    COUNTERS
    ============================================================ */
-#counters { background: #f0ebe0; padding: 5rem 2rem; position: relative; overflow: hidden; }
+#counters { background: #f0ebe0; padding: 2rem 2rem; position: relative; overflow: hidden; }
 .dark-mode #counters { background: var(--navy-dark); }
 #counters::before {
   content: "";
@@ -1247,6 +1251,9 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   inset: 0;
   background-image: radial-gradient(rgba(11,31,58,0.05) 1px, transparent 1px);
   background-size: 36px 36px;
+}
+@media (min-width: 768px) {
+  #counters::before { height: 15rem; }
 }
 .dark-mode #counters::before { background-image: radial-gradient(rgba(255,255,255,0.025) 1px, transparent 1px); }
 .counters-grid {
@@ -1759,7 +1766,7 @@ body.modal-open { overflow: hidden; }
   .arrow-btn      { display: none; }
   .whatsapp-icon  { position: fixed; bottom: 5%; right: 10%; }
   .back-to-top    { bottom: 10%; right: 6%; }
-  #theme-switch   { right: 18%; top: 16px; }
+  #theme-switch   {right: 18%; top: 16px; }
   .slide-title    { font-size: 32px; }
   .carousel-root{
     height: 80vh;
@@ -1809,7 +1816,7 @@ body.modal-open { overflow: hidden; }
 .exp-card {
   flex: 0 0 calc(33.333% - 1rem);
   min-width: calc(33.333% - 1rem);
-  background: #ffffff;
+  background:var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1888,7 +1895,7 @@ body.modal-open { overflow: hidden; }
 .exp-card-name {
   font-size: 1.125rem;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--heading);
   margin-bottom: 0.6rem;
   line-height: 1.2;
 }
@@ -1912,16 +1919,18 @@ body.modal-open { overflow: hidden; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: rgba(1, 1, 0, 1);
-  background: rgba(200,146,42,0.08);
+  background: var(--haqqimizda-title);
   border: 1px solid rgba(200,146,42,0.3);
   border-radius: 50px;  
   padding: 4px 10px;
   transition: background 0.2s, border-color 0.2s;
 }
 .exp-card:hover .exp-cert-badge {
-  background: rgba(200,146,42,0.08);
+  background: var(--haqqimizda-title);
   border-color: var(--border);
 }
+
+
 
 /* Dots */
 .exp-dots {
@@ -1981,6 +1990,11 @@ body:not(.dark-mode) .exp-cert-badge {
   background: var(--off-white);
   color: var(--navy);
 }
+body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
+  background: var(--bg-secondary);
+  color: var(--navy);
+}
+
 
 /* Yenilənmiş Slayd Oxları Dizaynı */
 .exp-arrow {
@@ -2581,6 +2595,7 @@ body.dark-mode .social-link {
 #niyebiz {
   padding-bottom: 80px;
   transition: background var(--trans);
+  padding: 2rem 1rem;
 }
  
 /* ── Head ─────────────────────────────────────────── */
@@ -2647,6 +2662,10 @@ body.dark-mode .social-link {
     box-shadow var(--trans),
     border-color var(--trans),
     background var(--trans);
+}
+article.card{
+  background: var(--bg-card);
+  margin: 1rem 0;
 }
 
  
@@ -3441,3 +3460,8 @@ body.dark-mode .social-link {
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .mobile-nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+
+#sektor{
+  padding: 5rem 1rem;
+}
