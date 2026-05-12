@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="az">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,10 +7,9 @@
   <meta name="description"
     content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə." />
   <title>ASR Development Consulting Group</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <link rel="icon" type="image/png" href="images/asr group png.png" />
 
   <link rel="apple-touch-icon" href="images/asr logo.png" />
@@ -18,14 +17,11 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="bloq3.css">
-  <base target="_blank">
-
 </head>
-<body>
 
+<body class="">
 
-      <!--  NAVIGATION -->
+  <!--  NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
       <!-- Logo -->
@@ -77,7 +73,7 @@
             </div>
           </div>
         </li>
-                <li class="nav-item">
+        <li class="nav-item">
           <a href="sectors.html" class="nav-link">Sektorlar</a>
         </li>
 
@@ -101,7 +97,7 @@
           </a>
           <div class="nav-dropdown">
             <a href="index.html#bilik-merkezi">Ekspert Bloqu</a>
-            <a href="index.html#bilik-merkezi">Pulsuz Yükləmələr</a>
+            <a href="#bilik-merkezi">Pulsuz Yükləmələr</a>
           </div>
         </li>
         <li class="nav-item">
@@ -245,176 +241,285 @@
 
 </div>
 
+  <section id="sektor">
+     <section class="asr-sectors">
 
-<section class="hero">
-    <div class="hero-badge"><i class="fas fa-utensils"></i> HoReCa Bloqu</div>
-    <h1>HoReCa Sektorunda Qida Təhlükəsizliyi: <span>5 Kritik Nöqtə</span></h1>
-    <p>Restoran və otel sektorunda ən çox görülən pozuntular, onlardan qorunma üsulları.</p>
-    <div class="hero-meta">
-        <span><i class="far fa-calendar"></i> 5 Oktyabr 2024</span>
-        <span><i class="far fa-clock"></i> 7 dəqiqə oxuma</span>
-        <span><i class="fas fa-user"></i> ASR Group</span>
-    </div>
-</section>
-
-<!-- CONTENT -->
-<div class="content">
-
-    <!-- TRENDS -->
-    <div class="trends">
-        <div class="trend-card" onclick="openModal(0)">
-            <img class="trend-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&h=300&fit=crop" alt="Restoran Mətbəxi">
-            <div class="trend-body">
-                <div class="trend-icon-sm"><i class="fas fa-fire"></i></div>
-                <h3>Temperatur Nəzarəti</h3>
-                <p>Soyuducu və isti saxlama temperaturunun düzgün nəzarəti, soyuq zəncirin qorunması.</p>
-                <span class="trend-read">Ətraflı <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-        <div class="trend-card" onclick="openModal(1)">
-            <img class="trend-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&h=300&fit=crop" alt="Otel Bufet">
-            <div class="trend-body">
-                <div class="trend-icon-sm"><i class="fas fa-hands-wash"></i></div>
-                <h3>Şəxsi Gigiyena</h3>
-                <p>Əl yuma, iş geyimi, xəstə işçilərlə işə buraxmama qaydaları.</p>
-                <span class="trend-read">Ətraflı <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-        <div class="trend-card" onclick="openModal(2)">
-            <img class="trend-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&h=300&fit=crop" alt="Restoran İçəri">
-            <div class="trend-body">
-                <div class="trend-icon-sm"><i class="fas fa-broom"></i></div>
-                <h3>Təmizlik və Dezinfeksiya</h3>
-                <p>Mətbəx, zal və anbarların sanitariya standartlarına uyğun təmizliyi.</p>
-                <span class="trend-read">Ətraflı <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
-        <div class="trend-card" onclick="openModal(3)">
-            <img class="trend-img" src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=500&h=300&fit=crop" alt="Xammal Saxlama">
-            <div class="trend-body">
-                <div class="trend-icon-sm"><i class="fas fa-boxes"></i></div>
-                <h3>Xammal İdarəetməsi</h3>
-                <p>Son istifadə tarixi, FIFO sistemi və çeşidlərin ayrı saxlanması.</p>
-                <span class="trend-read">Ətraflı <i class="fas fa-arrow-right"></i></span>
-            </div>
-        </div>
+    <div class="asr-sectors__hero">
+      <h2 class="" style="color: var(--gold);font-weight: 700; font-size: 50px;">Fəaliyyət Sektorları</h2>
+      <p>8 əsas sektor üzrə peşəkar məsləhət, tədqiqat və strateji idarəetmə xidmətləri göstəririk. Kartın üzərinə
+        gəlin, ətraflı məlumat əldə edin.</p>
+      <div class="asr-sectors__hero-line"></div>
     </div>
 
-    <!-- TIMELINE -->
-    <div class="timeline-section">
-        <h2 class="section-title">Təhlükəsizlik Yoxlama Planı</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Səhər</span>
-                    <h4>Gündəlik Yoxlama</h4>
-                    <p>Temperatur qeydləri, təmizlik yoxlanışı və personal gigiyenası.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Həftəlik</span>
-                    <h4>Dərin Təmizlik</h4>
-                    <p>Mətbəx avadanlıqlarının, soyuducuların və anbarın hərtərəfli təmizliyi.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Aylıq</span>
-                    <h4>Pest Kontrol</h4>
-                    <p>Həşərat və gəmiricilərə qarşı profilaktik tədbirlər və yoxlama.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <span class="timeline-date">Rüblük</span>
-                    <h4>Daxili Audit</h4>
-                    <p>Qida təhlükəsizliyi sisteminin ümumi qiymətləndirilməsi və düzəlişlər.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="asr-sectors__grid">
 
-    <!-- STATS -->
-    <div class="stats">
-        <div class="stat-box">
-            <i class="fas fa-award"></i>
-            <div class="num">15<span>+</span></div>
-            <div class="label">İllik Təcrübə</div>
-        </div>
-        <div class="stat-box">
-            <i class="fas fa-utensils"></i>
-            <div class="num">50<span>+</span></div>
-            <div class="label">HoReCa Müəssisəsi</div>
-        </div>
-        <div class="stat-box">
-            <i class="fas fa-users"></i>
-            <div class="num">50<span>+</span></div>
-            <div class="label">Mütəxəssis</div>
-        </div>
-        <div class="stat-box">
-            <i class="fas fa-check-circle"></i>
-            <div class="num">98<span>%</span></div>
-            <div class="label">Məmnuniyyət</div>
-        </div>
-    </div>
-
-    <!-- RELATED -->
-    <h2 class="section-title">Əlaqəli Məqalələr</h2>
-    <div class="related-grid">
-        <div class="related-card" onclick="window.location.href='#'">
-            <div class="related-img"><i class="fas fa-shield-alt"></i></div>
-            <div class="related-body">
-                <div class="related-date"><i class="far fa-calendar"></i> 12 Yanvar 2025</div>
-                <h4>Qida Sənayesinin 2025 Trendi</h4>
-                <p>AQTA regulyasiyaları və ixracat tələbləri.</p>
-                <span class="related-link">Ətraflı Oxu <i class="fas fa-arrow-right"></i></span>
+      <!-- Kənd Təsərrüfatı -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=700&q=80&auto=format&fit=crop"
+              alt="Kənd Təsərrüfatı" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Kənd Təsərrüfatı</h3>
+              <p class="asr-card__excerpt">Aqrobiznes, fermer təsərrüfatları, bitkiçilik, heyvandarlıq və kənd
+                təsərrüfatı məhsullarının emalı sahəsində strateji məsləhət.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">15+</span>
+                <span class="asr-card__stat-label">Tamamlanmış layihə</span>
+              </div>
             </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Aqrobiznes</span>
+            <h3 class="asr-card__back-title">Davamlı Kənd Təsərrüfatı Həlləri</h3>
+            <p class="asr-card__back-desc">Biznes modelinin optimallaşdırılmasından beynəlxalq bazarlara çıxışa qədər
+              tam dəstək verilir.</p>
+            <ul class="asr-card__back-list">
+              <li>Fermer təsərrüfatlarının idarəetmə sistemlərinin qurulması</li>
+              <li>Aqrar siyasət sənədlərinin hazırlanması</li>
+              <li>Kənd təsərrüfatı müəssisələri üçün maliyyə modelləri</li>
+              <li>Beynəlxalq sertifikatlaşdırma proseslərində dəstək</li>
+            </ul>
+          </div>
         </div>
-        <div class="related-card" onclick="window.location.href='#'">
-            <div class="related-img"><i class="fas fa-certificate"></i></div>
-            <div class="related-body">
-                <div class="related-date"><i class="far fa-calendar"></i> 28 Noyabr 2024</div>
-                <h4>ISO 22000:2018 vs 2005</h4>
-                <p>Əsas fərqlər və keçid strategiyası.</p>
-                <span class="related-link">Ətraflı Oxu <i class="fas fa-arrow-right"></i></span>
+      </div>
+
+      <!-- Ərzaq Sənayesi -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format&fit=crop"
+              alt="Ərzaq Sənayesi" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Ərzaq Sənayesi</h3>
+              <p class="asr-card__excerpt">Qida istehsalı, emal müəssisələri, HORECA sektoru və qida təhlükəsizliyi
+                standartlarına uyğunluq sahəsində konsaltinq.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">20+</span>
+                <span class="asr-card__stat-label">Fəaliyyətdəki müəssisə</span>
+              </div>
             </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Qida · HORECA</span>
+            <h3 class="asr-card__back-title">Qida Sektorunda Mükəmməllik</h3>
+            <p class="asr-card__back-desc">İstehsaldan istehlakçıya çatdırılmaya qədər keyfiyyət idarəetmə sistemlərinin
+              qurulması.</p>
+            <ul class="asr-card__back-list">
+              <li>HACCP, ISO 22000 tətbiqi üzrə məsləhət</li>
+              <li>HORECA müəssisələri üçün operasional optimallaşdırma</li>
+              <li>Qida emalı zavodları üçün texnoloji audit</li>
+              <li>İxrac bazarlarına çıxış strategiyaları</li>
+              <li>Etiketləmə və qablaşdırma standartlarına uyğunlaşma</li>
+            </ul>
+          </div>
         </div>
-        <div class="related-card" onclick="window.location.href='#'">
-            <div class="related-img"><i class="fas fa-file-contract"></i></div>
-            <div class="related-body">
-                <div class="related-date"><i class="far fa-calendar"></i> 18 Noyabr 2024</div>
-                <h4>AQTA Yeni Reqlamentləri</h4>
-                <p>2025-ci ildə qüvvəyə minəcək dəyişikliklər.</p>
-                <span class="related-link">Ətraflı Oxu <i class="fas fa-arrow-right"></i></span>
+      </div>
+
+      <!-- Səhiyyə -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=700&q=80&auto=format&fit=crop"
+              alt="Səhiyyə" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Səhiyyə</h3>
+              <p class="asr-card__excerpt">Tibb xidmətləri, əczaçılıq, sağlamlıq sistemlərinin inkişafı və səhiyyə
+                müəssisələrinin idarəetmə qabiliyyətinin artırılması.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">12+</span>
+                <span class="asr-card__stat-label">Tamamlanmış layihə</span>
+              </div>
             </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Tibb · Əczaçılıq</span>
+            <h3 class="asr-card__back-title">Sağlam Gələcəyə Strateji Dəstək</h3>
+            <p class="asr-card__back-desc">Səhiyyə sisteminin modernləşdirilməsi, xəstəxana islahatları və əczaçılıq
+              bazarının tənzimlənməsində geniş təcrübə.</p>
+            <ul class="asr-card__back-list">
+              <li>Xəstəxana idarəetmə sistemlərinin optimallaşdırılması</li>
+              <li>Səhiyyə siyasəti sənədlərinin hazırlanması</li>
+              <li>Tibb personalının inkişafı proqramları</li>
+              <li>Əczaçılıq müəssisələri üçün lisenziyalaşdırma dəstəyi</li>
+            </ul>
+          </div>
         </div>
-    </div>
+      </div>
 
-</div>
-
-<!-- MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-    <div class="modal" onclick="event.stopPropagation()">
-        <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-        <img class="modal-img" id="modalImg" src="" alt="">
-        <div class="modal-body">
-            <h2 id="modalTitle"></h2>
-            <div class="modal-tags" id="modalTags"></div>
-            <p id="modalDesc"></p>
-            <ul id="modalList"></ul>
-            <a href="mailto:office@asrgroup.az" class="modal-btn"><i class="fas fa-envelope"></i> Konsultasiya Al</a>
+      <!-- Turizm -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=700&q=80&auto=format&fit=crop"
+              alt="Turizm" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Turizm</h3>
+              <p class="asr-card__excerpt">Turizm infrastrukturunun inkişafı, otellər, restoranlar və turistik
+                destinasiyaların idarəetmə səmərəliliyinin artırılması.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">10+</span>
+                <span class="asr-card__stat-label">Turizm layihəsi</span>
+              </div>
+            </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Turizm · Qonaqpərvərlik</span>
+            <h3 class="asr-card__back-title">Turizm Sektorunun İnkişafı</h3>
+            <p class="asr-card__back-desc">Azərbaycanın turizm potensialını artırmaq üçün strateji planlaşdırma və
+              destinasiya marketinqi xidmətləri.</p>
+            <ul class="asr-card__back-list">
+              <li>Turizm inkişafı strategiyalarının hazırlanması</li>
+              <li>Otel və istirahət kompleksləri üçün idarəetmə audit</li>
+              <li>Ekoturizm və mədəni turizm layihələri</li>
+              <li>Turizm klasterlərinin formalaşdırılması</li>
+              <li>Beynəlxalq investisiyaların cəlb edilməsi</li>
+            </ul>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+
+      <!-- Ekologiya -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80&auto=format&fit=crop"
+              alt="Ekologiya" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Ekologiya</h3>
+              <p class="asr-card__excerpt">Ətraf mühitin qorunması, yaşıl texnologiyalar, davamlı inkişaf və ekoloji
+                siyasətin formalaşdırılması sahəsində kompleks xidmətlər.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">8+</span>
+                <span class="asr-card__stat-label">Ekoloji layihə</span>
+              </div>
+            </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Ekologiya · Yaşıl Texnologiyalar</span>
+            <h3 class="asr-card__back-title">Davamlı Ekoloji Həllər</h3>
+            <p class="asr-card__back-desc">Yaşıl iqtisadiyyata keçid prosesinin idarə edilməsi və ekoloji cəhətdən
+              davamlı biznes modellərin qurulması.</p>
+            <ul class="asr-card__back-list">
+              <li>Ətraf mühitə təsirin qiymətləndirilməsi (EIA)</li>
+              <li>Yaşıl sertifikatlaşdırma proseslərinin idarəsi</li>
+              <li>Karbon izi azaldılması strategiyaları</li>
+              <li>Ekoloji monitorinq sistemlərinin qurulması</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dövlət Sektoru -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?w=700&q=80&auto=format&fit=crop"
+              alt="Dövlət Sektoru" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Dövlət Sektoru</h3>
+              <p class="asr-card__excerpt">Dövlət idarələri, SOE və ictimai xidmət müəssisələri üçün institusional
+                güclənmə və idarəetmə islahatları.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">30+</span>
+                <span class="asr-card__stat-label">Dövlət qurumu ilə əməkdaşlıq</span>
+              </div>
+            </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">İctimai İdarəetmə</span>
+            <h3 class="asr-card__back-title">Dövlət İdarəetməsinin Modernləşdirilməsi</h3>
+            <p class="asr-card__back-desc">Qanunvericilik bazasının beynəlxalq standartlara uyğunlaşdırılması və fakt
+              əsaslı siyasətin formalaşdırılması üzrə ekspert dəstəyi.</p>
+            <ul class="asr-card__back-list">
+              <li>Strateji idarəetmə islahatları üzrə məsləhət</li>
+              <li>Qanunvericilik layihələrinin hazırlanması</li>
+              <li>Monitorinq və qiymətləndirmə sistemlərinin qurulması</li>
+              <li>Dövlət xidmət standartlarının inkişafı</li>
+              <li>Beynəlxalq donor layihələrinin icrasında dəstək</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texnologiya -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80&auto=format&fit=crop"
+              alt="Texnologiya" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Texnologiya</h3>
+              <p class="asr-card__excerpt">IT həlləri, rəqəmsal transformasiya, texnoloji innovasiya və müəssisələrin
+                rəqəmsallaşma yol xəritələrinin hazırlanması.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">18+</span>
+                <span class="asr-card__stat-label">Rəqəmsal layihə</span>
+              </div>
+            </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Rəqəmsal Transformasiya</span>
+            <h3 class="asr-card__back-title">Rəqəmsal Gələcəyə Keçid</h3>
+            <p class="asr-card__back-desc">Strateji planlaşdırmadan texnoloji həllərin tətbiqinə qədər tam məsləhət;
+              e-hökumət proseslərinin inkişafına töhfə.</p>
+            <ul class="asr-card__back-list">
+              <li>Rəqəmsal transformasiya strategiyalarının hazırlanması</li>
+              <li>IT idarəetmə çərçivəsinin qurulması</li>
+              <li>Məlumat analitikası və rəqəmsal qərarvermə</li>
+              <li>Kibertəhlükəsizlik siyasətinin formalaşdırılması</li>
+              <li>E-xidmət platformalarının planlaşdırılması</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logistika -->
+      <div class="asr-card">
+        <div class="asr-card__inner">
+          <div class="asr-card__front">
+            <img class="asr-card__img"
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80&auto=format&fit=crop"
+              alt="Logistika" loading="lazy" />
+            <div class="asr-card__body">
+              <h3 class="asr-card__title">Logistika</h3>
+              <p class="asr-card__excerpt">Nəqliyyat, anbar idarəetməsi, təchizat zənciri optimallaşdırılması və
+                lojistik infrastrukturun inkişafı üzrə strateji məsləhət.</p>
+              <div class="asr-card__stat">
+                <span class="asr-card__stat-num">14+</span>
+                <span class="asr-card__stat-label">Logistika layihəsi</span>
+              </div>
+            </div>
+          </div>
+          <div class="asr-card__back">
+            <span class="asr-card__back-tag">Nəqliyyat · Təchizat Zənciri</span>
+            <h3 class="asr-card__back-title">Effektiv Logistika Sistemləri</h3>
+            <p class="asr-card__back-desc">Azərbaycanın tranzit mövqeyindən istifadə etmək üçün multimodal nəqliyyat
+              həlləri və anbar idarəetmə sistemlərinin qurulması.</p>
+            <ul class="asr-card__back-list">
+              <li>Təchizat zənciri optimallaşdırılması üzrə məsləhət</li>
+              <li>Logistika mərkəzlərinin layihələndirilməsi</li>
+              <li>Nəqliyyat siyasəti sənədlərinin hazırlanması</li>
+              <li>Gömrük prosedurlarının sadələşdirilməsi</li>
+              <li>Beynəlxalq logistika şəbəkəsinə inteqrasiya</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.asr-sectors__grid -->
+  </section>
+  </section>
 
 
-
-  <!-- =========================================
+ <!-- =========================================
      FOOTER
 ========================================= -->
   <footer id="footer">
@@ -530,99 +635,14 @@
       Designed By Elmaddin
     </p>
   </footer>
-    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
-
-  <script>
-const modalData = [
-    {
-        img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=400&fit=crop",
-        title: "Temperatur Nəzarəti",
-        tags: ["Temperatur", "Soyuq Zəncir", "HACCP", "Restoran"],
-        desc: "HoReCa sektorunda qida təhlükəsizliyinin ən kritik amillərindən biri temperatur nəzarətidir. Bakteriyalar 5°C ilə 60°C arasında aktiv şəkildə çoxalır. Buna görə də soyuq zəncirin qorunması həyati əhəmiyyət daşıyır.",
-        list: [
-            "Soyuducu temperaturunun 0-4°C arasında saxlanması",
-            "İsti saxlama temperaturunun minimum 65°C olması",
-            "2 saat qaydası: otaq temperaturunda 2 saatdan çox saxlamamaq",
-            "Dondurulmuş məhsulların -18°C-də saxlanması",
-            "Gündəlik temperatur qeydlərinin aparılması"
-        ]
-    },
-    {
-        img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=400&fit=crop",
-        title: "Şəxsi Gigiyena",
-        tags: ["Gigiyena", "Əl Yuma", "İş Geyimi", "Xəstəlik"],
-        desc: "Restoran işçilərinin şəxsi gigiyenası qida çirklənməsinin əsas səbəblərindən biridir. Düzgün əl yuma texnikası, təmiz iş geyimi və xəstə işçilərlə işə buraxmama qaydaları ciddi şəkildə tətbiq olunmalıdır.",
-        list: [
-            "Əl yuma: 20 saniyə sabunla, isti su ilə",
-            "Mətbəxdə tırnaq boyası və zinət əşyaları qadağandır",
-            "Xəstə işçilər 48 saat simptomlar bitsə də işə buraxılmamalıdır",
-            "İş geyimi yalnız mətbəxdə geyinilməli və gündəlik dəyişilməlidir",
-            "Yaralar sukeçirməz bağlama ilə örtülməlidir"
-        ]
-    },
-    {
-        img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=400&fit=crop",
-        title: "Təmizlik və Dezinfeksiya",
-        tags: ["Təmizlik", "Dezinfeksiya", "Sanitariya", "Pest Kontrol"],
-        desc: "Restoran və otellərdə təmizlik yalnız vizual deyil, mikrobioloji səviyyədə də təmin olunmalıdır. Mətbəx, zal, anbar və tualet əraziləri üçün ayrı təmizlik protokolları tətbiq olunur.",
-        list: [
-            "Rəng kodlaşdırılmış təmizlik alətləri (qırmızı-mətbəx, yaşıl-zal)",
-            "Gündəlik, həftəlik və aylıq təmizlik cədvəlləri",
-            "Dezinfeksiyaedici məhlulların düzgün istifadəsi",
-            "Pest kontrol: həşərat və gəmiricilərə qarşı profilaktika",
-            "Tullantıların tez-tez çıxarılması və konteynerlərin təmizliyi"
-        ]
-    },
-    {
-        img: "https://images.unsplash.com/photo-1544148103-0773bf10d330?w=800&h=400&fit=crop",
-        title: "Xammal İdarəetməsi",
-        tags: ["FIFO", "Son İstifadə", "Xammal", "Çeşidləmə"],
-        desc: "Xammalın düzgün idarə edilməsi qida israfının və zəhərlənmə riskinin azaldılması üçün zəruridir. FIFO (First In, First Out) prinsipi, düzgün etiketləmə və çeşidlərin ayrı saxlanması əsas tələblərdəndir.",
-        list: [
-            "FIFO sistemi: ilk gələn ilk çıxar",
-            "Bütün məhsullar etiketlənməli (ad, tarix, mənbə)",
-            "Çiğ və bişmiş məhsulların ayrı saxlanması",
-            "Alergenlərin ayrılmalı saxlanması (süd, yumurta, qoz)",
-            "Təchizatçılardan keyfiyyət sertifikatlarının tələb olunması"
-        ]
-    }
-];
-
-function openModal(index) {
-    const data = modalData[index];
-    document.getElementById('modalImg').src = data.img;
-    document.getElementById('modalTitle').textContent = data.title;
-    document.getElementById('modalDesc').textContent = data.desc;
-
-    const tagsContainer = document.getElementById('modalTags');
-    tagsContainer.innerHTML = data.tags.map(tag => `<span class="modal-tag">${tag}</span>`).join('');
-
-    const listContainer = document.getElementById('modalList');
-    listContainer.innerHTML = data.list.map(item => `<li>${item}</li>`).join('');
-
-    document.getElementById('modalOverlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal(event) {
-    if (!event || event.target === document.getElementById('modalOverlay')) {
-        document.getElementById('modalOverlay').classList.remove('active');
-        document.body.style.overflow = '';
-    }
-}
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-});
-</script>
 
   <script src="app.js"></script>
   <script type="text/javascript" src="darkmode.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-
-    
 </body>
+
 </html>

@@ -218,6 +218,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--nav-border);
   box-shadow: 0 2px 12px rgba(11,31,58,0.08);
   transition: var(--transition);
+  height: 80px;
 }
 #navbar.scrolled {
   box-shadow: 0 4px 24px rgba(11,31,58,0.12);
@@ -235,7 +236,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   margin: 0 auto;
   padding: 0 2rem;
 }
-.logo { display: flex; align-items: center; gap: 11px; }
+.logo { display: flex; align-items: center; gap: 11px; position: relative;right: 6%; }
 .nav-menu { display: flex; align-items: center; gap: 2px; margin: auto; }
 .nav-item { position: relative; }
 .nav-link {
@@ -243,7 +244,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   align-items: center;
   gap: 5px;
   color: var(--text);
-  font-size: 0.6875rem;
+  font-size: 0.6475rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2125,13 +2126,14 @@ body.dark-mode .exp-arrow:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  padding: 12px 10px;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
   color: white !important; /* Mətni qızılı edirik */
   border: 1px solid var(--gold);
   border-radius: var(--radius-md);
   font-size: 0.75rem;
   font-weight: 700;
+  width: fit-content;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
@@ -3464,4 +3466,5 @@ article.card{
 
 #sektor{
   padding: 5rem 1rem;
+  margin-top: 2rem;
 }
