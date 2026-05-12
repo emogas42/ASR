@@ -1710,7 +1710,7 @@ body.dark-mode .social-link {
 .back-to-top {
   position: fixed;
   bottom: 13%;
-  right: 2%;
+  left: 2%;
   width: 45px;
   height: 45px;
   background: var(--bg-card);
@@ -1733,7 +1733,7 @@ body.dark-mode .social-link {
 
 .whatsapp-icon {
   position: fixed;
-  right: 3%;
+  left: 3%;
   bottom: 7%;
   scale: 3.2;
   transition: 0.4s;

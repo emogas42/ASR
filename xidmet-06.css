@@ -1706,7 +1706,7 @@ body.dark-mode .social-link {
 
 .whatsapp-icon {
   position: fixed;
-  right: 3%;
+  left: 3%;
   bottom: 7%;
   scale: 3.2;
   transition: 0.4s;
