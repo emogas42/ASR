@@ -1441,6 +1441,8 @@ body {
 }
 @media (max-width: 768px) {
   #theme-switch { position: relative;left: 10%; }
+    .whatsapp-icon  { position: fixed;z-index: 9; bottom: 5%; right: 10%; }
+
 }
 .dark-mode #theme-switch { background: rgba(255,255,255,0.1); }
 #theme-switch:hover { background: rgba(200,146,42,0.2); }

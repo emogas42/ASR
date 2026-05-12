@@ -1062,6 +1062,8 @@ body {
   }
 }
 @media (max-width: 768px) {
+    .whatsapp-icon  { position: fixed; bottom: 5%; right: 10%; }
+
   .section {
     padding: 4rem 1rem;
   }

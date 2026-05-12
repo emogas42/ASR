@@ -532,6 +532,9 @@
 
         /* ====== RESPONSIVE ====== */
         @media (max-width: 768px) {
+
+              .whatsapp-icon  { position: fixed; bottom: 5%; right: 10%; }
+
             .trends { grid-template-columns: 1fr; }
             .stats { grid-template-columns: repeat(2, 1fr); }
             .related-grid { grid-template-columns: 1fr; }
