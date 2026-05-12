@@ -136,7 +136,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 
 .section-eyebrow {
   display: inline-block;
-  font-size: 0.625rem;
+  font-style: 30px;
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -603,7 +603,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 /* WhatsApp floating */
 .whatsapp-icon {
   position: fixed;
-  right: 3%;
+  left: 3%;
   bottom: 7%;
   scale: 3.2;
   transition: 0.4s;
@@ -615,7 +615,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 .back-to-top {
   position: fixed;
   bottom: 13%;
-  right: 2%;
+  left: 2%;
   width: 45px;
   height: 45px;
   background: var(--bg-card);
@@ -2606,147 +2606,197 @@ body.dark-mode .social-link {
 }
 [data-theme="dark"] .theme-btn__thumb { transform: translateX(16px); }
 /* ── Section ──────────────────────────────────────── */
-#niyebiz {
-  padding-bottom: 80px;
-  transition: background var(--trans);
-  padding: 2rem 1rem;
-}
- 
-/* ── Head ─────────────────────────────────────────── */
-.why-us__head {
-  max-width: 680px;
-  margin: 0 auto 56px;
-  text-align: center;
-}
- 
-.why-us__eyebrow {
-  margin-top: 70px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: var(--eyebrow);
-  margin-bottom: 14px;
-}
- 
-.why-us__title {
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--text);
-  letter-spacing: -.01em;
-}
- 
-.why-us__lead {
-  margin-top: 18px;
-  font-size: 15px;
-  color: var(--text-2);
-  line-height: 1.75;
-}
- 
-/* ── Grid ─────────────────────────────────────────── */
-.why-us__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
- 
-@media (max-width: 1024px) {
-  .why-us__grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .why-us { padding: 60px 20px; }
-  .why-us__grid { grid-template-columns: 1fr; }
-}
- 
-/* ── Card ─────────────────────────────────────────── */
-.card {
-  background: var(--bg-card);
-  border: 1.2px solid var(--gold);
-  border-radius: var(--radius);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow);
-  color: var(--text-light);
-  transition:
-    transform var(--trans),
-    box-shadow var(--trans),
-    border-color var(--trans),
-    background var(--trans);
-}
-article.card{
-  background: var(--bg-card);
-  margin: 1rem 0;
-}
 
- 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-  border: 1.2px solid var(--gold);
-}
- 
-/* image */
-.card__img-wrap {
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
- 
-.card__img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .4s ease;
-  filter: grayscale(8%);
-}
-.card:hover .card__img-wrap img { transform: scale(1.04); }
- 
-/* body */
-.card__body {
-  padding: 24px 22px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-}
- 
-.card__title {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.35;
-}
- 
-.card__text {
-  font-size: 13.5px;
-  color: var(--text-muted);
-  line-height: 1.7;
-  flex: 1;
-}
- 
-.card__stat {
-  display: inline-block;
-  margin-top: 6px;
-  background: var(--stat-bg);
-  color: var(--stat-txt);
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .04em;
-  padding: 5px 12px;
-  border-radius: 6px;
-  align-self: flex-start;
-  transition: background var(--trans), color var(--trans);
-}
-.dark-mode .card__stat{
-  background:#07172a ;
-  color: var(--text-light);
-}
+
+/* <!-- Niyə Biz Bölməsi --!> */
+  #niyebiz {
+    padding: 30px 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .why-head {
+    max-width: 680px;
+    margin: 0 auto 56px;
+    text-align: center;
+  }
+
+  .why-eyebrow {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin-bottom: 14px;
+  }
+
+  .why-title {
+    font-size: clamp(26px, 3.5vw, 40px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text, #1a1a2e);
+  }
+
+  .why-lead {
+    margin-top: 18px;
+    font-size: 15px;
+    color: var(--text-2, #666);
+    line-height: 1.75;
+  }
+
+  /* ── Siyahı bölməsi ── */
+  .why-features {
+    display: flex;
+    flex-direction: column;
+    max-width: 860px;
+    margin: 0 auto 64px;
+  }
+
+  .feat {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 26px 20px;
+    border-bottom: 1px solid var(--border, #e8e8e8);
+    transition: background .2s, padding-left .2s;
+  }
+
+  .feat:first-child {
+    border-top: 1px solid var(--border, #e8e8e8);
+  }
+
+  .feat:hover {
+    background: rgba(201, 169, 110, 0.04);
+    padding-left: 28px;
+  }
+
+  .feat-num {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 500;
+    color: #aaa;
+    margin-top: 3px;
+    min-width: 20px;
+  }
+
+  /* Tik dairəsi — light: yaşıl, dark: mavi */
+  .feat-check {
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dcfce7;
+    color: #16a34a;
+    transition: background .2s, color .2s;
+  }
+
+  .feat:hover .feat-check {
+    background: #bbf7d0;
+    color: #15803d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .feat-check {
+      background: #1e3a5f;
+      color: #60a5fa;
+    }
+    .feat:hover .feat-check {
+      background: #1e40af;
+      color: #93c5fd;
+    }
+  }
+
+  .feat-check svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 3;
+  }
+
+  .feat-content h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text, #1a1a2e);
+    margin-bottom: 5px;
+  }
+
+  .feat-content p {
+    font-size: 14px;
+    color: var(--text-2, #666);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── Haqqımızda mətn bölməsi ── */
+  .why-about {
+    max-width: 840px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    border-top: 1px solid var(--border, #e8e8e8);
+    padding-top: 48px;
+  }
+
+  .why-about h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text, #1a1a2e);
+    margin-bottom: 20px;
+  }
+
+  .why-about p {
+    font-size: 15px;
+    color: var(--text-2, #555);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .why-about p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .why-stats {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .why-stat {
+    flex: 1;
+    min-width: 120px;
+    background: var(--bg-2, #f7f7f7);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .why-stat-num {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text, #1a1a2e);
+  }
+
+  .why-stat-label {
+    font-size: 12px;
+    color: var(--text-2, #888);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 600px) {
+    .feat {
+      padding: 20px 14px;
+      gap: 12px;
+    }
+    .feat:hover {
+      padding-left: 18px;
+    }
+  }
+
 
 /* ================================================================
    ASR SERVICES CARDS — v2.0
