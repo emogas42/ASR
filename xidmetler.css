@@ -1137,6 +1137,7 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 9999;
+  height: 80px;
   background: var(--nav-bg);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -1160,7 +1161,7 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
-.logo { display: flex; align-items: center; gap: 11px; }
+.logo { display: flex; align-items: center; gap: 11px; position: relative;right: 6%; }
 .nav-menu { display: flex; align-items: center; gap: 2px; margin: auto; }
 .nav-item { position: relative; }
 .nav-link {
@@ -1168,7 +1169,7 @@ body {
   align-items: center;
   gap: 5px;
   color: var(--text);
-  font-size: 0.6875rem;
+  font-size: 0.6475rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1455,21 +1456,22 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
+  padding: 12px 10px;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-  color: white !important;
+  color: white !important; /* Mətni qızılı edirik */
   border: 1px solid var(--gold);
   border-radius: var(--radius-md);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
+  width: fit-content;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-}
+} 
 @media (max-width: 768px) {
   .btn-premium-diag { display: none; }
   .mobile-nav .btn-premium-diag { display: inline-flex; margin-top: 10%; }

@@ -1004,6 +1004,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   border-bottom: 1px solid var(--border);
   padding: 1.5rem 0;
   overflow: hidden;
+  scale: 1.1;
 }
 .trust-label {
   text-align: center;
@@ -1021,11 +1022,21 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   animation: marquee 28s linear infinite;
   width: max-content;
 }
+.trust-track-2 {
+  animation: marquee-2 28s linear infinite;
+  margin-top: 1rem;
+}
 .trust-track:hover { animation-play-state: paused; }
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+@keyframes marquee-2 {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+
 .trust-item {
   display: flex;
   align-items: center;
@@ -1543,6 +1554,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
+  color: wheat;
 }
 .resource-item-name { font-size: 0.875rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .resource-item-desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.6; }
@@ -2782,6 +2794,7 @@ article.card{
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
 }
  
@@ -2794,15 +2807,23 @@ article.card{
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: white;
   width: fit-content;
+}
+body:not(.dark-mode) .asr-svc-eyebrow, body:not(.dark-mode) .asr-svc-eyebrow-dot {
+    color: var(--navy);
+   
+}
+
+body:not(.dark-mode) .asr-svc-eyebrow-dot {
+    background: var(--navy) ;
 }
  
 .asr-svc-eyebrow-dot {
   width: 20px;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+  background: white;
   display: inline-block;
   flex-shrink: 0;
 }
@@ -2842,6 +2863,7 @@ article.card{
   color: var(--text-muted);
   line-height: 1.85;
   max-width: 520px;
+  text-align: center;
 }
  
 /* ── Grid ─────────────────────────────────────────────────────── */
