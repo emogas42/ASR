@@ -602,7 +602,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 /* WhatsApp floating */
 .whatsapp-icon {
   position: fixed;
-  right: 3%;
+  left: 3%;
   bottom: 7%;
   scale: 3.2;
   transition: 0.4s;
@@ -3516,3 +3516,23 @@ body.dark-mode .social-link {
       padding-left: 18px;
     }
   }
+  .floating-consult-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #C8962B;
+  color: #fff;
+  border-radius: 50px;
+  padding: 14px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 18px rgba(200,150,43,0.35);
+  z-index: 9999;
+}
+.floating-consult-btn:hover {
+  background: #b0811e;
+}
