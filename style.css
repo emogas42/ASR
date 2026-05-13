@@ -139,7 +139,6 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   font-style: 30px;
   font-weight: 700;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 0.75rem;
 }
@@ -603,8 +602,8 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 /* WhatsApp floating */
 .whatsapp-icon {
   position: fixed;
-  left: 3%;
-  bottom: 5%;
+  left: 2.7%;
+  bottom: 7%;
   scale: 3.3;
   transition: 0.4s;
   z-index: 99  !important;
@@ -3204,104 +3203,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 }
 
 
-/* ── Scope: bütün stillər .asr-sectors içindədir ── */
 
-.sectors-section { background: var(--bg); }
-.sectors-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-top: 48px;
-  align-items: start;
-}
-@media (max-width: 700px) { .sectors-wrap { grid-template-columns: 1fr; } }
-.sectors-col-title {
-  font-size: 0.75rem; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
-}
-
-/* YENİ - Accordion üçün əlavələr */
-.sector-pill {
-  display: flex; align-items: flex-start; gap: 10px;
-  padding: 12px 16px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  margin-bottom: 10px;
-  font-size: 0.88rem; font-weight: 500; color: var(--text);
-  box-shadow: var(--shadow-sm);
-  transition: border-color .25s, color .25s, transform .25s;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.sector-pill:hover { border-color: var(--navy); color: var(--navy); transform: translateX(4px); }
-.sector-pill i { width: 20px; text-align: center; color: var(--accent); font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
-
-.sector-pill-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  flex: 1;
-  min-width: 0;
-}
-
-.sector-pill-title {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: inherit;
-  transition: color .25s;
-}
-
-.sector-pill-desc {
-  font-size: 0.82rem;
-  line-height: 1.6;
-  color: var(--text-muted, #64748b);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
-  margin-top: 0;
-}
-
-.sector-pill:hover .sector-pill-desc {
-  max-height: 120px;
-  opacity: 1;
-  margin-top: 8px;
-}
-
-/* Eksperterimize bax - tam ortada, qızılı çərçivə */
-.experts-link-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.experts-link {
-  display: inline-block;
-  padding: 14px 40px;
-  border: 2px solid var(--gold);
-  border-radius: var(--radius-md);
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s ease;
-  background: transparent;
-}
-
-.experts-link:hover {
-  background: var(--gold);
-  color: #fff;
-}
-
-@media (max-width: 700px) {
-  .experts-link {
-    padding: 12px 32px;
-    font-size: 0.85rem;
-  }
-}
  /* Mobile nav drawer */
 .mobile-nav {
   position: fixed;
@@ -3395,10 +3297,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 .mobile-nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
 
-#sektor{
-  padding: 5rem 1rem;
-  margin-top: 2rem;
-}
+
 
 /* ASR CEO Section Styling */
 .asr-ceo-section {
