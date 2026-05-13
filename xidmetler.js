@@ -20,4 +20,54 @@
     gsap.utils.toArray('.process-step').forEach((el,i)=>{
       gsap.fromTo(el,{opacity:0,x:-30},{opacity:1,x:0,duration:.65,ease:'power3.out',delay:i*.08,scrollTrigger:{trigger:el,start:'top 90%',toggleActions:'play none none none'}});
     });
+        // Footer year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+ 
+    // Back to top
+    function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('backToTop');
+      if (window.scrollY > 400) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    });
+ 
+    // Mobile nav toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (mobileToggle && mobileNav) {
+      mobileToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('open');
+        mobileToggle.classList.toggle('active');
+      });
+    }
+ 
+    // Mobile sub-menus
+    document.querySelectorAll('.mobile-chevron-btn.has-dropdown').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const row = btn.closest('.mobile-nav-item');
+        const sub = row.querySelector('.mobile-sub');
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (sub) sub.style.display = isOpen ? 'none' : 'flex';
+      });
+    });
+ 
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+    }
+ 
+    // Theme switch
+    const themeSwitch = document.getElementById('theme-switch');
+    if (themeSwitch) {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'dark') document.body.classList.add('dark-mode');
+      themeSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    }
     
