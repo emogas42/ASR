@@ -3206,243 +3206,102 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 
 /* ── Scope: bütün stillər .asr-sectors içindədir ── */
 
-  .asr-sectors {
-    font-family: Arial, sans-serif;
-    padding: 60px 32px 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  /* ── Hero başlıq ── */
-  .asr-sectors__hero {
-    text-align: center;
-    margin-bottom: 52px;
-  }
-  .asr-sectors__hero h2 {
-    font-family: Arial, sans-serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
-    font-weight: 700;
-    margin: 0 0 12px;
-  }
-  .asr-sectors__hero p {
-    font-size: 1rem;
-    line-height: 1.7;
-    max-width: 520px;
-    margin: 0 auto;
-    opacity: 0.7;
-  }
-  .asr-sectors__hero-line {
-    width: 48px;
-    height: 3px;
-    background: #c8972a;
-    border-radius: 2px;
-    margin: 16px auto 0;
-  }
-
-  /* ── Grid ── */
-  .asr-sectors__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-    gap: 26px;
-  }
-
-  /* ── Kart bungaması ── */
-  .asr-card {
-    perspective: 1100px;
-    height: 430px;
-  }
-  .asr-card__inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform .65s cubic-bezier(.4,.2,.2,1);
-    border-radius: 16px;
-  }
-  .asr-card:hover .asr-card__inner {
-    transform: rotateY(180deg);
-  }
-
-  /* ── Ön & arxa üz ortaq ── */
-  .asr-card__front,
-  .asr-card__back {
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    overflow: hidden;
-  }
-
-  /* ── ÖN ÜZ ── */
-  .asr-card__front {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Light — ön */
-  html[data-theme="light"]  .asr-card__front,
-  body[data-theme="light"]  .asr-card__front,
-  html:not([data-theme])    .asr-card__front,
-  body:not([data-theme])    .asr-card__front {
-    background: #ffffff;
-    color: #111111;
-    border: 1px solid rgba(0,0,0,0.09);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.09);
-  }
-
-  /* Dark — ön */
-  html[data-theme="dark"] .asr-card__front,
-  body[data-theme="dark"] .asr-card__front {
-    background: #1a1f2e;
-    color: #e8e8f0;
-    border: 1px solid rgba(255,255,255,0.07);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.40);
-  }
-
-  .asr-card__img {
-    width: 100%;
-    height: 195px;
-    object-fit: cover;
-    display: block;
-    flex-shrink: 0;
-  }
-  .asr-card__body {
-    padding: 20px 20px 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-    flex: 1;
-  }
-  .asr-card__title {
-    font-size: 1.12rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin: 0;
-  }
-  .asr-card__excerpt {
-    font-size: 0.84rem;
-    line-height: 1.65;
-    margin: 0;
-    opacity: 0.72;
-  }
-  .asr-card__stat {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    margin-top: auto;
-  }
-  .asr-card__stat-num {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #c8972a;
-  }
-  .asr-card__stat-label {
-    font-size: 0.76rem;
-    opacity: 0.65;
-  }
-
-  /* ── ARXA ÜZ ── */
-  .asr-card__back {
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 28px 24px;
-    gap: 12px;
-  }
-
-  /* Light — arxa (açıq boz, ağdan fərqlənsin) */
-  html[data-theme="light"]  .asr-card__back,
-  body[data-theme="light"]  .asr-card__back,
-  html:not([data-theme])    .asr-card__back,
-  body:not([data-theme])    .asr-card__back {
-    background: #eef2f7;
-    color: #111111;
-    border: 1px solid rgba(0,0,0,0.09);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.09);
-  }
-
-  /* Dark — arxa (ön ilə eyni palitrada, bir az fərqli çalar) */
-  html[data-theme="dark"] .asr-card__back,
-  body[data-theme="dark"] .asr-card__back {
-    background: #252b3b;
-    color: #e8e8f0;
-    border: 1px solid rgba(255,255,255,0.07);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.40);
-  }
-
-  .asr-card__back-tag {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #c8972a;
-  }
-  .asr-card__back-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-  }
-  .asr-card__back-desc {
-    font-size: 0.83rem;
-    line-height: 1.7;
-    margin: 0;
-    opacity: 0.82;
-  }
-  .asr-card__back-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .asr-card__back-list li {
-    font-size: 0.80rem;
-    padding-left: 13px;
-    position: relative;
-    line-height: 1.5;
-    opacity: 0.85;
-  }
-  .asr-card__back-list li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    color: #c8972a;
-    font-weight: 700;
-  }
-
-  /* ── Giriş animasiyası ── */
-  @keyframes asr-fadeup {
-    from { opacity: 0; transform: translateY(22px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .asr-card { animation: asr-fadeup .55s ease both; }
-  .asr-card:nth-child(1) { animation-delay: .04s }
-  .asr-card:nth-child(2) { animation-delay: .10s }
-  .asr-card:nth-child(3) { animation-delay: .16s }
-  .asr-card:nth-child(4) { animation-delay: .22s }
-  .asr-card:nth-child(5) { animation-delay: .28s }
-  .asr-card:nth-child(6) { animation-delay: .34s }
-  .asr-card:nth-child(7) { animation-delay: .40s }
-  .asr-card:nth-child(8) { animation-delay: .46s }
-
-  @media (max-width: 600px) {
-    .asr-sectors { padding: 40px 16px 60px; }
-    .asr-sectors__grid { gap: 18px; }
-    .asr-card { height: 450px; }
-  }
-
-  .dark-mode .asr-card__body {
-  background: var(--bg-card);
-  color: var(--text);
+.sectors-section { background: var(--bg); }
+.sectors-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 48px;
+  align-items: start;
 }
-.dark-mode .asr-card__back {
-  background: var(--bg-card) !important;
-  color: var(--text) !important;
- }
+@media (max-width: 700px) { .sectors-wrap { grid-template-columns: 1fr; } }
+.sectors-col-title {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+}
+
+/* YENİ - Accordion üçün əlavələr */
+.sector-pill {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+  font-size: 0.88rem; font-weight: 500; color: var(--text);
+  box-shadow: var(--shadow-sm);
+  transition: border-color .25s, color .25s, transform .25s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.sector-pill:hover { border-color: var(--navy); color: var(--navy); transform: translateX(4px); }
+.sector-pill i { width: 20px; text-align: center; color: var(--accent); font-size: 0.9rem; flex-shrink: 0; margin-top: 2px; }
+
+.sector-pill-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.sector-pill-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: inherit;
+  transition: color .25s;
+}
+
+.sector-pill-desc {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--text-muted, #64748b);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+}
+
+.sector-pill:hover .sector-pill-desc {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 8px;
+}
+
+/* Eksperterimize bax - tam ortada, qızılı çərçivə */
+.experts-link-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.experts-link {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.experts-link:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .experts-link {
+    padding: 12px 32px;
+    font-size: 0.85rem;
+  }
+}
  /* Mobile nav drawer */
 .mobile-nav {
   position: fixed;
