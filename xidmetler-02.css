@@ -216,7 +216,7 @@
       margin-bottom: 16px;
     }
     .section-title em { color: var(--accent); font-style: normal; }
-    .section-subtitle { font-size: 1rem; color: var(--text-muted); line-height: 1.75; }
+    .section-subtitle { font-size: 1rem; color: var(--text-muted); line-height: 1.75;margin: auto; }
  
     /* Hero layout (mirror from xidmet-06) */
     .hero-inner {
