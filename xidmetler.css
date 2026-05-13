@@ -1441,7 +1441,7 @@ body {
 }
 @media (max-width: 768px) {
   #theme-switch { position: relative;left: 10%; }
-    .whatsapp-icon  { position: fixed;z-index: 9; bottom: 5%; right: 10%; }
+    .whatsapp-icon  { position: fixed; margin-left: 1rem; bottom: 5%; left: 4%; }
 
 }
 .dark-mode #theme-switch { background: rgba(255,255,255,0.1); }
@@ -1665,6 +1665,7 @@ body {
   .footer-top { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
   .footer-copy { text-align: center; }
+  
 }
 /* İkonların ümumi stili */
 .social-link {
@@ -1730,14 +1731,17 @@ body.dark-mode .social-link {
   transform: translateY(20px);
   transition: all 0.4s ease;
 }
+@media (max-width: 768px) {
+  .back-to-top { bottom: 11%; left: 3%; }
+}
 .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { background: var(--gold); color: #fff; box-shadow: 0 5px 15px rgba(212,175,55,0.4); }
 
 .whatsapp-icon {
   position: fixed;
   left: 3%;
-  bottom: 7%;
-  scale: 3.2;
+  bottom: 5%;
+  scale: 3.3;
   transition: 0.4s;
   z-index: 99;
 }

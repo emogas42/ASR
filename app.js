@@ -779,3 +779,4 @@ app.js
     label.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
   }
 })();
+

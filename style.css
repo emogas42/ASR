@@ -604,10 +604,10 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 .whatsapp-icon {
   position: fixed;
   left: 3%;
-  bottom: 7%;
-  scale: 3.2;
+  bottom: 5%;
+  scale: 3.3;
   transition: 0.4s;
-  z-index: 99;
+  z-index: 99  !important;
 }
 .whatsapp-icon:hover { scale: 3.9; transform: translateY(-1px); }
 
@@ -1023,7 +1023,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   width: max-content;
 }
 .trust-track-2 {
-  animation: marquee-2 28s linear infinite;
+  animation: marquee-2 18s linear infinite;
   margin-top: 1rem;
 }
 .trust-track:hover { animation-play-state: paused; }
@@ -1032,8 +1032,8 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   100% { transform: translateX(-50%); }
 }
 @keyframes marquee-2 {
-  0%   { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 
@@ -1777,7 +1777,7 @@ body.modal-open { overflow: hidden; }
   .slides-track   { top: -18%; }
   .stat-item      { padding: 18px 20px; }
   .arrow-btn      { display: none; }
-  .whatsapp-icon  { position: fixed; bottom: 5%; right: 10%; }
+  .whatsapp-icon  { position: fixed; bottom: 5%; left: 5.5%; }
   .back-to-top    { bottom: 10%; right: 6%; }
   #theme-switch   {right: 18%; top: 16px; }
   .slide-title    { font-size: 32px; }
@@ -1800,7 +1800,7 @@ body.modal-open { overflow: hidden; }
   padding: 5rem 0 3rem;
   background: var(--off-white);
   overflow: hidden;
-}
+}x
 
 .experts-carousel-wrap {
   position: relative;
@@ -3540,3 +3540,245 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   padding: 5rem 1rem;
   margin-top: 2rem;
 }
+
+/* ASR CEO Section Styling */
+.asr-ceo-section {
+  margin-top: 3%;
+    padding: 80px 0;
+    background: var(--bg); /* style.css-dəki fon rəngi */
+}
+.dark-mode .asr-ceo-section {
+    background: #0e1833; /* Dark mode üçün fərqli fon rəngi */
+}
+
+.asr-ceo-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.asr-ceo-image-box {
+    flex: 1 1 400px;
+    position: relative;
+}
+
+.asr-ceo-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--gold);
+    object-fit: cover;
+}
+
+.asr-ceo-info {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--navy);
+    color: var(--white);
+    padding: 20px 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+.dark-mode .asr-ceo-info {
+    background: #1b4280;
+    color: var(--white);
+}
+
+.asr-ceo-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+.dark-mode .asr-ceo-info h3 {
+    color: white;
+}
+.asr-ceo-info span {
+    color: goldenrod;
+}
+
+.asr-ceo-content {
+    flex: 1 1 500px;
+}
+
+.asr-section-title {
+    color: var(--heading);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.asr-section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin-top: 10px;
+}
+
+.asr-ceo-text {
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.asr-mission-vision {
+    display: flex;
+    gap: 20px;
+}
+
+.asr-mv-item {
+    flex: 1;
+    background: rgba(27, 66, 128, 0.05); /* Navy rənginin çox açıq versiyası */
+    padding: 20px;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--gold);
+}
+
+.dark-mode .asr-mv-item {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.asr-mv-item h4 {
+    color: var(--haqqimizda-title);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.asr-mv-item p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .asr-ceo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .asr-ceo-info {
+        position: static;
+        margin-top: 15px;
+        right: 0;
+    }
+    .asr-mission-vision {
+        flex-direction: column;
+    }
+    .asr-section-title::after {
+        margin: 10px auto;
+    }
+}
+.asr-ceo-image-box:hover .asr-ceo-info {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl); /* style.css-dəki daha dərin kölgə */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Missiya və Vizyon kartları üçün hover */
+.asr-mv-item {
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.asr-mv-item:hover {
+    transform: translateY(-8px);
+    background: var(--white);
+    box-shadow: 0 10px 25px rgba(27, 66, 128, 0.1);
+}
+
+/* Dark mode-da hover rəngini tənzimləyək */
+.dark-mode .asr-mv-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.asr-mv-item h4 {
+    transition: color 0.3s ease;
+}
+
+.asr-mv-item:hover h4 {
+    color: var(--gold); /* Üstünə gələndə başlıq qızılı rəngə çevrilir */
+}
+
+/* Kiçik bir animasiya detalı: Mətnin rəngi bir az canlansın */
+.asr-mv-item p {
+    transition: color 0.3s ease;
+}
+
+.asr-mv-item:hover p {
+    color: var(--text);
+}
+
+.stats-progress-wrapper {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    position: relative;
+    bottom: 1rem;
+}
+
+.stats-item {
+    margin-bottom: 30px;
+}
+
+.stats-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.stats-title {
+    font-weight: 700;
+    color: var(--dark-blue); /* root-dan gələn tünd göy */
+    font-size: 1.1rem;
+}
+
+.stats-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Rəngləri root-dakı dəyişənlərə bağlayırıq */
+.text-gold { color: var(--gold-color); }
+.text-teal { color: var(--teal-color); }
+
+.stats-bar-bg {
+    width: 100%;
+    height: 12px;
+    background-color: #f0f0f0; /* Boş hissənin rəngi */
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.stats-bar-fill {
+    height: 100%;
+    border-radius: 50px;
+    transition: width 1s ease-in-out; /* Səhifə yüklənəndə effekt üçün */
+}
+.bg-dark-blue{
+ 
+  background-color: rgb(72, 229, 148);
+  animation: install 1s ease-in-out;
+}
+.dark-mode .bg-dark-blue{
+
+}
+@keyframes install {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 98%;
+  }
+}
+
+
