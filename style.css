@@ -2011,7 +2011,7 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 /* Yenilənmiş Slayd Oxları Dizaynı */
 .exp-arrow {
   position: absolute;
-  top: 42%; /* Kartların mərkəzinə daha yaxın */
+  top: 57.3%; /* Kartların mərkəzinə daha yaxın */
   transform: translateY(-50%);
   z-index: 25;
   width: 54px;
@@ -3540,3 +3540,138 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 }
 
 
+/* ============================================================
+   FLAME TOWERS BANNER — Rəhbərlik bölməsinin üst pərdəsi
+   Conflict yoxdur: bütün siniflər unikal prefikslə "flame-banner-"
+   ============================================================ */
+
+.flame-banner-wrap {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  margin-top: 80px; /* nav hündürlüyü qədər boşluq */
+}
+
+/* Şəkil soldan sağa doğru yavaş sürüşür */
+.flame-banner-img-track {
+  position: absolute;
+  inset: 0;
+  background-position: 10% 10%;
+  width: 120%;        /* geniş ki, sürüşmə görünsün */
+  height: 100%;
+  animation: flamePan 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes flamePan {
+  from { transform: translateX(0) scale(1.04); }
+  to   { transform: translateX(-16.66%) scale(1.04); }
+}
+
+.flame-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* Yuxarıdan aşağıya şəffaf qradiyent — oxunaqlığı qoruyur */
+.flame-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0)   0%,
+    rgba(255,255,255,0)  30%,
+    rgba(255,255,255,0.55) 68%,
+    rgba(255,255,255,0.92) 88%,
+    rgba(255,255,255,1)  100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.dark-mode .flame-banner-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(14,24,51,0)     0%,
+    rgba(14,24,51,0)    30%,
+    rgba(14,24,51,0.55) 68%,
+    rgba(14,24,51,0.92) 88%,
+    rgba(14,24,51,1)   100%
+  );
+}
+
+/* Sol və sağ vignette — kənarları yumşaldır */
+.flame-banner-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right,  rgba(255,255,255,0.45) 0%,  transparent 18%),
+    linear-gradient(to left,   rgba(255,255,255,0.45) 0%,  transparent 18%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.dark-mode .flame-banner-vignette {
+  background:
+    linear-gradient(to right,  rgba(14,24,51,0.5) 0%, transparent 18%),
+    linear-gradient(to left,   rgba(14,24,51,0.5) 0%, transparent 18%);
+}
+
+/* Mətn: banner-in alt hissəsində solda yerləşir */
+.flame-banner-content {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+  animation: flameFadeUp 1s 0.3s both;
+}
+
+@keyframes flameFadeUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(18px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.flame-banner-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 7px;
+  opacity: 0.9;
+}
+
+.flame-banner-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy-dark);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.dark-mode .flame-banner-title {
+  color: #e8f0fd;
+}
+
+.flame-banner-line {
+  width: 56px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 10px auto 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flame-banner-wrap   { height: 220px; }
+  .flame-banner-title  { font-size: 1.35rem; white-space: normal; }
+  .flame-banner-content{ bottom: 24px; width: 90%; }
+}

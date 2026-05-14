@@ -2107,10 +2107,14 @@ body.dark-mode .social-link {
     transform: rotate(-10deg);
 }
 .benefit-image{
-    width: 100%;
-    height: 160px;
-    background-attachment: fixed;
-    object-fit: cover;
+ background-image: url(images/agreement\'.jpg);
+  width: 100%;
+  height: 240px;
+  background-position: top center;
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .benefits-block-title {
