@@ -1455,6 +1455,7 @@ body {
 /* Btn Premium Diag */
 .btn-premium-diag {
   position: relative;
+          left: 2%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
