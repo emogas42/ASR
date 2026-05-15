@@ -709,7 +709,7 @@ body.dark-mode .exp-arrow:hover {
   color: white !important; /* Mətni qızılı edirik */
   border: 1px solid var(--gold);
   border-radius: var(--radius-md);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   width: fit-content;
   letter-spacing: 0.12em;
