@@ -3,27 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASR Group - Blog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>ASR Group - Blog | 2025 Qida Sənayesi Trendləri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="bloq1.css">
-<base target="_blank">
+  <link rel="stylesheet" href="bloq1.css">
 </head>
 <body>
 
-    <!-- FAKE NAVBAR -->
-    <div class="fake-navbar">
-        <div class="logo">ASR Group</div>
-        <div class="nav-link">Haqqımızda</div>
-        <div class="nav-link">Xidmətlər</div>
-        <div class="nav-link">Sektorlar</div>
-        <div class="nav-link">Təcrübəmiz</div>
-        <div class="nav-link">Bilik Mərkəzi</div>
-        <div class="nav-link">Media</div>
-        <div class="nav-link">Əlaqə</div>
-        <button class="nav-btn">PULSUZ DİAGNOSTİKA</button>
-    </div>
-      <!--  NAVIGATION -->
+    <!-- ═══════════════════════════════════════════════════════════
+         NAVBAR (Sizin kodlarınız)
+         ═══════════════════════════════════════════════════════════ -->
   <nav id="navbar">
     <div class="nav-inner">
       <!-- Logo -->
@@ -251,366 +240,430 @@
   </a>
 
 </div>
+    <!-- ═══════════════════════════════════════════════════════════
+         BLOG LAYOUT: Sol Naviqasiya + Sağ Məzmun
+         ═══════════════════════════════════════════════════════════ -->
+    <div class="blog-layout">
 
+      <!-- SOL TƏRƏF: Sabit Naviqasiya -->
+      <aside class="blog-sidebar">
+        <div class="blog-sidebar-brand">
+          <i class="fas fa-shield-halved"></i>
+          ASR Group
+        </div>
 
-    <!-- ===== ROOT CONTENT START ===== -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <i class="fas fa-chart-line"></i>
-                2025 Sənaye analizi
+        <div class="blog-toc-title">Mündəricat</div>
+        <ul class="blog-toc-list" id="tocList">
+          <li><a href="#section1" class="active"><i class="fas fa-chevron-right"></i> AQTA regulyasiyalarının gücləndirilməsi</a></li>
+          <li><a href="#section2"><i class="fas fa-chevron-right"></i> İxracat tələblərinin artması</a></li>
+          <li><a href="#section3"><i class="fas fa-chevron-right"></i> HACCP və ISO 22000 standartları</a></li>
+          <li><a href="#section4"><i class="fas fa-chevron-right"></i> Texnoloji innovasiyalar</a></li>
+          <li><a href="#section5"><i class="fas fa-chevron-right"></i> Əməkdaşlıq və konsaltinq</a></li>
+        </ul>
+
+        <div class="blog-sidebar-footer">
+          <strong>ASR Group</strong>
+          Azərbaycanın qida təhlükəsizliyi sahəsində lider konsaltinq şirkəti. Beynəlxalq standartlara uyğunluq və sertifikatlaşdırma xidmətləri.
+        </div>
+      </aside>
+
+      <!-- SAĞ TƏRƏF: Yalnız bu hissə scroll edir -->
+      <main class="blog-content" id="blogContent">
+
+        <!-- HERO: background-image ilə tam uyğunlaşan -->
+        <section class="blog-hero">
+          <div class="blog-hero-content">
+            <div class="blog-hero-badge">
+              <i class="fas fa-chart-line"></i>
+              2025 Sənaye analizi
             </div>
             <h1>Azərbaycanda qida sənayesinin 2025 trendi: Nə gözləyir?</h1>
-            <p class="hero-subtitle">AQTA regulyasiyalarının gücləndiriləcəyi, ixracat tələblərinin artacağı 2025-ci ildə müəssisələr nələrə hazır olmalıdır?</p>
-            <div class="hero-meta">
-                <span><i class="fas fa-calendar-alt"></i> May 2025</span>
-                <span><i class="fas fa-clock"></i> 8 dəqiqə oxuma</span>
-                <span><i class="fas fa-building"></i> ASR Group</span>
+            <p class="blog-hero-subtitle">AQTA regulyasiyalarının gücləndiriləcəyi, ixracat tələblərinin artacağı 2025-ci ildə müəssisələr nələrə hazır olmalıdır?</p>
+            <div class="blog-hero-meta">
+              <span><i class="fas fa-calendar-alt"></i> May 2025</span>
+              <span><i class="fas fa-clock"></i> 8 dəqiqə oxuma</span>
+              <span><i class="fas fa-building"></i> ASR Group</span>
             </div>
-        </div>
-    </section>
-
-    <div class="main-container">
-
-        <aside class="sidebar-left">
-            <div class="toc-title">Mündəricat</div>
-            <ul class="toc-list">
-                <li><a href="#section1" class="active"><i class="fas fa-chevron-right"></i> AQTA regulyasiyalarının gücləndirilməsi</a></li>
-                <li><a href="#section2"><i class="fas fa-chevron-right"></i> İxracat tələblərinin artması</a></li>
-                <li><a href="#section3"><i class="fas fa-chevron-right"></i> HACCP və ISO 22000 standartları</a></li>
-                <li><a href="#section4"><i class="fas fa-chevron-right"></i> Texnoloji innovasiyalar</a></li>
-                <li><a href="#section5"><i class="fas fa-chevron-right"></i> Əməkdaşlıq və konsaltinq</a></li>
-            </ul>
-
-            <div class="video-section">
-                <div class="video-section-title"><i class="fas fa-video"></i> Video təlimlər</div>
-                <div class="video-carousel" id="videoCarouselLeft">
-                    <div class="video-wrapper">
-                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop" alt="Video" id="videoThumbLeft">
-                        <div class="video-overlay">
-                            <div class="play-btn"><i class="fas fa-play"></i></div>
-                            <span class="video-label" id="videoLabelLeft">AQTA yenilikləri 2025</span>
-                        </div>
-                    </div>
-                    <div class="video-nav">
-                        <button class="video-nav-btn" onclick="changeVideo('left', -1)"><</button>
-                        <span class="video-counter" id="videoCounterLeft">1 / 3</span>
-                        <button class="video-nav-btn" onclick="changeVideo('left', 1)">></button>
-                    </div>
-                    <div class="video-dots" id="videoDotsLeft">
-                        <span class="video-dot active"></span>
-                        <span class="video-dot"></span>
-                        <span class="video-dot"></span>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <main class="content-main">
-
-            <section class="content-section" id="section1">
-                <div class="section-header">
-                    <div class="section-number">01</div>
-                    <h2 class="section-title">AQTA regulyasiyalarının gücləndirilməsi və yeni tələblər</h2>
-                </div>
-                <p>2025-ci ildə Azərbaycan Respublikası Qida Təhlükəsizliyi Agentliyinin (AQTA) regulyasiya çərçivəsi əhəmiyyətli dərəcədə genişlənib. Agentlik tərəfindən təsdiq edilən yeni sanitariya norma və qaydaları qida müəssisələrinin fəaliyyətinə birbaşa təsir göstərir. Xüsusilə, may 2025-ci ildə qəbul edilən qərarlar bioloji aktiv qida məhsullarına, qida məhsulları ilə təmasda olan materiallara və təbii mineral sulara dair yeni tələbləri müəyyənləşdirib.</p>
-
-                <div class="highlight-box">
-                    <p>ASR Group olaraq müəssisələrə tövsiyə edirik ki, 2025-ci ilin ikinci yarısında AQTA-nın yeni qaydalarına uyğunlaşmaq üçün daxili audit proseslərini artırsınlar və risk əsaslı dövlət nəzarətinə hazırlaşsınlar.</p>
-                </div>
-
-                <p>Yeni tənzimləmələr çərçivəsində qida müəssisələri üçün əsas dəyişikliklər aşağıdakılardır: enerji içkilərinə dair müvəqqəti sanitariya normalarının tətbiqi, yaxılabilən yağlarda trans yağ turşularının tənzimlənməsi, bitki adı ilə adlandırılan yağlara dair minimum keyfiyyət tələblərinin sərtləşdirilməsi. Bu tələblərə uyğun gəlməyən müəssisələr ciddi cərimə və istehsal dayandırma tədbirləri ilə üzləşə bilərlər.</p>
-
-                <p>Qida Təhlükəsizliyi Təlim Mərkəzi tərəfindən təşkil olunan təlim proqramları artıq müəssisə rəhbərləri, menecerlər, aşpazlar, keyfiyyətə nəzarətçilər və anbardarlar üçün məcburi xarakter daşıyır. Təlimlərin qiyməti 100 AZN-dən 500 AZN-ə qədər dəyişir və uğurla başa vuran iştirakçılara iki illik etibarlılıq müddətinə malik sertifikat verilir.</p>
-            </section>
-
-            <section class="content-section" id="section2">
-                <div class="section-header">
-                    <div class="section-number">02</div>
-                    <h2 class="section-title">İxracat tələblərinin artması və beynəlxalq standartlara uyğunluq</h2>
-                </div>
-                <p>2025-ci ildə Azərbaycanın qida sənayesi ixracat potensialı artmaqdadır. Birləşmiş Ərəb Əmirlikləri və Körfəz ölkələri bazarına çıxış imkanları genişlənir. Lakin bu imkanlardan yararlanmaq üçün müəssisələr beynəlxalq qida təhlükəsizliyi standartlarına tam uyğunluq təmin etməlidirlər. Xüsusilə, OIC/SMIIC 1:2011 Halal Qida standartına uyğunluq İslam Əməkdaşlıq Təşkilatı ölkələrinə ixracat üçün əsas şərtdir.</p>
-
-                <ul class="key-points">
-                    <li><i class="fas fa-check-circle"></i><span>Qida məhsullarının izlənilməsi sistemlərinin qurulması: bir addım geri, bir addım irəli prinsipi ilə xammaldan hazır məhsula qədər tam izlənilə bilənlik təmin edilməlidir.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Təchizatçıların ilkin təsdiqlənməsi və qiymətləndirilməsi: risk əsaslı yanaşma ilə Codex Alimentarius standartlarına və ISO 22000:2018-ə uyğun təchizatçı idarəetmə sistemi tətbiq olunmalıdır.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Etiketləmə və markalanma qaydalarına uyğunluq: beynəlxalq Codex Alimentarius standartlarına uyğun etiketləmə tələbləri yerinə yetirilməlidir.</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Çirkləndiricilərin yolverilən maksimum miqdarına dair yeni sanitariya normalarının tətbiqi.</span></li>
-                </ul>
-
-                <p>Azərbaycan Respublikasının xarici ticarət tərəfdaşı olan ölkələrin qida təhlükəsizliyi sahəsində texniki normativ hüquqi aktlarının ekvivalentliyinin tanınması qaydaları da 2025-ci ildə yenilənib. Bu, ixracatçılar üçün həm imkan, həm də öhdəlik deməkdir.</p>
-            </section>
-
-            <section class="content-section" id="section3">
-                <div class="section-header">
-                    <div class="section-number">03</div>
-                    <h2 class="section-title">HACCP və ISO 22000 standartlarının tətbiqi zərurəti</h2>
-                </div>
-                <p>2025-ci ildə qida zəncirinin bütün mərhələlərində risk əsaslı yanaşmanın tətbiqi zərurəti daha da artıb. HACCP (Təhlükə Analizi və Kritik Nəzarət Nöqtələri) sistemi artıq sadəcə tövsiyə deyil, bir çox qida müəssisəsi üçün məcburi tələbə çevrilib. Qida Təhlükəsizliyi Təlim Mərkəzinin keçirdiyi iki günlük HACCP təlimi müəssisələrə bu sistemin effektiv tətbiqi üçün praktiki biliklər verir.</p>
-
-                <p>HACCP qrupunun yaradılması, məhsulun identifikasiyasının təyini, emal olunan məhsul və sahələr üzrə təhlükə və risk analizinin aparılması, kritik nəzarət nöqtələrinin müəyyənləşdirilməsi prosesləri artıq qida müəssisələrinin gündəlik fəaliyyətinin ayrılmaz hissəsinə çevrilməlidir. ASR Group olaraq müəssisələrə bu proseslərdə metodoloji dəstək və konsaltinq xidmətləri təqdim edirik.</p>
-
-                <div class="highlight-box">
-                    <p>Qida müəssisələrinin qida təhlükəsizliyi qeydiyyatına alınması və dövlət reyestrinin aparılması qaydaları çərçivəsində 2025-ci ildə bütün fəaliyyət göstərən subyektlər yenidən qeydiyyatdan keçməlidirlər.</p>
-                </div>
-
-                <p>Təmizlik və dezinfeksiya işlərinin təşkili, sanitariya-gigiyena tədbirlərinin planlaşdırılması, istifadə olunan maddələrin seçimi və təhlükəsizlik tədbirləri üzrə praktiki təlimlər də müəssisələr üçün prioritet təşkil edir. Bu təlimlər iki gün (səkkiz saat) davam edir və praktiki tapşırıqlarla zəngindir.</p>
-            </section>
-
-            <section class="content-section" id="section4">
-                <div class="section-header">
-                    <div class="section-number">04</div>
-                    <h2 class="section-title">Texnoloji innovasiyalar və rəqəmsal transformasiya</h2>
-                </div>
-                <p>2025-ci ildə qida sənayesində texnoloji innovasiyaların tətbiqi sürətlənib. Distant təlim formatlarının genişlənməsi, elektron sənəd dövriyyəsinin artması və laboratoriyalarda ixtisasartırma kurslarının təşkili bu tendensiyanın göstəriciləridir. Qida Təhlükəsizliyi Təlim Mərkəzi artıq təlimləri həm oyanı, həm də distant (Zoom platforması üzərindən) formatda keçirir.</p>
-
-                <p>Müəssisələr üçün əsas texnoloji yeniliklər aşağıdakılardır: temperatur nəzarətinin avtomatlaşdırılması, soyudulmuş və dondurulmuş məhsulların daşınması və saxlanması zamanı sensor sistemlərin tətbiqi, qida məhsullarının partiya izlənilməsi üçün rəqəmsal platformaların qurulması, insident və böhran hallarında geri çağırma və riskə əsaslanan cavab mexanizmlərinin avtomatlaşdırılması.</p>
-
-                <ul class="key-points">
-                    <li><i class="fas fa-microchip"></i><span>Avtomatlaşdırılmış temperatur monitorinqi sistemləri ilə soyuducu zəncirin bütün mərhələlərində real vaxt rejimində nəzarət.</span></li>
-                    <li><i class="fas fa-qrcode"></i><span>Rəqəmsal izlənilə bilənlik sistemləri vasitəsilə xammaldan son istehlakçıya qədər məhsulun hərəkətinin izlənilməsi.</span></li>
-                    <li><i class="fas fa-flask"></i><span>Laboratoriyalarda müasir analiz metodlarının tətbiqi və ixtisasartırma kurslarının keçirilməsi.</span></li>
-                </ul>
-            </section>
-
-            <section class="content-section" id="section5">
-                <div class="section-header">
-                    <div class="section-number">05</div>
-                    <h2 class="section-title">ASR Group ilə əməkdaşlıq və konsaltinq xidmətləri</h2>
-                </div>
-                <p>ASR Group olaraq 2025-ci ildə qida sənayesində fəaliyyət göstərən müəssisələrə kompleks dəstək xidmətləri təqdim edirik. Təcrübəli ekspertlərimiz tərəfindən həyata keçirilən təlim proqramları, daxili audit xidmətləri və beynəlxalq standartlara uyğunluq konsaltinqi müəssisələrin rəqabət qabiliyyətini artırmağa yönəlib.</p>
-
-                <p>Xidmətlərimiz çərçivəsində müəssisələrə aşağıdakı sahələrdə dəstək göstəririk: qida təhlükəsizliyi idarəetmə sistemlərinin qurulması və sertifikatlaşdırılması, HACCP planlarının hazırlanması və tətbiqi, təchizatçıların qiymətləndirilməsi və təsdiqlənməsi proseslərinin təşkili, qida məhsullarının etiketlənməsi və markalanması üzrə ekspertiza, AQTA yoxlamalarına hazırlıq və müşayiət.</p>
-
-                <div class="highlight-box">
-                    <p>2025-ci ildə qida sənayesində uğurlu fəaliyyət göstərmək üçün müəssisələr proaktiv yanaşma ilə yeni tələblərə vaxtında uyğunlaşmalı, beynəlxalq standartlara uyğunluğu prioritet hesab etməli və davamlı təkmilləşmə prosesinə investisiya yatırmalıdırlar.</p>
-                </div>
-
-                <p>ASR Group olaraq məqsədimiz Azərbaycanın qida sənayesinin beynəlxalq standartlara uyğunlaşmasına dəstək olmaq, sağlam rəqabət mühitinin formalaşmasına töhfə vermək və qida zəncirinin bütün mərhələlərində təhlükəsizliyin təmin edilməsi üçün peşəkar konsaltinq xidmətləri göstərməkdir.</p>
-            </section>
-
-        </main>
-
-        <aside class="sidebar-right">
-
-            <div class="info-card">
-                <div class="info-card-title"><i class="fas fa-bolt"></i> 2025 Trendləri</div>
-                <div class="trend-item">
-                    <div class="trend-icon"><i class="fas fa-gavel"></i></div>
-                    <div class="trend-content"><h4>Regulyasiya güclənməsi</h4><p>AQTA yeni sanitariya norma və qaydalarını tətbiq edir</p></div>
-                </div>
-                <div class="trend-item">
-                    <div class="trend-icon"><i class="fas fa-globe"></i></div>
-                    <div class="trend-content"><h4>İxracat genişlənməsi</h4><p>BƏƏ və Körfəz ölkələri bazarına çıxış imkanları</p></div>
-                </div>
-                <div class="trend-item">
-                    <div class="trend-icon"><i class="fas fa-certificate"></i></div>
-                    <div class="trend-content"><h4>Halal sertifikatlaşma</h4><p>OIC/SMIIC 1:2011 standartına uyğunluq tələbi</p></div>
-                </div>
-                <div class="trend-item">
-                    <div class="trend-icon"><i class="fas fa-laptop-code"></i></div>
-                    <div class="trend-content"><h4>Rəqəmsal transformasiya</h4><p>Avtomatlaşdırılmış izlənilə bilənlik sistemləri</p></div>
-                </div>
-            </div>
-
-            <div class="video-section-right">
-                <div class="video-section-title"><i class="fas fa-play-circle"></i> Ekspert müsahibələri</div>
-                <div class="video-carousel" id="videoCarouselRight">
-                    <div class="video-wrapper">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop" alt="Video" id="videoThumbRight">
-                        <div class="video-overlay">
-                            <div class="play-btn"><i class="fas fa-play"></i></div>
-                            <span class="video-label" id="videoLabelRight">HACCP praktiki təlim</span>
-                        </div>
-                    </div>
-                    <div class="video-nav">
-                        <button class="video-nav-btn" onclick="changeVideo('right', -1)"><</button>
-                        <span class="video-counter" id="videoCounterRight">1 / 3</span>
-                        <button class="video-nav-btn" onclick="changeVideo('right', 1)">></button>
-                    </div>
-                    <div class="video-dots" id="videoDotsRight">
-                        <span class="video-dot active"></span>
-                        <span class="video-dot"></span>
-                        <span class="video-dot"></span>
-                    </div>
-                </div>
-            </div>
-
-        </aside>
-
-    </div>
-    <!-- ===== ROOT CONTENT END ===== -->
-
-
-    
-  <!-- =========================================
-     FOOTER
-========================================= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="footer-logo" style="margin-bottom: 1.25rem">
-            <img src="images/asr logo.png" alt="ASR Development Consulting Group"
-              style="height: 48px; width: auto; object-fit: contain" />
           </div>
-        </div>
-        <p class="footer-tagline-txt">
-          Strateji həllər, dayanıqlı inkişaf. qida təhlükəsizliyi, idarəetmə
-          və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.
-        </p>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255); position: relative; top: 10px"></i>
-          <span class="footer-contact-text">Bakı, nizami küçəsi 65,<br />AZ1010, Azərbaycan</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255)"></i>
-          <span class="footer-contact-text">+994 12 404 00 00</span>
-        </div>
-        <div class="footer-contact-item">
-          <i class="fa-solid fa-envelope" style="color: rgb(255, 255, 255)"></i>
+        </section>
 
-          <span class="footer-contact-text" style="position: relative; bottom: 3px">office@asrgroup.az</span>
-        </div>
-        <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupagency?igsh=MTBuZ2FxbXA2bDJhdQ%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="#" class="social-link" aria-label="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
-          <a href="https://www.facebook.com/people/ASR-Development-Consulting-Group/61589704797832/?mibextid=wwXIfr&rdid=9gkTzncQSS37AowB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CGhT3M1Lr%2F%3Fmibextid%3DwwXIfr" class="social-link" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="office@asrgroup.az" class="social-link" aria-label="Email">
-            <i class="fa-regular fa-envelope"></i>
-          </a>
-          <a href="https://www.youtube.com/@asrgroupagency" class="social-link" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
+        <div class="blog-wrapper">
 
+          <!-- MƏRKƏZİ MƏTN HİSSƏSİ -->
+          <article class="article-main">
 
+            <section class="article-section" id="section1">
+              <div class="article-header">
+                <div class="article-number">01</div>
+                <h2 class="article-title">AQTA regulyasiyalarının gücləndirilməsi və yeni tələblər</h2>
+              </div>
+              <p>2025-ci ildə Azərbaycan Respublikası Qida Təhlükəsizliyi Agentliyinin (AQTA) regulyasiya çərçivəsi əhəmiyyətli dərəcədə genişlənib. Agentlik tərəfindən təsdiq edilən yeni sanitariya norma və qaydaları qida müəssisələrinin fəaliyyətinə birbaşa təsir göstərir. Xüsusilə, may 2025-ci ildə qəbul edilən qərarlar bioloji aktiv qida məhsullarına, qida məhsulları ilə təmasda olan materiallara və təbii mineral sulara dair yeni tələbləri müəyyənləşdirib.</p>
 
-      <div>
-        <div class="footer-col-title">Xidmətlər</div>
-        <div class="footer-col-links">
-          <a href="#xidmetler-detail">Qida təhlükəsizliyi</a>
-          <a href="#xidmetler-detail">ISO 22000 audit</a>
-          <a href="#xidmetler-detail">HACCP tətbiqi</a>
-          <a href="#xidmetler-detail">Strateji idarəetmə</a>
-          <a href="#xidmetler-detail">HR audit</a>
-          <a href="#xidmetler-detail">Hüquqi ekspertiza</a>
-        </div>
-        <a href="https://wa.me/994504040000"><i class="fa-brands fa-whatsapp whatsapp-icon"
-          style="color: rgb(0, 255, 37); cursor: pointer"></i></a>
-          
-      </div>
-      <div>
-        <div class="footer-col-title">Şirkət</div>
-        <div class="footer-col-links">
-          <a href="#haqqimizda">Haqqımızda</a>
-          <a href="#haqqimizda">Tariximiz</a>
-          <a href="#haqqimizda">Sertifikatlar</a>
-          <a href="#tecrubekm">Layihələr</a>
-          <a href="#qalereya">Qalereya</a>
-          <a href="#bilik-merkezi">Bloq</a>
-        </div>
-      </div>
+              <div class="article-highlight">
+                <p>ASR Group olaraq müəssisələrə tövsiyə edirik ki, 2025-ci ilin ikinci yarısında AQTA-nın yeni qaydalarına uyğunlaşmaq üçün daxili audit proseslərini artırsınlar və risk əsaslı dövlət nəzarətinə hazırlaşsınlar.</p>
+              </div>
 
-      <div>
-        <div class="footer-col-title">Ekspert hovuzu</div>
-        <div class="footer-expert-form">
-          <h4>Komandamıza qoşulun</h4>
-          <p>
-            Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı
-            göndərin.
-          </p>
-          <input type="text" placeholder="Ad Soyad" />
-          <input type="email" placeholder="E-mail ünvanınız" style="margin-top: 0" />
-          <input type="text" placeholder="İxtisas sahəniz" style="margin-top: 8px" />
-          <button onclick="this.textContent = '✓ Göndərildi!'">
-            Müraciət et →
-          </button>
+              <p>Yeni tənzimləmələr çərçivəsində qida müəssisələri üçün əsas dəyişikliklər aşağıdakılardır: enerji içkilərinə dair müvəqqəti sanitariya normalarının tətbiqi, yaxılabilən yağlarda trans yağ turşularının tənzimlənməsi, bitki adı ilə adlandırılan yağlara dair minimum keyfiyyət tələblərinin sərtləşdirilməsi. Bu tələblərə uyğun gəlməyən müəssisələr ciddi cərimə və istehsal dayandırma tədbirləri ilə üzləşə bilərlər.</p>
+
+              <p>Qida Təhlükəsizliyi Təlim Mərkəzi tərəfindən təşkil olunan təlim proqramları artıq müəssisə rəhbərləri, menecerlər, aşpazlar, keyfiyyətə nəzarətçilər və anbardarlar üçün məcburi xarakter daşıyır. Təlimlərin qiyməti 100 AZN-dən 500 AZN-ə qədər dəyişir və uğurla başa vuran iştirakçılara iki illik etibarlılıq müddətinə malik sertifikat verilir.</p>
+            </section>
+
+            <section class="article-section" id="section2">
+              <div class="article-header">
+                <div class="article-number">02</div>
+                <h2 class="article-title">İxracat tələblərinin artması və beynəlxalq standartlara uyğunluq</h2>
+              </div>
+              <p>2025-ci ildə Azərbaycanın qida sənayesi ixracat potensialı artmaqdadır. Birləşmiş Ərəb Əmirlikləri və Körfəz ölkələri bazarına çıxış imkanları genişlənir. Lakin bu imkanlardan yararlanmaq üçün müəssisələr beynəlxalq qida təhlükəsizliyi standartlarına tam uyğunluq təmin etməlidirlər. Xüsusilə, OIC/SMIIC 1:2011 Halal Qida standartına uyğunluq İslam Əməkdaşlıq Təşkilatı ölkələrinə ixracat üçün əsas şərtdir.</p>
+
+              <ul class="article-points">
+                <li><i class="fas fa-check-circle"></i><span>Qida məhsullarının izlənilməsi sistemlərinin qurulması: bir addım geri, bir addım irəli prinsipi ilə xammaldan hazır məhsula qədər tam izlənilə bilənlik təmin edilməlidir.</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Təchizatçıların ilkin təsdiqlənməsi və qiymətləndirilməsi: risk əsaslı yanaşma ilə Codex Alimentarius standartlarına və ISO 22000:2018-ə uyğun təchizatçı idarəetmə sistemi tətbiq olunmalıdır.</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Etiketləmə və markalanma qaydalarına uyğunluq: beynəlxalq Codex Alimentarius standartlarına uyğun etiketləmə tələbləri yerinə yetirilməlidir.</span></li>
+                <li><i class="fas fa-check-circle"></i><span>Çirkləndiricilərin yolverilən maksimum miqdarına dair yeni sanitariya normalarının tətbiqi.</span></li>
+              </ul>
+
+              <p>Azərbaycan Respublikasının xarici ticarət tərədaşı olan ölkələrin qida təhlükəsizliyi sahəsində texniki normativ hüquqi aktlarının ekvivalentliyinin tanınması qaydaları da 2025-ci ildə yenilənib. Bu, ixracatçılar üçün həm imkan, həm də öhdəlik deməkdir.</p>
+            </section>
+
+            <section class="article-section" id="section3">
+              <div class="article-header">
+                <div class="article-number">03</div>
+                <h2 class="article-title">HACCP və ISO 22000 standartlarının tətbiqi zərurəti</h2>
+              </div>
+              <p>2025-ci ildə qida zəncirinin bütün mərhələlərində risk əsaslı yanaşmanın tətbiqi zərurəti daha da artıb. HACCP (Təhlükə Analizi və Kritik Nəzarət Nöqtələri) sistemi artıq sadəcə tövsiyə deyil, bir çox qida müəssisəsi üçün məcburi tələbə çevrilib. Qida Təhlükəsizliyi Təlim Mərkəzinin keçirdiyi iki günlük HACCP təlimi müəssisələrə bu sistemin effektiv tətbiqi üçün praktiki biliklər verir.</p>
+
+              <p>HACCP qrupunun yaradılması, məhsulun identifikasiyasının təyini, emal olunan məhsul və sahələr üzrə təhlükə və risk analizinin aparılması, kritik nəzarət nöqtələrinin müəyyənləşdirilməsi prosesləri artıq qida müəssisələrinin gündəlik fəaliyyətinin ayrılmaz hissəsinə çevrilməlidir. ASR Group olaraq müəssisələrə bu proseslərdə metodoloji dəstək və konsaltinq xidmətləri təqdim edirik.</p>
+
+              <div class="article-highlight">
+                <p>Qida müəssisələrinin qida təhlükəsizliyi qeydiyyatına alınması və dövlət reyestrinin aparılması qaydaları çərçivəsində 2025-ci ildə bütün fəaliyyət göstərən subyektlər yenidən qeydiyyatdan keçməlidirlər.</p>
+              </div>
+
+              <p>Təmizlik və dezinfeksiya işlərinin təşkili, sanitariya-gigiyena tədbirlərinin planlaşdırılması, istifadə olunan maddələrin seçimi və təhlükəsizlik tədbirləri üzrə praktiki təlimlər də müəssisələr üçün prioritet təşkil edir. Bu təlimlər iki gün (səkkiz saat) davam edir və praktiki tapşırıqlarla zəngindir.</p>
+            </section>
+
+            <section class="article-section" id="section4">
+              <div class="article-header">
+                <div class="article-number">04</div>
+                <h2 class="article-title">Texnoloji innovasiyalar və rəqəmsal transformasiya</h2>
+              </div>
+              <p>2025-ci ildə qida sənayesində texnoloji innovasiyaların tətbiqi sürətlənib. Distant təlim formatlarının genişlənməsi, elektron sənəd dövriyyəsinin artması və laboratoriyalarda ixtisasartırma kurslarının təşkili bu tendensiyanın göstəriciləridir. Qida Təhlükəsizliyi Təlim Mərkəzi artıq təlimləri həm oyanı, həm də distant (Zoom platforması üzərindən) formatda keçirir.</p>
+
+              <p>Müəssisələr üçün əsas texnoloji yeniliklər aşağıdakılardır: temperatur nəzarətinin avtomatlaşdırılması, soyudulmuş və dondurulmuş məhsulların daşınması və saxlanması zamanı sensor sistemlərin tətbiqi, qida məhsullarının partiya izlənilməsi üçün rəqəmsal platformaların qurulması, insident və böhran hallarında geri çağırma və riskə əsaslanan cavab mexanizmlərinin avtomatlaşdırılması.</p>
+
+              <ul class="article-points">
+                <li><i class="fas fa-microchip"></i><span>Avtomatlaşdırılmış temperatur monitorinqi sistemləri ilə soyuducu zəncirin bütün mərhələlərində real vaxt rejimində nəzarət.</span></li>
+                <li><i class="fas fa-qrcode"></i><span>Rəqəmsal izlənilə bilənlik sistemləri vasitəsilə xammaldan son istehlakçıya qədər məhsulun hərəkətinin izlənilməsi.</span></li>
+                <li><i class="fas fa-flask"></i><span>Laboratoriyalarda müasir analiz metodlarının tətbiqi və ixtisasartırma kurslarının keçirilməsi.</span></li>
+              </ul>
+            </section>
+
+            <section class="article-section" id="section5">
+              <div class="article-header">
+                <div class="article-number">05</div>
+                <h2 class="article-title">ASR Group ilə əməkdaşlıq və konsaltinq xidmətləri</h2>
+              </div>
+              <p>ASR Group olaraq 2025-ci ildə qida sənayesində fəaliyyət göstərən müəssisələrə kompleks dəstək xidmətləri təqdim edirik. Təcrübəli ekspertlərimiz tərəfindən həyata keçirilən təlim proqramları, daxili audit xidmətləri və beynəlxalq standartlara uyğunluq konsaltinqi müəssisələrin rəqabət qabiliyyətini artırmağa yönəlib.</p>
+
+              <p>Xidmətlərimiz çərçivəsində müəssisələrə aşağıdakı sahələrdə dəstək göstəririk: qida təhlükəsizliyi idarəetmə sistemlərinin qurulması və sertifikatlaşdırılması, HACCP planlarının hazırlanması və tətbiqi, təchizatçıların qiymətləndirilməsi və təsdiqlənməsi proseslərinin təşkili, qida məhsullarının etiketlənməsi və markalanması üzrə ekspertiza, AQTA yoxlamalarına hazırlıq və müşayiət.</p>
+
+              <div class="article-highlight">
+                <p>2025-ci ildə qida sənayesində uğurlu fəaliyyət göstərmək üçün müəssisələr proaktiv yanaşma ilə yeni tələblərə vaxtında uyğunlaşmalı, beynəlxalq standartlara uyğunluğu prioritet hesab etməli və davamlı təkmilləşmə prosesinə investisiya yatırmalıdırlar.</p>
+              </div>
+
+              <p>ASR Group olaraq məqsədimiz Azərbaycanın qida sənayesinin beynəlxalq standartlara uyğunlaşmasına dəstək olmaq, sağlam rəqabət mühitinin formalaşmasına töhfə vermək və qida zəncirinin bütün mərhələlərində təhlükəsizliyin təmin edilməsi üçün peşəkar konsaltinq xidmətləri göstərməkdir.</p>
+            </section>
+
+          </article>
+
+          <!-- SAĞ DAXİLİ WIDGET-LAR -->
+          <aside class="blog-widgets">
+
+            <div class="blog-widget">
+              <div class="blog-widget-title"><i class="fas fa-bolt"></i> 2025 Trendləri</div>
+              <div class="trend-row">
+                <div class="trend-icon-box"><i class="fas fa-gavel"></i></div>
+                <div class="trend-info"><h4>Regulyasiya güclənməsi</h4><p>AQTA yeni sanitariya norma və qaydalarını tətbiq edir</p></div>
+              </div>
+              <div class="trend-row">
+                <div class="trend-icon-box"><i class="fas fa-globe"></i></div>
+                <div class="trend-info"><h4>İxracat genişlənməsi</h4><p>BƏƏ və Körfəz ölkələri bazarına çıxış imkanları</p></div>
+              </div>
+              <div class="trend-row">
+                <div class="trend-icon-box"><i class="fas fa-certificate"></i></div>
+                <div class="trend-info"><h4>Halal sertifikatlaşma</h4><p>OIC/SMIIC 1:2011 standartına uyğunluq tələbi</p></div>
+              </div>
+              <div class="trend-row">
+                <div class="trend-icon-box"><i class="fas fa-laptop-code"></i></div>
+                <div class="trend-info"><h4>Rəqəmsal transformasiya</h4><p>Avtomatlaşdırılmış izlənilə bilənlik sistemləri</p></div>
+              </div>
+            </div>
+
+            <div class="blog-video">
+              <div class="blog-video-title"><i class="fas fa-video"></i> Video təlimlər</div>
+              <div class="video-carousel" id="videoCarouselLeft">
+                <div class="video-box">
+                  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop" alt="Video" id="videoThumbLeft">
+                  <div class="video-overlay">
+                    <div class="video-play"><i class="fas fa-play"></i></div>
+                    <span class="video-tag" id="videoLabelLeft">AQTA yenilikləri 2025</span>
+                  </div>
+                </div>
+                <div class="video-nav">
+                  <button class="video-nav-btn" onclick="changeVideo('left', -1)"><</button>
+                  <span class="video-counter" id="videoCounterLeft">1 / 3</span>
+                  <button class="video-nav-btn" onclick="changeVideo('left', 1)">></button>
+                </div>
+                <div class="video-dots" id="videoDotsLeft">
+                  <span class="video-dot active"></span>
+                  <span class="video-dot"></span>
+                  <span class="video-dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-video">
+              <div class="blog-video-title"><i class="fas fa-play-circle"></i> Ekspert müsahibələri</div>
+              <div class="video-carousel" id="videoCarouselRight">
+                <div class="video-box">
+                  <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop" alt="Video" id="videoThumbRight">
+                  <div class="video-overlay">
+                    <div class="video-play"><i class="fas fa-play"></i></div>
+                    <span class="video-tag" id="videoLabelRight">HACCP praktiki təlim</span>
+                  </div>
+                </div>
+                <div class="video-nav">
+                  <button class="video-nav-btn" onclick="changeVideo('right', -1)"><</button>
+                  <span class="video-counter" id="videoCounterRight">1 / 3</span>
+                  <button class="video-nav-btn" onclick="changeVideo('right', 1)">></button>
+                </div>
+                <div class="video-dots" id="videoDotsRight">
+                  <span class="video-dot active"></span>
+                  <span class="video-dot"></span>
+                  <span class="video-dot"></span>
+                </div>
+              </div>
+            </div>
+
+          </aside>
+
         </div>
-      </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             FOOTER (Sizin kodlarınız — tam görünür)
+             ═══════════════════════════════════════════════════════════ -->
+        <footer id="footer">
+          <div class="footer-top">
+            <div class="footer-col">
+              <a href="#" class="logo" style="position: static; right: auto; margin-bottom: 12px;">
+                <i class="fas fa-shield-halved" style="color: var(--gold); font-size: 20px;"></i>
+                <span style="font-weight: 800; color: var(--heading); font-size: 18px;">ASR Group</span>
+              </a>
+              <p class="footer-tagline-txt">Azərbaycanın qida təhlükəsizliyi sahəsində lider konsaltinq və təlim şirkəti. Beynəlxalq standartlara uyğunluq, sertifikatlaşdırma və davamlı inkişaf.</p>
+              <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <span class="footer-contact-text">+994 12 123 45 67</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <span class="footer-contact-text">info@asrgroup.az</span>
+              </div>
+              <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="footer-contact-text">Bakı, Azərbaycan</span>
+              </div>
+              <a href="#" class="footer-wa-btn">
+                <i class="fab fa-whatsapp"></i> WhatsApp ilə yaz
+              </a>
+              <div class="social-icons-container">
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Sürətli keçidlər</h4>
+              <div class="footer-col-links">
+                <a href="#">Haqqımızda</a>
+                <a href="#">Xidmətlər</a>
+                <a href="#">Sektorlar</a>
+                <a href="#">Təcrübəmiz</a>
+                <a href="#">Bilik Mərkəzi</a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h4 class="footer-col-title">Xidmətlər</h4>
+              <div class="footer-col-links">
+                <a href="#">Qida Təhlükəsizliyi</a>
+                <a href="#">ISO 22000</a>
+                <a href="#">HACCP</a>
+                <a href="#">Halal Sertifikat</a>
+                <a href="#">Daxili Audit</a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <div class="footer-expert-form">
+                <h4>Ekspert məsləhəti</h4>
+                <p>Özünüzü təsdiq edin, biz sizinlə əlaqə saxlayaq</p>
+                <input type="text" placeholder="Adınız">
+                <input type="tel" placeholder="Telefon nömrəniz">
+                <button>Göndər</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <span class="footer-copy">© 2025 ASR Group. Bütün hüquqlar qorunur.</span>
+            <div class="trust-badges">
+              <span class="trust-badge">ISO 9001</span>
+              <span class="trust-badge">ISO 22000</span>
+              <span class="trust-badge">HACCP</span>
+            </div>
+          </div>
+        </footer>
+
+      </main>
     </div>
-    <div class="trust-badges">
-      <span class="trust-badge">ISO akkreditasiyalı</span>
-      <span class="trust-badge">HACCP sertifikatlı</span>
-      <span class="trust-badge">AQTA tərəfdaşı</span>
-      <span class="trust-badge">BRCGS icazəli</span>
-    </div>
 
-    <div class="footer-bottom" style="margin: auto">
-      <span class="footer-copy" style="margin: auto">© <span id="footer-year"></span> ASR Development Consulting Group.
-        Bütün hüquqlar qorunur.
-      </span>
-    </div>
-    <p style="
-          text-align: center;
-          font-size: 12px;
-          font-weight: 600;
-          color: #aaacac;
-          position: relative;
-          bottom: 20px;
-        ">
-      Designed By Elmaddin
-    </p>
-  </footer>
-  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
+    <!-- Fixed elements -->
+    <button class="back-to-top" id="backToTop" aria-label="Yuxarı">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
-  <script src="app.js"></script>
-  <script type="text/javascript" src="darkmode.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
-
-
+    <a href="https://wa.me/994501234567" class="whatsapp-icon" target="_blank" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+    </a>
+      <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
 
     <script>
-        const videoData = {
-            left: [
-                { thumb: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop', label: 'AQTA yenilikləri 2025' },
-                { thumb: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=400&h=225&fit=crop', label: 'Qida təhlükəsizliyi audit' },
-                { thumb: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=225&fit=crop', label: 'ISO 22000 tətbiqi' }
-            ],
-            right: [
-                { thumb: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop', label: 'HACCP praktiki təlim' },
-                { thumb: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=225&fit=crop', label: 'İxracat standartları' },
-                { thumb: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=225&fit=crop', label: 'Laboratoriya analizləri' }
-            ]
-        };
-        const currentIndex = { left: 0, right: 0 };
-        function changeVideo(side, direction) {
-            const data = videoData[side];
-            currentIndex[side] += direction;
-            if (currentIndex[side] < 0) currentIndex[side] = data.length - 1;
-            else if (currentIndex[side] >= data.length) currentIndex[side] = 0;
-            updateVideoDisplay(side);
-        }
-        function updateVideoDisplay(side) {
-            const data = videoData[side];
-            const index = currentIndex[side];
-            const cap = side.charAt(0).toUpperCase() + side.slice(1);
-            document.getElementById('videoThumb' + cap).src = data[index].thumb;
-            document.getElementById('videoLabel' + cap).textContent = data[index].label;
-            document.getElementById('videoCounter' + cap).textContent = (index + 1) + ' / ' + data.length;
-            const dots = document.getElementById('videoDots' + cap).children;
-            for (let i = 0; i < dots.length; i++) dots[i].classList.toggle('active', i === index);
-        }
-        const sections = document.querySelectorAll('.content-section');
-        const tocLinks = document.querySelectorAll('.toc-list a');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => { if (scrollY >= section.offsetTop - 200) current = section.getAttribute('id'); });
-            tocLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === '#' + current) link.classList.add('active'); });
+      /* ═══════════════════════════════════════════════════════════
+         VİDEO KARUSEL
+         ═══════════════════════════════════════════════════════════ */
+      const videoData = {
+        left: [
+          { thumb: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop', label: 'AQTA yenilikləri 2025' },
+          { thumb: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=400&h=225&fit=crop', label: 'Qida təhlükəsizliyi audit' },
+          { thumb: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=225&fit=crop', label: 'ISO 22000 tətbiqi' }
+        ],
+        right: [
+          { thumb: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop', label: 'HACCP praktiki təlim' },
+          { thumb: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=225&fit=crop', label: 'İxracat standartları' },
+          { thumb: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=225&fit=crop', label: 'Laboratoriya analizləri' }
+        ]
+      };
+      const currentIndex = { left: 0, right: 0 };
+
+      function changeVideo(side, direction) {
+        const data = videoData[side];
+        currentIndex[side] += direction;
+        if (currentIndex[side] < 0) currentIndex[side] = data.length - 1;
+        else if (currentIndex[side] >= data.length) currentIndex[side] = 0;
+        updateVideoDisplay(side);
+      }
+
+      function updateVideoDisplay(side) {
+        const data = videoData[side];
+        const index = currentIndex[side];
+        const cap = side.charAt(0).toUpperCase() + side.slice(1);
+        document.getElementById('videoThumb' + cap).src = data[index].thumb;
+        document.getElementById('videoLabel' + cap).textContent = data[index].label;
+        document.getElementById('videoCounter' + cap).textContent = (index + 1) + ' / ' + data.length;
+        const dots = document.getElementById('videoDots' + cap).children;
+        for (let i = 0; i < dots.length; i++) dots[i].classList.toggle('active', i === index);
+      }
+
+      /* ═══════════════════════════════════════════════════════════
+         SCROLLSPY: Aktiv bölmənin işıqlanması
+         ═══════════════════════════════════════════════════════════ */
+      const blogContent = document.getElementById('blogContent');
+      const articleSections = document.querySelectorAll('.article-section');
+      const tocLinks = document.querySelectorAll('.blog-toc-list a');
+
+      function updateActiveLink() {
+        let current = '';
+        const scrollPos = blogContent.scrollTop + 160;
+
+        articleSections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (scrollPos >= sectionTop) {
+            current = section.getAttribute('id');
+          }
         });
+
+        if (!current && articleSections.length > 0) {
+          current = articleSections[0].getAttribute('id');
+        }
+
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      blogContent.addEventListener('scroll', () => {
+        updateActiveLink();
+
+        // Navbar scrolled state
+        const navbar = document.getElementById('navbar');
+        if (blogContent.scrollTop > 10) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+
+        // Back to top
+        const backToTop = document.getElementById('backToTop');
+        if (blogContent.scrollTop > 600) backToTop.classList.add('show');
+        else backToTop.classList.remove('show');
+      });
+
+      tocLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            blogContent.scrollTo({
+              top: targetSection.offsetTop - 20,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      updateActiveLink();
+
+      /* ═══════════════════════════════════════════════════════════
+         TEMA DƏYİŞDİRİCİ (Sizin kodlarınızla uyğun)
+         ═══════════════════════════════════════════════════════════ */
+      document.getElementById('theme-switch').addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+
+      /* ═══════════════════════════════════════════════════════════
+         MOBİL NAV (Sizin kodlarınızla uyğun)
+         ═══════════════════════════════════════════════════════════ */
+      document.querySelector('.nav-toggle').addEventListener('click', function() {
+        this.classList.toggle('open');
+        document.getElementById('mobileNav').classList.toggle('open');
+      });
+
+      document.querySelectorAll('.mobile-chevron-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          this.closest('.mobile-nav-item').querySelector('.mobile-sub').classList.toggle('open');
+        });
+      });
+
+      /* ═══════════════════════════════════════════════════════════
+         BACK TO TOP
+         ═══════════════════════════════════════════════════════════ */
+      document.getElementById('backToTop').addEventListener('click', () => {
+        blogContent.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     </script>
 
 </body>
