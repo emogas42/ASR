@@ -1937,10 +1937,13 @@ body.modal-open { overflow: hidden; }
   padding: 4px 10px;
   transition: background 0.2s, border-color 0.2s;
 }
-.exp-card:hover .exp-cert-badge {
-  background: var(--haqqimizda-title);
-  border-color: var(--border);
+
+.dark-mode .exp-cert-badge {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+  color: #fff;
 }
+
 
 
 
@@ -2865,6 +2868,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
  
 /* Subtitle */
 .asr-svc-subtitle {
+  margin-top: 4%;
   font-size: 0.9375rem;
   color: var(--text-muted);
   line-height: 1.85;
@@ -3633,6 +3637,11 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   .flame-banner-content{ bottom: 24px; width: 90%; }
 }
 
+.dark-mode .exp-cert-badge:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.1);
+  color: #fff;
+}
 .section-wrapper {
             max-width: 1200px;
             margin: 0 auto;

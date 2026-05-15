@@ -70,4 +70,148 @@
         localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
       });
     }
+
+    /* ═══════════════════════════════════════════════════════════════════
+   xidmetler-03claude.js
+   — YALNIZ .process-section üçün:
+     1) HTML strukturunu accordion üçün yenidən qurur
+        (process-step-icon, process-step-title, process-step-desc
+         elementlərini process-step-header + process-step-panel içinə alır)
+     2) Accordion açma/bağlama məntiqini idarə edir
+     3) xidmetler.js-in .process-step GSAP animasiyasını
+        altdan-yuxarı (y:52→0) ilə override edir
+   — Başqa heç bir koda toxunmur.
+   ═══════════════════════════════════════════════════════════════════ */
+ 
+(function () {
+  'use strict';
+ 
+  /* ── 1. HTML-i accordion strukturuna çevir ──────────────────────── */
+  document.querySelectorAll('.process-step').forEach(function (step) {
+ 
+    /* Artıq çevrilib — təkrar işləmə */
+    if (step.querySelector('.process-step-header')) return;
+ 
+    var numEl   = step.querySelector('.process-step-num');
+    var iconEl  = step.querySelector('.process-step-icon');
+    var titleEl = step.querySelector('.process-step-title');
+    var descEl  = step.querySelector('.process-step-desc');
+ 
+    if (!titleEl || !descEl) return;
+ 
+    /* -- Chevron elementi yarat -- */
+    var chevron = document.createElement('span');
+    chevron.className = 'process-step-chevron';
+    chevron.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+    chevron.setAttribute('aria-hidden', 'true');
+ 
+    /* -- Header qrupu -- */
+    var header = document.createElement('div');
+    header.className = 'process-step-header';
+    if (iconEl)  header.appendChild(iconEl);
+    header.appendChild(titleEl);
+    header.appendChild(chevron);
+ 
+    /* -- Panel qrupu -- */
+    var panel = document.createElement('div');
+    panel.className = 'process-step-panel';
+    panel.setAttribute('role', 'region');
+    panel.appendChild(descEl);
+ 
+    /* -- Body qrupu -- */
+    var body = document.createElement('div');
+    body.className = 'process-step-body';
+    body.appendChild(header);
+    body.appendChild(panel);
+ 
+    /* Step içindəki hər şeyi sil, yenisini qur */
+    /* numEl-i özü saxlayırıq (step-in birbaşa uşağı kimi) */
+    while (step.firstChild) step.removeChild(step.firstChild);
+    if (numEl) step.appendChild(numEl);
+    step.appendChild(body);
+ 
+    /* Accessibility */
+    step.setAttribute('role', 'button');
+    step.setAttribute('aria-expanded', 'false');
+    step.setAttribute('tabindex', '0');
+  });
+ 
+  /* ── 2. Accordion click / keyboard məntiq ───────────────────────── */
+  var steps = Array.from(document.querySelectorAll('.process-step'));
+ 
+  function openStep(step) {
+    step.classList.add('ps-open');
+    step.setAttribute('aria-expanded', 'true');
+  }
+ 
+  function closeStep(step) {
+    step.classList.remove('ps-open');
+    step.setAttribute('aria-expanded', 'false');
+  }
+ 
+  function toggleStep(step) {
+    var isOpen = step.classList.contains('ps-open');
+ 
+    /* Bütün digərlərini bağla */
+    steps.forEach(function (s) { if (s !== step) closeStep(s); });
+ 
+    if (isOpen) {
+      closeStep(step);
+    } else {
+      openStep(step);
+    }
+  }
+ 
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () {
+      toggleStep(step);
+    });
+    step.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleStep(step);
+      }
+    });
+  });
+ 
+  /* İlk addımı avtomatik aç */
+  if (steps.length > 0) openStep(steps[0]);
+ 
+  /* ── 3. GSAP: mövcud .process-step ScrollTrigger-ləri kill et ────── */
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    /* GSAP yoxdursa, sadəcə görünür et */
+    steps.forEach(function (s) {
+      s.style.opacity = '1';
+      s.style.transform = 'none';
+    });
+    return;
+  }
+ 
+  ScrollTrigger.getAll().forEach(function (st) {
+    var el = st.trigger;
+    if (el && el.classList && el.classList.contains('process-step')) {
+      st.kill();
+      gsap.set(el, { clearProps: 'all' });
+    }
+  });
+ 
+  /* ── 4. Yeni animasiya: altdan yuxarı, stagger ──────────────────── */
+  steps.forEach(function (el, i) {
+    gsap.set(el, { opacity: 0, y: 52 });
+ 
+    gsap.to(el, {
+      opacity   : 1,
+      y         : 0,
+      duration  : 0.68,
+      ease      : 'power3.out',
+      delay     : i * 0.09,
+      scrollTrigger: {
+        trigger      : el,
+        start        : 'top 91%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+ 
+})();
     
