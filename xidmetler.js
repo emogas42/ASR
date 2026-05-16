@@ -37,7 +37,7 @@
     if (mobileToggle && mobileNav) {
       mobileToggle.addEventListener('click', () => {
         mobileNav.classList.toggle('open');
-        mobileToggle.classList.toggle('active');
+        mobileToggle.classList.toggle('open');
       });
     }
  
@@ -48,7 +48,7 @@
         const sub = row.querySelector('.mobile-sub');
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!isOpen));
-        if (sub) sub.style.display = isOpen ? 'none' : 'flex';
+        if (sub) sub.classList.toggle('open', !isOpen);
       });
     });
  
@@ -214,4 +214,5 @@
   });
  
 })();
-    
+
+  

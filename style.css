@@ -3488,9 +3488,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   background-color: rgb(72, 229, 148);
   animation: install 1s ease-in-out;
 }
-.dark-mode .bg-dark-blue{
 
-}
 @keyframes install {
   0% {
     width: 0%;
