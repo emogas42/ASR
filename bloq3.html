@@ -20,6 +20,7 @@
 <body>
 
 
+
   <nav id="navbar">
     <div class="nav-inner">
       <!-- Logo -->
@@ -632,6 +633,7 @@
   <button class="back-to-top" id="backToTop" aria-label="Yuxarı">
     <i class="fas fa-arrow-up"></i>
   </button>
+  
 
 
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
@@ -733,10 +735,12 @@
 
     b3updateActiveLink();
 
-    // Tema deyishdirici
+    // ========== YENI: Tema deyishdirici + localStorage sync ==========
     document.getElementById('theme-switch').addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
+      localStorage.setItem('asr-theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
     });
+    // ========== /YENI ==========
 
     // Mobil nav toggle
     document.getElementById('mobileToggle').addEventListener('click', function () {
@@ -756,8 +760,10 @@
     document.getElementById('backToTop').addEventListener('click', () => {
       b3content.scrollTo({ top: 0, behavior: 'smooth' });
     });
+     if (localStorage.getItem('asr-theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
   </script>
-
 </body>
 
 </html>
