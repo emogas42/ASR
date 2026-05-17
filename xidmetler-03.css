@@ -988,7 +988,7 @@ body.dark-mode .exp-arrow:hover {
   transition: color 0.3s ease;
 }
 .process-step.ps-open .process-step-title {
-  color: var(--navy);
+  color: var(--haqqimizda-title);
 }
  
 /* Chevron */
