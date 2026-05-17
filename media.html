@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Media & Xəbərlər | ASR Group</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="icon" type="image/png" href="images/asr group png.png" />
+
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="media.css">
+<base target="_blank">
 <base target="_blank">
 <base target="_blank">
 </head>
@@ -387,7 +390,7 @@
         </div>
         <div class="news-grid compact">
             <!-- Tədbir 1 -->
-            <div class="news-card" data-tab="events" onclick="toggleEventCard(this)">
+            <div class="news-card" id="event-card-1" data-tab="events" onclick="toggleCard('event-card-1')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&q=90" alt="Tədbir 1">
                     <div class="nc-img-content">
@@ -424,7 +427,7 @@
             </div>
 
             <!-- Tədbir 2 -->
-            <div class="news-card" data-tab="events" onclick="toggleEventCard(this)">
+            <div class="news-card" id="event-card-2" data-tab="events" onclick="toggleCard('event-card-2')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop&q=90" alt="Tədbir 2">
                     <div class="nc-img-content">
@@ -461,7 +464,7 @@
             </div>
 
             <!-- Tədbir 3 -->
-            <div class="news-card" data-tab="events" onclick="toggleEventCard(this)">
+            <div class="news-card" id="event-card-3" data-tab="events" onclick="toggleCard('event-card-3')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=90" alt="Tədbir 3">
                     <div class="nc-img-content">
@@ -498,7 +501,7 @@
             </div>
 
             <!-- Tədbir 4 -->
-            <div class="news-card" data-tab="events" onclick="toggleEventCard(this)">
+            <div class="news-card" id="event-card-4" data-tab="events" onclick="toggleCard('event-card-4')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=90" alt="Tədbir 4">
                     <div class="nc-img-content">
@@ -535,7 +538,7 @@
             </div>
 
             <!-- Tədbir 5 -->
-            <div class="news-card" data-tab="events" onclick="toggleEventCard(this)">
+            <div class="news-card" id="event-card-5" data-tab="events" onclick="toggleCard('event-card-5')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&q=90" alt="Tədbir 5">
                     <div class="nc-img-content">
@@ -581,7 +584,7 @@
         </div>
         <div class="news-grid compact">
             <!-- Kart 1 - Elxan Mikayılov -->
-            <div class="news-card" data-tab="news" onclick="toggleNewsCard(this)">
+            <div class="news-card" id="news-card-1" data-tab="news" onclick="toggleCard('news-card-1')">
                 <div class="nc-img">
                     <img src="images/elxanmikayilov.png" alt="Elxan Mikayılov tədbirdə">
                     <div class="nc-img-content">
@@ -618,7 +621,7 @@
             </div>
 
             <!-- Kart 2 - Beynəlxalq Tədbir -->
-            <div class="news-card" data-tab="news" onclick="toggleNewsCard(this)">
+            <div class="news-card" id="news-card-2" data-tab="news" onclick="toggleCard('news-card-2')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=600&fit=crop&q=90" alt="Beynəlxalq tədbir">
                     <div class="nc-img-content">
@@ -655,7 +658,7 @@
             </div>
 
             <!-- Kart 3 - İş Görüşü -->
-            <div class="news-card" data-tab="news" onclick="toggleNewsCard(this)">
+            <div class="news-card" id="news-card-3" data-tab="news" onclick="toggleCard('news-card-3')">
                 <div class="nc-img">
                     <img src="images/avropai.png" alt="İş görüşü">
                     <div class="nc-img-content">
@@ -692,7 +695,7 @@
             </div>
 
             <!-- Kart 4 - Komanda -->
-            <div class="news-card" data-tab="news" onclick="toggleNewsCard(this)">
+            <div class="news-card" id="news-card-4" data-tab="news" onclick="toggleCard('news-card-4')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&q=90" alt="Komanda">
                     <div class="nc-img-content">
@@ -729,7 +732,7 @@
             </div>
 
             <!-- Kart 5 - Təlim -->
-            <div class="news-card" data-tab="news" onclick="toggleNewsCard(this)">
+            <div class="news-card" id="news-card-5" data-tab="news" onclick="toggleCard('news-card-5')">
                 <div class="nc-img">
                     <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800&h=600&fit=crop&q=90" alt="Təlim proqramı">
                     <div class="nc-img-content">
@@ -1050,53 +1053,34 @@
 <script>
 // ===== TAB SWITCHING =====
 function switchMediaTab(tabName, clickedBtn) {
-    // Remove active from all tabs
     document.querySelectorAll('.media-tab').forEach(function(tab) {
         tab.classList.remove('active');
     });
-    // Add active to clicked tab
     clickedBtn.classList.add('active');
-
-    // Hide all tab contents
     document.querySelectorAll('.tab-content').forEach(function(content) {
         content.classList.remove('active');
     });
-    // Show selected tab content
     var selectedTab = document.getElementById('tab-' + tabName);
     if (selectedTab) {
         selectedTab.classList.add('active');
     }
 }
 
-// ===== EVENT CARDS - Only one open at a time =====
-function toggleEventCard(card) {
-    var isActive = card.classList.contains('active');
-    // Get the parent container (news-grid)
-    var container = card.closest('.news-grid');
-    // Close only cards in THIS container
-    if (container) {
-        container.querySelectorAll('.news-card').forEach(function(c) {
-            c.classList.remove('active');
-        });
-    }
-    // Open clicked card if it wasn't active
-    if (!isActive) {
-        card.classList.add('active');
-    }
-}
+// ===== UNIVERSAL CARD TOGGLE - Only the clicked card opens/closes =====
+function toggleCard(cardId) {
+    var card = document.getElementById(cardId);
+    if (!card) return;
 
-// ===== NEWS CARDS - Only one open at a time =====
-function toggleNewsCard(card) {
+    // Check if this card is currently active
     var isActive = card.classList.contains('active');
-    // Get the parent container (news-grid)
-    var container = card.closest('.news-grid');
-    // Close only cards in THIS container
-    if (container) {
-        container.querySelectorAll('.news-card').forEach(function(c) {
-            c.classList.remove('active');
-        });
+
+    // Close ALL cards EVERYWHERE (complete isolation)
+    var allCards = document.querySelectorAll('.news-card');
+    for (var i = 0; i < allCards.length; i++) {
+        allCards[i].classList.remove('active');
     }
-    // Open clicked card if it wasn't active
+
+    // If the clicked card wasn't active, open it now
     if (!isActive) {
         card.classList.add('active');
     }
@@ -1106,15 +1090,14 @@ function toggleNewsCard(card) {
 function scrollMedia(containerId, direction) {
     var container = document.getElementById(containerId + '-scroll');
     if (container) {
-        var scrollAmount = 340;
         container.scrollBy({
-            left: direction * scrollAmount,
+            left: direction * 340,
             behavior: 'smooth'
         });
     }
 }
 
-// ===== FAQ ACCORDION (keep existing) =====
+// ===== FAQ ACCORDION =====
 function toggleFaq(el) {
     var item = el.parentElement;
     var isActive = item.classList.contains('active');
