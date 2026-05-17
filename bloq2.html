@@ -1,1871 +1,24 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASR Group - Blog | ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>
- *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body { overflow-x: hidden; position: relative; width: 100%; }
-        html { scroll-behavior: smooth; font-size: 16px; }
-        body {
-          font-family: "Montserrat", sans-serif;
-          background: var(--bg);
-          color: var(--text);
-          -webkit-font-smoothing: antialiased;
-          transition: background 0.35s ease, color 0.35s ease;
-        }
-        img { max-width: 100%; display: block; }
-        a { text-decoration: none; }
-        ul { list-style: none; }
-        button, input, textarea, select { font-family: inherit; cursor: pointer; }
-
-        /* --- CSS VARIABLES — LIGHT MODE (default) --- */
-        :root {
-          --navy:           #1b4280;
-          --navy-dark:      #0b1f3a;
-          --navy-mid:       #2a5298;
-          --navy-light:     #3a6abf;
-          --gold:           #c8922a;
-          --gold-bright:    #e4a832;
-          --gold-pale:      #faf3e0;
-          --orange:         #cf5e12;
-          --white:          #ffffff;
-          --off-white:      #f9f8f6;
-          --gray-mid:       #9c9487;
-
-          --bg:             #ffffff;
-          --bg-secondary:   #f9f8f6;
-          --bg-section:     #f5f6f8;
-          --bg-card:        #ffffff;
-          --surface:        #ffffff;
-          --stat-bg:        #f0f4ff;
-          --nav-bg:         rgba(255,255,255,0.97);
-
-          --text:           #1a1810;
-          --text-2:         #4b5362;
-          --text-muted:     #64594e;
-          --text-light:     #9c9487;
-          --stat-txt:       #1a56db;
-          --eyebrow:        #1a56db;
-          --heading:        #0b1f3a;
-          --heading-sub:    #4e4840;
-          --haqqimizda-title: #0b1f3a;
-
-          --accent:         #1a56db;
-          --accent-light:   #e8f0fd;
-          --border:         #e2ddd4;
-          --border-hover:   #c8c0b4;
-          --nav-border:     rgba(11,31,58,0.1);
-
-          --shadow-sm:      0 2px 8px rgba(11,31,58,0.07);
-          --shadow-md:      0 8px 32px rgba(11,31,58,0.11);
-          --shadow-lg:      0 24px 56px rgba(11,31,58,0.12);
-          --shadow:         0 2px 16px rgba(0,0,0,.07);
-          --shadow-hover:   0 8px 32px rgba(0,0,0,.13);
-          --transition:     0.4s cubic-bezier(0.16,1,0.3,1);
-          --trans:          .25s ease;
-
-          --radius-sm:      6px;
-          --radius-md:      10px;
-          --radius-lg:      16px;
-          --radius-xl:      24px;
-          --radius:         12px;
-          --slide-h:        580px;
-        }
-
-        /* --- DARK MODE --- */
-        .dark-mode, [data-theme="dark"] {
-          --navy:           #030d1a;
-          --navy-dark:      #020b18;
-          --navy-mid:       #0a1e36;
-          --navy-light:     #0f2d56;
-          --gold:           #d4a040;
-          --gold-bright:    #e8b84b;
-          --gold-pale:      #1e1608;
-          --orange:         #d96820;
-          --white:          #0d1f35;
-          --off-white:      #0b1828;
-          --gray-mid:       #6a7f96;
-
-          --bg:             #060f1c;
-          --bg-secondary:   #0b1828;
-          --bg-section:     #161922;
-          --bg-card:        #0d1f35;
-          --surface:        #1c2030;
-          --stat-bg:        #1a2540;
-          --nav-bg:         rgba(3,13,26,0.97);
-
-          --text:           #dcd5c5;
-          --text-2:         #8b93a8;
-          --text-muted:     #8a9bb0;
-          --text-light:     #6a7f96;
-          --stat-txt:       #4d87f5;
-          --eyebrow:        #4d87f5;
-          --heading:        #e8e0d0;
-          --heading-sub:    #b0bfcc;
-          --haqqimizda-title: #e8e0d0;
-
-          --accent:         #4d87f5;
-          --accent-light:   #1a2540;
-          --border:         #1a3150;
-          --border-hover:   #2a4a6a;
-          --nav-border:     rgba(200,146,42,0.12);
-
-          --shadow-sm:      0 2px 8px rgba(0,0,0,0.4);
-          --shadow-md:      0 8px 32px rgba(0,0,0,0.5);
-          --shadow-lg:      0 24px 56px rgba(0,0,0,0.55);
-          --shadow:         0 2px 16px rgba(0,0,0,.35);
-          --shadow-hover:   0 8px 32px rgba(0,0,0,.5);
-        }
-
-        :root {
-          --gold: #c8922a;
-          --gold-bright: #e0aa48;
-          --gold-pale: rgba(200, 146, 42, 0.08);
-          --orange: #d4762a;
-          --navy: #1b4280;
-          --navy-dark: #122d5a;
-          --bg-section: #f6f8fc;
-          --bg-card: #ffffff;
-          --heading: #0f1e36;
-          --text: #3a4a5e;
-          --text-muted: #6b7c94;
-          --border: rgba(27, 66, 128, 0.1);
-          --radius-lg: 16px;
-          --radius-md: 10px;
-          --shadow-sm: 0 2px 12px rgba(27, 66, 128, 0.07);
-          --shadow-hover: 0 16px 48px rgba(27, 66, 128, 0.15);
-        }
-        .dark-mode {
-          --bg-section: #0c1525;
-          --bg-card: #131f35;
-          --heading: #e8eef8;
-          --text: #a8bcd6;
-          --text-muted: #6b82a2;
-          --border: rgba(255, 255, 255, 0.08);
-          --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.3);
-          --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.4);
-        }
-
-        .dm-toggle {
-          position: fixed;
-          top: 22px;
-          right: 22px;
-          z-index: 999;
-          width: 44px;
-          height: 44px;
-          border-radius: 50%;
-          border: 1.5px solid var(--border);
-          background: var(--bg-card);
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: var(--shadow-sm);
-          transition: all 0.3s;
-        }
-        .dm-toggle:hover { border-color: var(--gold); }
-        .dm-toggle svg {
-          width: 18px;
-          height: 18px;
-          stroke: var(--heading);
-          fill: none;
-          stroke-width: 1.8;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-        }
-
-        /* HERO (Ana səhifə üçün — blogda istifadə edilmir) */
-        .hero {
-          position: relative;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          overflow: hidden;
-          background: linear-gradient(135deg, #123368 0%, #1b4db2 60%, #5791ef 100%);
-        }
-        .dark-mode .hero {
-          background: linear-gradient(135deg, #0c1525 0%, #162e55 60%, #144697 100%);
-        }
-        .hero::after {
-          content: "";
-          position: absolute;
-          top: -20%;
-          right: -10%;
-          width: 700px;
-          height: 700px;
-          background: radial-gradient(circle, rgba(200, 146, 42, 0.15) 0%, transparent 65%);
-          pointer-events: none;
-        }
-        .hero-geo {
-          position: absolute;
-          inset: 0;
-          pointer-events: none;
-          overflow: hidden;
-        }
-        .hero-geo-circle {
-          position: absolute;
-          border-radius: 50%;
-          border: 1px solid rgba(200, 146, 42, 0.1);
-        }
-        .hero-geo-circle:nth-child(1) { width: 600px; height: 600px; bottom: -200px; right: -100px; }
-        .hero-geo-circle:nth-child(2) { width: 350px; height: 350px; top: 5%; left: -60px; border-color: rgba(255, 255, 255, 0.05); }
-        .hero-inner {
-          position: relative;
-          z-index: 2;
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 120px 2rem 6rem;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 4rem;
-          align-items: center;
-        }
-        .hero-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          background: rgba(200, 146, 42, 0.15);
-          border: 1px solid rgba(200, 146, 42, 0.3);
-          border-radius: 100px;
-          padding: 5px 14px;
-          font-size: 0.625rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          color: var(--gold-bright);
-          margin-bottom: 1.5rem;
-          width: fit-content;
-        }
-        .hero-badge-dot {
-          width: 6px;
-          height: 6px;
-          background: var(--gold-bright);
-          border-radius: 50%;
-          animation: pulse-dot 2s ease infinite;
-        }
-        @keyframes pulse-dot {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50% { opacity: 0.5; transform: scale(0.8); }
-        }
-        .hero-eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 0.625rem;
-          font-weight: 700;
-          letter-spacing: 0.25em;
-          text-transform: uppercase;
-          color: var(--gold-bright);
-          margin-bottom: 1.5rem;
-        }
-        .hero-eyebrow-dot {
-          display: inline-block;
-          width: 24px;
-          height: 2px;
-          background: linear-gradient(90deg, var(--gold), var(--gold-bright));
-          border-radius: 2px;
-        }
-        .hero-title {
-          font-size: clamp(2rem, 4.5vw, 3.5rem);
-          font-weight: 900;
-          line-height: 1.08;
-          letter-spacing: -0.03em;
-          color: #fff;
-          margin-bottom: 1.5rem;
-        }
-        .hero-title em {
-          font-style: normal;
-          color: var(--gold-bright);
-          position: relative;
-        }
-        .hero-title em::after {
-          content: "";
-          position: absolute;
-          bottom: 3px;
-          left: 0;
-          right: 0;
-          height: 3px;
-          background: linear-gradient(90deg, var(--gold), var(--gold-bright), transparent);
-          border-radius: 2px;
-          opacity: 0.6;
-        }
-        .hero-desc {
-          font-size: 1rem;
-          color: rgba(255, 255, 255, 0.65);
-          line-height: 1.85;
-          max-width: 480px;
-          margin-bottom: 2.5rem;
-        }
-        .hero-cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
-        .btn-primary {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          color: #fff;
-          font-family: "Montserrat", sans-serif;
-          font-size: 0.75rem;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 14px 28px;
-          border-radius: 100px;
-          border: none;
-          cursor: pointer;
-          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-          box-shadow: 0 8px 28px rgba(200, 146, 42, 0.4);
-        }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(200, 146, 42, 0.5); }
-        .btn-primary svg {
-          width: 15px;
-          height: 15px;
-          stroke: #fff;
-          fill: none;
-          stroke-width: 2.4;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-        }
-        .btn-ghost {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          background: rgba(255, 255, 255, 0.08);
-          color: rgba(255, 255, 255, 0.85);
-          font-family: "Montserrat", sans-serif;
-          font-size: 0.75rem;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          text-decoration: none;
-          padding: 14px 28px;
-          border-radius: 100px;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          cursor: pointer;
-          transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .btn-ghost:hover { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.25); }
-        .btn-ghost svg {
-          width: 15px;
-          height: 15px;
-          stroke: currentColor;
-          fill: none;
-          stroke-width: 2.2;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-        }
-        .hero-visual { display: flex; flex-direction: column; gap: 16px; }
-        .hero-stat-card {
-          background: rgba(255, 255, 255, 0.06);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: var(--radius-lg);
-          padding: 20px 24px;
-          backdrop-filter: blur(10px);
-          display: flex;
-          align-items: center;
-          gap: 16px;
-          transition: all 0.35s ease;
-        }
-        .hero-stat-card:hover {
-          background: rgba(255, 255, 255, 0.09);
-          border-color: rgba(200, 146, 42, 0.3);
-          transform: translateX(6px);
-        }
-        .hero-stat-icon {
-          width: 46px;
-          height: 46px;
-          border-radius: var(--radius-md);
-          background: linear-gradient(135deg, rgba(200, 146, 42, 0.2), rgba(212, 160, 64, 0.1));
-          border: 1px solid rgba(200, 146, 42, 0.25);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        }
-        .hero-stat-icon svg {
-          width: 22px;
-          height: 22px;
-          stroke: var(--gold-bright);
-          fill: none;
-          stroke-width: 1.8;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-        }
-        .hero-stat-value { font-size: 1.75rem; font-weight: 900; letter-spacing: -0.04em; color: #fff; line-height: 1; }
-        .hero-stat-label { font-size: 0.7rem; color: rgba(255, 255, 255, 0.5); font-weight: 500; margin-top: 3px; }
-        .hero-scroll {
-          position: absolute;
-          bottom: 2.5rem;
-          left: 50%;
-          transform: translateX(-50%);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          z-index: 2;
-        }
-        .hero-scroll span {
-          font-size: 0.5625rem;
-          font-weight: 700;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.3);
-        }
-        .hero-scroll-line {
-          width: 1.5px;
-          height: 40px;
-          background: linear-gradient(to bottom, rgba(200, 146, 42, 0.6), transparent);
-          border-radius: 2px;
-          animation: scroll-bounce 2s ease-in-out infinite;
-        }
-        @keyframes scroll-bounce {
-          0%, 100% { transform: scaleY(1); transform-origin: top; }
-          50% { transform: scaleY(0.5); transform-origin: top; }
-        }
-
-        /* SECTIONS */
-        .section { padding: 6rem 2rem; position: relative; }
-        .section-inner { max-width: 1280px; margin: 0 auto; }
-        .section-header { margin-bottom: 3.5rem; }
-        @media (max-width:768px) { .section .section-header { padding: 0 1.5rem; } }
-        .section-eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 9px;
-          font-size: 0.625rem;
-          font-weight: 700;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-          color: var(--gold);
-          margin-bottom: 1rem;
-        }
-        .section-eyebrow-dot {
-          width: 20px;
-          height: 2px;
-          border-radius: 2px;
-          background: linear-gradient(90deg, var(--gold), var(--gold-bright));
-          display: inline-block;
-        }
-        .section-title {
-          font-size: clamp(1.6rem, 3vw, 2.5rem);
-          font-weight: 800;
-          color: var(--heading);
-          line-height: 1.12;
-          letter-spacing: -0.02em;
-          margin-bottom: 0.75rem;
-        }
-        .section-title em { color: var(--gold); font-style: normal; }
-        .section-subtitle {
-          font-size: 0.9375rem;
-          color: var(--text-muted);
-          line-height: 1.8;
-          max-width: 560px;
-        }
-
-        /* SERVICES GRID */
-        .services-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-          gap: 20px;
-        }
-        .svc-card {
-          background: var(--bg-card);
-          border: 1.2px solid var(--border);
-          border-radius: var(--radius-lg);
-          padding: 28px 26px 24px;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          gap: 14px;
-          box-shadow: var(--shadow-sm);
-          transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s cubic-bezier(0.16,1,0.3,1), border-color 0.4s cubic-bezier(0.16,1,0.3,1);
-        }
-        .svc-card::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2.5px;
-          background: linear-gradient(90deg, var(--gold), var(--gold-bright), transparent);
-          opacity: 0;
-          transition: opacity 0.4s ease;
-        }
-        .svc-card:hover {
-          border-color: var(--gold);
-          box-shadow: var(--shadow-hover);
-          transform: translateY(-5px);
-        }
-        .svc-card:hover::after { opacity: 1; }
-        .svc-num {
-          font-size: 3.5rem;
-          font-weight: 800;
-          color: rgba(27, 66, 128, 0.06);
-          line-height: 1;
-          letter-spacing: -3px;
-          position: absolute;
-          top: 10px;
-          right: 16px;
-          transition: color 0.4s;
-        }
-        .dark-mode .svc-num { color: rgba(200, 146, 42, 0.07); }
-        .svc-card:hover .svc-num { color: rgba(200, 146, 42, 0.12); }
-        .svc-icon-wrap {
-          width: 46px;
-          height: 46px;
-          border-radius: var(--radius-md);
-          background: var(--gold-pale);
-          border: 1px solid rgba(200, 146, 42, 0.18);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          transition: all 0.35s ease;
-        }
-        .svc-card:hover .svc-icon-wrap {
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          border-color: transparent;
-          transform: scale(1.08);
-          box-shadow: 0 6px 20px rgba(200, 146, 42, 0.3);
-        }
-        .svc-icon-wrap svg {
-          width: 20px;
-          height: 20px;
-          stroke: var(--gold);
-          fill: none;
-          stroke-width: 1.75;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-          transition: stroke 0.35s;
-        }
-        .svc-card:hover .svc-icon-wrap svg { stroke: #fff; }
-        .svc-title { font-size: 0.9375rem; font-weight: 700; color: var(--heading); line-height: 1.35; }
-        .svc-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.75; flex: 1; }
-        .svc-footer {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding-top: 12px;
-          border-top: 1px solid var(--border);
-          transition: border-color 0.35s;
-        }
-        .svc-card:hover .svc-footer { border-color: rgba(200, 146, 42, 0.25); }
-        .svc-tag {
-          font-size: 0.5625rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--gold);
-          background: var(--gold-pale);
-          border: 1px solid rgba(200, 146, 42, 0.2);
-          border-radius: 100px;
-          padding: 4px 12px;
-          transition: all 0.3s;
-        }
-        .svc-card:hover .svc-tag {
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          color: #fff;
-          border-color: transparent;
-        }
-
-        /* PROCESS */
-        .process-section { background: var(--bg-card); }
-        .process-steps {
-          display: flex;
-          flex-direction: column;
-          position: relative;
-        }
-        .process-steps::before {
-          content: "";
-          position: absolute;
-          left: 28px;
-          top: 0;
-          bottom: 0;
-          width: 2px;
-          background: linear-gradient(to bottom, var(--gold), transparent);
-        }
-        .process-step { display: flex; gap: 2rem; align-items: flex-start; padding: 20px 0; }
-        .process-step-num {
-          width: 56px;
-          height: 56px;
-          border-radius: 50%;
-          background: var(--bg-card);
-          border: 2px solid var(--gold);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          font-size: 1.1rem;
-          font-weight: 900;
-          color: var(--gold);
-          position: relative;
-          z-index: 1;
-          box-shadow: 0 0 0 6px var(--bg-card);
-          transition: all 0.35s ease;
-        }
-        .process-section .process-step-num { box-shadow: 0 0 0 6px var(--bg-card); }
-        .process-step:hover .process-step-num {
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          color: #fff;
-          box-shadow: 0 0 0 6px var(--bg-card), 0 6px 20px rgba(200, 146, 42, 0.3);
-        }
-        .process-step-body {
-          background: var(--bg-section);
-          border: 1.2px solid var(--border);
-          border-radius: var(--radius-lg);
-          padding: 20px 24px;
-          flex: 1;
-          transition: all 0.35s ease;
-        }
-        .process-step:hover .process-step-body {
-          border-color: var(--gold);
-          box-shadow: var(--shadow-hover);
-          transform: translateX(4px);
-        }
-        .process-step-tag {
-          display: inline-block;
-          font-size: 0.5625rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          color: var(--gold);
-          background: var(--gold-pale);
-          border: 1px solid rgba(200, 146, 42, 0.2);
-          border-radius: 100px;
-          padding: 3px 10px;
-          margin-bottom: 8px;
-        }
-        .process-step-title { font-size: 0.9375rem; font-weight: 700; color: var(--heading); margin-bottom: 5px; }
-        .process-step-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.7; }
-
-        /* FEATURES GRID */
-        .features-section { background: var(--bg-section); }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .feature-card {
-          background: var(--bg-card);
-          border: 1.2px solid var(--border);
-          border-radius: var(--radius-lg);
-          padding: 28px;
-          transition: all 0.35s ease;
-          position: relative;
-          overflow: hidden;
-        }
-        .feature-card:hover {
-          border-color: var(--gold);
-          transform: translateY(-4px);
-          box-shadow: var(--shadow-hover);
-        }
-        .feature-card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, var(--gold), var(--gold-bright), transparent);
-          opacity: 0;
-          transition: opacity 0.4s;
-        }
-        .feature-card:hover::before { opacity: 1; }
-        .feature-icon {
-          width: 46px;
-          height: 46px;
-          border-radius: var(--radius-md);
-          background: var(--white);
-          border: 1px solid rgba(200, 146, 42, 0.18);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-top: 10px;
-          transition: all 0.35s;
-        }
-        .feature-card:hover .feature-icon {
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          border-color: transparent;
-        }
-        .feature-icon svg {
-          width: 20px;
-          height: 20px;
-          stroke: var(--gold);
-          fill: none;
-          stroke-width: 1.75;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-          transition: stroke 0.35s;
-        }
-        .feature-card:hover .feature-icon svg { stroke: #fff; }
-        .feature-title { font-size: 0.9375rem; font-weight: 700; color: var(--heading); margin-bottom: 8px; }
-        .feature-desc { font-size: 0.8125rem; color: var(--text-muted); line-height: 1.75; }
-
-        /* CTA */
-        .cta-section { background: var(--bg-section); padding: 6rem 2rem; }
-        .cta-inner { max-width: 1280px; margin: 0 auto; }
-        .cta-card {
-          background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-          border-radius: 24px;
-          padding: 4rem;
-          position: relative;
-          overflow: hidden;
-          display: grid;
-          grid-template-columns: 1fr auto;
-          gap: 3rem;
-          align-items: center;
-        }
-        .cta-card::before {
-          content: "";
-          position: absolute;
-          top: -50%;
-          right: -10%;
-          width: 500px;
-          height: 500px;
-          background: radial-gradient(circle, rgba(200, 146, 42, 0.12) 0%, transparent 65%);
-          pointer-events: none;
-        }
-        .cta-card::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: 24px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          pointer-events: none;
-        }
-        .cta-eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 9px;
-          font-size: 0.5625rem;
-          font-weight: 700;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-          color: var(--gold-bright);
-          margin-bottom: 1rem;
-        }
-        .cta-eyebrow-dot {
-          width: 16px;
-          height: 2px;
-          background: linear-gradient(90deg, var(--gold-bright), var(--gold));
-          border-radius: 2px;
-          display: inline-block;
-        }
-        .cta-title {
-          font-size: clamp(1.5rem, 3vw, 2.25rem);
-          font-weight: 800;
-          color: #fff;
-          line-height: 1.15;
-          letter-spacing: -0.02em;
-          margin-bottom: 0.75rem;
-        }
-        .cta-title em { font-style: normal; color: var(--gold-bright); }
-        .cta-desc {
-          font-size: 0.875rem;
-          color: rgba(255, 255, 255, 0.55);
-          line-height: 1.8;
-          max-width: 480px;
-        }
-        .cta-actions { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; position: relative; z-index: 1; }
-        .cta-contact-block { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
-        .cta-contact-item {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 0.8125rem;
-          color: rgba(255, 255, 255, 0.55);
-        }
-        .cta-contact-item svg {
-          width: 14px;
-          height: 14px;
-          stroke: var(--gold-bright);
-          fill: none;
-          stroke-width: 2;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-          flex-shrink: 0;
-        }
-        .cta-contact-item a {
-          color: rgba(255, 255, 255, 0.8);
-          text-decoration: none;
-          transition: color 0.2s;
-        }
-        .cta-contact-item a:hover { color: var(--gold-bright); }
-
-        .reveal { opacity: 0; transform: translateY(28px); }
-
-        @media (max-width: 1023px) {
-          .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 100px; }
-          .features-grid { grid-template-columns: 1fr 1fr; }
-          .cta-card { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 768px) {
-          .section { padding: 4rem 1rem; }
-          .services-grid, .features-grid { grid-template-columns: 1fr; }
-          .cta-card { padding: 2.5rem 1.5rem; }
-          .hero-cta-group { flex-direction: column; }
-          .hero-image-overlay { filter: blur(3px); width: 100%; height: 100%; top: 0; right: 0; }
-        }
-        .hero-img { width: 100%; height: auto; height: 100%; object-fit: cover; }
-        .hero-image-overlay {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 66%;
-          height: 100%;
-          scale: 1.2;
-          opacity: 1;
-          mask-image: linear-gradient(to left, black, transparent);
-          -webkit-mask-image: linear-gradient(to left, black, transparent);
-          z-index: 1;
-        }
-        .hero-stat-card {
-          opacity: 0.2;
-          animation: hero-stats 0.8s ease-out forwards;
-        }
-        @keyframes hero-stats {
-          0% { opacity: 0.2; transform: translateX(-70px); }
-          100% { opacity: 1; transform: translateX(10px); }
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           NAVIGATION
-           ═══════════════════════════════════════════════════════════ */
-        #navbar {
-          position: fixed;
-          top: 0; left: 0; right: 0;
-          z-index: 9999;
-          height: 80px;
-          background: var(--nav-bg);
-          backdrop-filter: blur(14px);
-          -webkit-backdrop-filter: blur(14px);
-          border-bottom: 1px solid var(--nav-border);
-          box-shadow: 0 2px 12px rgba(11,31,58,0.08);
-          transition: var(--transition);
-        }
-        #navbar.scrolled { box-shadow: 0 4px 24px rgba(11,31,58,0.12); }
-        .dark-mode #navbar.scrolled {
-          background: rgba(3,13,26,0.99);
-          box-shadow: 0 4px 24px rgba(0,0,0,0.28);
-        }
-        .nav-inner {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          height: 72px;
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 0 2rem;
-        }
-        .logo { display: flex; align-items: center; gap: 11px; position: relative; right: 6%; }
-        .nav-menu { display: flex; align-items: center; gap: 2px; margin: auto; }
-        .nav-item { position: relative; }
-        .nav-link {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          color: var(--text);
-          font-size: 0.6475rem;
-          font-weight: 600;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          padding: 8px 13px;
-          border-radius: var(--radius-sm);
-          transition: var(--transition);
-          border: none;
-          background: none;
-          cursor: pointer;
-        }
-        .dark-mode .nav-link { color: rgba(255,255,255,0.82); }
-        .nav-link:hover, .nav-link.active { color: var(--gold-bright); background: rgba(200,146,42,0.1); }
-        .nav-chevron { font-size: 10px; transition: transform var(--transition); flex-shrink: 0; }
-        .nav-item:hover .nav-chevron { transform: rotate(180deg); }
-
-        .nav-toggle span { background: var(--heading); }
-        .dark-mode .nav-toggle span { background: #fff; }
-
-        /* Dropdowns */
-        .nav-dropdown {
-          display: none;
-          position: absolute;
-          top: calc(100% + 10px);
-          left: 0;
-          background: #ffffff;
-          border: 1px solid var(--border);
-          border-radius: var(--radius-md);
-          padding: 8px;
-          min-width: 200px;
-          box-shadow: var(--shadow-lg);
-          z-index: 100;
-        }
-        .dark-mode .nav-dropdown {
-          background: #020b18;
-          border-color: rgba(200,146,42,0.2);
-        }
-        .nav-dropdown::before {
-          content: "";
-          position: absolute;
-          top: -15px; left: 0; right: 0;
-          height: 15px;
-          background: transparent;
-        }
-        .nav-item:hover .nav-dropdown { display: block; }
-        .nav-dropdown a {
-          display: block;
-          color: #4e4840;
-          font-size: 0.75rem;
-          font-weight: 500;
-          padding: 9px 14px;
-          border-radius: var(--radius-sm);
-          transition: var(--transition);
-          letter-spacing: 0.04em;
-        }
-        .dark-mode .nav-dropdown a { color: rgba(255,255,255,0.72); }
-        .nav-dropdown a:hover { color: var(--gold-bright); background: rgba(200,146,42,0.08); }
-
-        /* Mega menu */
-        .mega-menu {
-          display: none;
-          position: absolute;
-          top: calc(100% + 10px);
-          left: 50%;
-          transform: translateX(-50%);
-          background: #ffffff;
-          border: 1px solid var(--border);
-          border-radius: var(--radius-lg);
-          padding: 1.75rem;
-          width: 640px;
-          box-shadow: var(--shadow-lg);
-          z-index: 100;
-          grid-template-columns: repeat(3,1fr);
-          gap: 1.25rem;
-        }
-        .dark-mode .mega-menu {
-          background: #020b18;
-          border-color: rgba(200,146,42,0.2);
-        }
-        .mega-menu::before {
-          content: "";
-          position: absolute;
-          top: -15px; left: 0; right: 0;
-          height: 15px;
-          background: transparent;
-        }
-        .nav-item:hover .mega-menu { display: grid; }
-        .mega-col-title {
-          font-size: small;
-          font-weight: 800;
-          letter-spacing: 0.22em;
-          text-transform: uppercase;
-          color: var(--gold);
-          margin-bottom: 0.75rem;
-          padding-bottom: 0.5rem;
-          border-bottom: 1px solid rgba(200,146,42,0.2);
-        }
-        .mega-col a {
-          display: block;
-          color: #64594e;
-          font-size: 0.65rem;
-          font-weight: 700;
-          padding: 6px 0;
-          transition: var(--transition);
-          letter-spacing: 0.03em;
-        }
-        .dark-mode .mega-col a { color: rgba(255,255,255,0.68); }
-        .mega-col a:hover { color: var(--gold-bright); padding-left: 6px; }
-
-        /* Mobile nav toggle */
-        .nav-toggle {
-          display: none;
-          flex-direction: column;
-          gap: 5px;
-          background: none;
-          border: none;
-          padding: 6px;
-          z-index: 10000;
-        }
-        .nav-toggle span {
-          display: block;
-          width: 24px;
-          height: 2px;
-          border-radius: 2px;
-          transition: transform 0.3s ease, opacity 0.3s ease;
-          transform-origin: left center;
-        }
-        .nav-toggle.open span:nth-child(1) { transform: rotate(45deg); }
-        .nav-toggle.open span:nth-child(2) { opacity: 0; }
-        .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg); }
-
-        /* ═══════════════════════════════════════════════════════════
-           MOBILE NAV
-           ═══════════════════════════════════════════════════════════ */
-        .mobile-nav {
-          position: fixed;
-          top: 72px; left: 0; right: 0; bottom: 0;
-          background: #ffffff;
-          z-index: 9998;
-          overflow-y: auto;
-          padding: 0 0 6rem;
-          opacity: 0;
-          visibility: hidden;
-          transform: translateX(100%);
-          transition: transform 0.42s cubic-bezier(0.4,0,0.2,1), opacity 0.42s ease, visibility 0.42s;
-          border-top: 2px solid;
-          border-image: linear-gradient(90deg, var(--gold) 0%, var(--gold-bright) 100%) 1;
-        }
-        .dark-mode .mobile-nav { background: #030d1a; }
-        .mobile-nav.open { opacity: 1; visibility: visible; transform: translateX(0); }
-
-        .mobile-nav-item { border-bottom: 1px solid var(--border); }
-        .dark-mode .mobile-nav-item { border-bottom-color: rgba(255,255,255,0.06); }
-
-        .mobile-nav-row {
-          display: flex;
-          align-items: center;
-          padding: 0 1.25rem;
-        }
-        .mobile-nav-label {
-          flex: 1;
-          display: block;
-          color: var(--heading);
-          font-size: 0.8125rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          padding: 1rem 0;
-          transition: color 0.22s;
-        }
-        .dark-mode .mobile-nav-label { color: rgba(255,255,255,0.88); }
-        .mobile-nav-label:hover { color: var(--gold-bright); }
-
-        .mobile-chevron-btn {
-          flex-shrink: 0;
-          background: none;
-          border: none;
-          padding: 0.6rem 0.4rem;
-          cursor: pointer;
-          color: var(--text-muted);
-          font-size: 0.65rem;
-          transition: color 0.22s, transform 0.32s cubic-bezier(0.4,0,0.2,1);
-          line-height: 1;
-        }
-        .dark-mode .mobile-chevron-btn { color: rgba(255,255,255,0.45); }
-        .mobile-chevron-btn:hover, .mobile-chevron-btn[aria-expanded="true"] { color: var(--gold-bright); }
-        .mobile-chevron-btn[aria-expanded="true"] i { transform: rotate(180deg); }
-        .mobile-chevron-btn i {
-          display: inline-block;
-          transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
-        }
-
-        .mobile-sub {
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1), padding 0.28s ease;
-          background: rgba(200,146,42,0.03);
-          border-top: 0px solid transparent;
-        }
-        .mobile-sub.open {
-          max-height: 600px;
-          padding-bottom: 0.5rem;
-          border-top: 1px solid rgba(200,146,42,0.1);
-        }
-        .dark-mode .mobile-sub { background: rgba(200,146,42,0.04); }
-        .mobile-sub a {
-          display: flex;
-          align-items: center;
-          gap: 0.65rem;
-          color: var(--text-2);
-          font-size: 0.78rem;
-          font-weight: 500;
-          padding: 0.6rem 1.5rem;
-          letter-spacing: 0.04em;
-          transition: color 0.2s, background 0.2s, padding-left 0.22s;
-        }
-        .dark-mode .mobile-sub a { color: rgba(255,255,255,0.55); }
-        .mobile-sub a i {
-          width: 14px;
-          font-size: 0.7rem;
-          color: var(--gold);
-          flex-shrink: 0;
-          opacity: 0.85;
-        }
-        .mobile-sub a:hover { color: var(--gold-bright); background: rgba(200,146,42,0.07); padding-left: 2rem; }
-        .mobile-sub a:hover i { opacity: 1; }
-
-        .mobile-nav-cta {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 0.6rem;
-          margin: 1.5rem 1.25rem 0;
-          padding: 0.9rem 1.5rem;
-          background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
-          color: #fff;
-          font-size: 0.75rem;
-          font-weight: 700;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          border-radius: var(--radius-md);
-          box-shadow: 0 4px 18px rgba(200,146,42,0.32);
-          transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .mobile-nav-cta:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 28px rgba(200,146,42,0.46);
-          color: #fff;
-        }
-
-        /* Theme switch */
-        #theme-switch {
-          border: none;
-          height: 40px;
-          width: 40px;
-          padding: 0;
-          border-radius: 50%;
-          background: rgba(11,31,58,0.08);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          transition: background 0.3s;
-          flex-shrink: 0;
-          position: relative;
-          left: 10%;
-        }
-        @media (max-width: 768px) {
-          #theme-switch { position: relative; left: 10%; }
-          .whatsapp-icon { position: fixed; margin-left: 1rem; bottom: 5%; left: 4%; }
-        }
-        .dark-mode #theme-switch { background: rgba(255,255,255,0.1); }
-        #theme-switch:hover { background: rgba(200,146,42,0.2); }
-        #theme-switch i { color: #0b1f3a; font-size: 15px; }
-        .dark-mode #theme-switch i { color: rgba(255,255,255,0.8); }
-        #theme-switch i:last-child { display: none; }
-        .dark-mode #theme-switch i:first-child { display: none; }
-        .dark-mode #theme-switch i:last-child { display: block; }
-
-        /* Btn Premium Diag */
-        .btn-premium-diag {
-          position: relative;
-          left: 2%;
-
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 12px 10px;
-          background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-          color: white !important;
-          border: 1px solid var(--gold);
-          border-radius: var(--radius-md);
-          font-size: 0.7rem;
-          font-weight: 700;
-          width: fit-content;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          text-decoration: none;
-          overflow: hidden;
-          transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          cursor: pointer;
-        }
-        @media (max-width: 768px) {
-          .btn-premium-diag { display: none; }
-          .mobile-nav .btn-premium-diag { display: inline-flex; margin-top: 10%; }
-        }
-        .btn-content { display: flex; align-items: center; gap: 12px; z-index: 2; }
-        .btn-content i { font-size: 1.1rem; transition: transform 0.4s ease; }
-        .shimmer {
-          position: absolute;
-          top: 0; left: -100%;
-          width: 100%; height: 100%;
-          background: linear-gradient(90deg, transparent, rgba(200,146,42,0.2), transparent);
-          transition: none;
-          z-index: 1;
-        }
-        .btn-premium-diag:hover {
-          color: #fff !important;
-          background: var(--gold);
-          border-color: var(--gold);
-          transform: translateY(-3px);
-          box-shadow: 0 8px 25px rgba(200,146,42,0.3);
-        }
-        .btn-premium-diag:hover .btn-content i { transform: rotate(15deg) scale(1.1); color: #fff; }
-        .btn-premium-diag:hover .shimmer { left: 100%; transition: all 0.8s ease; }
-        .btn-premium-diag:active { transform: translateY(-1px); }
-        .dark-mode .btn-premium-diag {
-          background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-          border: 1.5px solid var(--gold);
-        }
-
-        /* Back-link */
-        .back-link {
-          position: fixed;
-          top: 84px;
-          left: 22px;
-          z-index: 9997;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          font-size: 0.75rem;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          color: var(--text-muted);
-          text-decoration: none;
-          background: var(--bg-card);
-          border: 1.5px solid var(--border);
-          border-radius: 100px;
-          padding: 9px 18px;
-          box-shadow: var(--shadow-sm);
-          transition: all 0.3s;
-        }
-        .dark-mode .back-link { background: var(--bg-card); border-color: var(--border); color: var(--text-muted); }
-        .back-link:hover { color: var(--gold); border-color: var(--gold); }
-        .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-
-        @media (max-width: 768px) {
-          .nav-menu { display: none; }
-          .nav-toggle { display: flex; }
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           FOOTER
-           ═══════════════════════════════════════════════════════════ */
-        #footer { background: #f0ebe0; }
-        .dark-mode #footer { background: #071426; }
-        .footer-top {
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 5rem 2rem 3rem;
-          display: grid;
-          grid-template-columns: 2fr 1fr 1fr 1fr;
-          gap: 3rem;
-        }
-        .footer-tagline-txt { font-size: 0.8125rem; color: #64594e; line-height: 1.8; margin-bottom: 1.5rem; }
-        .dark-mode .footer-tagline-txt { color: rgba(255,255,255,0.5); }
-        .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.875rem; }
-        .footer-contact-text { font-size: 0.8125rem; color: #4e4840; line-height: 1.6; }
-        .dark-mode .footer-contact-text { color: rgba(255,255,255,0.55); }
-        .footer-contact-item i { color: var(--gold) !important; }
-        .footer-wa-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 11px 22px;
-          background: #25d366;
-          color: #fff;
-          border-radius: var(--radius-md);
-          font-size: 0.6875rem;
-          font-weight: 700;
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          margin-top: 1.25rem;
-          transition: var(--transition);
-        }
-        .footer-wa-btn:hover { background: #20b858; transform: translateY(-1px); }
-        .footer-col-title { font-size: 0.5625rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
-        .footer-col-links { display: flex; flex-direction: column; gap: 10px; }
-        .footer-col-links a {
-          font-size: 0.8125rem;
-          color: #64594e;
-          transition: var(--transition);
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-        .dark-mode .footer-col-links a { color: rgba(255,255,255,0.5); }
-        .footer-col-links a::before { content: ""; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-        .footer-col-links a:hover { color: var(--gold); padding-left: 4px; }
-        .dark-mode .footer-col-links a:hover { color: var(--gold-bright); }
-        .footer-expert-form {
-          background: #ffffff;
-          border: 1px solid var(--border);
-          border-radius: var(--radius-md);
-          padding: 1.25rem;
-          margin-top: 0.5rem;
-        }
-        .dark-mode .footer-expert-form {
-          background: rgba(255,255,255,0.04);
-          border-color: rgba(200,146,42,0.18);
-        }
-        .footer-expert-form h4 { font-size: 0.75rem; font-weight: 700; color: #0b1f3a; margin-bottom: 0.5rem; }
-        .dark-mode .footer-expert-form h4 { color: #fff; }
-        .footer-expert-form p { font-size: 0.6875rem; color: #64594e; margin-bottom: 1rem; line-height: 1.6; }
-        .dark-mode .footer-expert-form p { color: rgba(255,255,255,0.4); }
-        .footer-expert-form input {
-          width: 100%;
-          padding: 10px 13px;
-          background: var(--bg-secondary);
-          border: 1px solid var(--border);
-          border-radius: var(--radius-sm);
-          color: var(--text);
-          font-size: 0.8125rem;
-          outline: none;
-          margin-bottom: 8px;
-          transition: border-color var(--transition);
-        }
-        .dark-mode .footer-expert-form input {
-          background: rgba(255,255,255,0.06);
-          border-color: rgba(255,255,255,0.1);
-          color: #fff;
-        }
-        .footer-expert-form input::placeholder { color: var(--text-light); }
-        .dark-mode .footer-expert-form input::placeholder { color: rgba(255,255,255,0.28); }
-        .footer-expert-form input:focus { border-color: var(--gold); }
-        .footer-expert-form button {
-          width: 100%;
-          padding: 10px;
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          border: none;
-          border-radius: var(--radius-sm);
-          color: #fff;
-          font-size: 0.625rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          cursor: pointer;
-          transition: var(--transition);
-        }
-        .footer-expert-form button:hover { opacity: 0.9; }
-        .footer-bottom {
-          border-top: 1px solid var(--border);
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 1.75rem 2rem;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-        .dark-mode .footer-bottom { border-top-color: rgba(255,255,255,0.07); }
-        .footer-copy { font-size: 0.6875rem; color: #9c9487; }
-        .dark-mode .footer-copy { color: rgba(255,255,255,0.3); }
-        .trust-badges { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 6px; }
-        .trust-badge {
-          padding: 5px 12px;
-          border: 1px solid rgba(200,146,42,0.3);
-          border-radius: 50px;
-          font-size: 0.5625rem;
-          font-weight: 700;
-          letter-spacing: 0.12em;
-          color: var(--gold);
-          text-transform: uppercase;
-        }
-        @media (max-width: 1100px) { .footer-top { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 768px) {
-          .footer-top { grid-template-columns: 1fr; }
-          .footer-bottom { flex-direction: column; align-items: flex-start; }
-          .footer-copy { text-align: center; }
-        }
-
-        /* Social icons */
-        .social-link {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
-          border: 1px solid #c08d3e;
-          color: #c08d3e;
-          text-decoration: none;
-          transition: all 0.3s ease;
-          font-size: 18px;
-        }
-        .social-link:hover { background-color: #c08d3e; color: #fff; transform: translateY(-3px); }
-        body.dark-mode .social-link { border-color: #e2b36b; color: #e2b36b; }
-        @media (prefers-color-scheme: dark) { .social-link { border-color: #e2b36b; color: #e2b36b; } }
-        .social-icons-container {
-          display: flex;
-          gap: 15px;
-          margin-top: 25px;
-          flex-wrap: wrap;
-        }
-
-        /* Back to top */
-        .back-to-top {
-          position: fixed;
-          bottom: 13%;
-          left: 2%;
-          width: 45px;
-          height: 45px;
-          background: var(--bg-card);
-          color: var(--gold);
-          border: 2px solid var(--gold);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 1.1rem;
-          cursor: pointer;
-          z-index: 1000;
-          opacity: 0;
-          visibility: hidden;
-          transform: translateY(20px);
-          transition: all 0.4s ease;
-        }
-        @media (max-width: 768px) { .back-to-top { bottom: 11%; left: 3%; } }
-        .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
-        .back-to-top:hover { background: var(--gold); color: #fff; box-shadow: 0 5px 15px rgba(212,175,55,0.4); }
-
-        .whatsapp-icon {
-          position: fixed;
-          left: 3%;
-          bottom: 5%;
-          scale: 3.3;
-          transition: 0.4s;
-          z-index: 99;
-        }
-        .whatsapp-icon:hover { scale: 3.9; transform: translateY(-1px); }
-
-        /* ═══════════════════════════════════════════════════════════
-           BLOG LAYOUT ƏLAVƏLƏRİ (Sizin dəyişənlərinizdən istifadə edir)
-           ═══════════════════════════════════════════════════════════ */
-        .blog-layout {
-          display: flex;
-          margin-top: 80px; /* navbar height */
-          height: calc(100vh - 80px);
-          overflow: hidden;
-        }
-
-        /* Sol tərəf — Naviqasiya (GENİŞLƏNDİRİLMİŞ) */
-        .blog-sidebar {
-          width: 380px;
-          flex-shrink: 0;
-          height: 100%;
-          overflow-y: auto;
-          background: var(--bg-card);
-          border-right: 1px solid var(--border);
-          padding: 36px 32px;
-          display: flex;
-          flex-direction: column;
-          scrollbar-width: thin;
-          scrollbar-color: var(--border) transparent;
-        }
-        .blog-sidebar::-webkit-scrollbar { width: 6px; }
-        .blog-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-        .blog-sidebar-brand {
-          font-size: 20px;
-          font-weight: 800;
-          color: var(--heading);
-          margin-bottom: 28px;
-          padding-bottom: 18px;
-          border-bottom: 2px solid var(--gold);
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .blog-sidebar-brand i { color: var(--gold); font-size: 18px; }
-
-        .blog-toc-title {
-          font-size: 11px;
-          font-weight: 700;
-          color: var(--gold);
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          margin-bottom: 18px;
-        }
-        .blog-toc-list { list-style: none; }
-        .blog-toc-list li { margin-bottom: 6px; }
-        .blog-toc-list a {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          padding: 14px 16px;
-          color: var(--text-muted);
-          text-decoration: none;
-          font-size: 13px;
-          font-weight: 500;
-          border-radius: 10px;
-          transition: all 0.3s ease;
-          border-left: 3px solid transparent;
-          cursor: pointer;
-          line-height: 1.4;
-        }
-        .blog-toc-list a:hover {
-          background: var(--bg-section);
-          color: var(--gold);
-          border-left-color: var(--gold);
-          transform: translateX(4px);
-        }
-        .blog-toc-list a.active {
-          background: linear-gradient(90deg, rgba(200,146,42,0.12) 0%, transparent 100%);
-          color: var(--gold);
-          border-left-color: var(--gold);
-          font-weight: 700;
-          box-shadow: var(--shadow-sm);
-        }
-        .blog-toc-list a i { font-size: 9px; color: var(--gold); width: 14px; text-align: center; flex-shrink: 0; }
-
-        .blog-sidebar-footer {
-          margin-top: auto;
-          padding-top: 24px;
-          border-top: 1px solid var(--border);
-          font-size: 12px;
-          color: var(--text-muted);
-          line-height: 1.6;
-        }
-        .blog-sidebar-footer strong {
-          color: var(--heading);
-          display: block;
-          margin-bottom: 4px;
-          font-size: 13px;
-        }
-
-        /* Sağ tərəf — Məzmun (Yalnız bu hissə scroll edir) */
-        .blog-content {
-          flex: 1;
-          height: 100%;
-          overflow-y: auto;
-          overflow-x: hidden;
-          background: var(--bg-section);
-          scroll-behavior: smooth;
-          position: relative;
-        }
-        .blog-content::-webkit-scrollbar { width: 8px; }
-        .blog-content::-webkit-scrollbar-track { background: transparent; }
-        .blog-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
-        .blog-content::-webkit-scrollbar-thumb:hover { background: var(--text-light); }
-
-        /* Hero — Sarı fon silindi, background-image ilə əvəz edildi */
-        .blog-hero {
-          position: relative;
-          height: 420px;
-          background: url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=1920&h=600&fit=crop') center/cover no-repeat;
-          display: flex;
-          align-items: center;
-          overflow: hidden;
-          flex-shrink: 0;
-        }
-        .blog-hero::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(135deg, rgba(18,51,104,0.88) 0%, rgba(27,66,128,0.82) 50%, rgba(18,51,104,0.88) 100%);
-        }
-        .dark-mode .blog-hero::before {
-          background: linear-gradient(135deg, rgba(0,0,0,0.92) 0%, rgba(10,10,10,0.85) 50%, rgba(18,51,104,0.88) 100%);
-        }
-        .blog-hero-content {
-          background-image: url(images/);
-          position: relative;
-          z-index: 2;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 40px;
-          width: 100%;
-        }
-        .blog-hero-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          background: rgba(255,255,255,0.12);
-          backdrop-filter: blur(10px);
-          padding: 8px 20px;
-          border-radius: 30px;
-          color: white;
-          font-size: 13px;
-          font-weight: 500;
-          margin-bottom: 24px;
-          border: 1px solid rgba(255,255,255,0.2);
-        }
-        .blog-hero h1 {
-          font-size: 42px;
-          font-weight: 800;
-          color: white;
-          line-height: 1.2;
-          max-width: 700px;
-          margin-bottom: 16px;
-          text-shadow: 0 2px 20px rgba(0,0,0,0.3);
-        }
-        .blog-hero-subtitle {
-          font-size: 18px;
-          color: rgba(255,255,255,0.95);
-          max-width: 600px;
-          font-weight: 400;
-          line-height: 1.5;
-        }
-        .blog-hero-meta {
-          display: flex;
-          align-items: center;
-          gap: 24px;
-          margin-top: 28px;
-          color: rgba(255,255,255,0.9);
-          font-size: 14px;
-        }
-        .blog-hero-meta span { display: flex; align-items: center; gap: 8px; }
-
-        /* Məzmun grid-i */
-        .blog-wrapper {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 40px;
-          display: grid;
-          grid-template-columns: 1fr 300px;
-          gap: 32px;
-          align-items: start;
-        }
-
-        /* Mərkəzi mətn hissəsi */
-        .article-main {
-          background: var(--bg-card);
-          border-radius: var(--radius-lg);
-          padding: 40px;
-          box-shadow: var(--shadow-sm);
-          min-width: 0;
-          overflow-wrap: break-word;
-          word-wrap: break-word;
-        }
-        .article-section { margin-bottom: 40px; }
-        .article-section:last-child { margin-bottom: 0; }
-        .article-header {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-          margin-bottom: 20px;
-        }
-        .article-number {
-          width: 44px;
-          height: 44px;
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          color: white;
-          border-radius: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 18px;
-          font-weight: 700;
-          flex-shrink: 0;
-        }
-        .article-title {
-          font-size: 20px;
-          font-weight: 700;
-          color: var(--heading);
-          line-height: 1.3;
-          word-break: break-word;
-        }
-        .article-section p {
-          font-size: 15px;
-          color: var(--text-muted);
-          line-height: 1.8;
-          margin-bottom: 14px;
-          word-break: break-word;
-        }
-        .article-highlight {
-          background: linear-gradient(135deg, rgba(200,146,42,0.08) 0%, rgba(200,146,42,0.04) 100%);
-          border-left: 4px solid var(--gold);
-          padding: 20px 24px;
-          border-radius: 0 10px 10px 0;
-          margin: 20px 0;
-        }
-        .article-highlight p { margin: 0; color: var(--heading); font-weight: 500; }
-        .article-points { list-style: none; margin: 20px 0; }
-        .article-points li {
-          display: flex;
-          align-items: flex-start;
-          gap: 12px;
-          padding: 12px 0;
-          border-bottom: 1px solid var(--border);
-        }
-        .article-points li:last-child { border-bottom: none; }
-        .article-points li i { color: var(--gold); font-size: 14px; margin-top: 3px; flex-shrink: 0; }
-        .article-points li span { font-size: 14px; color: var(--text); line-height: 1.6; word-break: break-word; }
-
-        /* Sağ tərəf widget-ları (sticky) */
-        .blog-widgets {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-          position: sticky;
-          top: 20px;
-        }
-        .blog-widget {
-          background: var(--bg-card);
-          border-radius: var(--radius-md);
-          padding: 20px;
-          box-shadow: var(--shadow-sm);
-          border: 1px solid var(--border);
-        }
-        .blog-widget-title {
-          font-size: 14px;
-          font-weight: 700;
-          color: var(--heading);
-          margin-bottom: 16px;
-          padding-bottom: 10px;
-          border-bottom: 2px solid var(--gold);
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-        .blog-widget-title i { color: var(--gold); }
-        .trend-row {
-          display: flex;
-          align-items: flex-start;
-          gap: 12px;
-          padding: 12px 0;
-          border-bottom: 1px solid var(--border);
-        }
-        .trend-row:last-child { border-bottom: none; }
-        .trend-icon-box {
-          width: 32px;
-          height: 32px;
-          background: linear-gradient(135deg, var(--gold-pale), rgba(200,146,42,0.2));
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--gold);
-          font-size: 12px;
-          flex-shrink: 0;
-        }
-        .trend-info h4 { font-size: 13px; font-weight: 600; color: var(--heading); margin-bottom: 3px; word-break: break-word; }
-        .trend-info p { font-size: 12px; color: var(--text-light); line-height: 1.4; word-break: break-word; }
-
-        /* Video bölmələri */
-        .blog-video {
-          background: var(--bg-card);
-          border-radius: var(--radius-md);
-          padding: 16px;
-          box-shadow: var(--shadow-sm);
-          border: 1px solid var(--border);
-        }
-        .blog-video-title {
-          font-size: 13px;
-          font-weight: 700;
-          color: var(--heading);
-          margin-bottom: 12px;
-          padding-bottom: 8px;
-          border-bottom: 2px solid var(--gold);
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-        .blog-video-title i { color: var(--gold); }
-        .video-box {
-          position: relative;
-          border-radius: 10px;
-          overflow: hidden;
-          background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
-          aspect-ratio: 16/9;
-        }
-        .video-box img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; display: block; }
-        .video-overlay {
-          position: absolute;
-          inset: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 6px;
-        }
-        .video-play {
-          width: 48px;
-          height: 48px;
-          background: linear-gradient(135deg, var(--gold), var(--orange));
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          font-size: 16px;
-          cursor: pointer;
-          border: 2px solid rgba(255,255,255,0.3);
-          box-shadow: 0 4px 16px rgba(200,146,42,0.4);
-        }
-        .video-tag {
-          color: white;
-          font-size: 11px;
-          font-weight: 600;
-          background: rgba(0,0,0,0.5);
-          padding: 3px 10px;
-          border-radius: 16px;
-        }
-        .video-nav {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 12px;
-          margin-top: 10px;
-        }
-        .video-nav-btn {
-          width: 32px;
-          height: 32px;
-          border-radius: 50%;
-          border: 2px solid var(--gold);
-          background: var(--bg-card);
-          color: var(--gold);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          font-size: 12px;
-          font-weight: 700;
-          flex-shrink: 0;
-        }
-        .video-nav-btn:hover { background: linear-gradient(135deg, var(--gold), var(--orange)); color: white; }
-        .video-counter { font-size: 12px; font-weight: 600; color: var(--text-light); min-width: 40px; text-align: center; }
-        .video-dots { display: flex; justify-content: center; gap: 5px; margin-top: 8px; }
-        .video-dot {
-          width: 7px;
-          height: 7px;
-          border-radius: 50%;
-          background: var(--border);
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-        .video-dot.active { background: var(--gold); width: 20px; border-radius: 4px; }
-
-        /* Footer blog içində tam görünsün */
-        #footer { flex-shrink: 0; }
-
-        /* Responsive */
-        @media (max-width: 1100px) {
-          .blog-sidebar { width: 320px; padding: 28px 24px; }
-          .blog-wrapper { grid-template-columns: 1fr; padding: 24px; }
-          .blog-widgets { position: static; display: grid; grid-template-columns: 1fr 1fr; }
-          .blog-hero h1 { font-size: 32px; }
-        }
-        @media (max-width: 768px) {
-          .blog-layout { flex-direction: column; margin-top: 72px; height: calc(100vh - 72px); }
-          .blog-sidebar {
-            width: 100%;
-            height: auto;
-            max-height: 220px;
-            border-right: none;
-            border-bottom: 1px solid var(--border);
-            padding: 20px;
-          }
-          .blog-sidebar-brand { margin-bottom: 16px; padding-bottom: 12px; font-size: 18px; }
-          .blog-toc-title { margin-bottom: 12px; }
-          .blog-toc-list { display: flex; flex-wrap: wrap; gap: 8px; }
-          .blog-toc-list li { margin-bottom: 0; }
-          .blog-toc-list a { padding: 8px 12px; font-size: 12px; border-left: none; border-bottom: 2px solid transparent; }
-          .blog-toc-list a.active { border-left: none; border-bottom-color: var(--gold); transform: none; }
-          .blog-sidebar-footer { display: none; }
-          .blog-content { height: calc(100vh - 72px - 220px); }
-          .blog-hero { height: 280px; }
-          .blog-hero h1 { font-size: 24px; }
-          .article-main { padding: 20px; }
-          .blog-widgets { grid-template-columns: 1fr; }
-          .footer-top { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; }
-        }
-        @media (max-width: 480px) {
-          .blog-hero h1 { font-size: 20px; }
-          .blog-hero-subtitle { font-size: 15px; }
-          .article-title { font-size: 17px; }
-        }
-</style>
-<base target="_blank">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə." />
+  <link rel="icon" type="image/png" href="images/asr group png.png" />
+  <title>ASR Group - Blog | ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası</title>
+  <link rel="icon" type="image/png" href="images/asr group png.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="bloq2.css">
+  <link rel="stylesheet" href="style.css">
+  <base target="_blank">
 </head>
+
 <body>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         NAVBAR (Sizin kodlarınız)
-         ═══════════════════════════════════════════════════════════ -->
-  <!--  NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
       <!-- Logo -->
@@ -1900,18 +53,19 @@
             <div class="mega-col">
               <div class="mega-col-title"><a href="xidmet-06.html">Qida Təhlükəsizliyi</a></div>
               <div class="mega-col-title"><a href="xidmet-01.html">İnkişaf Layihələrinin İdarəolunması</a></div>
-              
+
             </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="xidmet-03.html">Strateji İdarəetmə</a></div>
-              <div class="mega-col-title"><a  href="xidmet-05.html">Biznesin inkişafı xidmətləri </a></div>
-          
-          
+              <div class="mega-col-title"><a href="xidmet-05.html">Biznesin inkişafı xidmətləri </a></div>
+
+
             </div>
             <div class="mega-col">
-              <div class="mega-col-title"><a href="index.html#xidmetler"> Qanunvericilik layihələri<br>idareolunmasi</a></div>
+              <div class="mega-col-title"><a href="index.html#xidmetler"> Qanunvericilik layihələri<br>idareolunmasi</a>
+              </div>
               <div class="mega-col-title"><a href="index.html#tedqiqat">Dövlətlə Əlaqələr</a></div>
-            
+
             </div>
           </div>
         </li>
@@ -1924,8 +78,8 @@
             <div class="mega-col">
               <div class="mega-col-title"><a href="kend-teserrufati.html">Kənd təsərrüfatı</a></div>
               <div class="mega-col-title"><a href="erzaq-senayesi.html">Ərzaq sənayesi</a></div>
-              <div class="mega-col-title"><a  href="sehiyye.html">Səhiyyə</a></div>
-            
+              <div class="mega-col-title"><a href="sehiyye.html">Səhiyyə</a></div>
+
             </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="turizm.html">Turizm</a></div>
@@ -1933,12 +87,12 @@
                 <a href="index.html#xidmetler">Ekologiya</a>
               </div>
               <div class="mega-col-title"><a href="tikinti.html">Tikinti</a></div>
-          
+
             </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="texnologiya.html">Texnologiya</a></div>
               <div class="mega-col-title"><a href="logistika.html">Logistika</a></div>
-            
+
             </div>
           </div>
         </li>
@@ -1951,7 +105,7 @@
           <div class="nav-dropdown">
             <a href="index.html#tecrubekm">Uğurlu keyslər</a>
             <a href="index.html#tecrubekm">Layihələr</a>
-         
+
           </div>
         </li>
 
@@ -2002,565 +156,710 @@
         <i class="fa-solid fa-sun"></i>
       </button>
 
-    <button class="nav-toggle" id="mobileToggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+      <button class="nav-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </nav>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav" id="mobileNav">
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
 
-  <!-- Haqqımızda -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="haqqimizda.html" class="mobile-nav-label">Haqqımızda</a>
-      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
+    <!-- Haqqımızda -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="haqqimizda.html" class="mobile-nav-label">Haqqımızda</a>
+        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="mobile-sub">
+        <a href="haqqimizda.html"><i class="fa-regular fa-building"></i>Şirkət Profili</a>
+        <a href="haqqimizda.html#tarix"><i class="fa-regular fa-clock"></i>Tariximiz</a>
+        <a href="haqqimizda.html#sertifikatlar"><i class="fa-solid fa-award"></i>Sertifikatlar &amp; Təltiflər</a>
+      </div>
     </div>
-    <div class="mobile-sub">
-      <a href="haqqimizda.html"><i class="fa-regular fa-building"></i>Şirkət Profili</a>
-      <a href="haqqimizda.html#tarix"><i class="fa-regular fa-clock"></i>Tariximiz</a>
-      <a href="haqqimizda.html#sertifikatlar"><i class="fa-solid fa-award"></i>Sertifikatlar &amp; Təltiflər</a>
-    </div>
-  </div>
-  <!-- Sektorlar -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="sectors.html" class="mobile-nav-label">Sektorlar</a>
-      <button class="mobile-chevron-btn   has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-    <div class="mobile-sub">
-      <a href="sectorlar.html"><i class="fa-solid fa-seedling"></i> Kəndtəsərrüfatı</a>
-      <a href="sectorlar.html"><i class="fa-solid fa-jar"></i> Ərzaq sənayesi</a>
-      <a href="sectorlar.html"><i class="fa-solid fa-briefcase-medical"></i> Səhiyyə</a>
-      <a href="sectorlar.html"><i class="fa-solid fa-plane-departure"></i> Turizm</a>
-      <a href="sectorlar.html"><i class="fa-solid fa-helmet-safety"></i> Tikinti</a>
-      <a href="sectorlar.html"><i class="fa-solid fa-microchip"></i> Texnologiya</a>
-      <a href="sectorlar.html"><i class="fa-solid fa-truck-moving"></i> Logistika</a>
-    </div>
-  </div>
-
-  <!-- Xidmətlər -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="index.html#xidmetler" class="mobile-nav-label">Xidmətlər</a>
-      <button class="mobile-chevron-btn   has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-    <div class="mobile-sub">
-      <a href="xidmet-06.html"><i class="fa-solid fa-shield-halved"></i>Qida Təhlükəsizliyi</a>
-      <a href="xidmet-01.html"><i class="fa-solid fa-diagram-project"></i>İnkişaf Layihələrinin İdarəolunması</a>
-      <a href="xidmet-03.html"><i class="fa-solid fa-chess-knight"></i>Strateji Planlaşdırma</a>
-      <a href="xidmet-04.html"><i class="fa-solid fa-chart-line"></i>Monitorinq və Qiymətləndirmə</a>
-      <a href="xidmet-05.html"><i class="fa-solid fa-magnifying-glass-chart"></i>Tədqiqat və Analitik Təhlillər</a>
-      <a href="xidmet-02.html"><i class="fa-solid fa-scale-balanced"></i>İqtisadi Siyasət və Qanunvericilik</a>
-      <a href="xidmet-07.html"><i class="fa-solid fa-landmark"></i>Dövlətlə Əlaqələr</a>
-    </div>
-  </div>
-
-  <!-- Təcrübəmiz -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="index.html#tecrubekm" class="mobile-nav-label">Təcrübəmiz</a>
-      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-    <div class="mobile-sub">
-      <a href="index.html#tecrubekm"><i class="fa-solid fa-trophy"></i>Uğurlu Layihələr</a>
-      <a href="index.html#tecrubekm"><i class="fa-solid fa-drumstick-bite"></i>Layihələr</a>
- 
-    </div>
-  </div>
-
-  <!-- Bilik Mərkəzi -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="index.html#bilik-merkezi" class="mobile-nav-label">Bilik Mərkəzi</a>
-      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-    <div class="mobile-sub">
-      <a href="index.html#bilik-merkezi"><i class="fa-solid fa-pen-nib"></i>Ekspert Bloqu</a>
-      <a href="index.html#bilik-merkezi"><i class="fa-solid fa-download"></i>Pulsuz Yükləmələr</a>
-    </div>
-  </div>
-
-  <!-- Media -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="media.html" class="mobile-nav-label">Media</a>
-      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
-        <i class="fa-solid fa-chevron-down"></i>
-      </button>
-    </div>
-    <div class="mobile-sub">
-      <a href="media.html"><i class="fa-regular fa-images"></i>Foto Qalereya</a>
-      <a href="media.html"><i class="fa-solid fa-film"></i>Video İcmallar</a>
-      <a href="media.html"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
-    </div>
-  </div>
-
-  <!-- Əlaqə (no dropdown) -->
-  <div class="mobile-nav-item">
-    <div class="mobile-nav-row">
-      <a href="index.html#footer" class="mobile-nav-label">Əlaqə</a>
-    </div>
-  </div>
-
-  <a href="check.html" class="mobile-nav-cta">
-    <i class="fa-solid fa-microscope"></i>
-    <span>Pulsuz Diaqnostika</span>
-  </a>
-
-</div>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         BLOG LAYOUT: Sol Naviqasiya + Sağ Məzmun
-         ═══════════════════════════════════════════════════════════ -->
-    <div class="blog-layout">
-
-      <!-- SOL TƏRƏF: Sabit Naviqasiya -->
-      <aside class="blog-sidebar">
-        <div class="blog-sidebar-brand">
-          <i class="fas fa-shield-halved"></i>
-          ASR Group
-        </div>
-
-        <div class="blog-toc-title">Mündəricat</div>
-        <ul class="blog-toc-list" id="tocList">
-          <li><a href="#section1" class="active"><i class="fas fa-chevron-right"></i> Yüksək Səviyyəli Struktur (HLS)</a></li>
-          <li><a href="#section2"><i class="fas fa-chevron-right"></i> Risk əsaslı yanaşma</a></li>
-          <li><a href="#section3"><i class="fas fa-chevron-right"></i> PDCA dövrü dəyişiklikləri</a></li>
-          <li><a href="#section4"><i class="fas fa-chevron-right"></i> Təhlükə nəzarət planı</a></li>
-          <li><a href="#section5"><i class="fas fa-chevron-right"></i> Keçid strategiyası</a></li>
-        </ul>
-
-        <div class="blog-sidebar-footer">
-          <strong>ASR Group</strong>
-          Azərbaycanın qida təhlükəsizliyi sahəsində lider konsaltinq şirkəti. Beynəlxalq standartlara uyğunluq və sertifikatlaşdırma xidmətləri.
-        </div>
-      </aside>
-
-      <!-- SAĞ TƏRƏF: Yalnız bu hissə scroll edir -->
-      <main class="blog-content" id="blogContent">
-
-        <!-- HERO: background-image ilə tam uyğunlaşan -->
-        <section class="blog-hero">
-          <div class="blog-hero-content">
-            <div class="blog-hero-badge">
-              <i class="fas fa-certificate"></i>
-              Sertifikatlaşdırma Bələdçisi
-            </div>
-            <h1>ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası</h1>
-            <p class="blog-hero-subtitle">Yeni versiyaya keçid üçün praktik bələdçi. Müəssisənizin audit hazırlığını qiymətləndirin.</p>
-            <div class="blog-hero-meta">
-              <span><i class="fas fa-calendar-alt"></i> May 2025</span>
-              <span><i class="fas fa-clock"></i> 10 dəqiqə oxuma</span>
-              <span><i class="fas fa-building"></i> ASR Group</span>
-            </div>
-          </div>
-        </section>
-
-        <div class="blog-wrapper">
-
-          <!-- MƏRKƏZİ MƏTN HİSSƏSİ -->
-          <article class="article-main">
-
-            <section class="article-section" id="section1">
-              <div class="article-header">
-                <div class="article-number">01</div>
-                <h2 class="article-title">Yüksək Səviyyəli Struktur (HLS) və Yeni Maddə Quruluşu</h2>
-              </div>
-              <p>ISO 22000:2018-in ən fundamental dəyişikliyi Yüksək Səviyyəli Strukturun (High Level Structure - HLS) tətbiqidir. Bu struktur ISO 9001:2015, ISO 14001:2015 və digər ISO standartları ilə eyni çərçivəni paylaşır və müxtəlif idarəetmə sistemlərinin inteqrasiyasını asanlaşdırır. 2005 versiyasındakı 8 maddəlik struktur yerinə 2018 versiyasında 10 maddəlik HLS strukturu tətbiq edilib.</p>
-
-              <div class="article-highlight">
-                <p>ASR Group olaraq tövsiyə edirik ki, müəssisələr ISO 22000:2018-ə keçid prosesində mövcud sənədlərini HLS strukturuna uyğun yenidən təşkil etsinlər. Bu, digər idarəetmə sistemləri ilə inteqrasiyanı asanlaşdıracaq və audit proseslərini sadələşdirəcək.</p>
-              </div>
-
-              <p>Əsas struktur dəyişiklikləri aşağıdakılardır: 2005 versiyasının 4, 5 və 6-cı maddələri 2018 versiyasında 4, 5, 6 və 7-ci maddələrə bölünüb. Əməliyyatlar (Operations) mövzusu əvvəlki 7-ci maddədən 8-ci maddəyə keçirilib. Monitorinq və ölçmə (8-ci maddə) indi 9-cu maddədə, idarəetmə baxışı (5-ci maddə) isə 9.3-cü maddədə yerləşdirilib. Bu dəyişikliklər Plan-Do-Check-Act (PDCA) dövrünə uyğun olaraq həyata keçirilib.</p>
-
-              <p>Yeni struktur çərçivəsində təşkilatın konteksti (4.1), maraqlı tərəflərin ehtiyac və gözləntiləri (4.2) kimi yeni tələblər əlavə edilib. Liderlik və öhdəlik (5.1) maddəsi gücləndirilib və rəhbərliyin idarəetmə sisteminin effektivliyinə görə birbaşa məsuliyyət daşıması tələb olunur.</p>
-            </section>
-
-            <section class="article-section" id="section2">
-              <div class="article-header">
-                <div class="article-number">02</div>
-                <h2 class="article-title">Risk əsaslı yanaşma və Fürsətlərin İdarəedilməsi</h2>
-              </div>
-              <p>ISO 22000:2018 risk anlayışını strateji və əməliyyat səviyyələrində ayırır. Strateji səviyyədə idarəetmə sisteminin effektivliyinə təsir edən risk və fürsətlər (6.1), əməliyyat səviyyəsində isə HACCP prinsipləri ilə təhlükə analizi və kritik nəzarət nöqtələri müəyyənləşdirilir. Bu, 2005 versiyasındakı yalnız əməliyyat səviyyəli risk anlayışından fərqlənir.</p>
-
-              <ul class="article-points">
-                <li><i class="fas fa-check-circle"></i><span>Strateji risklər: İdarəetmə sisteminin məqsədlərinə çatmasına mane ola bilən daxili və xarici faktorların sistematik müəyyənləşdirilməsi və monitorinqi tələb olunur.</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Əməliyyat riskləri: HACCP prinsipləri çərçivəsində təhlükə analizi aparılır, kritik nəzarət nöqtələri (CCP) və əməliyyat şərti proqramlar (OPRP) müəyyənləşdirilir.</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Fürsətlərin idarəedilməsi: Risklərlə yanaşı, təşkilatın inkişafına töhfə verə bilən fürsətlərin də müəyyənləşdirilməsi və dəyərləndirilməsi tələb olunur.</span></li>
-                <li><i class="fas fa-check-circle"></i><span>Müəssisə konteksti: Təşkilatın daxili və xarici mühitinin, mədəniyyətinin, qabiliyyətlərinin və maraqlı tərəflərinin sistematik təhlili.</span></li>
-              </ul>
-
-              <p>Yeni versiyada "təhlükə" anlayışı "qida təhlükəsizliyi təhlükəsi" ilə əvəz olunub və "zərər" (harm) anlayışı "mənfi sağlamlıq təsiri" (adverse health effect) ilə əvəz edilib. Bu dəyişikliklər Codex Alimentarius komissiyasının müasir tələbləri ilə uyğunlaşdırılıb.</p>
-            </section>
-
-            <section class="article-section" id="section3">
-              <div class="article-header">
-                <div class="article-number">03</div>
-                <h2 class="article-title">İki PDCA Dövrü və Liderlik Tələblərinin Gücləndirilməsi</h2>
-              </div>
-              <p>ISO 22000:2018 standartında iki ayrı Plan-Do-Check-Act (PDCA) dövrü tətbiq olunur. Birinci dövr idarəetmə sisteminin özünü əhatə edir (maddələr 4-7), ikinci dövr isə əməliyyatları və HACCP prinsiplərini əhatə edir (maddə 8). Bu ikili struktur idarəetmə sisteminin strateji idarəedilməsi ilə əməliyyatların praktiki icrası arasında aydın sərhəd yaradır.</p>
-
-              <p>Liderlik tələbləri 2018 versiyasında əhəmiyyətli dərəcədə gücləndirilib. Rəhbərlik indi aşağıdakı öhdəlikləri daşıyır: idarəetmə sisteminin effektivliyinə görə birbaşa məsuliyyət, qida təhlükəsizliyi siyasətinin işçilər tərəfindən anlaşılmasının təmin edilməsi, idarəetmə sistemi tələblərinin biznes proseslərinə inteqrasiyası, qida təhlükəsizliyi komandasına dəstək və lazımi resursların təmin edilməsi.</p>
-
-              <div class="article-highlight">
-                <p>Qida təhlükəsizliyi siyasəti indi təşkilatın kontekstinə uyğun olmalı, müştəri tələblərini nəzərə almalı, davamlı təkmilləşməyə öhdəlik bildirməli və maraqlı tərəflər üçün əlçatan olmalıdır. Siyasətin sadəcə sənədləşdirilməsi yetərli deyil, işçilər tərəfindən anlaşılması da tələb olunur.</p>
-              </div>
-
-              <p>Kompetensiya tələbləri də genişləndirilib. "Təlimli personal" anlayışı "kompetent personal" ilə əvəz olunub. Bu, yalnız təlim və ya kvalifikasiyadan daha çox təcrübə, bacarıq, bilik və tapşırığın anlaşılması kimi amilləri əhatə edir. Vəzifə təsvirləri, proses prosedurları və davamlı təlim proqramlarının aydın müəyyənləşdirilməsi tələb olunur.</p>
-            </section>
-
-            <section class="article-section" id="section4">
-              <div class="article-header">
-                <div class="article-number">04</div>
-                <h2 class="article-title">Təhlükə Nəzarət Planı və Xarici Təchizatçıların İdarəedilməsi</h2>
-              </div>
-              <p>ISO 22000:2018-də ən əhəmiyyətli dəyişikliklərdən biri "Təhlükə Nəzarət Planı" (Hazard Control Plan) konsepsiyasının tətbiqidir. Bu plan CCP-lərdə və OPRP-lərdə nəzarət tədbirlərini əhatə edir. "Fəaliyyət kriteriyası" (action criteria) anlayışı OPRP-lərin məqsədini daha aydın izah etmək üçün tətbiq olunub.</p>
-
-              <p>Xarici təchizatçıların idarəedilməsi (7.1.6) tələbləri əhəmiyyətli dərəcədə genişləndirilib. Təşkilatlar indi xarici proseslərin, məhsulların və xidmətlərin (outsourced proseslər də daxil olmaqla) təchizatçılarını nəzarət altında saxlamalı və qida təhlükəsizliyi idarəetmə sistemi tələblərinə uyğunluğunu təmin etməlidirlər. Bu, yalnız xammal təchizatçıları ilə məhdudlaşmır, həm də xidmət təchizatçılarını, avadanlıq təminatçılarını və outsourced proses operatorlarını əhatə edir.</p>
-
-              <ul class="article-points">
-                <li><i class="fas fa-microchip"></i><span>Təhlükə nəzarət planı: CCP və OPRP-lər üçün ayrı-ayrı planların hazırlanması, nəzarət tədbirlərinin kateqoriyalaşdırılması və təsdiqlənməsi.</span></li>
-                <li><i class="fas fa-qrcode"></i><span>İzlənilə bilənlik: Məhsulun rəf ömrü müddətində sənədləşdirilmiş məlumatların saxlanması və izlənilə bilənlik sisteminin effektivliyinin sınaqdan keçirilməsi tələbi.</span></li>
-                <li><i class="fas fa-flask"></i><span>Əvvəlcədən şərt proqramları (PRP): Qanunvericilik və tənzimləmə tələblərinin nəzərə alınması, təchizatçı təsdiqi, etiketləmə və gələn materialın nəzarəti.</span></li>
-              </ul>
-
-              <p>Əməliyyat planlaşdırması və nəzarəti (8.1) yeni tələb olaraq əlavə edilib. Planlaşdırılmış dəyişikliklərin nəzarəti, gözlənilməz dəyişikliklərin nəzərdən keçirilməsi və outsourced proseslərin nəzarəti bu maddə çərçivəsində tələb olunur.</p>
-            </section>
-
-            <section class="article-section" id="section5">
-              <div class="article-header">
-                <div class="article-number">05</div>
-                <h2 class="article-title">Keçid Strategiyası və Audit Hazırlığı</h2>
-              </div>
-              <p>ISO 22000:2005-dən ISO 22000:2018-ə keçid prosesi sistematik yanaşma tələb edir. ASR Group olaraq müəssisələrə aşağıdakı addımlarla keçid strategiyası təklif edirik:</p>
-
-              <p><strong>Mərhələ 1 - Hazırlıq və Təlim:</strong> ISO 22000:2018 standartının məzmununu və tələblərini öyrənin. Əsas diqqəti dəyişikliklərə yönəldin. Təşkilat daxilində maarifləndirmə təlimləri keçirin. Bütün əsas personalın yeni tələbləri və əsas dəyişiklikləri başa düşməsini təmin edin.</p>
-
-              <p><strong>Mərhələ 2 - Boşluq Analizi (Gap Analysis):</strong> Mövcud qida təhlükəsizliyi idarəetmə sisteminizi ISO 22000:2018 tələblərinə uyğun olaraq qiymətləndirin. Yeni tələblərə cavab vermək üçün lazım olan boşluqları müəyyənləşdirin. HLS strukturuna uyğun sənədləşmə sistemini yenidən təşkil edin. Risk və fürsətlərin idarəedilməsi prosesini qurun.</p>
-
-              <div class="article-highlight">
-                <p>Keçid auditinin müddəti: Xüsusi audit keçirilərsə, ilkin auditin 1/3 hissəsi (minimum 1 adam/gün); Nəzarət auditilə birlikdə - nəzarət auditinin müddətinin 20% artırılması; Yenidən sertifikatlaşdırma auditilə birlikdə - yenidən sertifikatlaşdırma auditinin müddətinin 20% artırılması.</p>
-              </div>
-
-              <p><strong>Mərhələ 3 - Tətbiq və İnkişaf:</strong> Yeni tələblərin tətbiqi üçün fəaliyyət planı hazırlayın. Təhlükə nəzarət planını CCP və OPRP-lər üçün ayrı-ayrı hazırlayın. Xarici təchizatçıların idarəedilməsi prosedurlarını yeniləyin. Kompetensiya tələblərini yenidən müəyyənləşdirin və təlim proqramlarını yeniləyin.</p>
-
-              <p><strong>Mərhələ 4 - Təsdiqləmə:</strong> Daxili audit keçirin və effektivliyi qiymətləndirin. İdarəetmə baxışı iclası keçirin. Sertifikatlaşdırma orqanı ilə keçid tədbirlərini razılaşdırın. Keçid auditinə hazırlaşın.</p>
-
-              <p>ASR Group olaraq məqsədimiz Azərbaycanın qida sənayesinin beynəlxalq standartlara uyğunlaşmasına dəstək olmaq və qida təhlükəsizliyi idarəetmə sistemlərinin effektiv tətbiqi üçün peşəkar konsaltinq xidmətləri göstərməkdir.</p>
-            </section>
-
-          </article>
-
-          <!-- SAĞ DAXİLİ WIDGET-LAR -->
-          <aside class="blog-widgets">
-
-            <div class="blog-widget">
-              <div class="blog-widget-title"><i class="fas fa-bolt"></i> Əsas Fərqlər</div>
-              <div class="trend-row">
-                <div class="trend-icon-box"><i class="fas fa-sitemap"></i></div>
-                <div class="trend-info"><h4>HLS Strukturu</h4><p>10 maddəlik yeni struktur, digər ISO standartları ilə inteqrasiya</p></div>
-              </div>
-              <div class="trend-row">
-                <div class="trend-icon-box"><i class="fas fa-shield-alt"></i></div>
-                <div class="trend-info"><h4>Risk əsaslı yanaşma</h4><p>Strateji və əməliyyat səviyyələrində risk və fürsətlərin idarəedilməsi</p></div>
-              </div>
-              <div class="trend-row">
-                <div class="trend-icon-box"><i class="fas fa-sync-alt"></i></div>
-                <div class="trend-info"><h4>İki PDCA dövrü</h4><p>İdarəetmə sistemi və HACCP prinsipləri üçün ayrı dövrlər</p></div>
-              </div>
-              <div class="trend-row">
-                <div class="trend-icon-box"><i class="fas fa-clipboard-check"></i></div>
-                <div class="trend-info"><h4>Təhlükə nəzarət planı</h4><p>CCP və OPRP-lər üçün vahid nəzarət planı</p></div>
-              </div>
-            </div>
-
-            <div class="blog-video">
-              <div class="blog-video-title"><i class="fas fa-video"></i> Video təlimlər</div>
-              <div class="video-carousel" id="videoCarouselLeft">
-                <div class="video-box">
-                  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop" alt="Video" id="videoThumbLeft">
-                  <div class="video-overlay">
-                    <div class="video-play"><i class="fas fa-play"></i></div>
-                    <span class="video-tag" id="videoLabelLeft">ISO 22000:2018 əsas dəyişikliklər</span>
-                  </div>
-                </div>
-                <div class="video-nav">
-                  <button class="video-nav-btn" onclick="changeVideo('left', -1)"><</button>
-                  <span class="video-counter" id="videoCounterLeft">1 / 3</span>
-                  <button class="video-nav-btn" onclick="changeVideo('left', 1)">></button>
-                </div>
-                <div class="video-dots" id="videoDotsLeft">
-                  <span class="video-dot active"></span>
-                  <span class="video-dot"></span>
-                  <span class="video-dot"></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="blog-video">
-              <div class="blog-video-title"><i class="fas fa-play-circle"></i> Ekspert müsahibələri</div>
-              <div class="video-carousel" id="videoCarouselRight">
-                <div class="video-box">
-                  <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop" alt="Video" id="videoThumbRight">
-                  <div class="video-overlay">
-                    <div class="video-play"><i class="fas fa-play"></i></div>
-                    <span class="video-tag" id="videoLabelRight">Keçid strategiyası praktiki təlim</span>
-                  </div>
-                </div>
-                <div class="video-nav">
-                  <button class="video-nav-btn" onclick="changeVideo('right', -1)"><</button>
-                  <span class="video-counter" id="videoCounterRight">1 / 3</span>
-                  <button class="video-nav-btn" onclick="changeVideo('right', 1)">></button>
-                </div>
-                <div class="video-dots" id="videoDotsRight">
-                  <span class="video-dot active"></span>
-                  <span class="video-dot"></span>
-                  <span class="video-dot"></span>
-                </div>
-              </div>
-            </div>
-
-          </aside>
-
-        </div>
-
-        <!-- ═══════════════════════════════════════════════════════════
-             FOOTER (Sizin kodlarınız — tam görünür)
-             ═══════════════════════════════════════════════════════════ -->
-        <footer id="footer">
-          <div class="footer-top">
-            <div class="footer-col">
-              <a href="#" class="logo" style="position: static; right: auto; margin-bottom: 12px;">
-                <i class="fas fa-shield-halved" style="color: var(--gold); font-size: 20px;"></i>
-                <span style="font-weight: 800; color: var(--heading); font-size: 18px;">ASR Group</span>
-              </a>
-              <p class="footer-tagline-txt">Azərbaycanın qida təhlükəsizliyi sahəsində lider konsaltinq və təlim şirkəti. Beynəlxalq standartlara uyğunluq, sertifikatlaşdırma və davamlı inkişaf.</p>
-              <div class="footer-contact-item">
-                <i class="fas fa-phone"></i>
-                <span class="footer-contact-text">+994 12 123 45 67</span>
-              </div>
-              <div class="footer-contact-item">
-                <i class="fas fa-envelope"></i>
-                <span class="footer-contact-text">info@asrgroup.az</span>
-              </div>
-              <div class="footer-contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="footer-contact-text">Bakı, Azərbaycan</span>
-              </div>
-              <a href="#" class="footer-wa-btn">
-                <i class="fab fa-whatsapp"></i> WhatsApp ilə yaz
-              </a>
-              <div class="social-icons-container">
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-
-            <div class="footer-col">
-              <h4 class="footer-col-title">Sürətli keçidlər</h4>
-              <div class="footer-col-links">
-                <a href="#">Haqqımızda</a>
-                <a href="#">Xidmətlər</a>
-                <a href="#">Sektorlar</a>
-                <a href="#">Təcrübəmiz</a>
-                <a href="#">Bilik Mərkəzi</a>
-              </div>
-            </div>
-
-            <div class="footer-col">
-              <h4 class="footer-col-title">Xidmətlər</h4>
-              <div class="footer-col-links">
-                <a href="#">Qida Təhlükəsizliyi</a>
-                <a href="#">ISO 22000</a>
-                <a href="#">HACCP</a>
-                <a href="#">Halal Sertifikat</a>
-                <a href="#">Daxili Audit</a>
-              </div>
-            </div>
-
-            <div class="footer-col">
-              <div class="footer-expert-form">
-                <h4>Ekspert məsləhəti</h4>
-                <p>Özünüzü təsdiq edin, biz sizinlə əlaqə saxlayaq</p>
-                <input type="text" placeholder="Adınız">
-                <input type="tel" placeholder="Telefon nömrəniz">
-                <button>Göndər</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-bottom">
-            <span class="footer-copy">© 2025 ASR Group. Bütün hüquqlar qorunur.</span>
-            <div class="trust-badges">
-              <span class="trust-badge">ISO 9001</span>
-              <span class="trust-badge">ISO 22000</span>
-              <span class="trust-badge">HACCP</span>
-            </div>
-          </div>
-        </footer>
-
-      </main>
+    <!-- Sektorlar -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="sectors.html" class="mobile-nav-label">Sektorlar</a>
+        <button class="mobile-chevron-btn   has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="mobile-sub">
+        <a href="sectorlar.html"><i class="fa-solid fa-seedling"></i> Kəndtəsərrüfatı</a>
+        <a href="sectorlar.html"><i class="fa-solid fa-jar"></i> Ərzaq sənayesi</a>
+        <a href="sectorlar.html"><i class="fa-solid fa-briefcase-medical"></i> Səhiyyə</a>
+        <a href="sectorlar.html"><i class="fa-solid fa-plane-departure"></i> Turizm</a>
+        <a href="sectorlar.html"><i class="fa-solid fa-helmet-safety"></i> Tikinti</a>
+        <a href="sectorlar.html"><i class="fa-solid fa-microchip"></i> Texnologiya</a>
+        <a href="sectorlar.html"><i class="fa-solid fa-truck-moving"></i> Logistika</a>
+      </div>
     </div>
 
-    <!-- Fixed elements -->
-    <button class="back-to-top" id="backToTop" aria-label="Yuxarı">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Xidmətlər -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="index.html#xidmetler" class="mobile-nav-label">Xidmətlər</a>
+        <button class="mobile-chevron-btn   has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="mobile-sub">
+        <a href="xidmet-06.html"><i class="fa-solid fa-shield-halved"></i>Qida Təhlükəsizliyi</a>
+        <a href="xidmet-01.html"><i class="fa-solid fa-diagram-project"></i>İnkişaf Layihələrinin İdarəolunması</a>
+        <a href="xidmet-03.html"><i class="fa-solid fa-chess-knight"></i>Strateji Planlaşdırma</a>
+        <a href="xidmet-04.html"><i class="fa-solid fa-chart-line"></i>Monitorinq və Qiymətləndirmə</a>
+        <a href="xidmet-05.html"><i class="fa-solid fa-magnifying-glass-chart"></i>Tədqiqat və Analitik Təhlillər</a>
+        <a href="xidmet-02.html"><i class="fa-solid fa-scale-balanced"></i>İqtisadi Siyasət və Qanunvericilik</a>
+        <a href="xidmet-07.html"><i class="fa-solid fa-landmark"></i>Dövlətlə Əlaqələr</a>
+      </div>
+    </div>
 
-    <a href="https://wa.me/994501234567" class="whatsapp-icon" target="_blank" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+    <!-- Təcrübəmiz -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="index.html#tecrubekm" class="mobile-nav-label">Təcrübəmiz</a>
+        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="mobile-sub">
+        <a href="index.html#tecrubekm"><i class="fa-solid fa-trophy"></i>Uğurlu Layihələr</a>
+        <a href="index.html#tecrubekm"><i class="fa-solid fa-drumstick-bite"></i>Layihələr</a>
+
+      </div>
+    </div>
+
+    <!-- Bilik Mərkəzi -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="index.html#bilik-merkezi" class="mobile-nav-label">Bilik Mərkəzi</a>
+        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="mobile-sub">
+        <a href="index.html#bilik-merkezi"><i class="fa-solid fa-pen-nib"></i>Ekspert Bloqu</a>
+        <a href="index.html#bilik-merkezi"><i class="fa-solid fa-download"></i>Pulsuz Yükləmələr</a>
+      </div>
+    </div>
+
+    <!-- Media -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="media.html" class="mobile-nav-label">Media</a>
+        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+      </div>
+      <div class="mobile-sub">
+        <a href="media.html"><i class="fa-regular fa-images"></i>Foto Qalereya</a>
+        <a href="media.html"><i class="fa-solid fa-film"></i>Video İcmallar</a>
+        <a href="media.html"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
+      </div>
+    </div>
+
+    <!-- Əlaqə (no dropdown) -->
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row">
+        <a href="index.html#footer" class="mobile-nav-label">Əlaqə</a>
+      </div>
+    </div>
+
+    <a href="check.html" class="mobile-nav-cta">
+      <i class="fa-solid fa-microscope"></i>
+      <span>Pulsuz Diaqnostika</span>
     </a>
-      <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
 
-    <script>
-      /* ═══════════════════════════════════════════════════════════
-         VİDEO KARUSEL
-         ═══════════════════════════════════════════════════════════ */
-      const videoData = {
-        left: [
-          { thumb: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop', label: 'ISO 22000:2018 əsas dəyişikliklər' },
-          { thumb: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=400&h=225&fit=crop', label: 'HLS strukturu təlimi' },
-          { thumb: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=225&fit=crop', label: 'Risk əsaslı yanaşma praktiki' }
-        ],
-        right: [
-          { thumb: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop', label: 'Keçid strategiyası praktiki təlim' },
-          { thumb: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=225&fit=crop', label: 'Boşluq analizi metodologiyası' },
-          { thumb: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=225&fit=crop', label: 'Audit hazırlığı təlimi' }
-        ]
-      };
-      const currentIndex = { left: 0, right: 0 };
+  </div>
 
-      function changeVideo(side, direction) {
-        const data = videoData[side];
-        currentIndex[side] += direction;
-        if (currentIndex[side] < 0) currentIndex[side] = data.length - 1;
-        else if (currentIndex[side] >= data.length) currentIndex[side] = 0;
-        updateVideoDisplay(side);
+
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+         3. BLOG LAYOUT (Sidebar + Content)
+         ═══════════════════════════════════════════════════════════ -->
+  <div class="blog-layout">
+
+    <!-- 3.1 Sidebar (Mündəricat) -->
+    <aside class="blog-sidebar">
+      <div class="blog-sidebar-brand">
+        <i class="fas fa-shield-halved"></i>
+        ASR Group
+      </div>
+
+      <div class="blog-toc-title">Mündəricat</div>
+      <ul class="blog-toc-list" id="tocList">
+        <li>
+          <a href="#section1" class="active">
+            <i class="fas fa-chevron-right"></i>
+            Yüksək Səviyyəli Struktur (HLS)
+          </a>
+        </li>
+        <li>
+          <a href="#section2">
+            <i class="fas fa-chevron-right"></i>
+            Risk əsaslı yanaşma
+          </a>
+        </li>
+        <li>
+          <a href="#section3">
+            <i class="fas fa-chevron-right"></i>
+            PDCA dövrü dəyişiklikləri
+          </a>
+        </li>
+        <li>
+          <a href="#section4">
+            <i class="fas fa-chevron-right"></i>
+            Təhlükə nəzarət planı
+          </a>
+        </li>
+        <li>
+          <a href="#section5">
+            <i class="fas fa-chevron-right"></i>
+            Keçid strategiyası
+          </a>
+        </li>
+      </ul>
+
+      <div class="blog-sidebar-footer">
+        <strong>ASR Group</strong>
+        Azərbaycanın qida təhlükəsizliyi sahəsində lider konsaltinq şirkəti. Beynəlxalq standartlara uyğunluq və
+        sertifikatlaşdırma xidmətləri.
+      </div>
+    </aside>
+
+    <!-- 3.2 Main Content Area -->
+    <main class="blog-content" id="blogContent">
+      <section class="blog-hero">
+        <div class="blog-hero-content">
+          <div class="blog-hero-badge">
+            <i class="fas fa-certificate"></i>
+            Sertifikatlaşdırma Bələdçisi
+          </div>
+          <h1>ISO 22000:2018 vs 2005: Əsas Fərqlər və Keçid Strategiyası</h1>
+          <p class="blog-hero-subtitle">Yeni versiyaya keçid üçün praktik bələdçi. Müəssisənizin audit hazırlığını
+            qiymətləndirin.</p>
+          <div class="blog-hero-meta">
+            <span><i class="fas fa-calendar-alt"></i> May 2025</span>
+            <span><i class="fas fa-clock"></i> 10 dəqiqə oxuma</span>
+            <span><i class="fas fa-building"></i> ASR Group</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="blog-wrapper">
+
+        <!-- MƏRKƏZİ MƏTN HİSSƏSİ -->
+        <article class="article-main">
+
+          <section class="article-section" id="section1">
+            <div class="article-header">
+              <div class="article-number">01</div>
+              <h2 class="article-title">Yüksək Səviyyəli Struktur (HLS) və Yeni Maddə Quruluşu</h2>
+            </div>
+            <p>ISO 22000:2018-in ən fundamental dəyişikliyi Yüksək Səviyyəli Strukturun (High Level Structure - HLS)
+              tətbiqidir. Bu struktur ISO 9001:2015, ISO 14001:2015 və digər ISO standartları ilə eyni çərçivəni
+              paylaşır və müxtəlif idarəetmə sistemlərinin inteqrasiyasını asanlaşdırır. 2005 versiyasındakı 8 maddəlik
+              struktur yerinə 2018 versiyasında 10 maddəlik HLS strukturu tətbiq edilib.</p>
+
+            <div class="article-highlight">
+              <p>ASR Group olaraq tövsiyə edirik ki, müəssisələr ISO 22000:2018-ə keçid prosesində mövcud sənədlərini
+                HLS strukturuna uyğun yenidən təşkil etsinlər. Bu, digər idarəetmə sistemləri ilə inteqrasiyanı
+                asanlaşdıracaq və audit proseslərini sadələşdirəcək.</p>
+            </div>
+
+            <p>Əsas struktur dəyişiklikləri aşağıdakılardır: 2005 versiyasının 4, 5 və 6-cı maddələri 2018 versiyasında
+              4, 5, 6 və 7-ci maddələrə bölünüb. Əməliyyatlar (Operations) mövzusu əvvəlki 7-ci maddədən 8-ci maddəyə
+              keçirilib. Monitorinq və ölçmə (8-ci maddə) indi 9-cu maddədə, idarəetmə baxışı (5-ci maddə) isə 9.3-cü
+              maddədə yerləşdirilib. Bu dəyişikliklər Plan-Do-Check-Act (PDCA) dövrünə uyğun olaraq həyata keçirilib.
+            </p>
+
+            <p>Yeni struktur çərçivəsində təşkilatın konteksti (4.1), maraqlı tərəflərin ehtiyac və gözləntiləri (4.2)
+              kimi yeni tələblər əlavə edilib. Liderlik və öhdəlik (5.1) maddəsi gücləndirilib və rəhbərliyin idarəetmə
+              sisteminin effektivliyinə görə birbaşa məsuliyyət daşıması tələb olunur.</p>
+          </section>
+
+          <section class="article-section" id="section2">
+            <div class="article-header">
+              <div class="article-number">02</div>
+              <h2 class="article-title">Risk əsaslı yanaşma və Fürsətlərin İdarəedilməsi</h2>
+            </div>
+            <p>ISO 22000:2018 risk anlayışını strateji və əməliyyat səviyyələrində ayırır. Strateji səviyyədə idarəetmə
+              sisteminin effektivliyinə təsir edən risk və fürsətlər (6.1), əməliyyat səviyyəsində isə HACCP prinsipləri
+              ilə təhlükə analizi və kritik nəzarət nöqtələri müəyyənləşdirilir. Bu, 2005 versiyasındakı yalnız
+              əməliyyat səviyyəli risk anlayışından fərqlənir.</p>
+
+            <ul class="article-points">
+              <li><i class="fas fa-check-circle"></i><span>Strateji risklər: İdarəetmə sisteminin məqsədlərinə çatmasına
+                  mane ola bilən daxili və xarici faktorların sistematik müəyyənləşdirilməsi və monitorinqi tələb
+                  olunur.</span></li>
+              <li><i class="fas fa-check-circle"></i><span>Əməliyyat riskləri: HACCP prinsipləri çərçivəsində təhlükə
+                  analizi aparılır, kritik nəzarət nöqtələri (CCP) və əməliyyat şərti proqramlar (OPRP)
+                  müəyyənləşdirilir.</span></li>
+              <li><i class="fas fa-check-circle"></i><span>Fürsətlərin idarəedilməsi: Risklərlə yanaşı, təşkilatın
+                  inkişafına töhfə verə bilən fürsətlərin də müəyyənləşdirilməsi və dəyərləndirilməsi tələb
+                  olunur.</span></li>
+              <li><i class="fas fa-check-circle"></i><span>Müəssisə konteksti: Təşkilatın daxili və xarici mühitinin,
+                  mədəniyyətinin, qabiliyyətlərinin və maraqlı tərəflərinin sistematik təhlili.</span></li>
+            </ul>
+
+            <p>Yeni versiyada "təhlükə" anlayışı "qida təhlükəsizliyi təhlükəsi" ilə əvəz olunub və "zərər" (harm)
+              anlayışı "mənfi sağlamlıq təsiri" (adverse health effect) ilə əvəz edilib. Bu dəyişikliklər Codex
+              Alimentarius komissiyasının müasir tələbləri ilə uyğunlaşdırılıb.</p>
+          </section>
+
+          <section class="article-section" id="section3">
+            <div class="article-header">
+              <div class="article-number">03</div>
+              <h2 class="article-title">İki PDCA Dövrü və Liderlik Tələblərinin Gücləndirilməsi</h2>
+            </div>
+            <p>ISO 22000:2018 standartında iki ayrı Plan-Do-Check-Act (PDCA) dövrü tətbiq olunur. Birinci dövr idarəetmə
+              sisteminin özünü əhatə edir (maddələr 4-7), ikinci dövr isə əməliyyatları və HACCP prinsiplərini əhatə
+              edir (maddə 8). Bu ikili struktur idarəetmə sisteminin strateji idarəedilməsi ilə əməliyyatların praktiki
+              icrası arasında aydın sərhəd yaradır.</p>
+
+            <p>Liderlik tələbləri 2018 versiyasında əhəmiyyətli dərəcədə gücləndirilib. Rəhbərlik indi aşağıdakı
+              öhdəlikləri daşıyır: idarəetmə sisteminin effektivliyinə görə birbaşa məsuliyyət, qida təhlükəsizliyi
+              siyasətinin işçilər tərəfindən anlaşılmasının təmin edilməsi, idarəetmə sistemi tələblərinin biznes
+              proseslərinə inteqrasiyası, qida təhlükəsizliyi komandasına dəstək və lazımi resursların təmin edilməsi.
+            </p>
+
+            <div class="article-highlight">
+              <p>Qida təhlükəsizliyi siyasəti indi təşkilatın kontekstinə uyğun olmalı, müştəri tələblərini nəzərə
+                almalı, davamlı təkmilləşməyə öhdəlik bildirməli və maraqlı tərəflər üçün əlçatan olmalıdır. Siyasətin
+                sadəcə sənədləşdirilməsi yetərli deyil, işçilər tərəfindən anlaşılması da tələb olunur.</p>
+            </div>
+
+            <p>Kompetensiya tələbləri də genişləndirilib. "Təlimli personal" anlayışı "kompetent personal" ilə əvəz
+              olunub. Bu, yalnız təlim və ya kvalifikasiyadan daha çox təcrübə, bacarıq, bilik və tapşırığın anlaşılması
+              kimi amilləri əhatə edir. Vəzifə təsvirləri, proses prosedurları və davamlı təlim proqramlarının aydın
+              müəyyənləşdirilməsi tələb olunur.</p>
+          </section>
+
+          <section class="article-section" id="section4">
+            <div class="article-header">
+              <div class="article-number">04</div>
+              <h2 class="article-title">Təhlükə Nəzarət Planı və Xarici Təchizatçıların İdarəedilməsi</h2>
+            </div>
+            <p>ISO 22000:2018-də ən əhəmiyyətli dəyişikliklərdən biri "Təhlükə Nəzarət Planı" (Hazard Control Plan)
+              konsepsiyasının tətbiqidir. Bu plan CCP-lərdə və OPRP-lərdə nəzarət tədbirlərini əhatə edir. "Fəaliyyət
+              kriteriyası" (action criteria) anlayışı OPRP-lərin məqsədini daha aydın izah etmək üçün tətbiq olunub.</p>
+
+            <p>Xarici təchizatçıların idarəedilməsi (7.1.6) tələbləri əhəmiyyətli dərəcədə genişləndirilib. Təşkilatlar
+              indi xarici proseslərin, məhsulların və xidmətlərin (outsourced proseslər də daxil olmaqla)
+              təchizatçılarını nəzarət altında saxlamalı və qida təhlükəsizliyi idarəetmə sistemi tələblərinə
+              uyğunluğunu təmin etməlidirlər. Bu, yalnız xammal təchizatçıları ilə məhdudlaşmır, həm də xidmət
+              təchizatçılarını, avadanlıq təminatçılarını və outsourced proses operatorlarını əhatə edir.</p>
+
+            <ul class="article-points">
+              <li><i class="fas fa-microchip"></i><span>Təhlükə nəzarət planı: CCP və OPRP-lər üçün ayrı-ayrı planların
+                  hazırlanması, nəzarət tədbirlərinin kateqoriyalaşdırılması və təsdiqlənməsi.</span></li>
+              <li><i class="fas fa-qrcode"></i><span>İzlənilə bilənlik: Məhsulun rəf ömrü müddətində sənədləşdirilmiş
+                  məlumatların saxlanması və izlənilə bilənlik sisteminin effektivliyinin sınaqdan keçirilməsi
+                  tələbi.</span></li>
+              <li><i class="fas fa-flask"></i><span>Əvvəlcədən şərt proqramları (PRP): Qanunvericilik və tənzimləmə
+                  tələblərinin nəzərə alınması, təchizatçı təsdiqi, etiketləmə və gələn materialın nəzarəti.</span></li>
+            </ul>
+
+            <p>Əməliyyat planlaşdırması və nəzarəti (8.1) yeni tələb olaraq əlavə edilib. Planlaşdırılmış
+              dəyişikliklərin nəzarəti, gözlənilməz dəyişikliklərin nəzərdən keçirilməsi və outsourced proseslərin
+              nəzarəti bu maddə çərçivəsində tələb olunur.</p>
+          </section>
+
+          <section class="article-section" id="section5">
+            <div class="article-header">
+              <div class="article-number">05</div>
+              <h2 class="article-title">Keçid Strategiyası və Audit Hazırlığı</h2>
+            </div>
+            <p>ISO 22000:2005-dən ISO 22000:2018-ə keçid prosesi sistematik yanaşma tələb edir. ASR Group olaraq
+              müəssisələrə aşağıdakı addımlarla keçid strategiyası təklif edirik:</p>
+
+            <p><strong>Mərhələ 1 - Hazırlıq və Təlim:</strong> ISO 22000:2018 standartının məzmununu və tələblərini
+              öyrənin. Əsas diqqəti dəyişikliklərə yönəldin. Təşkilat daxilində maarifləndirmə təlimləri keçirin. Bütün
+              əsas personalın yeni tələbləri və əsas dəyişiklikləri başa düşməsini təmin edin.</p>
+
+            <p><strong>Mərhələ 2 - Boşluq Analizi (Gap Analysis):</strong> Mövcud qida təhlükəsizliyi idarəetmə
+              sisteminizi ISO 22000:2018 tələblərinə uyğun olaraq qiymətləndirin. Yeni tələblərə cavab vermək üçün lazım
+              olan boşluqları müəyyənləşdirin. HLS strukturuna uyğun sənədləşmə sistemini yenidən təşkil edin. Risk və
+              fürsətlərin idarəedilməsi prosesini qurun.</p>
+
+            <div class="article-highlight">
+              <p>Keçid auditinin müddəti: Xüsusi audit keçirilərsə, ilkin auditin 1/3 hissəsi (minimum 1 adam/gün);
+                Nəzarət auditilə birlikdə - nəzarət auditinin müddətinin 20% artırılması; Yenidən sertifikatlaşdırma
+                auditilə birlikdə - yenidən sertifikatlaşdırma auditinin müddətinin 20% artırılması.</p>
+            </div>
+
+            <p><strong>Mərhələ 3 - Tətbiq və İnkişaf:</strong> Yeni tələblərin tətbiqi üçün fəaliyyət planı hazırlayın.
+              Təhlükə nəzarət planını CCP və OPRP-lər üçün ayrı-ayrı hazırlayın. Xarici təchizatçıların idarəedilməsi
+              prosedurlarını yeniləyin. Kompetensiya tələblərini yenidən müəyyənləşdirin və təlim proqramlarını
+              yeniləyin.</p>
+
+            <p><strong>Mərhələ 4 - Təsdiqləmə:</strong> Daxili audit keçirin və effektivliyi qiymətləndirin. İdarəetmə
+              baxışı iclası keçirin. Sertifikatlaşdırma orqanı ilə keçid tədbirlərini razılaşdırın. Keçid auditinə
+              hazırlaşın.</p>
+
+            <p>ASR Group olaraq məqsədimiz Azərbaycanın qida sənayesinin beynəlxalq standartlara uyğunlaşmasına dəstək
+              olmaq və qida təhlükəsizliyi idarəetmə sistemlərinin effektiv tətbiqi üçün peşəkar konsaltinq xidmətləri
+              göstərməkdir.</p>
+          </section>
+
+        </article>
+
+        <!-- SAĞ DAXİLİ WIDGET-LAR -->
+        <aside class="blog-widgets">
+
+          <div class="blog-widget">
+            <div class="blog-widget-title"><i class="fas fa-bolt"></i> Əsas Fərqlər</div>
+            <div class="trend-row">
+              <div class="trend-icon-box"><i class="fas fa-sitemap"></i></div>
+              <div class="trend-info">
+                <h4>HLS Strukturu</h4>
+                <p>10 maddəlik yeni struktur, digər ISO standartları ilə inteqrasiya</p>
+              </div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-icon-box"><i class="fas fa-shield-alt"></i></div>
+              <div class="trend-info">
+                <h4>Risk əsaslı yanaşma</h4>
+                <p>Strateji və əməliyyat səviyyələrində risk və fürsətlərin idarəedilməsi</p>
+              </div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-icon-box"><i class="fas fa-sync-alt"></i></div>
+              <div class="trend-info">
+                <h4>İki PDCA dövrü</h4>
+                <p>İdarəetmə sistemi və HACCP prinsipləri üçün ayrı dövrlər</p>
+              </div>
+            </div>
+            <div class="trend-row">
+              <div class="trend-icon-box"><i class="fas fa-clipboard-check"></i></div>
+              <div class="trend-info">
+                <h4>Təhlükə nəzarət planı</h4>
+                <p>CCP və OPRP-lər üçün vahid nəzarət planı</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-video">
+            <div class="blog-video-title"><i class="fas fa-video"></i> Video təlimlər</div>
+            <div class="video-carousel" id="videoCarouselLeft">
+              <div class="video-box">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop" alt="Video"
+                  id="videoThumbLeft">
+                <div class="video-overlay">
+                  <div class="video-play"><i class="fas fa-play"></i></div>
+                  <span class="video-tag" id="videoLabelLeft">ISO 22000:2018 əsas dəyişikliklər</span>
+                </div>
+              </div>
+              <div class="video-nav">
+                <button class="video-nav-btn" onclick="changeVideo('left', -1)">
+                  << /button>
+                    <span class="video-counter" id="videoCounterLeft">1 / 3</span>
+                    <button class="video-nav-btn" onclick="changeVideo('left', 1)">></button>
+              </div>
+              <div class="video-dots" id="videoDotsLeft">
+                <span class="video-dot active"></span>
+                <span class="video-dot"></span>
+                <span class="video-dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="blog-video">
+            <div class="blog-video-title"><i class="fas fa-play-circle"></i> Ekspert müsahibələri</div>
+            <div class="video-carousel" id="videoCarouselRight">
+              <div class="video-box">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop" alt="Video"
+                  id="videoThumbRight">
+                <div class="video-overlay">
+                  <div class="video-play"><i class="fas fa-play"></i></div>
+                  <span class="video-tag" id="videoLabelRight">Keçid strategiyası praktiki təlim</span>
+                </div>
+              </div>
+              <div class="video-nav">
+                <button class="video-nav-btn" onclick="changeVideo('right', -1)">
+                  << /button>
+                    <span class="video-counter" id="videoCounterRight">1 / 3</span>
+                    <button class="video-nav-btn" onclick="changeVideo('right', 1)">></button>
+              </div>
+              <div class="video-dots" id="videoDotsRight">
+                <span class="video-dot active"></span>
+                <span class="video-dot"></span>
+                <span class="video-dot"></span>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+
+
+      <footer id="footer">
+        <div class="footer-top">
+          <div class="footer-col">
+            <a href="#" class="logo" style="position: static; right: auto; margin-bottom: 12px;">
+              <i class="fas fa-shield-halved" style="color: var(--gold); font-size: 20px;"></i>
+              <span style="font-weight: 800; color: var(--heading); font-size: 18px;">ASR Group</span>
+            </a>
+            <p class="footer-tagline-txt">Azərbaycanın qida təhlükəsizliyi sahəsində lider konsaltinq və təlim şirkəti.
+              Beynəlxalq standartlara uyğunluq, sertifikatlaşdırma və davamlı inkişaf.</p>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone"></i>
+              <span class="footer-contact-text">+994 12 123 45 67</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span class="footer-contact-text">info@asrgroup.az</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span class="footer-contact-text">Bakı, Azərbaycan</span>
+            </div>
+            <a href="#" class="footer-wa-btn">
+              <i class="fab fa-whatsapp"></i> WhatsApp ilə yaz
+            </a>
+            <div class="social-icons-container">
+              <a href="https://www.instagram.com/asrgroupagency?igsh=MTBuZ2FxbXA2bDJhdQ%3D%3D&utm_source=qr"
+                class="social-link" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="TikTok">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+              <a href="https://www.facebook.com/people/ASR-Development-Consulting-Group/61589704797832/?mibextid=wwXIfr&rdid=9gkTzncQSS37AowB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CGhT3M1Lr%2F%3Fmibextid%3DwwXIfr"
+                class="social-link" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="office@asrgroup.az" class="social-link" aria-label="Email">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a href="https://www.youtube.com/@asrgroupagency" class="social-link" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Sürətli keçidlər</h4>
+            <div class="footer-col-links">
+              <a href="#">Haqqımızda</a>
+              <a href="#">Xidmətlər</a>
+              <a href="#">Sektorlar</a>
+              <a href="#">Təcrübəmiz</a>
+              <a href="#">Bilik Mərkəzi</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-col-title">Xidmətlər</h4>
+            <div class="footer-col-links">
+              <a href="#">Qida Təhlükəsizliyi</a>
+              <a href="#">ISO 22000</a>
+              <a href="#">HACCP</a>
+              <a href="#">Halal Sertifikat</a>
+              <a href="#">Daxili Audit</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div class="footer-expert-form">
+              <h4>Ekspert məsləhəti</h4>
+              <p>Özünüzü təsdiq edin, biz sizinlə əlaqə saxlayaq</p>
+              <input type="text" placeholder="Adınız">
+              <input type="tel" placeholder="Telefon nömrəniz">
+              <button>Göndər</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copy">© 2025 ASR Group. Bütün hüquqlar qorunur.</span>
+          <div class="trust-badges">
+            <span class="trust-badge">ISO 9001</span>
+            <span class="trust-badge">ISO 22000</span>
+            <span class="trust-badge">HACCP</span>
+          </div>
+        </div>
+      </footer>
+
+
+    </main>
+  </div>
+
+
+  </main>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+         5. FIXED ELEMENTS (Sol tərəf - sabit)
+         ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Yuxarı">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ═══════════════════════════════════════════════════════════
+         6. SCRIPTS
+         ═══════════════════════════════════════════════════════════ -->
+  <script>
+    /* ----------------------------------------------------------
+       Video Carousel Data & Logic
+       ---------------------------------------------------------- */
+    const videoData = {
+      left: [
+        { thumb: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop', label: 'ISO 22000:2018 əsas dəyişikliklər' },
+        { thumb: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=400&h=225&fit=crop', label: 'HLS strukturu təlimi' },
+        { thumb: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=225&fit=crop', label: 'Risk əsaslı yanaşma praktiki' }
+      ],
+      right: [
+        { thumb: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop', label: 'Keçid strategiyası praktiki təlim' },
+        { thumb: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=225&fit=crop', label: 'Boşluq analizi metodologiyası' },
+        { thumb: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=225&fit=crop', label: 'Audit hazırlığı təlimi' }
+      ]
+    };
+
+    const currentIndex = { left: 0, right: 0 };
+
+    function changeVideo(side, direction) {
+      const data = videoData[side];
+      currentIndex[side] += direction;
+      if (currentIndex[side] < 0) currentIndex[side] = data.length - 1;
+      else if (currentIndex[side] >= data.length) currentIndex[side] = 0;
+      updateVideoDisplay(side);
+    }
+
+    function updateVideoDisplay(side) {
+      const data = videoData[side];
+      const index = currentIndex[side];
+      const cap = side.charAt(0).toUpperCase() + side.slice(1);
+
+      document.getElementById('videoThumb' + cap).src = data[index].thumb;
+      document.getElementById('videoLabel' + cap).textContent = data[index].label;
+      document.getElementById('videoCounter' + cap).textContent = (index + 1) + ' / ' + data.length;
+
+      const dots = document.getElementById('videoDots' + cap).children;
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.toggle('active', i === index);
       }
+    }
 
-      function updateVideoDisplay(side) {
-        const data = videoData[side];
-        const index = currentIndex[side];
-        const cap = side.charAt(0).toUpperCase() + side.slice(1);
-        document.getElementById('videoThumb' + cap).src = data[index].thumb;
-        document.getElementById('videoLabel' + cap).textContent = data[index].label;
-        document.getElementById('videoCounter' + cap).textContent = (index + 1) + ' / ' + data.length;
-        const dots = document.getElementById('videoDots' + cap).children;
-        for (let i = 0; i < dots.length; i++) dots[i].classList.toggle('active', i === index);
-      }
+    /* ----------------------------------------------------------
+       ScrollSpy: Active Section Highlighting
+       ---------------------------------------------------------- */
+    const blogContent = document.getElementById('blogContent');
+    const articleSections = document.querySelectorAll('.article-section');
+    const tocLinks = document.querySelectorAll('.blog-toc-list a');
 
-      /* ═══════════════════════════════════════════════════════════
-         SCROLLSPY: Aktiv bölmənin işıqlanması
-         ═══════════════════════════════════════════════════════════ */
-      const blogContent = document.getElementById('blogContent');
-      const articleSections = document.querySelectorAll('.article-section');
-      const tocLinks = document.querySelectorAll('.blog-toc-list a');
+    function updateActiveLink() {
+      let current = '';
+      const scrollPos = blogContent.scrollTop + 160;
 
-      function updateActiveLink() {
-        let current = '';
-        const scrollPos = blogContent.scrollTop + 160;
-
-        articleSections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          if (scrollPos >= sectionTop) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        if (!current && articleSections.length > 0) {
-          current = articleSections[0].getAttribute('id');
+      articleSections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (scrollPos >= sectionTop) {
+          current = section.getAttribute('id');
         }
-
-        tocLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-          }
-        });
-      }
-
-      blogContent.addEventListener('scroll', () => {
-        updateActiveLink();
-
-        // Navbar scrolled state
-        const navbar = document.getElementById('navbar');
-        if (blogContent.scrollTop > 10) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-
-        // Back to top
-        const backToTop = document.getElementById('backToTop');
-        if (blogContent.scrollTop > 600) backToTop.classList.add('show');
-        else backToTop.classList.remove('show');
       });
+
+      if (!current && articleSections.length > 0) {
+        current = articleSections[0].getAttribute('id');
+      }
 
       tocLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-            blogContent.scrollTo({
-              top: targetSection.offsetTop - 20,
-              behavior: 'smooth'
-            });
-          }
-        });
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
       });
+    }
 
+    blogContent.addEventListener('scroll', () => {
       updateActiveLink();
 
-      /* ═══════════════════════════════════════════════════════════
-         TEMA DƏYİŞDİRİCİ (Sizin kodlarınızla uyğun)
-         ═══════════════════════════════════════════════════════════ */
-      document.getElementById('theme-switch').addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-      });
+      // Navbar scrolled state
+      const navbar = document.getElementById('navbar');
+      if (blogContent.scrollTop > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
 
-      /* ═══════════════════════════════════════════════════════════
-         MOBİL NAV (Sizin kodlarınızla uyğun)
-         ═══════════════════════════════════════════════════════════ */
-      document.querySelector('.nav-toggle').addEventListener('click', function() {
-        this.classList.toggle('open');
-        document.getElementById('mobileNav').classList.toggle('open');
-      });
+      // Back to top visibility
+      const backToTop = document.getElementById('backToTop');
+      if (blogContent.scrollTop > 600) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
 
-      document.querySelectorAll('.mobile-chevron-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-          const expanded = this.getAttribute('aria-expanded') === 'true';
-          this.setAttribute('aria-expanded', !expanded);
-          this.closest('.mobile-nav-item').querySelector('.mobile-sub').classList.toggle('open');
-        });
+    // Smooth scroll for TOC links
+    tocLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          blogContent.scrollTo({
+            top: targetSection.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
       });
+    });
 
-      /* ═══════════════════════════════════════════════════════════
-         BACK TO TOP
-         ═══════════════════════════════════════════════════════════ */
-      document.getElementById('backToTop').addEventListener('click', () => {
-        blogContent.scrollTo({ top: 0, behavior: 'smooth' });
+    updateActiveLink();
+
+    /* ----------------------------------------------------------
+       Theme Switcher
+       ---------------------------------------------------------- */
+    document.getElementById('theme-switch').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    /* ----------------------------------------------------------
+       Mobile Navigation
+       ---------------------------------------------------------- */
+    document.getElementById('mobileToggle').addEventListener('click', function () {
+      this.classList.toggle('open');
+      document.getElementById('mobileNav').classList.toggle('open');
+    });
+
+    document.querySelectorAll('.mobile-chevron-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        this.closest('.mobile-nav-item').querySelector('.mobile-sub').classList.toggle('open');
       });
-    </script>
-      <script src="app.js"></script>
-  <script type="text/javascript" src="darkmode.js"></script>
+    });
+
+    /* ----------------------------------------------------------
+       Back to Top
+       ---------------------------------------------------------- */
+    document.getElementById('backToTop').addEventListener('click', () => {
+      blogContent.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ----------------------------------------------------------
+       Footer Year
+       ---------------------------------------------------------- */
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+      footerYear.textContent = new Date().getFullYear();
+    }
+  </script>
+
+  <!-- External Scripts -->
+  <script src="app.js"></script>
+  <script src="darkmode.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
-
-
 </body>
+
 </html>
