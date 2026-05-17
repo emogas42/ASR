@@ -3882,37 +3882,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
             border-radius: 3px;
         }
 
-        /* Bottom section */
-        .bottom-section {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
-            text-align: center;
-        }
-
-        .bottom-section h2 {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--haqqimizda-title);
-            margin-bottom: 24px;
-        }
-        .bottom-section p strong{
-      
-            color: var(--haqqimizda-title);
-           
-        }
-        
-        .bottom-text {
-            max-width: 850px;
-            margin: 0 auto;
-            font-size: 14px;
-            color: var(--text-2);
-            line-height: 1.8;
-        }
-
-        .bottom-text p { margin-bottom: 12px; }
-
-        .bottom-text strong { color: #1a1a1a; }
+       
 
         .company-name {
             margin-top: 30px;
