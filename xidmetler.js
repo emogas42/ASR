@@ -215,4 +215,374 @@
  
 })();
 
+/* ═══════════════════════════════════════════════════════════════════
+   xidmet-04.js snippet — Biznesin İnkişafı Xidmətləri səhifəsi üçün
+   Bu kodu xidmetler.js faylının sonuna əlavə edin.
+   Accordion, GSAP animasiyası və proses addımları idarəetməsi.
+   ═══════════════════════════════════════════════════════════════════ */
+ 
+(function () {
+  'use strict';
+ 
+  /* ── Yalnız xidmet-04.html səhifəsindədirsə işlə ──────────── */
+  if (!document.querySelector('.process-steps-wrap')) return;
+ 
+  /* ── 1. Process steps — Accordion HTML strukturunu qur ──────── */
+  document.querySelectorAll('.process-steps-wrap .process-step').forEach(function (step) {
+ 
+    /* Artıq çevrilib — təkrar işləmə */
+    if (step.querySelector('.process-step-header')) return;
+ 
+    var numEl   = step.querySelector('.process-step-num');
+    var iconEl  = step.querySelector('.process-step-icon');
+    var titleEl = step.querySelector('.process-step-title');
+    var descEl  = step.querySelector('.process-step-desc');
+ 
+    if (!titleEl || !descEl) return;
+ 
+    /* -- Chevron elementi -- */
+    var chevron = document.createElement('span');
+    chevron.className = 'process-step-chevron';
+    chevron.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+    chevron.setAttribute('aria-hidden', 'true');
+ 
+    /* -- Header qrupu -- */
+    var header = document.createElement('div');
+    header.className = 'process-step-header';
+    if (iconEl) header.appendChild(iconEl);
+    header.appendChild(titleEl);
+    header.appendChild(chevron);
+ 
+    /* -- Panel qrupu -- */
+    var panel = document.createElement('div');
+    panel.className = 'process-step-panel';
+    panel.setAttribute('role', 'region');
+    panel.appendChild(descEl);
+ 
+    /* -- Body qrupu -- */
+    var body = document.createElement('div');
+    body.className = 'process-step-body';
+    body.appendChild(header);
+    body.appendChild(panel);
+ 
+    /* Step-i yenidən qur */
+    while (step.firstChild) step.removeChild(step.firstChild);
+    if (numEl) step.appendChild(numEl);
+    step.appendChild(body);
+ 
+    /* Accessibility */
+    step.setAttribute('role', 'button');
+    step.setAttribute('aria-expanded', 'false');
+    step.setAttribute('tabindex', '0');
+  });
+ 
+  /* ── 2. Accordion açma/bağlama məntiq ──────────────────────── */
+  var steps = Array.from(document.querySelectorAll('.process-steps-wrap .process-step'));
+ 
+  function openStep(step) {
+    step.classList.add('ps-open');
+    step.setAttribute('aria-expanded', 'true');
+  }
+  function closeStep(step) {
+    step.classList.remove('ps-open');
+    step.setAttribute('aria-expanded', 'false');
+  }
+  function toggleStep(step) {
+    var isOpen = step.classList.contains('ps-open');
+    steps.forEach(function (s) { if (s !== step) closeStep(s); });
+    if (isOpen) closeStep(step);
+    else openStep(step);
+  }
+ 
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () { toggleStep(step); });
+    step.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleStep(step);
+      }
+    });
+  });
+ 
+  /* İlk addımı avtomatik aç */
+  if (steps.length > 0) openStep(steps[0]);
+ 
+  /* ── 3. GSAP: mövcud .process-step ScrollTrigger-lərini kill et */
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    steps.forEach(function (s) {
+      s.style.opacity = '1';
+      s.style.transform = 'none';
+    });
+    return;
+  }
+ 
+  ScrollTrigger.getAll().forEach(function (st) {
+    var el = st.trigger;
+    if (el && el.classList &&
+        el.classList.contains('process-step') &&
+        el.closest('.process-steps-wrap')) {
+      st.kill();
+      gsap.set(el, { clearProps: 'all' });
+    }
+  });
+ 
+  /* ── 4. Yeni animasiya: altdan yuxarı, stagger ──────────────── */
+  steps.forEach(function (el, i) {
+    gsap.set(el, { opacity: 0, y: 32 });
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.58,
+      ease: 'power3.out',
+      delay: i * 0.07,
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 91%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+ 
+})();
+/* ═══════════════════════════════════════════════════════════════════
+   xidmet-04.js snippet — Biznesin İnkişafı Xidmətləri səhifəsi üçün
+   Bu kodu xidmetler.js faylının sonuna əlavə edin.
+   Accordion, GSAP animasiyası və proses addımları idarəetməsi.
+   ═══════════════════════════════════════════════════════════════════ */
+
+(function () {
+  'use strict';
+
+  /* ── Yalnız xidmet-04.html səhifəsindədirsə işlə ──────────── */
+  if (!document.querySelector('.process-steps-wrap')) return;
+
+  /* ── 1. Process steps — Accordion HTML strukturunu qur ──────── */
+  document.querySelectorAll('.process-steps-wrap .process-step').forEach(function (step) {
+
+    /* Artıq çevrilib — təkrar işləmə */
+    if (step.querySelector('.process-step-header')) return;
+
+    var numEl   = step.querySelector('.process-step-num');
+    var iconEl  = step.querySelector('.process-step-icon');
+    var titleEl = step.querySelector('.process-step-title');
+    var descEl  = step.querySelector('.process-step-desc');
+
+    if (!titleEl || !descEl) return;
+
+    /* -- Chevron elementi -- */
+    var chevron = document.createElement('span');
+    chevron.className = 'process-step-chevron';
+    chevron.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+    chevron.setAttribute('aria-hidden', 'true');
+
+    /* -- Header qrupu -- */
+    var header = document.createElement('div');
+    header.className = 'process-step-header';
+    if (iconEl) header.appendChild(iconEl);
+    header.appendChild(titleEl);
+    header.appendChild(chevron);
+
+    /* -- Panel qrupu -- */
+    var panel = document.createElement('div');
+    panel.className = 'process-step-panel';
+    panel.setAttribute('role', 'region');
+    panel.appendChild(descEl);
+
+    /* -- Body qrupu -- */
+    var body = document.createElement('div');
+    body.className = 'process-step-body';
+    body.appendChild(header);
+    body.appendChild(panel);
+
+    /* Step-i yenidən qur */
+    while (step.firstChild) step.removeChild(step.firstChild);
+    if (numEl) step.appendChild(numEl);
+    step.appendChild(body);
+
+    /* Accessibility */
+    step.setAttribute('role', 'button');
+    step.setAttribute('aria-expanded', 'false');
+    step.setAttribute('tabindex', '0');
+  });
+
+  /* ── 2. Accordion açma/bağlama məntiq ──────────────────────── */
+  var steps = Array.from(document.querySelectorAll('.process-steps-wrap .process-step'));
+
+  function openStep(step) {
+    step.classList.add('ps-open');
+    step.setAttribute('aria-expanded', 'true');
+  }
+  function closeStep(step) {
+    step.classList.remove('ps-open');
+    step.setAttribute('aria-expanded', 'false');
+  }
+  function toggleStep(step) {
+    var isOpen = step.classList.contains('ps-open');
+    steps.forEach(function (s) { if (s !== step) closeStep(s); });
+    if (isOpen) closeStep(step);
+    else openStep(step);
+  }
+
+  steps.forEach(function (step) {
+    step.addEventListener('click', function () { toggleStep(step); });
+    step.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleStep(step);
+      }
+    });
+  });
+
+  /* İlk addımı avtomatik aç */
+  if (steps.length > 0) openStep(steps[0]);
+
+  /* ── 3. GSAP: mövcud .process-step ScrollTrigger-lərini kill et */
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+    steps.forEach(function (s) {
+      s.style.opacity = '1';
+      s.style.transform = 'none';
+    });
+    return;
+  }
+
+  ScrollTrigger.getAll().forEach(function (st) {
+    var el = st.trigger;
+    if (el && el.classList &&
+        el.classList.contains('process-step') &&
+        el.closest('.process-steps-wrap')) {
+      st.kill();
+      gsap.set(el, { clearProps: 'all' });
+    }
+  });
+
+  /* ── 4. Yeni animasiya: altdan yuxarı, stagger ──────────────── */
+  steps.forEach(function (el, i) {
+    gsap.set(el, { opacity: 0, y: 52 });
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.68,
+      ease: 'power3.out',
+      delay: i * 0.09,
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 91%',
+        toggleActions: 'play none none none'
+      }
+    });
+  });
+
+})();
+
+
+
+// ── EKSPERT CAROUSEL FIX ──────────────────────────────────────
+// app.js-dəki "// ── EKSPERT CAROUSEL ──" blokunu
+// (function() { ... aşağıdakı })(); hissəsini
+// BU KOD İLƏ ƏVƏZLƏ
+// ─────────────────────────────────────────────────────────────
+(function () {
+  'use strict';
+ 
+  // Yalnız birdəfəlik işə düşür — birdən çox #komanda varsa
+  // kartları olan sonuncunu tap
+  var allSections = document.querySelectorAll('#komanda');
+  var section = null;
+  allSections.forEach(function (s) {
+    if (s.querySelector('.exp-card')) section = s;
+  });
+  if (!section) return;
+ 
+  var expTrack = section.querySelector('.experts-track');
+  var expOuter = section.querySelector('.experts-track-outer');
+  var expDots  = section.querySelector('.exp-dots');
+  var expPrev  = section.querySelector('.exp-prev');
+  var expNext  = section.querySelector('.exp-next');
+ 
+  if (!expTrack || !expOuter) return;
+ 
+  var expCards   = Array.from(expTrack.querySelectorAll('.exp-card'));
+  var expCurrent = 0;
+  var expTimer   = null;
+ 
+  function expPerView() {
+    if (window.innerWidth <= 640)  return 1;
+    if (window.innerWidth <= 1024) return 2;
+    return 3;
+  }
+ 
+  function expTotal() {
+    return Math.ceil(expCards.length / expPerView());
+  }
+ 
+  function expBuildDots() {
+    if (!expDots) return;
+    expDots.innerHTML = '';
+    var tot = expTotal();
+    for (var i = 0; i < tot; i++) {
+      (function (idx) {
+        var d = document.createElement('button');
+        d.className = 'exp-dot' + (idx === expCurrent ? ' active' : '');
+        d.setAttribute('aria-label', 'Səhifə ' + (idx + 1));
+        d.addEventListener('click', function () { expGoTo(idx); expRestart(); });
+        expDots.appendChild(d);
+      })(i);
+    }
+  }
+ 
+  function expGoTo(idx) {
+    var pv  = expPerView();
+    var tot = expTotal();
+    expCurrent = ((idx % tot) + tot) % tot;
+ 
+    var gap   = 24;
+    var cardW = (expOuter.offsetWidth - (pv - 1) * gap) / pv;
+    expTrack.style.transform =
+      'translateX(-' + (expCurrent * pv * (cardW + gap)) + 'px)';
+ 
+    if (expDots) {
+      expDots.querySelectorAll('.exp-dot').forEach(function (d, i) {
+        d.classList.toggle('active', i === expCurrent);
+      });
+    }
+  }
+ 
+  function expRestart() {
+    clearInterval(expTimer);
+    expTimer = setInterval(function () { expGoTo(expCurrent + 1); }, 5000);
+  }
+ 
+  /* Ok düymələri — varsa qoş */
+  if (expPrev) expPrev.addEventListener('click', function () { expGoTo(expCurrent - 1); expRestart(); });
+  if (expNext) expNext.addEventListener('click', function () { expGoTo(expCurrent + 1); expRestart(); });
+ 
+  /* Touch/swipe */
+  var expTouchX = 0;
+  expOuter.addEventListener('touchstart', function (e) {
+    expTouchX = e.touches[0].clientX;
+  }, { passive: true });
+  expOuter.addEventListener('touchend', function (e) {
+    var diff = expTouchX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      diff > 0 ? expGoTo(expCurrent + 1) : expGoTo(expCurrent - 1);
+      expRestart();
+    }
+  });
+ 
+  /* Resize — ekran ölçüsü dəyişəndə yenidən hesabla */
+  var expResizeT;
+  window.addEventListener('resize', function () {
+    clearTimeout(expResizeT);
+    expResizeT = setTimeout(function () {
+      expBuildDots();
+      expGoTo(expCurrent);
+    }, 200);
+  });
+ 
+  expBuildDots();
+  expGoTo(0);
+  expRestart();
+})();
+ 
+
   
