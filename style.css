@@ -3640,358 +3640,394 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   border-color: rgba(255,255,255,0.1);
   color: #fff;
 }
+/* ============================================================
+   NİYƏ BİZ? — Yenidən dizayn edilmiş hissə
+   ============================================================ */
+
 .section-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
 
-        /* Intro text */
-        .intro-text {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 50px;
-            font-size: 15px;
-            color: #555;
-            line-height: 1.8;
-        }
+.section-wrapper > .section-title {
+  text-align: center;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
 
-        /* Main grid */
-        .main-grid {
-            display: flex;
-            align-items: stretch;
-            gap: 0;
-        }
+.intro-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+}
 
-        /* Left side - 60% */
-        .left-side {
-            width: 60%;
-            padding-right: 35px;
-        }
+/* Kartlar grid - tam enində, 2 sütun */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
 
-        /* Cards grid - 2 columns */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
+.why-us-grid .card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: all 0.35s cubic-bezier(0.16,1,0.3,1);
+  position: relative;
+  overflow: hidden;
+}
 
-        .card {
-            background: #fafafa;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 20px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+.why-us-grid .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+  transform: scaleY(0);
+  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+}
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: #C9A227;
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
+.why-us-grid .card:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
 
-        .card:hover {
-            border-color: #C9A227;
-            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.1);
-            transform: translateY(-2px);
-        }
+.why-us-grid .card:hover::before {
+  transform: scaleY(1);
+}
 
-        .card:hover::before {
-            transform: scaleY(1);
-        }
+.card-number {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
 
-        .card-number {
-            font-size: 11px;
-            font-weight: 700;
-            color: #C9A227;
-            margin-bottom: 8px;
-            font-family: monospace;
-        }
+.card-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
 
-        .card-title {
-            font-size: 13px;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
+.card-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
 
-        .card-desc {
-            font-size: 12px;
-            color: #666;
-            line-height: 1.6;
-        }
+/* ============================================================
+   VIDEO BÖLMƏSİ — Kartların altında, şəkildəki kimi balaca
+   ============================================================ */
 
-        /* Gold divider */
-        .divider {
-            width: 2px;
-            background: #C9A227;
-            margin: 0 30px;
-            position: relative;
-            align-self: stretch;
-            flex-shrink: 0;
-        }
+.video-section {
+  margin-top: 2rem;
+  position: relative;
+}
 
-        .divider::before,
-        .divider::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 10px;
-            height: 10px;
-            background: #C9A227;
-            border-radius: 50%;
-        }
+.video-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
 
-        .divider::before { top: 0; }
-        .divider::after { bottom: 0; }
+.video-section-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--heading);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
 
-        /* Right side - 40% */
-        .right-side {
-            width: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
+.video-section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
 
-        /* Nav buttons */
-        .nav-btn {
-            width: 32px;
-            height: 32px;
-            border: 1px solid #ddd;
-            border-radius: 50%;
-            background: #fff;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 13px;
-            font-weight: 700;
-            transition: all 0.2s;
-            flex-shrink: 0;
-        }
+.video-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-        .nav-btn:hover {
-            border-color: #C9A227;
-            color: #C9A227;
-            background: #fff9e6;
-        }
+.video-track-wrapper {
+  overflow: hidden;
+  flex: 1;
+  border-radius: var(--radius-lg);
+}
 
-        /* Phone */
-        .phone {
-            width: 200px;
-            height: 360px;
-            background: #111;
-            border-radius: 28px;
-            padding: 8px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            flex-shrink: 0;
-        }
+.video-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  will-change: transform;
+}
 
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: #000;
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-        }
+/* Video kart - şəkildəki ekspert kartlarına bənzər, balaca */
+.video-card {
+  flex: 0 0 calc(33.333% - 0.85rem);
+  min-width: calc(33.333% - 0.85rem);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
 
-        .reels-track {
-            display: flex;
-            height: 100%;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(200,146,42,0.35);
+}
 
-        .reel {
-            min-width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
+/* Video thumbnail */
+.video-thumb {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+}
 
-        .reel-bg-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .reel-bg-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-        .reel-bg-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
 
-        .reel-label {
-            position: absolute;
-            bottom: 36px;
-            left: 12px;
-            color: rgba(255,255,255,0.9);
-            font-size: 11px;
-            font-weight: 600;
-        }
+.video-card:hover .video-thumb img {
+  transform: scale(1.05);
+}
 
-        .play-btn {
-            width: 44px;
-            height: 44px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
+/* Play button ortada */
+.video-thumb .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
 
-        .play-btn:hover { transform: scale(1.1); }
+.video-thumb .play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #fff;
+}
 
-        .play-btn svg {
-            width: 16px;
-            height: 16px;
-            fill: #000;
-            margin-left: 2px;
-        }
+.video-thumb .play-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--navy-dark);
+  margin-left: 2px;
+}
 
-        .indicators {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 5px;
-        }
+/* Video card body - şəkildəki kimi */
+.video-card-body {
+  padding: 1.25rem;
+}
 
-        .dot {
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.4);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
+.video-card-label {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
 
-        .dot.active {
-            background: #fff;
-            width: 16px;
-            border-radius: 3px;
-        }
+.video-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
 
-       
+.video-card-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.875rem;
+}
 
-        .company-name {
-            margin-top: 30px;
-            font-size: 13px;
-            letter-spacing: 4px;
-            color: var(--gold);
-            text-transform: uppercase;
-            display: none;
-        }
+/* Video tags - pill style */
+.video-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
 
-        /* ========== RESPONSIVE ========== */
+.v-tag {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+  background: var(--bg-secondary);
+  color: var(--heading-sub);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
 
-        /* Tablet */
-        @media (max-width: 1024px) {
-            .cards-grid {
-                grid-template-columns: 1fr;
-                gap: 12px;
-            }
-            .card {
-                padding: 16px;
-            }
-        }
+.video-card:hover .v-tag {
+  background: rgba(200,146,42,0.08);
+  border-color: rgba(200,146,42,0.25);
+  color: var(--gold);
+}
 
-        /* Mobile */
-        @media (max-width: 768px) {
-            .section-wrapper {
-                padding: 40px 16px;
-            }
+/* Video nav buttons - oxlar yanlarda */
+.video-nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--heading);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
 
-            .main-grid {
-                flex-direction: column;
-            }
+.video-nav-btn:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(11,31,58,0.15);
+}
 
-            .left-side,
-            .right-side {
-                width: 100%;
-                padding: 0;
-            }
+/* Video indicators */
+.video-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+}
 
-            .divider {
-                width: 100%;
-                height: 2px;
-                margin: 30px 0;
-            }
+.v-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
 
-            .divider::before,
-            .divider::after {
-                top: 50%;
-                transform: translateY(-50%);
-                left: auto;
-            }
+.v-dot.active {
+  background: var(--gold);
+  width: 24px;
+  border-radius: 50px;
+}
 
-            .divider::before { left: 0; }
-            .divider::after { right: 0; left: auto; }
+.v-dot:hover:not(.active) {
+  background: var(--gold-bright);
+}
 
-            .right-side {
-                margin-top: 30px;
-            }
+/* ============================================================
+   RESPONSIVE — Niyə Biz?
+   ============================================================ */
 
-            .cards-grid {
-                grid-template-columns: 1fr;
-            }
+@media (max-width: 1024px) {
+  .why-us-grid {
+    gap: 0.75rem;
+  }
+  .why-us-grid .card {
+    padding: 1.25rem;
+  }
+  .video-card {
+    flex: 0 0 calc(50% - 0.625rem);
+    min-width: calc(50% - 0.625rem);
+  }
+}
 
-            .phone {
-                width: 180px;
-                height: 320px;
-            }
-        }
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 3rem 1rem;
+  }
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2.5rem;
+  }
+  .video-carousel {
+    gap: 0.5rem;
+  }
+  .video-card {
+    flex: 0 0 85%;
+    min-width: 85%;
+  }
+  .video-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .video-thumb {
+    height: 140px;
+  }
+  .video-section-title {
+    font-size: 1rem;
+  }
+}
 
-        /* Small mobile */
-        @media (max-width: 480px) {
-          .section-title { font-size: 22px; }
-            .intro-text {
-                font-size: 13px;
-            }
-
-            .card-title {
-                font-size: 12px;
-            }
-
-            .card-desc {
-                font-size: 11px;
-            }
-
-            .phone {
-                width: 160px;
-                height: 280px;
-            }
-
-            .nav-btn {
-                width: 28px;
-                height: 28px;
-                font-size: 11px;
-            }
-
-            .bottom-section h2 {
-                font-size: 20px;
-            }
-
-            .bottom-text {
-                font-size: 13px;
-            }
-        }
-                .section-title {
-            text-align: center;
-            font-size: 30px;
-            font-weight: 700;
-            color: #C9A227;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+  .card-title {
+    font-size: 0.875rem;
+  }
+  .card-desc {
+    font-size: 0.75rem;
+  }
+  .video-card-body {
+    padding: 1rem;
+  }
+  .video-card-title {
+    font-size: 0.875rem;
+  }
+  .video-card-desc {
+    font-size: 0.75rem;
+  }
+}
