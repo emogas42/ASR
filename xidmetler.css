@@ -2382,7 +2382,7 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 /* Yenilənmiş Slayd Oxları Dizaynı */
 .exp-arrow {
   position: absolute;
-  top: 42%; /* Kartların mərkəzinə daha yaxın */
+  top: 68%; /* Kartların mərkəzinə daha yaxın */
   transform: translateY(-50%);
   z-index: 25;
   width: 54px;
@@ -2456,6 +2456,8 @@ body.dark-mode .exp-arrow:hover {
   
 
 }
+
+
 @media (max-width: 640px) {
 
   .exp-card {
@@ -2630,3 +2632,450 @@ body.dark-mode .exp-arrow:hover {
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
 
+/* ══════════════════════════════════════════════════════════
+   MENECER KARTI — manager-card.css
+   ASR Development Consulting Group
+   xidmet-05.css faylına əlavə edin və ya ayrı link edin
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Wrapper ───────────────────────────────────────────── */
+.manager-card-wrap {
+  max-width: 960px;
+  margin: 0 auto 3.5rem;
+  padding: 0 24px;
+}
+
+/* ── Kart ─────────────────────────────────────────────── */
+.manager-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  transition: box-shadow 0.35s, border-color 0.35s;
+}
+
+/* Yuxarı qızıl xətt (CTA box-dakı kimi) */
+.manager-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1b4280, var(--gold));
+  z-index: 5;
+}
+
+.manager-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(200, 146, 42, 0.4);
+}
+
+/* ── Sol sütun: Şəkil ─────────────────────────────────── */
+.manager-card-img-col {
+  position: relative;
+}
+
+.manager-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.manager-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(10%);
+  transition: transform 0.55s ease, filter 0.4s ease;
+  display: block;
+}
+
+.manager-card:hover .manager-card-img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+/* Şəkil üzərindəki gradient overlay */
+.manager-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    transparent 50%,
+    var(--bg-card) 100%
+  );
+  pointer-events: none;
+}
+
+/* "Baş Menecer" badge — şəkilin sol-alt küncündə */
+.manager-badge-wrap {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 4;
+}
+
+.manager-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: var(--gold);
+  border-radius: 50px;
+  padding: 7px 16px;
+  box-shadow: 0 4px 14px rgba(200, 146, 42, 0.35);
+}
+
+.manager-badge i {
+  font-size: 0.7rem;
+}
+
+/* ── Sağ sütun: Məlumat ───────────────────────────────── */
+.manager-card-body {
+  padding: 2.25rem 2.5rem 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+/* Eyebrow */
+.manager-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.manager-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Ad */
+.manager-name {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 900;
+  color: var(--heading);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: 0.3rem;
+}
+
+.manager-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+  margin-bottom: 0;
+}
+
+/* Dark mode: title rəngi */
+body.dark-mode .manager-title {
+  color: var(--gold);
+}
+
+/* Divider */
+.manager-divider {
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+/* Bio */
+.manager-bio {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.4rem;
+}
+
+.manager-bio strong {
+  color: var(--heading);
+  font-weight: 700;
+}
+
+/* ── Stats sətri ──────────────────────────────────────── */
+.manager-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.4rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.manager-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.manager-stat-num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+body.dark-mode .manager-stat-num {
+  color: var(--gold);
+}
+
+.manager-stat-lbl {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.manager-stat-sep {
+  width: 1px;
+  height: 36px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ── Sertifikat badge-lər ─────────────────────────────── */
+.manager-certs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 1.5rem;
+}
+
+.manager-cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--heading);
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 5px 12px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.manager-cert-badge i {
+  color: var(--gold);
+  font-size: 0.65rem;
+}
+
+.manager-card:hover .manager-cert-badge {
+  background: var(--bg-secondary);
+  border-color: rgba(200, 146, 42, 0.3);
+}
+
+body.dark-mode .manager-cert-badge {
+  background: var(--bg-secondary);
+  color: var(--heading);
+}
+
+/* ── CTA düymələri ────────────────────────────────────── */
+.manager-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.manager-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 50px;
+  border: 1.5px solid var(--navy);
+  transition: background 0.25s, border-color 0.25s, transform 0.2s;
+  text-decoration: none;
+}
+
+.manager-btn-primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.manager-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  transition: border-color 0.25s, color 0.25s, transform 0.2s;
+  text-decoration: none;
+}
+
+.manager-btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+body.dark-mode .manager-btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--navy-dark);
+}
+
+body.dark-mode .manager-btn-primary:hover {
+  background: #e4a832;
+  border-color: #e4a832;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════════════════ */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .manager-card {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .manager-card-img-wrap {
+    min-height: 360px;
+  }
+
+  .manager-card-body {
+    padding: 1.75rem 1.75rem 1.75rem 1.25rem;
+  }
+
+  .manager-name {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobil: şəkil yuxarı, məlumat aşağı */
+@media (max-width: 640px) {
+  .manager-card {
+    grid-template-columns: 1fr;
+  }
+
+  .manager-card-img-wrap {
+    min-height: 300px;
+    max-height: 320px;
+  }
+
+  /* Mobil: overlay sağdan aşağıya dönür */
+  .manager-card-img-overlay {
+    background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      var(--bg-card) 100%
+    );
+  }
+
+  .manager-card-body {
+    padding: 1.5rem 1.5rem 1.75rem;
+  }
+
+  .manager-stats {
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+  }
+
+  .manager-stat-num {
+    font-size: 1.25rem;
+  }
+
+  .manager-cta {
+    flex-direction: column;
+  }
+
+  .manager-btn-primary,
+  .manager-btn-ghost {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Çox kiçik ekranlar */
+@media (max-width: 400px) {
+  .manager-card-wrap {
+    padding: 0 12px;
+  }
+
+  .manager-card-body {
+    padding: 1.25rem;
+  }
+}
+
+/* ── Light mode spesifik ─────────────────────────────── */
+body:not(.dark-mode) .manager-card {
+  background: #ffffff;
+}
+
+body:not(.dark-mode) .manager-stats {
+  background: var(--off-white);
+}
+
+body:not(.dark-mode) .manager-cert-badge {
+  background: var(--off-white);
+  color: var(--navy);
+}
+
+body:not(.dark-mode) .manager-cert-badge i {
+  color: var(--gold);
+}
+
+/* Light mode overrides */
+body:not(.dark-mode) #komanda {
+  background: var(--off-white);
+}
+body:not(.dark-mode) .exp-card {
+  background: #ffffff;
+  border-color: var(--border);
+}
+body:not(.dark-mode) .exp-card-name {
+  color: var(--navy);
+}
+body:not(.dark-mode) .exp-cert-badge {
+  background: var(--off-white);
+  color: var(--navy);
+}
+body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
+  background: var(--bg-secondary);
+  color: var(--navy);
+}

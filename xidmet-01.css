@@ -311,3 +311,289 @@
      right: 0;
   }
 }
+
+── Accordion ─────────────────────────────────────────────
+.process-step-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.process-step-header .process-step-title {
+  flex: 1;
+  margin-bottom: 0;
+}
+.process-step-chevron {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.ps-open .process-step-chevron {
+  transform: rotate(180deg);
+}
+.process-step-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1),
+              opacity 0.35s ease,
+              padding 0.35s ease;
+}
+.ps-open .process-step-panel {
+  max-height: 400px;
+  opacity: 1;
+  padding-top: 10px;
+}
+.process-step[role="button"] {
+  cursor: pointer;
+  outline: none;
+}
+.process-step[role="button"]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   ASR DEVELOPMENT CONSULTING GROUP
+   xidmet-01.css — İnkişaf Layihələrinin İdarəolunması
+   Supplement to xidmetler.css (MUST be loaded AFTER xidmetler.css)
+   ============================================================
+   This file provides:
+   1. Styles for classes missing in xidmetler.css
+   2. xidmet-01 specific overrides
+   3. Dark mode enhancements
+   4. Responsive adjustments
+   ============================================================ */
+
+/* ============================================================
+   MISSING CLASSES (not in xidmetler.css)
+   ============================================================ */
+
+/* Hero Content wrapper */
+.hero-content {
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+
+/* CTA Box */
+.cta-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--navy), var(--gold));
+}
+
+/* CTA Buttons container */
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   XIDMET-01 SPECIFIC OVERRIDES
+   ============================================================ */
+
+/* Hero gradient override for Project Management page */
+.hero {
+  background: linear-gradient(135deg, #123368 0%, #1b4db2 60%, #5791ef 100%);
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, #060d18 0%, #0c2040 60%, #144697 100%);
+}
+
+/* Hero image overlay adjustments for xidmet-01 */
+.hero-image-overlay {
+  width: 66%;
+  opacity: 0.85;
+}
+
+/* Feature cards image enhancement */
+.feature-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, var(--bg-card), transparent);
+  pointer-events: none;
+}
+
+/* Process step enhancements */
+.process-step {
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateX(8px);
+}
+
+.process-step-body {
+  transition: all 0.35s ease;
+}
+
+/* Manager card specific enhancements */
+.manager-card {
+  transition: box-shadow 0.35s, border-color 0.35s, transform 0.35s;
+}
+
+.manager-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Expert carousel card enhancements */
+.exp-card {
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+/* ============================================================
+   DARK MODE ENHANCEMENTS
+   ============================================================ */
+
+.dark-mode .cta-box {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.dark-mode .feature-image::after {
+  background: linear-gradient(to top, var(--bg-card), transparent);
+}
+
+.dark-mode .process-step:hover .process-step-body {
+  border-color: var(--gold);
+}
+
+.dark-mode .manager-card:hover {
+  border-color: rgba(200, 146, 42, 0.4);
+}
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  .hero-image-overlay {
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  .cta-box {
+    padding: 48px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .cta-box {
+    padding: 36px 24px;
+    margin: 0 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons .btn-primary,
+  .cta-buttons .btn-ghost {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .process-step:hover {
+    transform: translateX(4px);
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-box {
+    padding: 28px 20px;
+  }
+
+  .hero-image-overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .cta-box {
+    padding: 24px 16px;
+    margin: 0 0.5rem;
+  }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+/* Fade in animation for reveal class */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), 
+              transform 0.65s cubic-bezier(0.4,0,0.2,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays */
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .fade-in,
+  .process-step,
+  .manager-card,
+  .exp-card,
+  .feature-card {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

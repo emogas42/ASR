@@ -2077,6 +2077,7 @@ body.dark-mode .exp-arrow:hover {
     top: auto;
     bottom: -10px; /* Mobildə aşağıya, nöqtələrin yanına keçir */
     transform: none;
+    display: none;
   }
   
   .exp-prev { left: 25%; }
