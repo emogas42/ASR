@@ -427,7 +427,7 @@
     Hər layihəmizin arxasında beynəlxalq standartlara sadiq, sahə üzrə dərin təcrübəyə malik komanda dayanır.
   </p>
 
-  <!-- Kartlar - tam enində -->
+  <!-- Kartlar - tam enında -->
   <div class="why-us-grid">
     <div class="card">
       <div class="card-number">01</div>
@@ -478,64 +478,81 @@
     </div>
   </div>
 
-  <!-- Video bölməsi - kartların altında, şəkildəki kimi balaca -->
+  <!-- Video karusel - kartların altında -->
   <div class="video-section">
-    <div class="video-section-header">
-      <h3 class="video-section-title">Videolar</h3>
-    </div>
-
     <div class="video-carousel">
       <button class="video-nav-btn video-prev" id="videoPrev">&#60;</button>
 
       <div class="video-track-wrapper">
         <div class="video-track" id="videoTrack">
-          <div class="video-card">
-            <div class="video-thumb reel-bg-1">
-              <div class="play-btn">
+          <div class="video-card video-bg-1">
+            <div class="video-thumb">
+              <div class="video-play-btn">
                 <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
-              </div>
-            </div>
-            <div class="video-card-body">
-              <div class="video-card-label">Video 01</div>
-              <h4 class="video-card-title">Təlimat videosu</h4>
-              <p class="video-card-desc">Qida təhlükəsizliyi standartları üzrə hazırlanmış ətraflı təlimat.</p>
-              <div class="video-card-tags">
-                <span class="v-tag">Təlim</span>
-                <span class="v-tag">Qida</span>
               </div>
             </div>
           </div>
 
-          <div class="video-card">
-            <div class="video-thumb reel-bg-2">
-              <div class="play-btn">
+          <div class="video-card video-bg-2">
+            <div class="video-thumb">
+              <div class="video-play-btn">
                 <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
-              </div>
-            </div>
-            <div class="video-card-body">
-              <div class="video-card-label">Video 02</div>
-              <h4 class="video-card-title">Audit prosesi</h4>
-              <p class="video-card-desc">Beynəlxalq standartlar üzrə audit keçirmə metodologiyası.</p>
-              <div class="video-card-tags">
-                <span class="v-tag">Audit</span>
-                <span class="v-tag">ISO</span>
               </div>
             </div>
           </div>
 
-          <div class="video-card">
-            <div class="video-thumb reel-bg-3">
-              <div class="play-btn">
+          <div class="video-card video-bg-3">
+            <div class="video-thumb">
+              <div class="video-play-btn">
                 <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
               </div>
             </div>
-            <div class="video-card-body">
-              <div class="video-card-label">Video 03</div>
-              <h4 class="video-card-title">Konsultasiya</h4>
-              <p class="video-card-desc">Müəssisələrdə idarəetmə sistemlərinin qurulması prosesi.</p>
-              <div class="video-card-tags">
-                <span class="v-tag">Konsultasiya</span>
-                <span class="v-tag">İdarəetmə</span>
+          </div>
+
+          <div class="video-card video-bg-4">
+            <div class="video-thumb">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card video-bg-5">
+            <div class="video-thumb">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card video-bg-6">
+            <div class="video-thumb">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card video-bg-7">
+            <div class="video-thumb">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card video-bg-8">
+            <div class="video-thumb">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card video-bg-9">
+            <div class="video-thumb">
+              <div class="video-play-btn">
+                <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
               </div>
             </div>
           </div>
@@ -553,6 +570,133 @@
   </div>
 </section>
 
+<script>
+(function() {
+  const track = document.getElementById('videoTrack');
+  const prevBtn = document.getElementById('videoPrev');
+  const nextBtn = document.getElementById('videoNext');
+  const dots = document.querySelectorAll('.v-dot');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const cards = track.querySelectorAll('.video-card');
+  const totalCards = cards.length;
+  let currentIndex = 0;
+  let cardsPerView = 3;
+  let isMoving = false;
+
+  // Determine cards per view based on screen width
+  function updateCardsPerView() {
+    const width = window.innerWidth;
+    if (width <= 480) {
+      cardsPerView = 1;
+    } else if (width <= 768) {
+      cardsPerView = 1;
+    } else if (width <= 1024) {
+      cardsPerView = 2;
+    } else {
+      cardsPerView = 3;
+    }
+  }
+
+  updateCardsPerView();
+  window.addEventListener('resize', function() {
+    updateCardsPerView();
+    moveToIndex(currentIndex);
+  });
+
+  // Calculate how much to translate
+  function getCardWidth() {
+    if (cards.length === 0) return 0;
+    const card = cards[0];
+    const style = window.getComputedStyle(card);
+    const width = card.offsetWidth;
+    const marginRight = parseFloat(style.marginRight) || 0;
+    const gap = parseFloat(style.getPropertyValue('--gap')) || 24; // 1.5rem = 24px default
+    return width + gap;
+  }
+
+  function moveToIndex(index) {
+    if (isMoving) return;
+    isMoving = true;
+
+    const maxIndex = Math.max(0, totalCards - cardsPerView);
+
+    // Clamp index
+    if (index < 0) index = 0;
+    if (index > maxIndex) index = maxIndex;
+
+    currentIndex = index;
+
+    // Calculate translate amount
+    const cardWidth = cards[0] ? cards[0].offsetWidth : 0;
+    const gap = 24; // 1.5rem gap
+    const translateX = -(currentIndex * (cardWidth + gap));
+
+    track.style.transform = 'translateX(' + translateX + 'px)';
+
+    // Update dots
+    const activeDotIndex = Math.floor(currentIndex / cardsPerView);
+    dots.forEach(function(dot, i) {
+      if (i === activeDotIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+
+    setTimeout(function() {
+      isMoving = false;
+    }, 500);
+  }
+
+  // Previous button
+  prevBtn.addEventListener('click', function() {
+    moveToIndex(currentIndex - 1);
+  });
+
+  // Next button
+  nextBtn.addEventListener('click', function() {
+    moveToIndex(currentIndex + 1);
+  });
+
+  // Dot navigation
+  dots.forEach(function(dot, index) {
+    dot.addEventListener('click', function() {
+      moveToIndex(index * cardsPerView);
+    });
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+
+  track.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, {passive: true});
+
+  function handleSwipe() {
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        // Swipe left - go next
+        moveToIndex(currentIndex + 1);
+      } else {
+        // Swipe right - go prev
+        moveToIndex(currentIndex - 1);
+      }
+    }
+  }
+
+  // Initial position
+  moveToIndex(0);
+})();
+</script>
 
 <!-- Xidmetler   -->
   <section class="asr-services-section" id="xidmetler">

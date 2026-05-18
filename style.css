@@ -2077,7 +2077,6 @@ body.dark-mode .exp-arrow:hover {
     top: auto;
     bottom: -10px; /* Mobildə aşağıya, nöqtələrin yanına keçir */
     transform: none;
-    display: none;
   }
   
   .exp-prev { left: 25%; }
@@ -3732,45 +3731,20 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 }
 
 /* ============================================================
-   VIDEO BÖLMƏSİ — Kartların altında, şəkildəki kimi balaca
+   VİDEO KARUSEL — Kartların altında, horizontal slayder
    ============================================================ */
 
 .video-section {
-  margin-top: 2rem;
+  margin-top: 3rem;
   position: relative;
-}
-
-.video-section-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.video-section-title {
-  font-size: 1.125rem;
-  font-weight: 800;
-  color: var(--heading);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-}
-
-.video-section-title::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--gold);
-  margin: 10px auto 0;
-  border-radius: 2px;
 }
 
 .video-carousel {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  max-width: 1000px;
+  gap: 1.5rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -3782,21 +3756,24 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 
 .video-track {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.5rem;
   transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
   will-change: transform;
 }
 
-/* Video kart - şəkildəki ekspert kartlarına bənzər, balaca */
+/* Video kart — daha böyük */
 .video-card {
-  flex: 0 0 calc(33.333% - 0.85rem);
-  min-width: calc(33.333% - 0.85rem);
+  flex: 0 0 calc(33.333% - 1rem);
+  min-width: calc(33.333% - 1rem);
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+  position: relative;
 }
 
 .video-card:hover {
@@ -3805,12 +3782,11 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   border-color: rgba(200,146,42,0.35);
 }
 
-/* Video thumbnail */
+/* Video thumbnail — tam kartı əhatə edir */
 .video-thumb {
-  position: relative;
-  height: 160px;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
 }
 
 .video-thumb img {
@@ -3825,14 +3801,25 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   transform: scale(1.05);
 }
 
-/* Play button ortada */
-.video-thumb .play-btn {
+/* Gradient backgrounds */
+.video-bg-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.video-bg-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.video-bg-3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+.video-bg-4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+.video-bg-5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+.video-bg-6 { background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); }
+.video-bg-7 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+.video-bg-8 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.video-bg-9 { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%); }
+
+/* Play button — ortada, böyük */
+.video-play-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   background: rgba(255,255,255,0.95);
   border-radius: 50%;
   display: flex;
@@ -3840,104 +3827,55 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 2;
 }
 
-.video-thumb .play-btn:hover {
-  transform: translate(-50%, -50%) scale(1.1);
+.video-card:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.12);
   background: #fff;
 }
 
-.video-thumb .play-btn svg {
-  width: 18px;
-  height: 18px;
+.video-play-btn svg {
+  width: 24px;
+  height: 24px;
   fill: var(--navy-dark);
-  margin-left: 2px;
+  margin-left: 3px;
 }
 
-/* Video card body - şəkildəki kimi */
-.video-card-body {
-  padding: 1.25rem;
-}
-
-.video-card-label {
-  font-size: 0.625rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-
-.video-card-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--heading);
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-
-.video-card-desc {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  margin-bottom: 0.875rem;
-}
-
-/* Video tags - pill style */
-.video-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.v-tag {
-  font-size: 0.5625rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 50px;
-  background: var(--bg-secondary);
-  color: var(--heading-sub);
-  border: 1px solid var(--border);
-  transition: all 0.2s ease;
-}
-
-.video-card:hover .v-tag {
-  background: rgba(200,146,42,0.08);
-  border-color: rgba(200,146,42,0.25);
-  color: var(--gold);
-}
-
-/* Video nav buttons - oxlar yanlarda */
+/* Sag/Sol oxlar */
 .video-nav-btn {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   border-radius: 12px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   color: var(--heading);
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
+  z-index: 10;
 }
 
 .video-nav-btn:hover {
-  background: var(--navy);
+  background: var(--gold);
   color: #fff;
-  border-color: var(--navy);
-  transform: scale(1.08);
-  box-shadow: 0 8px 24px rgba(11,31,58,0.15);
+  border-color: var(--gold);
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(200,146,42,0.3);
 }
 
-/* Video indicators */
+.video-nav-btn:active {
+  transform: scale(0.95);
+}
+
+/* Dot indicators */
 .video-indicators {
   display: flex;
   justify-content: center;
@@ -3965,7 +3903,6 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 .v-dot:hover:not(.active) {
   background: var(--gold-bright);
 }
-
 /* ============================================================
    RESPONSIVE — Niyə Biz?
    ============================================================ */
@@ -3978,8 +3915,17 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
     padding: 1.25rem;
   }
   .video-card {
-    flex: 0 0 calc(50% - 0.625rem);
-    min-width: calc(50% - 0.625rem);
+    flex: 0 0 calc(50% - 0.75rem);
+    min-width: calc(50% - 0.75rem);
+    aspect-ratio: 16/10;
+  }
+  .video-play-btn {
+    width: 64px;
+    height: 64px;
+  }
+  .video-play-btn svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -3992,22 +3938,25 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
     margin-bottom: 2.5rem;
   }
   .video-carousel {
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
   .video-card {
     flex: 0 0 85%;
     min-width: 85%;
+    aspect-ratio: 16/10;
   }
   .video-nav-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
   }
-  .video-thumb {
-    height: 140px;
+  .video-play-btn {
+    width: 56px;
+    height: 56px;
   }
-  .video-section-title {
-    font-size: 1rem;
+  .video-play-btn svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -4022,13 +3971,22 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   .card-desc {
     font-size: 0.75rem;
   }
-  .video-card-body {
-    padding: 1rem;
+  .video-card {
+    flex: 0 0 90%;
+    min-width: 90%;
+    aspect-ratio: 16/10;
   }
-  .video-card-title {
-    font-size: 0.875rem;
+  .video-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
   }
-  .video-card-desc {
-    font-size: 0.75rem;
+  .video-play-btn {
+    width: 48px;
+    height: 48px;
+  }
+  .video-play-btn svg {
+    width: 16px;
+    height: 16px;
   }
 }
