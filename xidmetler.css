@@ -3079,3 +3079,15 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
   background: var(--bg-secondary);
   color: var(--navy);
 }
+.btn-premium-diag{
+  position: relative;
+  left: 3%;
+}
+@media(min-width:768px){
+  #theme-switch{
+      position: relative;
+      left: 25%;
+  }
+
+
+}
