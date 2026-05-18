@@ -1466,6 +1466,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   .btn-premium-diag{
     display: none;
   }
+
  
   /* Page hero */
   .leadership-hero { padding: 130px 0 65px; }
@@ -1474,7 +1475,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   /* Director */
   .director-card { grid-template-columns: 1fr; }
   .director-photo-col { min-height: 380px; padding: 2.5rem 1.5rem 2rem; }
-  .director-img-wrap { width: 170px; height: 205px; }
+  .director-img-wrap { width: 370px; height: 605px; }
   .director-content-col { padding: 2rem 1.5rem; gap: 1.75rem; }
   .director-stats-row { gap: 0.75rem; }
   .dir-stat { padding: 0.875rem 0.5rem; }
@@ -1499,7 +1500,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
 /* ── 520px ── */
 @media (max-width: 520px) {
   .leadership-hero-title { font-size: 1.75rem; }
-  .director-img-wrap { width: 145px; height: 175px; }
+  .director-img-wrap { width: 285px; height: 375px; }
   .director-stats-row { gap: 0.5rem; }
   .dir-stat-num { font-size: 1.375rem; }
   .dir-stat { min-width: 70px; }
@@ -1519,4 +1520,9 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   width: 60%;
   margin: auto;
   
+}
+@media(max-width:768px){
+  .expert-card-ilkin{
+    width: 100%;
+  }
 }
