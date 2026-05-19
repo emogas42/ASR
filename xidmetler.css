@@ -2447,8 +2447,8 @@ body.dark-mode .exp-arrow:hover {
     transform: none;
   }
   
-  .exp-prev { left: 25%; }
-  .exp-next { right: 25%; }
+  .exp-prev { left: 2%; }
+  .exp-next { right: 2%; }
   
   .exp-arrow:hover {
     transform: scale(1.05);

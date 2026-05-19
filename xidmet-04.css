@@ -1383,4 +1383,12 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 
 
 
-
+.exp-arrow{
+  top: 50%;
+}
+@media (max-width:768px) {
+  .exp-arrow{
+    top: 30%;
+  }
+  
+}

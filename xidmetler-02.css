@@ -544,7 +544,7 @@
 @media (max-width: 640px) {
   .exp-card {
     flex: 0 0 85%;
-    min-width: 85%;
+
   }
   .experts-track-outer {
     margin: 0 48px;
@@ -596,6 +596,15 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
   background: var(--gold);
   transition: width 0.3s ease;
   z-index: -1;
+}
+.exp-arrow{
+  top: 70%;
+}
+@media (max-width:768px) {
+  .exp-arrow{
+    top: 68%;
+  }
+  
 }
 
 .btn-primary:hover {

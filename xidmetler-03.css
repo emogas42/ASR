@@ -1044,5 +1044,12 @@ body.dark-mode .process-grid::before {
   object-fit: cover;
 
 }
-
-
+.exp-arrow{
+  top: 66%;
+}
+@media (max-width:768px) {
+  .exp-arrow{
+    top:62%;
+  }
+  
+}

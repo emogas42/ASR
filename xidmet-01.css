@@ -415,6 +415,15 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+.exp-arrow{
+  top: 76%;
+}
+@media (max-width:768px) {
+  .exp-arrow{
+    top: 73%;
+  }
+  
+}
 
 /* ============================================================
    XIDMET-01 SPECIFIC OVERRIDES

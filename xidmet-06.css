@@ -1029,3 +1029,12 @@ body.dark-mode .process-grid::before {
   border-radius: var(--radius-md);
   object-fit: cover;
 }
+.exp-arrow{
+  top: 50%;
+}
+@media (max-width:768px) {
+  .exp-arrow{
+    top: 30%;
+  }
+  
+}
