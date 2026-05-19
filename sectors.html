@@ -1,536 +1,122 @@
 <!doctype html>
 <html lang="az">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ASR Development Consulting Group — Fəaliyyət Sektorları üzrə ətraflı məlumat." />
-  <title>Sektorlar — ASR Development Consulting Group</title>
+  <meta name="description"
+    content="ASR Development Consulting Group — Qida Təhlükəsizliyi, Strateji İdarəetmə və Hüquqi Ekspertiza sahəsində 15 illik təcrübə." />
+  <title>ASR Development Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <link rel="icon" type="image/png" href="images/asr group png.png" />
+
+  <link rel="apple-touch-icon" href="images/asr logo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* ============================================
-       SECTORS DETAIL PAGE — Inline CSS
-    ============================================ */
-
-    /* ---------- Page Layout ---------- */
-    .sd-page {
-      display: flex;
-      min-height: 100vh;
-      padding-top: var(--navbar-h, 80px);
-      background: var(--bg, #f4f6fb);
-    }
-
-    /* ---------- Sidebar ---------- */
-    .sd-sidebar {
-      width: 280px;
-      flex-shrink: 0;
-      position: sticky;
-      top: var(--navbar-h, 80px);
-      height: calc(100vh - var(--navbar-h, 80px));
-      overflow-y: auto;
-      padding: 32px 0 32px 24px;
-      border-right: 1px solid var(--border, #e2e8f0);
-      background: var(--bg-card, #fff);
-      scrollbar-width: thin;
-      scrollbar-color: var(--gold, #c9a84c) transparent;
-    }
-    .sd-sidebar::-webkit-scrollbar { width: 4px; }
-    .sd-sidebar::-webkit-scrollbar-thumb { background: var(--gold, #c9a84c); border-radius: 2px; }
-
-    .sd-toc-title {
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--gold, #c9a84c);
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--gold, #c9a84c);
-      padding-right: 24px;
-    }
-
-    .sd-toc-group {
-      margin-bottom: 24px;
-    }
-    .sd-toc-group-label {
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--text-muted, #94a3b8);
-      margin-bottom: 8px;
-      padding-left: 4px;
-    }
-
-    .sidebar-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 6px 0 0 6px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text, #334155);
-      text-decoration: none;
-      transition: background .2s, color .2s, border-left .2s;
-      border-left: 2px solid transparent;
-      line-height: 1.3;
-      cursor: pointer;
-      margin-bottom: 2px;
-    }
-    .sidebar-link i {
-      width: 16px;
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--text-muted, #94a3b8);
-      flex-shrink: 0;
-      transition: color .2s;
-    }
-    .sidebar-link:hover {
-      background: var(--bg, #f4f6fb);
-      color: var(--navy, #1e3a5f);
-    }
-    .sidebar-link:hover i { color: var(--navy, #1e3a5f); }
-    .sidebar-link.active {
-      background: linear-gradient(90deg, rgba(201,168,76,.12), transparent);
-      color: var(--gold, #c9a84c);
-      border-left-color: var(--gold, #c9a84c);
-      font-weight: 600;
-    }
-    .sidebar-link.active i { color: var(--gold, #c9a84c); }
-
-    /* ---------- Main Content ---------- */
-    .sd-main {
-      flex: 1;
-      min-width: 0;
-      padding: 40px 48px 80px 48px;
-      overflow: hidden;
-    }
-
-    /* Page hero */
-    .sd-hero {
-      margin-bottom: 56px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border, #e2e8f0);
-    }
-    .sd-hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--gold, #c9a84c);
-      margin-bottom: 12px;
-    }
-    .sd-hero-dot {
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--gold, #c9a84c);
-    }
-    .sd-hero h1 {
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 800;
-      color: var(--navy, #1e3a5f);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-    .sd-hero p {
-      font-size: 1rem;
-      color: var(--text-muted, #64748b);
-      max-width: 640px;
-      line-height: 1.7;
-    }
-
-    /* ---------- Sector Detail Card ---------- */
-    .sector-detail-card {
-      background: var(--bg-card, #fff);
-      border: 1px solid var(--border, #e2e8f0);
-      border-radius: 16px;
-      padding: 0;
-      margin-bottom: 40px;
-      box-shadow: 0 2px 16px rgba(0,0,0,.06);
-      overflow: hidden;
-      scroll-margin-top: calc(var(--navbar-h, 80px) + 24px);
-      transition: box-shadow .3s;
-    }
-    .sector-detail-card:hover {
-      box-shadow: 0 6px 32px rgba(0,0,0,.1);
-    }
-
-    /* Card Header — clickable */
-    .sdc-header {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      padding: 28px 32px;
-      cursor: pointer;
-      user-select: none;
-      border-bottom: 1px solid var(--border, #e2e8f0);
-      transition: background .2s;
-    }
-    .sdc-header:hover { background: var(--bg, #f8faff); }
-
-    .sdc-icon-wrap {
-      width: 52px; height: 52px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .sdc-icon-wrap i { font-size: 1.3rem; }
-
-    .sdc-header-text { flex: 1; min-width: 0; }
-    .sdc-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--navy, #1e3a5f);
-      margin-bottom: 4px;
-      line-height: 1.3;
-    }
-    .sdc-subtitle {
-      font-size: 0.82rem;
-      color: var(--text-muted, #64748b);
-      line-height: 1.5;
-    }
-
-    .sdc-chevron {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      border: 1.5px solid var(--border, #e2e8f0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      transition: transform .35s, background .25s, border-color .25s;
-      color: var(--text-muted, #94a3b8);
-      font-size: 0.8rem;
-    }
-    .sector-detail-card.open .sdc-chevron {
-      transform: rotate(180deg);
-      background: var(--gold, #c9a84c);
-      border-color: var(--gold, #c9a84c);
-      color: #fff;
-    }
-
-    /* Card Body — accordion */
-    .sdc-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .45s cubic-bezier(.4,0,.2,1);
-    }
-    .sector-detail-card.open .sdc-body {
-      max-height: 2400px;
-    }
-
-    .sdc-body-inner {
-      padding: 32px;
-      display: grid;
-      gap: 32px;
-    }
-
-    /* ---------- Description ---------- */
-    .sdc-desc {
-      font-size: 0.93rem;
-      color: var(--text, #334155);
-      line-height: 1.75;
-      padding: 20px 24px;
-      background: var(--bg, #f8faff);
-      border-radius: 10px;
-      border-left: 3px solid var(--gold, #c9a84c);
-    }
-
-    /* ---------- Services ---------- */
-    .sdc-section-title {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--gold, #c9a84c);
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .sdc-section-title::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border, #e2e8f0);
-    }
-
-    .sdc-services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 12px;
-    }
-    .sdc-service-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 14px 16px;
-      background: var(--bg-card, #fff);
-      border: 1px solid var(--border, #e2e8f0);
-      border-radius: 10px;
-      font-size: 0.83rem;
-      color: var(--text, #334155);
-      font-weight: 500;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
-    }
-    .sdc-service-item:hover {
-      border-color: var(--gold, #c9a84c);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(201,168,76,.12);
-    }
-    .sdc-service-item i {
-      color: var(--gold, #c9a84c);
-      font-size: 0.9rem;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    /* ---------- Experts ---------- */
-    .sdc-experts-row {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .sdc-expert-card {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 16px 20px;
-      background: var(--bg-card, #fff);
-      border: 1px solid var(--border, #e2e8f0);
-      border-radius: 12px;
-      min-width: 220px;
-      flex: 1;
-      transition: box-shadow .2s, transform .2s;
-    }
-    .sdc-expert-card:hover {
-      box-shadow: 0 4px 20px rgba(30,58,95,.1);
-      transform: translateY(-2px);
-    }
-    .sdc-expert-avatar {
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-      background: linear-gradient(135deg, #1e3a5f, #c9a84c);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-      overflow: hidden;
-    }
-    .sdc-expert-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-    .sdc-expert-info {}
-    .sdc-expert-name {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--navy, #1e3a5f);
-      margin-bottom: 2px;
-    }
-    .sdc-expert-role {
-      font-size: 0.76rem;
-      color: var(--text-muted, #64748b);
-    }
-
-    /* ---------- Projects ---------- */
-    .sdc-projects-list {
-      display: grid;
-      gap: 12px;
-    }
-    .sdc-project-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 18px 20px;
-      background: var(--bg-card, #fff);
-      border: 1px solid var(--border, #e2e8f0);
-      border-radius: 10px;
-      transition: border-color .2s, box-shadow .2s;
-    }
-    .sdc-project-item:hover {
-      border-color: var(--navy, #1e3a5f);
-      box-shadow: 0 4px 16px rgba(30,58,95,.08);
-    }
-    .sdc-project-badge {
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .sdc-project-info { flex: 1; min-width: 0; }
-    .sdc-project-name {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--navy, #1e3a5f);
-      margin-bottom: 4px;
-    }
-    .sdc-project-desc {
-      font-size: 0.8rem;
-      color: var(--text-muted, #64748b);
-      line-height: 1.5;
-    }
-    .sdc-project-meta {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 8px;
-      font-size: 0.72rem;
-      color: var(--text-muted, #94a3b8);
-    }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 1024px) {
-      .sd-main { padding: 32px 28px 60px; }
-      .sdc-body-inner { padding: 24px; }
-    }
-
-    @media (max-width: 768px) {
-      .sd-page { flex-direction: column; }
-
-      .sd-sidebar {
-        width: 100%;
-        position: static;
-        height: auto;
-        overflow-y: visible;
-        padding: 20px 16px;
-        border-right: none;
-        border-bottom: 1px solid var(--border, #e2e8f0);
-      }
-      .sidebar-link { border-radius: 6px; border-left: none; border-bottom: 2px solid transparent; }
-      .sidebar-link.active { border-left: none; border-bottom-color: var(--gold, #c9a84c); }
-
-      .sd-toc-scroll {
-        display: flex;
-        overflow-x: auto;
-        gap: 8px;
-        padding-bottom: 8px;
-        scrollbar-width: none;
-      }
-      .sd-toc-scroll::-webkit-scrollbar { display: none; }
-      .sd-toc-scroll .sidebar-link {
-        white-space: nowrap;
-        padding: 6px 14px;
-        font-size: 0.78rem;
-        flex-shrink: 0;
-        border-radius: 20px;
-        border: 1px solid var(--border, #e2e8f0);
-      }
-      .sd-toc-scroll .sidebar-link.active {
-        background: var(--gold, #c9a84c);
-        color: #fff;
-        border-color: var(--gold, #c9a84c);
-      }
-      .sd-toc-scroll .sidebar-link i { display: none; }
-      .sd-toc-group-label { display: none; }
-      .sd-toc-group { margin-bottom: 0; }
-
-      .sd-main { padding: 24px 16px 60px; }
-      .sdc-header { padding: 20px; }
-      .sdc-body-inner { padding: 16px; gap: 20px; }
-      .sdc-services-grid { grid-template-columns: 1fr 1fr; }
-      .sdc-experts-row { flex-direction: column; }
-      .sd-hero { margin-bottom: 32px; }
-    }
-
-    @media (max-width: 480px) {
-      .sdc-services-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="sectors.css">
 </head>
 
 <body class="">
 
-  <!-- =========================================
-     NAVIGATION (eyni navbar)
-  ========================================= -->
+  <!--  NAVIGATION -->
   <nav id="navbar">
     <div class="nav-inner">
+      <!-- Logo -->
       <a href="index.html" class="logo">
-        <img src="images/asr logo.png" alt="ASR Development Consulting Group"
-          style="height:60px;margin-top:3px;width:auto;object-fit:contain;" />
+        <img src="images/asr logo.png" alt="ASR Development Consulting Group" style="
+              height: 60px;
+              margin-top: 3px;
+              width: auto;
+              object-fit: contain;
+            " />
       </a>
 
-      <ul class="nav-menu" style="margin:auto">
+      <ul class="nav-menu" style="margin: auto">
         <li class="nav-item">
           <a href="haqqimizda.html" class="nav-link">
-            Haqqımızda <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Haqqımızda
+            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="nav-dropdown">
             <a href="haqqimizda.html#sirket-profili">Şirkət Profili</a>
-            <a href="rehberlik.html">Rəhbərlik</a>
-            <a href="haqqimizda.html#tariximiz">Tariximiz</a>
+            <a href="rehberlik.html ">Rəhbərlik</a>
+            <a href="haqqimizda.html#tariximiz">Tariximiz </a>
             <a href="haqqimizda.html#sertifikatlar">Sertifikatlar &amp; Təltiflər</a>
           </div>
         </li>
+
         <li class="nav-item">
           <a href="index.html#xidmetler" class="nav-link">
-            Xidmətlər <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Xidmətlər
+            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="mega-menu">
             <div class="mega-col">
               <div class="mega-col-title"><a href="xidmet-06.html">Qida Təhlükəsizliyi</a></div>
               <div class="mega-col-title"><a href="xidmet-01.html">İnkişaf Layihələrinin İdarəolunması</a></div>
+              
             </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="xidmet-03.html">Strateji İdarəetmə</a></div>
-              <div class="mega-col-title"><a href="xidmet-05.html">Biznesin inkişafı xidmətləri</a></div>
+              <div class="mega-col-title"><a  href="xidmet-05.html">Biznesin inkişafı xidmətləri </a></div>
+          
+          
             </div>
             <div class="mega-col">
-              <div class="mega-col-title"><a href="index.html#xidmetler">Qanunvericilik layihələri idarəolunması</a></div>
+              <div class="mega-col-title"><a href="index.html#xidmetler"> Qanunvericilik layihələri<br>idareolunmasi</a></div>
               <div class="mega-col-title"><a href="index.html#tedqiqat">Dövlətlə Əlaqələr</a></div>
+            
             </div>
           </div>
         </li>
         <li class="nav-item">
-          <a href="sectors.html" class="nav-link active">
-            Sektorlar <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+          <a href="sectors.html" class="nav-link">
+            Sektorlar
+            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="mega-menu">
             <div class="mega-col">
-              <div class="mega-col-title"><a href="#kend-teserrufati">Kənd təsərrüfatı</a></div>
-              <div class="mega-col-title"><a href="#erzaq-senayesi">Ərzaq sənayesi</a></div>
-              <div class="mega-col-title"><a href="#sehiyye">Səhiyyə</a></div>
+              <div class="mega-col-title"><a href="kend-teserrufati.html">Kənd təsərrüfatı</a></div>
+              <div class="mega-col-title"><a href="erzaq-senayesi.html">Ərzaq sənayesi</a></div>
+              <div class="mega-col-title"><a  href="sehiyye.html">Səhiyyə</a></div>
+            
             </div>
             <div class="mega-col">
-              <div class="mega-col-title"><a href="#turizm">Turizm</a></div>
-              <div class="mega-col-title"><a href="#ekologiya">Ekologiya</a></div>
-              <div class="mega-col-title"><a href="#tikinti">Tikinti</a></div>
+              <div class="mega-col-title"><a href="turizm.html">Turizm</a></div>
+              <div class="mega-col-title">
+                <a href="index.html#xidmetler">Ekologiya</a>
+              </div>
+              <div class="mega-col-title"><a href="tikinti.html">Tikinti</a></div>
+          
             </div>
             <div class="mega-col">
-              <div class="mega-col-title"><a href="#texnologiya">Texnologiya</a></div>
-              <div class="mega-col-title"><a href="#logistika">Logistika</a></div>
+              <div class="mega-col-title"><a href="texnologiya.html">Texnologiya</a></div>
+              <div class="mega-col-title"><a href="logistika.html">Logistika</a></div>
+            
             </div>
           </div>
         </li>
+
         <li class="nav-item">
           <a href="index.html#tecrubekm" class="nav-link">
-            Təcrübəmiz <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Təcrübəmiz
+            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="nav-dropdown">
             <a href="index.html#tecrubekm">Uğurlu keyslər</a>
             <a href="index.html#tecrubekm">Layihələr</a>
+         
           </div>
         </li>
+
         <li class="nav-item">
           <a href="index.html#bilik-merkezi" class="nav-link">
-            Bilik Mərkəzi <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Bilik Mərkəzi
+            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="nav-dropdown">
             <a href="index.html#bilik-merkezi">Ekspert bloqu</a>
@@ -539,7 +125,8 @@
         </li>
         <li class="nav-item">
           <a href="media.html" class="nav-link">
-            Media <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Media
+            <i class="fa-solid fa-chevron-down nav-chevron" style="font-size: 10px"></i>
           </a>
           <div class="nav-dropdown">
             <a href="media.html">Foto Qalereya</a>
@@ -547,1504 +134,580 @@
             <a href="media.html">Xəbərlər</a>
           </div>
         </li>
+
         <li class="nav-item">
           <a href="index.html#footer" class="nav-link">Əlaqə</a>
         </li>
       </ul>
-
-      <a href="check.html" class="btn-premium-diag">
+      <a href="check.html" class="btn-premium-diag ">
         <span class="btn-content">
           <i class="fa-solid fa-microscope"></i>
           <span>Pulsuz Diaqnostika</span>
         </span>
         <div class="shimmer"></div>
       </a>
+      <!-- Language Toggle -->
+      <!-- <div class="lang-toggle lang-toggle-desktop">
+          <a href="index.html" class="lang-btn lang-az active" id="langAZ"
+            >AZ</a
+          >
+          <span class="lang-divider"></span>
+          <a href="index-en.html" class="lang-btn lang-en" id="langEN">EN</a>
+        </div> -->
 
       <button id="theme-switch">
         <i class="fa-regular fa-moon"></i>
         <i class="fa-solid fa-sun"></i>
       </button>
-      <button class="nav-toggle" id="mobileToggle">
-        <span></span><span></span><span></span>
-      </button>
+
+    <button class="nav-toggle" id="mobileToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
     </div>
   </nav>
 
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="haqqimizda.html" class="mobile-nav-label">Haqqımızda</a>
-        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-      <div class="mobile-sub">
-        <a href="haqqimizda.html"><i class="fa-regular fa-building"></i>Şirkət Profili</a>
-        <a href="rehberlik.html"><i class="fa-regular fa-building"></i>Rəhbərlik</a>
-        <a href="haqqimizda.html#tarix"><i class="fa-regular fa-clock"></i>Tariximiz</a>
-        <a href="haqqimizda.html#sertifikatlar"><i class="fa-solid fa-award"></i>Sertifikatlar &amp; Təltiflər</a>
-      </div>
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+
+  <!-- Haqqımızda -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="haqqimizda.html" class="mobile-nav-label">Haqqımızda</a>
+      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
     </div>
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="sectors-detail.html" class="mobile-nav-label">Sektorlar</a>
-        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-      <div class="mobile-sub">
-        <a href="#kend-teserrufati"><i class="fa-solid fa-seedling"></i> Kənd təsərrüfatı</a>
-        <a href="#erzaq-senayesi"><i class="fa-solid fa-jar"></i> Ərzaq sənayesi</a>
-        <a href="#sehiyye"><i class="fa-solid fa-briefcase-medical"></i> Səhiyyə</a>
-        <a href="#turizm"><i class="fa-solid fa-plane-departure"></i> Turizm</a>
-        <a href="#ekologiya"><i class="fa-solid fa-leaf"></i> Ekologiya</a>
-        <a href="#tikinti"><i class="fa-solid fa-helmet-safety"></i> Tikinti</a>
-        <a href="#texnologiya"><i class="fa-solid fa-microchip"></i> Texnologiya</a>
-        <a href="#logistika"><i class="fa-solid fa-truck-moving"></i> Logistika</a>
-      </div>
+    <div class="mobile-sub">
+      <a href="haqqimizda.html"><i class="fa-regular fa-building"></i>Şirkət Profili</a>
+      <a href="rehberlik.html"><i class="fa-regular fa-building"></i>Rəhbərlik</a>
+      <a href="haqqimizda.html#tarix"><i class="fa-regular fa-clock"></i>Tariximiz</a>
+      <a href="haqqimizda.html#sertifikatlar"><i class="fa-solid fa-award"></i>Sertifikatlar &amp; Təltiflər</a>
     </div>
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="index.html#xidmetler" class="mobile-nav-label">Xidmətlər</a>
-        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-      <div class="mobile-sub">
-        <a href="xidmet-06.html"><i class="fa-solid fa-shield-halved"></i>Qida Təhlükəsizliyi</a>
-        <a href="xidmet-01.html"><i class="fa-solid fa-diagram-project"></i>İnkişaf Layihələrinin İdarəolunması</a>
-        <a href="xidmet-03.html"><i class="fa-solid fa-chess-knight"></i>Strateji Planlaşdırma</a>
-        <a href="xidmet-05.html"><i class="fa-solid fa-magnifying-glass-chart"></i>Biznesin inkişafı xidmətləri</a>
-        <a href="xidmet-02.html"><i class="fa-solid fa-scale-balanced"></i>İqtisadi Siyasət və Qanunvericilik</a>
-        <a href="xidmet-07.html"><i class="fa-solid fa-landmark"></i>Dövlətlə Əlaqələr</a>
-      </div>
+  </div>
+  <!-- Sektorlar -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="sectors.html" class="mobile-nav-label">Sektorlar</a>
+      <button class="mobile-chevron-btn   has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
     </div>
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="index.html#tecrubekm" class="mobile-nav-label">Təcrübəmiz</a>
-        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-      <div class="mobile-sub">
-        <a href="index.html#tecrubekm"><i class="fa-solid fa-trophy"></i>Uğurlu Layihələr</a>
-        <a href="index.html#tecrubekm"><i class="fa-solid fa-drumstick-bite"></i>Layihələr</a>
-      </div>
+    <div class="mobile-sub">
+      <a href="sectorlar.html"><i class="fa-solid fa-seedling"></i> Kəndtəsərrüfatı</a>
+      <a href="sectorlar.html"><i class="fa-solid fa-jar"></i> Ərzaq sənayesi</a>
+      <a href="sectorlar.html"><i class="fa-solid fa-briefcase-medical"></i> Səhiyyə</a>
+      <a href="sectorlar.html"><i class="fa-solid fa-plane-departure"></i> Turizm</a>
+      <a href="sectorlar.html"><i class="fa-solid fa-helmet-safety"></i> Tikinti</a>
+      <a href="sectorlar.html"><i class="fa-solid fa-microchip"></i> Texnologiya</a>
+      <a href="sectorlar.html"><i class="fa-solid fa-truck-moving"></i> Logistika</a>
     </div>
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="index.html#bilik-merkezi" class="mobile-nav-label">Bilik Mərkəzi</a>
-        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-      <div class="mobile-sub">
-        <a href="index.html#bilik-merkezi"><i class="fa-solid fa-pen-nib"></i>Ekspert Bloqu</a>
-        <a href="index.html#bilik-merkezi"><i class="fa-solid fa-download"></i>Pulsuz Yükləmələr</a>
-      </div>
-    </div>
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="media.html" class="mobile-nav-label">Media</a>
-        <button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button>
-      </div>
-      <div class="mobile-sub">
-        <a href="media.html"><i class="fa-regular fa-images"></i>Foto Qalereya</a>
-        <a href="media.html"><i class="fa-solid fa-film"></i>Video İcmallar</a>
-        <a href="media.html"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
-      </div>
-    </div>
-    <div class="mobile-nav-item">
-      <div class="mobile-nav-row">
-        <a href="index.html#footer" class="mobile-nav-label">Əlaqə</a>
-      </div>
-    </div>
-    <a href="check.html" class="mobile-nav-cta">
-      <i class="fa-solid fa-microscope"></i>
-      <span>Pulsuz Diaqnostika</span>
-    </a>
   </div>
 
-  <!-- =========================================
-     MAIN PAGE
-  ========================================= -->
-  <div class="sd-page">
+  <!-- Xidmətlər -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="index.html#xidmetler" class="mobile-nav-label">Xidmətlər</a>
+      <button class="mobile-chevron-btn   has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="mobile-sub">
+      <a href="xidmet-06.html"><i class="fa-solid fa-shield-halved"></i>Qida Təhlükəsizliyi</a>
+      <a href="xidmet-01.html"><i class="fa-solid fa-diagram-project"></i>İnkişaf Layihələrinin İdarəolunması</a>
+      <a href="xidmet-03.html"><i class="fa-solid fa-chess-knight"></i>Strateji Planlaşdırma</a>
+      <a href="xidmet-04.html"><i class="fa-solid fa-chart-line"></i>Monitorinq və Qiymətləndirmə</a>
+      <a href="xidmet-05.html"><i class="fa-solid fa-magnifying-glass-chart"></i>Tədqiqat və Analitik Təhlillər</a>
+      <a href="xidmet-02.html"><i class="fa-solid fa-scale-balanced"></i>İqtisadi Siyasət və Qanunvericilik</a>
+      <a href="xidmet-07.html"><i class="fa-solid fa-landmark"></i>Dövlətlə Əlaqələr</a>
+    </div>
+  </div>
 
-    <!-- ---- SIDEBAR ---- -->
-    <aside class="sd-sidebar" aria-label="Mündəricat">
-      <div class="sd-toc-title">Mündəricat</div>
+  <!-- Təcrübəmiz -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="index.html#tecrubekm" class="mobile-nav-label">Təcrübəmiz</a>
+      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="mobile-sub">
+      <a href="index.html#tecrubekm"><i class="fa-solid fa-trophy"></i>Uğurlu Layihələr</a>
+      <a href="index.html#tecrubekm"><i class="fa-solid fa-drumstick-bite"></i>Layihələr</a>
+ 
+    </div>
+  </div>
 
-      <div class="sd-toc-group">
-        <div class="sd-toc-group-label">İqtisadi Siyasət Sahələri</div>
-        <nav class="sd-toc-scroll" id="sidebarNav">
-          <a href="#iqtisadi-siyaset" class="sidebar-link active">
-            <i class="fa-solid fa-chart-line"></i>
-            <span>İqtisadi Siyasət Sahələri</span>
-          </a>
-          <a href="#kend-teserrufati-siyaseti" class="sidebar-link">
+  <!-- Bilik Mərkəzi -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="index.html#bilik-merkezi" class="mobile-nav-label">Bilik Mərkəzi</a>
+      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="mobile-sub">
+      <a href="index.html#bilik-merkezi"><i class="fa-solid fa-pen-nib"></i>Ekspert Bloqu</a>
+      <a href="index.html#bilik-merkezi"><i class="fa-solid fa-download"></i>Pulsuz Yükləmələr</a>
+    </div>
+  </div>
+
+  <!-- Media -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="media.html" class="mobile-nav-label">Media</a>
+      <button class="mobile-chevron-btn has-dropdown" aria-expanded="false" aria-label="Alt menyunu aç">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+    <div class="mobile-sub">
+      <a href="media.html"><i class="fa-regular fa-images"></i>Foto Qalereya</a>
+      <a href="media.html"><i class="fa-solid fa-film"></i>Video İcmallar</a>
+      <a href="media.html"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
+    </div>
+  </div>
+
+  <!-- Əlaqə (no dropdown) -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-row">
+      <a href="index.html#footer" class="mobile-nav-label">Əlaqə</a>
+    </div>
+  </div>
+
+  <a href="check.html" class="mobile-nav-cta">
+    <i class="fa-solid fa-microscope"></i>
+    <span>Pulsuz Diaqnostika</span>
+  </a>
+
+</div>
+
+
+
+  <section class="sectors-section" id="sectors">
+    <div class="section-inner">
+
+      <!-- ---- Başlıq ---- -->
+      <div class="section-header">
+        <h2 class="section-title">Fəaliyyət Sektorları</h2>
+        <p class="section-subtitle">
+          İqtisadi siyasət sahələri və əsas iqtisadi sektorlar üzrə
+          geniş spektrli peşəkar məsləhət xidmətləri göstəririk.
+        </p>
+      </div>
+
+      <!-- ---- Pill sütunları ---- -->
+      <div class="sectors-wrap">
+        <div class="sectors-col">
+          <div class="sectors-col-title">İqtisadi Siyasət Sahələri</div>
+
+          <div class="sector-pill">
             <i class="fa-solid fa-seedling"></i>
-            <span>Kənd təsərrüfatı siyasəti</span>
-          </a>
-          <a href="#umumi-biznes" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Kənd təsərrüfatı siyasəti</span>
+              <span class="sector-pill-desc">Kənd təsərrüfatı siyasətinin hazırlanması, subsidiya və güzəşt
+                mexanizmlərinin təhlili, habelə aqrar sektorun inkişafı üçün strateji yol xəritələrinin işlənməsi üzrə
+                ekspert dəstəyi göstəririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-store"></i>
-            <span>Ümumi biznes mühiti</span>
-          </a>
-          <a href="#reqabet" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Ümumi biznes mühiti</span>
+              <span class="sector-pill-desc">Biznes mühitinin yaxşılaşdırılması, investisiya qanunvericiliyinin təhlili
+                və sahibkarlıq fəaliyyətinin asanlaşdırılması üçün normativ-hüquqi aktların hazırlanması ilə bağlı
+                məsləhət xidmətləri veririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-shield-halved"></i>
-            <span>Rəqabət</span>
-          </a>
-          <a href="#istehlakcilar" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Rəqabət</span>
+              <span class="sector-pill-desc">Rəqabət qanunvericiliyinə uyğunluğun qiymətləndirilməsi, antimonopol
+                siyasətin təhlili və bazar iştirakçıları üçün rəqabət hüququ üzrə hərtərəfli məsləhət xidmətləri təqdim
+                edirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-users"></i>
-            <span>İstehlakçıların müdafiəsi</span>
-          </a>
-          <a href="#senaye-zonalari" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">İstehlakçıların müdafiəsi</span>
+              <span class="sector-pill-desc">İstehlakçı hüquqlarının müdafiəsi mexanizmlərinin təhlili, şikayət
+                sistemlərinin təkmilləşdirilməsi və istehlakçı müdafiəsi qanunvericiliyinin tətbiqi üzrə ekspert dəstəyi
+                göstəririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-industry"></i>
-            <span>Sənaye zonaları</span>
-          </a>
-          <a href="#bazar-nezareti" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Sənaye zonaları və sənaye siyasəti</span>
+              <span class="sector-pill-desc">Sənaye zonalarının yaradılması, sənaye parklarının idarə edilməsi və sənaye
+                siyasətinin effektivliyinin artırılması üçün strateji planlaşdırma və hüquqi dəstək xidmətləri təklif
+                edirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <span>Bazar nəzarəti</span>
-          </a>
-          <a href="#eqli-mulkiyyet" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Bazar nəzarəti</span>
+              <span class="sector-pill-desc">Bazar nəzarəti mexanizmlərinin təkmilləşdirilməsi, qiymət tənzimləməsi
+                siyasətinin analizi və bazar sabitliyinin təmin edilməsi üzrə metodoloji dəstək və təlimlər
+                keçirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-lightbulb"></i>
-            <span>Əqli mülkiyyət</span>
-          </a>
-          <a href="#texniki-tenzimləmə" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Əqli mülkiyyət</span>
+              <span class="sector-pill-desc">Əqli mülkiyyət hüquqlarının qorunması, patent və ticarət nişanlarının
+                qeydiyyatı, habelə innovasiyaların kommersiyalaşdırılması üçün hüquqi məsləhət xidmətləri
+                göstəririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-ruler-combined"></i>
-            <span>Texniki tənzimləmə</span>
-          </a>
-          <a href="#kobi" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Texniki tənzimləmə və standartlaşdırma</span>
+              <span class="sector-pill-desc">Texniki tənzimləmə qanunvericiliyinin tətbiqi, beynəlxalq standartlara
+                uyğunluğun qiymətləndirilməsi və sertifikatlaşdırma proseslərinin təşkili üzrə peşəkar dəstək
+                veririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-building-user"></i>
-            <span>KOBİ-lərin inkişafı</span>
-          </a>
-          <a href="#qida-tehlukesizliyi-siyaseti" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">KOBİ-lərin inkişafı</span>
+              <span class="sector-pill-desc">Kiçik və orta sahibkarlıq subyektlərinin inkişafı, KOBİ-lərə dövlət dəstəyi
+                proqramlarının təhlili və biznes inkubatorların yaradılması üzrə strateji məsləhət xidmətləri təqdim
+                edirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-utensils"></i>
-            <span>Qida təhlükəsizliyi</span>
-          </a>
-          <a href="#dovlet-satinalmalari" class="sidebar-link">
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Qida təhlükəsizliyi</span>
+              <span class="sector-pill-desc">Qida təhlükəsizliyi standartlarının tətbiqi, AQTA tələblərinə uyğunluğun
+                yoxlanılması və qida zəncirinin bütün mərhələlərində risklərin idarə edilməsi üzrə ekspert xidmətləri
+                göstəririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
             <i class="fa-solid fa-cart-shopping"></i>
-            <span>Dövlət satınalmaları</span>
-          </a>
-        </nav>
-      </div>
-
-      <div class="sd-toc-group" style="margin-top:8px;">
-        <div class="sd-toc-group-label">İqtisadi Sektorlar</div>
-        <a href="#kend-teserrufati" class="sidebar-link">
-          <i class="fa-solid fa-tractor"></i>
-          <span>Kənd təsərrüfatı</span>
-        </a>
-        <a href="#erzaq-senayesi" class="sidebar-link">
-          <i class="fa-solid fa-wheat-awn"></i>
-          <span>Ərzaq sənayesi</span>
-        </a>
-        <a href="#texnologiya" class="sidebar-link">
-          <i class="fa-solid fa-microchip"></i>
-          <span>Texnologiya</span>
-        </a>
-        <a href="#ekologiya" class="sidebar-link">
-          <i class="fa-solid fa-leaf"></i>
-          <span>Ekologiya</span>
-        </a>
-        <a href="#sehiyye" class="sidebar-link">
-          <i class="fa-solid fa-heart-pulse"></i>
-          <span>Səhiyyə</span>
-        </a>
-        <a href="#turizm" class="sidebar-link">
-          <i class="fa-solid fa-plane-departure"></i>
-          <span>Turizm</span>
-        </a>
-        <a href="#logistika" class="sidebar-link">
-          <i class="fa-solid fa-truck"></i>
-          <span>Logistika və nəqliyyat</span>
-        </a>
-        <a href="#tikinti" class="sidebar-link">
-          <i class="fa-solid fa-hard-hat"></i>
-          <span>Tikinti</span>
-        </a>
-      </div>
-    </aside>
-
-    <!-- ---- MAIN CONTENT ---- -->
-    <main class="sd-main">
-
-      <!-- Page Hero -->
-      <div class="sd-hero">
-        <div class="sd-hero-eyebrow">
-          <span class="sd-hero-dot"></span>
-          ASR Development Consulting Group
-        </div>
-        <h1>Fəaliyyət Sektorları</h1>
-        <p>
-          İqtisadi siyasət sahələri və əsas iqtisadi sektorlar üzrə geniş spektrli peşəkar məsləhət xidmətləri göstəririk.
-          Aşağıda hər sektor üzrə ətraflı məlumat, xidmətlər, mütəxəssislər və görülmüş layihələr ilə tanış ola bilərsiniz.
-        </p>
-      </div>
-
-      <!-- ====================================================
-           İQTİSADİ SİYASƏT SAHƏLƏRİ — Başlıq kartı
-      ==================================================== -->
-      <div class="sector-detail-card" id="iqtisadi-siyaset">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#e8ecf4;">
-            <i class="fa-solid fa-chart-line" style="color:#1e3a5f;"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Dövlət satınalmaları</span>
+              <span class="sector-pill-desc">Dövlət satınalmaları qanunvericiliyinin tətbiqi, tender prosedurlarının
+                təşkili və satınalma proseslərinin şəffaflığının artırılması üçün metodoloji və hüquqi dəstək
+                veririk.</span>
+            </div>
           </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">İqtisadi Siyasət Sahələri</div>
-            <div class="sdc-subtitle">Dövlət siyasəti, tənzimləmə, standartlaşdırma və hüquqi ekspertiza</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              ASR Development Consulting Group iqtisadi siyasət sahələrinin geniş spektrini əhatə edir. Kənd təsərrüfatı siyasətindən tutmuş dövlət satınalmalarına qədər bütün sahələrdə peşəkar analitik dəstək və qanunvericilik ekspertizası təqdim edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Əsas istiqamətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Kənd təsərrüfatı siyasəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Ümumi biznes mühiti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Rəqabət qanunvericiliyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>İstehlakçıların müdafiəsi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Sənaye zonaları siyasəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Bazar nəzarəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Əqli mülkiyyət</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Texniki tənzimləmə</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>KOBİ-lərin inkişafı</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Qida təhlükəsizliyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-check-circle"></i>Dövlət satınalmaları</div>
-              </div>
+
+        <div class="sectors-col">
+          <div class="sectors-col-title">İqtisadi Sektorlar</div>
+
+          <div class="sector-pill">
+            <i class="fa-solid fa-tractor"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Kənd təsərrüfatı</span>
+              <span class="sector-pill-desc">Aqrar sektorun inkişafı, fermer təsərrüfatlarının modernləşdirilməsi və
+                kənd təsərrüfatı məhsullarının ixrac potensialının artırılması üzrə strateji planlaşdırma xidmətləri
+                təklif edirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-wheat-awn"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Ərzaq</span>
+              <span class="sector-pill-desc">Ərzaq təhlükəsizliyinin təmin edilməsi, ərzaq sənayesinin inkişafı və emal
+                müəssisələrinin beynəlxalq standartlara uyğunlaşdırılması üzrə konsaltinq xidmətləri göstəririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-microchip"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Texnologiya</span>
+              <span class="sector-pill-desc">İnformasiya texnologiyaları sektorunun inkişafı, startap ekosisteminin
+                formalaşdırılması və rəqəmsal transformasiya strategiyalarının hazırlanması üzrə peşəkar dəstək
+                veririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-leaf"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Ekologiya</span>
+              <span class="sector-pill-desc">Ətraf mühitin qorunması, yaşıl iqtisadiyyatın inkişafı və ekoloji
+                standartlara uyğunluğun təmin edilməsi üzrə siyasət və strategiya hazırlanması xidmətləri təqdim
+                edirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Səhiyyə</span>
+              <span class="sector-pill-desc">Səhiyyə sektorunun islahatları, tibbi xidmətlərin keyfiyyətinin artırılması
+                və səhiyyə infrastrukturunun modernləşdirilməsi üçün strateji planlaşdırma xidmətləri göstəririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-plane-departure"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Turizm</span>
+              <span class="sector-pill-desc">Turizm sektorunun inkişafı, turizm məhsullarının diversifikasiyası və
+                turizm infrastrukturunun beynəlxalq standartlara uyğunlaşdırılması üzrə ekspert məsləhətləri
+                veririk.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-truck"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Logistika və nəqliyyat</span>
+              <span class="sector-pill-desc">Nəqliyyat və logistika sektorunun effektivliyinin artırılması, beynəlxalq
+                dəhlizlərin inkişafı və logistika mərkəzlərinin yaradılması üzrə strateji konsaltinq xidmətləri təklif
+                edirik.</span>
+            </div>
+          </div>
+          <div class="sector-pill">
+            <i class="fa-solid fa-hard-hat"></i>
+            <div class="sector-pill-content">
+              <span class="sector-pill-title">Tikinti</span>
+              <span class="sector-pill-desc">Tikinti sektorunun inkişafı, şəhərsalma siyasətinin təkmilləşdirilməsi və
+                tikinti standartlarının beynəlxalq tələblərə uyğunlaşdırılması üzrə ekspert dəstəyi göstəririk.</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- ====================================================
-           KƏND TƏSƏRRÜFATİ SİYASƏTİ
-      ==================================================== -->
-      <div class="sector-detail-card" id="kend-teserrufati-siyaseti">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#ecf9ec;">
-            <i class="fa-solid fa-seedling" style="color:#16a34a;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Kənd təsərrüfatı siyasəti</div>
-            <div class="sdc-subtitle">Subsidiya mexanizmləri, aqrar strategiyalar, siyasətin hazırlanması</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Kənd təsərrüfatı siyasətinin hazırlanması, subsidiya və güzəşt mexanizmlərinin təhlili, habelə aqrar sektorun inkişafı üçün strateji yol xəritələrinin işlənməsi üzrə ekspert dəstəyi göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-leaf"></i>Subsidiya mexanizmlərinin layihələndirilməsi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-map"></i>Strateji yol xəritəsinin hazırlanması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-magnifying-glass-chart"></i>Aqrar sektor analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-contract"></i>Normativ-hüquqi sənədlər</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-handshake"></i>Beynəlxalq əməkdaşlıq dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chart-bar"></i>Sektor monitorinqi</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">RA</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Rauf Əliyev</div>
-                    <div class="sdc-expert-role">Aqrar siyasət eksperti</div>
-                  </div>
-                </div>
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">NM</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Nigar Məmmədova</div>
-                    <div class="sdc-expert-role">Qida sistemləri üzrə analitik</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#ecf9ec;color:#16a34a;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Fermer Subsidiya Proqramının Qiymətləndirilməsi</div>
-                    <div class="sdc-project-desc">Azərbaycanda dövlət subsidiya mexanizmlərinin effektivliyinin müstəqil qiymətləndirilməsi və tövsiyələrin hazırlanması.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Kənd təsərrüfatı siyasəti</div>
-                  </div>
-                </div>
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#ecf9ec;color:#16a34a;">2022</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Aqrar Sektor İnkişaf Strategiyası</div>
-                    <div class="sdc-project-desc">Regionlarda kənd təsərrüfatının şaxələndirilməsi üzrə strateji sənədin hazırlanması.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Strateji planlaşdırma</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- ---- Kart bölməsi ---- -->
+      <div class="sector-cards-section">
 
-      <!-- ====================================================
-           ÜMUMİ BİZNES MÜHİTİ
-      ==================================================== -->
-      <div class="sector-detail-card" id="umumi-biznes">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#fef9ec;">
-            <i class="fa-solid fa-store" style="color:#c9a84c;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Ümumi biznes mühiti</div>
-            <div class="sdc-subtitle">İnvestisiya qanunvericiliyi, sahibkarlıq mühiti, normativ dəstək</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Biznes mühitinin yaxşılaşdırılması, investisiya qanunvericiliyinin təhlili və sahibkarlıq fəaliyyətinin asanlaşdırılması üçün normativ-hüquqi aktların hazırlanması ilə bağlı məsləhət xidmətləri veririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-gavel"></i>İnvestisiya qanunvericiliyinin analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-briefcase"></i>Sahibkarlıq mühitinin qiymətləndirilməsi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-lines"></i>Normativ aktların hazırlanması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe"></i>Beynəlxalq indekslərin analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-building-columns"></i>Dövlət qurumları ilə koordinasiya</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-lightbulb"></i>İnkişaf tövsiyələri</div>
-              </div>
+        <!-- Statistika sıraı -->
+        <div class="sector-stats-row">
+          <div class="sector-stat-item">
+            <div class="sector-stat-icon-wrap" style="background:#e8ecf4;">
+              <i class="fa-solid fa-seedling" style="color:#1e3a5f;"></i>
+            </div>
+            <div class="sector-stat-info">
+              <div class="sector-stat-name">Kənd təsərrüfatı</div>
+              <div class="sector-stat-sub">Aqrobiznes</div>
             </div>
             <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">EH</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Elçin Həsənov</div>
-                    <div class="sdc-expert-role">Biznes mühiti eksperti</div>
-                  </div>
-                </div>
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">LK</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Ləman Kərimova</div>
-                    <div class="sdc-expert-role">Hüquqi analitik</div>
-                  </div>
-                </div>
-              </div>
+              <div class="sector-stat-num">15+</div>
+              <div class="sector-stat-label">Layihə</div>
+            </div>
+          </div>
+          <div class="sector-stat-item">
+            <div class="sector-stat-icon-wrap" style="background:#fdf2e9;">
+              <i class="fa-solid fa-utensils" style="color:#c9a84c;"></i>
+            </div>
+            <div class="sector-stat-info">
+              <div class="sector-stat-name">Ərzaq sənayesi</div>
+              <div class="sector-stat-sub">Qida istehsalı</div>
             </div>
             <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fef9ec;color:#c9a84c;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">İnvestisiya Mühitinin Monitorinqi</div>
-                    <div class="sdc-project-desc">Doing Business göstəriciləri çərçivəsində yerli biznes mühitinin qiymətləndirilməsi.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Biznes mühiti</div>
-                  </div>
-                </div>
-              </div>
+              <div class="sector-stat-num">20+</div>
+              <div class="sector-stat-label">Müəssisə</div>
+            </div>
+          </div>
+          <div class="sector-stat-item">
+            <div class="sector-stat-icon-wrap" style="background:#e6f7f5;">
+              <i class="fa-solid fa-hospital" style="color:#2dd4bf;"></i>
+            </div>
+            <div class="sector-stat-info">
+              <div class="sector-stat-name">Səhiyyə</div>
+              <div class="sector-stat-sub">Tibb xidmətləri</div>
+            </div>
+            <div>
+              <div class="sector-stat-num">12+</div>
+              <div class="sector-stat-label">Layihə</div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- ====================================================
-           RƏQABƏT
-      ==================================================== -->
-      <div class="sector-detail-card" id="reqabet">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#eef2ff;">
-            <i class="fa-solid fa-shield-halved" style="color:#4f46e5;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Rəqabət</div>
-            <div class="sdc-subtitle">Antimonopol siyasət, bazar hüququ, rəqabət analizi</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Rəqabət qanunvericiliyinə uyğunluğun qiymətləndirilməsi, antimonopol siyasətin təhlili və bazar iştirakçıları üçün rəqabət hüququ üzrə hərtərəfli məsləhət xidmətləri təqdim edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-scale-balanced"></i>Antimonopol uyğunluq auditi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-magnifying-glass"></i>Bazar payı analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-contract"></i>Rəqabət hüququ məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-handshake"></i>Birləşmə əqdlərinin qiymətləndirilməsi</div>
-              </div>
+        <!-- 8 kart grid -->
+        <div class="sector-cards-grid">
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#e8ecf4;">
+              <i class="fa-solid fa-seedling" style="color:#1e3a5f;"></i>
             </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">AQ</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Anar Quliyev</div>
-                    <div class="sdc-expert-role">Rəqabət hüququ mütəxəssisi</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#eef2ff;color:#4f46e5;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Pərakəndə Bazarın Rəqabət Analizi</div>
-                    <div class="sdc-project-desc">Ərzaq pərakəndə satış bazarında bazar gücünün qiymətləndirilməsi və tövsiyələrin hazırlanması.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Rəqabət siyasəti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4 class="sector-card-title" >Kənd təsərrüfatı</h4>
+            <p class="sector-card-desc">Aqrobiznes, fermer təsərrüfatları, kənd təsərrüfatı məhsulları</p>
+            <a href="kend-teserrufati.html" class="sector-card-btn">Ətraflı oxu <i class="fa-solid fa-arrow-right" ></i></a>
+            
           </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           İSTEHLAKÇILARIN MÜDAFİƏSİ
-      ==================================================== -->
-      <div class="sector-detail-card" id="istehlakcilar">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#fff0f0;">
-            <i class="fa-solid fa-users" style="color:#dc2626;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">İstehlakçıların müdafiəsi</div>
-            <div class="sdc-subtitle">Hüquq mexanizmləri, şikayət sistemləri, qanunvericilik tətbiqi</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              İstehlakçı hüquqlarının müdafiəsi mexanizmlərinin təhlili, şikayət sistemlərinin təkmilləşdirilməsi və istehlakçı müdafiəsi qanunvericiliyinin tətbiqi üzrə ekspert dəstəyi göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-gavel"></i>Qanunvericilik uyğunluğu</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-comment-dots"></i>Şikayət mexanizminin qurulması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-shield-check"></i>İstehlakçı hüquqları auditi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chalkboard-user"></i>Fərdiləşdirilmiş təlimlər</div>
-              </div>
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#fdf2e9;">
+              <i class="fa-solid fa-utensils" style="color:#c9a84c;"></i>
             </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">SI</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Sevinc İsmayılova</div>
-                    <div class="sdc-expert-role">İstehlakçı hüquqları eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fff0f0;color:#dc2626;">2022</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Şikayət Sisteminin Modernləşdirilməsi</div>
-                    <div class="sdc-project-desc">İstehlakçı müraciətlərinin rəqəmsal platformaya köçürülməsi üzrə metodoloji dəstək.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> İstehlakçı müdafiəsi</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4 class="sector-card-title">Ərzaq sənayesi</h4>
+            <p class="sector-card-desc">Qida istehsalı, emal müəssisələri, HORECA</p>
+            <a href="erzaq-senayesi.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
           </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           SƏNAYE ZONALARI
-      ==================================================== -->
-      <div class="sector-detail-card" id="senaye-zonalari">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#f0fdf4;">
-            <i class="fa-solid fa-industry" style="color:#15803d;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Sənaye zonaları və sənaye siyasəti</div>
-            <div class="sdc-subtitle">Sənaye parkları, zona idarəetməsi, strateji planlaşdırma</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Sənaye zonalarının yaradılması, sənaye parklarının idarə edilməsi və sənaye siyasətinin effektivliyinin artırılması üçün strateji planlaşdırma və hüquqi dəstək xidmətləri təklif edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-map-pin"></i>Zona yerləşdirmə analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-sitemap"></i>İdarəetmə strukturunun qurulması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-contract"></i>Hüquqi çərçivənin hazırlanması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe"></i>Beynəlxalq təcrübə analizi</div>
-              </div>
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#e6f7f5;">
+              <i class="fa-solid fa-hospital" style="color:#2dd4bf;"></i>
             </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">TR</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Tural Rəhimov</div>
-                    <div class="sdc-expert-role">Sənaye siyasəti eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#f0fdf4;color:#15803d;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Sənaye Parkı Konsepsiyasının Hazırlanması</div>
-                    <div class="sdc-project-desc">Azərbaycanın regionlarında sənaye parklarının inkişafı üzrə konseptual sənəd hazırlanması.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Sənaye siyasəti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4 class="sector-card-title">Səhiyyə</h4>
+            <p class="sector-card-desc">Tibb xidmətləri, əczaçılıq, sağlamlıq</p>
+            <a href="sehiyye.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
           </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           BAZAR NƏZARƏTİ
-      ==================================================== -->
-      <div class="sector-detail-card" id="bazar-nezareti">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#eff6ff;">
-            <i class="fa-solid fa-magnifying-glass" style="color:#2563eb;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Bazar nəzarəti</div>
-            <div class="sdc-subtitle">Qiymət tənzimləməsi, bazar monitorinqi, metodoloji dəstək</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Bazar nəzarəti mexanizmlərinin təkmilləşdirilməsi, qiymət tənzimləməsi siyasətinin analizi və bazar sabitliyinin təmin edilməsi üzrə metodoloji dəstək və təlimlər keçirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-chart-line"></i>Qiymət dinamikasının izlənməsi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-database"></i>Bazar məlumat sistemi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chalkboard"></i>Metodoloji təlimlər</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-alt"></i>Hesabatların hazırlanması</div>
-              </div>
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#f0e6ff;">
+              <i class="fa-solid fa-plane" style="color:#7c3aed;"></i>
             </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">GM</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Günay Musayeva</div>
-                    <div class="sdc-expert-role">Bazar analitiki</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#eff6ff;color:#2563eb;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Ərzaq Qiymət Monitorinq Sistemi</div>
-                    <div class="sdc-project-desc">Ölkə miqyasında ərzaq məhsulları qiymətlərinin müntəzəm monitorinqi üçün sistem qurulması.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Bazar nəzarəti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4 class="sector-card-title">Turizm</h4>
+            <p class="sector-card-desc">Turizm xidmətləri, otellər, restoranlar</p>
+            <a href="turizm.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
           </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           ƏQLİ MÜLKİYYƏT
-      ==================================================== -->
-      <div class="sector-detail-card" id="eqli-mulkiyyet">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#fffbeb;">
-            <i class="fa-solid fa-lightbulb" style="color:#d97706;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Əqli mülkiyyət</div>
-            <div class="sdc-subtitle">Patent, ticarət nişanları, innovasiya hüququ</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Əqli mülkiyyət hüquqlarının qorunması, patent və ticarət nişanlarının qeydiyyatı, habelə innovasiyaların kommersiyalaşdırılması üçün hüquqi məsləhət xidmətləri göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-registered"></i>Patent qeydiyyatı dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-trademark"></i>Ticarət nişanı məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-rocket"></i>İnnovasiyanın kommersiyalaşdırılması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-gavel"></i>Hüquq pozuntusu analizi</div>
-              </div>
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#e0f2fe;">
+              <i class="fa-solid fa-leaf" style="color:#0284c7;"></i>
             </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">ZA</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Zaur Axundov</div>
-                    <div class="sdc-expert-role">İP hüquqçusu</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fffbeb;color:#d97706;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Startap Əqli Mülkiyyət Paketi</div>
-                    <div class="sdc-project-desc">Azərbaycan startaplarına patent və ticarət nişanı qeydiyyatı üzrə kompleks hüquqi dəstək.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Əqli mülkiyyət</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h4 class="sector-card-title">Ekologiya</h4>
+            <p class="sector-card-desc">Ətraf mühit, yaşıl texnologiyalar</p>
+            <a href="ekologiya.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
           </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           TEXNİKİ TƏNZİMLƏMƏ
-      ==================================================== -->
-      <div class="sector-detail-card" id="texniki-tenzimləmə">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#f8fafc;">
-            <i class="fa-solid fa-ruler-combined" style="color:#475569;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Texniki tənzimləmə və standartlaşdırma</div>
-            <div class="sdc-subtitle">Beynəlxalq standartlar, sertifikatlaşdırma, uyğunluq</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Texniki tənzimləmə qanunvericiliyinin tətbiqi, beynəlxalq standartlara uyğunluğun qiymətləndirilməsi və sertifikatlaşdırma proseslərinin təşkili üzrə peşəkar dəstək veririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-certificate"></i>ISO standartlara uyğunluq</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-clipboard-check"></i>Sertifikatlaşdırma hazırlığı</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-book-open"></i>Texniki normalar üzrə məsləhət</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe"></i>Beynəlxalq standart tərciməsi</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">FN</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Fərida Nəcəfova</div>
-                    <div class="sdc-expert-role">Standartlaşdırma eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#f8fafc;color:#475569;">2022</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">ISO 9001 Tətbiq Proqramı</div>
-                    <div class="sdc-project-desc">Dövlət müəssisəsinin ISO 9001 sertifikatlaşdırmasına hazırlıq üzrə tam dəstək paketi.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Standartlaşdırma</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           KOBİ
-      ==================================================== -->
-      <div class="sector-detail-card" id="kobi">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#f0fdfa;">
-            <i class="fa-solid fa-building-user" style="color:#0d9488;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">KOBİ-lərin inkişafı</div>
-            <div class="sdc-subtitle">Kiçik və orta sahibkarlıq, dövlət dəstəyi, inkubator proqramları</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Kiçik və orta sahibkarlıq subyektlərinin inkişafı, KOBİ-lərə dövlət dəstəyi proqramlarının təhlili və biznes inkubatorların yaradılması üzrə strateji məsləhət xidmətləri təqdim edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-hand-holding-dollar"></i>Maliyyə dəstəyi proqramları</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-seedling"></i>İnkubator konsepsiyası</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chart-pie"></i>KOBİ sektor analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-network-wired"></i>Klaster inkişafı</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">VQ</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Vüsal Qasımov</div>
-                    <div class="sdc-expert-role">KOBİ inkişaf eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#f0fdfa;color:#0d9488;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Kənd KOBİ-lərinin Gücləndirilməsi</div>
-                    <div class="sdc-project-desc">Regional kiçik müəssisələrin dövlət dəstəyi proqramlarından istifadəsi üzrə hərtərəfli dəstək.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> KOBİ inkişafı</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           QİDA TƏHLÜKƏSİZLİYİ SİYASƏTİ
-      ==================================================== -->
-      <div class="sector-detail-card" id="qida-tehlukesizliyi-siyaseti">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#fdf2e9;">
-            <i class="fa-solid fa-utensils" style="color:#c9a84c;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Qida təhlükəsizliyi siyasəti</div>
-            <div class="sdc-subtitle">AQTA standartları, HACCP, qida zənciri riskləri</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Qida təhlükəsizliyi standartlarının tətbiqi, AQTA tələblərinə uyğunluğun yoxlanılması və qida zəncirinin bütün mərhələlərində risklərin idarə edilməsi üzrə ekspert xidmətləri göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-microscope"></i>HACCP tətbiqi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-certificate"></i>ISO 22000 auditi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-triangle-exclamation"></i>Risk qiymətləndirilməsi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-shield"></i>AQTA uyğunluq dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chalkboard-user"></i>Heyət təlimləri</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-clipboard-list"></i>Audit hesabatları</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">AH</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Aytən Hüseynova</div>
-                    <div class="sdc-expert-role">Qida təhlükəsizliyi auditori</div>
-                  </div>
-                </div>
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">MM</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Murad Mustafayev</div>
-                    <div class="sdc-expert-role">HACCP mütəxəssisi</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fdf2e9;color:#c9a84c;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">20 Müəssisədə ISO 22000 Auditi</div>
-                    <div class="sdc-project-desc">Ərzaq istehsal müəssisələrinin beynəlxalq qida təhlükəsizliyi standartlarına uyğunluğunun qiymətləndirilməsi.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Qida təhlükəsizliyi</div>
-                  </div>
-                </div>
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fdf2e9;color:#c9a84c;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">HORECA Sektoru üçün HACCP Tətbiqi</div>
-                    <div class="sdc-project-desc">Otel və restoran şəbəkəsinin bütün sahələrindən HACCP planının tərtibi və tətbiqi.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> HACCP</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ====================================================
-           DÖVLƏT SATINALMALARI
-      ==================================================== -->
-      <div class="sector-detail-card" id="dovlet-satinalmalari">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#faf5ff;">
-            <i class="fa-solid fa-cart-shopping" style="color:#7c3aed;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Dövlət satınalmaları</div>
-            <div class="sdc-subtitle">Tender prosedurları, şəffaflıq, satınalma qanunvericiliyi</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Dövlət satınalmaları qanunvericiliyinin tətbiqi, tender prosedurlarının təşkili və satınalma proseslərinin şəffaflığının artırılması üçün metodoloji və hüquqi dəstək veririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-file-contract"></i>Tender sənədlərinin hazırlanması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-balance-scale"></i>Hüquqi uyğunluq yoxlaması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-eye"></i>Şəffaflıq mexanizmləri</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chalkboard-user"></i>Satınalma təlimləri</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">BM</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Bəhruz Məmmədov</div>
-                    <div class="sdc-expert-role">Satınalma hüquqçusu</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#faf5ff;color:#7c3aed;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Elektronik Satınalma Sisteminin Analizi</div>
-                    <div class="sdc-project-desc">Dövlət satınalmaları portalının effektivliyinin qiymətləndirilməsi və inkişaf tövsiyələri.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Dövlət satınalmaları</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ===========================================================
-           İQTİSADİ SEKTORLAR BÖLÜMÜ
-      ============================================================ -->
-      <div class="sd-hero" style="margin-top:56px;">
-        <div class="sd-hero-eyebrow">
-          <span class="sd-hero-dot"></span>
-          İqtisadi Sektorlar
-        </div>
-        <h2 style="font-size:clamp(1.3rem,2.5vw,1.9rem);font-weight:800;color:var(--navy,#1e3a5f);margin-bottom:10px;">
-          Əsas İqtisadi Sektorlar
-        </h2>
-        <p style="font-size:.93rem;color:var(--text-muted,#64748b);line-height:1.7;max-width:600px;">
-          Azərbaycanın əsas iqtisadi sektorlarında dərin ixtisaslaşma ilə strateji konsaltinq xidmətləri göstəririk.
-        </p>
-      </div>
-
-      <!-- KƏND TƏSƏRRÜFATİ SEKTORu -->
-      <div class="sector-detail-card" id="kend-teserrufati">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#ecf9ec;">
-            <i class="fa-solid fa-tractor" style="color:#16a34a;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Kənd təsərrüfatı sektoru</div>
-            <div class="sdc-subtitle">Aqrobiznes, fermer təsərrüfatları, kənd təsərrüfatı məhsulları</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Aqrar sektorun inkişafı, fermer təsərrüfatlarının modernləşdirilməsi və kənd təsərrüfatı məhsullarının ixrac potensialının artırılması üzrə strateji planlaşdırma xidmətləri təklif edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-seedling"></i>Aqrar sektor strateji planlaşdırma</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-tractor"></i>Fermer modernləşdirmə dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe"></i>İxrac marketinqi məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-water"></i>Suvarma infrastruktur analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-dna"></i>Toxumçuluq siyasəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chart-line"></i>Aqrar iqtisadi araşdırma</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">RA</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Rauf Əliyev</div>
-                    <div class="sdc-expert-role">Aqrar iqtisadiyyat eksperti</div>
-                  </div>
-                </div>
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">NM</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Nigar Məmmədova</div>
-                    <div class="sdc-expert-role">Kənd inkişafı üzrə analitik</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#ecf9ec;color:#16a34a;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Aqrar İxrac Strategiyası</div>
-                    <div class="sdc-project-desc">Azərbaycan aqrar məhsullarının Avropa bazarına çıxışı üzrə strateji sənəd.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Kənd təsərrüfatı</div>
-                  </div>
-                </div>
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#ecf9ec;color:#16a34a;">2022</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Fermer Kooperativlərinin Gücləndirilməsi</div>
-                    <div class="sdc-project-desc">15+ fermer kooperativinin idarəetmə strukturunun təkmilləşdirilməsi üzrə kompleks layihə.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Kooperativ inkişafı</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ƏRZAQ SƏNAYESİ -->
-      <div class="sector-detail-card" id="erzaq-senayesi">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#fdf2e9;">
-            <i class="fa-solid fa-wheat-awn" style="color:#c9a84c;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Ərzaq sənayesi</div>
-            <div class="sdc-subtitle">Qida istehsalı, emal müəssisələri, HORECA</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Ərzaq təhlükəsizliyinin təmin edilməsi, ərzaq sənayesinin inkişafı və emal müəssisələrinin beynəlxalq standartlara uyğunlaşdırılması üzrə konsaltinq xidmətləri göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-industry"></i>Emal müəssisəsi auditi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-shield-halved"></i>Qida təhlükəsizliyi sistemi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-truck-ramp-box"></i>Təchizat zənciri optimallaşdırma</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-certificate"></i>BRCGS sertifikatlaşdırma</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-chart-bar"></i>Bazar araşdırması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe"></i>İxrac strategiyası</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">AH</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Aytən Hüseynova</div>
-                    <div class="sdc-expert-role">Ərzaq sənayesi eksperti</div>
-                  </div>
-                </div>
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">MM</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Murad Mustafayev</div>
-                    <div class="sdc-expert-role">Qida keyfiyyəti mütəxəssisi</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fdf2e9;color:#c9a84c;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Ət Emalı Zavodu İSO 22000 Sertifikatı</div>
-                    <div class="sdc-project-desc">Böyük ət emalı müəssisəsinin ISO 22000 sertifikatına hazırlanması üzrə kompleks audit.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Ərzaq sənayesi</div>
-                  </div>
-                </div>
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fdf2e9;color:#c9a84c;">2022</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">HORECA Sektoru üçün Qida Dəstəyi</div>
-                    <div class="sdc-project-desc">50+ restoran və otel üçün qida təhlükəsizliyi tətbiq proqramı.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> HORECA</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TEXNOLOGIYA -->
-      <div class="sector-detail-card" id="texnologiya">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#fce7f3;">
-            <i class="fa-solid fa-microchip" style="color:#db2777;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Texnologiya sektoru</div>
-            <div class="sdc-subtitle">İT həlləri, rəqəmsal transformasiya, startap ekosistemi</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              İnformasiya texnologiyaları sektorunun inkişafı, startap ekosisteminin formalaşdırılması və rəqəmsal transformasiya strategiyalarının hazırlanması üzrə peşəkar dəstək veririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-rocket"></i>Startap inkubator dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-mobile-alt"></i>Rəqəmsal transformasiya strategiyası</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-shield-alt"></i>Kibertəhlükəsizlik siyasəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-cloud"></i>Bulud texnologiyaları məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-brain"></i>Süni intellekt tətbiqi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-code"></i>Texnologiya qanunvericiliyi</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">IB</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">İlham Babayev</div>
-                    <div class="sdc-expert-role">Rəqəmsal transformasiya eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#fce7f3;color:#db2777;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Dövlət Qurumlarının Rəqəmsal Strategiyası</div>
-                    <div class="sdc-project-desc">3 dövlət qurumunun e-xidmətlərə keçid üzrə rəqəmsal dönüşüm planı.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Rəqəmsal transformasiya</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- EKOLOGİYA -->
-      <div class="sector-detail-card" id="ekologiya">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#e0f2fe;">
-            <i class="fa-solid fa-leaf" style="color:#0284c7;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Ekologiya sektoru</div>
-            <div class="sdc-subtitle">Ətraf mühit, yaşıl iqtisadiyyat, ekoloji siyasət</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Ətraf mühitin qorunması, yaşıl iqtisadiyyatın inkişafı və ekoloji standartlara uyğunluğun təmin edilməsi üzrə siyasət və strategiya hazırlanması xidmətləri təqdim edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-solar-panel"></i>Yaşıl enerji strategiyası</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-recycle"></i>Tullantı idarəetməsi siyasəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-water"></i>Su resurslarının idarəolunması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-shield"></i>Ekoloji uyğunluq auditi</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">GH</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Günel Həsənova</div>
-                    <div class="sdc-expert-role">Ekoloji siyasət eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#e0f2fe;color:#0284c7;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Yaşıl İqtisadiyyat Yol Xəritəsi</div>
-                    <div class="sdc-project-desc">Azərbaycanın yaşıl iqtisadiyyata keçidi üzrə milli strategiyanın hazırlanmasına dəstək.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Ekoloji siyasət</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SƏHİYYƏ -->
-      <div class="sector-detail-card" id="sehiyye">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#e6f7f5;">
-            <i class="fa-solid fa-heart-pulse" style="color:#2dd4bf;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Səhiyyə sektoru</div>
-            <div class="sdc-subtitle">Tibb xidmətləri, əczaçılıq, səhiyyə islahatları</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Səhiyyə sektorunun islahatları, tibbi xidmətlərin keyfiyyətinin artırılması və səhiyyə infrastrukturunun modernləşdirilməsi üçün strateji planlaşdırma xidmətləri göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-hospital"></i>Xəstəxana idarəetmə məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-pills"></i>Əczaçılıq tənzimləmə dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-stethoscope"></i>Tibbi keyfiyyət standartları</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-laptop-medical"></i>Rəqəmsal sağlamlıq strategiyası</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">KR</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Könül Rzayeva</div>
-                    <div class="sdc-expert-role">Səhiyyə siyasəti eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#e6f7f5;color:#0d9488;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Regional Xəstəxanaların Modernləşdirilməsi</div>
-                    <div class="sdc-project-desc">12 regional xəstəxana üçün idarəetmə və keyfiyyət inkişaf proqramı.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Səhiyyə islahatı</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TURİZM -->
-      <div class="sector-detail-card" id="turizm">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#f0e6ff;">
-            <i class="fa-solid fa-plane-departure" style="color:#7c3aed;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Turizm sektoru</div>
-            <div class="sdc-subtitle">Turizm xidmətləri, otellər, destinasiya inkişafı</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Turizm sektorunun inkişafı, turizm məhsullarının diversifikasiyası və turizm infrastrukturunun beynəlxalq standartlara uyğunlaşdırılması üzrə ekspert məsləhətləri veririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-map-location-dot"></i>Destinasiya inkişaf strategiyası</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-hotel"></i>Otel sənayesi məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-handshake"></i>Turizm tənzimləmə dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe-europe"></i>Beynəlxalq turizm bazar analizi</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">SA</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Samir Abdullayev</div>
-                    <div class="sdc-expert-role">Turizm sektoru eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#f0e6ff;color:#7c3aed;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Qarabağ Turizm Strategiyası</div>
-                    <div class="sdc-project-desc">Qarabağ bölgəsinin beynəlxalq turizm bazarına inteqrasiyası üzrə strateji inkişaf sənədi.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Turizm inkişafı</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- LOGİSTİKA -->
-      <div class="sector-detail-card" id="logistika">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#ede9fe;">
-            <i class="fa-solid fa-truck" style="color:#6366f1;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Logistika və nəqliyyat</div>
-            <div class="sdc-subtitle">Nəqliyyat infrastrukturu, beynəlxalq dəhlizlər, logistika mərkəzləri</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Nəqliyyat və logistika sektorunun effektivliyinin artırılması, beynəlxalq dəhlizlərin inkişafı və logistika mərkəzlərinin yaradılması üzrə strateji konsaltinq xidmətləri təklif edirik.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-route"></i>Multimodal nəqliyyat planlaması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-warehouse"></i>Anbar sistemlərinin optimallaşdırılması</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-globe"></i>Beynəlxalq dəhliz analizi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-boxes-stacked"></i>Təchizat zənciri idarəetməsi</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">OR</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Orxan Rüstəmov</div>
-                    <div class="sdc-expert-role">Logistika eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#ede9fe;color:#6366f1;">2024</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">Orta Dəhliz Logistika Analizi</div>
-                    <div class="sdc-project-desc">Azərbaycanın Orta Dəhliz üzrə logistika potensialının qiymətləndirilməsi.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Nəqliyyat logistikası</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TİKİNTİ -->
-      <div class="sector-detail-card" id="tikinti">
-        <div class="sdc-header" onclick="toggleCard(this)">
-          <div class="sdc-icon-wrap" style="background:#ffedd5;">
-            <i class="fa-solid fa-hard-hat" style="color:#ea580c;"></i>
-          </div>
-          <div class="sdc-header-text">
-            <div class="sdc-title">Tikinti sektoru</div>
-            <div class="sdc-subtitle">İnfrastruktur, şəhərsalma, tikinti standartları</div>
-          </div>
-          <div class="sdc-chevron"><i class="fa-solid fa-chevron-down"></i></div>
-        </div>
-        <div class="sdc-body">
-          <div class="sdc-body-inner">
-            <p class="sdc-desc">
-              Tikinti sektorunun inkişafı, şəhərsalma siyasətinin təkmilləşdirilməsi və tikinti standartlarının beynəlxalq tələblərə uyğunlaşdırılması üzrə ekspert dəstəyi göstəririk.
-            </p>
-            <div>
-              <div class="sdc-section-title">Xidmətlər</div>
-              <div class="sdc-services-grid">
-                <div class="sdc-service-item"><i class="fa-solid fa-city"></i>Şəhərsalma məsləhəti</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-file-contract"></i>Tikinti qanunvericiliyi dəstəyi</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-ruler"></i>Standartlar uyğunluğu</div>
-                <div class="sdc-service-item"><i class="fa-solid fa-leaf"></i>Yaşıl tikinti standartları</div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Mütəxəssislər</div>
-              <div class="sdc-experts-row">
-                <div class="sdc-expert-card">
-                  <div class="sdc-expert-avatar">NH</div>
-                  <div class="sdc-expert-info">
-                    <div class="sdc-expert-name">Namiq Həsənzadə</div>
-                    <div class="sdc-expert-role">Tikinti sektoru eksperti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="sdc-section-title">Görülmüş layihələr</div>
-              <div class="sdc-projects-list">
-                <div class="sdc-project-item">
-                  <span class="sdc-project-badge" style="background:#ffedd5;color:#ea580c;">2023</span>
-                  <div class="sdc-project-info">
-                    <div class="sdc-project-name">İnşaat Sektoru Tənzimləmə İslahatı</div>
-                    <div class="sdc-project-desc">Tikinti icazələri prosesinin sadələşdirilməsi və rəqəmsal idarəetməyə keçid üzrə metodoloji dəstək.</div>
-                    <div class="sdc-project-meta"><i class="fa-solid fa-tag"></i> Tikinti siyasəti</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </main>
+         <div class="sector-card">
+  <div class="sector-card-icon-wrap" style="background:#ffedd5;">
+    <i class="fa-solid fa-helmet-safety" style="color:#ea580c;"></i>
   </div>
+  <h4 class="sector-card-title">Tikinti sektoru</h4>
+  <p class="sector-card-desc">İnfrastruktur, yaşayış və kommersiya binaları</p>
+  <a href="tikinti-sektoru.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
+</div>
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#fce7f3;">
+              <i class="fa-solid fa-microchip" style="color:#db2777;"></i>
+            </div>
+            <h4 class="sector-card-title">Texnologiya</h4>
+            <p class="sector-card-desc">İT həlləri, rəqəmsal transformasiya</p>
+            <a href="texnologiya.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
+          </div>
+          <div class="sector-card">
+            <div class="sector-card-icon-wrap" style="background:#ede9fe;">
+              <i class="fa-solid fa-truck" style="color:#6366f1;"></i>
+            </div>
+            <h4 class="sector-card-title">Logistika</h4>
+            <p class="sector-card-desc">Nəqliyyat, anbar, təchizat zənciri</p>
+            <a href="logistika.html" class="sector-card-btn">Ətraflı oxu  <i class="fa-solid fa-arrow-right" ></i></a>
+          </div>
+        </div>
+
+        <!-- Alt info bar -->
+        <div class="sector-info-bar">
+          <div class="sector-info-item">
+            <i class="fa-solid fa-circle-check" style="color:#1e3a5f;"></i>
+            <span>Bütün sektorlarda peşəkar məsləhət</span>
+          </div>
+          <div class="sector-info-item">
+            <i class="fa-solid fa-globe" style="color:#1e3a5f;"></i>
+            <span>Azərbaycan Respublikası</span>
+          </div>
+          <div class="sector-info-item">
+            <i class="fa-solid fa-users" style="color:#1e3a5f;"></i>
+            <span>50+ Mütəxəssis</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
 
   <!-- =========================================
-     FOOTER (eyni footer)
-  ========================================= -->
+     FOOTER
+========================================= -->
   <footer id="footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-logo" style="margin-bottom:1.25rem">
-          <img src="images/asr logo.png" alt="ASR Development Consulting Group"
-            style="height:48px;width:auto;object-fit:contain;" />
+        <div class="footer-logo">
+          <div class="footer-logo" style="margin-bottom: 1.25rem">
+            <img src="images/asr logo.png" alt="ASR Development Consulting Group"
+              style="height: 48px; width: auto; object-fit: contain" />
+          </div>
         </div>
         <p class="footer-tagline-txt">
-          Strateji həllər, dayanıqlı inkişaf. Qida təhlükəsizliyi, idarəetmə
+          Strateji həllər, dayanıqlı inkişaf. qida təhlükəsizliyi, idarəetmə
           və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.
         </p>
         <div class="footer-contact-item">
-          <i class="fa-solid fa-location-dot" style="color:#fff;position:relative;top:10px"></i>
-          <span class="footer-contact-text">Bakı, Nizami küçəsi 65,<br />AZ1010, Azərbaycan</span>
+          <i class="fa-solid fa-location-dot" style="color: rgb(255, 255, 255); position: relative; top: 10px"></i>
+          <span class="footer-contact-text">Bakı, nizami küçəsi 65,<br />AZ1010, Azərbaycan</span>
         </div>
         <div class="footer-contact-item">
-          <i class="fa-solid fa-phone" style="color:#fff"></i>
+          <i class="fa-solid fa-phone" style="color: rgb(255, 255, 255)"></i>
           <span class="footer-contact-text">+994 12 404 00 00</span>
         </div>
         <div class="footer-contact-item">
-          <i class="fa-solid fa-envelope" style="color:#fff"></i>
-          <span class="footer-contact-text" style="position:relative;bottom:3px">office@asrgroup.az</span>
+          <i class="fa-solid fa-envelope" style="color: rgb(255, 255, 255)"></i>
+
+          <span class="footer-contact-text" style="position: relative; bottom: 3px">office@asrgroup.az</span>
         </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupagency" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.facebook.com/people/ASR-Development-Consulting-Group/61589704797832/" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="mailto:office@asrgroup.az" class="social-link" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
-          <a href="https://www.youtube.com/@asrgroupagency" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/asrgroupagency?igsh=MTBuZ2FxbXA2bDJhdQ%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="https://www.facebook.com/people/ASR-Development-Consulting-Group/61589704797832/?mibextid=wwXIfr&rdid=9gkTzncQSS37AowB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CGhT3M1Lr%2F%3Fmibextid%3DwwXIfr" class="social-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="office@asrgroup.az" class="social-link" aria-label="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+          <a href="https://www.youtube.com/@asrgroupagency" class="social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
         </div>
       </div>
+
+
+
       <div>
         <div class="footer-col-title">Xidmətlər</div>
         <div class="footer-col-links">
-          <a href="xidmet-06.html">Qida Təhlükəsizliyi</a>
-          <a href="#">ISO 22000 Audit</a>
-          <a href="#">HACCP Tətbiqi</a>
-          <a href="xidmet-03.html">Strateji İdarəetmə</a>
-          <a href="#">HR Audit</a>
-          <a href="#">Hüquqi Ekspertiza</a>
+          <a href="#xidmetler-detail">Qida Təhlükəsizliyi</a>
+          <a href="#xidmetler-detail">ISO 22000 Audit</a>
+          <a href="#xidmetler-detail">HACCP Tətbiqi</a>
+          <a href="#xidmetler-detail">Strateji İdarəetmə</a>
+          <a href="#xidmetler-detail">HR Audit</a>
+          <a href="#xidmetler-detail">Hüquqi Ekspertiza</a>
         </div>
-        <a href="https://wa.me/994504040000">
-          <i class="fa-brands fa-whatsapp whatsapp-icon" style="color:rgb(0,255,37);cursor:pointer"></i>
-        </a>
+        <a href="https://wa.me/994504040000"><i class="fa-brands fa-whatsapp whatsapp-icon"
+            style="color: rgb(0, 255, 37); cursor: pointer"></i></a>
       </div>
+
       <div>
         <div class="footer-col-title">Şirkət</div>
         <div class="footer-col-links">
-          <a href="haqqimizda.html">Haqqımızda</a>
-          <a href="haqqimizda.html">Tariximiz</a>
-          <a href="haqqimizda.html#sertifikatlar">Sertifikatlar</a>
-          <a href="index.html#tecrubekm">Layihələr</a>
-          <a href="media.html">Qalereya</a>
-          <a href="index.html#bilik-merkezi">Bloq</a>
+          <a href="#haqqimizda">Haqqımızda</a>
+          <a href="#haqqimizda">Tariximiz</a>
+          <a href="#haqqimizda">Sertifikatlar</a>
+          <a href="#tecrubekm">Layihələr</a>
+          <a href="#qalereya">Qalereya</a>
+          <a href="#bilik-merkezi">Bloq</a>
         </div>
       </div>
+
       <div>
         <div class="footer-col-title">Ekspert Hovuzu</div>
         <div class="footer-expert-form">
           <h4>Komandamıza Qoşulun</h4>
-          <p>Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı göndərin.</p>
+          <p>
+            Ekspert hovuzumuza daxil olmaq üçün əlaqə məlumatlarınızı
+            göndərin.
+          </p>
           <input type="text" placeholder="Ad Soyad" />
-          <input type="email" placeholder="E-mail ünvanınız" style="margin-top:0" />
-          <input type="text" placeholder="İxtisas sahəniz" style="margin-top:8px" />
-          <button onclick="this.textContent='✓ Göndərildi!'">Müraciət Et →</button>
+          <input type="email" placeholder="E-mail ünvanınız" style="margin-top: 0" />
+          <input type="text" placeholder="İxtisas sahəniz" style="margin-top: 8px" />
+          <button onclick="this.textContent = '✓ Göndərildi!'">
+            Müraciət Et →
+          </button>
         </div>
       </div>
     </div>
@@ -2054,119 +717,39 @@
       <span class="trust-badge">AQTA Tərəfdaşı</span>
       <span class="trust-badge">BRCGS İcazəli</span>
     </div>
-    <div class="footer-bottom" style="margin:auto">
-      <span class="footer-copy" style="margin:auto">
-        © <span id="footer-year"></span> ASR Development Consulting Group. Bütün hüquqlar qorunur.
+
+    <div class="footer-bottom" style="margin: auto">
+      <span class="footer-copy" style="margin: auto">© <span id="footer-year"></span> ASR Development Consulting Group.
+        Bütün hüquqlar qorunur.
       </span>
     </div>
-    <p style="text-align:center;font-size:12px;font-weight:600;color:#aaacac;position:relative;bottom:20px;">
+    <p style="
+          text-align: center;
+          font-size: 12px;
+          font-weight: 600;
+          color: #aaacac;
+          position: relative;
+          bottom: 20px;
+        ">
       Designed By Elmaddin
     </p>
   </footer>
-
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+  <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
   <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
-  <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
   <script src="theme-toggle.js"></script>
   <script src="app.js"></script>
   <script type="text/javascript" src="darkmode.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script>
-    /* ============================================
-       SECTORS DETAIL PAGE — JavaScript
-    ============================================ */
 
-    // Footer year
-    document.getElementById('footer-year').textContent = new Date().getFullYear();
 
-    /* ---------- Accordion Toggle ---------- */
-    function toggleCard(headerEl) {
-      const card = headerEl.closest('.sector-detail-card');
-      const isOpen = card.classList.contains('open');
 
-      // Close all
-      document.querySelectorAll('.sector-detail-card.open').forEach(function(c) {
-        c.classList.remove('open');
-      });
-
-      // Open clicked if it was closed
-      if (!isOpen) {
-        card.classList.add('open');
-      }
-    }
-
-    /* ---------- Sidebar Navigation ---------- */
-    function initSidebarNav() {
-      const links = document.querySelectorAll('.sidebar-link');
-
-      links.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetCard = document.querySelector(targetId);
-
-          if (!targetCard) return;
-
-          // Set active
-          links.forEach(function(l) { l.classList.remove('active'); });
-          this.classList.add('active');
-
-          // Open the card accordion
-          document.querySelectorAll('.sector-detail-card.open').forEach(function(c) {
-            c.classList.remove('open');
-          });
-          targetCard.classList.add('open');
-
-          // Scroll
-          const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 80;
-          const top = targetCard.getBoundingClientRect().top + window.scrollY - navH - 24;
-          window.scrollTo({ top: top, behavior: 'smooth' });
-        });
-      });
-    }
-
-    /* ---------- ScrollSpy ---------- */
-    function initScrollSpy() {
-      const links = document.querySelectorAll('.sidebar-link');
-      const cards = document.querySelectorAll('.sector-detail-card');
-      const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-h')) || 80;
-      let ticking = false;
-
-      function update() {
-        const scrollPos = window.scrollY + navH + 120;
-        cards.forEach(function(card) {
-          const top = card.offsetTop;
-          const bottom = top + card.offsetHeight;
-          const id = card.getAttribute('id');
-          if (scrollPos >= top && scrollPos < bottom) {
-            links.forEach(function(l) {
-              l.classList.remove('active');
-              if (l.getAttribute('href') === '#' + id) l.classList.add('active');
-            });
-          }
-        });
-        ticking = false;
-      }
-
-      window.addEventListener('scroll', function() {
-        if (!ticking) {
-          window.requestAnimationFrame(update);
-          ticking = true;
-        }
-      });
-    }
-
-    // Open first card by default
-    document.addEventListener('DOMContentLoaded', function() {
-      const firstCard = document.querySelector('.sector-detail-card');
-      if (firstCard) firstCard.classList.add('open');
-
-      initSidebarNav();
-      initScrollSpy();
-    });
-  </script>
 </body>
+
 </html>
