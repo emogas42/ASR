@@ -89,7 +89,7 @@
   }
   .sector-pill:hover {
     border-color: var(--navy);
-    color: var(--navy);
+    color: var(--gold);
     transform: translateX(4px);
   }
   .sector-pill > i {
