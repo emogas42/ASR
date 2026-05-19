@@ -2014,7 +2014,7 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 /* Yenilənmiş Slayd Oxları Dizaynı */
 .exp-arrow {
   position: absolute;
-  top: 58.3%; /* Kartların mərkəzinə daha yaxın */
+  top: 55.3%; /* Kartların mərkəzinə daha yaxın */
   transform: translateY(-50%);
   z-index: 25;
   width: 54px;
@@ -3989,4 +3989,1243 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
     width: 16px;
     height: 16px;
   }
+}
+
+/* ============================================================
+   SLIDE-3: Bizi Seçənlər — Responsive 9 Kart Grid
+   Kart nisbəti: en/uzunluq ≈ 1/4 (aspect-ratio: 1/4)
+   ============================================================ */
+
+/* ── Overlay tweak ── */
+.bsecenler-overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(5, 14, 28, 0.88) 0%,
+    rgba(5, 14, 28, 0.72) 45%,
+    rgba(5, 14, 28, 0.45) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+
+/* ── Master Layout: 2 sütun ── */
+.bsecenler-layout {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 5% 120px;
+  height: 100%;
+}
+
+/* ── Sol mətn sütunu ── */
+.bsecenler-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bsecenler-left .slide-tag,
+.bsecenler-left .slide-title,
+.bsecenler-left .slide-desc,
+.bsecenler-left .slide-btns {
+  /* Animations inherited from existing .slide-content-anim */
+}
+
+/* Stats row */
+.bsecenler-stats {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+}
+.bsecenler-stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bsstat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+.bsstat-num sup {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.bsstat-lbl {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Sağ kart grid ── */
+.bsecenler-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: visible;
+}
+
+.bs-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  aspect-ratio: 1/4;       /* Ümumi grid də 1:4 nisbətində */
+  margin: 0 auto;
+}
+
+/* ── Individual Kart ── */
+.bs-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 146, 42, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  overflow: hidden;
+  aspect-ratio: 1 / 4;     /* En : Uzunluq = 1 : 4 */
+  min-height: 0;           /* Grid overflow fix */
+}
+
+.bs-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 146, 42, 0.08) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.bs-card:hover::before {
+  opacity: 1;
+}
+
+.bs-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(200, 146, 42, 0.45);
+  box-shadow: 0 12px 40px rgba(200, 146, 42, 0.18),
+              0 0 60px rgba(200, 146, 42, 0.06);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Featured (mərkəz) kart */
+.bs-card--featured {
+  border-color: rgba(200, 146, 42, 0.4);
+  background: rgba(200, 146, 42, 0.1);
+}
+.bs-card--featured::before {
+  opacity: 0.5;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 146, 42, 0.15) 0%,
+    transparent 50%
+  );
+}
+.bs-card--featured:hover {
+  border-color: rgba(200, 146, 42, 0.6);
+  box-shadow: 0 16px 48px rgba(200, 146, 42, 0.28),
+              0 0 80px rgba(200, 146, 42, 0.1);
+}
+
+/* Kart içərisindəki elementlər */
+.bs-card-visual {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bs-card-visual svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bs-card-name {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.bs-card-text {
+  font-size: 0.55rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── RESPONSIVE: 1200px və aşağısı ── */
+@media (max-width: 1200px) {
+  .bsecenler-layout {
+    gap: 2rem;
+    padding: 90px 4% 110px;
+  }
+  .bs-cards-grid {
+    max-width: 440px;
+    gap: 10px;
+  }
+  .bs-card {
+    padding: 12px 8px;
+    border-radius: 10px;
+  }
+  .bs-card-visual {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+  }
+  .bs-card-name {
+    font-size: 0.6rem;
+  }
+  .bs-card-text {
+    font-size: 0.5rem;
+    line-height: 1.5;
+  }
+}
+
+/* ── RESPONSIVE: 992px və aşağısı — Layout dəyişir ── */
+@media (max-width: 992px) {
+  .bsecenler-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+    padding: 80px 5% 100px;
+    overflow-y: auto;
+  }
+
+  .bsecenler-left {
+    text-align: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .bsecenler-left .slide-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bsecenler-stats {
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .bsecenler-stats li {
+    align-items: center;
+  }
+  .slide-btns {
+    justify-content: center;
+  }
+
+  .bsecenler-right {
+    align-items: flex-start;
+  }
+
+  /* Tablet: kartlar daha kompakt */
+  .bs-cards-grid {
+    max-width: 360px;
+    max-height: none;
+    aspect-ratio: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+  }
+
+  .bs-card {
+    aspect-ratio: 1 / 3.5;   /* Bir az daha qısa */
+    padding: 12px 8px;
+  }
+}
+
+/* ── RESPONSIVE: 768px və aşağısı — Kartlar yenidən tənzimlənir ── */
+@media (max-width: 768px) {
+  .bsecenler-layout {
+    position: relative;top: 22%;
+    padding: 70px 4% 90px;
+    gap: 1.5rem;
+  }
+
+  .bs-cards-grid {
+    max-width: 320px;
+    gap: 8px;
+  }
+
+  .bs-card {
+    aspect-ratio: 1 / 3.2;
+    padding: 10px 6px;
+    border-radius: 8px;
+    height: 150px;
+    width: 100%;
+  }
+  .bs-card-visual {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 6px;
+  }
+  .bs-card-name {
+    font-size: 0.55rem;
+    margin-bottom: 6px;
+  }
+  .bs-card-text {
+    font-size: 0.45rem;
+    line-height: 1.45;
+  }
+
+  .bsecenler-stats {
+    gap: 1.5rem;
+  }
+  .bsstat-num {
+    font-size: 1.6rem;
+  }
+  .bsstat-lbl {
+    font-size: 0.6rem;
+  }
+}
+
+/* ── RESPONSIVE: 480px və aşağısı — Mobil optimizasiya ── */
+@media (max-width: 480px) {
+  .bsecenler-layout {
+    padding: 60px 3% 80px;
+    gap: 1.25rem;
+  }
+
+  /* Mobil: kartlar 3x3 qalır, amma daha kompakt */
+  .bs-cards-grid {
+    max-width: 100%;
+    gap: 6px;
+  }
+
+  .bs-card {
+    aspect-ratio: 1 / 2.8;   /* Mobildə daha qısa */
+    padding: 8px 5px;
+    border-radius: 7px;
+  }
+  .bs-card-visual {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 5px;
+  }
+  .bs-card-name {
+    font-size: 0.5rem;
+    margin-bottom: 4px;
+  }
+  .bs-card-text {
+    font-size: 0.4rem;
+    line-height: 1.4;
+  }
+
+  .bsecenler-stats {
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .bsstat-num {
+    font-size: 1.4rem;
+  }
+  .bsstat-num sup {
+    font-size: 0.75rem;
+  }
+  .bsstat-lbl {
+    font-size: 0.55rem;
+  }
+
+  .slide-btns {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .slide-btns .btn-primary,
+  .slide-btns .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ── RESPONSIVE: 360px (kiçik mobil) ── */
+@media (max-width: 360px) {
+  .bs-card {
+    aspect-ratio: 1 / 2.5;
+    padding: 6px 4px;
+  }
+  .bs-card-visual {
+    width: 18px;
+    height: 18px;
+  }
+  .bs-card-name {
+    font-size: 0.45rem;
+  }
+  .bs-card-text {
+    font-size: 0.35rem;
+    line-height: 1.35;
+  }
+}
+#hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  z-index: 9;
+}
+.dark-mode #hero { background: #071426; }
+
+.carousel-root {
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Track & Slides ── */
+.slides-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.85s cubic-bezier(0.77, 0, 0.18, 1);
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.68);
+  transform: scale(1.06);
+  transition: transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.slide.active .slide-img {
+  transform: scale(1);
+}
+
+/* Single clean gradient overlay — always dark enough for text */
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    295deg,
+    rgba(5, 14, 28, 0.32) 0%,
+    rgba(5, 14, 28, 0.25) 50%,
+    rgba(5, 14, 28, 0.1) 100%
+  );
+  
+  z-index: 1;
+}
+.dark-mode .slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(5, 14, 28, 0.82) 0%,
+    rgba(5, 14, 28, 0.55) 50%,
+    rgba(5, 14, 28, 0) 100%
+  );
+  z-index: 1;
+}
+
+/* ── Slide Content ── */
+.slide-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6% 100px;
+  max-width: 680px;
+  z-index: 5;
+}
+
+.slide-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 18px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s 0.25s ease, transform 0.55s 0.25s ease;
+}
+.slide-tag::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1.5px;
+  background: var(--gold-bright);
+  flex-shrink: 0;
+}
+
+.slide-title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s 0.4s ease, transform 0.65s 0.4s ease;
+  letter-spacing: -0.01em;
+}
+.slide-title span {
+  color: var(--gold-bright);
+}
+
+.slide-desc {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 460px;
+  margin-bottom: 36px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s 0.58s ease, transform 0.6s 0.58s ease;
+}
+
+.slide-btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s 0.72s ease, transform 0.55s 0.72s ease;
+}
+
+/* Trigger animations on active slide */
+.slide.active .slide-tag,
+.slide.active .slide-title,
+.slide.active .slide-desc,
+.slide.active .slide-btns {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Carousel CTA Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: #07111e;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--gold-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 146, 42, 0.35);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s, gap 0.2s;
+}
+.btn-ghost:hover {
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+  gap: 12px;
+}
+
+/* Keep .btn-secondary for use elsewhere */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+.dark-mode .btn-secondary { color: rgba(245, 240, 232, 0.85); border-color: rgba(245, 240, 232, 0.3); }
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-1px); }
+
+/* ── Bottom Controls Bar ── */
+.carousel-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5%;
+  background: linear-gradient(to top, rgba(5, 14, 28, 0.72) 0%, transparent 100%);
+}
+
+/* Slide counter */
+.slide-counter {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  min-width: 52px;
+}
+.slide-counter span:first-child {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1;
+}
+.counter-sep {
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 2px;
+  font-size: 13px;
+}
+
+/* Dot navigation — centered */
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.35s ease, border-radius 0.35s ease;
+  flex-shrink: 0;
+}
+.nav-dot.active {
+  background: var(--gold-bright);
+  width: 28px;
+  border-radius: 4px;
+}
+.nav-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Arrow buttons — grouped right */
+.carousel-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 52px;
+  justify-content: flex-end;
+}
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+.arrow-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: scale(1.08);
+}
+.arrow-btn svg {
+  pointer-events: none;
+}
+
+/* Remove old positional arrow classes (no longer needed) */
+.arrow-prev, .arrow-next { position: static; transform: none; }
+
+/* ── Progress line ── */
+.progress-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gold-bright);
+  z-index: 25;
+  transition: width 0.1s linear;
+}
+
+/* Stats bar (kept for other pages) */
+.stats-bar {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  z-index: 90;
+  border-top: 1px solid var(--border);
+}
+.dark-mode .stats-bar { border-top-color: rgba(201,168,76,0.15); }
+.stat-item {
+  flex: 1;
+  padding: 18px 10%;
+  border-right: 1px solid var(--border);
+  background: #ffffff;
+  z-index: 99;
+}
+.dark-mode .stat-item {
+  background: rgba(7,20,38,0.82);
+  border-right-color: rgba(201,168,76,0.1);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num { font-size: 28px; font-weight: 800; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 11px; color: #64594e; letter-spacing: 0.06em; margin-top: 4px; }
+.dark-mode .stat-label { color: rgba(245,240,232,0.5); }
+ 
+ 
+/* ── Overlay tweak ── */
+.bsecenler-overlay {
+  background: linear-gradient(
+    105deg,
+    rgba(5, 14, 28, 0.88) 0%,
+    rgba(5, 14, 28, 0.72) 45%,
+    rgba(5, 14, 28, 0.45) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+
+/* ── Master Layout: 2 sütun ── */
+.bsecenler-layout {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 5% 120px;
+  height: 100%;
+}
+
+/* ── Sol mətn sütunu ── */
+.bsecenler-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bsecenler-left .slide-tag,
+.bsecenler-left .slide-title,
+.bsecenler-left .slide-desc,
+.bsecenler-left .slide-btns {
+  /* Animations inherited from existing .slide-content-anim */
+}
+
+/* Stats row */
+.bsecenler-stats {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+  padding: 0;
+}
+.bsecenler-stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.bsstat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+  line-height: 1;
+}
+.bsstat-num sup {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.bsstat-lbl {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ── Sağ kart grid ── */
+.bsecenler-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Marquee Wrapper ── */
+.bs-marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bs-marquee-row {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.bs-marquee-track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  will-change: transform;
+}
+
+@keyframes marquee-ltr {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-rtl {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.bs-marquee-ltr .bs-marquee-track {
+  animation: marquee-ltr 22s linear infinite;
+}
+.bs-marquee-rtl .bs-marquee-track {
+  animation: marquee-rtl 26s linear infinite;
+}
+.bs-marquee-slow .bs-marquee-track {
+  animation-duration: 32s;
+}
+
+.bs-marquee-row:hover .bs-marquee-track {
+  animation-play-state: paused;
+}
+
+.bs-ticker-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 146, 42, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  transition: border-color 0.3s, background 0.3s;
+  flex-shrink: 0;
+  min-width: 160px;
+}
+.bs-ticker-card:hover {
+  border-color: rgba(200, 146, 42, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.bs-ticker-logo-box {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bs-ticker-logo-box svg,
+.bs-ticker-logo-box img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.bs-ticker-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.bs-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  aspect-ratio: 1/4;       /* Ümumi grid də 1:4 nisbətində */
+  margin: 0 auto;
+}
+
+/* ── Individual Kart ── */
+.bs-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 146, 42, 0.18);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+  overflow: hidden;
+  aspect-ratio: 1 / 4;     /* En : Uzunluq = 1 : 4 */
+  min-height: 0;           /* Grid overflow fix */
+}
+
+.bs-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 146, 42, 0.08) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.bs-card:hover::before {
+  opacity: 1;
+}
+
+.bs-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: rgba(200, 146, 42, 0.45);
+  box-shadow: 0 12px 40px rgba(200, 146, 42, 0.18),
+              0 0 60px rgba(200, 146, 42, 0.06);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Featured (mərkəz) kart */
+.bs-card--featured {
+  border-color: rgba(200, 146, 42, 0.4);
+  background: rgba(200, 146, 42, 0.1);
+}
+.bs-card--featured::before {
+  opacity: 0.5;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 146, 42, 0.15) 0%,
+    transparent 50%
+  );
+}
+.bs-card--featured:hover {
+  border-color: rgba(200, 146, 42, 0.6);
+  box-shadow: 0 16px 48px rgba(200, 146, 42, 0.28),
+              0 0 80px rgba(200, 146, 42, 0.1);
+}
+
+/* Kart içərisindəki elementlər */
+.bs-card-visual {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bs-card-visual svg {
+  width: 100%;
+  height: 100%;
+}
+
+.bs-card-name {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.bs-card-text {
+  font-size: 0.55rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO — TAM RESPONSİVE BREAKPOINT-LƏR
+═══════════════════════════════════════════════════ */
+
+/* ── 1200px ── */
+@media (max-width: 1200px) {
+  .bsecenler-layout {
+    gap: 2rem;
+    padding: 90px 4% 110px;
+  }
+  .bs-ticker-card { min-width: 150px; padding: 9px 14px 9px 10px; }
+  .bs-ticker-logo-box,
+  .bs-ticker-logo-box svg,
+  .bs-ticker-logo-box img { width: 40px; height: 40px; }
+  .bs-ticker-name { font-size: 0.74rem; }
+}
+
+/* ── 992px — layout şaquli olur ── */
+@media (max-width: 992px) {
+  /* Hero ümumi */
+  .carousel-root { height: auto; min-height: 100svh; }
+  .slide         { height: 100svh; min-height: 560px; }
+
+  /* Bsecenler layout: tək sütun */
+  .bsecenler-layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 100px 6% 110px;
+    align-items: start;
+    height: auto;
+    min-height: 100svh;
+  }
+  .bsecenler-left {
+    text-align: center;
+    align-items: center;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .bsecenler-left .slide-desc {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+  }
+  .bsecenler-stats {
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .bsecenler-stats li { align-items: center; }
+  .slide-btns { justify-content: center; }
+
+  .bsecenler-right {
+    width: 100%;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  .bs-marquee-wrapper { gap: 12px; }
+
+  /* Marquee kartlar tablet üçün */
+  .bs-ticker-card  { min-width: 140px; padding: 8px 14px 8px 10px; gap: 10px; }
+  .bs-ticker-logo-box,
+  .bs-ticker-logo-box svg,
+  .bs-ticker-logo-box img { width: 38px; height: 38px; }
+  .bs-ticker-name  { font-size: 0.72rem; }
+}
+
+/* ── 768px ── */
+@media (max-width: 768px) {
+  /* Ümumi hero/slide */
+  .carousel-root  { height: auto; min-height: 100svh; }
+  .slide          { height: auto; min-height: 100svh; }
+  .slides-track   { top: 0; }
+  .arrow-btn      { display: none; }
+
+  /* Slide content */
+  .slide-content  { padding: 0 5% 90px; max-width: 100%; }
+  .slide-title    { font-size: clamp(1.9rem, 7vw, 2.8rem); }
+  .slide-desc     { font-size: 14px; max-width: 100%; }
+
+  /* Bsecenler */
+  .bsecenler-layout {
+    padding: 85px 5% 95px;
+    gap: 1.5rem;
+  }
+  .bsecenler-left  { max-width: 100%; }
+  .slide-tag       { font-size: 9.5px; }
+  .bsecenler-stats { gap: 1.75rem; }
+  .bsstat-num      { font-size: 1.7rem; }
+  .bsstat-lbl      { font-size: 0.6rem; }
+
+  /* Ticker kartlar */
+  .bs-ticker-card  { min-width: 130px; padding: 8px 12px 8px 8px; gap: 9px; border-radius: 10px; }
+  .bs-ticker-logo-box,
+  .bs-ticker-logo-box svg,
+  .bs-ticker-logo-box img { width: 34px; height: 34px; }
+  .bs-ticker-name  { font-size: 0.69rem; }
+  .bs-marquee-wrapper { gap: 10px; }
+
+  /* Buttons */
+  .slide-btns       { flex-wrap: wrap; gap: 12px; }
+  .btn-primary      { font-size: 11px; padding: 12px 20px; }
+}
+
+/* ── 600px ── */
+@media (max-width: 600px) {
+  .bsecenler-layout {
+    padding: 80px 4% 90px;
+    gap: 1.25rem;
+  }
+  .slide-title  { font-size: clamp(1.7rem, 8vw, 2.4rem); }
+  .slide-desc   { font-size: 13.5px; line-height: 1.65; margin-bottom: 28px; }
+
+  .bsecenler-stats { gap: 1.5rem; margin: 1.25rem 0 1.75rem; }
+  .bsstat-num  { font-size: 1.5rem; }
+
+  .bs-ticker-card  { min-width: 120px; padding: 7px 10px 7px 8px; gap: 8px; border-radius: 9px; }
+  .bs-ticker-logo-box,
+  .bs-ticker-logo-box svg,
+  .bs-ticker-logo-box img { width: 30px; height: 30px; border-radius: 7px; }
+  .bs-ticker-name  { font-size: 0.65rem; }
+  .bs-marquee-wrapper { gap: 9px; }
+  .bs-marquee-track { gap: 10px; }
+}
+
+/* ── 480px — kiçik mobil ── */
+@media (max-width: 480px) {
+  .bsecenler-layout {
+    padding: 75px 4% 85px;
+    gap: 1rem;
+  }
+  .slide-content  { padding: 0 4% 80px; }
+  .slide-title    { font-size: clamp(1.55rem, 8.5vw, 2.1rem); margin-bottom: 14px; }
+  .slide-tag      { font-size: 9px; letter-spacing: 0.18em; margin-bottom: 14px; }
+  .slide-desc     { font-size: 13px; margin-bottom: 22px; }
+
+  .bsecenler-stats { gap: 1.25rem; margin: 1rem 0 1.5rem; }
+  .bsstat-num      { font-size: 1.4rem; }
+  .bsstat-num sup  { font-size: 0.7rem; }
+  .bsstat-lbl      { font-size: 0.58rem; }
+
+  /* Buttons tam en */
+  .slide-btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+  .slide-btns .btn-primary,
+  .slide-btns .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .btn-primary  { padding: 13px 18px; font-size: 11px; }
+
+  /* Ticker kiçilir */
+  .bs-ticker-card  { min-width: 110px; padding: 6px 10px 6px 7px; gap: 7px; border-radius: 8px; }
+  .bs-ticker-logo-box,
+  .bs-ticker-logo-box svg,
+  .bs-ticker-logo-box img { width: 28px; height: 28px; border-radius: 6px; }
+  .bs-ticker-name  { font-size: 0.62rem; }
+  .bs-marquee-wrapper { gap: 8px; }
+  .bs-marquee-track { gap: 8px; }
+
+  /* 3 sətir əvəzinə 2 sətir göstər — overflow saxla */
+  .bs-marquee-row:last-child { display: none; }
+
+  /* Carousel controls */
+  .carousel-controls { padding: 14px 4%; }
+  .slide-counter span:first-child { font-size: 18px; }
+}
+
+/* ── 360px — ən kiçik mobil ── */
+@media (max-width: 360px) {
+  .bsecenler-layout { padding: 70px 3.5% 80px; }
+  .slide-title  { font-size: 1.45rem; }
+  .slide-desc   { font-size: 12.5px; }
+
+  .bs-ticker-card  { min-width: 100px; padding: 6px 8px 6px 6px; gap: 6px; }
+  .bs-ticker-logo-box,
+  .bs-ticker-logo-box svg,
+  .bs-ticker-logo-box img { width: 26px; height: 26px; border-radius: 5px; }
+  .bs-ticker-name  { font-size: 0.58rem; }
+
+  .bsstat-num  { font-size: 1.3rem; }
+  .bsstat-lbl  { font-size: 0.55rem; }
 }
