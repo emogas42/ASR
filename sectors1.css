@@ -5,6 +5,15 @@
 /* =========================================
    HERO SECTION
    ========================================= */
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .hero-section {
   position: relative;
   min-height: 420px;
@@ -388,7 +397,8 @@
 
 /* === CONTENT - PADDING DÜZƏLİŞİ === */
 .accordion-content {
-  padding: 24px; /* Hər tərəfdən bərabər padding */
+  padding: 24px;
+  /* Hər tərəfdən bərabər padding */
 }
 
 /* === SERVICE TEXT - BOŞLUQ DÜZƏLİŞLƏRİ === */
@@ -408,7 +418,8 @@
 .service-text-content ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 24px 0; /* Aşağıda 24px boşluq */
+  margin: 0 0 24px 0;
+  /* Aşağıda 24px boşluq */
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -725,7 +736,8 @@
   }
 
   .accordion-content {
-    padding: 20px; /* Mobildə azaldılmış */
+    padding: 20px;
+    /* Mobildə azaldılmış */
   }
 
   .service-text-content h4 {
@@ -871,6 +883,7 @@
     font-size: 13px;
   }
 }
+
 /* =========================================
    SECTOR ACCORDION - UNIKAL CLASSLAR
    style.css toqquşmasının qarşısı alındı
@@ -1191,7 +1204,8 @@
 .expert-swiper .expert-card-small {
   width: 100%;
   max-width: 380px;
-  height: 400px; /* DESKTOP 400px */
+  height: 400px;
+  /* DESKTOP 400px */
   background: var(--bg-card, #f8f9fa);
   border-radius: 16px;
   overflow: hidden;
@@ -1406,12 +1420,14 @@
   }
 
   .expert-swiper .expert-card-small {
-    height: 430px; /* MOBIL 430px (+30px) */
+    height: 430px;
+    /* MOBIL 430px (+30px) */
     max-width: 100%;
   }
 
   .expert-swiper .expert-image-wrapper {
-    height: 300px; /* MOBIL 300px (+30px) */
+    height: 300px;
+    /* MOBIL 300px (+30px) */
   }
 
   .expert-swiper .expert-info {
