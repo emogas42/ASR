@@ -1,4 +1,3 @@
-
     /* ── Page-level overrides & unique sections ───────────── */
  
     /* HERO — deep navy/teal gradient for policy/legal theme */
@@ -543,14 +542,19 @@
 }
 @media (max-width: 640px) {
   .exp-card {
-    flex: 0 0 85%;
-
+    flex: 0 0 100%;
+    min-width: 100%;
   }
   .experts-track-outer {
-    margin: 0 48px;
+    margin: 0 16px;
   }
-  .exp-prev { left: 4px; }
-  .exp-next { right: 4px; }
+  .experts-track {
+    gap: 0;
+  }
+  .exp-prev,
+  .exp-next {
+    display: none;
+  }
   .exp-card-img-wrap { height: 200px; }
 }
 
@@ -638,6 +642,9 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 @media (max-width: 768px) {
   .btn-premium-diag {
     display: none;
+  }
+  .exp-card:nth-child(2){
+    margin: 0% 7%;
   }
   .mobile-nav .btn-premium-diag {
     display: inline-flex;
@@ -740,4 +747,3 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 .fade-in-delay-2 { transition-delay: 0.2s; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
-
