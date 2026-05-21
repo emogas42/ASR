@@ -278,7 +278,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  background-color: red;
+  
 }
 
 /* Şaquli bağlayıcı xətt */
@@ -624,6 +624,9 @@ body.dark-mode .process-step:hover   .process-step-icon i {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+.cta-buttons .btn-primary svg{
+  
 }
 
 .process-section .section-inner .section-header .section-eyebrow {
