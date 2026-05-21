@@ -18,6 +18,16 @@
     text-align: center;
     margin-bottom: 56px;
   }
+  
+  .sectors-col:nth-child(2){
+    margin-top: 8%;
+  }
+  @media(max-width:768px){
+.sectors-col:nth-child(2){
+  margin-top: 0%;
+}
+
+  }
   .section-eyebrow {
     display: inline-flex;
     align-items: center;
