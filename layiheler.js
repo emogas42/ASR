@@ -55,6 +55,53 @@
         src: 'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=1400&q=85&auto=format&fit=crop',
         alt: 'Sənəd hazırlığı'
       }
+    ],
+
+    project3: [
+      {
+        src: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Strateji planlaşdırma sessiyası'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Analitik panel'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Komanda görüşü'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Prezentasiya'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Sənəd hazırlığı'
+      }
+    ]
+    ,
+
+    project4: [
+      {
+        src: 'https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Strateji planlaşdırma sessiyası'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Analitik panel'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Komanda görüşü'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Prezentasiya'
+      },
+      {
+        src: 'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=1400&q=85&auto=format&fit=crop',
+        alt: 'Sənəd hazırlığı'
+      }
     ]
     /* Yeni layihə əlavə etmək üçün:
     project3: [
@@ -321,3 +368,17 @@
   }
  
 })();
+// Səhifədəki BÜTÜN qalereyaları tapır
+const allGalleries = document.querySelectorAll('.layihe-gallery');
+
+allGalleries.forEach(gallery => {
+  gallery.addEventListener('click', function() {
+    // Kliklənən kartın xüsusi açarını götürür (örnək: project1, project3)
+    const projectKey = this.getAttribute('data-project-key');
+    
+    // Sizin mövcud lightbox/böyütmə funksiyanız bura gəlməlidir
+    // Örnək: openMyLightbox(projectKey);
+    
+    console.log(projectKey + " qalereyası işə düşdü!");
+  });
+});

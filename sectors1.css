@@ -905,6 +905,10 @@ body {
   transition: all 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
+.sector-service-link{
+  color: var(--gold);
+  text-align: right;
+}
 
 .sector-accordion-item:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
@@ -1064,13 +1068,14 @@ body {
 /* === ƏTRAFLI BAX DÜYMƏSİ === */
 .sector-service-btn {
   display: inline-flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   gap: 10px;
   background: var(--gold, #C89B3C);
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
+  
   text-decoration: none;
   padding: 14px 28px;
   border-radius: 10px;
@@ -1187,7 +1192,7 @@ body {
   width: 100%;
   padding: 20px 0 50px 0;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .expert-swiper .swiper-wrapper {
@@ -1204,7 +1209,7 @@ body {
 .expert-swiper .expert-card-small {
   width: 100%;
   max-width: 380px;
-  height: 400px;
+  height: 430px;
   /* DESKTOP 400px */
   background: var(--bg-card, #f8f9fa);
   border-radius: 16px;
@@ -1241,14 +1246,14 @@ body {
   transform: scale(1.05);
 }
 
-.expert-swiper .expert-image-overlay {
+/* .expert-swiper .expert-image-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 60%;
   background: linear-gradient(to top, rgba(26, 54, 93, 0.85), transparent);
-}
+} */
 
 .expert-swiper .expert-social {
   position: absolute;
@@ -1309,14 +1314,14 @@ body {
   margin-bottom: 4px;
 }
 
-.expert-swiper .expert-role {
+.exp-card .expert-role {
   font-size: 13px;
-  color: var(--gold, #C89B3C);
+  color: var(--accent);
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.expert-swiper .expert-bio {
+.exp-card .expert-bio {
   font-size: 13px;
   color: var(--text-muted, #6b7280);
   line-height: 1.6;
@@ -1327,20 +1332,20 @@ body {
   overflow: hidden;
 }
 
-.expert-swiper .experience-tags {
+.exp-card .experience-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-top: auto;
 }
 
-.expert-swiper .experience-tag {
+.exp-card .experience-tag {
   background: var(--bg-light, #f8f9fa);
-  border: 1px solid var(--border, #e5e7eb);
+  border: 1px solid rgb(10, 106, 15);
   padding: 4px 10px;
   border-radius: 9999px;
   font-size: 11px;
-  color: var(--text-muted, #6b7280);
+  color: rgb(10, 106, 15);
   font-weight: 500;
 }
 
