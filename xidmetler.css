@@ -1883,7 +1883,7 @@ body.dark-mode .social-link {
 /* --- AUDIT SECTION STYLES --- */
 .audit-section {
     padding: 100px 0;
-    background: var(--bg);
+    background: var(--nav-bg);
 }
 
 /* Grid Sistemi */
@@ -3089,7 +3089,9 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
       position: relative;
       left: 10%;
   }
-
+/* .dark-mode .exp-card:hover .exp-cert-badge{
+  background-color: red;
+} */
 
 }
 /* ── CTA SECTION ────────────────────────────────────────────── */

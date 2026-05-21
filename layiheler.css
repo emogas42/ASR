@@ -1,0 +1,748 @@
+/* ============================================================
+   LAYIHƏLƏR SECTION — ASR Development Consulting Group
+   layiheler.css
+   ============================================================ */
+
+/* ── Section Layout ─────────────────────────────────────────── */
+.layiheler-section {
+  padding: 100px 0 120px;
+  background: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.layiheler-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.layiheler-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.layiheler-header .section-eyebrow {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.layiheler-header .section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.layiheler-header .section-desc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Layihə Card ─────────────────────────────────────────────── */
+.layihe-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 56px;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+
+.layihe-card:last-child {
+  margin-bottom: 0;
+}
+
+.layihe-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-hover);
+}
+
+/* ── Gallery Grid ────────────────────────────────────────────── */
+.layihe-gallery {
+  display: grid;
+  grid-template-columns: 1.72fr repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 3px;
+  height: 420px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.layihe-gallery-item {
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.layihe-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.layihe-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Main (big) image spans 2 rows */
+.layihe-gallery-item--main {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* "More" overlay item */
+.layihe-gallery-item--more {
+  position: relative;
+}
+
+.gallery-more-label {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 31, 58, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.dark-mode .gallery-more-label {
+  background: rgba(0, 0, 0, 0.68);
+}
+
+.gallery-more-label i {
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+.layihe-gallery-item--more:hover .gallery-more-label {
+  background: rgba(200, 146, 42, 0.78);
+}
+
+/* Gallery keyboard focus */
+.layihe-gallery:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ── Info Hissəsi ─────────────────────────────────────────────── */
+.layihe-info {
+  padding: 36px 40px 0;
+}
+
+/* Meta row */
+.layihe-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.layihe-index {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.layihe-sector {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(200, 146, 42, 0.1);
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(200, 146, 42, 0.2);
+}
+
+.dark-mode .layihe-sector {
+  background: rgba(212, 160, 64, 0.12);
+  border-color: rgba(212, 160, 64, 0.22);
+}
+
+.layihe-year {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-left: auto;
+}
+
+/* Title */
+.layihe-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: 10px;
+}
+
+/* Location */
+.layihe-location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.layihe-location i {
+  color: var(--gold);
+  font-size: 0.75rem;
+}
+
+/* ── Accordion ────────────────────────────────────────────────── */
+.layihe-accordion {
+  border-top: 1px solid var(--border);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--heading);
+  text-align: left;
+  letter-spacing: 0.01em;
+  transition: color var(--trans);
+  gap: 16px;
+}
+
+.accordion-trigger:hover {
+  color: var(--gold);
+}
+
+.accordion-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+  transition: background var(--trans), border-color var(--trans), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-mode .accordion-icon {
+  background: var(--surface);
+}
+
+.accordion-icon i {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  transition: color var(--trans), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon i {
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+/* Accordion body — smooth height animation */
+.accordion-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-body.open {
+  grid-template-rows: 1fr;
+}
+
+.accordion-body-inner {
+  overflow: hidden;
+}
+
+.accordion-content {
+  padding-bottom: 20px;
+}
+
+.accordion-content p {
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Detail list (key-value pairs) */
+.accordion-detail-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.accordion-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background: var(--bg-section);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.dark-mode .accordion-detail-item {
+  background: var(--surface);
+}
+
+.detail-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+/* Deliverable list */
+.deliverable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-2);
+  line-height: 1.55;
+  padding: 10px 14px;
+  background: var(--bg-section);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--gold);
+}
+
+.dark-mode .deliverable-item {
+  background: var(--surface);
+}
+
+.deliverable-item::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Result grid */
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.result-item {
+  padding: 18px 16px;
+  background: var(--stat-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.result-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.result-num span {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.result-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ── Card Footer ─────────────────────────────────────────────── */
+.layihe-card-footer {
+  padding: 24px 40px 32px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+
+.layihe-client {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.layihe-client-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 3px;
+}
+
+.layihe-client-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+/* ── LIGHTBOX ─────────────────────────────────────────────────── */
+.prj-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(3, 8, 18, 0.97);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.prj-lightbox.lb-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.prj-lb-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 72px 80px;
+}
+
+.prj-lb-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  display: block;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.prj-lb-img-wrap img.lb-transitioning {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+/* Lightbox controls */
+.prj-lb-close,
+.prj-lb-prev,
+.prj-lb-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.prj-lb-close {
+  top: 24px;
+  right: 24px;
+  width: 46px;
+  height: 46px;
+  font-size: 1.05rem;
+}
+
+.prj-lb-close:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: rotate(90deg);
+}
+
+.prj-lb-prev,
+.prj-lb-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  font-size: 0.9rem;
+}
+
+.prj-lb-prev {
+  left: 24px;
+}
+
+.prj-lb-next {
+  right: 24px;
+}
+
+.prj-lb-prev:hover,
+.prj-lb-next:hover {
+  background: rgba(200, 146, 42, 0.3);
+  border-color: rgba(200, 146, 42, 0.5);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.prj-lb-prev:disabled,
+.prj-lb-next:disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.prj-lb-counter {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ── Reveal animation (IntersectionObserver) ─────────────────── */
+.layihe-card.lp-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layihe-card.lp-reveal.lp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .layiheler-section {
+    padding: 80px 0 100px;
+  }
+
+  .layihe-gallery {
+    height: 360px;
+  }
+
+  .layihe-info {
+    padding: 28px 32px 0;
+  }
+
+  .layihe-card-footer {
+    padding: 20px 32px 28px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .layiheler-section {
+    padding: 64px 0 80px;
+  }
+
+  .layiheler-header {
+    margin-bottom: 48px;
+  }
+
+  .layihe-card {
+    margin-bottom: 40px;
+  }
+
+  /* Gallery: 2x2 grid on tablet */
+  .layihe-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+    height: auto;
+  }
+
+  .layihe-gallery-item--main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .layihe-info {
+    padding: 24px 24px 0;
+  }
+
+  .layihe-card-footer {
+    padding: 18px 24px 24px;
+  }
+
+  .layihe-year {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .accordion-detail-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 560px */
+@media (max-width: 560px) {
+  .layiheler-section {
+    padding: 52px 0 64px;
+  }
+
+  .layiheler-header {
+    margin-bottom: 36px;
+    padding: 0 8px;
+  }
+
+  /* Gallery: stacked on mobile */
+  .layihe-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px 140px;
+  }
+
+  .layihe-gallery-item--main {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  /* Hide 4th image on small mobile, show more overlay on 3rd */
+  .layihe-gallery-item:nth-child(4) {
+    display: none;
+  }
+
+  .layihe-gallery-item:nth-child(3) {
+    display: none;
+  }
+
+  .layihe-gallery-item--more {
+    display: block;
+    grid-column: 2;
+  }
+
+  .layihe-info {
+    padding: 20px 20px 0;
+  }
+
+  .layihe-card-footer {
+    padding: 16px 20px 22px;
+  }
+
+  .layihe-meta {
+    gap: 10px;
+  }
+
+  .layihe-title {
+    font-size: 1.2rem;
+  }
+
+  .accordion-trigger {
+    font-size: 0.8125rem;
+    padding: 16px 0;
+  }
+
+  .accordion-detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .result-num {
+    font-size: 1.45rem;
+  }
+
+  .prj-lb-prev { left: 12px; }
+  .prj-lb-next { right: 12px; }
+
+  .prj-lb-img-wrap {
+    padding: 64px 60px;
+  }
+}
+
+/* 400px */
+@media (max-width: 400px) {
+  .layihe-gallery {
+    grid-template-rows: 160px 120px;
+  }
+
+  .prj-lb-prev,
+  .prj-lb-next {
+    width: 42px;
+    height: 42px;
+  }
+
+  .prj-lb-img-wrap {
+    padding: 56px 48px;
+  }
+}
