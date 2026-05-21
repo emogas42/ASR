@@ -5216,3 +5216,66 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
     top: 54.5%;
   }
 }
+
+
+/* ── Ticker Card: böyüdülmüş ── */
+.bs-ticker-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 20px 12px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 146, 42, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  transition: border-color 0.3s, background 0.3s;
+  flex-shrink: 0;
+  min-width: 185px;
+}
+.bs-ticker-card:hover {
+  border-color: rgba(200, 146, 42, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Logo box: foto üçün tam cover ── */
+.bs-ticker-logo-box {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 146, 42, 0.08);
+  border: 1px solid rgba(200, 146, 42, 0.15);
+}
+
+/* SVG eskizi üçün köhnə stil qalır */
+.bs-ticker-logo-box svg {
+  width: 52px;
+  height: 52px;
+}
+
+/* FOTO üçün — ölçüdən asılı olmayaraq tam dolu, kəsilməz */
+.bs-ticker-logo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* logo kəsilməsin, tam görünsün */
+  object-position: center;
+  border-radius: 0;
+  padding: 6px;          /* kiçik padding — logo hər tərəfdən "nəfəs alsın" */
+  background: #fff;      /* açıq fonlu logolar üçün ağ arxa fon */
+}
+
+/* Şirkət adı */
+.bs-ticker-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+}
