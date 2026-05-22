@@ -450,3 +450,20 @@
   })();
 
 })();
+// Tab switching
+const tabBtns = document.querySelectorAll('.tab-btn');
+const panels = document.querySelectorAll('.service-panel');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    const targetId = this.getAttribute('data-target');
+    tabBtns.forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    panels.forEach(p => p.classList.remove('active'));
+    const targetPanel = document.getElementById(targetId);
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+      targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
