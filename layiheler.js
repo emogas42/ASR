@@ -382,3 +382,34 @@ allGalleries.forEach(gallery => {
     console.log(projectKey + " qalereyası işə düşdü!");
   });
 });
+
+
+// strateji idareetme xidmet 03
+// <!-- ─── JavaScript: accordion logic ─── 
+(function () {
+  const accordion = document.getElementById('lpAccordion');
+  if (!accordion) return;
+ 
+  accordion.querySelectorAll('.lp-card-header').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const card = btn.closest('.lp-card');
+      const isOpen = card.classList.contains('lp-open');
+ 
+      // Close all
+      accordion.querySelectorAll('.lp-card').forEach(function (c) {
+        c.classList.remove('lp-open');
+        c.querySelector('.lp-card-header').setAttribute('aria-expanded', 'false');
+        var body = c.querySelector('.lp-card-body');
+        body.style.maxHeight = null;
+      });
+ 
+      // Open clicked (if it was closed)
+      if (!isOpen) {
+        card.classList.add('lp-open');
+        btn.setAttribute('aria-expanded', 'true');
+        var body = card.querySelector('.lp-card-body');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+})();

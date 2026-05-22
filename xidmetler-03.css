@@ -1053,3 +1053,414 @@ body.dark-mode .process-grid::before {
   }
   
 }
+/* ═══════════════════════════════════════════════════════════════
+   LAYİHƏLƏR (ACCORDION) SECTION  —  layiheler.css
+   Mövcud CSS dəyişənlərinə tam uyğundur (xidmetler.css).
+   xidmet-03.html faylında <head>-ə əlavə edin:
+   <link rel="stylesheet" href="layiheler.css" />
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Section wrapper ─────────────────────────────────────────── */
+.layiheler-section {
+  background: var(--bg-section);
+}
+
+/* ── Accordion list ──────────────────────────────────────────── */
+.lp-accordion {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Single card ─────────────────────────────────────────────── */
+.lp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  position: relative;
+}
+
+/* Left accent line — hidden by default, shown on open */
+.lp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--gold) 100%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 4px 0 0 4px;
+}
+
+.lp-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.lp-card.lp-open {
+  border-color: var(--navy);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.lp-card.lp-open::before {
+  transform: scaleY(1);
+}
+
+/* ── Card header (clickable row) ─────────────────────────────── */
+.lp-card-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.lp-card-header:hover {
+  background: var(--accent-light);
+}
+
+.lp-card.lp-open .lp-card-header {
+  background: var(--accent-light);
+}
+
+/* ── Left part of header ─────────────────────────────────────── */
+.lp-card-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.lp-card-num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.18;
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+  min-width: 36px;
+  transition: opacity 0.3s ease;
+}
+
+.lp-card.lp-open .lp-card-num {
+  opacity: 0.6;
+}
+
+.lp-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Badge / category pill */
+.lp-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid rgba(26, 86, 219, 0.15);
+  padding: 3px 10px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.lp-card-badge i {
+  font-size: 0.65rem;
+}
+
+/* Badge colour variants */
+.lp-badge-gold {
+  color: var(--gold);
+  background: var(--gold-pale);
+  border-color: rgba(200, 146, 42, 0.2);
+}
+
+.lp-badge-teal {
+  color: #0d9488;
+  background: rgba(13, 148, 136, 0.08);
+  border-color: rgba(13, 148, 136, 0.18);
+}
+
+.lp-badge-orange {
+  color: var(--orange);
+  background: rgba(207, 94, 18, 0.08);
+  border-color: rgba(207, 94, 18, 0.18);
+}
+
+.dark-mode .lp-badge-teal {
+  color: #2dd4bf;
+  background: rgba(45, 212, 191, 0.08);
+  border-color: rgba(45, 212, 191, 0.18);
+}
+
+.dark-mode .lp-badge-orange {
+  color: #fb923c;
+  background: rgba(251, 146, 60, 0.08);
+  border-color: rgba(251, 146, 60, 0.18);
+}
+
+/* Card title */
+.lp-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.35;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+  .lp-card-title {
+    white-space: normal;
+    text-overflow: unset;
+    overflow: visible;
+    font-size: 0.9rem;
+  }
+}
+
+/* ── Right part of header ────────────────────────────────────── */
+.lp-card-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-shrink: 0;
+}
+
+.lp-card-year {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.lp-card-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.lp-card-arrow i {
+  font-size: 0.7rem;
+  transition: inherit;
+}
+
+.lp-card.lp-open .lp-card-arrow {
+  transform: rotate(180deg);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+/* ── Collapsible body ────────────────────────────────────────── */
+.lp-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Inner grid: description + meta ─────────────────────────── */
+.lp-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 36px;
+  padding: 0 28px 28px 28px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 780px) {
+  .lp-card-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+  }
+}
+
+/* Description paragraphs */
+.lp-card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.lp-card-desc p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Right column: details + chips */
+.lp-card-tags-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 24px;
+}
+
+/* Detail rows */
+.lp-card-detail {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--bg-section);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.lp-detail-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.lp-detail-label i {
+  font-size: 0.68rem;
+  color: var(--accent);
+}
+
+.lp-detail-val {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--heading);
+  text-align: right;
+}
+
+/* Chips row */
+.lp-card-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.lp-chip {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 11px;
+  border-radius: 100px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid rgba(26, 86, 219, 0.15);
+  white-space: nowrap;
+}
+
+/* ── Dark mode overrides ─────────────────────────────────────── */
+.dark-mode .lp-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.dark-mode .lp-card.lp-open {
+  border-color: var(--navy-light);
+}
+
+.dark-mode .lp-card-header:hover,
+.dark-mode .lp-card.lp-open .lp-card-header {
+  background: var(--accent-light);
+}
+
+.dark-mode .lp-card-arrow {
+  background: var(--bg-section);
+  border-color: var(--border);
+}
+
+.dark-mode .lp-card.lp-open .lp-card-arrow {
+  background: var(--navy-light);
+  border-color: var(--navy-light);
+  color: #fff;
+}
+
+.dark-mode .lp-card-detail {
+  background: var(--bg);
+  border-color: var(--border);
+}
+
+.dark-mode .lp-chip {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: rgba(77, 135, 245, 0.18);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .lp-card-header {
+    padding: 18px 16px;
+    gap: 12px;
+  }
+
+  .lp-card-left {
+    gap: 12px;
+  }
+
+  .lp-card-num {
+    font-size: 1.1rem;
+    min-width: 28px;
+  }
+
+  .lp-card-year {
+    display: none;
+  }
+
+  .lp-card-inner {
+    padding: 0 16px 20px 16px;
+  }
+
+  .lp-card-detail {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .lp-detail-val {
+    text-align: left;
+  }
+}
