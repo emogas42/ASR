@@ -10,8 +10,8 @@
   <link rel="icon" type="image/png" href="images/asr group png.png" />
   <link rel="apple-touch-icon" href="images/asr logo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="xidmetler.css" />
-  <link rel="stylesheet" href="xidmet-08.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="xidmetler-08.css" />
   <base target="_blank">
 </head>
 <body>
@@ -225,676 +225,446 @@
     </a>
   </div>
 
-  <a class="back-link" href="index.html">
-    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-    Geri
-  </a>
 
-  <!-- ══ HERO ══════════════════════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero-geo">
-      <div class="hero-geo-circle"></div>
-      <div class="hero-geo-circle"></div>
+
+
+
+  <!-- ===================== HERO ===================== -->
+<section class="hero">
+ 
+  <!-- SVG background (replace with <img class="hero-bg-img" src="your-farm-photo.jpg"> for real photo) -->
+  <svg class="hero-bg-svg" viewBox="0 0 1400 540" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <!-- Sky -->
+    <rect width="1400" height="540" fill="#1e3a0e"/>
+    <!-- Horizon glow -->
+    <ellipse cx="700" cy="200" rx="600" ry="160" fill="#2a5010" opacity="0.5"/>
+    <!-- Ground -->
+    <rect x="0" y="340" width="1400" height="200" fill="#142808"/>
+    <!-- Field rows -->
+    <rect x="0" y="360" width="1400" height="3" fill="#1a3a09" opacity="0.5"/>
+    <rect x="0" y="380" width="1400" height="3" fill="#1a3a09" opacity="0.4"/>
+    <rect x="0" y="400" width="1400" height="3" fill="#1a3a09" opacity="0.35"/>
+    <rect x="0" y="420" width="1400" height="2" fill="#1a3a09" opacity="0.3"/>
+    <!-- Big trees right -->
+    <rect x="1020" y="160" width="14" height="240" fill="#6a9e3a" rx="5"/>
+    <ellipse cx="1027" cy="152" rx="48" ry="58" fill="#4a7a22"/>
+    <rect x="1110" y="185" width="11" height="220" fill="#6a9e3a" rx="4"/>
+    <ellipse cx="1115" cy="178" rx="38" ry="46" fill="#3d6620"/>
+    <rect x="1190" y="170" width="13" height="230" fill="#6a9e3a" rx="5"/>
+    <ellipse cx="1196" cy="162" rx="44" ry="54" fill="#4a7a22"/>
+    <rect x="1270" y="190" width="10" height="210" fill="#6a9e3a" rx="4"/>
+    <ellipse cx="1275" cy="184" rx="34" ry="42" fill="#3d6620"/>
+    <rect x="1340" y="175" width="12" height="225" fill="#6a9e3a" rx="5"/>
+    <ellipse cx="1346" cy="168" rx="40" ry="50" fill="#4a7a22"/>
+    <!-- Orchard center-right -->
+    <rect x="800" y="290" width="10" height="100" fill="#8B4513" rx="3" opacity="0.8"/>
+    <ellipse cx="805" cy="282" rx="36" ry="26" fill="#4a7a22" opacity="0.95"/>
+    <rect x="870" y="300" width="8" height="88" fill="#8B4513" rx="3" opacity="0.7"/>
+    <ellipse cx="874" cy="293" rx="28" ry="20" fill="#3d6620" opacity="0.9"/>
+    <rect x="930" y="285" width="12" height="105" fill="#8B4513" rx="3" opacity="0.8"/>
+    <ellipse cx="936" cy="276" rx="40" ry="28" fill="#4a7a22" opacity="0.95"/>
+    <rect x="995" y="298" width="9" height="90" fill="#8B4513" rx="3" opacity="0.7"/>
+    <ellipse cx="999" cy="291" rx="30" ry="22" fill="#3d6620" opacity="0.85"/>
+    <!-- Small shrubs -->
+    <ellipse cx="760" cy="355" rx="30" ry="15" fill="#3a6e1a" opacity="0.7"/>
+    <ellipse cx="850" cy="365" rx="25" ry="12" fill="#2d5a14" opacity="0.6"/>
+    <ellipse cx="1050" cy="350" rx="35" ry="16" fill="#3a6e1a" opacity="0.65"/>
+    <ellipse cx="1200" cy="360" rx="28" ry="13" fill="#2d5a14" opacity="0.6"/>
+    <!-- Sun glow -->
+    <circle cx="1150" cy="90" r="70" fill="#f5c842" opacity="0.10"/>
+    <circle cx="1150" cy="90" r="45" fill="#f5c842" opacity="0.10"/>
+    <!-- Wheat/grass foreground rows -->
+    <rect x="0" y="460" width="1400" height="80" fill="#0e1f06"/>
+    <ellipse cx="100" cy="455" rx="22" ry="30" fill="#3a6e1a" opacity="0.5"/>
+    <ellipse cx="240" cy="450" rx="18" ry="26" fill="#2d5a14" opacity="0.45"/>
+    <ellipse cx="400" cy="458" rx="24" ry="28" fill="#3a6e1a" opacity="0.4"/>
+    <ellipse cx="560" cy="452" rx="20" ry="25" fill="#2d5a14" opacity="0.45"/>
+  </svg>
+ 
+  <div class="hero-overlay"></div>
+ 
+  <div class="hero-content">
+    <div class="hero-badge">
+      <i class="ti ti-leaf"></i>
+      ASR Development Consulting Group MMC
     </div>
-    <div class="hero-image-overlay">
-      <img src="images/agronomy.jpg" class="hero-img" alt="Fitosanitar Nəzarət və Aqronomluq" />
+    <h1 class="hero-h1">
+      Fitosanitar nəzarət<br>
+      və <span>aqronomluq</span> xidmətləri
+    </h1>
+    <p class="hero-sub">
+      Məhsulun istehsalından ixracına qədər olan bütün mərhələlərdə fitosanitar nəzarət, aqrotexniki konsultasiya və beynəlxalq tələblərə uyğunluq üzrə peşəkar dəstək.
+    </p>
+    <div class="hero-btns">
+      <a href="#elaqe" class="btn-gold">
+        <i class="ti ti-phone"></i>Müraciət et
+      </a>
+      <a href="#xidmetler" class="btn-outline">
+        <i class="ti ti-list"></i>Xidmətlərə bax
+      </a>
     </div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-badge" id="heroBadge">
-          <span class="hero-badge-dot"></span>
-          Xidmət 08 · Fitosanitar Nəzarət &amp; Aqronomluq
-        </div>
-        <h1 class="hero-title" id="heroTitle">Fitosanitar Nəzarət və<br/><em>Aqronomluq Xidmətləri</em></h1>
-        <p class="hero-desc" id="heroDesc">Kənd təsərrüfatı və bitki sağlamlığı sahəsində fitosanitar nəzarət, aqrotexniki konsultasiya, ixrac sertifikatlaşdırması və beynəlxalq tələblərə uyğunluq üzrə peşəkar xidmətlər — istehsaldan ixracına qədər hər mərhələdə.</p>
-        <div class="hero-cta-group" id="heroCta">
-          <a href="#cta" class="btn-primary">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 012 1.72h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016 17.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0124 19z"/></svg>
-            Müraciət Et
-          </a>
-          <a href="#services" class="btn-ghost">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
-            Xidmətlərə Bax
-          </a>
-        </div>
-      </div>
-      <div class="hero-visual" id="heroVisual">
-        <div class="hero-stat-card">
-          <div class="hero-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <div>
-            <div class="hero-stat-value">15+</div>
-            <div class="hero-stat-label">İl Sahə Təcrübəsi</div>
-          </div>
-        </div>
-        <div class="hero-stat-card">
-          <div class="hero-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div>
-            <div class="hero-stat-value">200+</div>
-            <div class="hero-stat-label">Təsərrüfat Auditlənib</div>
-          </div>
-        </div>
-        <div class="hero-stat-card">
-          <div class="hero-stat-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
-          </div>
-          <div>
-            <div class="hero-stat-value">30+</div>
-            <div class="hero-stat-label">İxrac Bazarı Dəstəklənib</div>
-          </div>
-        </div>
-      </div>
+  </div>
+ 
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-num">15+</div>
+      <div class="stat-label">İllik təcrübə</div>
     </div>
-  </section>
-
-  <!-- ══ XİDMƏT SÜTUNLARI ══════════════════════════════════════ -->
-  <section class="section pillar-section" id="services">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Xidmət Paketi</div>
-        <h2 class="section-title">Aqronomluq &amp; Fitosanitar<br/><em>Xidmət Sahələri</em></h2>
-        <p class="section-subtitle">Bitki sağlamlığından ixrac sertifikatlaşdırmasına, HACCP sistemlərindən izlənəbilirlik həllərə qədər — tam paket aqro-məsləhət xidmətləri.</p>
-      </div>
-      <div class="pillar-grid">
-
-        <div class="pillar-card reveal">
-          <div class="pillar-num">01</div>
-          <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
-          <div class="pillar-title">Bitki Sağlamlığı və Aqronomluq</div>
-          <div class="pillar-desc">Vegetasiya monitorinqi, zərərverici diaqnostikası, gübrələmə planları, IPM sistemlərinin tətbiqi və aqronomik konsultasiya xidmətləri.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">IPM Sistemləri</span>
-            <span class="pillar-tag">Monitorinq</span>
-            <span class="pillar-tag">Gübrələmə</span>
-          </div>
-        </div>
-
-        <div class="pillar-card reveal">
-          <div class="pillar-num">02</div>
-          <div class="pillar-icon"><i class="fa-solid fa-plane-departure"></i></div>
-          <div class="pillar-title">İxrac üzrə Xidmətlər</div>
-          <div class="pillar-desc">İdxalçı ölkə tələblərinin araşdırılması, ixracatçı şirkətin qeydiyyatı, fitosanitar və baytarlıq sertifikatlarının alınması üzrə tam dəstək.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">Fitosanitar Sertifikat</span>
-            <span class="pillar-tag">Qeydiyyat</span>
-            <span class="pillar-tag">Audit</span>
-          </div>
-        </div>
-
-        <div class="pillar-card reveal">
-          <div class="pillar-num">03</div>
-          <div class="pillar-icon"><i class="fa-solid fa-flask"></i></div>
-          <div class="pillar-title">Pestisid və Gübrə Qeydiyyatı</div>
-          <div class="pillar-desc">Texniki dosyelərin hazırlanması, qeydiyyat proseslərinin idarə olunması, etiket uyğunluğunun yoxlanılması və sənədlərin yenilənməsi.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">Texniki Dosye</span>
-            <span class="pillar-tag">Etiket Uyğunluğu</span>
-            <span class="pillar-tag">MRL</span>
-          </div>
-        </div>
-
-        <div class="pillar-card reveal">
-          <div class="pillar-num">04</div>
-          <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="pillar-title">HACCP Sistemi</div>
-          <div class="pillar-desc">HACCP sisteminin qurulması, risk analizləri, kritik nəzarət nöqtələrinin (CCP) müəyyən edilməsi, sanitariya planları və işçi heyəti üçün təlimlər.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">CCP Analizi</span>
-            <span class="pillar-tag">Risk İdarəsi</span>
-            <span class="pillar-tag">Daxili Audit</span>
-          </div>
-        </div>
-
-        <div class="pillar-card reveal">
-          <div class="pillar-num">05</div>
-          <div class="pillar-icon"><i class="fa-solid fa-qrcode"></i></div>
-          <div class="pillar-title">İzlənmə Sistemi Xidmətləri</div>
-          <div class="pillar-desc">Məhsul izlənəbilirlilik sisteminin qurulması, batch kodlaşdırma, tədarük zəncirinin sənədləşdirilməsi və geri çağırma (recall) prosedurları.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">Traceability</span>
-            <span class="pillar-tag">Batch Kodlama</span>
-            <span class="pillar-tag">Recall Sistemi</span>
-          </div>
-        </div>
-
-        <div class="pillar-card reveal">
-          <div class="pillar-num">06</div>
-          <div class="pillar-icon"><i class="fa-solid fa-certificate"></i></div>
-          <div class="pillar-title">GLOBALG.A.P Sertifikatlaşdırma</div>
-          <div class="pillar-desc">Beynəlxalq kənd təsərrüfatı standartlarına uyğun GLOBALG.A.P sertifikatının alınması prosesinin idarə olunması və tam texniki dəstək.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">GLOBALG.A.P</span>
-            <span class="pillar-tag">Beynəlxalq Standart</span>
-            <span class="pillar-tag">Sertifikat</span>
-          </div>
-        </div>
-
-      </div>
+    <div class="stat-card">
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Tamamlanmış layihə</div>
     </div>
-  </section>
-
-  <!-- ══ PROSESİMİZ ══════════════════════════════════════════════ -->
-  <section class="section process-section" id="process">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Metodologiya</div>
-        <h2 class="section-title">Aqronomluq Xidmətlərinin<br/><em>Prosesimiz</em></h2>
-        <p class="section-subtitle" style="margin-top:5%;">İstehsaldan ixraca qədər sistemli, şəffaf və nəticəyönümlü iş prosesi.</p>
-      </div>
-      <div class="process-grid" style="margin-top:8%;">
-
-        <div class="process-step reveal">
-          <div class="process-step-num">01</div>
-          <div class="process-step-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-          <div class="process-step-title">Sahə Diaqnostikası və Analiz</div>
-          <div class="process-step-desc">Təsərrüfatın mövcud vəziyyəti qiymətləndirilir: torpaq, su, bitki sağlamlığı, fitosanitar uyğunluq və beynəlxalq tələblərə hazırlıq analiz olunur.</div>
-        </div>
-
-        <div class="process-step reveal">
-          <div class="process-step-num">02</div>
-          <div class="process-step-icon"><i class="fa-solid fa-map"></i></div>
-          <div class="process-step-title">Strategiya və Fəaliyyət Planı</div>
-          <div class="process-step-desc">Fitosanitar uyğunluq, ixrac hədəfləri və sertifikatlaşdırma məqsədləri əsasında konkret fəaliyyət planı və yol xəritəsi hazırlanır.</div>
-        </div>
-
-        <div class="process-step reveal">
-          <div class="process-step-num">03</div>
-          <div class="process-step-icon"><i class="fa-solid fa-folder-open"></i></div>
-          <div class="process-step-title">Sənədləşmə və Sistem Qurma</div>
-          <div class="process-step-desc">HACCP, izlənəbilirlik, fitosanitar və ixrac sənədlərinin hazırlanması; sistemlərin müəssisəyə uyğun qurulması və tətbiqi.</div>
-        </div>
-
-        <div class="process-step reveal">
-          <div class="process-step-num">04</div>
-          <div class="process-step-icon"><i class="fa-solid fa-microscope"></i></div>
-          <div class="process-step-title">Laborator Yoxlama və Audit</div>
-          <div class="process-step-desc">MRL, pestisid qalıqları, bitki xəstəliklərinin laborator diaqnostikası və fitosanitar audit — ixrac öncəsi tam hazırlıq yoxlaması.</div>
-        </div>
-
-        <div class="process-step reveal">
-          <div class="process-step-num">05</div>
-          <div class="process-step-icon"><i class="fa-solid fa-file-export"></i></div>
-          <div class="process-step-title">Sertifikat Əldəetmə və İxrac</div>
-          <div class="process-step-desc">Fitosanitar, baytarlıq sağlamlıq sertifikatlarının alınması, ixrac müraciətlərinin icrası və idxalçı ölkə tələblərinə tam uyğunluğun təmini.</div>
-        </div>
-
-        <div class="process-step reveal">
-          <div class="process-step-num">06</div>
-          <div class="process-step-icon"><i class="fa-solid fa-rotate"></i></div>
-          <div class="process-step-title">Davamlı Monitorinq və Dəstək</div>
-          <div class="process-step-desc">Vegetasiya boyunca sahə monitorinqi, daimi aqronomik dəstək, sistemlərin yenilənməsi və uzunmüddətli texniki müşayiət xidməti.</div>
-        </div>
-
+    <div class="stat-card">
+      <div class="stat-num">7</div>
+      <div class="stat-label">Xidmət istiqaməti</div>
+    </div>
+  </div>
+ 
+</section>
+ 
+<!-- ===================== BİTKİ SAĞLAMLIGI ===================== -->
+<section class="section" id="xidmetler">
+  <div class="section-label">Bitki sağlamlığı</div>
+  <h2 class="section-h2">Bitki sağlamlığı və aqronomluq xidmətləri</h2>
+  <p class="section-desc">
+    Vegetasiya dövründən ixraca qədər tam texniki dəstək — monitorinq, diaqnostika, gübrələmə, IPM, sertifikatlaşdırma.
+  </p>
+  <div class="services-grid">
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-eye"></i></div>
+      <div class="svc-title">Sahələrin monitorinqi və nəzarət</div>
+      <div class="svc-desc">Bitki inkişafının mütəmadi izlənilməsi və risklərin vaxtında müəyyən olunması təmin edilir.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-bug"></i></div>
+      <div class="svc-title">Zərərverici və xəstəlik diaqnostikası</div>
+      <div class="svc-desc">Effektif və təhlükəsiz mübarizə tədbirləri ilə mübarizə protokolları hazırlanır.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-droplet"></i></div>
+      <div class="svc-title">Gübrələmə və qidalanma planları</div>
+      <div class="svc-desc">Bitkinin inkişaf mərhələlərinə uyğun qidalanma proqramları tərtib olunur.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-refresh"></i></div>
+      <div class="svc-title">İnteqrir zərərverici idarəetmə (IPM)</div>
+      <div class="svc-desc">Kimyəvi və bioloji metodların balanslı tətbiqi ilə davamlı mühafizə sistemi qurulur.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-flask"></i></div>
+      <div class="svc-title">Pestisidlərin təhlükəsiz istifadəsi</div>
+      <div class="svc-desc">Pestisidlərin norma və təhlükəsizlik tələblərinə uyğun tətbiqi təmin edilir.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-users"></i></div>
+      <div class="svc-title">Fermerlər üçün aqronomik konsultasiya</div>
+      <div class="svc-desc">Fermerlərə istehsal prosesində texniki və praktiki dəstək göstərilir.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-briefcase"></i></div>
+      <div class="svc-title">Aqronomluq xidmətlərinin outsoursinqi</div>
+      <div class="svc-desc">Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması həyata keçirilir.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-report-analytics"></i></div>
+      <div class="svc-title">MRL tələblərinə uyğunluq</div>
+      <div class="svc-desc">Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğu yoxlanılır.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-tag"></i></div>
+      <div class="svc-title">Etiket və qablaşdırma uyğunluğu</div>
+      <div class="svc-desc">Etiket və qablaşdırmaların qanunvericiliyə uyğunluğu təmin edilir.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-chart-bar"></i></div>
+      <div class="svc-title">Risk analizi və zərərverici qiymətləndirmə</div>
+      <div class="svc-desc">Fitosanitar risklər analiz edilərək qabaqlayıcı tədbirlər müəyyən olunur.</div>
+    </div>
+ 
+    <div class="svc-card">
+      <div class="svc-icon-wrap"><i class="ti ti-award"></i></div>
+      <div class="svc-title">GLOBALG.A.P sertifikatına dəstək</div>
+      <div class="svc-desc">Beynəlxalq kənd təsərrüfatı standartlarına uyğun sertifikatlaşdırma prosesi təşkil edilir.</div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- ===================== İXRAC ===================== -->
+<section class="section white">
+  <div class="section-label">Beynəlxalq bazarlar</div>
+  <h2 class="section-h2">İxrac üzrə xidmətlər</h2>
+  <p class="section-desc">
+    İdxalçı ölkənin tələblərindən sertifikat alınmasına qədər tam ixrac dəstəyi — qeydiyyat, etiketləmə, audit.
+  </p>
+  <div class="two-col">
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-search"></i></div>
+      <div>
+        <div class="exp-title">İdxalçı ölkə tələblərinin araşdırılması</div>
+        <div class="exp-desc">Hədəf ölkələrin qanunvericilik və texniki tələbləri analiz olunur, hesabat hazırlanır.</div>
       </div>
     </div>
-  </section>
-
-  <!-- ══ ACCORDION XİDMƏT DETALLARİ ════════════════════════════ -->
-  <section class="section legis-section" id="details">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Ətraflı Xidmətlər</div>
-        <h2 class="section-title">Hər Sahə üzrə<br/><em>Xidmət Detalları</em></h2>
-        <p class="section-subtitle">Hər xidmət paketinin əhatə etdiyi ətraflı fəaliyyətlər — klikləyərək açın.</p>
-      </div>
-      <div class="accordion-wrap reveal">
-
-        <!-- Accordion 1 -->
-        <div class="acc-item">
-          <button class="acc-header" aria-expanded="false">
-            <div class="acc-header-left">
-              <div class="acc-icon"><i class="fa-solid fa-leaf"></i></div>
-              <span class="acc-title">Bitki Sağlamlığı və Aqronomluq Xidmətləri</span>
-            </div>
-            <i class="fa-solid fa-chevron-down acc-chevron"></i>
-          </button>
-          <div class="acc-panel">
-            <div class="acc-panel-inner">
-              <ul class="acc-list">
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Vegetasiya monitorinqi və nəzarət</strong> — Bitki inkişafının mütəmadi izlənilməsi və risklərin vaxtında müəyyən olunması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Zərərverici diaqnostikası və mübarizə protokolları</strong> — Xəstəlik və zərərvericilərə qarşı effektiv mübarizə tədbirlərinin hazırlanması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Gübrələmə və bitki qidalanma planları</strong> — Bitkinin inkişaf mərhələlərinə uyğun qidalanma proqramlarının tərtib edilməsi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>İnteqrir zərərverici idarəetmə (IPM) sistemləri</strong> — Kimyəvi və bioloji metodların balanslı tətbiqi ilə davamlı mühafizə sistemi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Pestisidlərin təhlükəsiz istifadəsi üzrə məsləhət</strong> — Norma və təhlükəsizlik tələblərinə uyğun tətbiq.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Aqronomluq xidmətlərinin outsoursinqi</strong> — Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Qalıq maddə (MRL) uyğunluğu</strong> — Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğunun yoxlanılması.</div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion 2 -->
-        <div class="acc-item">
-          <button class="acc-header" aria-expanded="false">
-            <div class="acc-header-left">
-              <div class="acc-icon"><i class="fa-solid fa-plane-departure"></i></div>
-              <span class="acc-title">İxrac üzrə Xidmətlər</span>
-            </div>
-            <i class="fa-solid fa-chevron-down acc-chevron"></i>
-          </button>
-          <div class="acc-panel">
-            <div class="acc-panel-inner">
-              <ul class="acc-list">
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>İdxalçı ölkə tələblərinin araşdırılması</strong> — Hədəf ölkələrin qanunvericilik və texniki tələblərinin analizi və hesabat.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>İxracatçı şirkətin qeydiyyatı</strong> — Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına tam dəstək.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Məhsulun idxalçı ölkədə qeydiyyatı</strong> — Tələb olunan sənədləşmə və proses idarəçiliyi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Etiketləmə tələbləri</strong> — Etiketlərin beynəlxalq tələblərə uyğun hazırlanması və nümunələrin tərtibi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Əvvəlcədən müayinənin təşkili</strong> — Laborator və texniki uyğunluq göstəricilərinin əvvəlcədən qiymətləndirilməsi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Fitosanitar audit</strong> — Bitkiçilik təsərrüfatlarının fitosanitar tələblərə uyğunluğunun auditi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>İxrac sertifikatlarının alınması</strong> — Fitosanitar, baytarlıq sağlamlıq sertifikatlarının tam prosesinin icra olunması.</div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion 3 -->
-        <div class="acc-item">
-          <button class="acc-header" aria-expanded="false">
-            <div class="acc-header-left">
-              <div class="acc-icon"><i class="fa-solid fa-flask"></i></div>
-              <span class="acc-title">Pestisid və Gübrə Qeydiyyatı</span>
-            </div>
-            <i class="fa-solid fa-chevron-down acc-chevron"></i>
-          </button>
-          <div class="acc-panel">
-            <div class="acc-panel-inner">
-              <ul class="acc-list">
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Texniki dosyelərin hazırlanması</strong> — Qeydiyyat üçün tələb olunan tam texniki sənəd paketinin hazırlanması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Qeydiyyat proseslərinin idarə olunması</strong> — İlkin və yenilənmiş qeydiyyat prosedurlarının icrası.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Etiket uyğunluğunun yoxlanılması</strong> — Məhsul etiketlərinin normativ tələblərə uyğunluğunun yoxlanılması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Sənədlərin yenilənməsi</strong> — Qüvvədə olan sənədlərdə tələb olunan düzəlişlərin aparılması.</div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion 4 -->
-        <div class="acc-item">
-          <button class="acc-header" aria-expanded="false">
-            <div class="acc-header-left">
-              <div class="acc-icon"><i class="fa-solid fa-shield-halved"></i></div>
-              <span class="acc-title">HACCP Sistemi</span>
-            </div>
-            <i class="fa-solid fa-chevron-down acc-chevron"></i>
-          </button>
-          <div class="acc-panel">
-            <div class="acc-panel-inner">
-              <ul class="acc-list">
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>HACCP sisteminin qurulması və tətbiqi</strong> — Qida təhlükəsizliyi risklərinin idarə olunması sisteminin yaradılması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Risk analizləri və CCP müəyyənləşdirilməsi</strong> — İstehsal prosesindəki risk nöqtələrinin müəyyən olunması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Sanitariya və gigiyena planları</strong> — Gigiyena qaydalarına uyğun prosedurların hazırlanması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>İşçi heyəti üçün HACCP təlimləri</strong> — Praktiki və nəzəri təlimlərin keçirilməsi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Daxili audit sisteminin qurulması</strong> — Müəssisədaxili nəzarət mexanizmlərinin formalaşdırılması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Beynəlxalq sənədləşmə dəstəyi</strong> — Qida təhlükəsizliyi standartlarına uyğun sənədləşmə.</div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accordion 5 -->
-        <div class="acc-item">
-          <button class="acc-header" aria-expanded="false">
-            <div class="acc-header-left">
-              <div class="acc-icon"><i class="fa-solid fa-qrcode"></i></div>
-              <span class="acc-title">İzlənmə Sistemi Xidmətləri</span>
-            </div>
-            <i class="fa-solid fa-chevron-down acc-chevron"></i>
-          </button>
-          <div class="acc-panel">
-            <div class="acc-panel-inner">
-              <ul class="acc-list">
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Məhsul izlənəbilirlilik sisteminin qurulması</strong> — Məhsulun bütün mərhələlər üzrə izlənilməsinin təmini.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Batch və kodlaşdırma sistemləri</strong> — Məhsullar üçün partiya idarəetmə sistemi qurulması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>İstehsal və tədarük zəncirinin sənədləşdirilməsi</strong> — Tam qeydiyyat aparılması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Geri çağırma (recall) prosedurları</strong> — Riskli məhsulların operativ geri çağırılması sisteminin hazırlanması.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Elektron və manual izləmə sistemləri</strong> — Müəssisəyə uyğun izləmə sisteminin tətbiqi.</div></li>
-                <li><i class="fa-solid fa-circle-check"></i><div><strong>Audit və monitorinq mexanizmləri</strong> — Daimi nəzarət prosedurlarının yaradılması.</div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-building"></i></div>
+      <div>
+        <div class="exp-title">Şirkətin idxalçı ölkədə qeydiyyatı</div>
+        <div class="exp-desc">Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir.</div>
       </div>
     </div>
-  </section>
-
-  <!-- ══ SECTORS / HƏDƏFLƏDİYİMİZ SEKTORLAR ══════════════════════ -->
-  <section class="section sectors-section" id="sectors">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Hədəf Qruplar</div>
-        <h2 class="section-title">Kimə Xidmət<br/><em>Edirik?</em></h2>
-        <p class="section-subtitle">Fermerlərdən tutmuş iri aqro-holdinqlərə qədər — geniş müştəri bazası üçün fərdi həllər.</p>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-file-text"></i></div>
+      <div>
+        <div class="exp-title">Məhsulların idxalçı ölkədə qeydiyyatı</div>
+        <div class="exp-desc">Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur.</div>
       </div>
-      <div class="sectors-wrap">
-        <div>
-          <div class="sectors-col-title"><i class="fa-solid fa-seedling" style="margin-right:6px"></i>Kənd Təsərrüfatı Subyektləri</div>
-          <div class="sector-pill"><i class="fa-solid fa-tractor"></i>Fermer təsərrüfatları</div>
-          <div class="sector-pill"><i class="fa-solid fa-industry"></i>Aqro-holding və şirkətlər</div>
-          <div class="sector-pill"><i class="fa-solid fa-apple-whole"></i>Meyvə-tərəvəz istehsalçıları</div>
-          <div class="sector-pill"><i class="fa-solid fa-wheat-awn"></i>Taxıl və dənli bitki istehsalçıları</div>
-          <div class="sector-pill"><i class="fa-solid fa-wine-bottle"></i>Üzümçülük və şərabçılıq</div>
-          <div class="sector-pill"><i class="fa-solid fa-spa"></i>Çayçılıq və texniki bitkilər</div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-tag"></i></div>
+      <div>
+        <div class="exp-title">Etiketləmə tələbləri və nümunə hazırlanması</div>
+        <div class="exp-desc">Etiketlərin beynəlxalq tələblərə uyğun hazırlanması təmin edilir.</div>
+      </div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-microscope"></i></div>
+      <div>
+        <div class="exp-title">Məhsulun əvvəlcədən müayinəsi</div>
+        <div class="exp-desc">Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir.</div>
+      </div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-clipboard-check"></i></div>
+      <div>
+        <div class="exp-title">Fitosanitar uyğunluğun auditi</div>
+        <div class="exp-desc">Təsərrüfatların fitosanitar standartlara uyğunluğu yoxlanılır və sənədləşdirilir.</div>
+      </div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-certificate"></i></div>
+      <div>
+        <div class="exp-title">İxrac sertifikatlarının alınması</div>
+        <div class="exp-desc">Fitosanitar və baytarlıq sağlamlıq sertifikatları üçün müraciət və prosedurlar həyata keçirilir.</div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- ===================== PESTİSİD + HACCP ===================== -->
+<section class="section">
+  <div class="two-block-grid">
+ 
+    <div>
+      <div class="sub-block-title">
+        <i class="ti ti-flask"></i>
+        Pestisid və gübrə qeydiyyatı
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Texniki dosyelərin hazırlanması</strong>
+          Qeydiyyat üçün tələb olunan texniki sənədlər hazırlanır.
         </div>
-        <div>
-          <div class="sectors-col-title"><i class="fa-solid fa-plane-departure" style="margin-right:6px"></i>İxracatçılar və Emalçılar</div>
-          <div class="sector-pill"><i class="fa-solid fa-boxes-stacked"></i>Kənd təsərrüfatı ixracatçıları</div>
-          <div class="sector-pill"><i class="fa-solid fa-jar"></i>Emal və qablaşdırma müəssisələri</div>
-          <div class="sector-pill"><i class="fa-solid fa-flask"></i>Pestisid və gübrə istehsalçıları</div>
-          <div class="sector-pill"><i class="fa-solid fa-shop"></i>Aqro-ticarət şirkətləri</div>
-          <div class="sector-pill"><i class="fa-solid fa-building-columns"></i>Dövlət aqrar qurumları</div>
-          <div class="sector-pill"><i class="fa-solid fa-globe"></i>Beynəlxalq aqro layihələri</div>
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Qeydiyyat proseslərinin idarə olunması</strong>
+          Məhsulların ilkin və yenilənmiş qeydiyyat prosedurları icra olunur.
+        </div>
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Etiket uyğunluğunun yoxlanılması</strong>
+          Məhsul etiketlərinin normativ tələblərə uyğunluğu yoxlanılır.
+        </div>
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Mövcud sənədlərin yenilənməsi</strong>
+          Qüvvədə olan sənədlərdə tələb olunan dəyişikliklər həyata keçirilir.
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ══ EKSPERTİZA BANNER ══════════════════════════════════════ -->
-  <section class="expertise-section" id="expertise">
-    <div class="expertise-inner">
-      <div class="expertise-text">
-        <div class="expertise-eyebrow">Niyə ASR?</div>
-        <h2 class="expertise-title">Fitosanitar sahəsindəki<br/><em>Fərqimiz</em></h2>
-        <p class="expertise-desc">Sahə ekspertizası, beynəlxalq standart bilikləri və yerli qanunvericiliyin dərindən mənimsənilməsinin birləşməsi — bu, ASR-in aqronomluq xidmətlərini fərqli edir. Hər təsərrüfat üçün fərdi yanaşma, sənədləşmədən sahə dəstəyinə qədər tam paket.</p>
-        <div class="expertise-stats">
-          <div class="expertise-stat">
-            <div class="expertise-stat-val">200+</div>
-            <div class="expertise-stat-lbl">Auditlənmiş Təsərrüfat</div>
-          </div>
-          <div class="expertise-stat">
-            <div class="expertise-stat-val">30+</div>
-            <div class="expertise-stat-lbl">İxrac Bazarı</div>
-          </div>
-          <div class="expertise-stat">
-            <div class="expertise-stat-val">100%</div>
-            <div class="expertise-stat-lbl">Sertifikat Uğuru</div>
-          </div>
+ 
+    <div>
+      <div class="sub-block-title">
+        <i class="ti ti-shield-check"></i>
+        HACCP sistemi
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>HACCP sisteminin qurulması və tətbiqi</strong>
+          Qida təhlükəsizliyi risklərinin idarə olunması sistemi yaradılır.
         </div>
       </div>
-      <div class="expertise-items">
-        <div class="expertise-item">
-          <div class="expertise-item-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <div>
-            <div class="expertise-item-title">Hərtərəfli Sahə Biliyi</div>
-            <div class="expertise-item-desc">Vegetasiyadan ixraca, HACCP-dən izlənəbilirliyə qədər bütün aqro zənciri üzrə dərin texniki ekspertiza.</div>
-          </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Kritik nəzarət nöqtələri (CCP)</strong>
+          İstehsal prosesindəki risk nöqtələri müəyyən edilir və nəzarətə götürülür.
         </div>
-        <div class="expertise-item">
-          <div class="expertise-item-icon"><i class="fa-solid fa-earth-europe"></i></div>
-          <div>
-            <div class="expertise-item-title">Beynəlxalq Standartlar</div>
-            <div class="expertise-item-desc">GLOBALG.A.P, HACCP, ISO 22000, Codex Alimentarius tələbləri üzrə sertifikatlı mütəxəssis heyəti.</div>
-          </div>
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Sanitariya və gigiyena planları</strong>
+          Gigiyena qaydalarına uyğun prosedurlar hazırlanır.
         </div>
-        <div class="expertise-item">
-          <div class="expertise-item-icon"><i class="fa-solid fa-handshake"></i></div>
-          <div>
-            <div class="expertise-item-title">Yerli Dövlət Əlaqələri</div>
-            <div class="expertise-item-desc">Fitosanitar, baytarlıq, aqrar qurumlarla güclü işgüzar əlaqələr — proseslərin sürətləndirilməsi üçün.</div>
-          </div>
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>HACCP təlimləri və daxili audit</strong>
+          Personal üçün praktiki təlimlər və müəssisədaxili nəzarət mexanizmləri formalaşdırılır.
         </div>
-        <div class="expertise-item">
-          <div class="expertise-item-icon"><i class="fa-solid fa-rotate"></i></div>
-          <div>
-            <div class="expertise-item-title">Davamlı Dəstək</div>
-            <div class="expertise-item-desc">Müqavilə sonrası davamlı monitorinq, yenilənmiş qanunvericilik dəstəyi və uzunmüddətli texniki müşayiət.</div>
-          </div>
+      </div>
+      <div class="list-item">
+        <div class="dot-gold"></div>
+        <div class="list-text">
+          <strong>Beynəlxalq standartlara uyğun sənədləşmə</strong>
+          Sənədləşmə beynəlxalq qida təhlükəsizliyi standartlarına uyğun hazırlanır.
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- ══ KOMANDA ══════════════════════════════════════════════════ -->
-  <section id="komanda">
-    <div class="container">
-      <div class="section-header-center fade-in">
-        <span class="section-eyebrow">Komandamız</span>
-        <h2 class="section-title" style="padding:0% 5%;">
-          Fitosanitar və Aqronomluq üzrə ekspert heyətimiz
-        </h2>
-        <p class="section-desc">
-          Hər sahədə sertifikatlı, təcrübəli mütəxəssislərdən ibarət komandamız.
-        </p>
+ 
+  </div>
+</section>
+ 
+<div class="divider"></div>
+ 
+<!-- ===================== İZLƏNMƏ ===================== -->
+<section class="section white">
+  <div class="section-label">İzlənmə</div>
+  <h2 class="section-h2">İzlənmə sistemi xidmətləri</h2>
+  <p class="section-desc">
+    Məhsulun bütün mərhələlər üzrə izlənilməsi, partiya kodlaşdırması, geri çağırma prosedurları, elektron sistem tətbiqi.
+  </p>
+  <div class="two-col">
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-scan"></i></div>
+      <div>
+        <div class="exp-title">Məhsul izlənəbilirlilik sistemi</div>
+        <div class="exp-desc">Məhsulun bütün mərhələlər üzrə izlənilməsi təmin edilir.</div>
       </div>
     </div>
-    <!-- MENECER KARTI -->
-    <div class="manager-card-wrap reveal">
-      <div class="manager-card">
-        <div class="manager-card-img-col">
-          <div class="manager-card-img-wrap">
-            <img src="images/Xaqani Memmedov.png" alt="Xaqani Məmmədov" class="manager-card-img" />
-            <div class="manager-badge-wrap">
-              <span class="manager-badge">
-                <i class="fa-solid fa-leaf"></i>
-                Baş Aqronom Ekspert
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="manager-card-body">
-          <div class="manager-eyebrow">
-            <span class="manager-eyebrow-dot"></span>
-            Fitosanitar Nəzarət və Kənd Təsərrüfatı
-          </div>
-          <h2 class="manager-name">XAQANİ MƏMMƏDOV</h2>
-          <p class="manager-title">
-            Kənd Təsərrüfatı İstehsalı və Bitki Sağlamlığı üzrə Ekspert
-          </p>
-          <div class="manager-divider"></div>
-          <p class="manager-bio">
-            "Səba" (Dəvəçi Broyler ASC) və "Mərcan" (Ucar Aqro ASC) kimi respublika miqyaslı iri aqro müəssisələrinin qurulmasında, layihələndirilməsində və idarə olunmasında <strong>mühüm rəhbərlik</strong> təcrübəsinə malik ekspert. Kənd təsərrüfatı istehsal sistemləri, fitosanitar uyğunluq, keyfiyyət menecmenti və beynəlxalq aqrar standartların tətbiqi üzrə ixtisaslaşmışdır.
-          </p>
-          <div class="manager-stats">
-            <div class="manager-stat">
-              <span class="manager-stat-num">25+</span>
-              <span class="manager-stat-lbl">İl Təcrübə</span>
-            </div>
-            <div class="manager-stat-sep"></div>
-            <div class="manager-stat">
-              <span class="manager-stat-num">10+</span>
-              <span class="manager-stat-lbl">Aqro Müəssisə</span>
-            </div>
-            <div class="manager-stat-sep"></div>
-            <div class="manager-stat">
-              <span class="manager-stat-num">4+</span>
-              <span class="manager-stat-lbl">Böyük Brend</span>
-            </div>
-          </div>
-          <div class="manager-certs">
-            <span class="manager-cert-badge">
-              <i class="fa-solid fa-certificate"></i> Aqro Standartlar Məsləhətçisi
-            </span>
-            <span class="manager-cert-badge">
-              <i class="fa-solid fa-leaf"></i> Bitki Sağlamlığı Eksperti
-            </span>
-            <span class="manager-cert-badge">
-              <i class="fa-solid fa-shield-halved"></i> HACCP Mütəxəssisi
-            </span>
-            <span class="manager-cert-badge">
-              <i class="fa-solid fa-graduation-cap"></i> Beynəlxalq Aqrar İqtisadiyyat
-            </span>
-          </div>
-          <div class="manager-cta">
-            <a href="mailto:Xaqanimemmedov77@mail.ru" class="manager-btn-primary">
-              <i class="fa-solid fa-envelope"></i>
-              Əlaqə Saxla
-            </a>
-          </div>
-        </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-barcode"></i></div>
+      <div>
+        <div class="exp-title">Partiya (batch) və kodlaşdırma sistemləri</div>
+        <div class="exp-desc">Məhsullar üçün kodlaşdırma və partiya idarəetmə sistemi qurulur.</div>
       </div>
     </div>
-    <!-- /MENECER KARTI -->
-
-    <div class="experts-carousel-wrap">
-      <div class="experts-track-outer">
-        <div class="experts-track">
-          <!-- Card 1 -->
-          <div class="exp-card">
-            <div class="exp-card-img-wrap">
-              <img src="images/Mutellim.jpeg" alt="Mütəllim Abdullazadə" class="exp-card-img" />
-              <div class="exp-card-overlay">
-                <div class="exp-overlay-tags">
-                  <span>GLOBALG.A.P</span><span>HACCP</span><span>IPM</span>
-                </div>
-              </div>
-            </div>
-            <div class="exp-card-body">
-              <div class="exp-card-role">UCTAS GROUP MMC, Direktor</div>
-              <h3 class="exp-card-name">MÜTƏLLİM ABDULLAZADƏ</h3>
-              <p class="exp-card-desc">
-                Fitosanitar nəzarət və kənd təsərrüfatı uyğunluğu üzrə ekspert. 2016-cı ildən etibarən aqrar sahədə məsləhət, audit və sertifikatlaşdırma xidmətlərini həyata keçirir.
-              </p>
-              <div class="exp-card-certs">
-                <span class="exp-cert-badge"><i class="fa-solid fa-chalkboard-user"></i> Peşəkar Təlimçi</span>
-                <span class="exp-cert-badge"><i class="fa-solid fa-leaf"></i> Fitosanitar Ekspert</span>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="exp-card">
-            <div class="exp-card-img-wrap">
-              <img src="images/Fuad Muellim.jpeg" alt="Fuad Hacıyev" style="position:relative;bottom:30px;height:300px" class="exp-card-img" />
-              <div class="exp-card-overlay">
-                <div class="exp-overlay-tags">
-                  <span>İxrac Sertifikatı</span><span>MRL</span>
-                </div>
-              </div>
-            </div>
-            <div class="exp-card-body">
-              <div class="exp-card-role">Aqrar Mütəxəssis, Auditor</div>
-              <h3 class="exp-card-name">FUAD HACIYEV</h3>
-              <p class="exp-card-desc">
-                Kənd təsərrüfatı istehsal menecmenti və fitosanitar uyğunluq sistemlərinin tətbiqi üzrə geniş təcrübəyə malik ekspert. Beynəlxalq auditlərin keçirilməsi üzrə peşəkar.
-              </p>
-              <div class="exp-card-certs">
-                <span class="exp-cert-badge"><i class="fa-solid fa-clipboard-check"></i> Beynəlxalq Auditor</span>
-                <span class="exp-cert-badge"><i class="fa-solid fa-wheat-awn"></i> Bitkiçilik Texnoloqu</span>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="exp-card">
-            <div class="exp-card-img-wrap">
-              <img src="images/Gulbeniz hajiyeva rmove bg.png" alt="Gülbəniz Hacıyeva" style="position:relative;bottom:30px;height:300px" class="exp-card-img" />
-              <div class="exp-card-overlay">
-                <div class="exp-overlay-tags">
-                  <span>HACCP</span><span>İzlənəbilirlik</span><span>Audit</span>
-                </div>
-              </div>
-            </div>
-            <div class="exp-card-body">
-              <div class="exp-card-role">Fitosanitar Nəzarət Baş Mütəxəssisi</div>
-              <h3 class="exp-card-name">GÜLBƏNİZ HACIYEVA</h3>
-              <p class="exp-card-desc">
-                Aqrar mühəndislik ixtisasına malik, kənd təsərrüfatında keyfiyyətə nəzarət, laboratoriya idarəetməsi və fitosanitar audit sahəsində çoxillik təcrübə.
-              </p>
-              <div class="exp-card-certs">
-                <span class="exp-cert-badge"><i class="fa-solid fa-microscope"></i> Laboratoriya Mütəxəssisi</span>
-                <span class="exp-cert-badge"><i class="fa-solid fa-check-double"></i> Daxili Auditor</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="exp-dots"></div>
-      <button class="exp-arrow exp-prev" aria-label="Əvvəlki">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <button class="exp-arrow exp-next" aria-label="Növbəti">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </div>
-  </section>
-
-  <!-- ══ FAYDALAR ══════════════════════════════════════════════ -->
-  <section class="section benefits-section" id="benefits">
-    <div class="section-inner">
-      <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Nəticələr</div>
-        <h2 class="section-title">Gözlənilən <em>Faydalar</em></h2>
-        <p class="section-subtitle">ASR-in fitosanitar və aqronomluq xidmətlərindən yararlanan fermer, ixracatçı və emal müəssisələri üçün real nəticələr.</p>
-      </div>
-      <div class="benefits-grid">
-
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-seedling"></i></div>
-            <div class="benefits-block-title">Məhsuldarlıq və Keyfiyyət</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-circle-check"></i>Zərərverici risklərinin vaxtında müəyyən olunması ilə məhsul itkisinin minimuma endirilməsi</li>
-            <li><i class="fa-solid fa-circle-check"></i>Elmi əsaslı gübrələmə ilə məhsuldarlığın artırılması</li>
-            <li><i class="fa-solid fa-circle-check"></i>IPM sistemləri ilə kimyəvi tətbiqin azaldılması və xərc qənaəti</li>
-            <li><i class="fa-solid fa-circle-check"></i>Məhsul keyfiyyətinin beynəlxalq standartlara uyğunluğu</li>
-          </ul>
-        </div>
-
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-plane-departure"></i></div>
-            <div class="benefits-block-title">İxrac İmkanları</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-circle-check"></i>Fitosanitar sertifikatların vaxtında alınması ilə ixrac gecikməsinin aradan qaldırılması</li>
-            <li><i class="fa-solid fa-circle-check"></i>Yeni bazarlara çıxış üçün tələblərin öncədən hazırlanması</li>
-            <li><i class="fa-solid fa-circle-check"></i>İdxal reddlərinin riskinin minimuma endirilməsi</li>
-            <li><i class="fa-solid fa-circle-check"></i>Beynəlxalq ixrac kanallarının genişləndirilməsi</li>
-          </ul>
-        </div>
-
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-clock"></i></div>
-            <div class="benefits-block-title">Vaxt və Resurs Qənaəti</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-circle-check"></i>Sertifikatlaşdırma proseslərinin sürətləndirilməsi</li>
-            <li><i class="fa-solid fa-circle-check"></i>Daxili aqronom xərclərinin optimallaşdırılması</li>
-            <li><i class="fa-solid fa-circle-check"></i>Sənədləşmə xətalarının minimuma endirilməsi</li>
-            <li><i class="fa-solid fa-circle-check"></i>Prosedur gecikməlarinin aradan qaldırılması</li>
-          </ul>
-        </div>
-
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-globe"></i></div>
-            <div class="benefits-block-title">Beynəlxalq Standartlara Uyğunluq</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-circle-check"></i>GLOBALG.A.P, HACCP, ISO 22000 tələblərinə tam uyğunluq</li>
-            <li><i class="fa-solid fa-circle-check"></i>MRL (qalıq maddə limiti) standartlarına uyğunluq</li>
-            <li><i class="fa-solid fa-circle-check"></i>İxrac bazarlarında rəqabətli mövqe</li>
-            <li><i class="fa-solid fa-circle-check"></i>Donor qurumlar və beynəlxalq layihələrə inteqrasiya</li>
-          </ul>
-        </div>
-
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-file"></i></div>
+      <div>
+        <div class="exp-title">Tədarük zəncirinin sənədləşdirilməsi</div>
+        <div class="exp-desc">Tədarük və istehsal mərhələlərinin tam qeydiyyatı aparılır.</div>
       </div>
     </div>
-  </section>
-
-  <!-- ══ CTA ═══════════════════════════════════════════════════ -->
-  <section class="cta-section" id="cta">
-    <div class="section-inner">
-      <div class="cta-box reveal">
-        <div class="cta-eyebrow">Müraciət</div>
-        <h2 class="cta-title">Fitosanitar &amp; Aqronomluq üzrə<br/><em>Ekspert Dəstəyi</em> Alın</h2>
-        <p class="cta-desc">Bitki sağlamlığı, ixrac sertifikatlaşdırması, HACCP və izlənəbilirlik sistemləri üzrə komandamız sizinlə işləməyə hazırdır.</p>
-        <div class="cta-buttons">
-          <a href="tel:+994502085838" class="btn-primary">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 012 1.72h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91A16 16 0 0016 17.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0124 19z"/></svg>
-            +994 50 208 58 38
-          </a>
-          <a href="mailto:office@asrgroup.az" style="display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:100px;border:1.5px solid var(--border);font-size:0.85rem;font-weight:600;color:var(--text);transition:border-color .25s,color .25s;" onmouseover="this.style.borderColor='var(--haqqimizda-title)';this.style.color='var(--haqqimizda-title)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text)'">
-            <i class="fa-regular fa-envelope"></i>
-            office@asrgroup.az
-          </a>
-        </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-arrow-back"></i></div>
+      <div>
+        <div class="exp-title">Geri çağırma (recall) prosedurları</div>
+        <div class="exp-desc">Riskli məhsulların bazardan operativ geri çağırılması sistemi hazırlanır.</div>
       </div>
     </div>
-  </section>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-device-laptop"></i></div>
+      <div>
+        <div class="exp-title">Elektron və manual izləmə sistemləri</div>
+        <div class="exp-desc">Müəssisəyə uyğun elektron və manual izləmə sistemi tətbiq edilir.</div>
+      </div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-chart-line"></i></div>
+      <div>
+        <div class="exp-title">Audit və monitorinq mexanizmləri</div>
+        <div class="exp-desc">Daimi nəzarət və uyğunluq yoxlama prosedurları yaradılır.</div>
+      </div>
+    </div>
+ 
+    <div class="exp-item">
+      <div class="exp-icon"><i class="ti ti-forms"></i></div>
+      <div>
+        <div class="exp-title">Qeydiyyat və nəzarət formaları</div>
+        <div class="exp-desc">İzləmə və nəzarət üçün standart formalar hazırlanır.</div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- ===================== NƏTİCƏLƏR ===================== -->
+<section class="section gold-bg">
+  <div class="section-label">Nəticələr</div>
+  <h2 class="section-h2">Gözlənilən nəticələr</h2>
+  <div class="results-grid">
+ 
+    <div class="res-card">
+      <div class="res-check"><i class="ti ti-check"></i></div>
+      <div class="res-text">Sertifikatlaşdırma proseslərinin daha sürətli icrası</div>
+    </div>
+ 
+    <div class="res-card">
+      <div class="res-check"><i class="ti ti-check"></i></div>
+      <div class="res-text">İxracda uyğunsuzluq risklərinin minimuma endirilməsi</div>
+    </div>
+ 
+    <div class="res-card">
+      <div class="res-check"><i class="ti ti-check"></i></div>
+      <div class="res-text">Kənd təsərrüfatında məhsuldarlığın və keyfiyyətin artırılması</div>
+    </div>
+ 
+    <div class="res-card">
+      <div class="res-check"><i class="ti ti-check"></i></div>
+      <div class="res-text">Beynəlxalq bazarlara çıxış imkanlarının genişlənməsi</div>
+    </div>
+ 
+    <div class="res-card">
+      <div class="res-check"><i class="ti ti-check"></i></div>
+      <div class="res-text">Aqro-sektor üçün daha güclü və rəqabətli sistemin yaradılması</div>
+    </div>
+ 
+  </div>
+</section>
+
+ 
+
+ 
+
+
 
   <!-- ══ FOOTER ════════════════════════════════════════════════ -->
   <footer id="footer">
@@ -935,7 +705,8 @@
           <a href="xidmet-05.html">Qida Təhlükəsizliyi</a>
           <a href="xidmet-06.html">Dövlət Qurumları ilə Əlaqələr</a>
           <a href="xidmet-08.html">Fitosanitar &amp; Aqronomluq</a>
-          <a href="https://wa.me/994502085838"><i class="fa-brands fa-whatsapp whatsapp-icon" style="color:rgb(0,255,37);cursor:pointer"></i></a>
+     
+          
         </div>
       </div>
       <div>
@@ -976,40 +747,13 @@
   <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
+       <a href="https://wa.me/994502085838"><i class="fa-brands fa-whatsapp whatsapp-icon" style="color:rgb(0,255,37);cursor:pointer"></i></a>
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
   <script src="theme-toggle.js"></script>
   <script src="xidmetler.js"></script>
-  <script>
-    /* ── Accordion for service detail cards ────────────────── */
-    (function() {
-      var items = document.querySelectorAll('.acc-item');
-      items.forEach(function(item) {
-        var btn   = item.querySelector('.acc-header');
-        var panel = item.querySelector('.acc-panel');
-        if (!btn || !panel) return;
-
-        btn.addEventListener('click', function() {
-          var isOpen = item.classList.contains('acc-open');
-          // Close all
-          items.forEach(function(i) {
-            i.classList.remove('acc-open');
-            var b = i.querySelector('.acc-header');
-            var p = i.querySelector('.acc-panel');
-            if (b) b.setAttribute('aria-expanded', 'false');
-            if (p) p.style.maxHeight = null;
-          });
-          // Open clicked if was closed
-          if (!isOpen) {
-            item.classList.add('acc-open');
-            btn.setAttribute('aria-expanded', 'true');
-            panel.style.maxHeight = panel.scrollHeight + 'px';
-          }
-        });
-      });
-    })();
-  </script>
+  <script src="app.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
 </body>
 </html>
