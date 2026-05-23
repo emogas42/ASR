@@ -1201,6 +1201,220 @@ body.modal-open {
   }
 
 
+  
+/* ═══════════════════════════════════════════════════════════════
+   CUSTOMERS CAROUSEL — MOBILE VIEW
+   ═══════════════════════════════════════════════════════════════ */
+
+.table-desktop {
+  display: block;
+}
+
+.table-mobile {
+  display: none;
+}
+
+.customers-carousel-wrapper {
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.customers-carousel-track-outer {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.customers-carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+  will-change: transform;
+}
+
+.customer-card {
+  flex: 0 0 100%;
+  min-width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customer-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.customer-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.customer-card-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.customer-card-logo img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+.customer-card-name {
+  flex: 1;
+}
+
+.customer-card-name strong {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 2px;
+}
+
+.customer-card-sub {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.customer-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.customer-card-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.customer-card-label {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.customer-card-value {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-size: 1rem;
+}
+
+.carousel-arrow:hover {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.carousel-prev {
+  left: -20px;
+}
+
+.carousel-next {
+  right: -20px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background: var(--text-muted);
+}
+
+.carousel-dot.active {
+  background: var(--gold);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Mobile Carousel Adjustments */
+@media (max-width: 640px) {
+  .table-desktop {
+    display: none;
+  }
+
+  .table-mobile {
+    display: block;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .carousel-prev {
+    left: 4px;
+  }
+
+  .carousel-next {
+    right: 4px;
+  }
+}
+
 /* ── iOS SAFARI FIXES ───────────────────────────────────────────── */
 @supports (-webkit-touch-callout: none) {
   .modal-overlay {

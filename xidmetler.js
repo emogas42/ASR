@@ -706,3 +706,237 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('✅ Modal sistemi aktivləşdirildi');
 });
 
+
+
+/* ═══════════════════════════════════════════════════════════════
+   10. CUSTOMERS TABLE CAROUSEL — MOBILE MODE
+   ═══════════════════════════════════════════════════════════════ */
+(function() {
+  'use strict';
+
+  // Get all table rows from the desktop table
+  var tableRows = document.querySelectorAll('.clients-table tbody tr');
+  if (!tableRows.length) return;
+
+  var carouselTrack = document.getElementById('customersCarouselTrack');
+  var customersPrev = document.getElementById('customersPrev');
+  var customersNext = document.getElementById('customersNext');
+  var customersDots = document.getElementById('customersDots');
+
+  if (!carouselTrack) return;
+
+  var currentIndex = 0;
+  var autoplayTimer = null;
+
+  // Build carousel cards from table rows
+  function buildCarouselCards() {
+    carouselTrack.innerHTML = '';
+    tableRows.forEach(function(row) {
+      var card = createCardFromRow(row);
+      carouselTrack.appendChild(card);
+    });
+  }
+
+  // Create a card element from a table row
+  function createCardFromRow(row) {
+    var card = document.createElement('div');
+    card.className = 'customer-card';
+
+    var logoCell = row.querySelector('.col-logo img');
+    var nameCell = row.querySelector('.col-name strong');
+    var subCell = row.querySelector('.client-sub');
+    var sectorCell = row.querySelector('.col-sector .sector-badge');
+    var servicesCell = row.querySelector('.col-services .service-tags-row');
+    var statusCell = row.querySelector('.col-status .status-badge');
+
+    var logoSrc = logoCell ? logoCell.src : '';
+    var name = nameCell ? nameCell.textContent : '';
+    var sub = subCell ? subCell.textContent : '';
+    var sector = sectorCell ? sectorCell.textContent : '';
+    var sectorClass = sectorCell ? sectorCell.className : '';
+
+    card.innerHTML = `
+      <div class="customer-card-header">
+        <div class="customer-card-logo">
+          ${logoSrc ? '<img src="' + logoSrc + '" alt="' + name + '" loading="lazy" />' : ''}
+        </div>
+        <div class="customer-card-name">
+          <strong>${name}</strong>
+          ${sub ? '<span class="customer-card-sub">' + sub + '</span>' : ''}
+        </div>
+      </div>
+
+      <div class="customer-card-content">
+        <div class="customer-card-row">
+          <div class="customer-card-label">Sektor</div>
+          <div class="customer-card-value">
+            <span class="${sectorClass}">${sector}</span>
+          </div>
+        </div>
+
+        <div class="customer-card-row">
+          <div class="customer-card-label">Xidmətlər</div>
+          <div class="customer-card-value">
+            ${servicesCell ? servicesCell.innerHTML : ''}
+          </div>
+        </div>
+
+        <div class="customer-card-row">
+          <div class="customer-card-label">Status</div>
+          <div class="customer-card-value">
+            ${statusCell ? statusCell.outerHTML : ''}
+          </div>
+        </div>
+      </div>
+    `;
+
+    return card;
+  }
+
+  // Build dots
+  function buildDots() {
+    customersDots.innerHTML = '';
+    var totalCards = tableRows.length;
+
+    for (var i = 0; i < totalCards; i++) {
+      (function(idx) {
+        var dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (idx === currentIndex ? ' active' : '');
+        dot.setAttribute('type', 'button');
+        dot.setAttribute('aria-label', 'Kart ' + (idx + 1));
+        dot.addEventListener('click', function() {
+          goToCard(idx);
+          restartAutoplay();
+        });
+        customersDots.appendChild(dot);
+      })(i);
+    }
+  }
+
+  // Go to specific card
+  function goToCard(idx) {
+    var totalCards = tableRows.length;
+    currentIndex = ((idx % totalCards) + totalCards) % totalCards;
+
+    var track = carouselTrack;
+    var cards = track.querySelectorAll('.customer-card');
+    if (!cards.length) return;
+
+    var cardWidth = cards[0].offsetWidth;
+    var gap = parseFloat(window.getComputedStyle(track).gap) || 20;
+    var translateX = currentIndex * (cardWidth + gap);
+
+    track.style.transform = 'translateX(-' + translateX + 'px)';
+
+    // Update dots
+    var dots = customersDots.querySelectorAll('.carousel-dot');
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === currentIndex);
+    });
+
+    // Update arrow states
+    updateArrowStates();
+  }
+
+  // Update arrow visibility
+  function updateArrowStates() {
+    var totalCards = tableRows.length;
+    if (customersPrev) {
+      customersPrev.disabled = currentIndex === 0;
+      customersPrev.style.opacity = currentIndex === 0 ? '0.4' : '1';
+    }
+    if (customersNext) {
+      customersNext.disabled = currentIndex >= totalCards - 1;
+      customersNext.style.opacity = currentIndex >= totalCards - 1 ? '0.4' : '1';
+    }
+  }
+
+  // Autoplay
+  function autoplay() {
+    var totalCards = tableRows.length;
+    if (currentIndex < totalCards - 1) {
+      goToCard(currentIndex + 1);
+    } else {
+      goToCard(0);
+    }
+  }
+
+  function startAutoplay() {
+    clearInterval(autoplayTimer);
+    autoplayTimer = setInterval(autoplay, 5000);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayTimer);
+  }
+
+  function restartAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  // Arrow button events
+  if (customersPrev) {
+    customersPrev.addEventListener('click', function() {
+      if (currentIndex > 0) {
+        goToCard(currentIndex - 1);
+        restartAutoplay();
+      }
+    });
+  }
+
+  if (customersNext) {
+    customersNext.addEventListener('click', function() {
+      if (currentIndex < tableRows.length - 1) {
+        goToCard(currentIndex + 1);
+        restartAutoplay();
+      }
+    });
+  }
+
+  // Touch/Swipe support
+  var touchStartX = 0;
+  var touchEndX = 0;
+
+  carouselTrack.addEventListener('touchstart', function(e) {
+    touchStartX = e.touches[0].clientX;
+    stopAutoplay();
+  }, { passive: true });
+
+  carouselTrack.addEventListener('touchend', function(e) {
+    touchEndX = e.changedTouches[0].clientX;
+    var diff = touchStartX - touchEndX;
+    var threshold = 50;
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0 && currentIndex < tableRows.length - 1) {
+        goToCard(currentIndex + 1);
+      } else if (diff < 0 && currentIndex > 0) {
+        goToCard(currentIndex - 1);
+      }
+    }
+    restartAutoplay();
+  }, { passive: true });
+
+  // Pause on hover
+  if (carouselTrack.parentElement) {
+    carouselTrack.parentElement.addEventListener('mouseenter', stopAutoplay);
+    carouselTrack.parentElement.addEventListener('mouseleave', restartAutoplay);
+  }
+
+  // Resize handler
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      goToCard(currentIndex);
+    }, 200);
+  });
+
+  // Initialize
+  buildCarouselCards();
+  buildDots();
+  goToCard(0);
+  startAutoplay();
+})();
+
