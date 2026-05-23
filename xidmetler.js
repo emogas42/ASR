@@ -468,3 +468,241 @@ tabBtns.forEach(btn => {
   });
 });
 
+/* ═══════════════════════════════════════════════════════════════
+   MODAL SYSTEM - Xidmət Kartları üçün Tam Modal İdarəetmə
+   ═══════════════════════════════════════════════════════════════ */
+
+// ── Modal Açma ─────────────────────────────────────────────────
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) {
+    console.error('Modal tapılmadı:', modalId);
+    return;
+  }
+
+  // Scroll pozisiyasını saxla (səhifəni sabit saxlamaq üçün)
+  const scrollY = window.scrollY || window.pageYOffset;
+  document.body.style.position = 'fixed';
+  document.body.style.top = '-' + scrollY + 'px';
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+  document.body.dataset.scrollY = scrollY;
+
+  // Modalı göstər
+  modal.classList.add('active');
+  document.body.classList.add('modal-open');
+
+  // Modal container scroll position reset
+  const container = modal.querySelector('.modal-container');
+  if (container) {
+    container.scrollTop = 0;
+  }
+
+  // Focus trap üçün
+  const focusableElements = modal.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+
+  // Escape ilə bağlama
+  document.addEventListener('keydown', handleEscape);
+}
+
+// ── Modal Bağlama ────────────────────────────────────────────────
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (!modal) return;
+
+  // Modalı gizlət
+  modal.classList.remove('active');
+  document.body.classList.remove('modal-open');
+
+  // Səhifə scrollunu bərpa et
+  const scrollY = document.body.dataset.scrollY || '0';
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  window.scrollTo(0, parseInt(scrollY || '0'));
+  delete document.body.dataset.scrollY;
+
+  // Escape listener sil
+  document.removeEventListener('keydown', handleEscape);
+}
+
+// ── Escape Handler ───────────────────────────────────────────────
+function handleEscape(e) {
+  if (e.key === 'Escape') {
+    const activeModal = document.querySelector('.modal-overlay.active');
+    if (activeModal) {
+      closeModal(activeModal.id);
+    }
+  }
+}
+
+// ── Overlay Click ilə Bağlama ────────────────────────────────────
+function initOverlayClick() {
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', function(e) {
+      // Sadece overlay-e click olunubsa bağla (container-e yox)
+      if (e.target === this) {
+        closeModal(this.id);
+      }
+    });
+  });
+}
+
+// ── Kart Click Event-ləri ────────────────────────────────────────
+function initFeatureCards() {
+  const cards = document.querySelectorAll('.feature-card[data-modal]');
+
+  cards.forEach(card => {
+    // Cursor pointer əlavə et
+    card.style.cursor = 'pointer';
+
+    card.addEventListener('click', function(e) {
+      const modalId = this.dataset.modal;
+      if (modalId) {
+        openModal(modalId);
+      }
+    });
+
+    // Hover effekti
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-8px)';
+    });
+
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = '';
+    });
+  });
+}
+
+// ── Accordion (Mstep) Toggle ─────────────────────────────────────
+function toggleMstep(element) {
+  // Bütün qardaş elementləri bağla (accordion davranışı - optional)
+  // Əgər bir açılırsa digərləri bağlansın istəyirsinizsə aşağıdakı kodu aktiv edin
+  /*
+  const parent = element.closest('.modal-steps');
+  if (parent) {
+    parent.querySelectorAll('.mstep.ms-open').forEach(openStep => {
+      if (openStep !== element) {
+        openStep.classList.remove('ms-open');
+      }
+    });
+  }
+  */
+
+  // Click olunan elementi toggle et
+  element.classList.toggle('ms-open');
+}
+
+// ── Scrollbar Width Hesablama (padding-right fix) ────────────────
+function getScrollbarWidth() {
+  const outer = document.createElement('div');
+  outer.style.visibility = 'hidden';
+  outer.style.overflow = 'scroll';
+  outer.style.msOverflowStyle = 'scrollbar';
+  document.body.appendChild(outer);
+
+  const inner = document.createElement('div');
+  outer.appendChild(inner);
+
+  const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+  outer.parentNode.removeChild(outer);
+
+  return scrollbarWidth;
+}
+
+// ── CSS Dəyişənləri Yoxlama və Təyin Et ──────────────────────────
+function initCSSVariables() {
+  const root = document.documentElement;
+
+  // Əgər CSS dəyişənləri təyin olunmayıbsa default dəyərlər
+  const defaults = {
+    '--bg-card': '#ffffff',
+    '--bg-secondary': '#f8fafc',
+    '--border': '#e2e8f0',
+    '--text': '#334155',
+    '--text-muted': '#64748b',
+    '--heading': '#0f172a',
+    '--gold': '#c8922a',
+    '--navy': '#1b4280',
+    '--haqqimizda-title': '#e8e4dc'
+  };
+
+  Object.entries(defaults).forEach(([key, value]) => {
+    const current = getComputedStyle(root).getPropertyValue(key).trim();
+    if (!current) {
+      root.style.setProperty(key, value);
+    }
+  });
+
+  // Scrollbar width dəyişəni
+  const sbWidth = getScrollbarWidth();
+  root.style.setProperty('--scrollbar-width', sbWidth + 'px');
+}
+
+// ── Responsive Düzəlişlər ─────────────────────────────────────────
+function initResponsiveFixes() {
+  // Mobil cihazlarda viewport height düzəlişi
+  function setVH() {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+  }
+
+  setVH();
+  window.addEventListener('resize', setVH);
+
+  // iOS Safari bottom bar problemi üçün
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (isIOS) {
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.style.paddingBottom = 'env(safe-area-inset-bottom, 20px)';
+    });
+  }
+}
+
+// ── Z-Index Düzəlişləri ──────────────────────────────────────────
+function fixZIndex() {
+  // Navbar z-index-ini yoxla və modal-dan aşağı sal
+  const navbar = document.querySelector('nav, .navbar, header, .header');
+  if (navbar) {
+    const navZIndex = parseInt(window.getComputedStyle(navbar).zIndex) || 100;
+    if (navZIndex >= 9000) {
+      navbar.style.zIndex = '8999';
+    }
+  }
+
+  // Modal overlay-lərin z-index-ini təmin et
+  document.querySelectorAll('.modal-overlay').forEach((modal, index) => {
+    modal.style.zIndex = (9000 + index).toString();
+  });
+}
+
+// ── İnitializasiya ───────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+  initCSSVariables();
+  initFeatureCards();
+  initOverlayClick();
+  initResponsiveFixes();
+  fixZIndex();
+
+  // Close button event listener-ləri (onclick attribute alternativi)
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    // onclick attribute varsa, event listener əlavə et
+    const overlay = btn.closest('.modal-overlay');
+    if (overlay && !btn.onclick) {
+      btn.addEventListener('click', function() {
+        closeModal(overlay.id);
+      });
+    }
+  });
+
+  console.log('✅ Modal sistemi aktivləşdirildi');
+});
+
