@@ -1045,7 +1045,7 @@ body.dark-mode .process-grid::before {
 
 }
 .exp-arrow{
-  top: 66%;
+  top: 62%;
 }
 @media (max-width:768px) {
   .exp-arrow{
