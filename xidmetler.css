@@ -3145,3 +3145,48 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 .dark-mode .section-title em { color: var(--gold); }
 .section-subtitle { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin: auto; }
 
+.experts-carousel-wrap {
+  position: relative; /* Oxların bu çərçivədən kənara çıxmaması üçün vacibdir */
+  width: 100%;
+}
+/* Hər iki ox üçün ortaq stillər */
+.exp-arrow {
+  position: absolute;
+  top: 50%;             /* Yuxarıdan tam ortalayır */
+  transform: translateY(-50%); /* Şaquli mərkəzləşdirməni tam dəqiqləşdirir */
+  z-index: 10;          /* Kartların altında qalmamaq üçün */
+  width: 44px;
+  height: 44px;
+  color: var(--haqqimizda-title);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.exp-arrow:hover {
+  background: var(--gold);
+}
+
+/* Sol düymənin yeri */
+.exp-prev {
+  left: 22px; /* Karuseldən bir az sola çıxarır (Zövqə görə 0 və ya 10px edə bilərsən) */
+}
+
+/* Sağ düymənin yeri */
+.exp-next {
+  right: 22px; /* Karuseldən bir az sağa çıxarır */
+}
+
+/* MOBİL REJİM ÜÇÜN (Ekran kiçiləndə oxların kənara daşmaması üçün) */
+@media (max-width: 768px) {
+  .exp-prev {
+    left: 5px;  /* Mobildə daxilə doğru çəkilir */
+  }
+  
+  .exp-next {
+    right: 5px; /* Mobildə daxilə doğru çəkilir */
+  }
+}
