@@ -8,7 +8,13 @@
 }
 
 /* Navbar-ı modal-dan aşağı sal */
-nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
+nav,
+.navbar,
+header,
+.header,
+.site-header,
+.main-nav,
+.top-bar {
   z-index: 1000 !important;
   position: relative;
 }
@@ -30,7 +36,8 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.32s ease, visibility 0.32s ease;
-  overflow: hidden; /* Overlay scroll etməsin! */
+  overflow: hidden;
+  /* Overlay scroll etməsin! */
 }
 
 .modal-overlay.active {
@@ -43,12 +50,13 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   position: relative;
   width: 100%;
   max-width: 680px;
-  max-height: 85vh; /* Ekranın 85%-dən çox olmasın */
+  max-height: 85vh;
+  /* Ekranın 85%-dən çox olmasın */
   margin: auto;
   background: var(--bg-card, #ffffff);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 32px 80px rgba(11,31,58,0.28), 0 0 0 1px rgba(200,146,42,0.12);
+  box-shadow: 0 32px 80px rgba(11, 31, 58, 0.28), 0 0 0 1px rgba(200, 146, 42, 0.12);
   transform: translateY(28px) scale(0.97);
   transition: transform 0.38s cubic-bezier(0.34, 1.26, 0.64, 1);
   display: flex;
@@ -86,9 +94,9 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #fff;
   display: flex;
   align-items: center;
@@ -98,7 +106,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
 }
 
 .modal-close:hover {
-  background: rgba(255,255,255,0.28);
+  background: rgba(255, 255, 255, 0.28);
   transform: scale(1.08);
 }
 
@@ -108,7 +116,8 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   height: 220px;
   min-height: 220px;
   overflow: hidden;
-  flex-shrink: 0; /* Hero sıxılmasın! */
+  flex-shrink: 0;
+  /* Hero sıxılmasın! */
 }
 
 .modal-hero-img {
@@ -132,7 +141,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
 .modal-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, rgba(11,31,58,0.3) 0%, rgba(11,31,58,0.75) 100%);
+  background: linear-gradient(160deg, rgba(11, 31, 58, 0.3) 0%, rgba(11, 31, 58, 0.75) 100%);
   padding: 2rem 2rem 1.75rem;
   display: flex;
   flex-direction: column;
@@ -170,7 +179,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
 
 .modal-subtitle {
   font-size: 0.78rem;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255, 255, 255, 0.72);
   font-weight: 400;
   margin: 0;
   line-height: 1.5;
@@ -182,8 +191,10 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  overflow-y: auto; /* Body scroll etsin! */
-  flex: 1; /* Qalan yer tutsun */
+  overflow-y: auto;
+  /* Body scroll etsin! */
+  flex: 1;
+  /* Qalan yer tutsun */
 }
 
 .modal-about p {
@@ -323,7 +334,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
 }
 
 .mstep.ms-open .mstep-right {
-  border-color: rgba(200,146,42,0.18);
+  border-color: rgba(200, 146, 42, 0.18);
 }
 
 .mstep-head {
@@ -339,7 +350,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   height: 34px;
   min-width: 34px;
   border-radius: 8px;
-  background: rgba(27,66,128,0.07);
+  background: rgba(27, 66, 128, 0.07);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -393,7 +404,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   justify-content: center;
   flex-shrink: 0;
   color: var(--text-muted, #64748b);
-  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), background 0.3s, border-color 0.3s;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s, border-color 0.3s;
 }
 
 .mstep-chev svg {
@@ -418,7 +429,7 @@ nav, .navbar, header, .header, .site-header, .main-nav, .top-bar {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.32s ease, padding-bottom 0.36s ease;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.32s ease, padding-bottom 0.36s ease;
   padding-bottom: 0;
 }
 
@@ -445,12 +456,12 @@ body.modal-open {
 
 /* ── DARK MODE ───────────────────────────────────────────────────── */
 .dark-mode .modal-container {
-  box-shadow: 0 32px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(200,146,42,0.14);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(200, 146, 42, 0.14);
 }
 
 .dark-mode .mstep-num {
   background: var(--bg-secondary, #1e293b);
-  border-color: rgba(255,255,255,0.1);
+  border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 0 4px var(--bg-card, #0f172a);
 }
 
@@ -461,7 +472,7 @@ body.modal-open {
 }
 
 .dark-mode .mstep-icon {
-  background: rgba(200,146,42,0.09);
+  background: rgba(200, 146, 42, 0.09);
 }
 
 .dark-mode .mstep-icon svg {
@@ -479,7 +490,7 @@ body.modal-open {
 }
 
 .dark-mode .modal-meta-strip {
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .dark-mode .meta-val {
@@ -664,7 +675,7 @@ body.modal-open {
   }
 }
 
-<<<<<<< HEAD
+
 /* Landscape mode */
 @media (max-height: 500px) and (orientation: landscape) {
   .modal-overlay {
@@ -688,7 +699,7 @@ body.modal-open {
 }
 
 /* ── REDUCED MOTION ─────────────────────────────────────────────── */
-=======
+
 /* ═══════════════════════════════════════════════════════════════
    3. TABLE STYLES — Clients Table (Müştərilər Cədvəli)
    ═══════════════════════════════════════════════════════════════ */
@@ -1032,11 +1043,11 @@ body.modal-open {
     align-items: stretch;
     gap: 0.75rem;
   }
-  
+
   .table-search {
     max-width: 100%;
   }
-  
+
   .table-filter {
     justify-content: flex-start;
     overflow-x: auto;
@@ -1044,7 +1055,7 @@ body.modal-open {
     padding-bottom: 4px;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .filter-btn {
     white-space: nowrap;
     flex-shrink: 0;
@@ -1054,11 +1065,11 @@ body.modal-open {
   .clients-table td {
     padding: 0.875rem 1rem;
   }
-  
+
   .col-logo {
     width: 50px;
   }
-  
+
   .client-logo-box {
     width: 40px;
     height: 40px;
@@ -1070,6 +1081,7 @@ body.modal-open {
    ═══════════════════════════════════════════════════════════════ */
 
 @media (max-width: 640px) {
+
   /* thead gizlət */
   .clients-table thead {
     display: none;
@@ -1083,7 +1095,7 @@ body.modal-open {
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     background: var(--bg-card);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     transition: box-shadow 0.25s ease, border-color 0.25s ease;
   }
 
@@ -1172,9 +1184,7 @@ body.modal-open {
   }
 }
 
-/* Reduced Motion */
->>>>>>> a7b6c8d12735a146fa3e4333d6aa1c254128db0d
-@media (prefers-reduced-motion: reduce) {
+
   .modal-overlay,
   .modal-container,
   .mstep-panel,
@@ -1189,7 +1199,7 @@ body.modal-open {
   .modal-container {
     transform: none !important;
   }
-}
+
 
 /* ── iOS SAFARI FIXES ───────────────────────────────────────────── */
 @supports (-webkit-touch-callout: none) {
