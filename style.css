@@ -1986,8 +1986,8 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 
 /* Yenilənmiş Slayd Oxları Dizaynı */
 .exp-arrow {
-  position: absolute;
-  top: 55.3%; /* Kartların mərkəzinə daha yaxın */
+  position:absolute;
+  top: 50.3%; /* Kartların mərkəzinə daha yaxın */
   transform: translateY(-50%);
   z-index: 25;
   width: 54px;
@@ -1997,7 +1997,7 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
   border: 1px solid var(--border);
   color: var(--navy);
   font-size: 18px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -2050,6 +2050,7 @@ body.dark-mode .exp-arrow:hover {
     top: auto;
     bottom: -10px; /* Mobildə aşağıya, nöqtələrin yanına keçir */
     transform: none;
+    display: none;
   }
   
   .exp-prev { left: 2%; }
