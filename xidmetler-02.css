@@ -747,3 +747,741 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 .fade-in-delay-2 { transition-delay: 0.2s; }
 .fade-in-delay-3 { transition-delay: 0.3s; }
 .fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* ============================================================
+   LAYIHELER-KATALOG.CSS — ASR Development Consulting Group
+   Qanunvericilik Layihələri Kataloqu
+   Faydalar section-dan sonra gəlir.
+   xidmetler.css + xidmetler-02.css ilə birlikdə işləyir.
+   ============================================================ */
+ 
+/* ── Section Wrapper ─────────────────────────────────────── */
+.katalog-section {
+  background: var(--bg);
+  padding: 6rem 2rem;
+  position: relative;
+}
+ 
+.katalog-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 40% at 10% 50%, rgba(26,86,219,0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 60% at 90% 20%, rgba(200,146,42,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+ 
+.katalog-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+ 
+/* ── Section Header ──────────────────────────────────────── */
+.katalog-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+ 
+.katalog-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+ 
+.katalog-eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: inline-block;
+}
+ 
+.katalog-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.2;
+  margin: 0 0 0.9rem;
+}
+ 
+.katalog-title em {
+  font-style: normal;
+  color: var(--accent);
+}
+ 
+.katalog-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  max-width: 600px;
+  margin: 0 auto;
+}
+ 
+/* ── Toolbar: Filter + Search + Count ───────────────────── */
+.katalog-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+ 
+.katalog-filters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+ 
+.kat-filter-btn {
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  background: var(--bg-section);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+ 
+.kat-filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+ 
+.kat-filter-btn.active {
+  background: linear-gradient(135deg, var(--navy), #2563eb);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 3px 12px rgba(26, 86, 219, 0.28);
+}
+ 
+.katalog-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+ 
+.kat-search-wrap {
+  position: relative;
+}
+ 
+.kat-search-wrap i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: var(--text-light);
+  pointer-events: none;
+}
+ 
+.kat-search {
+  padding: 8px 14px 8px 34px;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  background: var(--bg-section);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-family: inherit;
+  width: 180px;
+  transition: border-color 0.22s, box-shadow 0.22s, width 0.3s;
+  outline: none;
+}
+ 
+.kat-search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+  width: 220px;
+}
+ 
+.kat-search::placeholder {
+  color: var(--text-light);
+}
+ 
+.kat-count-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid rgba(26,86,219,0.15);
+  white-space: nowrap;
+}
+ 
+.kat-count-num {
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+ 
+/* ── Accordion List ──────────────────────────────────────── */
+.kat-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+}
+ 
+/* ── Single Accordion Card ───────────────────────────────── */
+.kat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  position: relative;
+}
+ 
+.kat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--gold) 100%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 4px 0 0 4px;
+}
+ 
+.kat-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+ 
+.kat-card.kat-open {
+  border-color: var(--navy);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+ 
+.kat-card.kat-open::before {
+  transform: scaleY(1);
+}
+ 
+.kat-card.kat-hidden {
+  display: none;
+}
+ 
+/* ── Card Header (clickable row) ─────────────────────────── */
+.kat-card-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 22px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+ 
+.kat-card-header:hover {
+  background: var(--accent-light);
+}
+ 
+.kat-card.kat-open .kat-card-header {
+  background: var(--accent-light);
+}
+ 
+/* ── Left side of header ─────────────────────────────────── */
+.kat-card-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+}
+ 
+.kat-card-num {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.16;
+  line-height: 1;
+  flex-shrink: 0;
+  letter-spacing: -0.02em;
+  min-width: 34px;
+  transition: opacity 0.3s ease;
+  font-variant-numeric: tabular-nums;
+}
+ 
+.kat-card.kat-open .kat-card-num {
+  opacity: 0.55;
+}
+ 
+.kat-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+ 
+.kat-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1px solid rgba(26, 86, 219, 0.15);
+  padding: 3px 9px;
+  border-radius: 100px;
+  width: fit-content;
+}
+ 
+.kat-card-badge i { font-size: 0.63rem; }
+ 
+/* Badge variants */
+.kat-badge-gold  { color: var(--gold); background: var(--gold-pale); border-color: rgba(200,146,42,0.2); }
+.kat-badge-teal  { color: #0d9488; background: rgba(13,148,136,0.08); border-color: rgba(13,148,136,0.18); }
+.kat-badge-green { color: #16a34a; background: rgba(22,163,74,0.08);  border-color: rgba(22,163,74,0.18); }
+ 
+.dark-mode .kat-badge-teal  { color: #2dd4bf; background: rgba(45,212,191,0.08);  border-color: rgba(45,212,191,0.18); }
+.dark-mode .kat-badge-green { color: #4ade80; background: rgba(74,222,128,0.08); border-color: rgba(74,222,128,0.18); }
+ 
+.kat-card-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.35;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ 
+/* ── Right side of header ────────────────────────────────── */
+.kat-card-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+ 
+.kat-card-year {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+ 
+.kat-card-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-section);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition:
+    transform 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+  flex-shrink: 0;
+}
+ 
+.kat-card-arrow i { font-size: 0.68rem; }
+ 
+.kat-card.kat-open .kat-card-arrow {
+  transform: rotate(180deg);
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+ 
+/* ── Collapsible body ────────────────────────────────────── */
+.kat-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.48s cubic-bezier(0.16, 1, 0.3, 1);
+}
+ 
+/* ── Inner grid: description + meta ─────────────────────── */
+.kat-card-inner {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 32px;
+  padding: 0 26px 26px 26px;
+  border-top: 1px solid var(--border);
+}
+ 
+.kat-card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 22px;
+}
+ 
+.kat-card-desc p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0;
+}
+ 
+/* ── Meta column: detail rows + chips ───────────────────── */
+.kat-card-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 22px;
+}
+ 
+.kat-detail-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 12px;
+  background: var(--bg-section);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+ 
+.kat-detail-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+ 
+.kat-detail-label i {
+  font-size: 0.66rem;
+  color: var(--accent);
+}
+ 
+.kat-detail-val {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--heading);
+  text-align: right;
+}
+ 
+.kat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+ 
+.kat-chip {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid rgba(26, 86, 219, 0.15);
+  white-space: nowrap;
+}
+ 
+/* ── Empty State ─────────────────────────────────────────── */
+.kat-empty {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  gap: 12px;
+}
+ 
+.kat-empty.show {
+  display: flex;
+}
+ 
+.kat-empty i {
+  font-size: 2.5rem;
+  color: var(--border);
+}
+ 
+.kat-empty-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+ 
+.kat-empty-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+ 
+/* ── Pagination ──────────────────────────────────────────── */
+.katalog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+ 
+.kat-results-info {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+ 
+.kat-results-info strong {
+  color: var(--heading);
+  font-weight: 700;
+}
+ 
+.kat-pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+ 
+.kat-page-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+ 
+.kat-page-btn:hover:not(.kat-page-disabled):not(.kat-page-active) {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-pale);
+}
+ 
+.kat-page-btn.kat-page-active {
+  background: linear-gradient(135deg, var(--gold), var(--orange));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(200, 146, 42, 0.3);
+  font-weight: 800;
+}
+ 
+.kat-page-btn.kat-page-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+ 
+/* Dots separator */
+.kat-page-dots {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  padding: 0 2px;
+  user-select: none;
+}
+ 
+/* ── Dark mode overrides ─────────────────────────────────── */
+.dark-mode .katalog-toolbar {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+ 
+.dark-mode .kat-search {
+  background: var(--bg-section);
+  color: var(--text);
+  border-color: var(--border);
+}
+ 
+.dark-mode .kat-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+ 
+.dark-mode .kat-card.kat-open {
+  border-color: var(--navy-light);
+}
+ 
+.dark-mode .kat-card-header:hover,
+.dark-mode .kat-card.kat-open .kat-card-header {
+  background: var(--accent-light);
+}
+ 
+.dark-mode .kat-card-arrow {
+  background: var(--bg-section);
+  border-color: var(--border);
+}
+ 
+.dark-mode .kat-card.kat-open .kat-card-arrow {
+  background: var(--navy-light, #1e3a6e);
+  border-color: var(--navy-light, #1e3a6e);
+  color: #fff;
+}
+ 
+.dark-mode .kat-detail-row {
+  background: var(--bg);
+  border-color: var(--border);
+}
+ 
+.dark-mode .kat-chip {
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: rgba(77,135,245,0.18);
+}
+ 
+.dark-mode .kat-page-btn {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+ 
+.dark-mode .kat-filter-btn {
+  background: var(--bg-section);
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+ 
+.dark-mode .kat-filter-btn.active {
+  background: linear-gradient(135deg, #1e3a6e, #2563eb);
+}
+ 
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 780px) {
+  .kat-card-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 18px 20px 18px;
+  }
+}
+ 
+@media (max-width: 640px) {
+  .katalog-section {
+    padding: 4rem 1rem;
+  }
+ 
+  .katalog-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+ 
+  .katalog-toolbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+ 
+  .kat-search {
+    width: 140px;
+  }
+ 
+  .kat-search:focus {
+    width: 160px;
+  }
+ 
+  .kat-card-header {
+    padding: 16px 14px;
+    gap: 10px;
+  }
+ 
+  .kat-card-left {
+    gap: 11px;
+  }
+ 
+  .kat-card-num {
+    font-size: 1.1rem;
+    min-width: 28px;
+  }
+ 
+  .kat-card-year {
+    display: none;
+  }
+ 
+  .kat-card-title {
+    white-space: normal;
+    text-overflow: unset;
+    overflow: visible;
+    font-size: 0.87rem;
+  }
+ 
+  .kat-card-inner {
+    padding: 0 14px 18px 14px;
+  }
+ 
+  .kat-detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+ 
+  .kat-detail-val {
+    text-align: left;
+  }
+ 
+  .katalog-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+ 
+  .kat-page-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+ 
+  .katalog-filters {
+    gap: 5px;
+  }
+ 
+  .kat-filter-btn {
+    padding: 5px 11px;
+    font-size: 0.62rem;
+  }
+}
