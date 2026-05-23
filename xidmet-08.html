@@ -15,145 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="xidmetler.css" />
-  <link rel="stylesheet" href="xidmet-01.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="layiheler.css">
-  <style>
-    /* ============================================================
-       XIDMET-08.CSS — Bitki Sağlamlığı və Aqronomluq Xidmətləri
-       ASR Development Consulting Group
-       ============================================================ */
-
-    /* Hero gradient override for Agronomy page */
-    .hero {
-      background: linear-gradient(135deg, #123368 0%, #1b4db2 60%, #5791ef 100%);
-    }
-    .dark-mode .hero {
-      background: linear-gradient(135deg, #060d18 0%, #0c2040 60%, #144697 100%);
-    }
-
-    /* Feature cards with icons instead of images */
-    .feature-icon i {
-      color: var(--gold);
-      font-size: 1.1rem;
-      transition: color 0.35s;
-    }
-    .feature-card:hover .feature-icon i {
-      color: #fff;
-    }
-
-    /* Benefits list styling */
-    .benefits-list i {
-      color: var(--gold);
-      font-size: 0.9rem;
-      margin-top: 4px;
-    }
-
-    /* Extra spacing for sections */
-    .section {
-      padding: 88px 0;
-    }
-    @media (max-width: 768px) {
-      .section {
-        padding: 60px 0;
-      }
-    }
-
-    /* CTA specific for xidmet-08 */
-    .cta-section {
-      background: var(--bg);
-      padding: 80px 0;
-    }
-    .cta-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 56px 48px;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--navy), var(--gold));
-    }
-    .cta-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-    .cta-title {
-      font-size: clamp(1.3rem, 3vw, 1.9rem);
-      font-weight: 800;
-      color: var(--heading);
-      margin-bottom: 14px;
-      line-height: 1.3;
-    }
-    .cta-title em {
-      color: var(--accent);
-      font-style: normal;
-    }
-    .cta-desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 36px;
-      max-width: 540px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    @media (max-width: 768px) {
-      .cta-box {
-        padding: 36px 24px;
-        margin: 0 1rem;
-      }
-    }
-
-    /* Reveal animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), 
-                  transform 0.65s cubic-bezier(0.4,0,0.2,1);
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Staggered delays */
-    .fade-in-delay-1 { transition-delay: 0.1s; }
-    .fade-in-delay-2 { transition-delay: 0.2s; }
-    .fade-in-delay-3 { transition-delay: 0.3s; }
-    .fade-in-delay-4 { transition-delay: 0.4s; }
-
-    /* Accessibility */
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        transition: none !important;
-        animation: none !important;
-        transform: none !important;
-        opacity: 1 !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="xidmetler-08.css">
 </head>
 
 <body>
@@ -418,303 +281,376 @@
     </div>
   </section>
 
-  <!-- Bitki Sağlamlığı və Aqronomluq Xidmətləri -->
-  <section class="section features-section" id="services">
+ <!-- Bitki sağlamlığı və aqronomluq xidmətləri - Timeline -->
+  <section class="section timeline-section" id="services">
     <div class="section-inner">
       <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Xidmət Paketi</div>
-        <h2 class="section-title">Bitki Sağlamlığı və <br/><em>Aqronomluq Xidmətləri</em></h2>
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Xidmət paketi</div>
+        <h2 class="section-title">Bitki sağlamlığı və <br/><em>aqronomluq xidmətləri</em></h2>
         <p class="section-subtitle">Məhsulun istehsalından ixracına qədər olan bütün mərhələlərdə təhlükəsizliyi təmin etmək, zərərvericilərin yayılmasının qarşısını almaq və beynəlxalq bazarlara çıxışı asanlaşdırmaq.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-eye"></i></div>
-          <div class="feature-title">Vegetasiya dövründə sahələrin monitorinqi və nəzarət</div>
-          <div class="feature-desc">Bitki inkişafının mütəmadi izlənilməsi və risklərin vaxtında müəyyən olunması təmin edilir.</div>
+      <div class="timeline-container reveal">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-eye"></i></div>
+          <div class="timeline-content">
+            <h3>Vegetasiya dövründə sahələrin monitorinqi və nəzarət</h3>
+            <p>Bitki inkişafının mütəmadi izlənilməsi və risklərin vaxtında müəyyən olunması təmin edilir.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-bug"></i></div>
-          <div class="feature-title">Zərərvericilər və bitki xəstəliklərinin diaqnostikası</div>
-          <div class="feature-desc">Xəstəlik və zərərvericilərə qarşı effektiv və təhlükəsiz mübarizə tədbirləri hazırlanır.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-bug"></i></div>
+          <div class="timeline-content">
+            <h3>Zərərvericilər və bitki xəstəliklərinin diaqnostikası və mübarizə protokollarının hazırlanması</h3>
+            <p>Xəstəlik və zərərvericilərə qarşı effektiv və təhlükəsiz mübarizə tədbirləri hazırlanır.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-          <div class="feature-title">Gübrələmə və bitki qidalanma planlarının hazırlanması</div>
-          <div class="feature-desc">Bitkinin inkişaf mərhələlərinə uyğun qidalanma proqramları tərtib olunur.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-leaf"></i></div>
+          <div class="timeline-content">
+            <h3>Gübrələmə və bitki qidalanma planlarının hazırlanması</h3>
+            <p>Bitkinin inkişaf mərhələlərinə uyğun qidalanma proqramları tərtib olunur.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <div class="feature-title">İnteqrir zərərverici idarəetmə (IPM) sistemlərinin tətbiqi</div>
-          <div class="feature-desc">Kimyəvi və bioloji metodların balanslı tətbiqi ilə davamlı mühafizə sistemi qurulur.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="timeline-content">
+            <h3>İnteqrir zərərverici idarəetmə (IPM) sistemlərinin tətbiqi</h3>
+            <p>Kimyəvi və bioloji metodların balanslı tətbiqi ilə davamlı mühafizə sistemi qurulur.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
-          <div class="feature-title">Pestisidlərin düzgün və təhlükəsiz istifadəsi üzrə məsləhət</div>
-          <div class="feature-desc">Pestisidlərin norma və təhlükəsizlik tələblərinə uyğun tətbiqi təmin edilir.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+          <div class="timeline-content">
+            <h3>Pestisidlərin düzgün və təhlükəsiz istifadəsi üzrə məsləhət</h3>
+            <p>Pestisidlərin norma və təhlükəsizlik tələblərinə uyğun tətbiqi təmin edilir.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-user-graduate"></i></div>
-          <div class="feature-title">Fermerlər üçün aqronomik konsultasiya və sahə dəstəyi</div>
-          <div class="feature-desc">Fermerlərə istehsal prosesində texniki və praktiki dəstək göstərilir.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-user-graduate"></i></div>
+          <div class="timeline-content">
+            <h3>Fermerlər üçün aqronomik konsultasiya və sahə dəstəyi</h3>
+            <p>Fermerlərə istehsal prosesində texniki və praktiki dəstək göstərilir.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
-          <div class="feature-title">Aqronomluq xidmətlərinin outsoursinqi</div>
-          <div class="feature-desc">Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması həyata keçirilir.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-handshake"></i></div>
+          <div class="timeline-content">
+            <h3>Aqronomluq xidmətlərinin outsoursinqi</h3>
+            <p>Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması həyata keçirilir.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
-          <div class="feature-title">Qalıq maddə (MRL) tələblərinə uyğunluğun təmin edilməsi</div>
-          <div class="feature-desc">Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğu yoxlanılır.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-vial-circle-check"></i></div>
+          <div class="timeline-content">
+            <h3>Qalıq maddə (MRL) tələblərinə uyğunluğun təmin edilməsi</h3>
+            <p>Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğu yoxlanılır.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
-          <div class="feature-title">Etiket və qablaşdırma uyğunluğunun yoxlanılması</div>
-          <div class="feature-desc">Etiket və qablaşdırmaların qanunvericiliyə uyğunluğu təmin edilir.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-tags"></i></div>
+          <div class="timeline-content">
+            <h3>Etiket və qablaşdırma uyğunluğunun yoxlanılması</h3>
+            <p>Etiket və qablaşdırmaların qanunvericiliyə uyğunluğu təmin edilir.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <div class="feature-title">Risk analizi və zərərverici təhlükə qiymətləndirilməsi</div>
-          <div class="feature-desc">Fitosanitar risklər analiz edilərək qabaqlayıcı tədbirlər müəyyən olunur.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="timeline-content">
+            <h3>Risk analizi və zərərverici təhlükə qiymətləndirilməsi</h3>
+            <p>Fitosanitar risklər analiz edilərək qabaqlayıcı tədbirlər müəyyən olunur.</p>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
-          <div class="feature-title">GLOBALG.A.P sertifikatının alınmasına dəstək</div>
-          <div class="feature-desc">Beynəlxalq kənd təsərrüfatı standartlarına uyğun sertifikatlaşdırma prosesi təşkil edilir.</div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"><i class="fa-solid fa-award"></i></div>
+          <div class="timeline-content">
+            <h3>GLOBALG.A.P sertifikatının alınmasına dəstək</h3>
+            <p>Beynəlxalq kənd təsərrüfatı standartlarına uyğun sertifikatlaşdırma prosesi təşkil edilir.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- İxrac üzrə Xidmətlər -->
-  <section class="section" id="ixrac" style="background: var(--bg);">
+  <!-- İxrac üzrə xidmətlər - Step Flow -->
+  <section class="section step-flow" id="ixrac">
     <div class="section-inner">
       <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Beynəlxalq Ticarət Dəstəyi</div>
-        <h2 class="section-title">İxrac üzrə <em>Xidmətlər</em></h2>
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Beynəlxalq ticarət dəstəyi</div>
+        <h2 class="section-title">İxrac üzrə <em>xidmətlər</em></h2>
         <p class="section-subtitle">Hədəf bazarların tələblərinin öyrənilməsindən ixrac sertifikatlarının alınmasına qədər tam dəstək.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
-          <div class="feature-title">İdxalçı ölkələrin məhsula dair tələblərinin araşdırılması və hesabatın hazırlanması</div>
-          <div class="feature-desc">Hədəf ölkələrin qanunvericilik və texniki tələbləri analiz olunur.</div>
+      <div class="steps-container reveal">
+        <div class="step-card">
+          <div class="step-arrow"></div>
+          <div class="step-number">1</div>
+          <h3>İdxalçı ölkələrin məhsula dair tələblərinin araşdırılması və hesabatın hazırlanması</h3>
+          <p>Hədəf ölkələrin qanunvericilik və texniki tələbləri analiz olunur.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-building"></i></div>
-          <div class="feature-title">İxracatçı şirkətin idxalçı ölkədə qeydiyyatı və təsdiqinə dəstək</div>
-          <div class="feature-desc">Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir.</div>
+        <div class="step-card">
+          <div class="step-arrow"></div>
+          <div class="step-number">2</div>
+          <h3>İxracatçı şirkətin idxalçı ölkədə qeydiyyatı və təsdiqinə dəstək</h3>
+          <p>Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-          <div class="feature-title">Məhsulların idxalçı ölkədə qeydiyyatına dəstək</div>
-          <div class="feature-desc">Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur.</div>
+        <div class="step-card">
+          <div class="step-arrow"></div>
+          <div class="step-number">3</div>
+          <h3>İdxalçı ölkə tələb etdiyi halda məhsulların idxalçı ölkədə qeydiyyatına dəstək</h3>
+          <p>Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
-          <div class="feature-title">Etiket tələblərinin araşdırılması və nümunələrin hazırlanması</div>
-          <div class="feature-desc">Etiketlərin beynəlxalq tələblərə uyğun hazırlanması təmin edilir.</div>
+        <div class="step-card">
+          <div class="step-arrow"></div>
+          <div class="step-number">4</div>
+          <h3>İdxalçı ölkənin məhsulun etiketlənməsinə dair tələblərinin araşdırılması və etiket nümunələrinin hazırlanması</h3>
+          <p>Etiketlərin beynəlxalq tələblərə uyğun hazırlanması təmin edilir.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-microscope"></i></div>
-          <div class="feature-title">Məhsulun müayinə parametrlərinin araşdırılması və əvvəlcədən müayinəsinin təşkili</div>
-          <div class="feature-desc">Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir.</div>
+        <div class="step-card">
+          <div class="step-arrow"></div>
+          <div class="step-number">5</div>
+          <h3>Məhsulun müayinə parametrlərinin araşdırılması və əvvəlcədən müayinəsinin təşkili</h3>
+          <p>Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-file-shield"></i></div>
-          <div class="feature-title">Fitosanitar tələblərə uyğunluğun auditi və sənədləşmə</div>
-          <div class="feature-desc">Təsərrüfatların fitosanitar standartlara uyğunluğu yoxlanılır və sənədləşdirilir.</div>
+        <div class="step-card">
+          <div class="step-arrow"></div>
+          <div class="step-number">6</div>
+          <h3>Bitkiçilik təsərrüfatlarının fitosanitar tələblərə uyğunluğunun auditi və sənədləşməsinin təşkili</h3>
+          <p>Təsərrüfatların fitosanitar standartlara uyğunluğu yoxlanılır və sənədləşdirilir.</p>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-file-signature"></i></div>
-          <div class="feature-title">İxrac müraciətləri və ixrac sertifikatlarının alınması</div>
-          <div class="feature-desc">İxrac üçün tələb olunan rəsmi müraciət və sertifikatlaşdırma prosesi həyata keçirilir.</div>
+        <div class="step-card">
+          <div class="step-number">7</div>
+          <h3>İxrac müraciətlərinin edilməsi və ixrac sertifikatlarının (fitosanitar, baytarlıq sağlamlıq) alınması</h3>
+          <p>İxrac üçün tələb olunan rəsmi müraciət və sertifikatlaşdırma prosesi həyata keçirilir.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pestisid və Gübrə Qeydiyyatı -->
-  <section class="section features-section" id="pestisid">
+  <!-- Pestisid və gübrə qeydiyyatı - Progress Stats -->
+  <section class="section progress-section" id="pestisid">
     <div class="section-inner">
       <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Qeydiyyat və Sənədləşmə</div>
-        <h2 class="section-title">Pestisid və Gübrə <em>Qeydiyyatı</em></h2>
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Qeydiyyat və sənədləşmə</div>
+        <h2 class="section-title">Pestisid və gübrə <em>qeydiyyatı</em></h2>
         <p class="section-subtitle">Texniki dosyelərdən etiket uyğunluğuna qədər qeydiyyat proseslərinin tam idarə edilməsi.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-file-lines"></i></div>
-          <div class="feature-title">Gübrə və pestisidlər üzrə texniki dosyelərin hazırlanması</div>
-          <div class="feature-desc">Qeydiyyat üçün tələb olunan texniki sənədlər hazırlanır.</div>
+      <div class="progress-container reveal">
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-file-lines"></i></div>
+          <div class="progress-content">
+            <h3>Gübrə və pestisidlər üzrə texniki dosyelərin hazırlanması</h3>
+            <p>Qeydiyyat üçün tələb olunan texniki sənədlər hazırlanır.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-rotate"></i></div>
-          <div class="feature-title">Qeydiyyat və təkrar qeydiyyat proseslərinin idarə olunması</div>
-          <div class="feature-desc">Məhsulların ilkin və yenilənmiş qeydiyyat prosedurları icra olunur.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-rotate"></i></div>
+          <div class="progress-content">
+            <h3>Qeydiyyat və təkrar qeydiyyat proseslərinin idarə olunması</h3>
+            <p>Məhsulların ilkin və yenilənmiş qeydiyyat prosedurları icra olunur.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
-          <div class="feature-title">Etiket və qablaşdırma uyğunluğunun yoxlanılması</div>
-          <div class="feature-desc">Məhsul etiketlərinin normativ tələblərə uyğunluğu yoxlanılır.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-tags"></i></div>
+          <div class="progress-content">
+            <h3>Etiket və qablaşdırma uyğunluğunun yoxlanılması</h3>
+            <p>Məhsul etiketlərinin normativ tələblərə uyğunluğu yoxlanılır.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-pen-to-square"></i></div>
-          <div class="feature-title">Mövcud sənədlərin yenilənməsi və düzəlişlərin aparılması</div>
-          <div class="feature-desc">Qüvvədə olan sənədlərdə tələb olunan dəyişikliklər həyata keçirilir.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-pen-to-square"></i></div>
+          <div class="progress-content">
+            <h3>Mövcud sənədlərin yenilənməsi və düzəlişlərin aparılması</h3>
+            <p>Qüvvədə olan sənədlərdə tələb olunan dəyişikliklər həyata keçirilir.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HACCP Sistemi -->
-  <section class="section" id="haccp" style="background: var(--bg);">
+  <!-- HACCP sistemi - Horizontal Indicators -->
+  <section class="section indicator-section" id="haccp">
     <div class="section-inner">
       <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Qida Təhlükəsizliyi İdarəetməsi</div>
-        <h2 class="section-title">HACCP <em>Sistemi</em></h2>
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Qida təhlükəsizliyi idarəetməsi</div>
+        <h2 class="section-title">HACCP <em>sistemi</em></h2>
         <p class="section-subtitle">Qida təhlükəsizliyi risklərinin idarə olunması, sanitariya planları və beynəlxalq standartlara uyğun sənədləşmə.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-shield-virus"></i></div>
-          <div class="feature-title">HACCP sisteminin qurulması və tətbiqi</div>
-          <div class="feature-desc">Qida təhlükəsizliyi risklərinin idarə olunması sistemi yaradılır.</div>
+      <div class="indicator-grid reveal">
+        <div class="indicator-card">
+          <div class="indicator-value"><i class="fa-solid fa-shield-virus" style="font-size:1.8rem;color:var(--navy);"></i></div>
+          <div class="indicator-label">HACCP sisteminin qurulması və tətbiqi</div>
+          <div class="indicator-desc">Qida təhlükəsizliyi risklərinin idarə olunması sistemi yaradılır.</div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-crosshairs"></i></div>
-          <div class="feature-title">Risk analizləri və kritik nəzarət nöqtələrinin (CCP) müəyyən edilməsi</div>
-          <div class="feature-desc">İstehsal prosesində risk yaradan nöqtələr müəyyən edilir və nəzarətə götürülür.</div>
+        <div class="indicator-card">
+          <div class="indicator-value"><i class="fa-solid fa-crosshairs" style="font-size:1.8rem;color:var(--navy);"></i></div>
+          <div class="indicator-label">Risk analizləri və CCP müəyyən edilməsi</div>
+          <div class="indicator-desc">İstehsal prosesində risk yaradan nöqtələr müəyyən edilir və nəzarətə götürülür.</div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-hands-bubbles"></i></div>
-          <div class="feature-title">Sanitariya və gigiyena planlarının hazırlanması</div>
-          <div class="feature-desc">Gigiyena və sanitariya qaydalarına uyğun prosedurlar hazırlanır.</div>
+        <div class="indicator-card">
+          <div class="indicator-value"><i class="fa-solid fa-hands-bubbles" style="font-size:1.8rem;color:var(--navy);"></i></div>
+          <div class="indicator-label">Sanitariya və gigiyena planlarının hazırlanması</div>
+          <div class="indicator-desc">Gigiyena və sanitariya qaydalarına uyğun prosedurlar hazırlanır.</div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-          <div class="feature-title">İşçi heyəti üçün HACCP və qida təhlükəsizliyi təlimləri</div>
-          <div class="feature-desc">Personal üçün praktiki və nəzəri təlimlər təşkil olunur.</div>
+        <div class="indicator-card">
+          <div class="indicator-value"><i class="fa-solid fa-chalkboard-user" style="font-size:1.8rem;color:var(--navy);"></i></div>
+          <div class="indicator-label">İşçi heyəti üçün HACCP və qida təhlükəsizliyi təlimləri</div>
+          <div class="indicator-desc">Personal üçün praktiki və nəzəri təlimlər təşkil olunur.</div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-          <div class="feature-title">Daxili audit və monitorinq sisteminin qurulması</div>
-          <div class="feature-desc">Müəssisədaxili nəzarət və yoxlama mexanizmləri formalaşdırılır.</div>
+        <div class="indicator-card">
+          <div class="indicator-value"><i class="fa-solid fa-magnifying-glass-chart" style="font-size:1.8rem;color:var(--navy);"></i></div>
+          <div class="indicator-label">Daxili audit və monitorinq sisteminin qurulması</div>
+          <div class="indicator-desc">Müəssisədaxili nəzarət və yoxlama mexanizmləri formalaşdırılır.</div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-file-contract"></i></div>
-          <div class="feature-title">Beynəlxalq standartlara uyğun sənədləşmə dəstəyi</div>
-          <div class="feature-desc">Sənədləşmə beynəlxalq qida təhlükəsizliyi standartlarına uyğun hazırlanır.</div>
+        <div class="indicator-card">
+          <div class="indicator-value"><i class="fa-solid fa-file-contract" style="font-size:1.8rem;color:var(--navy);"></i></div>
+          <div class="indicator-label">Beynəlxalq standartlara uyğun sənədləşmə dəstəyi</div>
+          <div class="indicator-desc">Sənədləşmə beynəlxalq qida təhlükəsizliyi standartlarına uyğun hazırlanır.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- İzlənmə Sistemi Xidmətləri -->
-  <section class="section features-section" id="izleme">
+
+   <!-- İzlənmə sistemi xidmətləri - Progress Stats -->
+  <section class="section progress-section" id="izleme">
     <div class="section-inner">
       <div class="section-header reveal">
-        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Şəffaflıq və Nəzarət</div>
-        <h2 class="section-title">İzlənmə Sistemi <em>Xidmətləri</em></h2>
+        <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Şəffaflıq və nəzarət</div>
+        <h2 class="section-title">İzlənmə sistemi <em>xidmətləri</em></h2>
         <p class="section-subtitle">Məhsulun bütün mərhələlər üzrə izlənilməsi, geri çağırma prosedurları və audit mexanizmləri.</p>
       </div>
-      <div class="features-grid">
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-barcode"></i></div>
-          <div class="feature-title">Məhsul izlənəbilirlilik sisteminin qurulması</div>
-          <div class="feature-desc">Məhsulun bütün mərhələlər üzrə izlənilməsi təmin edilir.</div>
+      <div class="progress-container reveal">
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-barcode"></i></div>
+          <div class="progress-content">
+            <h3>Məhsul izlənəbilirlilik sisteminin qurulması</h3>
+            <p>Məhsulun bütün mərhələlər üzrə izlənilməsi təmin edilir.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-qrcode"></i></div>
-          <div class="feature-title">Partiya (batch) və kodlaşdırma sistemlərinin yaradılması</div>
-          <div class="feature-desc">Məhsullar üçün kodlaşdırma və partiya idarəetmə sistemi qurulur.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-qrcode"></i></div>
+          <div class="progress-content">
+            <h3>Partiya (batch) və kodlaşdırma sistemlərinin yaradılması</h3>
+            <p>Məhsullar üçün kodlaşdırma və partiya idarəetmə sistemi qurulur.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 88%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-link"></i></div>
-          <div class="feature-title">İstehsal və tədarük zəncirinin sənədləşdirilməsi</div>
-          <div class="feature-desc">Tədarük və istehsal mərhələlərinin tam qeydiyyatı aparılır.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-link"></i></div>
+          <div class="progress-content">
+            <h3>İstehsal və tədarük zəncirinin sənədləşdirilməsi</h3>
+            <p>Tədarük və istehsal mərhələlərinin tam qeydiyyatı aparılır.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 92%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
-          <div class="feature-title">Geri çağırma (recall) prosedurlarının hazırlanması</div>
-          <div class="feature-desc">Riskli məhsulların bazardan operativ geri çağırılması sistemi hazırlanır.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <div class="progress-content">
+            <h3>Geri çağırma (recall) prosedurlarının hazırlanması</h3>
+            <p>Riskli məhsulların bazardan operativ geri çağırılması sistemi hazırlanır.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-table-list"></i></div>
-          <div class="feature-title">Qeydiyyat və nəzarət formalarının hazırlanması</div>
-          <div class="feature-desc">İzləmə və nəzarət üçün standart formalar hazırlanır.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-table-list"></i></div>
+          <div class="progress-content">
+            <h3>Qeydiyyat və nəzarət formalarının hazırlanması</h3>
+            <p>İzləmə və nəzarət üçün standart formalar hazırlanır.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 78%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-laptop-file"></i></div>
-          <div class="feature-title">Elektron və manual izləmə sistemlərinin tətbiqi</div>
-          <div class="feature-desc">Müəssisəyə uyğun izləmə sistemi tətbiq edilir.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-laptop-file"></i></div>
+          <div class="progress-content">
+            <h3>Elektron və manual izləmə sistemlərinin tətbiqi</h3>
+            <p>Müəssisəyə uyğun izləmə sistemi tətbiq edilir.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 82%"></div>
+            </div>
+          </div>
         </div>
-        <div class="feature-card reveal">
-          <div class="feature-icon"><i class="fa-solid fa-list-check"></i></div>
-          <div class="feature-title">Audit və monitorinq mexanizmlərinin qurulması</div>
-          <div class="feature-desc">Daimi nəzarət və uyğunluq yoxlama prosedurları yaradılır.</div>
+        <div class="progress-item">
+          <div class="progress-icon"><i class="fa-solid fa-list-check"></i></div>
+          <div class="progress-content">
+            <h3>Audit və monitorinq mexanizmlərinin qurulması</h3>
+            <p>Daimi nəzarət və uyğunluq yoxlama prosedurları yaradılır.</p>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Gözlənilən Nəticələr -->
-  <section class="section" id="neticeler" style="background: var(--bg);">
+  <!-- Gözlənilən nəticələr - Results Grid -->
+  <section class="section results-section" id="neticeler">
     <div class="section-inner">
       <div class="section-header reveal">
         <div class="section-eyebrow"><span class="section-eyebrow-dot"></span>Nəticə</div>
-        <h2 class="section-title">Gözlənilən <em>Nəticələr</em></h2>
+        <h2 class="section-title">Gözlənilən <em>nəticələr</em></h2>
         <p class="section-subtitle">Peşəkar dəstəyinizin aqrobiznesinizə gətirəcəyi konkret faydalar.</p>
       </div>
-      <div class="benefits-grid" style="margin-top: 48px;">
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-certificate"></i></div>
-            <div class="benefits-block-title">Sürətli Sertifikatlaşdırma</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-check"></i> Sertifikatlaşdırma və qeydiyyat proseslərinin daha sürətli icrası</li>
-          </ul>
+      <div class="results-grid reveal">
+        <div class="result-item">
+          <div class="result-check"><i class="fa-solid fa-check"></i></div>
+          <div class="result-text">Sertifikatlaşdırma və qeydiyyat proseslərinin daha sürətli icrası</div>
         </div>
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="benefits-block-title">Risklərin Minimuma Endirilməsi</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-check"></i> İxracda uyğunsuzluq risklərinin minimuma endirilməsi</li>
-          </ul>
+        <div class="result-item">
+          <div class="result-check"><i class="fa-solid fa-check"></i></div>
+          <div class="result-text">İxracda uyğunsuzluq risklərinin minimuma endirilməsi</div>
         </div>
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-chart-line"></i></div>
-            <div class="benefits-block-title">Məhsuldarlıq və Keyfiyyət</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-check"></i> Kənd təsərrüfatında məhsuldarlığın və keyfiyyətin artırılması</li>
-          </ul>
+        <div class="result-item">
+          <div class="result-check"><i class="fa-solid fa-check"></i></div>
+          <div class="result-text">Kənd təsərrüfatında məhsuldarlığın və keyfiyyətin artırılması</div>
         </div>
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-globe"></i></div>
-            <div class="benefits-block-title">Beynəlxalq Bazara Çıxış</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-check"></i> Beynəlxalq bazarlara çıxış imkanlarının genişlənməsi</li>
-          </ul>
+        <div class="result-item">
+          <div class="result-check"><i class="fa-solid fa-check"></i></div>
+          <div class="result-text">Beynəlxalq bazarlara çıxış imkanlarının genişlənməsi</div>
         </div>
-        <div class="benefits-block reveal">
-          <div class="benefits-block-header">
-            <div class="benefits-block-icon"><i class="fa-solid fa-award"></i></div>
-            <div class="benefits-block-title">Rəqabətli Sistem</div>
-          </div>
-          <ul class="benefits-list">
-            <li><i class="fa-solid fa-check"></i> Aqro-sektor üçün daha güclü və rəqabətli sistemin yaradılması</li>
-          </ul>
+        <div class="result-item">
+          <div class="result-check"><i class="fa-solid fa-check"></i></div>
+          <div class="result-text">Aqro-sektor üçün daha güclü və rəqabətli sistemin yaradılması</div>
         </div>
       </div>
     </div>
   </section>
+
+
 
     <!-- Komanda -->
       <section id="komanda">
@@ -933,13 +869,6 @@
                 </div>
               </div>
             </div>
-            <button class="exp-arrow exp-prev" aria-label="Əvvəlki">
-              <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="exp-arrow exp-next"  aria-label="Növbəti">
-              <i class="fa-solid fa-chevron-right"></i>
-          </div> 
-          </button>
           </div>
 
           <!-- /experts-track -->
@@ -1081,27 +1010,5 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
   <script src="xidmetler.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
-  <script>
-    // Footer year
-    document.getElementById('footer-year').textContent = new Date().getFullYear();
-    // Back to top
-    function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-    const backToTopBtn = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) backToTopBtn.classList.add('show');
-      else backToTopBtn.classList.remove('show');
-    });
-    // Reveal on scroll
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => revealObserver.observe(el));
-  </script>
 </body>
 </html>
