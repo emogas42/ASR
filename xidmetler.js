@@ -939,308 +939,126 @@ document.addEventListener('DOMContentLoaded', function() {
   goToCard(0);
   startAutoplay();
 })();
+  const aqroData = [
+    {
+      title: "Bitki Sağlamlığı və Aqronomluq Xidmətləri",
+      desc: "Məhsulun istehsalından ixracına qədər olan bütün mərhələlərdə təhlükəsizliyi təmin etmək, zərərvericilərin yayılmasının qarşısını almaq və beynəlxalq bazarlara çıxışı asanlaşdırmaq.",
+      icon: "fa-solid fa-seedling",
+      items: [
+        { title: "Vegetasiya dövründə sahələrin monitorinqi və nəzarət", desc: "Bitki inkişafının mütəmadi izlənilməsi və risklərin vaxtında müəyyən olunması təmin edilir." },
+        { title: "Zərərvericilər və bitki xəstəliklərinin diaqnostikası", desc: "Xəstəlik və zərərvericilərə qarşı effektiv və təhlükəsiz mübarizə tədbirləri hazırlanır." },
+        { title: "Gübrələmə və bitki qidalanma planları", desc: "Bitkinin inkişaf mərhələlərinə uyğun qidalanma proqramları tərtib olunur." },
+        { title: "İnteqrir zərərverici idarəetmə (IPM)", desc: "Kimyəvi və bioloji metodların balanslı tətbiqi ilə davamlı mühafizə sistemi qurulur." },
+        { title: "Pestisidlərin təhlükəsiz istifadəsi", desc: "Pestisidlərin norma və təhlükəsizlik tələblərinə uyğun tətbiqi təmin edilir." },
+        { title: "Fermerlər üçün aqronomik konsultasiya", desc: "Fermerlərə istehsal prosesində texniki və praktiki dəstək göstərilir." },
+        { title: "Aqronomluq xidmətlərinin outsoursinqi", desc: "Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması həyata keçirilir." },
+        { title: "Qalıq maddə (MRL) tələblərinə uyğunluq", desc: "Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğu yoxlanılır." },
+        { title: "Etiket və qablaşdırma uyğunluğu", desc: "Etiket və qablaşdırmaların qanunvericiliyə uyğunluğu təmin edilir." },
+        { title: "Risk analizi və təhlükə qiymətləndirilməsi", desc: "Fitosanitar risklər analiz edilərək qabaqlayıcı tədbirlər müəyyən olunur." },
+        { title: "GLOBALG.A.P sertifikat dəstəyi", desc: "Beynəlxalq kənd təsərrüfatı standartlarına uyğun sertifikatlaşdırma prosesi təşkil edilir." }
+      ]
+    },
+    {
+      title: "İxrac üzrə Xidmətlər",
+      desc: "Hədəf bazarların tələblərinin öyrənilməsindən ixrac sertifikatlarının alınmasına qədər tam dəstək.",
+      icon: "fa-solid fa-plane-departure",
+      items: [
+        { title: "İdxalçı ölkə tələblərinin araşdırılması", desc: "Hədəf ölkələrin qanunvericilik və texniki tələbləri analiz olunur." },
+        { title: "Şirkət qeydiyyatı və təsdiqi", desc: "Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir." },
+        { title: "Məhsul qeydiyyatı dəstəyi", desc: "Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur." },
+        { title: "Etiket tələbləri və nümunələr", desc: "Etiketlərin beynəlxalq tələblərə uyğun hazırlanması təmin edilir." },
+        { title: "Məhsul müayinə parametrləri", desc: "Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir." },
+        { title: "Fitosanitar audit və sənədləşmə", desc: "Təsərrüfatların fitosanitar standartlara uyğunluğu yoxlanılır və sənədləşdirilir." },
+        { title: "İxrac sertifikatlarının alınması", desc: "İxrac üçün tələb olunan rəsmi müraciət və sertifikatlaşdırma prosesi həyata keçirilir." }
+      ]
+    },
+    {
+      title: "Pestisid və Gübrə Qeydiyyatı",
+      desc: "Texniki dosyelərdən etiket uyğunluğuna qədər qeydiyyat proseslərinin tam idarə edilməsi.",
+      icon: "fa-solid fa-flask",
+      items: [
+        { title: "Texniki dosyelərin hazırlanması", desc: "Qeydiyyat üçün tələb olunan texniki sənədlər hazırlanır." },
+        { title: "Qeydiyyat prosesinin idarə olunması", desc: "Məhsulların ilkin və yenilənmiş qeydiyyat prosedurları icra olunur." },
+        { title: "Etiket uyğunluğunun yoxlanılması", desc: "Məhsul etiketlərinin normativ tələblərə uyğunluğu yoxlanılır." },
+        { title: "Sənədlərin yenilənməsi", desc: "Qüvvədə olan sənədlərdə tələb olunan dəyişikliklər həyata keçirilir." }
+      ]
+    },
+    {
+      title: "HACCP Sistemi",
+      desc: "Qida təhlükəsizliyi risklərinin idarə olunması, sanitariya planları və beynəlxalq standartlara uyğun sənədləşmə.",
+      icon: "fa-solid fa-shield-virus",
+      items: [
+        { title: "HACCP sisteminin qurulması", desc: "Qida təhlükəsizliyi risklərinin idarə olunması sistemi yaradılır." },
+        { title: "Risk analizi və CCP müəyyən edilməsi", desc: "İstehsal prosesində risk yaradan nöqtələr müəyyən edilir və nəzarətə götürülür." },
+        { title: "Sanitariya və gigiyena planları", desc: "Gigiyena və sanitariya qaydalarına uyğun prosedurlar hazırlanır." },
+        { title: "HACCP və qida təhlükəsizliyi təlimləri", desc: "Personal üçün praktiki və nəzəri təlimlər təşkil olunur." },
+        { title: "Daxili audit və monitorinq", desc: "Müəssisədaxili nəzarət və yoxlama mexanizmləri formalaşdırılır." },
+        { title: "Beynəlxalq standartlara uyğun sənədləşmə", desc: "Sənədləşmə beynəlxalq qida təhlükəsizliyi standartlarına uyğun hazırlanır." }
+      ]
+    },
+    {
+      title: "İzlənmə Sistemi Xidmətləri",
+      desc: "Məhsulun bütün mərhələlər üzrə izlənilməsi, geri çağırma prosedurları və audit mexanizmləri.",
+      icon: "fa-solid fa-barcode",
+      items: [
+        { title: "Məhsul izlənəbilirlik sistemi", desc: "Məhsulun bütün mərhələlər üzrə izlənilməsi təmin edilir." },
+        { title: "Partiya və kodlaşdırma sistemləri", desc: "Məhsullar üçün kodlaşdırma və partiya idarəetmə sistemi qurulur." },
+        { title: "Tədarük zəncirinin sənədləşdirilməsi", desc: "Tədarük və istehsal mərhələlərinin tam qeydiyyatı aparılır." },
+        { title: "Geri çağırma prosedurları", desc: "Riskli məhsulların bazardan operativ geri çağırılması sistemi hazırlanır." },
+        { title: "Qeydiyyat və nəzarət formaları", desc: "İzləmə və nəzarət üçün standart formalar hazırlanır." },
+        { title: "Elektron və manual izləmə", desc: "Müəssisəyə uyğun izləmə sistemi tətbiq edilir." },
+        { title: "Audit və monitorinq mexanizmləri", desc: "Daimi nəzarət və uyğunluq yoxlama prosedurları yaradılır." }
+      ]
+    },
+    {
+      title: "Gözlənilən Nəticələr",
+      desc: "Peşəkar dəstəyinizin aqrobiznesinizə gətirəcəyi konkret faydalar və uğurlar.",
+      icon: "fa-solid fa-trophy",
+      items: [
+        { title: "Sertifikatlaşdırma sürəti", desc: "Sertifikatlaşdırma və qeydiyyat proseslərinin daha sürətli icrası." },
+        { title: "İxrac riskinin azaldılması", desc: "İxracda uyğunsuzluq risklərinin minimuma endirilməsi." },
+        { title: "Məhsuldarlıq artımı", desc: "Kənd təsərrüfatında məhsuldarlığın və keyfiyyətin artırılması." },
+        { title: "Beynəlxalq bazar çıxışı", desc: "Beynəlxalq bazarlara çıxış imkanlarının genişlənməsi." },
+        { title: "Rəqabətli sistem", desc: "Aqro-sektor üçün daha güclü və rəqabətli sistemin yaradılması." }
+      ]
+    }
+  ];
 
-/* ============================================================
-   LAYIHELER-KATALOG.JS — ASR Development Consulting Group
-   Qanunvericilik Layihələri Kataloqu
-   Accordion + Filter + Search + Pagination (5/page, 20 total)
-   ============================================================ */
- 
-(function () {
-  'use strict';
- 
-  /* ── Konfiqurasiya ── */
-  var ITEMS_PER_PAGE = 5;
- 
-  /* ── DOM elementləri ── */
-  var accordion    = document.getElementById('katAccordion');
-  var filterBtns   = document.querySelectorAll('.kat-filter-btn');
-  var searchInput  = document.getElementById('katSearch');
-  var paginationEl = document.getElementById('katPagination');
-  var countNum     = document.getElementById('katCountNum');
-  var resultsInfo  = document.getElementById('katResultsInfo');
-  var emptyState   = document.getElementById('katEmpty');
- 
-  if (!accordion) return;
- 
-  /* ── Bütün accordion kartlarını al ── */
-  var allCards = Array.from(accordion.querySelectorAll('.kat-card'));
- 
-  /* ── State ── */
-  var state = {
-    filter: 'all',
-    search: '',
-    page: 1
-  };
- 
-  /* ═══════════════════════════════════════════════════════════
-     1. FİLTR + AXTARIŞ
-     ═══════════════════════════════════════════════════════════ */
-  function getFilteredCards() {
-    return allCards.filter(function (card) {
-      var category = card.getAttribute('data-category') || '';
-      var text     = (card.querySelector('.kat-card-title') || {}).textContent || '';
-      var desc     = (card.querySelector('.kat-card-desc')  || {}).textContent || '';
- 
-      var matchCat    = state.filter === 'all' || category === state.filter;
-      var matchSearch = !state.search ||
-        text.toLowerCase().indexOf(state.search) > -1 ||
-        desc.toLowerCase().indexOf(state.search) > -1;
- 
-      return matchCat && matchSearch;
-    });
+  let aqroScrollY = 0;
+
+  function aqroOpenModal(i) {
+    const d = aqroData[i];
+    const overlay = document.getElementById('aqroModalOverlay');
+    aqroScrollY = window.scrollY || window.pageYOffset;
+
+    document.getElementById('aqroModalIcon').innerHTML = `<i class="${d.icon}"></i>`;
+    document.getElementById('aqroModalTitle').textContent = d.title;
+    document.getElementById('aqroModalDesc').textContent = d.desc;
+    document.getElementById('aqroModalItems').innerHTML = d.items.map(item => `
+      <div class="aqro-modal-item">
+        <div class="aqro-modal-item-marker"><i class="fa-solid fa-check"></i></div>
+        <div class="aqro-modal-item-content">
+          <div class="aqro-modal-item-title">${item.title}</div>
+          <div class="aqro-modal-item-desc">${item.desc}</div>
+        </div>
+      </div>
+    `).join('');
+
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${aqroScrollY}px`;
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+    overlay.classList.add('active');
   }
- 
-  /* ═══════════════════════════════════════════════════════════
-     2. PAGİNATİON RENDER
-     ═══════════════════════════════════════════════════════════ */
-  function renderPagination(total) {
-    if (!paginationEl) return;
- 
-    var totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
-    if (state.page > totalPages) state.page = totalPages;
- 
-    paginationEl.innerHTML = '';
- 
-    /* ← Əvvəlki */
-    var prevBtn = document.createElement('button');
-    prevBtn.className = 'kat-page-btn' + (state.page === 1 ? ' kat-page-disabled' : '');
-    prevBtn.setAttribute('aria-label', 'Əvvəlki səhifə');
-    prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
-    if (state.page > 1) {
-      prevBtn.addEventListener('click', function () {
-        state.page--;
-        render();
-        scrollToSection();
-      });
-    }
-    paginationEl.appendChild(prevBtn);
- 
-    /* Səhifə nömrələri — smart window */
-    var win = buildPageWindow(totalPages, state.page);
-    var prev = null;
-    win.forEach(function (p) {
-      if (prev !== null && p - prev > 1) {
-        var dots = document.createElement('span');
-        dots.className = 'kat-page-dots';
-        dots.textContent = '…';
-        paginationEl.appendChild(dots);
-      }
-      (function (page) {
-        var btn = document.createElement('button');
-        btn.className = 'kat-page-btn' + (page === state.page ? ' kat-page-active' : '');
-        btn.textContent = page;
-        btn.setAttribute('aria-label', page + '. səhifə');
-        if (page === state.page) btn.setAttribute('aria-current', 'page');
-        btn.addEventListener('click', function () {
-          state.page = page;
-          render();
-          scrollToSection();
-        });
-        paginationEl.appendChild(btn);
-      })(p);
-      prev = p;
-    });
- 
-    /* → Növbəti */
-    var nextBtn = document.createElement('button');
-    nextBtn.className = 'kat-page-btn' + (state.page === totalPages ? ' kat-page-disabled' : '');
-    nextBtn.setAttribute('aria-label', 'Növbəti səhifə');
-    nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
-    if (state.page < totalPages) {
-      nextBtn.addEventListener('click', function () {
-        state.page++;
-        render();
-        scrollToSection();
-      });
-    }
-    paginationEl.appendChild(nextBtn);
+
+  function aqroCloseModal(e) {
+    if (e && e.target !== e.currentTarget) return;
+    document.getElementById('aqroModalOverlay').classList.remove('active');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    document.body.style.overflow = '';
+    window.scrollTo(0, aqroScrollY);
   }
- 
-  /* Smart page window: always show 1, last, ±1 around current */
-  function buildPageWindow(total, current) {
-    var set = {};
-    [1, total, current - 1, current, current + 1].forEach(function (p) {
-      if (p >= 1 && p <= total) set[p] = true;
-    });
-    return Object.keys(set).map(Number).sort(function (a, b) { return a - b; });
-  }
- 
-  /* ═══════════════════════════════════════════════════════════
-     3. ANA RENDER
-     ═══════════════════════════════════════════════════════════ */
-  function render() {
-    var filtered = getFilteredCards();
-    var total    = filtered.length;
-    var start    = (state.page - 1) * ITEMS_PER_PAGE;
-    var end      = start + ITEMS_PER_PAGE;
- 
-    /* Bütün kartları gizlət */
-    allCards.forEach(function (c) { c.classList.add('kat-hidden'); });
- 
-    /* Cari səhifə kartlarını göstər */
-    var pageCards = filtered.slice(start, end);
-    pageCards.forEach(function (card, i) {
-      card.classList.remove('kat-hidden');
-      /* GSAP varsa gözəl fade-in */
-      if (typeof gsap !== 'undefined') {
-        gsap.fromTo(card,
-          { opacity: 0, y: 14 },
-          { opacity: 1, y: 0, duration: 0.35, delay: i * 0.07, ease: 'power2.out' }
-        );
-      }
-    });
- 
-    /* Boş hal */
-    if (emptyState) {
-      emptyState.classList.toggle('show', total === 0);
-    }
- 
-    /* Sayğac */
-    if (countNum) countNum.textContent = total;
- 
-    /* Alt məlumat */
-    if (resultsInfo) {
-      var showing = Math.min(end, total) - start;
-      if (total === 0) {
-        resultsInfo.innerHTML = '<strong>0</strong> nəticə tapıldı';
-      } else {
-        resultsInfo.innerHTML =
-          '<strong>' + (start + 1) + '–' + Math.min(end, total) + '</strong>' +
-          ' / <strong>' + total + '</strong> layihə';
-      }
-    }
- 
-    /* Pagination */
-    renderPagination(total);
-  }
- 
-  /* Kataloq section-a yumşaq scroll */
-  function scrollToSection() {
-    var section = document.getElementById('katalog');
-    if (!section) return;
-    var nav    = document.getElementById('navbar');
-    var offset = nav ? nav.offsetHeight + 20 : 90;
-    var top    = section.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: top, behavior: 'smooth' });
-  }
- 
-  /* ═══════════════════════════════════════════════════════════
-     4. ACCORDION OPEN / CLOSE
-     ═══════════════════════════════════════════════════════════ */
-  allCards.forEach(function (card) {
-    var header = card.querySelector('.kat-card-header');
-    var body   = card.querySelector('.kat-card-body');
- 
-    if (!header || !body) return;
- 
-    header.addEventListener('click', function () {
-      var isOpen = card.classList.contains('kat-open');
- 
-      /* Digər açıqları bağla */
-      allCards.forEach(function (c) {
-        if (c !== card && c.classList.contains('kat-open')) {
-          c.classList.remove('kat-open');
-          var b = c.querySelector('.kat-card-body');
-          var h = c.querySelector('.kat-card-header');
-          if (b) b.style.maxHeight = '0';
-          if (h) h.setAttribute('aria-expanded', 'false');
-        }
-      });
- 
-      /* Cari kartı toggle et */
-      if (isOpen) {
-        card.classList.remove('kat-open');
-        body.style.maxHeight = '0';
-        header.setAttribute('aria-expanded', 'false');
-      } else {
-        card.classList.add('kat-open');
-        body.style.maxHeight = body.scrollHeight + 'px';
-        header.setAttribute('aria-expanded', 'true');
- 
-        /* Açılan kartı görünüşə gətir */
-        setTimeout(function () {
-          var nav    = document.getElementById('navbar');
-          var offset = nav ? nav.offsetHeight + 12 : 80;
-          var top    = card.getBoundingClientRect().top + window.pageYOffset - offset;
-          if (card.getBoundingClientRect().top < offset) {
-            window.scrollTo({ top: top, behavior: 'smooth' });
-          }
-        }, 100);
-      }
-    });
-  });
- 
-  /* ═══════════════════════════════════════════════════════════
-     5. FİLTR DÜYMƏLƏRİ
-     ═══════════════════════════════════════════════════════════ */
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      state.filter = btn.getAttribute('data-filter') || 'all';
-      state.page   = 1;
-      /* Açıq accordion-ları bağla */
-      allCards.forEach(function (c) {
-        c.classList.remove('kat-open');
-        var b = c.querySelector('.kat-card-body');
-        if (b) b.style.maxHeight = '0';
-      });
-      render();
-    });
-  });
- 
-  /* ═══════════════════════════════════════════════════════════
-     6. AXTARIŞ
-     ═══════════════════════════════════════════════════════════ */
-  if (searchInput) {
-    searchInput.addEventListener('input', function () {
-      state.search = this.value.toLowerCase().trim();
-      state.page   = 1;
-      render();
-    });
-    /* ESC ilə təmizlə */
-    searchInput.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        searchInput.value = '';
-        state.search = '';
-        state.page   = 1;
-        render();
-      }
-    });
-  }
- 
-  /* ═══════════════════════════════════════════════════════════
-     7. İLK YÜKLƏNMƏ + GSAP ScrollTrigger
-     ═══════════════════════════════════════════════════════════ */
-  render();
- 
-  /* GSAP fade-up animasiya (əgər mövcuddursa) */
-  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-    gsap.fromTo('.katalog-header',
-      { opacity: 0, y: 28 },
-      {
-        opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '#katalog',
-          start: 'top 88%',
-          toggleActions: 'play none none none',
-          once: true
-        }
-      }
-    );
-    gsap.fromTo('.katalog-toolbar',
-      { opacity: 0, y: 18 },
-      {
-        opacity: 1, y: 0, duration: 0.55, delay: 0.15, ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '#katalog',
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-          once: true
-        }
-      }
-    );
-  }
- 
-})();
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') aqroCloseModal(); });

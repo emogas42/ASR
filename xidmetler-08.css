@@ -1,529 +1,306 @@
+ .aqro-cards-section {
+    padding: 60px 0 80px;
+    background: var(--bg);
+ }
+  .aqro-cards-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
 
-    .back-link {
-      position: fixed;
-      top: 100px;
-      left: 24px;
-      z-index: 100;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      padding: 10px 18px;
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s;
-    }
-    .back-link:hover {
-      transform: translateX(-4px);
-      box-shadow: var(--shadow-md);
-    }
-    .back-link svg {
-      width: 16px; height: 16px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-    }
-    .section {
-      padding: 80px 0;
-    }
-    .section-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-    .section-header {
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto 56px;
-    }
-    .section-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-    .section-eyebrow-dot {
-      width: 6px; height: 6px;
-      background: var(--gold);
-      border-radius: 50%;
-    }
-    .section-title {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800;
-      color: var(--heading);
-      line-height: 1.25;
-      margin-bottom: 16px;
-    }
-    .section-title em {
-      color: var(--navy-light);
-      font-style: normal;
-    }
-    .dark-mode .section-title em {
-      color: var(--accent);
-    }
-    .section-subtitle {
-      font-size: 1rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
 
-    /* Timeline */
-    .timeline-section { background: var(--bg); }
-    .timeline-container {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .timeline-line {
-      position: absolute;
-      left: 24px;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--navy), var(--accent), var(--gold));
-      border-radius: 3px;
-    }
-    @media (min-width: 768px) {
-      .timeline-line { left: 50%; transform: translateX(-50%); }
-    }
-    .timeline-item {
-      position: relative;
-      padding-left: 64px;
-      padding-bottom: 40px;
-    }
-    .timeline-item:last-child { padding-bottom: 0; }
-    @media (min-width: 768px) {
-      .timeline-item {
-        padding-left: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 48px;
-      }
-      .timeline-item:nth-child(odd) .timeline-content { grid-column: 1; text-align: right; }
-      .timeline-item:nth-child(odd) .timeline-marker { grid-column: 2; justify-self: start; }
-      .timeline-item:nth-child(even) .timeline-content { grid-column: 2; text-align: left; }
-      .timeline-item:nth-child(even) .timeline-marker { grid-column: 1; justify-self: end; }
-    }
-    .timeline-marker {
-      position: absolute;
-      left: 12px;
-      top: 4px;
-      width: 28px;
-      height: 28px;
-      background: var(--bg-card);
-      border: 3px solid var(--gold);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 2;
-      box-shadow: 0 0 0 6px var(--bg);
-    }
-    .timeline-marker i {
-      font-size: 0.7rem;
-      color: var(--gold);
-    }
-    @media (min-width: 768px) {
-      .timeline-marker {
-        position: relative;
-        left: auto;
-        top: auto;
-        justify-self: center;
-      }
-    }
-    .timeline-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 24px 28px;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.3s;
-    }
-    .timeline-content:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-3px);
-      border-color: var(--accent);
-    }
-    .timeline-content h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--heading);
-      margin-bottom: 10px;
-      line-height: 1.4;
-    }
-    .timeline-content p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
+  .aqro-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  @media (max-width: 768px) {
+    .aqro-cards-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
 
-    /* Step Flow */
-    .step-flow {
-      background: linear-gradient(180deg, var(--bg) 0%, #eef1f7 100%);
-    }
-    .dark-mode .step-flow {
-      background: linear-gradient(180deg, var(--bg) 0%, #0d1321 100%);
-    }
-    .steps-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .step-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px 28px;
-      position: relative;
-      transition: all 0.3s;
-      text-align: center;
-    }
-    .step-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--accent);
-    }
-    .step-number {
-      width: 56px;
-      height: 56px;
-      background: linear-gradient(135deg, var(--navy), var(--navy-light));
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin: 0 auto 20px;
-      position: relative;
-    }
-    .step-number::after {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border-radius: 50%;
-      border: 2px solid var(--gold);
-      opacity: 0.4;
-    }
-    .step-card h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--heading);
-      margin-bottom: 12px;
-      line-height: 1.4;
-    }
-    .step-card p {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    .step-arrow {
-      display: none;
-    }
-    @media (min-width: 768px) {
-      .steps-container {
-        grid-template-columns: repeat(4, 1fr);
-      }
-      .step-arrow {
-        display: block;
-        position: absolute;
-        top: 40px;
-        right: -20px;
-        width: 40px;
-        height: 2px;
-        background: linear-gradient(90deg, var(--border), var(--accent));
-        z-index: 1;
-      }
-      .step-arrow::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: -4px;
-        width: 10px;
-        height: 10px;
-        border-top: 2px solid var(--accent);
-        border-right: 2px solid var(--accent);
-        transform: rotate(45deg);
-      }
-      .step-card:last-child .step-arrow { display: none; }
-    }
+  /* Kart - Sizin timeline-content stilinizdən */
+  .aqro-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 32px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .aqro-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
 
-    /* Progress Stats */
-    .progress-section { background: var(--bg); }
-    .progress-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .progress-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px;
-      display: flex;
-      align-items: flex-start;
-      gap: 18px;
-      transition: all 0.3s;
-    }
-    .progress-item:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-3px);
-    }
-    .progress-icon {
-      width: 52px;
-      height: 52px;
-      min-width: 52px;
-      background: linear-gradient(135deg, rgba(18,51,104,0.08), rgba(87,145,239,0.08));
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      color: var(--navy);
-    }
-    .dark-mode .progress-icon {
-      background: linear-gradient(135deg, rgba(87,145,239,0.15), rgba(18,51,104,0.15));
-      color: var(--accent);
-    }
-    .progress-content h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--heading);
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-    .progress-content p {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-    .progress-bar-wrap {
-      margin-top: 12px;
-      height: 6px;
-      background: var(--border);
-      border-radius: 3px;
-      overflow: hidden;
-    }
-    .progress-bar {
-      height: 100%;
-      background: linear-gradient(90deg, var(--navy), var(--accent));
-      border-radius: 3px;
-      transition: width 1s ease;
-    }
+  /* Dairə Marker - Sizin timeline-marker stilinizdən */
+  .aqro-card-marker {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: var(--bg-card);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 0 6px var(--bg);
+  }
+  .aqro-card-marker i {
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
 
-    /* Horizontal Indicators */
-    .indicator-section {
-      background: linear-gradient(180deg, #eef1f7 0%, var(--bg) 100%);
-    }
-    .dark-mode .indicator-section {
-      background: linear-gradient(180deg, #0d1321 0%, var(--bg) 100%);
-    }
-    .indicator-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .indicator-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      text-align: center;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .indicator-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--navy), var(--gold));
-      transform: scaleX(0);
-      transition: transform 0.3s;
-    }
-    .indicator-card:hover::before {
-      transform: scaleX(1);
-    }
-    .indicator-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-4px);
-    }
-    .indicator-value {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .dark-mode .indicator-value {
-      color: var(--accent);
-    }
-    .indicator-label {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--heading);
-      margin-bottom: 4px;
-    }
-    .indicator-desc {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
+  /* Kart Mətn */
+  .aqro-card-content h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .aqro-card-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .aqro-card-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: all 0.3s;
+  }
+  .aqro-card:hover .aqro-card-arrow {
+    gap: 10px;
+  }
+  .aqro-card-arrow i {
+    transition: transform 0.3s;
+  }
+  .aqro-card:hover .aqro-card-arrow i {
+    transform: translateX(4px);
+  }
 
-    /* Results */
-    .results-section { background: var(--bg); }
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
+  /* ============================================
+     MODAL - Sizin dizaynınıza uyğun
+     ============================================ */
+  .aqro-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  .aqro-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .aqro-modal-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    max-width: 700px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.95);
+    transition: all 0.3s;
+    box-shadow: var(--shadow-xl);
+  }
+  .aqro-modal-overlay.active .aqro-modal-content {
+    transform: scale(1);
+  }
+
+  .aqro-modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: all 0.2s;
+  }
+  .aqro-modal-close:hover {
+    background: rgba(239,68,68,0.8);
+    transform: rotate(90deg);
+  }
+
+  .aqro-modal-header {
+    padding: 32px 32px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .aqro-modal-marker {
+    width: 56px; height: 56px;
+    min-width: 56px;
+    background: var(--bg-card);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 6px var(--bg-card);
+  }
+  .aqro-modal-marker i {
+    font-size: 1.3rem;
+    color: var(--gold);
+  }
+  .aqro-modal-title-wrap {
+    flex: 1;
+    padding-top: 4px;
+  }
+  .aqro-modal-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--heading);
+    line-height: 1.3;
+  }
+
+  .aqro-modal-body {
+    padding: 20px 32px 32px;
+  }
+  .aqro-modal-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  /* Modal Items - Timeline stilində */
+  .aqro-modal-timeline {
+    position: relative;
+    padding-left: 24px;
+  }
+  .aqro-modal-timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--navy), var(--accent), var(--gold));
+    border-radius: 2px;
+  }
+  .aqro-modal-item {
+    position: relative;
+    padding-left: 36px;
+    padding-bottom: 20px;
+  }
+  .aqro-modal-item:last-child {
+    padding-bottom: 0;
+  }
+  .aqro-modal-item-marker {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 24px;
+    height: 24px;
+    background: var(--bg-card);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 0 4px var(--bg-card);
+  }
+  .aqro-modal-item-marker i {
+    font-size: 0.6rem;
+    color: var(--gold);
+  }
+  .aqro-modal-item-content {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    transition: all 0.3s;
+  }
+  .aqro-modal-item-content:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-sm);
+  }
+  .aqro-modal-item-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .aqro-modal-item-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .aqro-modal-footer {
+    padding: 0 32px 32px;
+    display: flex;
+    justify-content: center;
+  }
+  .aqro-btn-close {
+    padding: 12px 40px;
+    border-radius: 100px;
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .aqro-btn-close:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+    background: rgba(14,165,233,0.1);
+  }
+
+  /* Mobil */
+  @media (max-width: 640px) {
+    .aqro-modal-overlay {
+      padding: 0;
+      align-items: flex-end;
     }
-    .result-item {
-      display: flex;
-      align-items: flex-start;
+    .aqro-modal-content {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .aqro-modal-header { padding: 24px 24px 0; }
+    .aqro-modal-body { padding: 16px 24px 24px; }
+    .aqro-modal-footer { padding: 0 24px 24px; }
+    .aqro-modal-marker {
+      width: 48px; height: 48px;
+    }
+    .aqro-modal-marker i { font-size: 1.1rem; }
+    .aqro-card {
+      padding: 20px 24px;
       gap: 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      transition: all 0.3s;
     }
-    .result-item:hover {
-      box-shadow: var(--shadow-md);
-      border-color: var(--gold);
+    .aqro-card-marker {
+      width: 40px; height: 40px;
     }
-    .result-check {
-      width: 36px;
-      height: 36px;
-      min-width: 36px;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-    .result-text {
-      font-size: 0.95rem;
-      color: var(--text);
-      line-height: 1.6;
-      padding-top: 6px;
-    }
-
-    /* CTA - SABIT */
-    .cta-section {
-      background: var(--bg);
-      padding: 80px 0;
-    }
-    .cta-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
-      padding: 56px 48px;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-box::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--navy), var(--gold));
-    }
-    .cta-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-    .cta-title {
-      font-size: clamp(1.3rem, 3vw, 1.9rem);
-      font-weight: 800;
-      color: var(--heading);
-      margin-bottom: 14px;
-      line-height: 1.3;
-    }
-    .cta-title em {
-      color: var(--accent);
-      font-style: normal;
-    }
-    .cta-desc {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-      margin-bottom: 36px;
-      max-width: 540px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta-buttons {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 14px 28px;
-      border-radius: 100px;
-      border: 1.5px solid var(--border);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      transition: all 0.25s;
-    }
-    .btn-outline:hover {
-      border-color: var(--navy-light);
-      color: var(--navy-light);
-    }
-
-   
-    /* Reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), 
-                  transform 0.65s cubic-bezier(0.4,0,0.2,1);
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal {
-        transition: none !important;
-        animation: none !important;
-        transform: none !important;
-        opacity: 1 !important;
-      }
-    }
+    .aqro-card-marker i { font-size: 0.9rem; }
+  } 
