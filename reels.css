@@ -1,0 +1,439 @@
+/* ============================================================
+   HORIZONTAL REEL CAROUSEL - Homepage Component
+   6-9 videos visible in horizontal scrolling carousel
+   ============================================================ */
+ 
+.reel-carousel-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f9f8f6 0%, #ffffff 100%);
+  margin: 40px 0;
+}
+ 
+.reel-carousel-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+ 
+.reel-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy-dark, #0b1f3a);
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+ 
+.reel-section-title em {
+  color: var(--gold-bright, #e4a832);
+  font-style: normal;
+}
+ 
+/* ── Carousel Wrapper ───────────────────────────────────── */
+.reel-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+ 
+.reel-carousel-track {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+ 
+.reel-videos-grid {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+ 
+/* ── Individual Reel Card ───────────────────────────────── */
+.reel-card {
+  position: relative;
+  width: 200px;
+  height: 320px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+ 
+.reel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(196, 146, 42, 0.2);
+}
+ 
+.reel-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* ── Play Button Overlay — daha az qaranlıq ────────────── */
+.reel-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+ 
+.reel-card:hover .reel-card-overlay {
+  background: rgba(0, 0, 0, 0.28); /* əvvəl 0.5 idi, indi 0.28 */
+}
+ 
+.reel-play-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gold-bright, #e4a832);
+  border: none;
+  color: var(--navy-dark, #0b1f3a);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+ 
+.reel-card:hover .reel-play-btn {
+  opacity: 1;
+  transform: scale(1.1);
+}
+ 
+.reel-play-btn:active {
+  transform: scale(0.95);
+}
+ 
+/* ── Carousel Navigation Arrows ────────────────────────── */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold-bright, #e4a832);
+  border: none;
+  color: var(--navy-dark, #0b1f3a);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+ 
+.carousel-arrow:hover {
+  background: var(--gold, #c8922a);
+  transform: translateY(-50%) scale(1.1);
+}
+ 
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+ 
+.carousel-arrow-prev {
+  left: 0;
+}
+ 
+.carousel-arrow-next {
+  right: 0;
+}
+ 
+.carousel-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+ 
+.carousel-arrow:disabled:hover {
+  background: var(--gold-bright, #e4a832);
+  transform: translateY(-50%);
+}
+ 
+/* ══════════════════════════════════════════════════════════
+   FULL-SCREEN MODAL — YouTube iframe + swipe navigation
+   ══════════════════════════════════════════════════════════ */
+.reel-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+ 
+.reel-modal.active {
+  display: flex;
+  opacity: 1;
+}
+ 
+/* Video/iframe wrapper — portrait (9:16) aspect ratio */
+.reel-modal-video-wrapper {
+  position: relative;
+  width: min(400px, 90vw);
+  height: min(711px, 90vh);
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  flex-shrink: 0;
+}
+ 
+.reel-modal-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+ 
+/* Close button */
+.reel-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+ 
+.reel-modal-close:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+ 
+/* Prev / Next navigation arrows inside modal */
+.reel-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 10001;
+}
+ 
+.reel-modal-nav-right {
+  right: max(24px, calc((100vw - min(400px, 90vw)) / 2 - 64px));
+}
+ 
+.reel-modal-nav-left {
+  left: max(24px, calc((100vw - min(400px, 90vw)) / 2 - 64px));
+}
+ 
+.reel-modal-prev,
+.reel-modal-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+ 
+.reel-modal-prev:hover,
+.reel-modal-next:hover {
+  background: var(--gold-bright, #e4a832);
+  color: var(--navy-dark, #0b1f3a);
+  border-color: transparent;
+}
+ 
+/* Info section at bottom of modal */
+.reel-modal-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(400px, 90vw);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 60%, transparent);
+  padding: 48px 20px 20px;
+  color: white;
+  z-index: 100;
+  border-radius: 0 0 16px 16px;
+  pointer-events: none;
+  animation: slideUp 0.4s ease-out;
+}
+ 
+@keyframes slideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+ 
+.reel-modal-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--gold-bright, #e4a832);
+}
+ 
+.reel-modal-desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #d0d0d0;
+}
+ 
+/* Counter pill */
+.reel-modal-counter {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  z-index: 10001;
+  white-space: nowrap;
+}
+ 
+/* Swipe hint (mobile) */
+.reel-modal-swipe-hint {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  z-index: 10001;
+  pointer-events: none;
+  animation: fadeHint 3s ease forwards;
+}
+ 
+@keyframes fadeHint {
+  0%   { opacity: 0.7; }
+  70%  { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+ 
+/* ── Responsive Design ──────────────────────────────── */
+@media (max-width: 1200px) {
+  .reel-card {
+    width: 180px;
+    height: 280px;
+  }
+  .reel-section-title {
+    font-size: 28px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .reel-carousel-section {
+    padding: 40px 15px;
+  }
+  .reel-card {
+    width: 140px;
+    height: 240px;
+  }
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  .reel-section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .reel-videos-grid {
+    gap: 10px;
+  }
+  .reel-carousel-wrapper {
+    gap: 10px;
+  }
+  .reel-modal-nav-right {
+    right: 8px;
+  }
+  .reel-modal-nav-left {
+    left: 8px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .reel-carousel-section {
+    padding: 30px 10px;
+  }
+  .reel-card {
+    width: 120px;
+    height: 200px;
+  }
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  .reel-section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .reel-videos-grid {
+    gap: 8px;
+  }
+  .reel-carousel-wrapper {
+    gap: 8px;
+  }
+  .reel-play-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+  .reel-modal-info {
+    padding: 36px 14px 14px;
+  }
+  .reel-modal-title {
+    font-size: 17px;
+  }
+  .reel-modal-desc {
+    font-size: 12px;
+  }
+  .reel-modal-nav-right,
+  .reel-modal-nav-left {
+    display: none; /* mobilde swipe işləyir */
+  }
+}
+ 
+/* ── Dark Mode Support ──────────────────────────────── */
+.dark-mode .reel-carousel-section {
+  background: #081629;
+}
+.dark-mode .reel-section-title {
+  color: #ffffff;
+}

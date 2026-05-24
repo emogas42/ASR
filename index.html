@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="bizi-seçənlər-slide.css" />
+  <link rel="stylesheet" href="reels.css">
 </head>
 
 <body class="">
@@ -103,6 +104,9 @@
               </div>
               <div class="mega-col-title">
                 <a href="ekologiya.html">Ekologiya</a>
+              </div>
+              <div class="mega-col-title">
+                <a href="enerji.html">Enerji</a>
               </div>
             </div>
             <div class="mega-col">
@@ -199,6 +203,7 @@
         <a href="turizm.html"><i class="fa-solid fa-plane-departure"></i> Turizm</a>
         <a href="tikinti.html"><i class="fa-solid fa-helmet-safety"></i> Tikinti</a>
         <a href="texnologiya.html"><i class="fa-solid fa-microchip"></i> Texnologiya</a>
+        <a href="enerji.html"><i class="fa-solid fa-atom"></i> Enerji</a>
       </div>
     </div>
     <div class="mobile-nav-item">
@@ -736,115 +741,77 @@
       </div>
     </div>
 
-    <!-- Video karusel - kartların altında -->
-    <div class="video-section">
-      <div class="video-carousel">
-        <button class="video-nav-btn video-prev" id="videoPrev">&#60;</button>
 
-        <div class="video-track-wrapper">
-          <div class="video-track" id="videoTrack">
-            <div class="video-card video-bg-1">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-2">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-3">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-4">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-5">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-6">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-7">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-8">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div class="video-card video-bg-9">
-              <div class="video-thumb">
-                <div class="video-play-btn">
-                  <svg viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+    </section>
+    
+  <!-- =========================================
+     REEL VIDEOS HORIZONTAL CAROUSEL SECTION
+  ========================================= -->
+  <section class="reel-carousel-section">
+    <div class="reel-carousel-container">
+      <h2 class="reel-section-title">Video Məlumatlar</h2>
+      <div class="reel-carousel-wrapper">
+        <button class="carousel-arrow carousel-arrow-prev" aria-label="Əvvəlki">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="reel-carousel-track">
+          <div class="reel-videos-grid">
+            <!-- Videos will be rendered here by JavaScript -->
           </div>
         </div>
-
-        <button class="video-nav-btn video-next" id="videoNext">&#62;</button>
+        
+        <button class="carousel-arrow carousel-arrow-next" aria-label="Sonrakı">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
+    </div>
+  </section>
 
-        <div class="video-indicators">
-          <div class="v-dot active" data-index="0"></div>
-          <div class="v-dot" data-index="1"></div>
-          <div class="v-dot" data-index="2"></div>
-        </div>
+  <!-- Full-Screen Video Modal -->
+  <div class="reel-modal" id="reelModal">
+
+    <!-- Close -->
+    <button class="reel-modal-close" aria-label="Bağla">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Counter -->
+    <div class="reel-modal-counter">1 / 9</div>
+
+    <!-- Left nav (desktop) -->
+    <div class="reel-modal-nav reel-modal-nav-left">
+      <button class="reel-modal-prev" aria-label="Əvvəlki reel">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+    </div>
+
+    <!-- Video wrapper -->
+    <div class="reel-modal-video-wrapper">
+      <iframe
+        class="reel-modal-iframe"
+        id="modalIframe"
+        src=""
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        title="Reel video"
+      ></iframe>
+
+      <!-- Info overlay inside the video card -->
+      <div class="reel-modal-info">
+        <h3 class="reel-modal-title" id="modalTitle">Video Başlığı</h3>
+        <p class="reel-modal-desc" id="modalDesc">Video açıklaması</p>
       </div>
-    </section>
+    </div>
+
+    <!-- Right nav (desktop) -->
+    <div class="reel-modal-nav reel-modal-nav-right">
+      <button class="reel-modal-next" aria-label="Növbəti reel">
+        <i class="fas fa-chevron-down"></i>
+      </button>
+    </div>
+
+  </div>
     
 
      <!-- ===== TRUST BAR ===== -->
@@ -997,6 +964,7 @@
 </div>
     <!-- Xidmetler   -->
     <section class="asr-services-section" id="xidmetler">
+
       <div class="asr-svc-container">
         <div class="asr-svc-header">
           <div class="asr-svc-eyebrow">
@@ -1008,6 +976,12 @@
             2009-cu ildən bəri dövlət orqanları və özəl sektora strateji
             idarəetmə, tədqiqat, təlim və konsaltinq xidmətləri göstəririk.
           </p>
+        </div>
+            <div style="display: flex; justify-content: center; margin-bottom: 40px;">
+          <button class="open-reels-btn" data-reel-index="0">
+            <i class="fas fa-play-circle"></i>
+            Video Məlumatları İzlə
+          </button>
         </div>
         
         <div class="asr-svc-grid">
@@ -2737,6 +2711,7 @@
   <script type="text/javascript" src="darkmode.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
+  <script src="reels.js"></script>
 </body>
 
 </html>

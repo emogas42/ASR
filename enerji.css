@@ -1,0 +1,64 @@
+/* =========================================
+   ENERJI SECTOR PAGE — enerji.css
+   Hero bölməsini enerji temasına uyğunlaşdırır
+   ========================================= */
+
+/* Hero fon şəklini enerji mövzusuna dəyişirik */
+.enerji-hero::before {
+  background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=1920&q=80');
+}
+
+/* Hero gradient — tünd yaşıl-qara enerji tonu */
+.enerji-hero {
+  background: linear-gradient(135deg, #0f2d1f 0%, #1a4a2e 40%, #0d3b22 100%);
+}
+
+/* Hero badge rəngi — enerji sarısı yerine enerji yaşılı */
+.enerji-hero .hero-badge {
+  background: rgba(34, 197, 94, 0.18);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #86efac;
+}
+
+/* Hero title accent rəngi */
+.enerji-hero .hero-title span {
+  color: #86efac;
+}
+
+/* Section label rəngi — enerji sektoru üçün yaşıl */
+.enerji-hero ~ .about-section .section-label,
+.enerji-hero ~ .services-section .section-label {
+  color: #16a34a;
+}
+
+/* Accordion ikonları və gold elementlər üçün enerji rəngi */
+.sector-accordion-icon {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.12), rgba(22, 163, 74, 0.06));
+  color: #16a34a;
+}
+
+.sector-accordion-item:hover {
+  border-color: rgba(22, 163, 74, 0.3);
+}
+
+.sector-accordion-item.is-open {
+  border-color: #16a34a;
+  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.12);
+}
+
+.sector-service-link {
+  color: #16a34a !important;
+}
+
+/* Experience tag rəngi — enerji yaşılı */
+.exp-card-certs .experience-tag {
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+/* CTA bölməsi — enerji mövzusu */
+.cta-bar-section {
+  background: linear-gradient(135deg, #0f2d1f 0%, #14532d 100%);
+}
+
+/* Footer year script */
