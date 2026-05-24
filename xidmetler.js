@@ -187,7 +187,7 @@
       var gap = 24;
       var outerWidth = expOuter.offsetWidth;
       var cardW = (outerWidth - (pv - 1) * gap) / pv;
-      var translateX = expCurrent * pv * (cardW + gap);
+      var translateX = expCurrent * (cardW + gap);
 
       expTrack.style.transform = 'translateX(-' + translateX + 'px)';
 
