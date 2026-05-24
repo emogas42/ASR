@@ -953,7 +953,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "Fermerlər üçün aqronomik konsultasiya", desc: "Fermerlərə istehsal prosesində texniki və praktiki dəstək göstərilir." },
         { title: "Aqronomluq xidmətlərinin outsoursinqi", desc: "Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması həyata keçirilir." },
         { title: "Qalıq maddə (MRL) tələblərinə uyğunluq", desc: "Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğu yoxlanılır." },
-        { title: "Etiket və qablaşdırma uyğunluğu", desc: "Etiket və qablaşdırmaların qanunvericiliyə uyğunluğu təmin edilir." },
         { title: "Risk analizi və təhlükə qiymətləndirilməsi", desc: "Fitosanitar risklər analiz edilərək qabaqlayıcı tədbirlər müəyyən olunur." },
         { title: "GLOBALG.A.P sertifikat dəstəyi", desc: "Beynəlxalq kənd təsərrüfatı standartlarına uyğun sertifikatlaşdırma prosesi təşkil edilir." }
       ]
@@ -964,12 +963,11 @@ document.addEventListener('DOMContentLoaded', function() {
       icon: "fa-solid fa-plane-departure",
       items: [
         { title: "İdxalçı ölkə tələblərinin araşdırılması", desc: "Hədəf ölkələrin qanunvericilik və texniki tələbləri analiz olunur." },
-        { title: "Şirkət qeydiyyatı və təsdiqi", desc: "Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir." },
+        { title: "İxracatçı qeydiyyatı və təsdiq dəstəyi", desc: "Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir." },
         { title: "Məhsul qeydiyyatı dəstəyi", desc: "Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur." },
-        { title: "Etiket tələbləri və nümunələr", desc: "Etiketlərin beynəlxalq tələblərə uyğun hazırlanması təmin edilir." },
-        { title: "Məhsul müayinə parametrləri", desc: "Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir." },
+        { title: "Məhsul müayinəsi və uyğunluq yoxlanışı", desc: "Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir." },
         { title: "Fitosanitar audit və sənədləşmə", desc: "Təsərrüfatların fitosanitar standartlara uyğunluğu yoxlanılır və sənədləşdirilir." },
-        { title: "İxrac sertifikatlarının alınması", desc: "İxrac üçün tələb olunan rəsmi müraciət və sertifikatlaşdırma prosesi həyata keçirilir." }
+        { title: "İxrac sertifikatlarının alınması və müraciətlərin idarəsi", desc: "İxrac üçün tələb olunan rəsmi müraciət və sertifikatlaşdırma prosesi həyata keçirilir." }
       ]
     },
     {
@@ -979,7 +977,6 @@ document.addEventListener('DOMContentLoaded', function() {
       items: [
         { title: "Texniki dosyelərin hazırlanması", desc: "Qeydiyyat üçün tələb olunan texniki sənədlər hazırlanır." },
         { title: "Qeydiyyat prosesinin idarə olunması", desc: "Məhsulların ilkin və yenilənmiş qeydiyyat prosedurları icra olunur." },
-        { title: "Etiket uyğunluğunun yoxlanılması", desc: "Məhsul etiketlərinin normativ tələblərə uyğunluğu yoxlanılır." },
         { title: "Sənədlərin yenilənməsi", desc: "Qüvvədə olan sənədlərdə tələb olunan dəyişikliklər həyata keçirilir." }
       ]
     },
@@ -1010,18 +1007,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "Audit və monitorinq mexanizmləri", desc: "Daimi nəzarət və uyğunluq yoxlama prosedurları yaradılır." }
       ]
     },
-    {
-      title: "Gözlənilən Nəticələr",
-      desc: "Peşəkar dəstəyinizin aqrobiznesinizə gətirəcəyi konkret faydalar və uğurlar.",
-      icon: "fa-solid fa-trophy",
-      items: [
-        { title: "Sertifikatlaşdırma sürəti", desc: "Sertifikatlaşdırma və qeydiyyat proseslərinin daha sürətli icrası." },
-        { title: "İxrac riskinin azaldılması", desc: "İxracda uyğunsuzluq risklərinin minimuma endirilməsi." },
-        { title: "Məhsuldarlıq artımı", desc: "Kənd təsərrüfatında məhsuldarlığın və keyfiyyətin artırılması." },
-        { title: "Beynəlxalq bazar çıxışı", desc: "Beynəlxalq bazarlara çıxış imkanlarının genişlənməsi." },
-        { title: "Rəqabətli sistem", desc: "Aqro-sektor üçün daha güclü və rəqabətli sistemin yaradılması." }
-      ]
-    }
+   
   ];
 
   let aqroScrollY = 0;

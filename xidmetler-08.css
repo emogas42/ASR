@@ -304,3 +304,228 @@
     }
     .aqro-card-marker i { font-size: 0.9rem; }
   } 
+
+
+
+/* ============================================
+   GÖZLƏNİLƏN NƏTİCƏLƏR SEKSIYASI
+   ============================================ */
+
+.results-section-gn {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== SEKSIYA BAŞLIĞI ===== */
+.section-header-gn {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label-gn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.section-label-gn::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.section-title-gn {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-title-gn span {
+  color: var(--accent);
+}
+
+.section-desc-gn {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ===== KARTLAR GRID ===== */
+.results-grid-gn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .results-grid-gn {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* ===== KART ===== */
+.result-card-gn {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 32px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: default;
+}
+
+/* Üst zolaq - hover'da görünür */
+.result-card-gn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.result-card-gn:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--gold);
+}
+
+.result-card-gn:hover::before {
+  transform: scaleX(1);
+}
+
+.result-card-inner-gn {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Dairə icon - aqro-card-marker stilində */
+.result-icon-wrap-gn {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 6px var(--bg);
+}
+
+.result-card-gn:hover .result-icon-wrap-gn {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%);
+  transform: scale(1.1);
+}
+
+.result-icon-wrap-gn i {
+  font-size: 1.1rem;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.result-card-gn:hover .result-icon-wrap-gn i {
+  color: white;
+}
+
+/* Kart məzmunu */
+.result-content-gn {
+  flex: 1;
+}
+
+.result-content-gn h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.result-content-gn p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* ===== RESPONSIV ===== */
+@media (max-width: 640px) {
+  .results-section-gn {
+    padding: 40px 16px;
+  }
+
+  .result-card-gn {
+    padding: 24px;
+  }
+
+  .result-card-inner-gn {
+    gap: 16px;
+  }
+
+  .result-icon-wrap-gn {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-width: 2px;
+  }
+
+  .result-icon-wrap-gn i {
+    font-size: 0.9rem;
+  }
+
+  .result-content-gn h3 {
+    font-size: 1rem;
+  }
+
+  .result-content-gn p {
+    font-size: 0.875rem;
+  }
+}
+
+/* ===== ENTRANCE ANIMATION ===== */
+@keyframes fadeInUpGn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-card-gn {
+  animation: fadeInUpGn 0.6s ease forwards;
+  opacity: 0;
+}
+
+.result-card-gn:nth-child(1) { animation-delay: 0.1s; }
+.result-card-gn:nth-child(2) { animation-delay: 0.2s; }
+.result-card-gn:nth-child(3) { animation-delay: 0.3s; }
+.result-card-gn:nth-child(4) { animation-delay: 0.4s; }
+.result-card-gn:nth-child(5) { animation-delay: 0.5s; }
