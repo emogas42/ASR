@@ -316,4 +316,309 @@
   });
 
 })();
+/* ============================================================
+   LAYIHELER-KATALOG.JS — ASR Development Consulting Group
+   Qanunvericilik Layihələri Kataloqu
+   Accordion + Filter + Search + Pagination (5/page, 20 total)
+   ============================================================ */
+ 
+(function () {
+  'use strict';
+ 
+  /* ── Konfiqurasiya ── */
+  var ITEMS_PER_PAGE = 5;
+ 
+  /* ── DOM elementləri ── */
+  var accordion    = document.getElementById('katAccordion');
+  var filterBtns   = document.querySelectorAll('.kat-filter-btn');
+  var searchInput  = document.getElementById('katSearch');
+  var paginationEl = document.getElementById('katPagination');
+  var countNum     = document.getElementById('katCountNum');
+  var resultsInfo  = document.getElementById('katResultsInfo');
+  var emptyState   = document.getElementById('katEmpty');
+ 
+  if (!accordion) return;
+ 
+  /* ── Bütün accordion kartlarını al ── */
+  var allCards = Array.from(accordion.querySelectorAll('.kat-card'));
+ 
+  /* ── State ── */
+  var state = {
+    filter: 'all',
+    search: '',
+    page: 1
+  };
+ 
+  /* ═══════════════════════════════════════════════════════════
+     1. FİLTR + AXTARIŞ
+     ═══════════════════════════════════════════════════════════ */
+  function getFilteredCards() {
+    return allCards.filter(function (card) {
+      var category = card.getAttribute('data-category') || '';
+      var text     = (card.querySelector('.kat-card-title') || {}).textContent || '';
+      var desc     = (card.querySelector('.kat-card-desc')  || {}).textContent || '';
+ 
+      var matchCat    = state.filter === 'all' || category === state.filter;
+      var matchSearch = !state.search ||
+        text.toLowerCase().indexOf(state.search) > -1 ||
+        desc.toLowerCase().indexOf(state.search) > -1;
+ 
+      return matchCat && matchSearch;
+    });
+  }
+ 
+  /* ═══════════════════════════════════════════════════════════
+     2. PAGİNATİON RENDER
+     ═══════════════════════════════════════════════════════════ */
+  function renderPagination(total) {
+    if (!paginationEl) return;
+ 
+    var totalPages = Math.max(1, Math.ceil(total / ITEMS_PER_PAGE));
+    if (state.page > totalPages) state.page = totalPages;
+ 
+    paginationEl.innerHTML = '';
+ 
+    /* ← Əvvəlki */
+    var prevBtn = document.createElement('button');
+    prevBtn.className = 'kat-page-btn' + (state.page === 1 ? ' kat-page-disabled' : '');
+    prevBtn.setAttribute('aria-label', 'Əvvəlki səhifə');
+    prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+    if (state.page > 1) {
+      prevBtn.addEventListener('click', function () {
+        state.page--;
+        render();
+        scrollToSection();
+      });
+    }
+    paginationEl.appendChild(prevBtn);
+ 
+    /* Səhifə nömrələri — smart window */
+    var win = buildPageWindow(totalPages, state.page);
+    var prev = null;
+    win.forEach(function (p) {
+      if (prev !== null && p - prev > 1) {
+        var dots = document.createElement('span');
+        dots.className = 'kat-page-dots';
+        dots.textContent = '…';
+        paginationEl.appendChild(dots);
+      }
+      (function (page) {
+        var btn = document.createElement('button');
+        btn.className = 'kat-page-btn' + (page === state.page ? ' kat-page-active' : '');
+        btn.textContent = page;
+        btn.setAttribute('aria-label', page + '. səhifə');
+        if (page === state.page) btn.setAttribute('aria-current', 'page');
+        btn.addEventListener('click', function () {
+          state.page = page;
+          render();
+          scrollToSection();
+        });
+        paginationEl.appendChild(btn);
+      })(p);
+      prev = p;
+    });
+ 
+    /* → Növbəti */
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'kat-page-btn' + (state.page === totalPages ? ' kat-page-disabled' : '');
+    nextBtn.setAttribute('aria-label', 'Növbəti səhifə');
+    nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+    if (state.page < totalPages) {
+      nextBtn.addEventListener('click', function () {
+        state.page++;
+        render();
+        scrollToSection();
+      });
+    }
+    paginationEl.appendChild(nextBtn);
+  }
+ 
+  /* Smart page window: always show 1, last, ±1 around current */
+  function buildPageWindow(total, current) {
+    var set = {};
+    [1, total, current - 1, current, current + 1].forEach(function (p) {
+      if (p >= 1 && p <= total) set[p] = true;
+    });
+    return Object.keys(set).map(Number).sort(function (a, b) { return a - b; });
+  }
+ 
+  /* ═══════════════════════════════════════════════════════════
+     3. ANA RENDER
+     ═══════════════════════════════════════════════════════════ */
+  function render() {
+    var filtered = getFilteredCards();
+    var total    = filtered.length;
+    var start    = (state.page - 1) * ITEMS_PER_PAGE;
+    var end      = start + ITEMS_PER_PAGE;
+ 
+    /* Bütün kartları gizlət */
+    allCards.forEach(function (c) { c.classList.add('kat-hidden'); });
+ 
+    /* Cari səhifə kartlarını göstər */
+    var pageCards = filtered.slice(start, end);
+    pageCards.forEach(function (card, i) {
+      card.classList.remove('kat-hidden');
+      /* GSAP varsa gözəl fade-in */
+      if (typeof gsap !== 'undefined') {
+        gsap.fromTo(card,
+          { opacity: 0, y: 14 },
+          { opacity: 1, y: 0, duration: 0.35, delay: i * 0.07, ease: 'power2.out' }
+        );
+      }
+    });
+ 
+    /* Boş hal */
+    if (emptyState) {
+      emptyState.classList.toggle('show', total === 0);
+    }
+ 
+    /* Sayğac */
+    if (countNum) countNum.textContent = total;
+ 
+    /* Alt məlumat */
+    if (resultsInfo) {
+      var showing = Math.min(end, total) - start;
+      if (total === 0) {
+        resultsInfo.innerHTML = '<strong>0</strong> nəticə tapıldı';
+      } else {
+        resultsInfo.innerHTML =
+          '<strong>' + (start + 1) + '–' + Math.min(end, total) + '</strong>' +
+          ' / <strong>' + total + '</strong> layihə';
+      }
+    }
+ 
+    /* Pagination */
+    renderPagination(total);
+  }
+ 
+  /* Kataloq section-a yumşaq scroll */
+  function scrollToSection() {
+    var section = document.getElementById('katalog');
+    if (!section) return;
+    var nav    = document.getElementById('navbar');
+    var offset = nav ? nav.offsetHeight + 20 : 90;
+    var top    = section.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top: top, behavior: 'smooth' });
+  }
+ 
+  /* ═══════════════════════════════════════════════════════════
+     4. ACCORDION OPEN / CLOSE
+     ═══════════════════════════════════════════════════════════ */
+  allCards.forEach(function (card) {
+    var header = card.querySelector('.kat-card-header');
+    var body   = card.querySelector('.kat-card-body');
+ 
+    if (!header || !body) return;
+ 
+    header.addEventListener('click', function () {
+      var isOpen = card.classList.contains('kat-open');
+ 
+      /* Digər açıqları bağla */
+      allCards.forEach(function (c) {
+        if (c !== card && c.classList.contains('kat-open')) {
+          c.classList.remove('kat-open');
+          var b = c.querySelector('.kat-card-body');
+          var h = c.querySelector('.kat-card-header');
+          if (b) b.style.maxHeight = '0';
+          if (h) h.setAttribute('aria-expanded', 'false');
+        }
+      });
+ 
+      /* Cari kartı toggle et */
+      if (isOpen) {
+        card.classList.remove('kat-open');
+        body.style.maxHeight = '0';
+        header.setAttribute('aria-expanded', 'false');
+      } else {
+        card.classList.add('kat-open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        header.setAttribute('aria-expanded', 'true');
+ 
+        /* Açılan kartı görünüşə gətir */
+        setTimeout(function () {
+          var nav    = document.getElementById('navbar');
+          var offset = nav ? nav.offsetHeight + 12 : 80;
+          var top    = card.getBoundingClientRect().top + window.pageYOffset - offset;
+          if (card.getBoundingClientRect().top < offset) {
+            window.scrollTo({ top: top, behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    });
+  });
+ 
+  /* ═══════════════════════════════════════════════════════════
+     5. FİLTR DÜYMƏLƏRİ
+     ═══════════════════════════════════════════════════════════ */
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      state.filter = btn.getAttribute('data-filter') || 'all';
+      state.page   = 1;
+      /* Açıq accordion-ları bağla */
+      allCards.forEach(function (c) {
+        c.classList.remove('kat-open');
+        var b = c.querySelector('.kat-card-body');
+        if (b) b.style.maxHeight = '0';
+      });
+      render();
+    });
+  });
+ 
+  /* ═══════════════════════════════════════════════════════════
+     6. AXTARIŞ
+     ═══════════════════════════════════════════════════════════ */
+  if (searchInput) {
+    searchInput.addEventListener('input', function () {
+      state.search = this.value.toLowerCase().trim();
+      state.page   = 1;
+      render();
+    });
+    /* ESC ilə təmizlə */
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        state.search = '';
+        state.page   = 1;
+        render();
+      }
+    });
+  }
+ 
+  /* ═══════════════════════════════════════════════════════════
+     7. İLK YÜKLƏNMƏ + GSAP ScrollTrigger
+     ═══════════════════════════════════════════════════════════ */
+  render();
+ 
+  /* GSAP fade-up animasiya (əgər mövcuddursa) */
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.fromTo('.katalog-header',
+      { opacity: 0, y: 28 },
+      {
+        opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '#katalog',
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+          once: true
+        }
+      }
+    );
+    gsap.fromTo('.katalog-toolbar',
+      { opacity: 0, y: 18 },
+      {
+        opacity: 1, y: 0, duration: 0.55, delay: 0.15, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '#katalog',
+          start: 'top 85%',
+          toggleActions: 'play none none none',
+          once: true
+        }
+      }
+    );
+  }
+ 
+})();
+
 
