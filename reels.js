@@ -52,36 +52,38 @@ class ReelCarousel {
     this.reelVideos = [
       {
         id: 1,
-        thumbnail: 'https://img.youtube.com/vi/ufq_4iJfKyk/hqdefault.jpg',
-        video: 'https://www.youtube.com/watch?v=ufq_4iJfKyk',
+        thumbnail: 'https://img.youtube.com/vi/WZSk9IL6Ryo/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=WZSk9IL6Ryo',
         title: 'Qida Təhlükəsizliyi',
         description: 'HACCP və ISO 22000 standartları ilə keyfiyyətin təmin edilməsi'
       },
       {
         id: 2,
-        thumbnail: 'https://img.youtube.com/vi/XKQtm5E2-I4/hqdefault.jpg',
-        video: 'https://www.youtube.com/watch?v=XKQtm5E2-I4',
+         thumbnail: 'https://img.youtube.com/vi/kqY28PYOjJ0/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=kqY28PYOjJ0',
+      
         title: 'Strateji İdarəetmə',
         description: 'Biznesin inkişafı üçün fərqli yanaşma və stratejik planlar'
       },
       {
         id: 3,
-        thumbnail: 'https://img.youtube.com/vi/v_QQuL593bQ/hqdefault.jpg',
-        video: 'https://https://www.youtube.com/watch?v=6huV36_GivA',
+         thumbnail: 'https://img.youtube.com/vi/rCDN9-ppCvQ/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=rCDN9-ppCvQ',
         title: 'Qanunvericilik',
         description: 'Dövlət tənzimləməsi və qanunvericilik layihələri hazırlanması'
       },
       {
         id: 4,
-        thumbnail: 'https://img.youtube.com/vi/kOgeosI8tNg/hqdefault.jpg',
-        video: 'https://https://www.youtube.com/watch?v=kOgeosI8tNg',
+       thumbnail: 'https://img.youtube.com/vi/CW9prv_I2Zc/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=CW9prv_I2Zc',
         title: 'Kənd Təsərrüfatı',
         description: 'Müasir texnologiyalar ilə kənd təsərrüfatının məhsuldarlığının artırılması'
       },
       {
         id: 5,
-        thumbnail: 'https://img.youtube.com/vi/CW9prv_I2Zc/hqdefault.jpg',
-        video: 'https://www.youtube.com/watch?v=CW9prv_I2Zc',
+        
+         thumbnail: 'https://img.youtube.com/vi/ot1OSJTwNhc/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=ot1OSJTwNhc',
         title: 'Biznes İnkişafı',
         description: 'Sizin şirkətiniz üçün xüsusi həllər və inkişaf strategiyaları'
       },
@@ -95,21 +97,21 @@ class ReelCarousel {
       {
         id: 7,
         thumbnail: 'https://img.youtube.com/vi/kOgeosI8tNg/hqdefault.jpg',
-        video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        video: 'https://www.youtube.com/watch?v=kOgeosI8tNg',
         title: 'Səhiyyə Xidmətləri',
         description: 'Səhiyyə sisteminin təkmilləşdirilməsi və standartlaşdırılması'
       },
       {
         id: 8,
-        thumbnail: 'https://via.placeholder.com/200x320/2a5298/ffffff?text=Reel+8',
-        video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        thumbnail: 'https://img.youtube.com/vi/hGrT3-8gHhM/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=hGrT3-8gHhM',
         title: 'Ticarət Xidmətləri',
         description: 'Ticarət sektorunun inkişafı və beynəlxalq standartlarla uyğunluq'
       },
       {
         id: 9,
-        thumbnail: 'https://via.placeholder.com/200x320/3a6abf/ffffff?text=Reel+9',
-        video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+        thumbnail: 'https://img.youtube.com/vi/GXHNusVP7sE/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=GXHNusVP7sE',
         title: 'Dövlət Əlaqələri',
         description: 'Dövlət qurumları ilə əlaqələrin idarə olunması və əmtəə qeydiyyatı'
       }
