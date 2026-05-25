@@ -59,15 +59,16 @@ class ReelCarousel {
       },
       {
         id: 2,
-        thumbnail: 'https://img.youtube.com/vi/N8a-okhCfQs/hqdefault.jpg',
-        video: 'https://www.youtube.com/shorts/N8a-okhCfQs',
+         thumbnail: 'https://img.youtube.com/vi/kqY28PYOjJ0/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=kqY28PYOjJ0',
+      
         title: 'Strateji İdarəetmə',
         description: 'Biznesin inkişafı üçün fərqli yanaşma və stratejik planlar'
       },
       {
         id: 3,
-        thumbnail: 'https://img.youtube.com/vi/kqY28PYOjJ0/hqdefault.jpg',
-        video: 'https://www.youtube.com/watch?v=kqY28PYOjJ0',
+         thumbnail: 'https://img.youtube.com/vi/rCDN9-ppCvQ/hqdefault.jpg',
+        video: 'https://www.youtube.com/watch?v=rCDN9-ppCvQ',
         title: 'Qanunvericilik',
         description: 'Dövlət tənzimləməsi və qanunvericilik layihələri hazırlanması'
       },
