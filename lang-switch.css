@@ -1,0 +1,208 @@
+/* ============================================================
+   ASR Development Consulting Group
+   Language Switcher — AZ / RU
+   Standalone file — does NOT modify any existing CSS
+   ============================================================ */
+
+/* ── Desktop toggle (nav-inner) ─────────────────────────────── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(11,31,58,0.06);
+  border: 1px solid rgba(200,146,42,0.25);
+  border-radius: 6px;
+  padding: 3px;
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+.dark-mode .lang-toggle {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(200,146,42,0.3);
+}
+
+.lang-btn {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(11,31,58,0.45);
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: all 0.22s ease;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+.dark-mode .lang-btn { color: rgba(255,255,255,0.45); }
+.lang-btn:hover { color: var(--gold-bright, #e4a832); }
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--gold, #c8922a) 0%, #cf5e12 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(200,146,42,0.35);
+}
+
+.lang-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(200,146,42,0.22);
+  flex-shrink: 0;
+}
+
+/* ── Hide desktop toggle on mobile ──────────────────────────── */
+@media (max-width: 768px) {
+  .lang-toggle-desktop { display: none !important; }
+  .lang-btn{
+    position: relative;
+    right: 20%;
+  }
+}
+
+/* ── Mobile toggle (inside .mobile-nav) ─────────────────────── */
+.mobile-lang-row {
+  display: flex;
+  justify-content: center;
+  padding: 12px 24px 4px;
+}
+.mobile-lang-row .lang-toggle {
+  margin-left: 0;
+}
+
+/* =============================================
+   LANGUAGE SWITCHER
+   ============================================= */
+ 
+.lang-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+ 
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  transition: border-color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+ 
+.lang-btn:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.07);
+}
+ 
+.lang-btn .fa-globe {
+  font-size: 14px;
+  opacity: 0.85;
+}
+ 
+.lang-arrow {
+  font-size: 9px;
+  opacity: 0.7;
+  transition: transform 0.25s ease;
+}
+ 
+.lang-switcher.open .lang-arrow {
+  transform: rotate(180deg);
+}
+ 
+/* Dropdown */
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--nav-bg, #fff);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  margin: 0;
+  min-width: 160px;
+  overflow: hidden;
+  padding: 6px 0;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+  visibility: hidden;
+}
+ 
+.lang-switcher.open .lang-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+ 
+.lang-option {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  font-size: 13px;
+  font-weight: 500;
+  gap: 10px;
+  padding: 9px 16px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+ 
+.lang-option:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+ 
+.lang-option.lang-active {
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.04);
+}
+ 
+.lang-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+ 
+/* Dark mode compatibility */
+body.dark .lang-btn {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+ 
+body.dark .lang-dropdown {
+  background: #1e1e2e;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+ 
+body.dark .lang-option {
+  color: #e0e0e0;
+}
+ 
+body.dark .lang-option:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+ 
+body.dark .lang-option.lang-active {
+  background: rgba(255, 255, 255, 0.06);
+}
+ 
+/* Mobile: hide in mobile menu area, keep in nav */
+@media (max-width: 768px) {
+  .lang-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+    gap: 4px;
+  }
+ 
+  .lang-current {
+    display: none;
+  }
+}

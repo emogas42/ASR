@@ -1018,3 +1018,23 @@ app.js
   // Initial position
   moveToIndex(0);
 })();
+(function () {
+  const switcher = document.getElementById('langSwitcher');
+  const toggle = document.getElementById('langToggle');
+  const dropdown = document.getElementById('langDropdown');
+ 
+  toggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const open = switcher.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+ 
+  document.addEventListener('click', function () {
+    switcher.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  });
+ 
+  dropdown.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+})();
