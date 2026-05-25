@@ -963,8 +963,8 @@ document.addEventListener('DOMContentLoaded', function() {
       icon: "fa-solid fa-plane-departure",
       items: [
         { title: "İdxalçı ölkə tələblərinin araşdırılması", desc: "Hədəf ölkələrin qanunvericilik və texniki tələbləri analiz olunur." },
-        { title: "İxracatçı qeydiyyatı və təsdiq dəstəyi", desc: "Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir." },
-        { title: "Məhsul qeydiyyatı dəstəyi", desc: "Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur." },
+        // { title: "İxracatçı qeydiyyatı və təsdiq dəstəyi", desc: "Şirkətin xarici bazarda qeydiyyat və təsdiq prosedurlarına dəstək göstərilir." },
+        // { title: "Məhsul qeydiyyatı dəstəyi", desc: "Məhsul qeydiyyatı üçün tələb olunan sənədləşmə və proses idarə olunur." },
         { title: "Məhsul müayinəsi və uyğunluq yoxlanışı", desc: "Məhsulun laborator və texniki uyğunluq göstəriciləri əvvəlcədən qiymətləndirilir." },
         { title: "Fitosanitar audit və sənədləşmə", desc: "Təsərrüfatların fitosanitar standartlara uyğunluğu yoxlanılır və sənədləşdirilir." },
         { title: "İxrac sertifikatlarının alınması və müraciətlərin idarəsi", desc: "İxrac üçün tələb olunan rəsmi müraciət və sertifikatlaşdırma prosesi həyata keçirilir." }
@@ -1007,6 +1007,40 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "Audit və monitorinq mexanizmləri", desc: "Daimi nəzarət və uyğunluq yoxlama prosedurları yaradılır." }
       ]
     },
+     {
+      title: "GLOBALG.A.P. Sertifikat Dəstəyi",
+      desc: "GLOBALG.A.P. — kənd təsərrüfatı məhsullarının beynəlxalq bazarlara çıxışı üçün tələb olunan \"vizadır\". 1997-ci ildə Avropanın aparıcı pərakəndə satış şəbəkələri tərəfindən yaradılmış (əvvəlcə EUREPGAP adı ilə), 2007-ci ildə qlobal miqyasda yenidən brendlənmiş bu standart bu gün 80-dən çox ölkədə 100-dən artıq akkreditə edilmiş qurum tərəfindən tətbiq edilir. ASR Development bu prosesi — ilkin boşluq analizindən müvəffəqiyyətli auditə qədər — tam idarə edir.",
+      icon: "fa-solid fa-certificate",
+      extraInfo: [
+        { label: "Yaranma ili", val: "1997 (EUREPGAP → 2007 GLOBALG.A.P.)" },
+        { label: "Əhatə",       val: "80+ ölkə, 100+ akkreditə qurumu" },
+        { label: "Əsas bazarlar", val: "AB, Böyük Britaniya, ABŞ, Asiyanın böyük bazarları" },
+        { label: "Audit növü",  val: "İllik məcburi + gözlənilməz yoxlama" }
+      ],
+      items: [
+        {
+          title: "Boşluq analizi (Gap Analysis)",
+          desc: "Müəssisənin mövcud vəziyyəti GLOBALG.A.P. tələbləri ilə müqayisə edilir, uyğunsuzluqlar müəyyən olunur."
+        },
+        {
+          title: "Sənədləşmə və sistem qurulması",
+          desc: "Pestisid jurnalı, gübrə planı, izlənəbilirlik qeydləri, risk qiymətləndirmə formaları hazırlanır."
+        },
+        {
+          title: "Daxili audit (Pre-audit)",
+          desc: "Rəsmi auditdən əvvəl bütün nəzarət nöqtələri (Control Points) yoxlanılır, kritik qüsurlar aradan qaldırılır."
+        },
+
+        {
+          title: "Sertifikat alınması və GGN nömrəsi",
+          desc: "Uğurlu auditin ardından GLOBALG.A.P. Number (GGN) verilir — beynəlxalq bazarlarda məhsulun tanınmasını təmin edir."
+        },
+        {
+          title: "İllik yenilənmə dəstəyi",
+          desc: "Sertifikatın saxlanılması üçün illik audit hazırlığı, standart yeniləmələrinin izlənməsi davam etdirilir."
+        }
+      ]
+    }
    
   ];
 
