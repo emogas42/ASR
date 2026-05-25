@@ -954,7 +954,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { title: "Aqronomluq xidmətlərinin outsoursinqi", desc: "Müəssisələr üçün peşəkar aqronom xidmətlərinin tam idarə olunması həyata keçirilir." },
         { title: "Qalıq maddə (MRL) tələblərinə uyğunluq", desc: "Məhsulların beynəlxalq qalıq maddə limitlərinə uyğunluğu yoxlanılır." },
         { title: "Risk analizi və təhlükə qiymətləndirilməsi", desc: "Fitosanitar risklər analiz edilərək qabaqlayıcı tədbirlər müəyyən olunur." },
-        { title: "GLOBALG.A.P sertifikat dəstəyi", desc: "Beynəlxalq kənd təsərrüfatı standartlarına uyğun sertifikatlaşdırma prosesi təşkil edilir." }
       ]
     },
     {

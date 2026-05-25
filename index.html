@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="bizi-seçənlər-slide.css" />
   <link rel="stylesheet" href="reels.css">
+  <link rel="stylesheet" href="lang-switch.css">
 </head>
 
 <body class="">
@@ -166,6 +167,20 @@
         <i class="fa-regular fa-moon"></i>
         <i class="fa-solid fa-sun"></i>
       </button>
+
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" id="langToggle" aria-expanded="false" aria-label="Dil seçimi">
+          <i class="fa-solid fa-globe"></i>
+          <span class="lang-current">AZ</span>
+          <i class="fa-solid fa-chevron-down lang-arrow"></i>
+        </button>
+        <ul class="lang-dropdown" id="langDropdown">
+          <li><a href="index.html" class="lang-option lang-active"><span class="lang-flag">🇦🇿</span> Azərbaycan</a></li>
+          <li><a href="en/index.html" class="lang-option"><span class="lang-flag">🇬🇧</span> English</a></li>
+          <li><a href="ru/index.html" class="lang-option"><span class="lang-flag">🇷🇺</span> Русский</a></li>
+        </ul>
+      </div>
+
       <button class="nav-toggle" id="mobileToggle">
         <span></span><span></span><span></span>
       </button>
@@ -2713,6 +2728,7 @@
   <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
+
 
   <script src="theme-toggle.js"></script>
   <script src="app.js"></script>

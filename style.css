@@ -2121,7 +2121,7 @@ body.dark-mode .exp-arrow:hover {
   border-radius: var(--radius-md);
   font-size: 0.75rem;
   font-weight: 700;
-  width: fit-content;
+  width: 25%;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
