@@ -1,12 +1,15 @@
-
-   /* ----------------------------------------------------------
-       Video Carousel Data & Logic
-       ---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   Video Carousel Data & Logic
+   ---------------------------------------------------------- */
     const videoData = {
       left: [
-        { thumb: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop', label: 'ISO 22000:2018 əsas dəyişikliklər' },
-        { thumb: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=400&h=225&fit=crop', label: 'HLS strukturu təlimi' },
-        { thumb: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=225&fit=crop', label: 'Risk əsaslı yanaşma praktiki' }
+        { 
+          type: 'youtube',
+          videoId: 'RMahE1JsgY8',
+          thumb: 'https://img.youtube.com/vi/RMahE1JsgY8/maxresdefault.jpg',
+          label: 'AQTA: Uyğunsuzluq aşkarlanan məhsullar dövriyyədən çıxarılıb',
+          date: '3 Yanvar 2025'
+        }
       ],
       right: [
         { thumb: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop', label: 'Keçid strategiyası praktiki təlim' },
@@ -19,6 +22,8 @@
 
     function changeVideo(side, direction) {
       const data = videoData[side];
+      if (data.length <= 1) return; // Don't navigate if only 1 video
+
       currentIndex[side] += direction;
       if (currentIndex[side] < 0) currentIndex[side] = data.length - 1;
       else if (currentIndex[side] >= data.length) currentIndex[side] = 0;
@@ -29,16 +34,82 @@
       const data = videoData[side];
       const index = currentIndex[side];
       const cap = side.charAt(0).toUpperCase() + side.slice(1);
+      const currentVideo = data[index];
 
-      document.getElementById('videoThumb' + cap).src = data[index].thumb;
-      document.getElementById('videoLabel' + cap).textContent = data[index].label;
-      document.getElementById('videoCounter' + cap).textContent = (index + 1) + ' / ' + data.length;
+      // Update thumbnail image
+      const thumbImg = document.getElementById('videoThumb' + cap);
+      if (thumbImg) {
+        thumbImg.src = currentVideo.thumb;
+        thumbImg.alt = currentVideo.label;
+      }
 
-      const dots = document.getElementById('videoDots' + cap).children;
-      for (let i = 0; i < dots.length; i++) {
-        dots[i].classList.toggle('active', i === index);
+      // Update title
+      const label = document.getElementById('videoLabel' + cap);
+      if (label) {
+        label.textContent = currentVideo.label;
+      }
+
+      // Update counter
+      const counter = document.getElementById('videoCounter' + cap);
+      if (counter) {
+        counter.textContent = (index + 1) + ' / ' + data.length;
+      }
+
+      // Update dots
+      const dots = document.getElementById('videoDots' + cap);
+      if (dots) {
+        const dotElements = dots.children;
+        for (let i = 0; i < dotElements.length; i++) {
+          dotElements[i].classList.toggle('active', i === index);
+        }
       }
     }
+
+    /* ----------------------------------------------------------
+       Video Modal / Lightbox
+       ---------------------------------------------------------- */
+    function openVideoModal() {
+      const data = videoData.left;
+      const index = currentIndex.left;
+      const currentVideo = data[index];
+
+      if (currentVideo.type === 'youtube') {
+        const modalOverlay = document.getElementById('videoModalOverlay');
+        const modalFrame = document.getElementById('videoModalFrame');
+
+        // Set YouTube embed URL with autoplay
+        modalFrame.src = 'https://www.youtube.com/embed/' + currentVideo.videoId + '?autoplay=1&rel=0';
+
+        // Show modal
+        modalOverlay.classList.add('active');
+
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeVideoModal() {
+      const modalOverlay = document.getElementById('videoModalOverlay');
+      const modalFrame = document.getElementById('videoModalFrame');
+
+      // Hide modal
+      modalOverlay.classList.remove('active');
+
+      // Stop video by clearing src
+      setTimeout(() => {
+        modalFrame.src = '';
+      }, 400);
+
+      // Restore body scroll
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeVideoModal();
+      }
+    });
 
     /* ----------------------------------------------------------
        ScrollSpy: Active Section Highlighting
