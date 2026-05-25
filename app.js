@@ -207,7 +207,7 @@ document.getElementById("footer-year").textContent = date.getFullYear();
   var heroCurrent  = 0;
   var heroTotal    = heroSlides.length;
   var heroTimer    = null;
-  var AUTO         = 125000;
+  var AUTO         = 7000;
  
   function heroGoTo(index) {
     heroSlides[heroCurrent].classList.remove('active');
