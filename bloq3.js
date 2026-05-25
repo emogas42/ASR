@@ -1,43 +1,73 @@
-
 /* ============================================================
    BLOG 3 JAVASCRIPT (Izolyasiya edilmis funksionalliq)
    ============================================================ */
 
-// Video Karusel
-const b3videoData = {
+/* ----------------------------------------------------------
+   Video Data & Modal Logic
+   ---------------------------------------------------------- */
+const videoData = {
     left: [
-        { thumb: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=225&fit=crop', label: 'Temperatur nəzarəti praktiki' },
-        { thumb: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=400&h=225&fit=crop', label: 'Çapraz çirklənmənin qarşısının alınması' },
-        { thumb: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=225&fit=crop', label: 'Allergen idarəetməsi' }
-    ],
-    right: [
-        { thumb: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=225&fit=crop', label: 'HACCP restoranda tətbiqi' },
-        { thumb: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=225&fit=crop', label: 'Personal gigiyenası təlimi' },
-        { thumb: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=225&fit=crop', label: 'Geri çağırma planı hazırlığı' }
+        {
+            type: 'youtube',
+            videoId: 'uPlm2tZMk8Q',
+            thumb: 'https://img.youtube.com/vi/uPlm2tZMk8Q/maxresdefault.jpg',
+            label: 'AQTA: Qida təhlükəsizliyi haqqında qanun',
+            date: '3 Yanvar 2025'
+        }
     ]
 };
-const b3currentIndex = { left: 0, right: 0 };
 
-function b3changeVideo(side, direction) {
-    const data = b3videoData[side];
-    b3currentIndex[side] += direction;
-    if (b3currentIndex[side] < 0) b3currentIndex[side] = data.length - 1;
-    else if (b3currentIndex[side] >= data.length) b3currentIndex[side] = 0;
-    b3updateVideoDisplay(side);
+const currentIndex = { left: 0 };
+
+/* ----------------------------------------------------------
+   Video Modal / Lightbox
+   ---------------------------------------------------------- */
+function openVideoModal() {
+    const data = videoData.left;
+    const index = currentIndex.left;
+    const currentVideo = data[index];
+
+    if (currentVideo.type === 'youtube') {
+        const modalOverlay = document.getElementById('videoModalOverlay');
+        const modalFrame = document.getElementById('videoModalFrame');
+
+        // Set YouTube embed URL with autoplay
+        modalFrame.src = 'https://www.youtube.com/embed/' + currentVideo.videoId + '?autoplay=1&rel=0';
+
+        // Show modal
+        modalOverlay.classList.add('active');
+
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
 }
 
-function b3updateVideoDisplay(side) {
-    const data = b3videoData[side];
-    const index = b3currentIndex[side];
-    const cap = side.charAt(0).toUpperCase() + side.slice(1);
-    document.getElementById('b3thumb' + cap).src = data[index].thumb;
-    document.getElementById('b3label' + cap).textContent = data[index].label;
-    document.getElementById('b3counter' + cap).textContent = (index + 1) + ' / ' + data.length;
-    const dots = document.getElementById('b3dots' + cap).children;
-    for (let i = 0; i < dots.length; i++) dots[i].classList.toggle('active', i === index);
+function closeVideoModal() {
+    const modalOverlay = document.getElementById('videoModalOverlay');
+    const modalFrame = document.getElementById('videoModalFrame');
+
+    // Hide modal
+    modalOverlay.classList.remove('active');
+
+    // Stop video by clearing src
+    setTimeout(() => {
+        modalFrame.src = '';
+    }, 400);
+
+    // Restore body scroll
+    document.body.style.overflow = '';
 }
 
-// Scrollspy: Aktiv bolmenin isiqlanmasi
+// Close modal on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeVideoModal();
+    }
+});
+
+/* ----------------------------------------------------------
+   ScrollSpy: Active Section Highlighting
+   ---------------------------------------------------------- */
 const b3content = document.getElementById('b3Content');
 const b3sections = document.querySelectorAll('.b3-section');
 const b3tocLinks = document.querySelectorAll('.b3-toc-list a');
@@ -95,14 +125,17 @@ b3tocLinks.forEach(link => {
 
 b3updateActiveLink();
 
-// ========== YENI: Tema deyishdirici + localStorage sync ==========
+/* ----------------------------------------------------------
+   Theme Switcher
+   ---------------------------------------------------------- */
 document.getElementById('theme-switch').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('asr-theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
 });
-// ========== /YENI ==========
 
-// Mobil nav toggle
+/* ----------------------------------------------------------
+   Mobile Navigation
+   ---------------------------------------------------------- */
 document.getElementById('mobileToggle').addEventListener('click', function () {
     this.classList.toggle('open');
     document.getElementById('mobileNav').classList.toggle('open');
@@ -116,27 +149,24 @@ document.querySelectorAll('.mobile-chevron-btn').forEach(btn => {
     });
 });
 
-// Back to top
+/* ----------------------------------------------------------
+   Back to Top
+   ---------------------------------------------------------- */
 document.getElementById('backToTop').addEventListener('click', () => {
     b3content.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+/* ----------------------------------------------------------
+   Footer Year
+   ---------------------------------------------------------- */
+const footerYear = document.getElementById('footer-year');
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+}
+
+/* ----------------------------------------------------------
+   Dark Mode LocalStorage Sync
+   ---------------------------------------------------------- */
 if (localStorage.getItem('asr-theme') === 'dark') {
     document.body.classList.add('dark-mode');
 }
-// Dark mode
-var darkmode = localStorage.getItem('darkmode');
-var themeSwitch = document.getElementById('theme-switch');
-function enableDarkmode() {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('darkmode', 'active');
-}
-function disableDarkmode() {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('darkmode', null);
-}
-if (darkmode === "active") enableDarkmode();
-themeSwitch.addEventListener("click", function () {
-    darkmode = localStorage.getItem('darkmode');
-    if (darkmode !== 'active') enableDarkmode();
-    else disableDarkmode();
-});
