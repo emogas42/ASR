@@ -939,7 +939,7 @@ document.addEventListener('DOMContentLoaded', function() {
   goToCard(0);
   startAutoplay();
 })();
-  const aqroData = [
+  if (typeof aqroData === 'undefined') { var aqroData = [
     {
       title: "Bitki Sağlamlığı və Aqronomluq Xidmətləri",
       desc: "Məhsulun istehsalından ixracına qədər olan bütün mərhələlərdə təhlükəsizliyi təmin etmək, zərərvericilərin yayılmasının qarşısını almaq və beynəlxalq bazarlara çıxışı asanlaşdırmaq.",
@@ -1041,7 +1041,7 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
     }
    
-  ];
+  ]; }
 
   let aqroScrollY = 0;
 
