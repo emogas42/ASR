@@ -2116,12 +2116,14 @@ body.dark-mode .exp-arrow:hover {
   justify-content: center;
   padding: 12px 10px;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-  color: white !important; /* Mətni qızılı edirik */
+  color: white !important;
   border: 1px solid var(--gold);
   border-radius: var(--radius-md);
   font-size: 0.6rem;
   font-weight: 700;
   width: fit-content;
+  white-space: nowrap;
+  flex-shrink: 0;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
