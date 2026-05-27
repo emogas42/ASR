@@ -717,7 +717,7 @@ button, input, textarea, select { font-family: inherit; cursor: pointer; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 6% 100px;
+  padding: 90px 6% 20px;
   max-width: 680px;
   z-index: 5;
 }
@@ -4443,7 +4443,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 6% 100px;
+  padding: 90px 6% 20px;
   max-width: 680px;
   z-index: 5;
 }
@@ -5146,7 +5146,7 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
     padding: 75px 4% 85px;
     gap: 1rem;
   }
-  .slide-content  { padding: 0 4% 80px; }
+  .slide-content  { padding: 90px 4% 20px; }
   .slide-title    { font-size: clamp(1.55rem, 8.5vw, 2.1rem); margin-bottom: 14px; }
   .slide-tag      { font-size: 9px; letter-spacing: 0.18em; margin-bottom: 14px; }
   .slide-desc     { font-size: 13px; margin-bottom: 22px; }
