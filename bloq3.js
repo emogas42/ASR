@@ -134,22 +134,6 @@ document.getElementById('theme-switch').addEventListener('click', () => {
 });
 
 /* ----------------------------------------------------------
-   Mobile Navigation
-   ---------------------------------------------------------- */
-document.getElementById('mobileToggle').addEventListener('click', function () {
-    this.classList.toggle('open');
-    document.getElementById('mobileNav').classList.toggle('open');
-});
-
-document.querySelectorAll('.mobile-chevron-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const expanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !expanded);
-        this.closest('.mobile-nav-item').querySelector('.mobile-sub').classList.toggle('open');
-    });
-});
-
-/* ----------------------------------------------------------
    Back to Top
    ---------------------------------------------------------- */
 document.getElementById('backToTop').addEventListener('click', () => {

@@ -1,3 +1,5 @@
 {
-  "liveServer.settings.port": 5504
+  "liveServer.settings.port": 5504,
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.initialPermissionMode": "bypassPermissions"
 }

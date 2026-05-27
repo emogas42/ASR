@@ -222,35 +222,6 @@
   applyTable();
 
   /* ═══════════════════════════════════════════════════════════════
-     3. MOBILE NAVIGATION
-     ═══════════════════════════════════════════════════════════════ */
-  var mobileToggle = document.getElementById('mobileToggle');
-  var mobileNav    = document.getElementById('mobileNav');
-
-  if (mobileToggle && mobileNav) {
-    mobileToggle.addEventListener('click', function() {
-      mobileNav.classList.toggle('open');
-      mobileToggle.classList.toggle('open');
-      var isOpen = mobileNav.classList.contains('open');
-      mobileToggle.setAttribute('aria-expanded', String(isOpen));
-    });
-  }
-
-  document.querySelectorAll('.mobile-chevron-btn.has-dropdown').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var row    = btn.closest('.mobile-nav-item');
-      var sub    = row ? row.querySelector('.mobile-sub') : null;
-      var isOpen = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!isOpen));
-      if (sub) {
-        sub.classList.toggle('open', !isOpen);
-        sub.style.maxHeight = !isOpen ? (sub.scrollHeight + 'px') : '0';
-      }
-    });
-  });
-
-  /* ═══════════════════════════════════════════════════════════════
      4. NAVBAR SCROLL EFFECT
      ═══════════════════════════════════════════════════════════════ */
   var navbar = document.getElementById('navbar');
