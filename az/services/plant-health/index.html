@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="az">
 
 <head>
@@ -15,12 +15,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../../../images/logos/apple-touch-icon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../../../xidmetler-08.css">
-  <link rel="stylesheet" href="../../../xidmetler.css" />
+      <link rel="stylesheet" href="../../../css/variables.css" />
+  <link rel="stylesheet" href="../../../css/general.css" />
+<link rel="stylesheet" href="../../../css/services/plant-health.css">
+  <link rel="stylesheet" href="../../../css/pages/services-index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   
-  <link rel="stylesheet" href="../../../lang-switch.css">
+  <link rel="stylesheet" href="../../../css/lang-switch.css">
 <script>!function(){var t=localStorage.getItem('asrTheme');if(t==='dark'){document.documentElement.classList.add('dark-mode');document.documentElement.setAttribute('data-theme','dark');}}();</script>
 </head>
 
@@ -30,12 +32,12 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="../../index.html" class="logo">
-        <img src="../../../images/asr_logo.png" alt="ASR Development Consulting Group" style="height:60px;margin-top:3px;width:auto;object-fit:contain;" />
+        <img src="../../../images/asr_logo.png" alt="ASR Development Consulting Group" />
       </a>
-      <ul class="nav-menu" style="margin:auto">
+      <ul class="nav-menu">
         <li class="nav-item">
           <a href="../../about/index.html" class="nav-link">
-            Haqqımızda <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Haqqımızda <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../about/index.html#sirket-profili">Şirkət profili</a>
@@ -46,20 +48,20 @@
         </li>
         <li class="nav-item">
           <a href="../../index.html#xidmetler" class="nav-link">
-            Xidmətlər <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Xidmətlər <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="mega-menu">
             <div class="mega-col">
               <div class="mega-col-title"><a href="../../services/food-safety/index.html">Qida təhlükəsizliyi</a></div>
 <div class="mega-col-title">
-                <a href="../../services/project-management/index.html" style="margin-top: 25%">İnkişaf layihələrinin idarəolunması</a>
+                <a href="../../services/project-management/index.html">İnkişaf layihələrinin idarəolunması</a>
               </div>
               <div class="mega-col-title">
-                <a href="../../services/plant-health/index.html" style="margin-top: 25%">Bitki sağlamlığı və aqronomluq xidməti</a>
+                <a href="../../services/plant-health/index.html">Bitki sağlamlığı və aqronomluq xidməti</a>
              </div>            </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="../../services/strategic-management/index.html">Strateji idarəetmə</a></div>
-              <div class="mega-col-title"><a href="../../services/business-development/index.html" style="margin-top: 25%;">Biznesin inkişafı xidmətləri</a></div>
+              <div class="mega-col-title"><a href="../../services/business-development/index.html">Biznesin inkişafı xidmətləri</a></div>
             </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="../../services/legislative-drafting/index.html">Qanunvericilik layihələri hazırlanması və ekspertizası</a></div>
@@ -69,7 +71,7 @@
         </li>
         <li class="nav-item">
           <a href="../../sectors/index.html" class="nav-link">
-            Sektorlar <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Sektorlar <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="mega-menu">
             <div class="mega-col">
@@ -90,7 +92,7 @@
         </li>
         <li class="nav-item">
           <a href="../../expertise/index.html" class="nav-link">
-            Təcrübəmiz <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Təcrübəmiz <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../expertise/index.html">Uğurlu keyslər</a>
@@ -100,7 +102,7 @@
         </li>
         <li class="nav-item">
           <a href="../../index.html#bilik-merkezi" class="nav-link">
-            Bilik Mərkəzi <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Bilik Mərkəzi <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../index.html#bilik-merkezi">Ekspert bloqu</a>
@@ -109,7 +111,7 @@
         </li>
         <li class="nav-item">
           <a href="../../media/index.html" class="nav-link">
-            Media <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Media <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../media/index.html">Foto qalereya</a>
@@ -935,15 +937,15 @@
           <input type="text" placeholder="Ad Soyad" />
           <input type="email" placeholder="E-mail ünvanınız" style="margin-top: 0" />
           <input type="text" placeholder="İxtisas sahəniz" style="margin-top: 8px" />
-          <button onclick="this.textContent = '✓ Göndərildi!'">
+          <button data-sent-text="✓ Göndərildi!" >
             Müraciət et →
           </button>
         </div>
       </div>
     </div>
 
-    <div class="footer-bottom" style="margin: auto">
-      <span class="footer-copy" style="margin: auto">© <span id="footer-year"></span> ASR Development Consulting Group.
+    <div class="footer-bottom">
+      <span class="footer-copy">© <span id="footer-year"></span> ASR Development Consulting Group.
         Bütün hüquqlar qorunur.
       </span>
     </div>
@@ -960,11 +962,11 @@
   </footer>
 
 
-  <script src="../../../theme-toggle.js"></script>
+  <script src="../../../js/theme-toggle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
-  <script src="../../../xidmetler.js"></script>
-    <script src="../../../app.js"></script>
+  <script src="../../../js/pages/services.js"></script>
+    <script src="../../../js/app.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
 
 </body>

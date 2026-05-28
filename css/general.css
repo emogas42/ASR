@@ -1,0 +1,103 @@
+/* ============================================================
+   ASR DEVELOPMENT CONSULTING GROUP
+   General Base Styles — Reset, Typography, Shared Utilities
+   Load after variables.css on every page.
+   ============================================================ */
+
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { overflow-x: hidden; position: relative; width: 100%; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+ul { list-style: none; }
+button, input, textarea, select { font-family: inherit; cursor: pointer; }
+
+/* ── Layout Utilities ─────────────────────────────────────── */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+
+/* ── Section Typography ───────────────────────────────────── */
+.section-eyebrow {
+  display: inline-block;
+  font-style: 30px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.section-desc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  max-width: 560px;
+}
+.section-header-center { text-align: center; margin-bottom: 3.5rem; }
+.section-header-center .section-desc { margin: 0 auto; }
+
+/* ── Shared Buttons ───────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: var(--radius-md);
+  border: none;
+  transition: var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(200,146,42,0.28);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(200,146,42,0.42); }
+.btn-outline-navy {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+.btn-outline-navy:hover { background: var(--navy); color: #fff; }
+
+/* ── Fade-in Animation ────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4,0,0.2,1), transform 0.65s cubic-bezier(0.4,0,0.2,1);
+  animation: fade-in-up 0.65s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+@keyframes fade-in-up {
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* ── Navbar Logo Image ────────────────────────────────────── */
+.logo img {
+  height: 60px;
+  margin-top: 3px;
+  width: auto;
+  object-fit: contain;
+}

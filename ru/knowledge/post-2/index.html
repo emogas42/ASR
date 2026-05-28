@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -14,10 +14,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="../../../bloq2.css">
-  <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../css/variables.css" />
+  <link rel="stylesheet" href="../../../css/general.css" />
+<link rel="stylesheet" href="../../../css/blog/post-2.css">
+  <link rel="stylesheet" href="../../../css/style.css">
 
-<link rel="stylesheet" href="../../../lang-switch.css">
+<link rel="stylesheet" href="../../../css/lang-switch.css">
 <script>!function(){var t=localStorage.getItem('asrTheme');if(t==='dark'){document.documentElement.classList.add('dark-mode');document.documentElement.setAttribute('data-theme','dark');}}();</script>
 </head>
 
@@ -27,12 +29,12 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="../../index.html" class="logo">
-        <img src="../../../images/asr_logo.png" alt="ASR Development Consulting Group" style="height:60px;margin-top:3px;width:auto;object-fit:contain;" />
+        <img src="../../../images/asr_logo.png" alt="ASR Development Consulting Group" />
       </a>
-      <ul class="nav-menu" style="margin:auto">
+      <ul class="nav-menu">
         <li class="nav-item">
           <a href="../../about/index.html" class="nav-link">
-            О нас <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            О нас <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../about/index.html#sirket-profili">Профиль компании</a>
@@ -43,20 +45,20 @@
         </li>
         <li class="nav-item">
           <a href="../../index.html#xidmetler" class="nav-link">
-            Услуги <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Услуги <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="mega-menu">
             <div class="mega-col">
               <div class="mega-col-title"><a href="../../services/food-safety/index.html">Безопасность пищевых продуктов</a></div>
 <div class="mega-col-title">
-                <a href="../../services/project-management/index.html" style="margin-top: 25%">Управление проектами развития</a>
+                <a href="../../services/project-management/index.html">Управление проектами развития</a>
               </div>
               <div class="mega-col-title">
-                <a href="../../services/plant-health/index.html" style="margin-top: 25%">Служба здоровья растений и агрономии</a>
+                <a href="../../services/plant-health/index.html">Служба здоровья растений и агрономии</a>
              </div>            </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="../../services/strategic-management/index.html">Стратегическое управление</a></div>
-              <div class="mega-col-title"><a href="../../services/business-development/index.html" style="margin-top: 25%;">Услуги по развитию бизнеса</a></div>
+              <div class="mega-col-title"><a href="../../services/business-development/index.html">Услуги по развитию бизнеса</a></div>
             </div>
             <div class="mega-col">
               <div class="mega-col-title"><a href="../../services/legislative-drafting/index.html">Разработка и экспертиза законодательных проектов</a></div>
@@ -66,7 +68,7 @@
         </li>
         <li class="nav-item">
           <a href="../../sectors/index.html" class="nav-link">
-            Секторы <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Секторы <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="mega-menu">
             <div class="mega-col">
@@ -88,7 +90,7 @@
         </li>
         <li class="nav-item">
           <a href="../../expertise/index.html" class="nav-link">
-            Опыт <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Опыт <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../expertise/index.html">Успешные кейсы</a>
@@ -98,7 +100,7 @@
         </li>
         <li class="nav-item">
           <a href="../../index.html#bilik-merkezi" class="nav-link">
-            Центр знаний <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Центр знаний <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../index.html#bilik-merkezi">Блог экспертов</a>
@@ -107,7 +109,7 @@
         </li>
         <li class="nav-item">
           <a href="../../media/index.html" class="nav-link">
-            Медиа <i class="fa-solid fa-chevron-down nav-chevron" style="font-size:10px"></i>
+            Медиа <i class="fa-solid fa-chevron-down nav-chevron"></i>
           </a>
           <div class="nav-dropdown">
             <a href="../../media/index.html">Фотогалерея</a>
@@ -562,15 +564,15 @@
           <input type="text" placeholder="Имя Фамилия" />
           <input type="email" placeholder="Ваш e-mail адрес" style="margin-top: 0" />
           <input type="text" placeholder="Ваша специализация" style="margin-top: 8px" />
-          <button onclick="this.textContent = '✓ Отправлено!'">
+          <button data-sent-text="✓ Отправлено!" >
             Подать заявку →
           </button>
         </div>
       </div>
     </div>
 
-    <div class="footer-bottom" style="margin: auto">
-      <span class="footer-copy" style="margin: auto">© <span id="footer-year"></span> ASR Development Consulting Group.
+    <div class="footer-bottom">
+      <span class="footer-copy">© <span id="footer-year"></span> ASR Development Consulting Group.
         Все права защищены.
       </span>
     </div>
@@ -615,15 +617,15 @@
   </button>
 
   <!-- SCRIPTS -->
-  <script src="../../../bloq2.js">
+  <script src="../../../js/blog/post-2.js">
 
   </script>
 
   <!-- External Scripts -->
-  <script src="../../../theme-toggle.js"></script>
+  <script src="../../../js/theme-toggle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
-  <script src="../../../app.js"></script>
+  <script src="../../../js/app.js"></script>
 </body>
 
 </html>

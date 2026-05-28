@@ -1,0 +1,245 @@
+{
+  "_comment": "ASR Website — CSS/JS asset map. Paths shown relative to project root. Each page loads css/variables.css and css/general.css on every page (loaded first), then the listed files.",
+  "_shared_on_every_page": {
+    "css": [
+      "css/variables.css",
+      "css/general.css",
+      "css/lang-switch.css"
+    ],
+    "js": [
+      "js/theme-toggle.js",
+      "js/app.js"
+    ],
+    "external": [
+      "https://fonts.googleapis.com/css2?family=Montserrat:...",
+      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
+      "//code.jivosite.com/widget/2BO7kbQ5oq"
+    ]
+  },
+  "pages": {
+    "/": {
+      "html": "index.html",
+      "css": ["css/style.css", "css/reels.css"],
+      "js": ["https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", "js/reels.js"],
+      "note": "Root redirect page (Azerbaijani default)"
+    },
+
+    "/az/": {
+      "html": "az/index.html",
+      "css": ["css/style.css", "css/reels.css"],
+      "js": ["https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", "js/reels.js"],
+      "note": "Azerbaijani homepage"
+    },
+    "/en/": {
+      "html": "en/index.html",
+      "css": ["css/style.css", "css/reels.css"],
+      "js": ["https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", "js/reels.js"],
+      "note": "English homepage"
+    },
+    "/ru/": {
+      "html": "ru/index.html",
+      "css": ["css/style.css", "css/reels.css"],
+      "js": ["https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js", "js/reels.js"],
+      "note": "Russian homepage"
+    },
+
+    "/{lang}/about/": {
+      "html": "{lang}/about/index.html",
+      "css": ["css/style.css", "css/pages/about.css"],
+      "js": [],
+      "note": "Company about page"
+    },
+    "/{lang}/about/leadership/": {
+      "html": "{lang}/about/leadership/index.html",
+      "css": ["css/pages/leadership.css"],
+      "js": [],
+      "note": "Leadership team page"
+    },
+    "/{lang}/expertise/": {
+      "html": "{lang}/expertise/index.html",
+      "css": ["css/pages/expertise.css"],
+      "js": ["js/pages/expertise.js"],
+      "note": "Expertise / case studies page"
+    },
+    "/{lang}/diagnostic/": {
+      "html": "{lang}/diagnostic/index.html",
+      "css": ["css/style.css"],
+      "js": [],
+      "note": "Free diagnostic lead magnet page"
+    },
+    "/{lang}/media/": {
+      "html": "{lang}/media/index.html",
+      "css": ["css/style.css", "css/pages/media-page.css"],
+      "js": ["js/pages/media.js"],
+      "note": "Media / news / events page"
+    },
+
+    "/{lang}/sectors/": {
+      "html": "{lang}/sectors/index.html",
+      "css": ["css/style.css", "css/pages/sectors-index.css"],
+      "js": [],
+      "note": "Sectors overview page"
+    },
+    "/{lang}/sectors/agriculture/": {
+      "html": "{lang}/sectors/agriculture/index.html",
+      "css": ["css/style.css", "css/sectors/agriculture.css"],
+      "js": ["js/sectors/agriculture.js"]
+    },
+    "/{lang}/sectors/food-industry/": {
+      "html": "{lang}/sectors/food-industry/index.html",
+      "css": ["css/style.css", "css/sectors/food-industry.css"],
+      "js": ["js/sectors/food-industry.js"]
+    },
+    "/{lang}/sectors/healthcare/": {
+      "html": "{lang}/sectors/healthcare/index.html",
+      "css": ["css/style.css", "css/sectors/healthcare.css"],
+      "js": ["js/sectors/healthcare.js"]
+    },
+    "/{lang}/sectors/ecology/": {
+      "html": "{lang}/sectors/ecology/index.html",
+      "css": ["css/style.css", "css/sectors/ecology.css"],
+      "js": ["js/sectors/ecology.js"]
+    },
+    "/{lang}/sectors/energy/": {
+      "html": "{lang}/sectors/energy/index.html",
+      "css": ["css/style.css", "css/sectors/sector-base.css", "css/sectors/energy-extras.css"],
+      "js": ["js/sectors/energy.js"],
+      "note": "sector-base.css is shared with tourism"
+    },
+    "/{lang}/sectors/tourism/": {
+      "html": "{lang}/sectors/tourism/index.html",
+      "css": ["css/style.css", "css/sectors/sector-base.css"],
+      "js": ["js/sectors/tourism.js"],
+      "note": "sector-base.css is shared with energy"
+    },
+    "/{lang}/sectors/construction/": {
+      "html": "{lang}/sectors/construction/index.html",
+      "css": ["css/style.css", "css/sectors/construction.css"],
+      "js": ["js/sectors/construction.js"]
+    },
+    "/{lang}/sectors/technology/": {
+      "html": "{lang}/sectors/technology/index.html",
+      "css": ["css/style.css", "css/sectors/technology.css"],
+      "js": ["js/sectors/technology.js"]
+    },
+
+    "/{lang}/services/": {
+      "html": "(no dedicated index — services listed on homepage)",
+      "css": [],
+      "js": []
+    },
+    "/{lang}/services/food-safety/": {
+      "html": "{lang}/services/food-safety/index.html",
+      "css": ["css/pages/services-index.css", "css/services/food-safety.css"],
+      "js": ["js/pages/services.js"]
+    },
+    "/{lang}/services/strategic-management/": {
+      "html": "{lang}/services/strategic-management/index.html",
+      "css": ["css/pages/services-index.css", "css/services/strategic-management.css"],
+      "js": ["js/pages/services.js", "js/pages/projects.js"]
+    },
+    "/{lang}/services/project-management/": {
+      "html": "{lang}/services/project-management/index.html",
+      "css": ["css/pages/services-index.css", "css/services/project-management.css", "css/pages/projects.css"],
+      "js": ["js/pages/services.js", "js/pages/projects.js"]
+    },
+    "/{lang}/services/business-development/": {
+      "html": "{lang}/services/business-development/index.html",
+      "css": ["css/pages/services-index.css", "css/services/business-development.css"],
+      "js": ["js/pages/services.js"]
+    },
+    "/{lang}/services/monitoring-evaluation/": {
+      "html": "{lang}/services/monitoring-evaluation/index.html",
+      "css": ["css/pages/services-index.css", "css/services/monitoring-evaluation.css"],
+      "js": ["js/pages/services.js"],
+      "note": "Had a depth-path bug (../../ instead of ../../../) — now fixed"
+    },
+    "/{lang}/services/plant-health/": {
+      "html": "{lang}/services/plant-health/index.html",
+      "css": ["css/pages/services-index.css", "css/services/plant-health.css"],
+      "js": ["js/pages/services.js"]
+    },
+    "/{lang}/services/legislative-drafting/": {
+      "html": "{lang}/services/legislative-drafting/index.html",
+      "css": ["css/pages/services-index.css", "css/services/legislative-drafting.css", "css/pages/projects.css"],
+      "js": ["js/pages/services.js", "js/pages/projects.js"]
+    },
+    "/{lang}/services/government-relations/": {
+      "html": "{lang}/services/government-relations/index.html",
+      "css": ["css/pages/services-index.css", "css/services/government-relations.css"],
+      "js": ["js/pages/services.js"]
+    },
+
+    "/{lang}/knowledge/post-1/": {
+      "html": "{lang}/knowledge/post-1/index.html",
+      "css": ["css/style.css", "css/blog/post-1.css"],
+      "js": ["js/blog/post-1.js", "js/reels.js"]
+    },
+    "/{lang}/knowledge/post-2/": {
+      "html": "{lang}/knowledge/post-2/index.html",
+      "css": ["css/style.css", "css/blog/post-2.css"],
+      "js": ["js/blog/post-2.js", "js/reels.js"]
+    },
+    "/{lang}/knowledge/post-3/": {
+      "html": "{lang}/knowledge/post-3/index.html",
+      "css": ["css/style.css", "css/blog/post-3.css"],
+      "js": ["js/blog/post-3.js", "js/reels.js"]
+    }
+  },
+
+  "css_file_index": {
+    "css/variables.css":                   "All CSS custom properties (light + dark mode). Load first on every page.",
+    "css/general.css":                      "Reset, base typography, shared utilities, buttons, fade-in, logo img rule.",
+    "css/style.css":                        "Navbar, hero section, homepage sections, footer. Trimmed of variables/utilities.",
+    "css/lang-switch.css":                  "Language switcher dropdown component.",
+    "css/reels.css":                        "Video reels carousel component.",
+    "css/manager-card.css":                 "Team member card component.",
+    "css/pages/about.css":                  "About / company profile page.",
+    "css/pages/leadership.css":             "Leadership team page.",
+    "css/pages/expertise.css":              "Expertise / case studies page.",
+    "css/pages/projects.css":               "Projects carousel component (used on some service pages).",
+    "css/pages/services-index.css":         "Services index / hero section (shared base for all service pages).",
+    "css/pages/sectors-index.css":          "Sectors overview index page.",
+    "css/pages/media-page.css":             "Media gallery: tabs, video carousel, news cards.",
+    "css/blog/post-1.css":                  "Knowledge post 1 styles.",
+    "css/blog/post-2.css":                  "Knowledge post 2 styles.",
+    "css/blog/post-3.css":                  "Knowledge post 3 styles.",
+    "css/services/food-safety.css":         "Food safety service page.",
+    "css/services/strategic-management.css":"Strategic management service page.",
+    "css/services/project-management.css":  "Development project management service page.",
+    "css/services/business-development.css":"Business development service page.",
+    "css/services/monitoring-evaluation.css":"Monitoring & evaluation service page.",
+    "css/services/plant-health.css":        "Plant health & agronomy service page.",
+    "css/services/legislative-drafting.css":"Legislative drafting service page.",
+    "css/services/government-relations.css":"Government relations service page.",
+    "css/sectors/agriculture.css":          "Agriculture sector page.",
+    "css/sectors/food-industry.css":        "Food industry sector page.",
+    "css/sectors/healthcare.css":           "Healthcare sector page.",
+    "css/sectors/ecology.css":              "Ecology sector page.",
+    "css/sectors/sector-base.css":          "Shared base template for energy + tourism sector pages.",
+    "css/sectors/energy-extras.css":        "Energy sector extra styles (loaded on top of sector-base.css).",
+    "css/sectors/construction.css":         "Construction sector page.",
+    "css/sectors/technology.css":           "Technology sector page."
+  },
+
+  "js_file_index": {
+    "js/app.js":                "Core: navbar scroll, scroll-spy, mobile nav drawer, hero carousel, counters, submit button feedback.",
+    "js/theme-toggle.js":       "Dark/light mode toggle with localStorage persistence.",
+    "js/reels.js":              "Video reels carousel component.",
+    "js/pages/media.js":        "Media gallery: tab switching, card toggle, video scroll carousel.",
+    "js/pages/services.js":     "All service page interactions (tabs, panels, accordions).",
+    "js/pages/expertise.js":    "Expertise / case studies page interactions.",
+    "js/pages/projects.js":     "Projects carousel and slider.",
+    "js/blog/post-1.js":        "Knowledge post 1 interactions.",
+    "js/blog/post-2.js":        "Knowledge post 2 interactions.",
+    "js/blog/post-3.js":        "Knowledge post 3 interactions.",
+    "js/sectors/agriculture.js":"Agriculture sector interactions.",
+    "js/sectors/food-industry.js":"Food industry sector interactions.",
+    "js/sectors/healthcare.js": "Healthcare sector interactions.",
+    "js/sectors/tourism.js":    "Tourism sector interactions.",
+    "js/sectors/ecology.js":    "Ecology sector interactions.",
+    "js/sectors/energy.js":     "Energy sector interactions.",
+    "js/sectors/technology.js": "Technology sector interactions.",
+    "js/sectors/construction.js":"Construction sector interactions."
+  }
+}

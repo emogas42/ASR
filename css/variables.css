@@ -1,0 +1,110 @@
+/* ============================================================
+   ASR DEVELOPMENT CONSULTING GROUP
+   CSS Custom Properties — Light & Dark Mode
+   Load this file FIRST on every page.
+   ============================================================ */
+
+/* ── Light Mode (default) ─────────────────────────────────── */
+:root {
+  /* --- Colors & Brand --- */
+  --navy:           #1b4280;
+  --navy-dark:      #0b1f3a;
+  --navy-mid:       #2a5298;
+  --navy-light:     #3a6abf;
+  --gold:           #c8922a;
+  --gold-bright:    #e4a832;
+  --gold-pale:      #faf3e0;
+  --orange:         #cf5e12;
+  --white:          #ffffff;
+  --off-white:      #f9f8f6;
+  --gray-mid:       #9c9487;
+
+  /* --- UI Elements & Backgrounds --- */
+  --bg:             #ffffff;
+  --bg-secondary:   #f9f8f6;
+  --bg-section:     #f5f6f8;
+  --bg-card:        #ffffff;
+  --surface:        #ffffff;
+  --stat-bg:        #f0f4ff;
+  --nav-bg:         rgba(255,255,255,0.97);
+
+  /* --- Text --- */
+  --text:           #1a1810;
+  --text-2:         #4b5362;
+  --text-muted:     #64594e;
+  --text-light:     #9c9487;
+  --stat-txt:       #1a56db;
+  --eyebrow:        #1a56db;
+  --heading:        #0b1f3a;
+  --heading-sub:    #4e4840;
+  --haqqimizda-title: #0b1f3a;
+
+  /* --- Accents & Borders --- */
+  --accent:         #1a56db;
+  --accent-light:   #e8f0fd;
+  --border:         #e2ddd4;
+  --border-hover:   #c8c0b4;
+  --nav-border:     rgba(11,31,58,0.1);
+
+  /* --- Shadows & Effects --- */
+  --shadow-sm:      0 2px 8px rgba(11,31,58,0.07);
+  --shadow-md:      0 8px 32px rgba(11,31,58,0.11);
+  --shadow-lg:      0 24px 56px rgba(11,31,58,0.12);
+  --shadow:         0 2px 16px rgba(0,0,0,.07);
+  --shadow-hover:   0 8px 32px rgba(0,0,0,.13);
+  --transition:     0.4s cubic-bezier(0.16,1,0.3,1);
+  --trans:          .25s ease;
+
+  /* --- Spacing & Radius --- */
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      16px;
+  --radius-xl:      24px;
+  --radius:         12px;
+  --slide-h:        580px;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+.dark-mode, [data-theme="dark"] {
+  --navy:           #030d1a;
+  --navy-dark:      #020b18;
+  --navy-mid:       #0a1e36;
+  --navy-light:     #0f2d56;
+  --gold:           #d4a040;
+  --gold-bright:    #e8b84b;
+  --gold-pale:      #1e1608;
+  --orange:         #d96820;
+  --white:          #0d1f35;
+  --off-white:      #0b1828;
+  --gray-mid:       #6a7f96;
+
+  --bg:             #060f1c;
+  --bg-secondary:   #0b1828;
+  --bg-section:     #161922;
+  --bg-card:        #0d1f35;
+  --surface:        #1c2030;
+  --stat-bg:        #1a2540;
+  --nav-bg:         rgba(3,13,26,0.97);
+
+  --text:           #dcd5c5;
+  --text-2:         #8b93a8;
+  --text-muted:     #8a9bb0;
+  --text-light:     #6a7f96;
+  --stat-txt:       #4d87f5;
+  --eyebrow:        #4d87f5;
+  --heading:        #e8e0d0;
+  --heading-sub:    #b0bfcc;
+  --haqqimizda-title: #e8e0d0;
+
+  --accent:         #4d87f5;
+  --accent-light:   #1a2540;
+  --border:         #1a3150;
+  --border-hover:   #2a4a6a;
+  --nav-border:     rgba(200,146,42,0.12);
+
+  --shadow-sm:      0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md:      0 8px 32px rgba(0,0,0,0.5);
+  --shadow-lg:      0 24px 56px rgba(0,0,0,0.55);
+  --shadow:         0 2px 16px rgba(0,0,0,.35);
+  --shadow-hover:   0 8px 32px rgba(0,0,0,.5);
+}

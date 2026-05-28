@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="az">
   <head>
     <meta charset="UTF-8" />
@@ -26,9 +26,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="../../../style.css" />
-    <link rel="stylesheet" href="../../../sectors1.css" />
-<link rel="stylesheet" href="../../../lang-switch.css">
+      <link rel="stylesheet" href="../../../css/variables.css" />
+  <link rel="stylesheet" href="../../../css/general.css" />
+<link rel="stylesheet" href="../../../css/style.css" />
+    <link rel="stylesheet" href="../../../css/sectors/agriculture.css" />
+<link rel="stylesheet" href="../../../css/lang-switch.css">
 <script>!function(){var t=localStorage.getItem('asrTheme');if(t==='dark'){document.documentElement.classList.add('dark-mode');document.documentElement.setAttribute('data-theme','dark');}}();</script>
 </head>
 
@@ -40,21 +42,16 @@
           <img
             src="../../../images/asr_logo.png"
             alt="ASR Development Consulting Group"
-            style="
-              height: 60px;
-              margin-top: 3px;
-              width: auto;
-              object-fit: contain;
-            "
+           
           />
         </a>
-        <ul class="nav-menu" style="margin: auto">
+        <ul class="nav-menu">
           <li class="nav-item">
             <a href="../../about/index.html" class="nav-link">
               Haqqımızda
               <i
                 class="fa-solid fa-chevron-down nav-chevron"
-                style="font-size: 10px"
+               
               ></i>
             </a>
             <div class="nav-dropdown">
@@ -71,7 +68,7 @@
               Xidmətlər
               <i
                 class="fa-solid fa-chevron-down nav-chevron"
-                style="font-size: 10px"
+               
               ></i>
             </a>
             <div class="mega-menu">
@@ -80,12 +77,12 @@
                   <a href="../../services/food-safety/index.html">Qida təhlükəsizliyi</a>
                 </div>
                 <div class="mega-col-title">
-                  <a href="../../services/project-management/index.html" style="margin-top: 25%"
+                  <a href="../../services/project-management/index.html"
                     >İnkişaf layihələrinin idarəolunması</a
                   >
                 </div>
                  <div class="mega-col-title">
-                <a href="../../services/plant-health/index.html" style="margin-top: 25%">Bitki sağlamlığı və aqronomluq xidməti</a>
+                <a href="../../services/plant-health/index.html">Bitki sağlamlığı və aqronomluq xidməti</a>
              </div> 
               </div>
               <div class="mega-col">
@@ -93,7 +90,7 @@
                   <a href="../../services/strategic-management/index.html">Strateji idarəetmə</a>
                 </div>
                 <div class="mega-col-title">
-                  <a href="../../services/business-development/index.html" style="margin-top: 25%"
+                  <a href="../../services/business-development/index.html"
                     >Biznesin inkişafı xidmətləri</a
                   >
                 </div>
@@ -117,7 +114,7 @@
               Sektorlar
               <i
                 class="fa-solid fa-chevron-down nav-chevron"
-                style="font-size: 10px"
+               
               ></i>
             </a>
             <div class="mega-menu">
@@ -155,7 +152,7 @@
               Təcrübəmiz
               <i
                 class="fa-solid fa-chevron-down nav-chevron"
-                style="font-size: 10px"
+               
               ></i>
             </a>
             <div class="nav-dropdown">
@@ -169,7 +166,7 @@
               Bilik Mərkəzi
               <i
                 class="fa-solid fa-chevron-down nav-chevron"
-                style="font-size: 10px"
+               
               ></i>
             </a>
             <div class="nav-dropdown">
@@ -182,7 +179,7 @@
               Media
               <i
                 class="fa-solid fa-chevron-down nav-chevron"
-                style="font-size: 10px"
+               
               ></i>
             </a>
             <div class="nav-dropdown">
@@ -1260,15 +1257,15 @@ layihələrinin hazırlanması</span
           <input type="text" placeholder="Ad Soyad" />
           <input type="email" placeholder="E-mail ünvanınız" style="margin-top: 0" />
           <input type="text" placeholder="İxtisas sahəniz" style="margin-top: 8px" />
-          <button onclick="this.textContent = '✓ Göndərildi!'">
+          <button data-sent-text="✓ Göndərildi!" >
             Müraciət et →
           </button>
         </div>
       </div>
     </div>
 
-    <div class="footer-bottom" style="margin: auto">
-      <span class="footer-copy" style="margin: auto">© <span id="footer-year"></span> ASR Development Consulting Group.
+    <div class="footer-bottom">
+      <span class="footer-copy">© <span id="footer-year"></span> ASR Development Consulting Group.
         Bütün hüquqlar qorunur.
       </span>
     </div>
@@ -1288,11 +1285,11 @@ layihələrinin hazırlanması</span
     </button>
 
     <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
-    <script src="../../../theme-toggle.js"></script>
-    <script src="../../../app.js"></script>
+    <script src="../../../js/theme-toggle.js"></script>
+    <script src="../../../js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- Accordion JavaScript -->
-    <script src="../../../kend.js"></script>
+    <script src="../../../js/sectors/agriculture.js"></script>
   </body>
 </html>

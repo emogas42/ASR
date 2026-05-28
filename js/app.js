@@ -891,3 +891,12 @@ document.addEventListener('keydown',e=>{
     e.stopPropagation();
   });
 })();
+
+/* Submit button feedback — replaces onclick="this.textContent = '✓ ...'" */
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-sent-text]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      this.textContent = this.dataset.sentText;
+    });
+  });
+});
