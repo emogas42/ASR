@@ -1155,30 +1155,32 @@ body {
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 72px;
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.25rem;
+  gap: 4px;
 }
-.logo { display: flex; align-items: center; gap: 11px; position: relative;right: 6% }
-.nav-menu { display: flex; align-items: center; gap: 2px; }
+.logo { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+.nav-menu { display: flex; align-items: center; gap: 0; margin: 0 auto; flex-wrap: nowrap; flex-shrink: 1; min-width: 0; }
 .nav-item { position: relative; }
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   color: var(--text);
-  font-size: 0.6475rem;
+  font-size: 0.62rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 8px 13px;
+  padding: 6px 9px;
   border-radius: var(--radius-sm);
   transition: var(--transition);
   border: none;
   background: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 .dark-mode .nav-link { color: rgba(255,255,255,0.82); }
 .nav-link:hover, .nav-link.active { color: var(--gold-bright); background: rgba(200,146,42,0.1); }
@@ -1436,11 +1438,8 @@ body {
   cursor: pointer;
   transition: background 0.3s;
   flex-shrink: 0;
-  position:relative;
-  left: 10%;
 }
 @media (max-width: 768px) {
-  #theme-switch { position: relative;left: 10%; }
     .whatsapp-icon  { position: fixed; margin-left: 1rem; bottom: 5%; left: 4%; }
 
 }
@@ -1458,22 +1457,30 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 10px;
+  padding: 8px 12px;
   background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-  color: white !important; /* Mətni qızılı edirik */
+  color: white !important;
   border: 1px solid var(--gold);
   border-radius: var(--radius-md);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   font-weight: 700;
   width: fit-content;
-  letter-spacing: 0.12em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 6px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-} 
+}
+/* Hide label text on tight viewports, keep icon */
+@media (max-width: 1160px) {
+  .btn-premium-diag .btn-content span { display: none; }
+  .btn-premium-diag { padding: 9px 11px; margin-left: 4px; }
+}
 @media (max-width: 768px) {
   .btn-premium-diag { display: none; }
   .mobile-nav .btn-premium-diag { display: inline-flex; margin-top: 10%; }
@@ -1529,9 +1536,11 @@ body {
 .back-link:hover { color: var(--gold); border-color: var(--gold); }
 .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 
-@media (max-width: 768px) {
-  .nav-menu   { display: none; }
-  .nav-toggle { display: flex; }
+@media (max-width: 1080px) {
+  .nav-menu         { display: none; }
+  .nav-toggle       { display: flex; }
+  .btn-premium-diag { display: none; }
+  #theme-switch     { margin-left: auto; }
 }
 
 /* ============================================================
@@ -2170,11 +2179,12 @@ body.dark-mode .social-link {
   padding: 5rem 0 3rem;
   background: var(--off-white);
   overflow: hidden;
-}x
+}
 
 .experts-carousel-wrap {
   position: relative;
   padding: 0 0 3rem;
+  isolation: isolate;
 }
 
 
@@ -2192,7 +2202,6 @@ body.dark-mode .social-link {
   display: flex;
   gap: 1.5rem;
   transition: transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
-  will-change: transform;
 }
 
 /* Individual card */
@@ -2505,37 +2514,6 @@ body.dark-mode .exp-arrow:hover {
 
 .btn-primary:hover::before {
   width: 100%;
-}
-.btn-premium-diag {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 10px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-  color: white !important; /* Mətni qızılı edirik */
-  border: 1px solid var(--gold);
-  border-radius: var(--radius-md);
-  font-size: 0.65rem;
-  font-weight: 700;
-  width: fit-content;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  .btn-premium-diag {
-    display: none;
-  }
-  .mobile-nav .btn-premium-diag {
-    display: inline-flex;
-    margin-top: 10%;
-  } 
-  
 }
 
 .btn-content {
@@ -3080,15 +3058,7 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
   background: var(--bg-secondary);
   color: var(--navy);
 }
-.btn-premium-diag{
-  position: relative;
-  left: 3%;
-}
 @media(min-width:768px){
-  #theme-switch{
-      position: relative;
-      left: 10%;
-  }
 /* .dark-mode .exp-card:hover .exp-cert-badge{
   background-color: red;
 } */
@@ -3145,40 +3115,6 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 .dark-mode .section-title em { color: var(--gold); }
 .section-subtitle { font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin: auto; }
 
-.experts-carousel-wrap {
-  position: relative; /* Oxların bu çərçivədən kənara çıxmaması üçün vacibdir */
-  width: 100%;
-}
-/* Hər iki ox üçün ortaq stillər */
-.exp-arrow {
-  position: absolute;
-  top: 50%;             /* Yuxarıdan tam ortalayır */
-  transform: translateY(-50%); /* Şaquli mərkəzləşdirməni tam dəqiqləşdirir */
-  z-index: 10;          /* Kartların altında qalmamaq üçün */
-  width: 44px;
-  height: 44px;
-  color: var(--haqqimizda-title);
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.exp-arrow:hover {
-  background: var(--gold);
-}
-
-/* Sol düymənin yeri */
-.exp-prev {
-  left: 22px; /* Karuseldən bir az sola çıxarır (Zövqə görə 0 və ya 10px edə bilərsən) */
-}
-
-/* Sağ düymənin yeri */
-.exp-next {
-  right: 22px; /* Karuseldən bir az sağa çıxarır */
-}
 
 /* MOBİL REJİM ÜÇÜN (Ekran kiçiləndə oxların kənara daşmaması üçün) */
 @media (max-width: 768px) {
@@ -3915,3 +3851,10 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
     display: none;
   }
 }
+
+/* ── DARK MODE OVERRIDES ─────────────────────────────────────── */
+.dark-mode #komanda { background: var(--bg-secondary); }
+.dark-mode .exp-card { background: var(--bg-card); border-color: var(--border); }
+.dark-mode .exp-cert-badge { background: var(--bg-secondary); color: var(--text); }
+.dark-mode .risk-level--high { background: rgba(239,68,68,0.15); color: #fca5a5; border-color: rgba(239,68,68,0.2); }
+.dark-mode .risk-level--mid { background: rgba(245,158,11,0.15); color: #fcd34d; border-color: rgba(245,158,11,0.2); }

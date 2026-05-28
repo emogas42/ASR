@@ -1,51 +1,37 @@
-// ── Theme Toggle (əsas səhifə — data-theme + themeBtn) ──────────────────────
-// HTML-də lazım olanlar:
-//   <html data-theme="...">
-//   <button id="themeBtn">...</button>
-//   <span id="themeLabel">...</span>
+// ── Unified Theme Toggle ──────────────────────────────────────────────────────
+// Works on every page regardless of which button ID is used.
+// Reads/writes a single key: localStorage.asrTheme ('dark' | 'light')
+// Sets both html[data-theme] and body.dark-mode so all CSS rules match.
 (function () {
-  const html  = document.documentElement;
-  const btn   = document.getElementById('themeBtn');
-  const label = document.getElementById('themeLabel');
+  var html  = document.documentElement;
+  var body  = document.body;
 
-  // Əvvəlki seçimi yüklə
-  const saved = localStorage.getItem('asrTheme');
-  if (saved === 'dark') apply('dark');
+  // Support both button IDs present across different page templates
+  var btn   = document.getElementById('theme-switch') || document.getElementById('themeBtn');
+  var label = document.getElementById('themeLabel');
 
-  btn.addEventListener('click', function () {
-    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    apply(next);
-    localStorage.setItem('asrTheme', next);
-  });
-
-  function apply(theme) {
-    html.setAttribute('data-theme', theme);
-    label.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
-  }
-})();
-
-
-// ── Theme Toggle (rehberlik səhifəsi — dark-mode class + theme-switch) ───────
-// HTML-də lazım olanlar:
-//   <html data-theme="...">
-//   <body class="...">
-//   <button id="theme-switch">...</button>
-(function () {
-  var body = document.body;
-  var html = document.documentElement;
-  var btn  = document.getElementById('theme-switch');
-
-  // Əvvəlki seçimi yüklə
-  var saved = localStorage.getItem('asrTheme');
-  if (saved === 'dark') {
-    body.classList.add('dark-mode');
-    html.setAttribute('data-theme', 'dark');
+  function apply(dark) {
+    if (dark) {
+      html.classList.add('dark-mode');
+      body.classList.add('dark-mode');
+      html.setAttribute('data-theme', 'dark');
+      if (label) label.textContent = 'Light mode';
+    } else {
+      html.classList.remove('dark-mode');
+      body.classList.remove('dark-mode');
+      html.setAttribute('data-theme', 'light');
+      if (label) label.textContent = 'Dark mode';
+    }
   }
 
-  btn.addEventListener('click', function () {
-    var isDark = body.classList.contains('dark-mode');
-    body.classList.toggle('dark-mode', !isDark);
-    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    localStorage.setItem('asrTheme', isDark ? 'light' : 'dark');
-  });
+  // Restore saved preference immediately (before first paint)
+  apply(localStorage.getItem('asrTheme') === 'dark');
+
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var isDark = html.classList.contains('dark-mode');
+      apply(!isDark);
+      localStorage.setItem('asrTheme', isDark ? 'light' : 'dark');
+    });
+  }
 })();

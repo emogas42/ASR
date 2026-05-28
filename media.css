@@ -1185,6 +1185,15 @@ body.dark-mode .media-info span {
     }
 }
 
+/* ── DARK MODE COMPREHENSIVE OVERRIDES ──────────────────────── */
+.dark-mode { --dark: #e8e0d0; }
+.dark-mode .faq-item { background: var(--bg-card, #0d1f35); }
+.dark-mode .faq-item.active .faq-q { color: var(--dark); }
+.dark-mode .faq-a { background: rgba(200,146,42,0.03); color: var(--text-muted); }
+.dark-mode .t-item { background: var(--bg-card, #0d1f35); }
+.dark-mode .section-header h2,
+.dark-mode .section-header p { color: var(--text, #dcd5c5); }
+
 @media (max-width: 480px) {
     .hero h1 { font-size: 24px; }
     .hero p { font-size: 14px; }

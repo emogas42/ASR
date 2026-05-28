@@ -110,7 +110,6 @@
 }
  
 /* Dark mode compatibility */
-body.dark .lang-btn,
 .dark-mode .lang-btn {
   border-color: rgba(255, 255, 255, 0.2);
   color: rgba(255,255,255,0.85);
@@ -119,22 +118,22 @@ body.dark .lang-btn,
   border-color: rgba(200, 146, 42, 0.6);
   background: rgba(200, 146, 42, 0.1);
 }
- 
-body.dark .lang-dropdown {
-  background: #1e1e2e;
+
+.dark-mode .lang-dropdown {
+  background: var(--nav-bg, #0d1b2a);
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
- 
-body.dark .lang-option {
-  color: #e0e0e0;
+
+.dark-mode .lang-option {
+  color: var(--text, #dcd5c5);
 }
- 
-body.dark .lang-option:hover {
+
+.dark-mode .lang-option:hover {
   background: rgba(255, 255, 255, 0.08);
 }
- 
-body.dark .lang-option.lang-active {
+
+.dark-mode .lang-option.lang-active {
   background: rgba(255, 255, 255, 0.06);
 }
  
