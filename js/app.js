@@ -304,26 +304,6 @@ window.addEventListener("scroll", function() {
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
- 
- 
-// Dark mode
-var darkmode = localStorage.getItem('darkmode');
-var themeSwitch = document.getElementById('theme-switch');
-function enableDarkmode() {
-  document.body.classList.add('dark-mode');
-  localStorage.setItem('darkmode', 'active');
-}
-function disableDarkmode() {
-  document.body.classList.remove('dark-mode');
-  localStorage.setItem('darkmode', null);
-}
-if (darkmode === "active") enableDarkmode();
-themeSwitch.addEventListener("click", function() {
-  darkmode = localStorage.getItem('darkmode');
-  if (darkmode !== 'active') enableDarkmode();
-  else disableDarkmode();
-});
- 
 // ── EKSPERT CAROUSEL ──
 (function() {
   var section = document.getElementById('komanda');

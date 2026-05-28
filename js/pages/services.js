@@ -77,22 +77,6 @@
   }
 
   /* ═══════════════════════════════════════════════════════════════
-     7. THEME SWITCH
-     ═══════════════════════════════════════════════════════════════ */
-  const themeSwitch = document.getElementById('theme-switch');
-  if (themeSwitch) {
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-    themeSwitch.addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      const isDark = document.body.classList.contains('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  }
-
-  /* ═══════════════════════════════════════════════════════════════
      8. EXPERT CAROUSEL — FULLY FUNCTIONAL
      ═══════════════════════════════════════════════════════════════ */
   (function() {
@@ -639,16 +623,7 @@ function initResponsiveFixes() {
 
 // ── Z-Index Düzəlişləri ──────────────────────────────────────────
 function fixZIndex() {
-  // Navbar z-index-ini yoxla və modal-dan aşağı sal
-  const navbar = document.querySelector('nav, .navbar, header, .header');
-  if (navbar) {
-    const navZIndex = parseInt(window.getComputedStyle(navbar).zIndex) || 100;
-    if (navZIndex >= 9000) {
-      navbar.style.zIndex = '8999';
-    }
-  }
-
-  // Modal overlay-lərin z-index-ini təmin et
+  // Modal overlay-lərin z-index-ini təmin et (navbar-a toxunma)
   document.querySelectorAll('.modal-overlay').forEach((modal, index) => {
     modal.style.zIndex = (9000 + index).toString();
   });

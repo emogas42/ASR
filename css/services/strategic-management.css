@@ -623,38 +623,6 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 .btn-primary:hover::before {
   width: 100%;
 }
-.btn-premium-diag {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 10px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
-  color: white !important; /* Mətni qızılı edirik */
-  border: 1px solid var(--gold);
-  border-radius: var(--radius-md);
-  font-size: 0.65rem;
-  font-weight: 700;
-  width: fit-content;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  width: 210px;
-}
-@media (max-width: 768px) {
-  .btn-premium-diag {
-    display: none;
-  }
-  .mobile-nav .btn-premium-diag {
-    display: inline-flex;
-    margin-top: 10%;
-  } 
-  
-}
 
 .btn-content {
   display: flex;
@@ -685,24 +653,6 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
   z-index: 1;
 }
 
-/* Hover Effektləri */
-.btn-premium-diag:hover {
-  color: #fff !important;
-  background: var(--gold);
-  border-color: var(--gold);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(200, 146, 42, 0.3);
-}
-
-.btn-premium-diag:hover .btn-content i {
-  transform: rotate(15deg) scale(1.1);
-  color: #fff;
-}
-
-.btn-premium-diag:hover .shimmer {
-  left: 100%;
-  transition: all 0.8s ease;
-}
 .section-header-center { text-align: center; margin-bottom: 3.5rem; }
 .section-header-center .section-desc { margin: 0 auto; }
 
