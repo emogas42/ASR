@@ -470,7 +470,7 @@
  }
 
  /* Back to top */
- .back-to-top {
+ /* .back-to-top {
    position: fixed;
    bottom: 32px;
    right: 32px;
@@ -498,7 +498,7 @@
 
  .back-to-top:hover {
    background: var(--gold);
- }
+ } */
 
  /* Mobile */
  @media (max-width: 600px) {

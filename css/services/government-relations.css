@@ -340,7 +340,7 @@
     .back-link svg { width: 14px; height: 14px; stroke: currentColor; fill:none; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round; }
 
     /* Back to top */
-    .back-to-top {
+    /* .back-to-top {
       position: fixed; bottom: 32px; right: 32px; z-index: 900;
       width: 46px; height: 46px; border-radius: 50%;
       background: var(--navy); color: #fff; border: none;
@@ -350,7 +350,7 @@
       transition: opacity .3s, transform .3s;
     }
     .back-to-top.visible { opacity: 1; transform: translateY(0); }
-    .back-to-top:hover { background: var(--gold); }
+    .back-to-top:hover { background: var(--gold); } */
 
     /* Mobile */
     @media (max-width: 600px) {
