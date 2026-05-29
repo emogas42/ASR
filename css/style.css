@@ -36,7 +36,7 @@
   padding: 0 1.25rem;
   gap: 4px;
 }
-.logo { display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+.logo { display: flex; align-items: center; gap: 11px; flex-shrink: 0; min-width: 0; }
 .nav-menu { display: flex; align-items: center; gap: 0; margin: 0 auto; flex-wrap: nowrap; flex-shrink: 1; min-width: 0; }
 .nav-item { position: relative; }
 .nav-link {
@@ -1538,9 +1538,20 @@ body.modal-open { overflow: hidden; }
 /* Hamburger nav collapse */
 @media (max-width: 1080px) {
   .nav-menu { display: none; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; flex-shrink: 0; }
   .btn-premium-diag { display: none; }
-  #theme-switch { margin-left: auto; }
+  /* Logo pushes controls to the right; controls are pinned and never clipped */
+  .logo { margin-right: auto; flex-shrink: 1; min-width: 0; }
+  #theme-switch { margin-left: 0; flex-shrink: 0; }
+  .lang-switcher { flex-shrink: 0; }
+}
+/* Shrink logo image on narrow phones */
+@media (max-width: 480px) {
+  .logo img { height: 48px; }
+}
+@media (max-width: 360px) {
+  .logo img { height: 40px; }
+  .nav-inner { gap: 2px; padding: 0 0.75rem; }
 }
 @media (max-width: 768px) {
   .lang-toggle-desktop { display: none; }
