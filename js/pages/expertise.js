@@ -234,18 +234,18 @@
   /* ═══════════════════════════════════════════════════════════════
      5. THEME SWITCH
      ═══════════════════════════════════════════════════════════════ */
-  var themeSwitch = document.getElementById('theme-switch');
-  if (themeSwitch) {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-      document.body.classList.add('dark-mode');
-    }
-    themeSwitch.addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      var isDark = document.body.classList.contains('dark-mode');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
-  }
+  // var themeSwitch = document.getElementById('theme-switch');
+  // if (themeSwitch) {
+  //   var saved = localStorage.getItem('theme');
+  //   if (saved === 'dark') {
+  //     document.body.classList.add('dark-mode');
+  //   }
+  //   themeSwitch.addEventListener('click', function() {
+  //     document.body.classList.toggle('dark-mode');
+  //     var isDark = document.body.classList.contains('dark-mode');
+  //     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  //   });
+  // }
 
   /* ═══════════════════════════════════════════════════════════════
      6. BACK TO TOP
