@@ -1414,3 +1414,276 @@ body.dark-mode .process-grid::before {
     text-align: left;
   }
 }
+/* ============================================
+   KART KONTEYNERİ (əgər varsa) — mərkəzləşdir
+   ============================================ */
+.prominent-container,
+.container,
+.main-content,
+section,
+article {
+  /* Əgər valideyninizdə bu varsa, əlavə edin: */
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* Kartları ortaya çək */
+  width: 100%;
+  max-width: 100%;
+  padding: 0 16px;            /* Kənarlarda boşluq */
+  box-sizing: border-box;
+}
+
+/* ============================================
+   PROMINENT KART — tam responsiv, mərkəzdə
+   ============================================ */
+.prominent-card {
+  width: 100%;
+  max-width: 1050px;          /* Maksimum en */
+  margin-left: auto !important;   /* !important əvvəlki margin-ləri override etsin */
+  margin-right: auto !important;
+  margin-top: -50px;
+  margin-bottom: 40px;
+  position: relative;
+  background: var(--bg-card, #ffffff);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: var(--radius-lg, 16px);
+  min-height: 140px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1), 
+              box-shadow 0.35s cubic-bezier(.4,0,.2,1), 
+              border-color 0.35s;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Üst qradient xətt */
+.prominent-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--navy, #0f1b3d), var(--gold, #c9a227));
+  z-index: 2;
+}
+
+/* Sol akcent zolağı */
+.prominent-card::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--gold, #c9a227), var(--navy, #0f1b3d));
+  opacity: 0.8;
+  z-index: 2;
+}
+
+.prominent-card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  gap: 16px;
+}
+
+.prominent-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+  flex: 1;
+}
+
+.prominent-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-light, #eef2ff), #dbe4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(26,86,219,0.12);
+}
+
+.prominent-badge i {
+  font-size: 1.4rem;
+  color: var(--accent, #1a56db);
+}
+
+.prominent-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prominent-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--heading, #0f172a);
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+.prominent-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted, #64748b);
+  margin: 0;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.prominent-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, var(--navy, #0f1b3d), var(--accent, #1a56db));
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.3s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 4px 16px rgba(26,86,219,0.25);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.prominent-btn i {
+  font-size: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.prominent-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,86,219,0.35);
+  filter: brightness(1.1);
+}
+
+.prominent-btn:hover i {
+  transform: translateX(3px);
+}
+
+.prominent-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15,27,61,0.12);
+  border-color: var(--gold, #c9a227);
+}
+
+.prominent-glow {
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(201,162,39,0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================
+   MOBIL (< 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .prominent-card {
+    width: calc(100% - 32px) !important;  /* 16px kənar boşluq hər tərəfdə */
+    max-width: calc(100% - 32px) !important;
+    margin-left: 16px !important;           /* Kənar boşluq */
+    margin-right: 16px !important;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .prominent-card-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .prominent-left {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .prominent-badge {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+  }
+
+  .prominent-badge i {
+    font-size: 1.2rem;
+  }
+
+  .prominent-title {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+  }
+
+  .prominent-sub {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+
+  .prominent-btn {
+    align-self: stretch;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ============================================
+   ÇOX KİÇİK EKRAN (< 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .prominent-card {
+    width: calc(100% - 24px) !important;  /* 12px kənar boşluq */
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .prominent-card-inner {
+    gap: 14px;
+  }
+
+  .prominent-left {
+    gap: 12px;
+  }
+
+  .prominent-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .prominent-title {
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .prominent-sub {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .prominent-btn {
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+}
+
+  
