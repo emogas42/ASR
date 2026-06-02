@@ -148,7 +148,8 @@
           <li><a href="../../../en/services/government-relations/index.html" class="lang-option"><span
                 class="lang-flag">🇬🇧</span> English</a></li>
           <li><a href="index.html" class="lang-option lang-active"><span class="lang-flag">🇷🇺</span> Русский</a></li>
-          <li><a href="../../../uz/services/government-relations/index.html" class="lang-option"><span class="lang-flag">🇺🇿</span> Uzbek</a></li>
+          <li><a href="../../../uz/services/government-relations/index.html" class="lang-option"><span
+                class="lang-flag">🇺🇿</span> Uzbek</a></li>
         </ul>
       </div>
 
@@ -377,7 +378,7 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" onclick="openModal()">
           <div class="pillar-num">02</div>
           <div class="pillar-icon"><i class="fa-solid fa-file-contract"></i></div>
           <div class="pillar-title">Услуги в области закупок</div>
@@ -390,6 +391,50 @@
             <span class="pillar-tag">Государственные контракты</span>
           </div>
         </div>
+        <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-file-contract"></i></div>
+                <div class="modal-title">Услуги в сфере закупок</div>
+                <div class="modal-subtitle">02 / Закупки</div>
+              </div>
+              <button class="modal-close" onclick="closeModal()" aria-label="Закрыть">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Наши услуги</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Разработка и
+                    совершенствование внутренних процедур закупок.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Составление и
+                    представление внутренних правил (процедур) закупок для закупающей организации.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Аудит
+                    закупочных операций, экспертиза проведённых конкурсов и аудит результатов.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Организация
+                    закупочных процедур и анализ подготовленных документов.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Подготовка
+                    комплекта условий в соответствии с законодательством о государственных закупках, размещение
+                    объявления, оценка, завершение конкурса и заключение договора закупки.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Проверка
+                    соответствия подготовленного комплекта условий законодательству о государственных закупках.</span>
+                </li>
+                <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Оценка
+                    предложений в соответствии с комплектом условий и требованиями законодательства о государственных
+                    закупках.</span></li>
+                <li class="service-item"><span class="service-bullet">08</span><span class="service-text">Подготовка
+                    полного пакета предложений для поставщиков.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Тендер</span>
+                <span class="modal-tag">Закупки</span>
+                <span class="modal-tag">Государственные контракты</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
         <div class="pillar-card reveal">
           <div class="pillar-num">03</div>
@@ -752,8 +797,8 @@
           <span class="footer-contact-text" style="position: relative; bottom: 3px">office@asrgroup.az</span>
         </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1"
-            class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1" class="social-link"
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/company/asrgroupconsulting/" class="social-link" aria-label="LinkedIn">
@@ -763,7 +808,8 @@
             class="social-link" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link" aria-label="YouTube">
+          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link"
+            aria-label="YouTube">
             <i class="fa-brands fa-youtube"></i>
           </a>
         </div>

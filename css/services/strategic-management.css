@@ -1500,7 +1500,6 @@ article {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: linear-gradient(135deg, var(--accent-light, #eef2ff), #dbe4ff);
   display: flex;
   align-items: center;
   justify-content: center;
