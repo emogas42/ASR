@@ -69,25 +69,7 @@
     color: var(--text-muted);
     line-height: 1.7;
   }
-  .aqro-card-arrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--accent);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: 12px;
-    transition: all 0.3s;
-  }
-  .aqro-card:hover .aqro-card-arrow {
-    gap: 10px;
-  }
-  .aqro-card-arrow i {
-    transition: transform 0.3s;
-  }
-  .aqro-card:hover .aqro-card-arrow i {
-    transform: translateX(4px);
-  }
+
 
   /* ============================================
      MODAL - Sizin dizaynınıza uyğun
@@ -529,6 +511,3 @@
 .result-card-gn:nth-child(3) { animation-delay: 0.3s; }
 .result-card-gn:nth-child(4) { animation-delay: 0.4s; }
 .result-card-gn:nth-child(5) { animation-delay: 0.5s; }
-.exp-arrow{
-  margin-bottom: 250px;
-}
