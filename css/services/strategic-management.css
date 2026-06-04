@@ -1414,23 +1414,6 @@ body.dark-mode .process-grid::before {
     text-align: left;
   }
 }
-/* ============================================
-   KART KONTEYNERİ (əgər varsa) — mərkəzləşdir
-   ============================================ */
-.prominent-container,
-.container,
-.main-content,
-section,
-article {
-  /* Əgər valideyninizdə bu varsa, əlavə edin: */
-  display: flex;
-  flex-direction: column;
-  align-items: center;        /* Kartları ortaya çək */
-  width: 100%;
-  max-width: 100%;
-  padding: 0 16px;            /* Kənarlarda boşluq */
-  box-sizing: border-box;
-}
 
 /* ============================================
    PROMINENT KART — tam responsiv, mərkəzdə
