@@ -302,7 +302,7 @@
  
     /* Benefits reuse */
     .benefits-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(360px,1fr));
+      display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 24px; margin-top: 48px;
     }
     .benefits-block {
@@ -356,7 +356,7 @@
     /* Mobile */
     @media (max-width: 600px) {
       .section { padding: 60px 0; }
-      .pillar-grid, .legis-grid { grid-template-columns: 1fr; }
+      .pillar-grid, .legis-grid, .benefits-grid { grid-template-columns: 1fr; }
       .cta-box { padding: 36px 20px; }
       .expertise-stat-val { font-size: 1.5rem; }
       .process-steps::before { left: 27px; }
