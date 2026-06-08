@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    HORIZONTAL REEL CAROUSEL - Homepage Component
    6-9 videos visible in horizontal scrolling carousel
    ============================================================ */
@@ -160,6 +160,43 @@
 .carousel-arrow:disabled:hover {
   background: var(--gold-bright, #e4a832);
   transform: translateY(-50%);
+}
+
+/* ── Mobile Vertical Nav Buttons ────────────────────────── */
+.reel-nav-up,
+.reel-nav-down {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold-bright, #e4a832);
+  border: none;
+  color: var(--navy-dark, #0b1f3a);
+  font-size: 18px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  touch-action: manipulation;
+}
+.reel-nav-up:hover,
+.reel-nav-down:hover {
+  background: var(--gold, #c8922a);
+  transform: scale(1.1);
+}
+
+.reel-nav-up:disabled,
+.reel-nav-down:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.reel-nav-up:disabled:hover,
+.reel-nav-down:disabled:hover {
+  background: var(--gold-bright, #e4a832);
+  transform: none;
 }
  
 /* ══════════════════════════════════════════════════════════
@@ -358,58 +395,77 @@
  
 @media (max-width: 768px) {
   .reel-carousel-section {
-    padding: 40px 15px;
-  }
-  .reel-card {
-    width: 140px;
-    height: 240px;
-  }
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
+    padding: 30px 0;
   }
   .reel-section-title {
     font-size: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    padding: 0 15px;
   }
-  .reel-videos-grid {
-    gap: 10px;
+
+  .carousel-arrow-prev,
+  .carousel-arrow-next {
+    display: none;
   }
+  .reel-nav-up,
+  .reel-nav-down {
+    display: flex;
+  }
+
   .reel-carousel-wrapper {
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
+
+  .reel-carousel-track {
+    width: 82vw;
+    max-width: 340px;
+    height: 70vh;
+    max-height: 560px;
+    border-radius: 16px;
+    flex: none;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .reel-videos-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .reel-card {
+    width: 82vw;
+    max-width: 340px;
+    height: 70vh;
+    max-height: 560px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  .reel-card .reel-card-overlay {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .reel-card .reel-play-btn {
+    opacity: 0.85;
+  }
+
   .reel-modal-nav-right {
     right: 8px;
   }
   .reel-modal-nav-left {
     left: 8px;
   }
+
+  .reel-carousel-track::-webkit-scrollbar {
+    display: none;
+  }
 }
  
 @media (max-width: 480px) {
-  .reel-carousel-section {
-    padding: 30px 10px;
-  }
-  .reel-card {
-    width: 120px;
-    height: 200px;
-  }
-  .carousel-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
-  }
-  .reel-section-title {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  .reel-videos-grid {
-    gap: 8px;
-  }
-  .reel-carousel-wrapper {
-    gap: 8px;
-  }
   .reel-play-btn {
     width: 48px;
     height: 48px;
@@ -423,10 +479,6 @@
   }
   .reel-modal-desc {
     font-size: 12px;
-  }
-  .reel-modal-nav-right,
-  .reel-modal-nav-left {
-    display: none; /* mobilde swipe işləyir */
   }
 }
  

@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    HORIZONTAL REEL CAROUSEL - JavaScript Controller
    Manages horizontal carousel and full-screen modal
    YouTube iframe embed support + swipe navigation
@@ -10,6 +10,7 @@ class ReelCarousel {
     this.currentModalIndex = 0;
     this.cardWidth = 200;
     this.gap = 12;
+    this.isMobile = false;
     this.isAnimating = false;
     this.reelVideos = [];
     this.touchStartY = 0;
@@ -25,6 +26,9 @@ class ReelCarousel {
     this.modalIframe = document.getElementById('modalIframe');
     this.modalTitle = document.getElementById('modalTitle');
     this.modalDesc = document.getElementById('modalDesc');
+
+    this.navUp = document.querySelector('.reel-nav-up');
+    this.navDown = document.querySelector('.reel-nav-down');
  
     if (!this.videosGrid) return;
  
@@ -141,6 +145,8 @@ class ReelCarousel {
   setupEventListeners() {
     this.prevBtn.addEventListener('click', () => this.scrollPrev());
     this.nextBtn.addEventListener('click', () => this.scrollNext());
+    if (this.navUp) this.navUp.addEventListener('click', () => this.scrollPrev());
+    if (this.navDown) this.navDown.addEventListener('click', () => this.scrollNext());
  
     // Modal close button
     document.querySelector('.reel-modal-close').addEventListener('click', () => {
@@ -185,10 +191,34 @@ class ReelCarousel {
         else this.navigateModal(-1);             // swipe down → prev
       }
     }, { passive: true });
+
+    // Prevent background scroll while modal is open
+    this.modal.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+    }, { passive: false });
  
     // Responsive card width adjustment
     this.updateCardWidth();
-    window.addEventListener('resize', () => this.updateCardWidth());
+    window.addEventListener('resize', () => {
+      const wasMobile = this.isMobile;
+      this.updateCardWidth();
+      if (wasMobile !== this.isMobile) {
+        this.currentPosition = 0;
+        if (this.isMobile) { const t = document.querySelector('.reel-carousel-track'); if (t) t.scrollTo({ top: 0, behavior: 'instant' }); } else { this.videosGrid.style.transform = 'translateX(0)'; }
+      }
+      this.updateArrowStates();
+    });
+
+    // Sync currentPosition with native scroll (for scroll-snap on mobile)
+    const trackEl = document.querySelector('.reel-carousel-track');
+    if (trackEl) {
+      trackEl.addEventListener('scroll', () => {
+        if (this.isMobile && trackEl.clientHeight > 0) {
+          this.currentPosition = Math.round(trackEl.scrollTop / trackEl.clientHeight);
+          this.updateArrowStates();
+        }
+      }, { passive: true });
+    }
   }
  
   navigateModal(direction) {
@@ -232,6 +262,7 @@ class ReelCarousel {
  
   updateCardWidth() {
     const width = window.innerWidth;
+    this.isMobile = width <= 768;
     if (width <= 480) {
       this.cardWidth = 120;
       this.gap = 8;
@@ -265,6 +296,7 @@ class ReelCarousel {
   }
  
   getVisibleCards() {
+    if (this.isMobile) return 1;
     const track = document.querySelector('.reel-carousel-track');
     const trackWidth = track.clientWidth;
     return Math.floor(trackWidth / (this.cardWidth + this.gap));
@@ -272,9 +304,13 @@ class ReelCarousel {
  
   animate() {
     this.isAnimating = true;
-    const offset = this.currentPosition * (this.cardWidth + this.gap);
-    this.videosGrid.style.transform = `translateX(-${offset}px)`;
- 
+    if (this.isMobile) {
+      const track = document.querySelector('.reel-carousel-track');
+      track.scrollTo({ top: this.currentPosition * track.clientHeight, behavior: 'smooth' });
+    } else {
+      const offset = this.currentPosition * (this.cardWidth + this.gap);
+      this.videosGrid.style.transform = `translateX(-${offset}px)`;
+    }
     setTimeout(() => {
       this.isAnimating = false;
       this.updateArrowStates();
@@ -285,19 +321,29 @@ class ReelCarousel {
     const maxPosition = this.reelVideos.length - this.getVisibleCards();
     this.prevBtn.disabled = this.currentPosition === 0;
     this.nextBtn.disabled = this.currentPosition >= maxPosition;
+    if (this.navUp) this.navUp.disabled = this.currentPosition === 0;
+    if (this.navDown) this.navDown.disabled = this.currentPosition >= maxPosition;
   }
  
   openModal(index) {
     this.currentModalIndex = index;
     this.loadModalContent(this.reelVideos[index]);
     this.updateModalNavBtns();
-    this.modal.classList.add('active');
+    this._savedScrollY = window.scrollY;
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + this._savedScrollY + 'px';
+    document.body.style.width = '100%';
+    this.modal.classList.add('active');
   }
  
   closeModal() {
     this.modal.classList.remove('active');
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, this._savedScrollY || 0);
     // Stop the iframe by clearing src
     if (this.modalIframe) {
       this.modalIframe.src = '';
