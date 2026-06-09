@@ -52,3 +52,23 @@ document.addEventListener('keydown', function(e) {
     closeReqabetModal();
   }
 });
+// TEXNİKİ TƏNZİMLƏMƏ MODALİ
+function openTexnikModal() {
+  scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%';
+  document.getElementById('texnikModalOverlay').classList.add('active');
+}
+function closeTexnikModal() {
+  document.getElementById('texnikModalOverlay').classList.remove('active');
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollY);
+}
+function closeTexnikModalOutside(event) {
+  if (event.target === document.getElementById('texnikModalOverlay')) {
+    closeTexnikModal();
+  }
+}

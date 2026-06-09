@@ -529,17 +529,57 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <!-- TEXNİKİ TƏNZİMLƏMƏ KARTI -->
+        <div class="pillar-card reveal" onclick="openTexnikModal()">
           <div class="pillar-num">03</div>
           <div class="pillar-icon"><i class="fa-solid fa-microscope"></i></div>
-          <div class="pillar-title">Technical regulation services</div>
-          <div class="pillar-desc">Analyzing product compliance with technical regulations, developing technical
-            specifications governing the production process, and forming the document base for metrological control and
+          <div class="pillar-title">Technical Regulation Services</div>
+          <div class="pillar-desc">Analysis of product conformity with technical regulations, development of technical
+            specifications governing production processes, and formation of documentation for metrological control and
             certification.</div>
           <div class="pillar-tags">
             <span class="pillar-tag">Technical regulation</span>
             <span class="pillar-tag">Certification</span>
             <span class="pillar-tag">Metrological control</span>
+          </div>
+        </div>
+
+        <!-- TEXNİKİ TƏNZİMLƏMƏ MODALİ -->
+        <div class="modal-overlay" id="texnikModalOverlay" onclick="closeTexnikModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-microscope"></i></div>
+                <div class="modal-title">Technical Regulation Relations Management</div>
+                <div class="modal-subtitle">03 / Technical Regulation</div>
+              </div>
+              <button class="modal-close" onclick="closeTexnikModal()" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Our Services</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Compliance
+                    audit of the company's activities against technical regulation legislation.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Assessment of
+                    the production of individual products in accordance with technical regulations.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Assistance in
+                    obtaining conformity certificates.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Monitoring
+                    changes in technical regulation legislation and briefing company employees accordingly.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Proposing
+                    amendments to technical regulation legislation and participating in legislative discussions on
+                    behalf of the company.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Development of
+                    technical specifications and formulations for products manufactured by the company.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Technical regulation</span>
+                <span class="modal-tag">Certification</span>
+                <span class="modal-tag">Metrological control</span>
+              </div>
+            </div>
           </div>
         </div>
 

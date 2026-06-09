@@ -511,17 +511,58 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <!-- TEXNİKİ TƏNZİMLƏMƏ KARTI -->
+        <div class="pillar-card reveal" onclick="openTexnikModal()">
           <div class="pillar-num">03</div>
           <div class="pillar-icon"><i class="fa-solid fa-microscope"></i></div>
-          <div class="pillar-title">Texnik Tartibga Solish Xizmatlari</div>
+          <div class="pillar-title">Texnik tartibga solish sohasidagi xizmatlar</div>
           <div class="pillar-desc">Mahsulotlarning texnik reglamentlarga muvofiqligini tahlil qilish, ishlab chiqarish
-            jarayonini tartibga soluvchi texnik shartlarni ishlab chiqish va metrologik nazorat va sertifikatsiya uchun
-            hujjatlar bazasini shakllantirish.</div>
+            jarayonlarini tartibga soluvchi texnik shartlarni ishlab chiqish, metrologik nazorat va sertifikatlash uchun
+            hujjat bazasini shakllantirish.</div>
           <div class="pillar-tags">
-            <span class="pillar-tag">Texnik tartibga solish</span>
-            <span class="pillar-tag">Sertifikatsiya</span>
+            <span class="pillar-tag">Texnik reglament</span>
+            <span class="pillar-tag">Sertifikatlash</span>
             <span class="pillar-tag">Metrologik nazorat</span>
+          </div>
+        </div>
+
+        <!-- TEXNİKİ TƏNZİMLƏMƏ MODALİ -->
+        <div class="modal-overlay" id="texnikModalOverlay" onclick="closeTexnikModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-microscope"></i></div>
+                <div class="modal-title">Texnik tartibga solish sohasidagi munosabatlarni boshqarish</div>
+                <div class="modal-subtitle">03 / Texnik tartibga solish</div>
+              </div>
+              <button class="modal-close" onclick="closeTexnikModal()" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Xizmatlarimiz</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Kompaniya
+                    faoliyatining texnik tartibga solish qonunchiligiga muvofiqligi auditi.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Alohida
+                    mahsulotlarning texnik reglamentlarga muvofiq ishlab chiqarilishini baholash.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Muvofiqlik
+                    sertifikatlarini olishda ko'maklashish.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Texnik
+                    tartibga solish qonunchiligidagi o'zgarishlarni kuzatib borish va kompaniya xodimlarini yo'riqnoma
+                    bilan ta'minlash.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Texnik
+                    tartibga solish qonunchiligiga o'zgartirish takliflari ishlab chiqish va kompaniya nomidan
+                    qonunchilik muhokamalarida ishtirok etish.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Kompaniya
+                    ishlab chiqaradigan mahsulotlar uchun texnik shartlar va retsepturalar ishlab chiqish.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Texnik reglament</span>
+                <span class="modal-tag">Sertifikatlash</span>
+                <span class="modal-tag">Metrologik nazorat</span>
+              </div>
+            </div>
           </div>
         </div>
 
