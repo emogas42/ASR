@@ -150,7 +150,8 @@
                 class="lang-flag">🇬🇧</span> English</a></li>
           <li><a href="../../../ru/services/business-development/index.html" class="lang-option"><span
                 class="lang-flag">🇷🇺</span> Русский</a></li>
-          <li><a href="../../../uz/services/business-development/index.html" class="lang-option"><span class="lang-flag">🇺🇿</span> Uzbek</a></li>
+          <li><a href="../../../uz/services/business-development/index.html" class="lang-option"><span
+                class="lang-flag">🇺🇿</span> Uzbek</a></li>
         </ul>
       </div>
 
@@ -375,7 +376,9 @@
         </p>
       </div>
       <div class="pillar-grid">
-        <div class="pillar-card reveal">
+        <!-- ==================== KART ==================== -->
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-biznes-plan').classList.add('open')">
           <div class="pillar-num">01</div>
           <div class="pillar-icon">
             <i class="fa-solid fa-file-invoice-dollar"></i>
@@ -391,6 +394,77 @@
             <span class="pillar-tag">Maliyyə modelləşmə</span>
             <span class="pillar-tag">İcra planı</span>
             <span class="pillar-tag">Risk analizi</span>
+          </div>
+        </div>
+
+        <!-- ==================== MODAL ==================== -->
+        <div class="pm-overlay" id="modal-biznes-plan" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <h2>Biznes planların hazırlanması</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-biznes-plan').classList.remove('open')"
+                aria-label="Bağla">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Bazarın analizi və marketinq strategiyası</h3>
+                </div>
+                <ul>
+                  <li><strong>Bazarın tutumu və seqmentasiyası:</strong> Hədəf kütləsinin müəyyən edilməsi və bazar payı
+                    proqnozları.</li>
+                  <li><strong>Rəqabət analizi:</strong> Əsas rəqiblərin üstün və zəif cəhətlərinin müqayisəli təhlili.
+                  </li>
+                  <li><strong>Marketinq miksi (4P):</strong> Məhsul, qiymət, satış kanalları və təşviqat strategiyasının
+                    qurulması.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Əməliyyat və istehsalat planı</h3>
+                </div>
+                <ul>
+                  <li><strong>Logistika və təchizat zənciri:</strong> Xammalın alınmasından son məhsulun çatdırılmasına
+                    qədər olan proses.</li>
+                  <li><strong>Texniki spesifikasiyalar:</strong> Tələb olunan avadanlıqlar, İT infrastruktur və binalar
+                    üzrə ehtiyaclar.</li>
+                  <li><strong>İnsan resursları:</strong> Təşkilati strukturun qurulması, ştat cədvəli və əməkhaqqı
+                    fondunun planlaşdırılması.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Maliyyə modelləşdirilməsi</h3>
+                </div>
+                <ul>
+                  <li><strong>İnvestisiya xərcləri (CAPEX):</strong> Layihənin işə düşməsi üçün tələb olunan ilkin
+                    vəsait.</li>
+                  <li><strong>Əməliyyat xərcləri (OPEX):</strong> Aylıq və illik sabit və dəyişən xərclər.</li>
+                  <li><strong>Maliyyə hesabatları:</strong> Mənfəət və zərər (P&amp;L), pul vəsaitlərinin hərəkəti (Cash
+                    Flow) və Balans hesabatlarının proqnozu (3–5 illik).</li>
+                  <li><strong>Rentabellik göstəriciləri:</strong> İnvestisiyanın geri qayıtma müddəti (Payback Period),
+                    NPV (Xalis Cari Dəyər) və IRR (Daxili Gəlirlik Normaları).</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -434,12 +508,11 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-feasibility').classList.add('open')">
           <div class="pillar-num">04</div>
           <div class="pillar-icon"><i class="fa-solid fa-flask"></i></div>
-          <div class="pillar-title">
-            Yeni biznes ideyaların feasibility analizi
-          </div>
+          <div class="pillar-title">Yeni biznes ideyaların feasibility analizi</div>
           <div class="pillar-desc">
             Layihənin iqtisadi, texniki və hüquqi baxımdan icra oluna bilmə
             imkanlarının əsaslandırıldığı hesabatın hazırlanması. Qərar
@@ -449,6 +522,89 @@
             <span class="pillar-tag">Texniki qiymətləndirmə</span>
             <span class="pillar-tag">Hüquqi analiz</span>
             <span class="pillar-tag">İqtisadi əsaslandırma</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-feasibility" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <h2>Yeni biznes ideyaların feasibility analizi</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-feasibility').classList.remove('open')"
+                aria-label="Bağla">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Bazar uyğunluğunun auditi (Market Fit Audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Problemin doğrulanması:</strong> İdeyanın həll etdiyi problem həqiqətən mövcuddurmu və
+                    insanlar bu problemin həlli üçün pul ödəməyə hazırdırmı?</li>
+                  <li><strong>Hədəf auditoriya təhlili:</strong> İdeya üçün kifayət qədər böyük bir müştəri bazası varmı
+                    (TAM, SAM, SOM analizi)?</li>
+                  <li><strong>Dəyər təklifi (Value Proposition):</strong> Sizin təklifiniz rəqiblərdən nə ilə fərqlənir?
+                    "Niyə məhz siz?" sualına cavab tapılır.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Texniki və əməliyyat auditi</h3>
+                </div>
+                <ul>
+                  <li><strong>İcra qabiliyyəti:</strong> Komandanın bu ideyanı reallaşdırmaq üçün lazımi bilik və
+                    təcrübəsi varmı?</li>
+                  <li><strong>Resurs təminatı:</strong> Lazımi texnologiya, avadanlıq və xammala çıxış nə dərəcədə
+                    asandır?</li>
+                  <li><strong>Ölçüləbilirlik (Scalability):</strong> Biznes böyüdükcə xərclər və keyfiyyət idarə oluna
+                    biləcəkmi?</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Maliyyə dayanıqlılığı auditi</h3>
+                </div>
+                <ul>
+                  <li><strong>Mənfəət marjası:</strong> Satış qiyməti ilə maya dəyəri arasındakı fərq biznesin yaşaması
+                    üçün kifayətdirmi?</li>
+                  <li><strong>Zərərsizlik nöqtəsi (Break-even Point):</strong> Biznes nə vaxtdan etibarən xərclərini
+                    örtməyə və xalis mənfəətə keçməyə başlayacaq?</li>
+                  <li><strong>İnvestisiya ehtiyacı:</strong> Layihənin startı və "ölüm vadisi" (cash flow mənfi olan
+                    dövr) üçün tələb olunan real büdcə nə qədərdir?</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Risk və idarəetmə (Risk &amp; Governance)</h3>
+                </div>
+                <ul>
+                  <li><strong>Risk matrisi:</strong> Ehtimal olunan risklərin (hüquqi, maliyyə, reputasiya) təsir
+                    dərəcəsinə görə rəng kodları (Qırmızı/Sarı/Yaşıl) ilə qruplaşdırılması.</li>
+                  <li><strong>Compliance (uyğunluq):</strong> İdeyanın yerli və beynəlxalq standartlara (məs: GDPR,
+                    anti-korrupsiya, vergi qanunvericiliyi) uyğunluğu.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -471,7 +627,8 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-investisiya').classList.add('open')">
           <div class="pillar-num">06</div>
           <div class="pillar-icon"><i class="fa-solid fa-handshake"></i></div>
           <div class="pillar-title">
@@ -488,23 +645,310 @@
             <span class="pillar-tag">Danışıq dəstəyi</span>
           </div>
         </div>
+        <div class="pm-overlay" id="modal-investisiya" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
 
-        <div class="pillar-card reveal">
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h2>İnvestisiya cəlbi &amp; Matching xidmətləri</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-investisiya').classList.remove('open')"
+                aria-label="Bağla">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>İnvestisiya öncəsi hazırlıq (Pre-deal Preparation)</h3>
+                </div>
+                <ul>
+                  <li><strong>Pitch deck hazırlanması:</strong> Layihənin mahiyyətini, bazar problemini və həllini 10–15
+                    slaydda vizual və vurğulu şəkildə təqdim edən sənəd.</li>
+                  <li><strong>Maliyyə modelinin qurulması:</strong> 3–5 illik gəlir-xərc proqnozları, investisiyanın
+                    geri qayıtma müddəti (ROI) və layihənin dəyərləndirilməsi (Valuation).</li>
+                  <li><strong>İnvestisiyanın istifadə planı (Use of Funds):</strong> Cəlb olunacaq vəsaitin hansı
+                    faizlərlə hara (məsələn: 40% marketinq, 30% R&amp;D, 30% əməliyyat) xərclənəcəyinin
+                    əsaslandırılması.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>İnvestorlarla əlaqə və strategiya</h3>
+                </div>
+                <ul>
+                  <li><strong>İnvestor xəritəsinin (Investor Pipeline) qurulması:</strong> Layihənin sahəsinə və
+                    mərhələsinə (Seed, Series A və s.) uyğun potensial investorların siyahısının hazırlanması.</li>
+                  <li><strong>Teaser-lərin hazırlanması:</strong> Şirkətin adını açıqlamadan layihənin cəlbediciliyini
+                    göstərən 1 səhifəlik qısa icmalların göndərilməsi.</li>
+                  <li><strong>Danışıqların idarə edilməsi:</strong> İnvestorlarla görüşlərin təşkili və təqdimat
+                    (Pitching) zamanı dəstək.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Due Diligence (hərtərəfli yoxlama) dəstəyi</h3>
+                </div>
+                <ul>
+                  <li><strong>Data Room-un qurulması:</strong> Şirkətin bütün hüquqi, maliyyə, əməliyyat və vergi
+                    sənədlərinin rəqəmsal və mütəşəkkil qovluqda toplanması.</li>
+                  <li><strong>Risk auditi:</strong> Yoxlama zamanı üzə çıxa biləcək problemlərin (məsələn: hüquqi
+                    boşluqlar və ya şəffaf olmayan xərclər) öncədən tapılıb həll edilməsi.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Sövdələşmənin bağlanması (Deal Closing)</h3>
+                </div>
+                <ul>
+                  <li><strong>Term Sheet-in təhlili:</strong> İnvestorun təklif etdiyi şərtlərin (pay bölgüsü,
+                    idarəetmədə iştirak hüququ, likvidasiya üstünlüyü və s.) şirkət təsisçiləri üçün əlverişliliyinin
+                    auditi.</li>
+                  <li><strong>Səhmdarlar müqaviləsi (SHA):</strong> Yeni ortaqlıq şərtlərinin hüquqi
+                    sənədləşdirilməsində məsləhətçilik.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-strateji-idareetme').classList.add('open')">
           <div class="pillar-num">07</div>
           <div class="pillar-icon">
-            <i class="fa-solid fa-map-location-dot"></i>
+            <i class="fa-solid fa-chess-king"></i>
           </div>
-          <div class="pillar-title">Strateji planların hazırlanması</div>
+          <div class="pillar-title">Strateji idarəetmə sahəsində xidmətlər</div>
           <div class="pillar-desc">
-            Şirkətlərin uzunmüddətli hədəflərinə nail olması üçün
-            prioritetlərin və resurs bölgüsünün müəyyən edildiyi yol
-            xəritəsinin hazırlanması. Strateji məqsədlərin ölçülə bilən
-            göstəricilərə çevrilməsi.
+            "Böyük Dördlük" (Big Four) metodologiyası əsasında şirkətin 3–5 illik
+            gələcəyini və bazar dəyişikliklərinə dayanıqlılığını formalaşdıran
+            məlumat əsaslı (data-driven) strategiyalar.
           </div>
           <div class="pillar-tags">
-            <span class="pillar-tag">Strateji yol xəritəsi</span>
-            <span class="pillar-tag">KPİ sistemləri</span>
-            <span class="pillar-tag">Prioritet bölgüsü</span>
+            <span class="pillar-tag">Korporativ strategiya</span>
+            <span class="pillar-tag">KPI sistemləri</span>
+            <span class="pillar-tag">Rəqəmsal transformasiya</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-strateji-idareetme"
+          onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-chess-king"></i>
+                </div>
+                <h2>Strateji idarəetmə sahəsində xidmətlər</h2>
+              </div>
+              <button class="pm-close"
+                onclick="document.getElementById('modal-strateji-idareetme').classList.remove('open')"
+                aria-label="Bağla">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Strateji planlaşdırma və korporativ strategiya</h3>
+                </div>
+                <ul>
+                  <li><strong>Bazarın diaqnostikası:</strong> PESTEL və Porter-in 5 Qüvvəsi analizi vasitəsilə makro və
+                    mikro mühitdəki təhdidlərin və imkanların müəyyən edilməsi.</li>
+                  <li><strong>Vahid vizyonun formalaşdırılması:</strong> Şirkətin missiya, vizyon və strateji
+                    sütunlarının (Strategic Pillars) təyini.</li>
+                  <li><strong>Portfolio strategiyası:</strong> Holdinqlər üçün hansı biznes sahələrinin saxlanılması,
+                    hansıların isə satılması (Divestiture) barədə analitik rəylər.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Target Operating Model (TOM) – hədəf əməliyyat modeli</h3>
+                </div>
+                <ul>
+                  <li><strong>Strukturun optimallaşdırılması:</strong> Strategiyanı icra edə biləcək ən çevik təşkilati
+                    strukturun (məsələn, Matrix və ya Functional) qurulması.</li>
+                  <li><strong>Proseslərin dizaynı:</strong> Əsas biznes proseslərinin (Value Chain) beynəlxalq
+                    standartlara uyğun yenidən qurulması.</li>
+                  <li><strong>İdarəetmə hesabatlılığı (Governance):</strong> Qərar qəbul etmə səlahiyyətlərinin (RACI
+                    matrisi) dəqiq bölüşdürülməsi.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Nəticə əsaslı idarəetmə və KPI sistemləri</h3>
+                </div>
+                <ul>
+                  <li><strong>Balanced Scorecard (BSC):</strong> Strategiyanın 4 perspektiv (Maliyyə, Müştəri, Daxili
+                    Proseslər, Öyrənmə və İnkişaf) üzrə balanslaşdırılması.</li>
+                  <li><strong>Cascading (şaquli inteqrasiya):</strong> Şirkət hədəflərinin departament və fərdi əməkdaş
+                    səviyyəsinə endirilməsi.</li>
+                  <li><strong>Performansın idarə edilməsi:</strong> KPI-ların bonus və motivasiya sistemi ilə
+                    əlaqələndirilməsi.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Rəqəmsal strategiya və transformasiya</h3>
+                </div>
+                <ul>
+                  <li><strong>IT-biznes inteqrasiyası:</strong> Texnoloji infrastrukturun biznes hədəflərinə xidmət
+                    edib-etməməsinin auditi.</li>
+                  <li><strong>Data strategiyası:</strong> Şirkətin topladığı məlumatları strateji üstünlüyə (Business
+                    Intelligence) çevirmək üçün yol xəritəsi.</li>
+                  <li><strong>Avtomatlaşdırma:</strong> Rutin proseslərin (RPA) və süni intellekt həllərinin strateji
+                    tətbiqi.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-biznes-audit').classList.add('open')">
+          <div class="pillar-num">08</div>
+          <div class="pillar-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="pillar-title">Biznes ümumi auditi və hesabatın hazırlanması</div>
+          <div class="pillar-desc">
+            Şirkətin maliyyə, əməliyyat, strateji, HR və texnoloji sahələr üzrə
+            kompleks diaqnostikası. Zəif nöqtələrin aşkar edilməsi və inkişaf
+            yol xəritəsinin hazırlanması.
+          </div>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Maliyyə auditi</span>
+            <span class="pillar-tag">Əməliyyat analizi</span>
+            <span class="pillar-tag">IT auditi</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-biznes-audit" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h2>Biznes ümumi auditi və hesabatın hazırlanması</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-biznes-audit').classList.remove('open')"
+                aria-label="Bağla">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Maliyyə sağlamlığının auditi (Financial Audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Likvidlik və rentabellik:</strong> Şirkətin qısa müddətli borclarını ödəmə qabiliyyəti və
+                    xalis mənfəət marjasının sahə ortalaması ilə müqayisəsi.</li>
+                  <li><strong>Pul vəsaitlərinin hərəkəti (Cash Flow):</strong> "Kağız üzərində" mənfəətli görünsə də,
+                    kassa defisiti (cash gap) riskinin yoxlanılması.</li>
+                  <li><strong>Xərclərin strukturu:</strong> Sabit və dəyişən xərclərin nisbəti, "ölü" xərclərin
+                    (istifadə olunmayan resurslar) tapılması.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Əməliyyat və proses auditi (Operational Audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Biznes proseslərin xəritələndirilməsi:</strong> Proseslərdəki təkrarçılıq (redundancy) və
+                    "dar boğazlar"ın (bottlenecks) müəyyən edilməsi.</li>
+                  <li><strong>Target Operating Model (TOM):</strong> Mövcud idarəetmə modelinin strateji hədəflərə
+                    xidmət edib-etmədiyi.</li>
+                  <li><strong>Təchizat zənciri və logistika:</strong> Vendorların (təchizatçıların) auditi və satınalma
+                    effektivliyi.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Strateji və bazar mövqeyinin auditi (Commercial Audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Bazar payı və müştəri loyallığı:</strong> Müştərilərin şirkəti tərk etmə faizi (Churn
+                    rate) və yeni müştəri cəlb etmə xərci (CAC).</li>
+                  <li><strong>VRIO analizi:</strong> Şirkətin resurslarının nə dərəcədə Nadir (Rare), Qiymətli
+                    (Valuable) və Kopyalana bilməyən (Inimitable) olduğunun analizi.</li>
+                  <li><strong>Rəqib benchmarking:</strong> Rəqiblərlə müqayisədə texnoloji və xidmət geriliyi.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>İnsan resursları və korporativ idarəetmə (HR &amp; Governance)</h3>
+                </div>
+                <ul>
+                  <li><strong>Təşkilati struktur:</strong> İdarəetmə pillələrinin optimallığı (həddindən artıq
+                    bürokratiya varmı?).</li>
+                  <li><strong>KPI və motivasiya sistemi:</strong> Əməkdaşların hədəflərinin şirkət hədəfləri ilə
+                    sinxronluğu.</li>
+                  <li><strong>İstedadların idarə edilməsi:</strong> Kritik pozisiyaların "ehtiyat kadr" (succession
+                    planning) təminatı.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">5</div>
+                  <h3>Texnoloji və rəqəmsal audit (IT Audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>İnfrastrukturun uyğunluğu:</strong> Mövcud İT sistemlərinin biznesin böyümə sürətinə cavab
+                    verməsi.</li>
+                  <li><strong>Məlumat təhlükəsizliyi:</strong> Kiber-risklər və müştəri məlumatlarının qorunması
+                    səviyyəsi.</li>
+                  <li><strong>Rəqəmsallaşma səviyyəsi:</strong> Hansı proseslərin hələ də manual (əl ilə) aparılması və
+                    itkilərə səbəb olması.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -1050,8 +1494,8 @@
           <span class="footer-contact-text" style="position: relative; bottom: 3px">office@asrgroup.az</span>
         </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1"
-            class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1" class="social-link"
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/company/asrgroupconsulting/" class="social-link" aria-label="LinkedIn">
@@ -1061,7 +1505,8 @@
             class="social-link" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link" aria-label="YouTube">
+          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link"
+            aria-label="YouTube">
             <i class="fa-brands fa-youtube"></i>
           </a>
         </div>
@@ -1139,6 +1584,7 @@
   <script src="../../../js/app.js"></script>
   <script src="../../../js/pages/services.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
+  <script src="../../../js/pages/bussiness-modal.js"></script>
 </body>
 
 </html>
