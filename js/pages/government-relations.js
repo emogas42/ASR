@@ -46,7 +46,7 @@ function closeReqabetModalOutside(event) {
 }
 
 // ESC düyməsi
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     closeSatinalmaModal();
     closeReqabetModal();
@@ -90,5 +90,25 @@ function closeEkologiyaModal() {
 function closeEkologiyaModalOutside(event) {
   if (event.target === document.getElementById('ekologiyaModalOverlay')) {
     closeEkologiyaModal();
+  }
+}
+// SƏHİYYƏ MODALİ
+function openSehiyyeModal() {
+  scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%';
+  document.getElementById('sehiyyeModalOverlay').classList.add('active');
+}
+function closeSehiyyeModal() {
+  document.getElementById('sehiyyeModalOverlay').classList.remove('active');
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollY);
+}
+function closeSehiyyeModalOutside(event) {
+  if (event.target === document.getElementById('sehiyyeModalOverlay')) {
+    closeSehiyyeModal();
   }
 }

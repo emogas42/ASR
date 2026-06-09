@@ -622,7 +622,60 @@
             </div>
           </div>
         </div>
+        <!-- SƏHİYYƏ KARTI -->
+        <div class="pillar-card reveal" onclick="openSehiyyeModal()">
+          <div class="pillar-num">05</div>
+          <div class="pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="pillar-title">Sog'liqni saqlash sohasidagi xizmatlar</div>
+          <div class="pillar-desc">Dori vositalarini davlat ro'yxatidan o'tkazish, klinika va dorixonalar uchun
+            litsenziyalash, GMP va GDP standartlarini joriy etish va sog'liqni saqlash qonunchiligiga muvofiqlik auditi.
+          </div>
+          <div class="pillar-tags">
+            <span class="pillar-tag">GMP / GDP</span>
+            <span class="pillar-tag">Litsenziyalash</span>
+            <span class="pillar-tag">Davlat ro'yxati</span>
+          </div>
+        </div>
 
+        <!-- SƏHİYYƏ MODALİ -->
+        <div class="modal-overlay" id="sehiyyeModalOverlay" onclick="closeSehiyyeModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div class="modal-title">Sog'liqni saqlash sohasidagi munosabatlarni boshqarish</div>
+                <div class="modal-subtitle">05 / Sog'liqni saqlash</div>
+              </div>
+              <button class="modal-close" onclick="closeSehiyyeModal()" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Xizmatlarimiz</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Dori
+                    vositalarini davlat ro'yxatidan o'tkazishni tashkil etish.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Klinika va
+                    dorixonalar uchun litsenziya olishda ko'maklashish.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Kompaniya
+                    faoliyatining sog'liqni saqlash qonunchiligiga muvofiqligi auditi.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Tibbiyot
+                    muassasalarida GMP va GDP standartlarini joriy etish.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Sog'liqni
+                    saqlash qonunchiligidagi o'zgarishlarni kuzatib borish va kompaniya xodimlarini yo'riqnoma bilan
+                    ta'minlash.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Sog'liqni
+                    saqlash qonunchiligiga o'zgartirish takliflari ishlab chiqish va kompaniya nomidan qonunchilik
+                    muhokamalarida ishtirok etish.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">GMP / GDP</span>
+                <span class="modal-tag">Litsenziyalash</span>
+                <span class="modal-tag">Davlat ro'yxati</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

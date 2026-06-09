@@ -635,7 +635,59 @@
             </div>
           </div>
         </div>
+        <!-- SƏHİYYƏ KARTI -->
+        <div class="pillar-card reveal" onclick="openSehiyyeModal()">
+          <div class="pillar-num">05</div>
+          <div class="pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="pillar-title">Услуги в сфере здравоохранения</div>
+          <div class="pillar-desc">Государственная регистрация лекарственных средств, лицензирование клиник и аптек,
+            внедрение стандартов GMP и GDP, аудит соответствия деятельности законодательству в сфере здравоохранения.
+          </div>
+          <div class="pillar-tags">
+            <span class="pillar-tag">GMP / GDP</span>
+            <span class="pillar-tag">Лицензирование</span>
+            <span class="pillar-tag">Государственная регистрация</span>
+          </div>
+        </div>
 
+        <!-- SƏHİYYƏ MODALİ -->
+        <div class="modal-overlay" id="sehiyyeModalOverlay" onclick="closeSehiyyeModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                <div class="modal-title">Управление отношениями в сфере здравоохранения</div>
+                <div class="modal-subtitle">05 / Здравоохранение</div>
+              </div>
+              <button class="modal-close" onclick="closeSehiyyeModal()" aria-label="Закрыть">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Наши услуги</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Организация
+                    государственной регистрации лекарственных средств.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Содействие в
+                    получении лицензий для клиник и аптек.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Аудит
+                    деятельности компании на соответствие законодательству в сфере здравоохранения.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Внедрение
+                    стандартов GMP и GDP в медицинских учреждениях.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Мониторинг
+                    изменений в законодательстве о здравоохранении и инструктаж сотрудников компании.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Разработка
+                    предложений по изменению законодательства о здравоохранении и участие в законодательных обсуждениях
+                    от имени компании.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">GMP / GDP</span>
+                <span class="modal-tag">Лицензирование</span>
+                <span class="modal-tag">Государственная регистрация</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
