@@ -149,7 +149,8 @@
           <li><a href="index.html" class="lang-option lang-active"><span class="lang-flag">🇬🇧</span> English</a></li>
           <li><a href="../../../ru/services/business-development/index.html" class="lang-option"><span
                 class="lang-flag">🇷🇺</span> Русский</a></li>
-          <li><a href="../../../uz/services/business-development/index.html" class="lang-option"><span class="lang-flag">🇺🇿</span> Uzbek</a></li>
+          <li><a href="../../../uz/services/business-development/index.html" class="lang-option"><span
+                class="lang-flag">🇺🇿</span> Uzbek</a></li>
         </ul>
       </div>
 
@@ -372,21 +373,94 @@
         </p>
       </div>
       <div class="pillar-grid">
-        <div class="pillar-card reveal">
+        <!-- ==================== KART ==================== -->
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-biznes-plan').classList.add('open')">
           <div class="pillar-num">01</div>
           <div class="pillar-icon">
             <i class="fa-solid fa-file-invoice-dollar"></i>
           </div>
-          <div class="pillar-title">Business plan preparation</div>
+          <div class="pillar-title">Business plan development</div>
           <div class="pillar-desc">
-            Preparation of a comprehensive development document reflecting the organizational, operational, and
-            marketing model for specific projects. Full package with financial projections, risk assessment, and
-            implementation roadmap.
+            Preparation of a comprehensive development document reflecting the
+            organizational, operational, and marketing model for specific
+            projects. Full package with financial projections, risk assessment,
+            and an implementation roadmap.
           </div>
           <div class="pillar-tags">
-            <span class="pillar-tag">Financial modeling</span>
-            <span class="pillar-tag">Execution plan</span>
+            <span class="pillar-tag">Financial modelling</span>
+            <span class="pillar-tag">Implementation plan</span>
             <span class="pillar-tag">Risk analysis</span>
+          </div>
+        </div>
+
+        <!-- ==================== MODAL ==================== -->
+        <div class="pm-overlay" id="modal-biznes-plan" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <h2>Business plan development</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-biznes-plan').classList.remove('open')"
+                aria-label="Close">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Market analysis and marketing strategy</h3>
+                </div>
+                <ul>
+                  <li><strong>Market size and segmentation:</strong> Identification of the target audience and market
+                    share forecasts.</li>
+                  <li><strong>Competitive analysis:</strong> Comparative assessment of the strengths and weaknesses of
+                    key competitors.</li>
+                  <li><strong>Marketing mix (4P):</strong> Development of product, pricing, distribution channels, and
+                    promotion strategy.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Operational and production plan</h3>
+                </div>
+                <ul>
+                  <li><strong>Logistics and supply chain:</strong> The process from raw material procurement to final
+                    product delivery.</li>
+                  <li><strong>Technical specifications:</strong> Requirements for equipment, IT infrastructure, and
+                    facilities.</li>
+                  <li><strong>Human resources:</strong> Building the organizational structure, staffing schedule, and
+                    payroll planning.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Financial modelling</h3>
+                </div>
+                <ul>
+                  <li><strong>Capital expenditures (CAPEX):</strong> Initial funds required to launch the project.</li>
+                  <li><strong>Operating expenditures (OPEX):</strong> Monthly and annual fixed and variable costs.</li>
+                  <li><strong>Financial statements:</strong> Profit &amp; Loss (P&amp;L), Cash Flow, and Balance Sheet
+                    forecasts (3–5 years).</li>
+                  <li><strong>Profitability indicators:</strong> Payback Period, NPV (Net Present Value), and IRR
+                    (Internal Rate of Return).</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -428,20 +502,103 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-feasibility').classList.add('open')">
           <div class="pillar-num">04</div>
           <div class="pillar-icon"><i class="fa-solid fa-flask"></i></div>
-          <div class="pillar-title">
-            Feasibility analysis of New business ideas
-          </div>
+          <div class="pillar-title">Feasibility Analysis of New Business Ideas</div>
           <div class="pillar-desc">
-            Preparation of a report substantiating the economic, technical, and legal feasibility of a project.
-            Objective assessment that facilitates decision-making.
+            Preparation of a report substantiating the economic, technical and
+            legal viability of a project. An objective assessment that
+            facilitates decision-making.
           </div>
           <div class="pillar-tags">
-            <span class="pillar-tag">Technical assessment</span>
-            <span class="pillar-tag">Legal analysis</span>
-            <span class="pillar-tag">Economic justification</span>
+            <span class="pillar-tag">Technical Assessment</span>
+            <span class="pillar-tag">Legal Analysis</span>
+            <span class="pillar-tag">Economic Justification</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-feasibility" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <h2>Feasibility analysis of new business ideas</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-feasibility').classList.remove('open')"
+                aria-label="Close">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Market fit audit</h3>
+                </div>
+                <ul>
+                  <li><strong>Problem validation:</strong> Does the problem the idea addresses truly exist, and are
+                    people willing to pay for its solution?</li>
+                  <li><strong>Target audience analysis:</strong> Is there a sufficiently large customer base for the
+                    idea (TAM, SAM, SOM analysis)?</li>
+                  <li><strong>Value proposition:</strong> What differentiates your offering from competitors? The "Why
+                    you?" question is answered.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Technical & operational audit</h3>
+                </div>
+                <ul>
+                  <li><strong>Execution capability:</strong> Does the team have the necessary knowledge and experience
+                    to bring this idea to life?</li>
+                  <li><strong>Resource availability:</strong> How accessible are the required technology, equipment and
+                    raw materials?</li>
+                  <li><strong>Scalability:</strong> As the business grows, will costs and quality remain manageable?
+                  </li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Financial sustainability audit</h3>
+                </div>
+                <ul>
+                  <li><strong>Profit margin:</strong> Is the difference between the selling price and cost of goods
+                    sufficient for the business to survive?</li>
+                  <li><strong>Break-even point:</strong> From what point will the business begin to cover its costs and
+                    transition to net profit?</li>
+                  <li><strong>Investment requirement:</strong> What is the realistic budget needed for the project
+                    launch and the "valley of death" (the period of negative cash flow)?</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Risk &amp; governance</h3>
+                </div>
+                <ul>
+                  <li><strong>Risk matrix:</strong> Grouping of probable risks (legal, financial, reputational) by
+                    impact level using color codes (Red/Yellow/Green).</li>
+                  <li><strong>Compliance:</strong> Assessment of the idea's conformity with local and international
+                    standards (e.g. GDPR, anti-corruption, tax legislation).</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -462,37 +619,323 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-investisiya').classList.add('open')">
           <div class="pillar-num">06</div>
           <div class="pillar-icon"><i class="fa-solid fa-handshake"></i></div>
           <div class="pillar-title">
-            Investment attraction &amp; matching services
+            Investment Attraction &amp; Matching Services
           </div>
           <div class="pillar-desc">
-            Building a strategic partnership bridge with potential investors for project financing. Access to local and
-            international investor networks, pitch deck, and negotiation support.
+            Building strategic partnership bridges with potential investors
+            for project financing. Access to local and international investor
+            networks, pitch deck and negotiation support.
           </div>
           <div class="pillar-tags">
-            <span class="pillar-tag">Investor search</span>
-            <span class="pillar-tag">Pitch deck</span>
-            <span class="pillar-tag">Negotiation support</span>
+            <span class="pillar-tag">Investor Search</span>
+            <span class="pillar-tag">Pitch Deck</span>
+            <span class="pillar-tag">Negotiation Support</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-investisiya" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h2>Investment attraction &amp; matching services</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-investisiya').classList.remove('open')"
+                aria-label="Close">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Pre-deal preparation</h3>
+                </div>
+                <ul>
+                  <li><strong>Pitch deck preparation:</strong> A document presenting the essence of the project, the
+                    market problem and its solution in 10–15 slides in a visual and compelling manner.</li>
+                  <li><strong>Financial model development:</strong> 3–5 year revenue and expense projections, return on
+                    investment (ROI) and project valuation.</li>
+                  <li><strong>Use of Funds plan:</strong> Justification of how the raised capital will be allocated by
+                    percentage (e.g. 40% marketing, 30% R&amp;D, 30% operations).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Investor relations & strategy</h3>
+                </div>
+                <ul>
+                  <li><strong>Investor pipeline development:</strong> Preparation of a list of potential investors
+                    aligned with the project's industry and stage (Seed, Series A, etc.).</li>
+                  <li><strong>Teaser preparation:</strong> Sending one-page executive summaries that highlight the
+                    project's attractiveness without disclosing the company name.</li>
+                  <li><strong>Negotiation management:</strong> Organizing meetings with investors and providing support
+                    during pitching sessions.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Due diligence support</h3>
+                </div>
+                <ul>
+                  <li><strong>Data room setup:</strong> Collecting all legal, financial, operational and tax documents
+                    of the company in a digital and organized folder.</li>
+                  <li><strong>Risk audit:</strong> Identifying and resolving potential issues in advance (e.g. legal
+                    gaps or non-transparent expenses) that may surface during the review process.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Deal closing</h3>
+                </div>
+                <ul>
+                  <li><strong>Term sheet analysis:</strong> Auditing the favorability of the investor's proposed terms
+                    (equity split, governance participation rights, liquidation preference, etc.) for company founders.
+                  </li>
+                  <li><strong>Shareholders agreement (SHA):</strong> Advisory support in the legal documentation of new
+                    partnership terms.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-strateji-idareetme').classList.add('open')">
           <div class="pillar-num">07</div>
           <div class="pillar-icon">
-            <i class="fa-solid fa-map-location-dot"></i>
+            <i class="fa-solid fa-chess-king"></i>
           </div>
-          <div class="pillar-title">Strategic plan preparation</div>
+          <div class="pillar-title">Services in strategic management</div>
           <div class="pillar-desc">
-            Preparation of a roadmap defining priorities and resource allocation for companies to achieve their
-            long-term objectives. Converting strategic goals into measurable indicators.
+            Data-driven strategies based on the "big four" methodology that shape
+            the company's 3–5 year future and resilience to market changes.
           </div>
           <div class="pillar-tags">
-            <span class="pillar-tag">Strategic roadmap</span>
+            <span class="pillar-tag">Corporate strategy</span>
             <span class="pillar-tag">KPI systems</span>
-            <span class="pillar-tag">Priority allocation</span>
+            <span class="pillar-tag">Digital transformation</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-strateji-idareetme"
+          onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-chess-king"></i>
+                </div>
+                <h2>Services in strategic management</h2>
+              </div>
+              <button class="pm-close"
+                onclick="document.getElementById('modal-strateji-idareetme').classList.remove('open')"
+                aria-label="Close">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Strategic planning and corporate strategy</h3>
+                </div>
+                <ul>
+                  <li><strong>Market diagnostics:</strong> Identifying threats and opportunities in the macro and micro
+                    environment through PESTEL and Porter's five forces analysis.</li>
+                  <li><strong>Unified vision formation:</strong> Defining the company's mission, vision and strategic
+                    pillars.</li>
+                  <li><strong>Portfolio strategy:</strong> Analytical recommendations for holdings on which business
+                    lines to retain and which to sell (divestiture).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Target operating model (TOM)</h3>
+                </div>
+                <ul>
+                  <li><strong>Structure optimisation:</strong> Building the most agile organisational structure (e.g.
+                    matrix or functional) capable of executing the strategy.</li>
+                  <li><strong>Process design:</strong> Rebuilding core business processes (value chain) in line with
+                    international standards.</li>
+                  <li><strong>Governance accountability:</strong> Clear distribution of decision-making authorities
+                    (RACI matrix).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Results-based management and KPI systems</h3>
+                </div>
+                <ul>
+                  <li><strong>Balanced scorecard (BSC):</strong> Balancing the strategy across 4 perspectives
+                    (financial, customer, internal processes, learning and development).</li>
+                  <li><strong>Cascading (vertical integration):</strong> Breaking down company objectives to department
+                    and individual employee level.</li>
+                  <li><strong>Performance management:</strong> Linking KPIs to the bonus and motivation system.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Digital strategy and transformation</h3>
+                </div>
+                <ul>
+                  <li><strong>IT-business integration:</strong> Auditing whether the technological infrastructure serves
+                    the company's business objectives.</li>
+                  <li><strong>Data strategy:</strong> A roadmap for converting the data collected by the company into a
+                    strategic advantage (business intelligence).</li>
+                  <li><strong>Automation:</strong> Strategic implementation of routine process automation (RPA) and
+                    artificial intelligence solutions.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-biznes-audit').classList.add('open')">
+          <div class="pillar-num">08</div>
+          <div class="pillar-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="pillar-title">General business audit and report preparation</div>
+          <div class="pillar-desc">
+            Comprehensive diagnostics of the company across financial, operational,
+            strategic, HR and technological areas. Identifying weaknesses and
+            preparing a development roadmap.
+          </div>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Financial audit</span>
+            <span class="pillar-tag">Operational analysis</span>
+            <span class="pillar-tag">IT audit</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-biznes-audit" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h2>General business audit and report preparation</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-biznes-audit').classList.remove('open')"
+                aria-label="Close">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Financial health audit (financial audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Liquidity and profitability:</strong> Assessing the company's ability to meet short-term
+                    obligations and comparing net profit margin against the industry average.</li>
+                  <li><strong>Cash flow:</strong> Checking for cash gap risk even when the business appears profitable
+                    "on paper".</li>
+                  <li><strong>Cost structure:</strong> Ratio of fixed to variable costs and identification of "dead"
+                    costs (unused resources).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Operational and process audit (operational audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Business process mapping:</strong> Identifying redundancy and bottlenecks within
+                    processes.</li>
+                  <li><strong>Target operating model (TOM):</strong> Evaluating whether the existing management model
+                    serves the strategic objectives.</li>
+                  <li><strong>Supply chain and logistics:</strong> Vendor audit and procurement effectiveness.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Strategic and market position audit (commercial audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Market share and customer loyalty:</strong> Customer churn rate and cost of acquiring a
+                    new customer (CAC).</li>
+                  <li><strong>VRIO analysis:</strong> Assessing the extent to which the company's resources are rare,
+                    valuable and inimitable.</li>
+                  <li><strong>Competitor benchmarking:</strong> Technological and service gaps compared to competitors.
+                  </li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Human resources and corporate governance (HR &amp; governance)</h3>
+                </div>
+                <ul>
+                  <li><strong>Organisational structure:</strong> Evaluating the optimality of management layers (is
+                    there excessive bureaucracy?).</li>
+                  <li><strong>KPI and motivation system:</strong> Synchronisation of employee goals with company
+                    objectives.</li>
+                  <li><strong>Talent management:</strong> Succession planning coverage for critical positions.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">5</div>
+                  <h3>Technological and digital audit (IT audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Infrastructure compatibility:</strong> Whether existing IT systems can keep pace with the
+                    company's growth rate.</li>
+                  <li><strong>Data security:</strong> Level of cyber risks and protection of customer data.</li>
+                  <li><strong>Digitalisation level:</strong> Identifying which processes are still performed manually
+                    and are causing losses.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -1007,8 +1450,8 @@
           <span class="footer-contact-text" style="position: relative; bottom: 3px">office@asrgroup.az</span>
         </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1"
-            class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1" class="social-link"
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/company/asrgroupconsulting/" class="social-link" aria-label="LinkedIn">
@@ -1018,7 +1461,8 @@
             class="social-link" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link" aria-label="YouTube">
+          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link"
+            aria-label="YouTube">
             <i class="fa-brands fa-youtube"></i>
           </a>
         </div>
@@ -1096,6 +1540,7 @@
 
   <script src="../../../js/pages/services.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
+  <script src="../../../js/pages/bussiness-modal.js"></script>
 </body>
 
 </html>

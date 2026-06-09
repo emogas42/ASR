@@ -149,7 +149,8 @@
           <li><a href="../../../en/services/business-development/index.html" class="lang-option"><span
                 class="lang-flag">🇬🇧</span> English</a></li>
           <li><a href="index.html" class="lang-option lang-active"><span class="lang-flag">🇷🇺</span> Русский</a></li>
-          <li><a href="../../../uz/services/business-development/index.html" class="lang-option"><span class="lang-flag">🇺🇿</span> Uzbek</a></li>
+          <li><a href="../../../uz/services/business-development/index.html" class="lang-option"><span
+                class="lang-flag">🇺🇿</span> Uzbek</a></li>
         </ul>
       </div>
 
@@ -375,22 +376,96 @@
         </p>
       </div>
       <div class="pillar-grid">
-        <div class="pillar-card reveal">
+        <!-- ==================== KART ==================== -->
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-biznes-plan').classList.add('open')">
           <div class="pillar-num">01</div>
           <div class="pillar-icon">
             <i class="fa-solid fa-file-invoice-dollar"></i>
           </div>
           <div class="pillar-title">Разработка бизнес-планов</div>
           <div class="pillar-desc">
-            Подготовка комплексного документа развития по конкретным проектам,
-            отражающего организационную, операционную и маркетинговую модели.
-            Полный пакет с финансовыми прогнозами, оценкой рисков и дорожной
-            картой реализации.
+            Подготовка комплексного документа развития, отражающего
+            организационную, операционную и маркетинговую модель для конкретных
+            проектов. Полный пакет с финансовыми прогнозами, оценкой рисков и
+            дорожной картой реализации.
           </div>
           <div class="pillar-tags">
             <span class="pillar-tag">Финансовое моделирование</span>
             <span class="pillar-tag">План реализации</span>
             <span class="pillar-tag">Анализ рисков</span>
+          </div>
+        </div>
+
+        <!-- ==================== MODAL ==================== -->
+        <div class="pm-overlay" id="modal-biznes-plan" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <h2>Разработка бизнес-планов</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-biznes-plan').classList.remove('open')"
+                aria-label="Закрыть">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Анализ рынка и маркетинговая стратегия</h3>
+                </div>
+                <ul>
+                  <li><strong>Объём и сегментация рынка:</strong> Определение целевой аудитории и прогнозы доли рынка.
+                  </li>
+                  <li><strong>Конкурентный анализ:</strong> Сравнительная оценка сильных и слабых сторон ключевых
+                    конкурентов.</li>
+                  <li><strong>Маркетинговый микс (4P):</strong> Разработка стратегии продукта, ценообразования, каналов
+                    сбыта и продвижения.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Операционный и производственный план</h3>
+                </div>
+                <ul>
+                  <li><strong>Логистика и цепочка поставок:</strong> Процесс от закупки сырья до доставки готовой
+                    продукции.</li>
+                  <li><strong>Технические характеристики:</strong> Требования к оборудованию, ИТ-инфраструктуре и
+                    помещениям.</li>
+                  <li><strong>Человеческие ресурсы:</strong> Формирование организационной структуры, штатного расписания
+                    и планирование фонда оплаты труда.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Финансовое моделирование</h3>
+                </div>
+                <ul>
+                  <li><strong>Капитальные затраты (CAPEX):</strong> Первоначальные средства, необходимые для запуска
+                    проекта.</li>
+                  <li><strong>Операционные расходы (OPEX):</strong> Ежемесячные и годовые постоянные и переменные
+                    затраты.</li>
+                  <li><strong>Финансовая отчётность:</strong> Прогноз отчёта о прибылях и убытках (P&amp;L), движения
+                    денежных средств (Cash Flow) и бухгалтерского баланса (на 3–5 лет).</li>
+                  <li><strong>Показатели рентабельности:</strong> Срок окупаемости инвестиций (Payback Period), NPV
+                    (чистая приведённая стоимость) и IRR (внутренняя норма доходности).</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -434,21 +509,103 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-feasibility').classList.add('open')">
           <div class="pillar-num">04</div>
           <div class="pillar-icon"><i class="fa-solid fa-flask"></i></div>
-          <div class="pillar-title">
-            Анализ feasibility новых бизнес-идей
-          </div>
+          <div class="pillar-title">Анализ feasibility новых бизнес-идей</div>
           <div class="pillar-desc">
-            Подготовка обоснованного отчёта о возможности реализации проекта
-            с экономической, технической и правовой точек зрения. Объективная
-            оценка, облегчающая принятие решений.
+            Подготовка отчёта, обосновывающего экономическую, техническую и
+            правовую осуществимость проекта. Объективная оценка, облегчающая
+            принятие решений.
           </div>
           <div class="pillar-tags">
             <span class="pillar-tag">Техническая оценка</span>
             <span class="pillar-tag">Правовой анализ</span>
             <span class="pillar-tag">Экономическое обоснование</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-feasibility" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-flask"></i>
+                </div>
+                <h2>Анализ feasibility новых бизнес-идей</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-feasibility').classList.remove('open')"
+                aria-label="Закрыть">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Аудит соответствия рынку (Market Fit Audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Валидация проблемы:</strong> Действительно ли существует проблема, которую решает идея, и
+                    готовы ли люди платить за её решение?</li>
+                  <li><strong>Анализ целевой аудитории:</strong> Достаточно ли велика клиентская база для данной идеи
+                    (анализ TAM, SAM, SOM)?</li>
+                  <li><strong>Ценностное предложение (Value Proposition):</strong> Чем ваше предложение отличается от
+                    конкурентов? Даётся ответ на вопрос «Почему именно вы?».</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Технический и операционный аудит</h3>
+                </div>
+                <ul>
+                  <li><strong>Исполнительные способности:</strong> Обладает ли команда необходимыми знаниями и опытом
+                    для реализации этой идеи?</li>
+                  <li><strong>Обеспеченность ресурсами:</strong> Насколько доступны необходимые технологии, оборудование
+                    и сырьё?</li>
+                  <li><strong>Масштабируемость (Scalability):</strong> По мере роста бизнеса будут ли затраты и качество
+                    оставаться управляемыми?</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Аудит финансовой устойчивости</h3>
+                </div>
+                <ul>
+                  <li><strong>Маржа прибыли:</strong> Достаточна ли разница между ценой продажи и себестоимостью для
+                    выживания бизнеса?</li>
+                  <li><strong>Точка безубыточности (Break-even Point):</strong> С какого момента бизнес начнёт покрывать
+                    свои расходы и перейдёт к чистой прибыли?</li>
+                  <li><strong>Потребность в инвестициях:</strong> Каков реальный бюджет, необходимый для запуска проекта
+                    и прохождения «долины смерти» (период отрицательного денежного потока)?</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Риски и управление (Risk &amp; Governance)</h3>
+                </div>
+                <ul>
+                  <li><strong>Матрица рисков:</strong> Группировка вероятных рисков (правовых, финансовых,
+                    репутационных) по степени воздействия с цветовой кодировкой (Красный/Жёлтый/Зелёный).</li>
+                  <li><strong>Соответствие требованиям (Compliance):</strong> Оценка соответствия идеи местным и
+                    международным стандартам (напр.: GDPR, антикоррупционное законодательство, налоговое право).</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -470,44 +627,329 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-investisiya').classList.add('open')">
           <div class="pillar-num">06</div>
           <div class="pillar-icon"><i class="fa-solid fa-handshake"></i></div>
           <div class="pillar-title">
-            Привлечение инвестиций и услуги matching
+            Привлечение инвестиций &amp; Matching-услуги
           </div>
           <div class="pillar-desc">
-            Выстраивание стратегического партнёрства с потенциальными
+            Построение стратегических партнёрских мостов с потенциальными
             инвесторами для финансирования проектов. Доступ к местным и
-            международным инвесторам, поддержка при подготовке pitch deck
-            и проведении переговоров.
+            международным инвесторским сетям, поддержка pitch deck и переговоров.
           </div>
           <div class="pillar-tags">
             <span class="pillar-tag">Поиск инвесторов</span>
-            <span class="pillar-tag">Pitch deck</span>
+            <span class="pillar-tag">Pitch Deck</span>
             <span class="pillar-tag">Поддержка переговоров</span>
           </div>
         </div>
+        <div class="pm-overlay" id="modal-investisiya" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
 
-        <div class="pillar-card reveal">
-          <div class="pillar-num">07</div>
-          <div class="pillar-icon">
-            <i class="fa-solid fa-map-location-dot"></i>
-          </div>
-          <div class="pillar-title">Разработка стратегических планов</div>
-          <div class="pillar-desc">
-            Подготовка дорожной карты с определением приоритетов и
-            распределения ресурсов для достижения долгосрочных целей компании.
-            Преобразование стратегических целей в измеримые показатели.
-          </div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">Стратегическая дорожная карта</span>
-            <span class="pillar-tag">Системы KPI</span>
-            <span class="pillar-tag">Распределение приоритетов</span>
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h2>Привлечение инвестиций &amp; Matching-услуги</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-investisiya').classList.remove('open')"
+                aria-label="Закрыть">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Подготовка к сделке (Pre-deal Preparation)</h3>
+                </div>
+                <ul>
+                  <li><strong>Подготовка pitch deck:</strong> Документ, представляющий суть проекта, рыночную проблему и
+                    её решение в 10–15 слайдах в наглядной и убедительной форме.</li>
+                  <li><strong>Разработка финансовой модели:</strong> Прогнозы доходов и расходов на 3–5 лет, срок
+                    окупаемости инвестиций (ROI) и оценка стоимости проекта (Valuation).</li>
+                  <li><strong>План использования средств (Use of Funds):</strong> Обоснование распределения
+                    привлечённого капитала по процентам (например: 40% маркетинг, 30% R&amp;D, 30% операционная
+                    деятельность).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Работа с инвесторами и стратегия</h3>
+                </div>
+                <ul>
+                  <li><strong>Формирование воронки инвесторов (Investor Pipeline):</strong> Составление списка
+                    потенциальных инвесторов, соответствующих отрасли и стадии проекта (Seed, Series A и т.д.).</li>
+                  <li><strong>Подготовка тизеров:</strong> Рассылка одностраничных кратких обзоров, демонстрирующих
+                    привлекательность проекта без раскрытия названия компании.</li>
+                  <li><strong>Управление переговорами:</strong> Организация встреч с инвесторами и поддержка во время
+                    презентаций (Pitching).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Поддержка due diligence (всесторонняя проверка)</h3>
+                </div>
+                <ul>
+                  <li><strong>Создание data room:</strong> Сбор всех юридических, финансовых, операционных и налоговых
+                    документов компании в цифровой и структурированной папке.</li>
+                  <li><strong>Аудит рисков:</strong> Заблаговременное выявление и устранение проблем (например:
+                    юридические пробелы или непрозрачные расходы), которые могут возникнуть в ходе проверки.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Закрытие сделки (Deal Closing)</h3>
+                </div>
+                <ul>
+                  <li><strong>Анализ term sheet:</strong> Аудит выгодности предложенных инвестором условий
+                    (распределение долей, право участия в управлении, преимущество при ликвидации и т.д.) для
+                    основателей компании.</li>
+                  <li><strong>Акционерное соглашение (SHA):</strong> Консультационная поддержка при юридическом
+                    оформлении условий нового партнёрства.</li>
+                </ul>
+              </div>
+
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-strateji-idareetme').classList.add('open')">
+          <div class="pillar-num">07</div>
+          <div class="pillar-icon">
+            <i class="fa-solid fa-chess-king"></i>
+          </div>
+          <div class="pillar-title">Услуги в области стратегического управления</div>
+          <div class="pillar-desc">
+            Стратегии на основе данных (data-driven), формирующие 3–5-летнее
+            будущее компании и её устойчивость к рыночным изменениям на основе
+            методологии «большой четвёрки» (big four).
+          </div>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Корпоративная стратегия</span>
+            <span class="pillar-tag">KPI-системы</span>
+            <span class="pillar-tag">Цифровая трансформация</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-strateji-idareetme"
+          onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-chess-king"></i>
+                </div>
+                <h2>Услуги в области стратегического управления</h2>
+              </div>
+              <button class="pm-close"
+                onclick="document.getElementById('modal-strateji-idareetme').classList.remove('open')"
+                aria-label="Закрыть">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Стратегическое планирование и корпоративная стратегия</h3>
+                </div>
+                <ul>
+                  <li><strong>Диагностика рынка:</strong> Выявление угроз и возможностей в макро- и микросреде с помощью
+                    анализа PESTEL и пяти сил Портера.</li>
+                  <li><strong>Формирование единого видения:</strong> Определение миссии, видения и стратегических
+                    столпов компании (strategic pillars).</li>
+                  <li><strong>Портфельная стратегия:</strong> Аналитические заключения для холдингов о том, какие
+                    бизнес-направления сохранить, а какие продать (divestiture).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Target operating model (TOM) – целевая операционная модель</h3>
+                </div>
+                <ul>
+                  <li><strong>Оптимизация структуры:</strong> Построение наиболее гибкой организационной структуры
+                    (например, матричной или функциональной), способной реализовать стратегию.</li>
+                  <li><strong>Проектирование процессов:</strong> Перестройка ключевых бизнес-процессов (value chain) в
+                    соответствии с международными стандартами.</li>
+                  <li><strong>Управленческая подотчётность (governance):</strong> Чёткое распределение полномочий по
+                    принятию решений (матрица RACI).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Управление по результатам и KPI-системы</h3>
+                </div>
+                <ul>
+                  <li><strong>Balanced scorecard (BSC):</strong> Балансировка стратегии по 4 перспективам (финансовой,
+                    клиентской, внутренних процессов, обучения и развития).</li>
+                  <li><strong>Каскадирование (вертикальная интеграция):</strong> Декомпозиция целей компании до уровня
+                    подразделений и отдельных сотрудников.</li>
+                  <li><strong>Управление эффективностью:</strong> Привязка KPI к системе бонусов и мотивации.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Цифровая стратегия и трансформация</h3>
+                </div>
+                <ul>
+                  <li><strong>IT-бизнес интеграция:</strong> Аудит того, служит ли технологическая инфраструктура
+                    бизнес-целям компании.</li>
+                  <li><strong>Стратегия данных:</strong> Дорожная карта по превращению собранных компанией данных в
+                    стратегическое преимущество (business intelligence).</li>
+                  <li><strong>Автоматизация:</strong> Стратегическое внедрение автоматизации рутинных процессов (RPA) и
+                    решений на основе искусственного интеллекта.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="pillar-card reveal" style="cursor: pointer;"
+          onclick="document.getElementById('modal-biznes-audit').classList.add('open')">
+          <div class="pillar-num">08</div>
+          <div class="pillar-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+          <div class="pillar-title">Общий аудит бизнеса и подготовка отчёта</div>
+          <div class="pillar-desc">
+            Комплексная диагностика компании по финансовым, операционным,
+            стратегическим, HR и технологическим направлениям. Выявление
+            слабых мест и разработка дорожной карты развития.
+          </div>
+          <div class="pillar-tags">
+            <span class="pillar-tag">Финансовый аудит</span>
+            <span class="pillar-tag">Операционный анализ</span>
+            <span class="pillar-tag">IT-аудит</span>
+          </div>
+        </div>
+        <div class="pm-overlay" id="modal-biznes-audit" onclick="if(event.target===this)this.classList.remove('open')">
+          <div class="pm-box">
+
+            <div class="pm-header">
+              <div class="pm-header-left">
+                <div class="pm-header-icon">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+                <h2>Общий аудит бизнеса и подготовка отчёта</h2>
+              </div>
+              <button class="pm-close" onclick="document.getElementById('modal-biznes-audit').classList.remove('open')"
+                aria-label="Закрыть">✕</button>
+            </div>
+
+            <div class="pm-body">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">1</div>
+                  <h3>Аудит финансового здоровья (financial audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Ликвидность и рентабельность:</strong> Оценка способности компании погашать краткосрочные
+                    обязательства и сравнение чистой маржи прибыли со среднеотраслевым показателем.</li>
+                  <li><strong>Движение денежных средств (cash flow):</strong> Проверка риска кассового разрыва (cash
+                    gap) даже при видимой прибыльности «на бумаге».</li>
+                  <li><strong>Структура затрат:</strong> Соотношение постоянных и переменных расходов, выявление
+                    «мёртвых» затрат (неиспользуемых ресурсов).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">2</div>
+                  <h3>Операционный и процессный аудит (operational audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Картирование бизнес-процессов:</strong> Выявление дублирования (redundancy) и «узких мест»
+                    (bottlenecks) в процессах.</li>
+                  <li><strong>Целевая операционная модель (TOM):</strong> Оценка того, обслуживает ли существующая
+                    модель управления стратегические цели.</li>
+                  <li><strong>Цепочка поставок и логистика:</strong> Аудит поставщиков (вендоров) и эффективность
+                    закупок.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">3</div>
+                  <h3>Аудит стратегии и рыночной позиции (commercial audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Доля рынка и лояльность клиентов:</strong> Процент оттока клиентов (churn rate) и
+                    стоимость привлечения нового клиента (CAC).</li>
+                  <li><strong>VRIO-анализ:</strong> Оценка того, насколько ресурсы компании являются редкими (rare),
+                    ценными (valuable) и не поддающимися копированию (inimitable).</li>
+                  <li><strong>Конкурентный бенчмаркинг:</strong> Технологическое и сервисное отставание в сравнении с
+                    конкурентами.</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">4</div>
+                  <h3>Управление персоналом и корпоративное управление (HR &amp; governance)</h3>
+                </div>
+                <ul>
+                  <li><strong>Организационная структура:</strong> Оценка оптимальности уровней управления (существует ли
+                    избыточная бюрократия?).</li>
+                  <li><strong>KPI и система мотивации:</strong> Синхронизация целей сотрудников с целями компании.</li>
+                  <li><strong>Управление талантами:</strong> Обеспеченность критически важных позиций «кадровым
+                    резервом» (succession planning).</li>
+                </ul>
+              </div>
+
+              <hr class="pm-divider">
+
+              <div class="pm-section">
+                <div class="pm-section-title">
+                  <div class="pm-section-num">5</div>
+                  <h3>Технологический и цифровой аудит (IT audit)</h3>
+                </div>
+                <ul>
+                  <li><strong>Соответствие инфраструктуры:</strong> Способность существующих IT-систем поддерживать
+                    темпы роста бизнеса.</li>
+                  <li><strong>Информационная безопасность:</strong> Уровень киберрисков и защиты данных клиентов.</li>
+                  <li><strong>Уровень цифровизации:</strong> Выявление процессов, которые всё ещё выполняются вручную и
+                    приводят к потерям.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
   </section>
 
   <!-- ══ РЕЗУЛЬТАТЫ ════════════════════════════════════════════ -->
@@ -1033,8 +1475,8 @@
           <span class="footer-contact-text" style="position: relative; bottom: 3px">office@asrgroup.az</span>
         </div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1"
-            class="social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1" class="social-link"
+            aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/company/asrgroupconsulting/" class="social-link" aria-label="LinkedIn">
@@ -1044,7 +1486,8 @@
             class="social-link" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link" aria-label="YouTube">
+          <a href="https://youtube.com/@asrgroupconsulting?si=zDa068ZptyX3FWTy" class="social-link"
+            aria-label="YouTube">
             <i class="fa-brands fa-youtube"></i>
           </a>
         </div>
@@ -1122,6 +1565,7 @@
   <script src="../../../js/app.js"></script>
   <script src="../../../js/pages/services.js"></script>
   <script src="//code.jivosite.com/widget/2BO7kbQ5oq" async></script>
+  <script src="../../../js/pages/bussiness-modal.js"></script>
 </body>
 
 </html>
