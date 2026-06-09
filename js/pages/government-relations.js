@@ -72,3 +72,23 @@ function closeTexnikModalOutside(event) {
     closeTexnikModal();
   }
 }
+// EKOLOGİYA MODALİ
+function openEkologiyaModal() {
+  scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%';
+  document.getElementById('ekologiyaModalOverlay').classList.add('active');
+}
+function closeEkologiyaModal() {
+  document.getElementById('ekologiyaModalOverlay').classList.remove('active');
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollY);
+}
+function closeEkologiyaModalOutside(event) {
+  if (event.target === document.getElementById('ekologiyaModalOverlay')) {
+    closeEkologiyaModal();
+  }
+}

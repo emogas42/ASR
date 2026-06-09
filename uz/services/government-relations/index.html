@@ -566,17 +566,60 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <!-- EKOLOGİYA KARTI -->
+        <div class="pillar-card reveal" onclick="openEkologiyaModal()">
           <div class="pillar-num">04</div>
           <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
-          <div class="pillar-title">Ekologik Xizmatlar</div>
-          <div class="pillar-desc">Korxonalarda ekologik ta'sir baholash (ETB), chiqindilarni boshqarish rejalarini
-            ishlab chiqish, ekologik pasport va ISO 14001 standarti talablariga muvofiq boshqaruv tuzilmasini yaratish.
-          </div>
+          <div class="pillar-title">Ekologiya sohasidagi xizmatlar</div>
+          <div class="pillar-desc">Korxonaning atrof-muhitga ta'sirini baholash, chiqindilarni boshqarish rejalarini
+            ishlab chiqish, ekologik pasportlashtirish va ISO 14001 standartiga muvofiq boshqaruv tizimini
+            shakllantirish.</div>
           <div class="pillar-tags">
-            <span class="pillar-tag">ETB</span>
+            <span class="pillar-tag">ATB</span>
             <span class="pillar-tag">ISO 14001</span>
             <span class="pillar-tag">Ekologik pasport</span>
+          </div>
+        </div>
+
+        <!-- EKOLOGİYA MODALİ -->
+        <div class="modal-overlay" id="ekologiyaModalOverlay" onclick="closeEkologiyaModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+                <div class="modal-title">Ekologiya sohasidagi munosabatlarni boshqarish</div>
+                <div class="modal-subtitle">04 / Ekologiya</div>
+              </div>
+              <button class="modal-close" onclick="closeEkologiyaModal()" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Xizmatlarimiz</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Ekologiya
+                    sohasida litsenziya, ruxsatnoma va xulosalar olishda ko'maklashish.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Kompaniya
+                    faoliyatining ekologik qonunchilikka muvofiqligi auditi.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Ekologik
+                    qonunchilikni kuzatib borish va o'zgarishlarni kompaniya xodimlariga yetkazish.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Ekologik
+                    qonunchilikni takomillashtirish bo'yicha kompaniya nomidan takliflar tayyorlash.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Chiqindilarni
+                    boshqarish rejasini ishlab chiqish.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Qayta ishlash
+                    (Recycling) yechimlarini taklif etish.</span></li>
+                <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Uglerod izini
+                    hisoblash (Carbon Footprint).</span></li>
+                <li class="service-item"><span class="service-bullet">08</span><span class="service-text">ESG
+                    standartini joriy etishda ko'maklashish.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">ATB</span>
+                <span class="modal-tag">ISO 14001</span>
+                <span class="modal-tag">ESG</span>
+              </div>
+            </div>
           </div>
         </div>
 

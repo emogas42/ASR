@@ -583,17 +583,60 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
+        <!-- EKOLOGİYA KARTI -->
+        <div class="pillar-card reveal" onclick="openEkologiyaModal()">
           <div class="pillar-num">04</div>
           <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
-          <div class="pillar-title">Environmental services</div>
-          <div class="pillar-desc">Environmental impact assessment (EIA) of enterprises, developing waste management
-            plans, environmental passporting, and establishing a management structure in compliance with the ISO 14001
-            standard.</div>
+          <div class="pillar-title">Environmental Services</div>
+          <div class="pillar-desc">Environmental impact assessment of the enterprise, development of waste management
+            plans, environmental certification and formation of a management structure in accordance with ISO 14001.
+          </div>
           <div class="pillar-tags">
             <span class="pillar-tag">EIA</span>
             <span class="pillar-tag">ISO 14001</span>
             <span class="pillar-tag">Environmental passport</span>
+          </div>
+        </div>
+
+        <!-- EKOLOGİYA MODALİ -->
+        <div class="modal-overlay" id="ekologiyaModalOverlay" onclick="closeEkologiyaModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+                <div class="modal-title">Environmental Relations Management</div>
+                <div class="modal-subtitle">04 / Environment</div>
+              </div>
+              <button class="modal-close" onclick="closeEkologiyaModal()" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Our Services</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Assistance in
+                    obtaining environmental licences, permits and opinions.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Audit of the
+                    company's activities for compliance with environmental legislation.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Monitoring of
+                    environmental legislation and communication of changes to company employees.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Preparation of
+                    proposals on behalf of the company for improvement of environmental legislation.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Development of
+                    a Waste Management Plan.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Proposing
+                    recycling solutions.</span></li>
+                <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Carbon
+                    Footprint calculation.</span></li>
+                <li class="service-item"><span class="service-bullet">08</span><span class="service-text">Support in
+                    implementing the ESG standard.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">EIA</span>
+                <span class="modal-tag">ISO 14001</span>
+                <span class="modal-tag">ESG</span>
+              </div>
+            </div>
           </div>
         </div>
 

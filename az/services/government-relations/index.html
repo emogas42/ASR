@@ -638,19 +638,52 @@
           </div>
         </div>
 
-        <div class="pillar-card reveal">
-          <div class="pillar-num">04</div>
-          <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
-          <div class="pillar-title">Ekologiya sahəsində xidmətlər</div>
-          <div class="pillar-desc">Müəssisənin ətraf mühitə təsirinin qiymətləndirilməsi (ƏMTQ), tullantıların idarə
-            olunması planlarının hazırlanması, ekoloji pasportlaşdırma və ISO 14001 standartına uyğun menecment
-            strukturunun formalaşdırılması.</div>
-          <div class="pillar-tags">
-            <span class="pillar-tag">ƏMTQ</span>
-            <span class="pillar-tag">ISO 14001</span>
-            <span class="pillar-tag">Ekoloji pasport</span>
-          </div>
-        </div>
+        <!-- EKOLOGİYA KARTI -->
+<div class="pillar-card reveal" onclick="openEkologiyaModal()">
+  <div class="pillar-num">04</div>
+  <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
+  <div class="pillar-title">Ekologiya sahəsində xidmətlər</div>
+  <div class="pillar-desc">Müəssisənin ətraf mühitə təsirinin qiymətləndirilməsi, tullantıların idarə olunması planlarının hazırlanması, ekoloji pasportlaşdırma və ISO 14001 standartına uyğun menecment strukturunun formalaşdırılması.</div>
+  <div class="pillar-tags">
+    <span class="pillar-tag">ƏMTQ</span>
+    <span class="pillar-tag">ISO 14001</span>
+    <span class="pillar-tag">Ekoloji pasport</span>
+  </div>
+</div>
+
+<!-- EKOLOGİYA MODALİ -->
+<div class="modal-overlay" id="ekologiyaModalOverlay" onclick="closeEkologiyaModalOutside(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+        <div class="modal-title">Ekologiya sahəsində əlaqələrin idarəedilməsi</div>
+        <div class="modal-subtitle">04 / Ekologiya</div>
+      </div>
+      <button class="modal-close" onclick="closeEkologiyaModal()" aria-label="Bağla">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section-title">Xidmətlərimiz</div>
+      <ul class="service-list">
+        <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Ekologiya sahəsində lisenziya və icazələrin, rəylərin alınmasına dəstək.</span></li>
+        <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Şirkətin fəaliyyətinin ekoloji qanunvericiliyə uyğunluğunun auditi.</span></li>
+        <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Ekoloji qanunvericiliyin monitorinqi və baş verən dəyişikliklərin şirkətin əməkdaşlarına ötürülməsi.</span></li>
+        <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Ekoloji qanunvericiliyin təkmilləşdirilməsi ilə bağlı şirkət adından təkliflərin hazırlanması.</span></li>
+        <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Tullantıların İdarə Olunması Planının hazırlanması.</span></li>
+        <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Təkrar Emal (Recycling) həllərinin təklif edilməsi.</span></li>
+        <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Karbon İzinin Hesablanması (Carbon Footprint).</span></li>
+        <li class="service-item"><span class="service-bullet">08</span><span class="service-text">ESG standartının tətbiqinə dəstək göstərilməsi.</span></li>
+      </ul>
+      <div class="modal-tags">
+        <span class="modal-tag">ƏMTQ</span>
+        <span class="modal-tag">ISO 14001</span>
+        <span class="modal-tag">ESG</span>
+      </div>
+    </div>
+  </div>
+</div>
 
       </div>
     </div>
