@@ -354,10 +354,11 @@
       </div>
       <div class="pillar-grid">
 
-        <div class="pillar-card reveal">
+        <!-- RƏQABƏT KARTI -->
+        <div class="pillar-card reveal" onclick="openReqabetModal()">
           <div class="pillar-num">01</div>
           <div class="pillar-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <div class="pillar-title">Raqobat Xizmatlari</div>
+          <div class="pillar-title">Raqobat sohasidagi xizmatlar</div>
           <div class="pillar-desc">Bozor faoliyatini antiinhisor qonunchiligi bilan muvofiqlashtirish, raqobat
             xatarlarini audit qilish, nohaq raqobatga qarshi ichki muvofiqlik tizimlarini yaratish va raqobat siyosatini
             ishlab chiqish.</div>
@@ -365,6 +366,55 @@
             <span class="pillar-tag">Antiinhisor</span>
             <span class="pillar-tag">Xatarlar auditi</span>
             <span class="pillar-tag">Muvofiqlik</span>
+          </div>
+        </div>
+
+        <!-- RƏQABƏT MODALİ -->
+        <div class="modal-overlay" id="reqabetModalOverlay" onclick="closeReqabetModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="modal-title">Raqobat sohasidagi munosabatlarni boshqarish</div>
+                <div class="modal-subtitle">01 / Raqobat</div>
+              </div>
+              <button class="modal-close" onclick="closeReqabetModal()" aria-label="Yopish">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Xizmatlarimiz</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Kompaniyaning
+                    narx siyosati va boshqa kompaniyalar bilan tuzgan kelishuvlarini gorizontal va vertikal bitimlar
+                    nuqtai nazaridan audit qilish hamda xulosa berish.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Kompaniyaning
+                    reklam kampaniyasi adolatsiz raqobat holati sifatida tan olinishi xavfini baholash.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Kompaniya
+                    qarorlarining hukmron mavqedan suiiste'mol holati sifatida tan olinishi xavfini baholash.</span>
+                </li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Kompaniya
+                    boshqa kompaniya bilan birlashishi yoki qo'shib olinishi chog'ida raqobat organidan xulosa
+                    olish.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Kompaniyaning
+                    barcha faoliyatini raqobat qonunchiligi talablariga muvofiqligi yuzasidan to'liq audit.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Kompaniya
+                    adolatsiz raqobat holati bilan to'qnashganda raqobat organi oldida masalani ko'tarish.</span></li>
+                <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Raqobat organi
+                    bilan nizoli masalalarda kompaniya manfaatlarini himoya qilish.</span></li>
+                <li class="service-item"><span class="service-bullet">08</span><span class="service-text">Raqobat
+                    qonunchiligidagi o'zgarishlarni kuzatib borish va kompaniya xodimlarini yo'riqnoma bilan
+                    ta'minlash.</span></li>
+                <li class="service-item"><span class="service-bullet">09</span><span class="service-text">Raqobat
+                    qonunchiligiga o'zgartirish takliflari ishlab chiqish va kompaniya nomidan qonunchilik
+                    muhokamalarida ishtirok etish.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Raqobat</span>
+                <span class="modal-tag">Antimonopol huquq</span>
+                <span class="modal-tag">Birlashma va qo'shib olish</span>
+              </div>
+            </div>
           </div>
         </div>
 

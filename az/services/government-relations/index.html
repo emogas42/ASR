@@ -368,17 +368,92 @@
       </div>
       <div class="pillar-grid">
 
-        <div class="pillar-card reveal">
+        <!-- RƏQABƏT KARTI -->
+        <div class="pillar-card reveal" onclick="openReqabetModal()">
           <div class="pillar-num">01</div>
           <div class="pillar-icon"><i class="fa-solid fa-scale-balanced"></i></div>
           <div class="pillar-title">Rəqabət sahəsində xidmətlər</div>
           <div class="pillar-desc">Bazar fəaliyyətinin antiinhisar qanunvericiliyinə uyğunlaşdırılması, rəqabət
-            risklərinin auditi, haqsız rəqabətə qarşı daxili compliance sistemlərinin formalaşdırılması və rəqabət
-            siyasətinin hazırlanması.</div>
+            risklərinin auditi, haqsız rəqabətə qarşı daxili uyğunluq sistemlərinin yaradılması və rəqabət siyasətinin
+            hazırlanması.</div>
           <div class="pillar-tags">
             <span class="pillar-tag">Antiinhisar</span>
-            <span class="pillar-tag">Risk audit</span>
-            <span class="pillar-tag">Compliance</span>
+            <span class="pillar-tag">Risklər auditi</span>
+            <span class="pillar-tag">Uyğunluq</span>
+          </div>
+        </div>
+
+        <!-- RƏQABƏT MODALİ -->
+        <div class="modal-overlay" id="reqabetModalOverlay" onclick="closeReqabetModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="modal-title">Rəqabət sahəsində əlaqələrin idarəedilməsi</div>
+                <div class="modal-subtitle">01 / Rəqabət</div>
+              </div>
+              <button class="modal-close" onclick="closeReqabetModal()" aria-label="Bağla">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="modal-section-title">Xidmətlərimiz</div>
+              <ul class="service-list">
+                <li class="service-item">
+                  <span class="service-bullet">01</span>
+                  <span class="service-text">Şirkətin qiymət siyasətinin və digər şirkətlərlə anlaşmalarının üfiqi və
+                    şaquli sazişlər baxımından auditi və rəy verilməsi.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">02</span>
+                  <span class="service-text">Şirkətin reklam kampaniyasının haqsız rəqabət halı kimi qəbul edilməsi
+                    riskinin qiymətləndirilməsi.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">03</span>
+                  <span class="service-text">Şirkətin qərarlarının hökmran mövqeyindən sui istifadə halı kimi qəbul
+                    edilməsi riskinin qiymətləndirilməsi.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">04</span>
+                  <span class="service-text">Şirkətin başqa şirkətlərlə birləşməsi və udulması zamanı rəqabət orqanından
+                    rəyin alınması.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">05</span>
+                  <span class="service-text">Şirkətin bütün fəaliyyətlərinin rəqabət qanunvericiliyinə uyğunluq
+                    auditi.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">06</span>
+                  <span class="service-text">Şirkətin haqsız rəqabət halı ilə üzləşdikdə rəqabət orqanı qarşısında
+                    məsələnin qaldırılması.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">07</span>
+                  <span class="service-text">Rəqabət orqanı ilə mübahisəli məsələlərdə şirkətin maraqlarının
+                    müdafiəsi.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">08</span>
+                  <span class="service-text">Rəqabət qanunvericiliyində dəyişikliklərin izlənməsi və şirkət
+                    əməkdaşlarının təlimatlandırılması.</span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">09</span>
+                  <span class="service-text">Rəqabət qanunvericiliyinə dair dəyişikliklərin təklif edilməsi və şirkət
+                    adından qanunvericilik müzakirələrində iştirak.</span>
+                </li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Rəqabət</span>
+                <span class="modal-tag">Antitröst</span>
+                <span class="modal-tag">Birləşmə və udulma</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -452,50 +527,51 @@
                   <span class="service-bullet">08</span>
                   <span class="service-text">Təchizatçılar üçün tam təklif paketinin hazırlanması.</span>
                 </li>
-              
-              <li class="service-item">
-                <span class="service-bullet">09</span>
-                <span class="service-text">
-                  Dövlət və özəl sektor üçün daxili satınalma-təchizat prosedurlarının hazırlanması və
-                  təkmilləşdirilməsi:
-                  <br>- Satınalan təşkilat üçün daxili satınalma qayda və prosedurlarının yazılması.
-                  <br>- Satınalan təşkilatların mövcud daxili satınalma qayda və prosedurlarında çatışmazlıqların
-                  təhlili, aşkarlanmış boşluqlar və təkmilləşdirmə üçün hesabatın hazırlanması və təqdimatı.
-                </span>
-              </li>
-              <li class="service-item">
-                <span class="service-bullet">10</span>
-                <span class="service-text">
-                  Satınalma əməliyyatlarının auditi və keçirilmiş müsabiqələrin ekspertizası:
-                  <br>- Satınalan təşkilatın yekunlaşdırdığı satınalmaların auditi, çatışmazlıqlara dair hesabatın
-                  hazırlanması və təqdimatı.
-                  <br>- Yekunlaşmış satınalmaya, şərtlər toplusuna, qiymətləndirmənin nəticəsinə və nəzarət orqanının
-                  qərarı barədə mütəxəssis rəyinin verilməsi.
-                </span>
-              </li>
-              <li class="service-item">
-                <span class="service-bullet">11</span>
-                <span class="service-text">
-                  Satınalma prosedurlarının təşkil edilməsi və sənədlərin ekspertizası:
-                  <br>- Şərtlər toplusunun dövlət satınalmaları qanunvericiliyinin tələblərinə uyğun hazırlanması,
-                  elanın verilməsi, təkliflərin qiymətləndirilməsi, satınalmanın yekunlaşdırılması və satınalma
-                  müqaviləsinin bağlanılması.
-                  <br>- Hazırlanmış şərtlər toplusunun dövlət satınalmalarına dair qanunvericiliyin tələblərinə
-                  uyğunluğunun yoxlanılması.
-                </span>
-              </li>
-              <li class="service-item">
-                <span class="service-bullet">12</span>
-                <span class="service-text">
-                  Sahibkarlar üçün təklif sənədlərinin hazırlanması:
-                  <br>- Dövlət satınalmaları üçün təklif sənədlərinin hazırlanması.
-                  <br>- Hazırlanmış təklif sənədlərinin dövlət satınalmalarına dair qanunvericiliyə uyğunluğunun
-                  yoxlanılması.
-                  <br>- Sahibkarların dövlət və özəl satınalmalarda iştirak zamanı hazırladıqları təkliflərin satınalan
-                  təşkilata təqdim etməmişdən əvvəl şərtlər toplusunun tələblərinə uyğunluğunun ekspertizası və rəyin
-                  verilməsi.
-                </span>
-              </li>
+
+                <li class="service-item">
+                  <span class="service-bullet">09</span>
+                  <span class="service-text">
+                    Dövlət və özəl sektor üçün daxili satınalma-təchizat prosedurlarının hazırlanması və
+                    təkmilləşdirilməsi:
+                    <br>- Satınalan təşkilat üçün daxili satınalma qayda və prosedurlarının yazılması.
+                    <br>- Satınalan təşkilatların mövcud daxili satınalma qayda və prosedurlarında çatışmazlıqların
+                    təhlili, aşkarlanmış boşluqlar və təkmilləşdirmə üçün hesabatın hazırlanması və təqdimatı.
+                  </span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">10</span>
+                  <span class="service-text">
+                    Satınalma əməliyyatlarının auditi və keçirilmiş müsabiqələrin ekspertizası:
+                    <br>- Satınalan təşkilatın yekunlaşdırdığı satınalmaların auditi, çatışmazlıqlara dair hesabatın
+                    hazırlanması və təqdimatı.
+                    <br>- Yekunlaşmış satınalmaya, şərtlər toplusuna, qiymətləndirmənin nəticəsinə və nəzarət orqanının
+                    qərarı barədə mütəxəssis rəyinin verilməsi.
+                  </span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">11</span>
+                  <span class="service-text">
+                    Satınalma prosedurlarının təşkil edilməsi və sənədlərin ekspertizası:
+                    <br>- Şərtlər toplusunun dövlət satınalmaları qanunvericiliyinin tələblərinə uyğun hazırlanması,
+                    elanın verilməsi, təkliflərin qiymətləndirilməsi, satınalmanın yekunlaşdırılması və satınalma
+                    müqaviləsinin bağlanılması.
+                    <br>- Hazırlanmış şərtlər toplusunun dövlət satınalmalarına dair qanunvericiliyin tələblərinə
+                    uyğunluğunun yoxlanılması.
+                  </span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">12</span>
+                  <span class="service-text">
+                    Sahibkarlar üçün təklif sənədlərinin hazırlanması:
+                    <br>- Dövlət satınalmaları üçün təklif sənədlərinin hazırlanması.
+                    <br>- Hazırlanmış təklif sənədlərinin dövlət satınalmalarına dair qanunvericiliyə uyğunluğunun
+                    yoxlanılması.
+                    <br>- Sahibkarların dövlət və özəl satınalmalarda iştirak zamanı hazırladıqları təkliflərin
+                    satınalan
+                    təşkilata təqdim etməmişdən əvvəl şərtlər toplusunun tələblərinə uyğunluğunun ekspertizası və rəyin
+                    verilməsi.
+                  </span>
+                </li>
               </ul>
 
               <div class="modal-tags">

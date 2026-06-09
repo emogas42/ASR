@@ -364,17 +364,65 @@
       </div>
       <div class="pillar-grid">
 
-        <div class="pillar-card reveal">
+        <!-- RƏQABƏT KARTI -->
+        <div class="pillar-card reveal" onclick="openReqabetModal()">
           <div class="pillar-num">01</div>
           <div class="pillar-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <div class="pillar-title">Услуги в области конкуренции</div>
+          <div class="pillar-title">Услуги в сфере конкуренции</div>
           <div class="pillar-desc">Приведение рыночной деятельности в соответствие с антимонопольным законодательством,
-            аудит конкурентных рисков, формирование внутренних комплаенс-систем против недобросовестной конкуренции и
+            аудит конкурентных рисков, создание систем внутреннего комплаенса против недобросовестной конкуренции и
             разработка конкурентной политики.</div>
           <div class="pillar-tags">
             <span class="pillar-tag">Антимонопольное</span>
             <span class="pillar-tag">Аудит рисков</span>
             <span class="pillar-tag">Комплаенс</span>
+          </div>
+        </div>
+
+        <!-- RƏQABƏT MODALİ -->
+        <div class="modal-overlay" id="reqabetModalOverlay" onclick="closeReqabetModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="modal-title">Управление отношениями в сфере конкуренции</div>
+                <div class="modal-subtitle">01 / Конкуренция</div>
+              </div>
+              <button class="modal-close" onclick="closeReqabetModal()" aria-label="Закрыть">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Наши услуги</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Аудит ценовой
+                    политики компании и соглашений с другими компаниями с точки зрения горизонтальных и вертикальных
+                    сделок, подготовка заключения.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Оценка риска
+                    признания рекламной кампании компании проявлением недобросовестной конкуренции.</span></li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Оценка риска
+                    признания решений компании злоупотреблением доминирующим положением.</span></li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Получение
+                    заключения антимонопольного органа при слиянии или поглощении компании.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Аудит всей
+                    деятельности компании на соответствие законодательству о конкуренции.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Подача жалобы
+                    в антимонопольный орган при столкновении компании с фактами недобросовестной конкуренции.</span>
+                </li>
+                <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Защита
+                    интересов компании в спорах с антимонопольным органом.</span></li>
+                <li class="service-item"><span class="service-bullet">08</span><span class="service-text">Мониторинг
+                    изменений в законодательстве о конкуренции и инструктаж сотрудников компании.</span></li>
+                <li class="service-item"><span class="service-bullet">09</span><span class="service-text">Разработка
+                    предложений по изменению конкурентного законодательства и участие в законодательных обсуждениях от
+                    имени компании.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Конкуренция</span>
+                <span class="modal-tag">Антимонопольное право</span>
+                <span class="modal-tag">Слияния и поглощения</span>
+              </div>
+            </div>
           </div>
         </div>
 

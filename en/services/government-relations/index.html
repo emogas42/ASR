@@ -365,17 +365,67 @@
       </div>
       <div class="pillar-grid">
 
-        <div class="pillar-card reveal">
+        <!-- RƏQABƏT KARTI -->
+        <div class="pillar-card reveal" onclick="openReqabetModal()">
           <div class="pillar-num">01</div>
           <div class="pillar-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-          <div class="pillar-title">Competition services</div>
+          <div class="pillar-title">Competition Services</div>
           <div class="pillar-desc">Aligning market activities with antitrust legislation, auditing competition risks,
-            establishing internal compliance systems against unfair competition, and developing competition policy.
-          </div>
+            building internal compliance systems against unfair competition and developing competition policy.</div>
           <div class="pillar-tags">
             <span class="pillar-tag">Antitrust</span>
             <span class="pillar-tag">Risk audit</span>
             <span class="pillar-tag">Compliance</span>
+          </div>
+        </div>
+
+        <!-- RƏQABƏT MODALİ -->
+        <div class="modal-overlay" id="reqabetModalOverlay" onclick="closeReqabetModalOutside(event)">
+          <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+              <div class="modal-header-left">
+                <div class="modal-icon-wrap"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div class="modal-title">Competition Relations Management</div>
+                <div class="modal-subtitle">01 / Competition</div>
+              </div>
+              <button class="modal-close" onclick="closeReqabetModal()" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-section-title">Our Services</div>
+              <ul class="service-list">
+                <li class="service-item"><span class="service-bullet">01</span><span class="service-text">Audit of the
+                    company's pricing policy and agreements with other companies from the perspective of horizontal and
+                    vertical arrangements, with written opinion.</span></li>
+                <li class="service-item"><span class="service-bullet">02</span><span class="service-text">Assessment of
+                    the risk that the company's advertising campaign may be deemed an act of unfair competition.</span>
+                </li>
+                <li class="service-item"><span class="service-bullet">03</span><span class="service-text">Assessment of
+                    the risk that the company's decisions may be deemed an abuse of dominant market position.</span>
+                </li>
+                <li class="service-item"><span class="service-bullet">04</span><span class="service-text">Obtaining a
+                    clearance opinion from the competition authority in the event of a company merger or
+                    acquisition.</span></li>
+                <li class="service-item"><span class="service-bullet">05</span><span class="service-text">Full
+                    compliance audit of the company's activities against competition law.</span></li>
+                <li class="service-item"><span class="service-bullet">06</span><span class="service-text">Filing a
+                    complaint before the competition authority when the company faces acts of unfair competition.</span>
+                </li>
+                <li class="service-item"><span class="service-bullet">07</span><span class="service-text">Representing
+                    and protecting the company's interests in disputes with the competition authority.</span></li>
+                <li class="service-item"><span class="service-bullet">08</span><span class="service-text">Monitoring
+                    changes in competition legislation and briefing company employees accordingly.</span></li>
+                <li class="service-item"><span class="service-bullet">09</span><span class="service-text">Proposing
+                    amendments to competition legislation and participating in legislative discussions on behalf of the
+                    company.</span></li>
+              </ul>
+              <div class="modal-tags">
+                <span class="modal-tag">Competition</span>
+                <span class="modal-tag">Antitrust</span>
+                <span class="modal-tag">Mergers & Acquisitions</span>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -427,46 +477,48 @@
                     legislation.</span></li>
                 <li class="service-item"><span class="service-bullet">08</span><span class="service-text">Preparation of
                     a complete proposal package for suppliers.</span></li>
-              
-              <li class="service-item">
-                <span class="service-bullet">09</span>
-                <span class="service-text">
-                  Development and improvement of internal procurement procedures for the public and private sectors:
-                  <br>- Drafting internal procurement rules and procedures for the contracting organization.
-                  <br>- Analyzing deficiencies in existing internal procurement rules and procedures, preparing a report
-                  on identified gaps and improvement recommendations, and presenting the findings.
-                </span>
-              </li>
-              <li class="service-item">
-                <span class="service-bullet">10</span>
-                <span class="service-text">
-                  Audit of procurement operations and review of completed tenders:
-                  <br>- Auditing completed procurements of the contracting organization, preparing a report on
-                  identified deficiencies, and presenting the findings.
-                  <br>- Providing expert opinion on a completed procurement, tender documentation, evaluation results,
-                  and the decision of the supervisory authority.
-                </span>
-              </li>
-              <li class="service-item">
-                <span class="service-bullet">11</span>
-                <span class="service-text">
-                  Organization of procurement procedures and document review:
-                  <br>- Preparing tender documentation in compliance with public procurement legislation, publishing the
-                  announcement, evaluating proposals, finalizing the procurement, and concluding the contract.
-                  <br>- Verifying prepared tender documentation for compliance with public procurement legislation
-                  requirements.
-                </span>
-              </li>
-              <li class="service-item">
-                <span class="service-bullet">12</span>
-                <span class="service-text">
-                  Preparation of tender proposals for entrepreneurs:
-                  <br>- Preparing tender proposals for participation in public procurement.
-                  <br>- Verifying prepared tender proposals for compliance with public procurement legislation.
-                  <br>- Reviewing entrepreneurs' proposals for compliance with tender documentation requirements prior
-                  to submission to the contracting organization, and issuing a conclusion.
-                </span>
-              </li>
+
+                <li class="service-item">
+                  <span class="service-bullet">09</span>
+                  <span class="service-text">
+                    Development and improvement of internal procurement procedures for the public and private sectors:
+                    <br>- Drafting internal procurement rules and procedures for the contracting organization.
+                    <br>- Analyzing deficiencies in existing internal procurement rules and procedures, preparing a
+                    report
+                    on identified gaps and improvement recommendations, and presenting the findings.
+                  </span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">10</span>
+                  <span class="service-text">
+                    Audit of procurement operations and review of completed tenders:
+                    <br>- Auditing completed procurements of the contracting organization, preparing a report on
+                    identified deficiencies, and presenting the findings.
+                    <br>- Providing expert opinion on a completed procurement, tender documentation, evaluation results,
+                    and the decision of the supervisory authority.
+                  </span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">11</span>
+                  <span class="service-text">
+                    Organization of procurement procedures and document review:
+                    <br>- Preparing tender documentation in compliance with public procurement legislation, publishing
+                    the
+                    announcement, evaluating proposals, finalizing the procurement, and concluding the contract.
+                    <br>- Verifying prepared tender documentation for compliance with public procurement legislation
+                    requirements.
+                  </span>
+                </li>
+                <li class="service-item">
+                  <span class="service-bullet">12</span>
+                  <span class="service-text">
+                    Preparation of tender proposals for entrepreneurs:
+                    <br>- Preparing tender proposals for participation in public procurement.
+                    <br>- Verifying prepared tender proposals for compliance with public procurement legislation.
+                    <br>- Reviewing entrepreneurs' proposals for compliance with tender documentation requirements prior
+                    to submission to the contracting organization, and issuing a conclusion.
+                  </span>
+                </li>
               </ul>
               <div class="modal-tags">
                 <span class="modal-tag">Tender</span>
