@@ -1858,3 +1858,41 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
     --modal-muted: #6b6b8a;
     --modal-divider: #2d2d44;
   }
+  .pillar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+  gap: 12px;
+}
+
+.read-more-btn {
+  margin-left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, gap 0.2s;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.pillar-card:hover .read-more-btn {
+  border-bottom-color: var(--accent);
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .pillar-footer {
+    justify-content: space-between;
+  }
+
+  .read-more-btn {
+    margin-left: auto;
+  }
+}
