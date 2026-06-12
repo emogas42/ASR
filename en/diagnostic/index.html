@@ -21,6 +21,136 @@
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/lang-switch.css">
   <script>!function () { var t = localStorage.getItem('asrTheme'); if (t === 'dark') { document.documentElement.classList.add('dark-mode'); document.documentElement.setAttribute('data-theme', 'dark'); } }();</script>
+  <style>
+    .diag-section{padding:130px 0 80px;min-height:100vh}
+    .diag-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+    .diag-hero{text-align:center;margin-bottom:3rem}
+    .diag-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#fef3c7,#fde68a);color:#92400e;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:1rem;text-transform:uppercase}
+    .diag-hero h1{font-size:clamp(1.5rem,3.5vw,2.3rem);font-weight:800;line-height:1.25;margin-bottom:1rem;color:#111827}
+    .diag-hero p{font-size:1rem;color:#6b7280;max-width:580px;margin:0 auto;line-height:1.7}
+    .diag-grid{display:grid;grid-template-columns:1fr 310px;gap:2rem;align-items:start}
+    .diag-form-card{background:#fff;border-radius:18px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,.08);border:1px solid #f3f4f6}
+    .diag-form-card h2{font-size:1.15rem;font-weight:800;margin-bottom:4px;color:#111827}
+    .diag-form-card>p{font-size:13px;color:#9ca3af;margin-bottom:1.8rem}
+    .diag-field{margin-bottom:1.2rem}
+    .diag-field label{display:block;font-size:11px;font-weight:700;color:#374151;margin-bottom:7px;text-transform:uppercase;letter-spacing:.4px}
+    .diag-field label span{color:#ef4444}
+    .diag-field input,.diag-field select{width:100%;padding:12px 14px;border:1.5px solid #e5e7eb;border-radius:9px;font-family:Montserrat,sans-serif;font-size:14px;color:#111827;background:#fff;transition:border-color .2s,box-shadow .2s;box-sizing:border-box}
+    .diag-field input:focus,.diag-field select:focus{outline:none;border-color:#b48e42;box-shadow:0 0 0 3px rgba(180,142,66,.12)}
+    .diag-field input.err,.diag-field select.err{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1)}
+    .diag-field-err{display:none;font-size:11px;color:#ef4444;margin-top:4px}
+    .diag-field.has-err .diag-field-err{display:block}
+    .diag-submit-btn{width:100%;padding:15px;background:linear-gradient(135deg,#b48e42,#d4a853);color:#fff;border:none;border-radius:10px;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:10px}
+    .diag-submit-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(180,142,66,.3)}
+    .diag-privacy{text-align:center;font-size:11px;color:#9ca3af;margin-top:1rem}
+    .diag-info{display:flex;flex-direction:column;gap:.875rem}
+    .diag-info-card{background:#fff;border-radius:14px;padding:1.1rem 1.25rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 14px rgba(0,0,0,.06);border:1px solid #f3f4f6}
+    .diag-info-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#b48e42,#d4a853);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+    .diag-info-card strong{display:block;font-size:13px;font-weight:700;color:#111827;margin-bottom:2px}
+    .diag-info-card span{font-size:11px;color:#6b7280}
+    .quiz-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(6px)}
+    .quiz-overlay.active{opacity:1;pointer-events:all}
+    .quiz-container{background:#fff;border-radius:22px;width:100%;max-width:740px;max-height:92vh;overflow-y:auto;overscroll-behavior:contain;box-shadow:0 30px 70px rgba(0,0,0,.25);display:flex;flex-direction:column;transform:scale(.94) translateY(24px);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+    .quiz-overlay.active .quiz-container{transform:scale(1) translateY(0)}
+    .q-header{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid #f3f4f6;position:sticky;top:0;background:#fff;z-index:10;border-radius:22px 22px 0 0}
+    .q-back-btn{display:flex;align-items:center;gap:6px;background:none;border:1.5px solid #e5e7eb;border-radius:8px;padding:7px 13px;font-size:12px;font-family:Montserrat,sans-serif;font-weight:700;cursor:pointer;color:#374151;transition:all .18s;white-space:nowrap;flex-shrink:0}
+    .q-back-btn:hover{border-color:#b48e42;color:#b48e42}
+    .q-back-btn.q-hidden{visibility:hidden;pointer-events:none}
+    .q-progress-wrap{flex:1;height:5px;background:#f3f4f6;border-radius:3px;overflow:hidden}
+    .q-progress-fill{height:100%;background:linear-gradient(90deg,#b48e42,#d4a853);border-radius:3px;transition:width .4s ease;width:0%}
+    .q-step-label{font-size:11px;font-weight:700;color:#6b7280;white-space:nowrap;flex-shrink:0}
+    .q-lang-wrap{position:relative;flex-shrink:0}
+    .q-lang-btn{display:flex;align-items:center;gap:5px;background:none;border:1.5px solid #e5e7eb;border-radius:8px;padding:7px 11px;font-size:12px;font-family:Montserrat,sans-serif;font-weight:700;cursor:pointer;color:#374151;transition:border-color .18s}
+    .q-lang-btn:hover{border-color:#b48e42}
+    .q-lang-dropdown{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.12);list-style:none;padding:6px;min-width:165px;display:none;z-index:100}
+    .q-lang-dropdown.open{display:block}
+    .q-lang-dropdown li a{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:13px;text-decoration:none;color:#374151;border-radius:7px;font-family:Montserrat,sans-serif;transition:background .15s}
+    .q-lang-dropdown li a:hover{background:#fafaf8}
+    .q-lang-dropdown li a.q-lang-active{font-weight:700;color:#b48e42}
+    .q-close-btn{width:32px;height:32px;border-radius:8px;border:1.5px solid #e5e7eb;background:none;cursor:pointer;color:#9ca3af;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0}
+    .q-close-btn:hover{border-color:#ef4444;color:#ef4444;background:#fef2f2}
+    .quiz-q-screen{padding:44px 52px;text-align:center}
+    .q-icon-wrap{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#fef3c7,#fde68a);color:#b48e42;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 1.5rem}
+    .q-num-label{font-size:12px;font-weight:700;color:#b48e42;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem}
+    .q-text{font-size:1.15rem;font-weight:600;color:#111827;line-height:1.65;margin-bottom:2.5rem;min-height:72px}
+    @keyframes qFadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .q-fade{animation:qFadeIn .25s ease forwards}
+    .q-answer-btns{display:flex;gap:1rem;justify-content:center;margin-bottom:2.5rem}
+    .q-answer-btn{display:flex;align-items:center;gap:10px;padding:15px 52px;border-radius:12px;border:2px solid #e5e7eb;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .18s;background:#fff;color:#374151}
+    .q-answer-btn.q-yes:hover{background:#ecfdf5;border-color:#22c55e;color:#16a34a;transform:translateY(-2px);box-shadow:0 6px 16px rgba(34,197,94,.18)}
+    .q-answer-btn.q-no:hover{background:#fef2f2;border-color:#ef4444;color:#dc2626;transform:translateY(-2px);box-shadow:0 6px 16px rgba(239,68,68,.18)}
+    .q-dots{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;max-width:480px;margin:0 auto}
+    .q-dot{width:10px;height:10px;border-radius:50%;background:#e5e7eb;transition:background .2s,transform .2s}
+    .q-dot.q-dot-cur{background:#b48e42;transform:scale(1.3)}
+    .q-dot.q-dot-yes{background:#22c55e}
+    .q-dot.q-dot-no{background:#ef4444}
+    .quiz-result-screen{padding:36px 44px}
+    .result-top{text-align:center;margin-bottom:1.75rem}
+    .result-top h2{font-size:1.5rem;font-weight:800;margin-bottom:4px;color:#111827}
+    .result-top p{color:#6b7280;font-size:13px}
+    .result-score-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;background:#fafaf8;border-radius:16px;padding:1.75rem;margin-bottom:2rem;border:1px solid #f3f4f6}
+    .result-ring-wrap{position:relative;width:130px;height:130px;flex-shrink:0}
+    .result-ring-svg{width:130px;height:130px;display:block}
+    .result-ring-pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#111827}
+    .result-badge{display:inline-block;padding:5px 18px;border-radius:20px;font-size:13px;font-weight:700;margin-bottom:1rem}
+    .badge-green{background:#dcfce7;color:#16a34a}
+    .badge-orange{background:#fef3c7;color:#d97706}
+    .badge-red{background:#fee2e2;color:#dc2626}
+    .result-stats-row{display:flex;gap:2rem;flex-wrap:wrap}
+    .rs-stat{text-align:center}
+    .rs-stat span{display:block;font-size:26px;font-weight:800;color:#111827}
+    .rs-stat.ok span{color:#16a34a}
+    .rs-stat.fail span{color:#dc2626}
+    .rs-stat label{font-size:11px;color:#9ca3af;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+    .result-table-section{margin-bottom:1.5rem}
+    .result-table-section h3{font-size:1rem;font-weight:700;margin-bottom:.875rem;color:#111827}
+    .result-table-wrap{overflow-x:auto;border-radius:12px;border:1px solid #e5e7eb}
+    .result-table{width:100%;border-collapse:collapse;font-size:12.5px}
+    .result-table th{background:#1f2937;color:#fff;padding:11px 14px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+    .result-table th:first-child{border-radius:12px 0 0 0}
+    .result-table th:last-child{border-radius:0 12px 0 0}
+    .result-table td{padding:11px 14px;border-bottom:1px solid #f3f4f6;vertical-align:top;line-height:1.55;color:#374151}
+    .result-table tr:last-child td{border-bottom:none}
+    .result-table tr:nth-child(even) td{background:#fafafa}
+    .result-table td:nth-child(2){color:#b48e42;font-weight:600;font-size:11.5px;white-space:nowrap}
+    .result-perfect{text-align:center;padding:2rem;background:#f0fdf4;border-radius:14px;border:1px solid #bbf7d0;margin-bottom:1.5rem}
+    .result-perfect i{font-size:2.75rem;color:#16a34a;margin-bottom:.75rem;display:block}
+    .result-perfect h3{color:#15803d;font-size:1.2rem;margin-bottom:.4rem}
+    .result-perfect p{color:#166534;font-size:13px}
+    .result-actions{display:flex;gap:.875rem;justify-content:center;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid #f3f4f6;flex-wrap:wrap}
+    .result-dl-btn{display:flex;align-items:center;gap:9px;padding:14px 28px;background:linear-gradient(135deg,#b48e42,#d4a853);color:#fff;border:none;border-radius:10px;font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
+    .result-dl-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(180,142,66,.3)}
+    .result-restart-btn{display:flex;align-items:center;gap:8px;padding:14px 24px;background:none;color:#6b7280;border:2px solid #e5e7eb;border-radius:10px;font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
+    .result-restart-btn:hover{border-color:#b48e42;color:#b48e42}
+    .dark-mode .diag-hero h1{color:#f9fafb}
+    .dark-mode .diag-form-card,.dark-mode .diag-info-card{background:#1f2937;border-color:#374151;box-shadow:0 4px 24px rgba(0,0,0,.3)}
+    .dark-mode .diag-form-card h2{color:#f9fafb}
+    .dark-mode .diag-field label{color:#d1d5db}
+    .dark-mode .diag-field input,.dark-mode .diag-field select{background:#111827;border-color:#374151;color:#f9fafb}
+    .dark-mode .diag-field input::placeholder{color:#6b7280}
+    .dark-mode .diag-info-card strong{color:#f9fafb}
+    .dark-mode .quiz-container{background:#1f2937}
+    .dark-mode .q-header{background:#1f2937;border-color:#374151}
+    .dark-mode .q-back-btn,.dark-mode .q-close-btn,.dark-mode .q-lang-btn{border-color:#374151;color:#d1d5db}
+    .dark-mode .q-text,.dark-mode .result-top h2,.dark-mode .result-ring-pct{color:#f9fafb}
+    .dark-mode .q-num-label{color:#d4a853}
+    .dark-mode .q-answer-btn{background:#111827;border-color:#374151;color:#d1d5db}
+    .dark-mode .q-progress-wrap{background:#374151}
+    .dark-mode .q-dot{background:#374151}
+    .dark-mode .result-score-grid{background:#111827;border-color:#374151}
+    .dark-mode .rs-stat span{color:#f9fafb}
+    .dark-mode .result-table th{background:#111827}
+    .dark-mode .result-table td{color:#d1d5db;border-color:#374151}
+    .dark-mode .result-table tr:nth-child(even) td{background:#0d1117}
+    .dark-mode .result-table-wrap{border-color:#374151}
+    .dark-mode .result-actions{border-color:#374151}
+    .dark-mode .result-restart-btn{border-color:#374151;color:#9ca3af}
+    .dark-mode .q-lang-dropdown{background:#1f2937;border-color:#374151}
+    .dark-mode .q-lang-dropdown li a{color:#d1d5db}
+    .dark-mode .result-table-section h3{color:#f9fafb}
+    @media(max-width:880px){.diag-grid{grid-template-columns:1fr}.diag-info{display:grid;grid-template-columns:1fr 1fr}}
+    @media(max-width:580px){.quiz-q-screen{padding:28px 20px}.quiz-result-screen{padding:20px 16px}.q-text{font-size:1rem}.q-answer-btns{flex-direction:column}.q-answer-btn{width:100%;justify-content:center;padding:15px 24px}.q-header{gap:7px;padding:10px 12px}.q-back-btn{padding:6px 10px;font-size:11px}.result-score-grid{grid-template-columns:1fr;justify-items:center}.result-stats-row{justify-content:center}.diag-info{grid-template-columns:1fr}.diag-form-card{padding:1.5rem}}
+  </style>
 </head>
 
 <body>
@@ -266,101 +396,145 @@
   </div>
 
 
-  <section id="lead-magnet">
-    <div class="lead-bg-shape"></div>
-    <div class="lead-inner">
-      <div class="lead-left fade-in" style="position: relative">
-        <div class="lead-badge-pill">
-          <span>✦ Free resource</span>
-        </div>
-
-        <h2 class="section-title">
-          Is your business ready for an international audit?
-        </h2>
-
-        <div
-          style="position: relative; margin-bottom: 1.5rem; border-radius: 12px; overflow: hidden; clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%); ">
-          <img src="../../images/microsoft-365-oUbzU87d1Gc-unsplash.jpg" alt="" style="
-                width: 100%;
-                height: 260px;
-                object-fit: cover;
-                object-position: center;
-                display: block;
-                opacity: 0.55;
-              " />
-
-          <div style="
-                position: absolute;
-                inset: 0;
-             
-                z-index: 4;
-              "></div>
-
-
-        </div>
-
-        <p class="lead-desc">
-          Download our 10-step expert Checklist prepared for compliance with AQTA and ISO standards, free of charge.
-        </p>
-
-        <div class="lead-checks">
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            AQTA compliance check
-          </div>
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            ISO 22000 audit preparation checklist
-          </div>
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            HACCP critical control point assessment
-          </div>
-          <div class="lead-check">
-            <div class="lead-check-icon">✓</div>
-            Guide to documentation requirements
-          </div>
-        </div>
+  <!-- DIAGNOSTIC SECTION -->
+  <section class="diag-section">
+    <div class="diag-inner">
+      <div class="diag-hero">
+        <div class="diag-badge"><i class="fa-solid fa-microscope"></i> Free Diagnostic</div>
+        <h1>Is Your Business Compliant with<br>Food Safety Requirements?</h1>
+        <p>Complete our 24-question professional diagnostic to find your compliance score, identify legal risks, and operate in line with food safety legislation.</p>
       </div>
-
-      <div class="lead-right fade-in fade-in-delay-2">
-        <div class="lead-form-card">
-          <h3>10-Step expert checklist</h3>
-          <p>
-            Enter your details and we will send the checklist to your email immediately.
-          </p>
-          <div class="form-group">
-            <label>Full name</label>
-            <input type="text" placeholder="Enter your name" />
-          </div>
-          <div class="form-group">
-            <label>Corporate email</label>
-            <input type="email" placeholder="Enter your email" />
-          </div>
-          <div class="form-group">
-            <label>Industry</label>
-            <select>
-              <option value="" class="select-options">Select...</option>
-              <option class="select-options">Meat processing</option>
-              <option calss="select-options">
-                Dairy products
-              </option>
-              <option class="select-options">HoReCa</option>
-              <option class="select-options">Bakery</option>
-              <option class="select-options">Beverage production</option>
-              <option class="select-options">Other</option>
-            </select>
-          </div>
-          <button class="btn btn-gold" data-sent-text="✓ Sent!">
-            Download Checklist →
-          </button>
-          <p class="lead-note">
-            <i class="fa-solid fa-lock"></i> Your data is kept completely confidential. No spam.
-          </p>
+      <div class="diag-grid">
+        <div class="diag-form-card">
+          <h2>Enter Your Details</h2>
+          <p>Fill in the fields below to start the diagnostic.</p>
+          <form id="diagForm" novalidate>
+            <div class="diag-field" id="df-objname">
+              <label>Business Name <span>*</span></label>
+              <input type="text" id="dObjName" placeholder="Enter your business name" autocomplete="organization" />
+              <div class="diag-field-err">Business name is required.</div>
+            </div>
+            <div class="diag-field" id="df-phone">
+              <label>Contact Number (Phone) <span>*</span></label>
+              <input type="tel" id="dPhone" placeholder="+994 XX XXX XX XX" autocomplete="tel" />
+              <div class="diag-field-err">Phone number is required.</div>
+            </div>
+            <div class="diag-field" id="df-email">
+              <label>Email Address <span>*</span></label>
+              <input type="email" id="dEmail" placeholder="Your email address" autocomplete="email" />
+              <div class="diag-field-err">Please enter a valid email address.</div>
+            </div>
+            <div class="diag-field" id="df-activity">
+              <label>Type of Activity <span>*</span></label>
+              <select id="dActivity">
+                <option value="">Select...</option>
+                <option>Primary production</option>
+                <option>Processing</option>
+                <option>Trade (wholesale and retail)</option>
+                <option>Trade (storage)</option>
+                <option>Food service / Catering</option>
+              </select>
+              <div class="diag-field-err">Type of activity must be selected.</div>
+            </div>
+            <div class="diag-field" id="df-product">
+              <label>Product(s) Manufactured <span>*</span></label>
+              <input type="text" id="dProduct" placeholder="Enter product name" />
+              <div class="diag-field-err">Product name is required.</div>
+            </div>
+            <button type="submit" class="diag-submit-btn">Start Diagnostic <i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <p class="diag-privacy"><i class="fa-solid fa-lock"></i> Your data is kept completely confidential. No spam.</p>
+        </div>
+        <div class="diag-info">
+          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-list-check"></i></div><div><strong>24 Questions</strong><span>Comprehensive compliance check</span></div></div>
+          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-chart-pie"></i></div><div><strong>Instant Results</strong><span>Percentage compliance report</span></div></div>
+          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-file-pdf"></i></div><div><strong>PDF Report</strong><span>Detailed report with legal references</span></div></div>
+          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-scale-balanced"></i></div><div><strong>Legal Basis</strong><span>Based on the AR Food Safety Law</span></div></div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- QUIZ MODAL -->
+  <div class="quiz-overlay" id="quizOverlay">
+    <div class="quiz-container" id="quizContainer">
+      <div class="q-header">
+        <button class="q-back-btn q-hidden" id="qBackBtn" onclick="quizBack()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+        <div class="q-progress-wrap"><div class="q-progress-fill" id="qProgressFill"></div></div>
+        <span class="q-step-label" id="qStepLabel">1 / 24</span>
+        <div class="q-lang-wrap">
+          <button class="q-lang-btn" id="qLangBtn"><i class="fa-solid fa-globe"></i> EN <i class="fa-solid fa-chevron-down" style="font-size:9px"></i></button>
+          <ul class="q-lang-dropdown" id="qLangDd">
+            <li><a href="../../az/diagnostic/index.html">🇦🇿 Azərbaycan</a></li>
+            <li><a href="index.html" class="q-lang-active">🇬🇧 English</a></li>
+            <li><a href="../../ru/diagnostic/index.html">🇷🇺 Русский</a></li>
+            <li><a href="../../uz/diagnostic/index.html">🇺🇿 Uzbek</a></li>
+          </ul>
+        </div>
+        <button class="q-close-btn" onclick="quizClose()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="quiz-q-screen" id="quizQScreen">
+        <div class="q-icon-wrap"><i class="fa-solid fa-clipboard-question"></i></div>
+        <div class="q-num-label" id="qNumLabel">Question 1 / 24</div>
+        <div class="q-text" id="qText"></div>
+        <div class="q-answer-btns">
+          <button class="q-answer-btn q-yes" onclick="quizAnswer(true)"><i class="fa-solid fa-check"></i> Yes</button>
+          <button class="q-answer-btn q-no"  onclick="quizAnswer(false)"><i class="fa-solid fa-xmark"></i> No</button>
+        </div>
+        <div class="q-dots" id="qDots"></div>
+      </div>
+      <div class="quiz-result-screen" id="quizResultScreen" style="display:none">
+        <div class="result-top">
+          <h2>Diagnostic Result</h2>
+          <p id="resultSubtitle"></p>
+        </div>
+        <div class="result-score-grid">
+          <div class="result-ring-wrap">
+            <svg class="result-ring-svg" viewBox="0 0 130 130">
+              <circle cx="65" cy="65" r="55" fill="none" stroke="#e5e7eb" stroke-width="11"/>
+              <circle id="resultArc" cx="65" cy="65" r="55" fill="none" stroke="#22c55e" stroke-width="11"
+                stroke-linecap="round" stroke-dasharray="345.4" stroke-dashoffset="345.4"
+                transform="rotate(-90 65 65)"
+                style="transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1),stroke .4s ease"/>
+            </svg>
+            <div class="result-ring-pct" id="resultPct">0%</div>
+          </div>
+          <div>
+            <div class="result-badge" id="resultBadge">—</div>
+            <div class="result-stats-row">
+              <div class="rs-stat ok"><span id="statOk">0</span><label>Compliant</label></div>
+              <div class="rs-stat fail"><span id="statFail">0</span><label>Non-Compliant</label></div>
+              <div class="rs-stat"><span>24</span><label>Total</label></div>
+            </div>
+          </div>
+        </div>
+        <div class="result-perfect" id="resultPerfect" style="display:none">
+          <i class="fa-solid fa-trophy"></i>
+          <h3>Perfect Score!</h3>
+          <p>Your business fully complies with all food safety requirements.</p>
+        </div>
+        <div class="result-table-section" id="resultTableSection" style="display:none">
+          <h3><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b;margin-right:6px"></i>Areas of Non-Compliance Identified</h3>
+          <div class="result-table-wrap">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th style="width:40%">Non-compliant question</th>
+                  <th style="width:27%">Legal Reference</th>
+                  <th>Required corrective action</th>
+                </tr>
+              </thead>
+              <tbody id="resultTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button class="result-dl-btn" onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> Download PDF Report</button>
+          <button class="result-restart-btn" onclick="quizRestart()"><i class="fa-solid fa-rotate-right"></i> Restart</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- =========================================
@@ -479,7 +653,257 @@
 
   <script src="../../js/theme-toggle.js"></script>
   <script src="../../js/app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+  <script>
+  var QUESTIONS=[
+    {id:1,q:"Does the establishment fulfil the required registration and certification procedures in the field of food safety?",law:"Law of AR — Art. 24, 25",cor:"Register the establishment with the food safety authority; prepare required documentation for state-registered products.",pen:"Admin. Code Art. 220.1/220.2: Individual — 200–300 AZN; Official — 800–1000 AZN; Legal entity — 2000–2500 AZN"},
+    {id:2,q:"Does the establishment's activity comply with the requirements of current technical regulatory legal acts in food safety?",law:"Law of AR — Art. 16",cor:"Review current technical regulatory legal acts, identify non-compliances and update internal procedures.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:3,q:"Does the design of the establishment's territory, buildings and production areas comply with requirements?",law:"Law of AR — Art. 16.3",cor:"Review the building design with food safety experts; prepare a renovation plan in line with normative requirements.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:4,q:"Do floors, walls, ceilings, doors and windows comply with sanitary-hygienic requirements?",law:"Law of AR — Art. 16.3",cor:"Assess all structural elements of the production area; eliminate existing non-compliances.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:5,q:"Do hand-washing stations, sanitary facilities, changing rooms and welfare areas meet required conditions?",law:"Law of AR — Art. 16.3",cor:"Equip hand-washing stations, sanitary facilities and changing rooms per normative requirements; upgrade equipment.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:6,q:"Do ventilation, heating and lighting systems ensure food safety?",law:"Law of AR — Art. 16.3",cor:"Have ventilation, heating and lighting systems inspected by a specialist; make necessary adjustments to meet normative indicators.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:7,q:"Do equipment, inventory and surfaces in contact with food meet safety requirements?",law:"Law of AR — Art. 16.3, 17.1",cor:"Audit all equipment and surfaces in contact with food; replace non-compliant equipment.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:8,q:"Are measuring instruments, thermometers and other control devices calibrated and kept in working order?",law:"Law of AR — Art. 16.2, 16.4",cor:"Prepare a calibration schedule for all measuring instruments; implement regular maintenance procedures.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:9,q:"Do water and ice used in production meet safety requirements?",law:"Law of AR — Art. 14, 16.3",cor:"Obtain water quality certificates; conduct regular laboratory testing; document ice production procedures.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:10,q:"Are refrigeration, freezing, thawing and heat treatment processes carried out in accordance with normative requirements?",law:"Law of AR — Art. 16.1, 16.2",cor:"Prepare written procedures for these processes; implement temperature logs; train staff.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:11,q:"Do sewage and drainage systems operate safely and effectively?",law:"Law of AR — Art. 16.3",cor:"Conduct a technical inspection of the sewage system; install drainage per normative requirements; perform regular maintenance.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:12,q:"Are cleaning and disinfection measures carried out systematically?",law:"Law of AR — Art. 16.2, 16.3",cor:"Develop an official cleaning and disinfection programme; record implementation in journals; keep product certificates.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:13,q:"Are pest control, rodent control and pest management measures effectively organised?",law:"Law of AR — Art. 16.3",cor:"Contract a licensed pest control company; implement a regular inspection schedule; record all measures taken.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:14,q:"Are production and food waste managed safely?",law:"Law of AR — Art. 16.3",cor:"Develop a written waste management procedure; record all waste streams; designate a separate waste storage area.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:15,q:"Is the personal hygiene, medical examination and health monitoring of staff maintained?",law:"Law of AR — Art. 16.3",cor:"Draw up a medical examination schedule for all staff; document personal hygiene rules; carry out hygiene training.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:16,q:"Is compliance control carried out during reception of raw materials, auxiliary materials and incoming products?",law:"Law of AR — Art. 16.1",cor:"Develop an official incoming inspection procedure; implement a compliance log; evaluate suppliers.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:17,q:"Are requirements for special-purpose, enriched, bio-active and GMO-containing products complied with?",law:"Law of AR — Art. 11, 12, 13, 25",cor:"Review registration documents for special products; obtain required permits for GMO and bio-active products.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:18,q:"Are food safety risks and cross-contamination in production processes effectively managed?",law:"Law of AR — Art. 16.2, 16.4",cor:"Review the HACCP plan; develop dedicated cross-contamination control procedures; document critical control points.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:19,q:"Do product labelling, marking and consumer information comply with legislative requirements?",law:"Law of AR — Art. 17",cor:"Check all product labels; ensure all required information (composition, production date, storage conditions) is present.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:20,q:"Do product storage, transportation and logistics processes meet safety requirements?",law:"Law of AR — Art. 16.3",cor:"Document storage conditions; implement temperature control logs; verify transport vehicle hygiene compliance.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:21,q:"Are staff engaged in relevant food safety and hygiene training?",law:"Law of AR — Art. 16.2",cor:"Conduct regular food safety and hygiene training; maintain attendance records; carry out knowledge assessments.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:22,q:"Do materials in contact with food and packaging comply with legislative requirements?",law:"Law of AR — Art. 17.1, 24.1",cor:"Obtain compliance certificates for all food-contact materials; immediately replace uncertified materials.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:23,q:"Do product advertising, presentation, marking and consumer information comply with legislative requirements?",law:"Law of AR — Art. 8, 17",cor:"Review all advertising materials; eliminate misleading claims; develop a transparent consumer information policy.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"},
+    {id:24,q:"Does the establishment operate an effective product traceability, recall and supply chain control system?",law:"Law of AR — Art. 24",cor:"Implement a product traceability system; develop, test and record recall procedures; implement a lot numbering system.",pen:"Admin. Code Art. 220.3: Individual — 100–150 AZN; Official — 400–600 AZN; Legal entity — 1000–1500 AZN"}
+  ];
+
+  var userInfo={};
+  var answers=[];
+  var currentQ=0;
+  var TOTAL=QUESTIONS.length;
+
+  document.getElementById('diagForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!validateForm())return;
+    userInfo={
+      objName:document.getElementById('dObjName').value.trim(),
+      phone:document.getElementById('dPhone').value.trim(),
+      email:document.getElementById('dEmail').value.trim(),
+      activity:document.getElementById('dActivity').value,
+      product:document.getElementById('dProduct').value.trim()
+    };
+    quizOpen();
+  });
+
+  function validateForm(){
+    var ok=true;
+    function chk(wid,iid,fn){
+      var w=document.getElementById(wid),el=document.getElementById(iid),pass=fn(el.value.trim());
+      w.classList.toggle('has-err',!pass);el.classList.toggle('err',!pass);if(!pass)ok=false;
+    }
+    chk('df-objname','dObjName',function(v){return v.length>=2;});
+    chk('df-phone','dPhone',function(v){return v.length>=7;});
+    chk('df-email','dEmail',function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);});
+    chk('df-activity','dActivity',function(v){return v!=='';});
+    chk('df-product','dProduct',function(v){return v.length>=2;});
+    return ok;
+  }
+
+  function quizOpen(){
+    var i; answers=[];
+    for(i=0;i<TOTAL;i++){answers[i]=null;}
+    currentQ=0;
+    document.getElementById('quizResultScreen').style.display='none';
+    document.getElementById('quizQScreen').style.display='';
+    document.getElementById('quizOverlay').classList.add('active');
+    document.body.style.overflow='hidden';
+    showQuestion(0);
+  }
+
+  function quizClose(){
+    if(window.confirm('Are you sure you want to exit the diagnostic? Your answers will be lost.')){
+      document.getElementById('quizOverlay').classList.remove('active');
+      document.body.style.overflow='';
+    }
+  }
+
+  function showQuestion(idx){
+    currentQ=idx;
+    var q=QUESTIONS[idx];
+    document.getElementById('qNumLabel').textContent='Question '+(idx+1)+' / '+TOTAL;
+    document.getElementById('qStepLabel').textContent=(idx+1)+' / '+TOTAL;
+    document.getElementById('qProgressFill').style.width=((idx/TOTAL)*100)+'%';
+    document.getElementById('qBackBtn').className='q-back-btn'+(idx===0?' q-hidden':'');
+    var t=document.getElementById('qText');
+    t.textContent=q.q;
+    t.classList.remove('q-fade');
+    void t.offsetWidth;
+    t.classList.add('q-fade');
+    renderDots(idx);
+  }
+
+  function quizAnswer(isYes){
+    answers[currentQ]=isYes;
+    if(currentQ<TOTAL-1){showQuestion(currentQ+1);}else{showResults();}
+  }
+
+  function quizBack(){if(currentQ>0)showQuestion(currentQ-1);}
+
+  function renderDots(cur){
+    var h='',i,c;
+    for(i=0;i<TOTAL;i++){
+      c='q-dot';
+      if(i===cur)c+=' q-dot-cur';
+      else if(answers[i]===true)c+=' q-dot-yes';
+      else if(answers[i]===false)c+=' q-dot-no';
+      h+='<span class="'+c+'"></span>';
+    }
+    document.getElementById('qDots').innerHTML=h;
+  }
+
+  function showResults(){
+    var correct=0,i;
+    for(i=0;i<TOTAL;i++){if(answers[i]===true)correct++;}
+    var failed=TOTAL-correct,score=Math.round((correct/TOTAL)*100);
+    document.getElementById('quizQScreen').style.display='none';
+    document.getElementById('quizResultScreen').style.display='';
+    document.getElementById('quizContainer').scrollTop=0;
+    document.getElementById('qProgressFill').style.width='100%';
+    document.getElementById('qStepLabel').textContent='Completed';
+    document.getElementById('qBackBtn').className='q-back-btn q-hidden';
+    document.getElementById('resultSubtitle').textContent=userInfo.objName+' · '+userInfo.activity;
+    var circ=345.4,offset=circ*(1-score/100);
+    var color=score>=80?'#22c55e':score>=60?'#f59e0b':'#ef4444';
+    var arc=document.getElementById('resultArc');
+    arc.style.stroke=color;
+    setTimeout(function(){arc.style.strokeDashoffset=offset;},80);
+    animateCount('resultPct',0,score,'%',1400);
+    document.getElementById('statOk').textContent=correct;
+    document.getElementById('statFail').textContent=failed;
+    var badge=document.getElementById('resultBadge');
+    var lbl=score>=80?'High Compliance':score>=60?'Medium Compliance':'Low Compliance';
+    var bc=score>=80?'badge-green':score>=60?'badge-orange':'badge-red';
+    badge.textContent=lbl;badge.className='result-badge '+bc;
+    if(failed>0){
+      document.getElementById('resultPerfect').style.display='none';
+      document.getElementById('resultTableSection').style.display='';
+      var rows='';
+      for(i=0;i<TOTAL;i++){
+        if(answers[i]===false){
+          rows+='<tr><td>'+QUESTIONS[i].q+'</td><td>'+QUESTIONS[i].law+'</td><td>'+QUESTIONS[i].cor+'</td></tr>';
+        }
+      }
+      document.getElementById('resultTableBody').innerHTML=rows;
+    }else{
+      document.getElementById('resultTableSection').style.display='none';
+      document.getElementById('resultPerfect').style.display='';
+    }
+  }
+
+  function animateCount(id,from,to,sfx,dur){
+    var el=document.getElementById(id),start=null;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      el.textContent=Math.round(from+(to-from)*p)+sfx;
+      if(p<1)requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function quizRestart(){
+    var i;for(i=0;i<TOTAL;i++){answers[i]=null;}
+    currentQ=0;
+    document.getElementById('quizResultScreen').style.display='none';
+    document.getElementById('quizQScreen').style.display='';
+    document.getElementById('quizContainer').scrollTop=0;
+    showQuestion(0);
+  }
+
+  function downloadPDF(){
+    var doc=new window.jspdf.jsPDF('p','mm','a4');
+    var correct=0,i;
+    for(i=0;i<TOTAL;i++){if(answers[i]===true)correct++;}
+    var failed=TOTAL-correct,score=Math.round((correct/TOTAL)*100);
+    var today=new Date();
+    var ds=today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+    var col=score>=80?[34,197,94]:score>=60?[245,158,11]:[239,68,68];
+    var rlbl=score>=80?'High Compliance':score>=60?'Medium Compliance':'Low Compliance';
+    doc.setFillColor(17,24,39);doc.rect(0,0,210,36,'F');
+    doc.setTextColor(255,255,255);doc.setFontSize(14);doc.setFont('helvetica','bold');
+    doc.text('ASR Development Consulting Group',105,14,{align:'center'});
+    doc.setFontSize(10);doc.setFont('helvetica','normal');
+    doc.text('Food Safety Diagnostic Report',105,24,{align:'center'});
+    doc.setFontSize(8);doc.setTextColor(156,163,175);
+    doc.text('Date: '+ds,196,32,{align:'right'});
+    doc.setTextColor(40,40,40);doc.setFillColor(249,250,251);
+    doc.roundedRect(14,42,182,40,3,3,'F');
+    doc.setFontSize(9);doc.setFont('helvetica','bold');doc.text('Business Information',20,52);
+    doc.setFont('helvetica','normal');doc.setFontSize(8.5);
+    doc.text('Business:  '+userInfo.objName,20,61);
+    doc.text('Phone:     '+userInfo.phone,20,69);
+    doc.text('Activity:  '+userInfo.activity,110,61);
+    doc.text('Email:     '+userInfo.email,110,69);
+    doc.text('Product:   '+userInfo.product,20,77);
+    doc.setFillColor(col[0],col[1],col[2]);
+    doc.roundedRect(14,90,52,30,3,3,'F');
+    doc.setTextColor(255,255,255);doc.setFontSize(24);doc.setFont('helvetica','bold');
+    doc.text(score+'%',40,109,{align:'center'});
+    doc.setTextColor(40,40,40);doc.setFontSize(8.5);doc.setFont('helvetica','bold');
+    doc.text(rlbl,40,126,{align:'center'});
+    doc.setFont('helvetica','normal');doc.setFontSize(9);
+    doc.text('Compliant:     '+correct+' / '+TOTAL,76,100);
+    doc.text('Non-compliant: '+failed+' / '+TOTAL,76,109);
+    doc.setFontSize(8);doc.setTextColor(107,114,128);
+    doc.text('Assessment based on the Law of the Republic of Azerbaijan on Food Safety',76,118);
+    if(failed>0){
+      var rows=[];
+      for(i=0;i<TOTAL;i++){
+        if(answers[i]===false){
+          rows.push([QUESTIONS[i].id+'. '+QUESTIONS[i].q,QUESTIONS[i].law,QUESTIONS[i].cor]);
+        }
+      }
+      doc.autoTable({
+        startY:136,
+        head:[['Non-compliant question','Legal Reference','Corrective action']],
+        body:rows,
+        styles:{fontSize:8,cellPadding:3,overflow:'linebreak',font:'helvetica'},
+        headStyles:{fillColor:[180,142,66],textColor:255,fontStyle:'bold',fontSize:8},
+        columnStyles:{0:{cellWidth:76},1:{cellWidth:44},2:{cellWidth:62}},
+        alternateRowStyles:{fillColor:[250,250,250]},
+        margin:{left:14,right:14}
+      });
+    }else{
+      doc.setFontSize(11);doc.setTextColor(22,163,74);doc.setFont('helvetica','bold');
+      doc.text('Perfect result! The business fully complies with all food safety requirements.',105,148,{align:'center'});
+    }
+    var pages=doc.internal.getNumberOfPages();
+    for(i=1;i<=pages;i++){
+      doc.setPage(i);doc.setFontSize(7.5);doc.setTextColor(156,163,175);doc.setFont('helvetica','normal');
+      doc.line(14,285,196,285);
+      doc.text('ASR Development Consulting Group  |  office@asrgroup.az  |  +994 50 208 58 38',105,290,{align:'center'});
+      doc.text('Page '+i+'/'+pages,196,290,{align:'right'});
+    }
+    doc.save('ASR-Diagnostic-'+ds+'.pdf');
+  }
+
+  document.getElementById('qLangBtn').addEventListener('click',function(e){
+    e.stopPropagation();
+    document.getElementById('qLangDd').classList.toggle('open');
+  });
+  document.addEventListener('click',function(){
+    document.getElementById('qLangDd').classList.remove('open');
+  });
+
+  var fy=document.getElementById('footer-year');
+  if(fy)fy.textContent=new Date().getFullYear();
+  </script>
 
 </body>
 

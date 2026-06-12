@@ -1,0 +1,196 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Müəssisə qida təhlükəsizliyi sahəsində tələb olunan qeydiyyat və təsdiq prosedurlarını yerinə yetirirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 24, Maddə 25",
+      "requirement": "Qida obyektləri və qida subyektləri fəaliyyətə başlamazdan əvvəl qeydiyyata alınmalı, qeydiyyatı tələb olunan məhsullar isə dövlət qeydiyyatından keçməlidir.",
+      "corrective": "Müəssisəni və məhsulları qida təhlükəsizliyi orqanında qeydiyyata aldırın; dövlət qeydiyyatı tələb olunan məhsullar üçün müvafiq sənədləri hazırlayın.",
+      "penalty": "AR İXM Maddə 220.1/220.2: Fiziki şəxs — 200–300 AZN; Vəzifəli şəxs — 800–1000 AZN; Hüquqi şəxs — 2000–2500 AZN"
+    },
+    {
+      "id": 2,
+      "question": "Müəssisənin fəaliyyəti qida təhlükəsizliyi sahəsində qüvvədə olan texniki normativ-hüquqi aktların tələblərinə uyğundurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16",
+      "requirement": "Qida və yem məhsullarının istehsalı və emalı zamanı qanunvericiliklə müəyyən edilmiş təhlükəsizlik tələblərinə əməl edilməlidir.",
+      "corrective": "Qüvvədə olan texniki normativ-hüquqi aktları nəzərdən keçirin, uyğunsuzluqları müəyyən edin və daxili prosedurları yeniləyin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 3,
+      "question": "Müəssisənin ərazisi, bina və istehsal sahələrinin layihələndirilməsi tələblərə uyğundurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "İstehsal və emal sahələri qida təhlükəsizliyi tələblərinə uyğun layihələndirilməli və istismar edilməlidir.",
+      "corrective": "Bina layihəsini qida təhlükəsizliyi mütəxəssisləri ilə nəzərdən keçirin; normativ tələblərə uyğun renovasiya planı hazırlayın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 4,
+      "question": "Döşəmə, divar, tavan, qapı və pəncərələr sanitar-gigiyenik tələblərə uyğundurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "İstehsal sahələrinin konstruktiv elementləri normativ tələblərə uyğun olmalı və çirklənmə riskini minimuma endirməlidir.",
+      "corrective": "İstehsal sahəsinin bütün konstruktiv elementlərini qiymətləndirin; mövcud uyğunsuzluqları aradan qaldırın, zəruri islahatları planlaşdırın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 5,
+      "question": "Əlyuma məntəqələri, sanitar qovşaqlar, soyunub-geyinmə və məişət sahələri tələb olunan şəraitə malikdirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "Yardımçı və sanitar-məişət sahələri qida təhlükəsizliyi üzrə normativ tələblərə cavab verməlidir.",
+      "corrective": "Əlyuma məntəqələri, sanitar qovşaqlar və soyunub-geyinmə otaqlarını normativ tələblərə uyğun qurun; avadanlıqları yeniləyin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 6,
+      "question": "Havalandırma, isitmə və işıqlandırma sistemləri qida təhlükəsizliyini təmin edirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "Ventilyasiya, qızdırma və işıqlandırma sistemləri normativ tələblərə uyğun təşkil edilməlidir.",
+      "corrective": "Ventilyasiya, qızdırma və işıqlandırma sistemlərini mütəxəssis tərəfindən yoxladın; normativ göstəriciləri təmin etmək üçün lazımi dəyişiklikləri edin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 7,
+      "question": "Avadanlıq, inventar və qida ilə təmasda olan səthlər təhlükəsizlik tələblərinə cavab verirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3, Maddə 17.1",
+      "requirement": "Qida ilə təmasda olan avadanlıq və materiallar məhsulun təhlükəsizliyinə mənfi təsir göstərməməlidir.",
+      "corrective": "Qida ilə təmasda olan bütün avadanlıq və səthlərin auditini keçirin; uyğun olmayan avadanlıqları dəyişdirin, sertifikalı materiallardan istifadə edin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 8,
+      "question": "Ölçmə vasitələri, termometrlər və digər nəzarət cihazları kalibrlənir və işlək vəziyyətdə saxlanılırmı?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.2, Maddə 16.4",
+      "requirement": "HACCP əsaslı daxili nəzarət sistemində istifadə olunan monitorinq vasitələrinin etibarlılığı təmin edilməlidir.",
+      "corrective": "Bütün ölçmə vasitələri üçün kalibrasiya cədvəli hazırlayın; müntəzəm texniki xidmət prosedurlarını tətbiq edin və qeydlər aparın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 9,
+      "question": "İstehsalatda istifadə olunan su və buz təhlükəsizlik tələblərinə cavab verirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 14, Maddə 16.3",
+      "requirement": "İstehsalda istifadə olunan su qida təhlükəsizliyi sahəsində müəyyən edilmiş tələblərə uyğun olmalıdır.",
+      "corrective": "Suyun keyfiyyət sertifikatlarını alın; müntəzəm laboratoriya müayinələri aparın; buz istehsalı prosedurlarını sənədləşdirin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 10,
+      "question": "Soyutma, dondurma, donun açılması və termiki emal prosesləri normativ tələblərə uyğun həyata keçirilirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.1, Maddə 16.2",
+      "requirement": "İstehsal və emal prosesləri məhsulun təhlükəsizliyini təmin edəcək qaydada aparılmalıdır.",
+      "corrective": "Soyutma, dondurma və termiki emal prosesləri üçün yazılı prosedurlar hazırlayın; temperatur jurnallarını tətbiq edin; işçiləri öyrədin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 11,
+      "question": "Kanalizasiya və drenaj sistemləri təhlükəsiz və effektiv şəkildə fəaliyyət göstərirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "Kanalizasiya və drenaj sistemləri normativ tələblərə uyğun qurulmalı və işlədilməlidir.",
+      "corrective": "Kanalizasiya sisteminin texniki baxışını keçirin; normativ tələblərə uyğun drenaj sistemini qurun; müntəzəm baxım keçirin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 12,
+      "question": "Təmizlik və dezinfeksiya tədbirləri sistemli şəkildə həyata keçirilirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.2, Maddə 16.3",
+      "requirement": "Müəssisədə sanitariya-gigiyena tədbirləri və daxili nəzarət prosedurları tətbiq edilməlidir.",
+      "corrective": "Rəsmi təmizlik və dezinfeksiya proqramı hazırlayın; icranı jurnallarda qeydə alın; istifadə olunan məhsulların sertifikatlarını saxlayın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 13,
+      "question": "Dezinseksiya, deratizasiya və zərərvericilərlə mübarizə tədbirləri effektiv təşkil olunubmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "İstehsal mühitində zərərvericilərdən qorunma tədbirləri təmin edilməlidir.",
+      "corrective": "Lisenziyalı zərərverici nəzarət şirkəti ilə müqavilə bağlayın; müntəzəm müayinə cədvəli tətbiq edin; aparılan tədbirləri qeydə alın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 14,
+      "question": "İstehsalat və qida tullantıları təhlükəsiz şəkildə idarə olunurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "Tullantılar qida məhsullarının çirklənməsinə yol vermədən idarə olunmalıdır.",
+      "corrective": "Tullantıların idarəedilməsi üçün yazılı prosedur hazırlayın; bütün tullantı axınlarını qeydə alın; ayrılmış tullantı saxlama sahəsi müəyyən edin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 15,
+      "question": "İşçi heyətin şəxsi gigiyenası, tibbi müayinələri və sağlamlıq vəziyyəti nəzarətdə saxlanılırmı?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "İşçi heyətinin iş şəraiti və sanitariya tələbləri normativ aktlara uyğun olmalıdır.",
+      "corrective": "Bütün işçilər üçün tibbi müayinə cədvəli tərtibi edin; şəxsi gigiyena qaydalarını sənədləşdirin; gigiyena maarifləndirməsini həyata keçirin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 16,
+      "question": "Xammalın, köməkçi materialların və daxil olan məhsulların qəbulu zamanı uyğunluq nəzarəti aparılırmı?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.1",
+      "requirement": "İstehsalda yalnız təhlükəsizlik tələblərinə cavab verən xammal və inqrediyentlərdən istifadə edilməlidir.",
+      "corrective": "Gelen məhsulların qəbulunda rəsmi yoxlama proseduru hazırlayın; uyğunluq yoxlama jurnalı tətbiq edin; təchizatçıları qiymətləndirin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 17,
+      "question": "Xüsusi təyinatlı, zənginləşdirilmiş, bioloji aktiv və GMO tərkibli məhsullarla bağlı tələblərə əməl olunurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 11, 12, 13, 25",
+      "requirement": "Bioloji aktiv məhsullar, zənginləşdirilmiş məhsullar və GMO məhsulları qeydiyyatdan keçməli və xüsusi tələblərə uyğun olmalıdır.",
+      "corrective": "Xüsusi məhsulların qeydiyyat sənədlərini nəzərdən keçirin; GMO və bio-aktiv məhsullar üçün tələb olunan icazələri əldə edin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 18,
+      "question": "İstehsal proseslərində qida təhlükəsizliyi riskləri və çarpaz çirklənmə effektiv idarə olunurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.2, Maddə 16.4",
+      "requirement": "HACCP-a əsaslanan prosedurlar tətbiq edilməli və risklər idarə olunmalıdır.",
+      "corrective": "HACCP planını nəzərdən keçirin; çarpaz çirklənmə nəzarəti üçün ayrılmış prosedurlar hazırlayın; kritik nəzarət nöqtələrini sənədləşdirin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 19,
+      "question": "Məhsulların etiketlənməsi, markalanması və istehlakçıya təqdim edilən məlumatlar qanunvericiliyin tələblərinə uyğundurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 17",
+      "requirement": "Məhsulun etiketlənməsi və istehlakçıya təqdim olunan məlumatlar qanunvericilik tələblərinə uyğun olmalıdır.",
+      "corrective": "Bütün məhsulların etiketlərini yoxlayın; AR qanunvericiliyinin tələb etdiyi bütün məlumatların (tərkib, istehsal tarixi, saxlama şərtləri və s.) mövcudluğunu təmin edin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 20,
+      "question": "Məhsulların saxlanması, daşınması və logistika prosesləri təhlükəsizlik tələblərinə cavab verirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.3",
+      "requirement": "Saxlanma və daşınma zamanı məhsulun təhlükəsizliyi qorunmalıdır.",
+      "corrective": "Saxlama şərtlərini sənədləşdirin; temperatur nəzarəti jurnalları tətbiq edin; daşıma vasitələrinin gigiyena tələblərinə uyğunluğunu yoxlayın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 21,
+      "question": "İşçilər qida təhlükəsizliyi və gigiyena sahəsində müvafiq təlimlərə cəlb olunurlarmı?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 16.2",
+      "requirement": "HACCP və daxili nəzarət sisteminin effektiv fəaliyyəti üçün işçilərin bilik və bacarıqları təmin edilməlidir.",
+      "corrective": "İşçilər üçün müntəzəm qida təhlükəsizliyi və gigiyena təlimləri keçirin; iştirak qeydlərini saxlayın; bilik yoxlamaları aparın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 22,
+      "question": "Qida ilə təmasda olan materiallar və qablaşdırma vasitələri qanunvericiliyin tələblərinə cavab verirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 17.1, Maddə 24.1",
+      "requirement": "Qida ilə təmasda olan material və məmulatlar təhlükəsizlik tələblərinə uyğun olmalıdır.",
+      "corrective": "Qida ilə təmasda olan bütün materialların uyğunluq sertifikatlarını əldə edin; sertifikatsız materialları dərhal dəyişdirin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 23,
+      "question": "Məhsulların reklamı, təqdimatı, markalanması və istehlakçıların məlumatlandırılması qanunvericiliyin tələblərinə uyğundurmu?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 8, Maddə 17",
+      "requirement": "İstehlakçı aldadılmamalı, məhsul haqqında verilən məlumatlar doğru və şəffaf olmalıdır.",
+      "corrective": "Bütün reklam materiallarını və məhsul məlumatlarını nəzərdən keçirin; yanıltıcı iddiaları aradan qaldırın; şəffaf məlumatlandırma siyasəti hazırlayın.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    },
+    {
+      "id": 24,
+      "question": "Müəssisədə məhsulların izlənəbilənliyi, geri çağırılması və təchizat zənciri üzrə nəzarət sistemi effektiv fəaliyyət göstərirmi?",
+      "law": "Qida Təhlükəsizliyi haqqında AR Qanunu — Maddə 24",
+      "requirement": "Qida subyektləri qeydiyyat, reyestr və izlənəbilənlik sistemlərinin tələblərinə əməl etməlidirlər.",
+      "corrective": "Məhsul izlənəbilənliyi sistemini tətbiq edin; geri çağırma prosedurlarını hazırlayın, sınaqdan keçirin və qeydə alın; lot nömrələmə sistemini tətbiq edin.",
+      "penalty": "AR İXM Maddə 220.3: Fiziki şəxs — 100–150 AZN; Vəzifəli şəxs — 400–600 AZN; Hüquqi şəxs — 1000–1500 AZN"
+    }
+  ]
+}
