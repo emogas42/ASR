@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="az">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ASR Development Consulting Group — Qida Təhlükəsizliyi uyğunluq diaqnostikası." />
   <title>Pulsuz Diaqnostika | ASR Development Consulting Group</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="../../images/logos/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="../../images/logos/favicon-32x32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="../../images/logos/apple-touch-icon.png" />
@@ -15,145 +17,20 @@
   <link rel="stylesheet" href="../../css/general.css" />
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/lang-switch.css" />
-  <script>!function(){var t=localStorage.getItem('asrTheme');if(t==='dark'){document.documentElement.classList.add('dark-mode');document.documentElement.setAttribute('data-theme','dark');}}();</script>
-  <style>
-    .diag-section{padding:130px 0 80px;min-height:100vh}
-    .diag-inner{max-width:1100px;margin:0 auto;padding:0 24px}
-    .diag-hero{text-align:center;margin-bottom:3rem}
-    .diag-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#fef3c7,#fde68a);color:#92400e;padding:6px 18px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.5px;margin-bottom:1rem;text-transform:uppercase}
-    .diag-hero h1{font-size:clamp(1.5rem,3.5vw,2.3rem);font-weight:800;line-height:1.25;margin-bottom:1rem;color:#111827}
-    .diag-hero p{font-size:1rem;color:#6b7280;max-width:580px;margin:0 auto;line-height:1.7}
-    .diag-grid{display:grid;grid-template-columns:1fr 310px;gap:2rem;align-items:start}
-    .diag-form-card{background:#fff;border-radius:18px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,.08);border:1px solid #f3f4f6}
-    .diag-form-card h2{font-size:1.15rem;font-weight:800;margin-bottom:4px;color:#111827}
-    .diag-form-card>p{font-size:13px;color:#9ca3af;margin-bottom:1.8rem}
-    .diag-field{margin-bottom:1.2rem}
-    .diag-field label{display:block;font-size:11px;font-weight:700;color:#374151;margin-bottom:7px;text-transform:uppercase;letter-spacing:.4px}
-    .diag-field label span{color:#ef4444}
-    .diag-field input,.diag-field select{width:100%;padding:12px 14px;border:1.5px solid #e5e7eb;border-radius:9px;font-family:Montserrat,sans-serif;font-size:14px;color:#111827;background:#fff;transition:border-color .2s,box-shadow .2s;box-sizing:border-box}
-    .diag-field input:focus,.diag-field select:focus{outline:none;border-color:#b48e42;box-shadow:0 0 0 3px rgba(180,142,66,.12)}
-    .diag-field input.err,.diag-field select.err{border-color:#ef4444;box-shadow:0 0 0 3px rgba(239,68,68,.1)}
-    .diag-field-err{display:none;font-size:11px;color:#ef4444;margin-top:4px}
-    .diag-field.has-err .diag-field-err{display:block}
-    .diag-submit-btn{width:100%;padding:15px;background:linear-gradient(135deg,#b48e42,#d4a853);color:#fff;border:none;border-radius:10px;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-top:.5rem;display:flex;align-items:center;justify-content:center;gap:10px}
-    .diag-submit-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(180,142,66,.3)}
-    .diag-privacy{text-align:center;font-size:11px;color:#9ca3af;margin-top:1rem}
-    .diag-info{display:flex;flex-direction:column;gap:.875rem}
-    .diag-info-card{background:#fff;border-radius:14px;padding:1.1rem 1.25rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 14px rgba(0,0,0,.06);border:1px solid #f3f4f6}
-    .diag-info-icon{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#b48e42,#d4a853);color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
-    .diag-info-card strong{display:block;font-size:13px;font-weight:700;color:#111827;margin-bottom:2px}
-    .diag-info-card span{font-size:11px;color:#6b7280}
-    .quiz-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(6px)}
-    .quiz-overlay.active{opacity:1;pointer-events:all}
-    .quiz-container{background:#fff;border-radius:22px;width:100%;max-width:740px;max-height:92vh;overflow-y:auto;overscroll-behavior:contain;box-shadow:0 30px 70px rgba(0,0,0,.25);display:flex;flex-direction:column;transform:scale(.94) translateY(24px);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
-    .quiz-overlay.active .quiz-container{transform:scale(1) translateY(0)}
-    .q-header{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid #f3f4f6;position:sticky;top:0;background:#fff;z-index:10;border-radius:22px 22px 0 0}
-    .q-back-btn{display:flex;align-items:center;gap:6px;background:none;border:1.5px solid #e5e7eb;border-radius:8px;padding:7px 13px;font-size:12px;font-family:Montserrat,sans-serif;font-weight:700;cursor:pointer;color:#374151;transition:all .18s;white-space:nowrap;flex-shrink:0}
-    .q-back-btn:hover{border-color:#b48e42;color:#b48e42}
-    .q-back-btn.q-hidden{visibility:hidden;pointer-events:none}
-    .q-progress-wrap{flex:1;height:5px;background:#f3f4f6;border-radius:3px;overflow:hidden}
-    .q-progress-fill{height:100%;background:linear-gradient(90deg,#b48e42,#d4a853);border-radius:3px;transition:width .4s ease;width:0%}
-    .q-step-label{font-size:11px;font-weight:700;color:#6b7280;white-space:nowrap;flex-shrink:0}
-    .q-lang-wrap{position:relative;flex-shrink:0}
-    .q-lang-btn{display:flex;align-items:center;gap:5px;background:none;border:1.5px solid #e5e7eb;border-radius:8px;padding:7px 11px;font-size:12px;font-family:Montserrat,sans-serif;font-weight:700;cursor:pointer;color:#374151;transition:border-color .18s}
-    .q-lang-btn:hover{border-color:#b48e42}
-    .q-lang-dropdown{position:absolute;right:0;top:calc(100% + 6px);background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.12);list-style:none;padding:6px;min-width:165px;display:none;z-index:100}
-    .q-lang-dropdown.open{display:block}
-    .q-lang-dropdown li a{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:13px;text-decoration:none;color:#374151;border-radius:7px;font-family:Montserrat,sans-serif;transition:background .15s}
-    .q-lang-dropdown li a:hover{background:#fafaf8}
-    .q-lang-dropdown li a.q-lang-active{font-weight:700;color:#b48e42}
-    .q-close-btn{width:32px;height:32px;border-radius:8px;border:1.5px solid #e5e7eb;background:none;cursor:pointer;color:#9ca3af;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .18s;flex-shrink:0}
-    .q-close-btn:hover{border-color:#ef4444;color:#ef4444;background:#fef2f2}
-    .quiz-q-screen{padding:44px 52px;text-align:center}
-    .q-icon-wrap{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#fef3c7,#fde68a);color:#b48e42;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 1.5rem}
-    .q-num-label{font-size:12px;font-weight:700;color:#b48e42;text-transform:uppercase;letter-spacing:2px;margin-bottom:1rem}
-    .q-text{font-size:1.15rem;font-weight:600;color:#111827;line-height:1.65;margin-bottom:2.5rem;min-height:72px}
-    @keyframes qFadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-    .q-fade{animation:qFadeIn .25s ease forwards}
-    .q-answer-btns{display:flex;gap:1rem;justify-content:center;margin-bottom:2.5rem}
-    .q-answer-btn{display:flex;align-items:center;gap:10px;padding:15px 52px;border-radius:12px;border:2px solid #e5e7eb;font-family:Montserrat,sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all .18s;background:#fff;color:#374151}
-    .q-answer-btn.q-yes:hover{background:#ecfdf5;border-color:#22c55e;color:#16a34a;transform:translateY(-2px);box-shadow:0 6px 16px rgba(34,197,94,.18)}
-    .q-answer-btn.q-no:hover{background:#fef2f2;border-color:#ef4444;color:#dc2626;transform:translateY(-2px);box-shadow:0 6px 16px rgba(239,68,68,.18)}
-    .q-dots{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;max-width:480px;margin:0 auto}
-    .q-dot{width:10px;height:10px;border-radius:50%;background:#e5e7eb;transition:background .2s,transform .2s}
-    .q-dot.q-dot-cur{background:#b48e42;transform:scale(1.3)}
-    .q-dot.q-dot-yes{background:#22c55e}
-    .q-dot.q-dot-no{background:#ef4444}
-    .quiz-result-screen{padding:36px 44px}
-    .result-top{text-align:center;margin-bottom:1.75rem}
-    .result-top h2{font-size:1.5rem;font-weight:800;margin-bottom:4px;color:#111827}
-    .result-top p{color:#6b7280;font-size:13px}
-    .result-score-grid{display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;background:#fafaf8;border-radius:16px;padding:1.75rem;margin-bottom:2rem;border:1px solid #f3f4f6}
-    .result-ring-wrap{position:relative;width:130px;height:130px;flex-shrink:0}
-    .result-ring-svg{width:130px;height:130px;display:block}
-    .result-ring-pct{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:#111827}
-    .result-badge{display:inline-block;padding:5px 18px;border-radius:20px;font-size:13px;font-weight:700;margin-bottom:1rem}
-    .badge-green{background:#dcfce7;color:#16a34a}
-    .badge-orange{background:#fef3c7;color:#d97706}
-    .badge-red{background:#fee2e2;color:#dc2626}
-    .result-stats-row{display:flex;gap:2rem;flex-wrap:wrap}
-    .rs-stat{text-align:center}
-    .rs-stat span{display:block;font-size:26px;font-weight:800;color:#111827}
-    .rs-stat.ok span{color:#16a34a}
-    .rs-stat.fail span{color:#dc2626}
-    .rs-stat label{font-size:11px;color:#9ca3af;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-    .result-table-section{margin-bottom:1.5rem}
-    .result-table-section h3{font-size:1rem;font-weight:700;margin-bottom:.875rem;color:#111827}
-    .result-table-wrap{overflow-x:auto;border-radius:12px;border:1px solid #e5e7eb}
-    .result-table{width:100%;border-collapse:collapse;font-size:12.5px}
-    .result-table th{background:#1f2937;color:#fff;padding:11px 14px;text-align:left;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px}
-    .result-table th:first-child{border-radius:12px 0 0 0}
-    .result-table th:last-child{border-radius:0 12px 0 0}
-    .result-table td{padding:11px 14px;border-bottom:1px solid #f3f4f6;vertical-align:top;line-height:1.55;color:#374151}
-    .result-table tr:last-child td{border-bottom:none}
-    .result-table tr:nth-child(even) td{background:#fafafa}
-    .result-table td:nth-child(2){color:#b48e42;font-weight:600;font-size:11.5px;white-space:nowrap}
-    .result-perfect{text-align:center;padding:2rem;background:#f0fdf4;border-radius:14px;border:1px solid #bbf7d0;margin-bottom:1.5rem}
-    .result-perfect i{font-size:2.75rem;color:#16a34a;margin-bottom:.75rem;display:block}
-    .result-perfect h3{color:#15803d;font-size:1.2rem;margin-bottom:.4rem}
-    .result-perfect p{color:#166534;font-size:13px}
-    .result-actions{display:flex;gap:.875rem;justify-content:center;margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid #f3f4f6;flex-wrap:wrap}
-    .result-dl-btn{display:flex;align-items:center;gap:9px;padding:14px 28px;background:linear-gradient(135deg,#b48e42,#d4a853);color:#fff;border:none;border-radius:10px;font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
-    .result-dl-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(180,142,66,.3)}
-    .result-restart-btn{display:flex;align-items:center;gap:8px;padding:14px 24px;background:none;color:#6b7280;border:2px solid #e5e7eb;border-radius:10px;font-family:Montserrat,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
-    .result-restart-btn:hover{border-color:#b48e42;color:#b48e42}
-    .dark-mode .diag-hero h1{color:#f9fafb}
-    .dark-mode .diag-form-card,.dark-mode .diag-info-card{background:#1f2937;border-color:#374151;box-shadow:0 4px 24px rgba(0,0,0,.3)}
-    .dark-mode .diag-form-card h2{color:#f9fafb}
-    .dark-mode .diag-field label{color:#d1d5db}
-    .dark-mode .diag-field input,.dark-mode .diag-field select{background:#111827;border-color:#374151;color:#f9fafb}
-    .dark-mode .diag-field input::placeholder{color:#6b7280}
-    .dark-mode .diag-info-card strong{color:#f9fafb}
-    .dark-mode .quiz-container{background:#1f2937}
-    .dark-mode .q-header{background:#1f2937;border-color:#374151}
-    .dark-mode .q-back-btn,.dark-mode .q-close-btn,.dark-mode .q-lang-btn{border-color:#374151;color:#d1d5db}
-    .dark-mode .q-text,.dark-mode .result-top h2,.dark-mode .result-ring-pct{color:#f9fafb}
-    .dark-mode .q-num-label{color:#d4a853}
-    .dark-mode .q-answer-btn{background:#111827;border-color:#374151;color:#d1d5db}
-    .dark-mode .q-progress-wrap{background:#374151}
-    .dark-mode .q-dot{background:#374151}
-    .dark-mode .result-score-grid{background:#111827;border-color:#374151}
-    .dark-mode .rs-stat span{color:#f9fafb}
-    .dark-mode .result-table th{background:#111827}
-    .dark-mode .result-table td{color:#d1d5db;border-color:#374151}
-    .dark-mode .result-table tr:nth-child(even) td{background:#0d1117}
-    .dark-mode .result-table-wrap{border-color:#374151}
-    .dark-mode .result-actions{border-color:#374151}
-    .dark-mode .result-restart-btn{border-color:#374151;color:#9ca3af}
-    .dark-mode .q-lang-dropdown{background:#1f2937;border-color:#374151}
-    .dark-mode .q-lang-dropdown li a{color:#d1d5db}
-    .dark-mode .result-table-section h3{color:#f9fafb}
-    @media(max-width:880px){.diag-grid{grid-template-columns:1fr}.diag-info{display:grid;grid-template-columns:1fr 1fr}}
-    @media(max-width:580px){.quiz-q-screen{padding:28px 20px}.quiz-result-screen{padding:20px 16px}.q-text{font-size:1rem}.q-answer-btns{flex-direction:column}.q-answer-btn{width:100%;justify-content:center;padding:15px 24px}.q-header{gap:7px;padding:10px 12px}.q-back-btn{padding:6px 10px;font-size:11px}.result-score-grid{grid-template-columns:1fr;justify-items:center}.result-stats-row{justify-content:center}.diag-info{grid-template-columns:1fr}.diag-form-card{padding:1.5rem}}
-  </style>
+  <link rel="stylesheet" href="../../css/pages/diagnostic.css">
+  <script>!function () { var t = localStorage.getItem('asrTheme'); if (t === 'dark') { document.documentElement.classList.add('dark-mode'); document.documentElement.setAttribute('data-theme', 'dark'); } }();</script>
+
 </head>
+
 <body>
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="../index.html" class="logo"><img src="../../images/asr_logo.png" alt="ASR Development Consulting Group" /></a>
+      <a href="../index.html" class="logo"><img src="../../images/asr_logo.png"
+          alt="ASR Development Consulting Group" /></a>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="../about/index.html" class="nav-link">Haqqımızda <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <a href="../about/index.html" class="nav-link">Haqqımızda <i
+              class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <div class="nav-dropdown">
             <a href="../about/index.html#sirket-profili">Şirkət profili</a>
             <a href="../about/leadership/index.html">Rəhbərlik</a>
@@ -161,25 +38,33 @@
           </div>
         </li>
         <li class="nav-item">
-          <a href="../index.html#xidmetler" class="nav-link">Xidmətlər <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <a href="../index.html#xidmetler" class="nav-link">Xidmətlər <i
+              class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <div class="mega-menu">
             <div class="mega-col">
               <div class="mega-col-title"><a href="../services/food-safety/index.html">Qida təhlükəsizliyi</a></div>
-              <div class="mega-col-title"><a href="../services/project-management/index.html">İnkişaf layihələrinin idarəolunması</a></div>
-              <div class="mega-col-title"><a href="../services/plant-health/index.html">Bitki sağlamlığı və aqronomluq xidməti</a></div>
+              <div class="mega-col-title"><a href="../services/project-management/index.html">İnkişaf layihələrinin
+                  idarəolunması</a></div>
+              <div class="mega-col-title"><a href="../services/plant-health/index.html">Bitki sağlamlığı və aqronomluq
+                  xidməti</a></div>
             </div>
             <div class="mega-col">
-              <div class="mega-col-title"><a href="../services/strategic-management/index.html">Strateji idarəetmə</a></div>
-              <div class="mega-col-title"><a href="../services/business-development/index.html">Biznesin inkişafı xidmətləri</a></div>
+              <div class="mega-col-title"><a href="../services/strategic-management/index.html">Strateji idarəetmə</a>
+              </div>
+              <div class="mega-col-title"><a href="../services/business-development/index.html">Biznesin inkişafı
+                  xidmətləri</a></div>
             </div>
             <div class="mega-col">
-              <div class="mega-col-title"><a href="../services/legislative-drafting/index.html">Qanunvericilik layihələri hazırlanması və ekspertizası</a></div>
-              <div class="mega-col-title"><a href="../services/government-relations/index.html">Dövlət qurumları ilə əlaqələrin idarə olunması</a></div>
+              <div class="mega-col-title"><a href="../services/legislative-drafting/index.html">Qanunvericilik
+                  layihələri hazırlanması və ekspertizası</a></div>
+              <div class="mega-col-title"><a href="../services/government-relations/index.html">Dövlət qurumları ilə
+                  əlaqələrin idarə olunması</a></div>
             </div>
           </div>
         </li>
         <li class="nav-item">
-          <a href="../sectors/index.html" class="nav-link">Sektorlar <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <a href="../sectors/index.html" class="nav-link">Sektorlar <i
+              class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <div class="mega-menu">
             <div class="mega-col">
               <div class="mega-col-title"><a href="../sectors/agriculture/index.html">Kənd təsərrüfatı</a></div>
@@ -198,7 +83,8 @@
           </div>
         </li>
         <li class="nav-item">
-          <a href="../expertise/index.html" class="nav-link">Təcrübəmiz <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <a href="../expertise/index.html" class="nav-link">Təcrübəmiz <i
+              class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <div class="nav-dropdown">
             <a href="../expertise/index.html">Uğurlu keyslər</a>
             <a href="../expertise/index.html">Layihələr</a>
@@ -206,7 +92,8 @@
           </div>
         </li>
         <li class="nav-item">
-          <a href="../index.html#bilik-merkezi" class="nav-link">Bilik Mərkəzi <i class="fa-solid fa-chevron-down nav-chevron"></i></a>
+          <a href="../index.html#bilik-merkezi" class="nav-link">Bilik Mərkəzi <i
+              class="fa-solid fa-chevron-down nav-chevron"></i></a>
           <div class="nav-dropdown">
             <a href="../index.html#bilik-merkezi">Ekspert bloqu</a>
             <a href="../index.html#bilik-merkezi">Pulsuz yükləmələr</a>
@@ -229,13 +116,18 @@
       <button id="theme-switch"><i class="fa-regular fa-moon"></i><i class="fa-solid fa-sun"></i></button>
       <div class="lang-switcher" id="langSwitcher">
         <button class="lang-btn" id="langToggle" aria-expanded="false" aria-label="Dil seçimi">
-          <i class="fa-solid fa-globe"></i><span class="lang-current">AZ</span><i class="fa-solid fa-chevron-down lang-arrow"></i>
+          <i class="fa-solid fa-globe"></i><span class="lang-current">AZ</span><i
+            class="fa-solid fa-chevron-down lang-arrow"></i>
         </button>
         <ul class="lang-dropdown" id="langDropdown">
-          <li><a href="index.html" class="lang-option lang-active"><span class="lang-flag">🇦🇿</span> Azərbaycan</a></li>
-          <li><a href="../../en/diagnostic/index.html" class="lang-option"><span class="lang-flag">🇬🇧</span> English</a></li>
-          <li><a href="../../ru/diagnostic/index.html" class="lang-option"><span class="lang-flag">🇷🇺</span> Русский</a></li>
-          <li><a href="../../uz/diagnostic/index.html" class="lang-option"><span class="lang-flag">🇺🇿</span> Uzbek</a></li>
+          <li><a href="index.html" class="lang-option lang-active"><span class="lang-flag">🇦🇿</span> Azərbaycan</a>
+          </li>
+          <li><a href="../../en/diagnostic/index.html" class="lang-option"><span class="lang-flag">🇬🇧</span>
+              English</a></li>
+          <li><a href="../../ru/diagnostic/index.html" class="lang-option"><span class="lang-flag">🇷🇺</span>
+              Русский</a></li>
+          <li><a href="../../uz/diagnostic/index.html" class="lang-option"><span class="lang-flag">🇺🇿</span> Uzbek</a>
+          </li>
         </ul>
       </div>
       <button class="nav-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
@@ -244,7 +136,9 @@
 
   <div class="mobile-nav" id="mobileNav">
     <div class="mobile-nav-item">
-      <div class="mobile-nav-row"><a href="../about/index.html" class="mobile-nav-label">Haqqımızda</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div>
+      <div class="mobile-nav-row"><a href="../about/index.html" class="mobile-nav-label">Haqqımızda</a><button
+          class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i
+            class="fa-solid fa-chevron-down"></i></button></div>
       <div class="mobile-sub">
         <a href="../about/index.html"><i class="fa-regular fa-building"></i>Şirkət profili</a>
         <a href="../about/leadership/index.html"><i class="fa-regular fa-building"></i>Rəhbərlik</a>
@@ -253,7 +147,9 @@
       </div>
     </div>
     <div class="mobile-nav-item">
-      <div class="mobile-nav-row"><a href="../sectors/index.html" class="mobile-nav-label">Sektorlar</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div>
+      <div class="mobile-nav-row"><a href="../sectors/index.html" class="mobile-nav-label">Sektorlar</a><button
+          class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i
+            class="fa-solid fa-chevron-down"></i></button></div>
       <div class="mobile-sub">
         <a href="../sectors/agriculture/index.html"><i class="fa-solid fa-seedling"></i> Kənd təsərrüfatı</a>
         <a href="../sectors/food-industry/index.html"><i class="fa-solid fa-jar"></i> Ərzaq sənayesi</a>
@@ -266,19 +162,27 @@
       </div>
     </div>
     <div class="mobile-nav-item">
-      <div class="mobile-nav-row"><a href="../index.html#xidmetler" class="mobile-nav-label">Xidmətlər</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div>
+      <div class="mobile-nav-row"><a href="../index.html#xidmetler" class="mobile-nav-label">Xidmətlər</a><button
+          class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i
+            class="fa-solid fa-chevron-down"></i></button></div>
       <div class="mobile-sub">
         <a href="../services/food-safety/index.html"><i class="fa-solid fa-shield-halved"></i>Qida təhlükəsizliyi</a>
-        <a href="../services/project-management/index.html"><i class="fa-solid fa-diagram-project"></i>İnkişaf layihələrinin idarəolunması</a>
-        <a href="../services/strategic-management/index.html"><i class="fa-solid fa-chess-knight"></i>Strateji idarəetmə</a>
+        <a href="../services/project-management/index.html"><i class="fa-solid fa-diagram-project"></i>İnkişaf
+          layihələrinin idarəolunması</a>
+        <a href="../services/strategic-management/index.html"><i class="fa-solid fa-chess-knight"></i>Strateji
+          idarəetmə</a>
         <a href="../services/business-development/index.html"><i class="fa-solid fa-rocket"></i>Biznesin inkişafı</a>
-        <a href="../services/legislative-drafting/index.html"><i class="fa-solid fa-scale-balanced"></i>Qanunvericilik layihələri</a>
-        <a href="../services/government-relations/index.html"><i class="fa-solid fa-landmark"></i>Dövlət qurumları ilə əlaqələr</a>
+        <a href="../services/legislative-drafting/index.html"><i class="fa-solid fa-scale-balanced"></i>Qanunvericilik
+          layihələri</a>
+        <a href="../services/government-relations/index.html"><i class="fa-solid fa-landmark"></i>Dövlət qurumları ilə
+          əlaqələr</a>
         <a href="../services/plant-health/index.html"><i class="fa-solid fa-shield-halved"></i>Bitki sağlamlığı</a>
       </div>
     </div>
     <div class="mobile-nav-item">
-      <div class="mobile-nav-row"><a href="../expertise/index.html" class="mobile-nav-label">Təcrübəmiz</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div>
+      <div class="mobile-nav-row"><a href="../expertise/index.html" class="mobile-nav-label">Təcrübəmiz</a><button
+          class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i
+            class="fa-solid fa-chevron-down"></i></button></div>
       <div class="mobile-sub">
         <a href="../expertise/index.html"><i class="fa-solid fa-trophy"></i>Uğurlu keyslər</a>
         <a href="../expertise/index.html"><i class="fa-solid fa-drumstick-bite"></i>Layihələr</a>
@@ -286,22 +190,29 @@
       </div>
     </div>
     <div class="mobile-nav-item">
-      <div class="mobile-nav-row"><a href="../index.html#bilik-merkezi" class="mobile-nav-label">Bilik mərkəzi</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div>
+      <div class="mobile-nav-row"><a href="../index.html#bilik-merkezi" class="mobile-nav-label">Bilik
+          mərkəzi</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i
+            class="fa-solid fa-chevron-down"></i></button></div>
       <div class="mobile-sub">
         <a href="../index.html#bilik-merkezi"><i class="fa-solid fa-pen-nib"></i>Ekspert Bloqu</a>
         <a href="../index.html#bilik-merkezi"><i class="fa-solid fa-download"></i>Pulsuz Yükləmələr</a>
       </div>
     </div>
     <div class="mobile-nav-item">
-      <div class="mobile-nav-row"><a href="../media/index.html" class="mobile-nav-label">Media</a><button class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i></button></div>
+      <div class="mobile-nav-row"><a href="../media/index.html" class="mobile-nav-label">Media</a><button
+          class="mobile-chevron-btn has-dropdown" aria-expanded="false"><i
+            class="fa-solid fa-chevron-down"></i></button></div>
       <div class="mobile-sub">
         <a href="../media/index.html"><i class="fa-regular fa-images"></i>Foto qalereya</a>
         <a href="../media/index.html"><i class="fa-solid fa-film"></i>Video icmallar</a>
         <a href="../media/index.html"><i class="fa-regular fa-newspaper"></i>Xəbərlər</a>
       </div>
     </div>
-    <div class="mobile-nav-item"><div class="mobile-nav-row"><a href="../index.html#footer" class="mobile-nav-label">Əlaqə</a></div></div>
-    <a href="index.html" class="mobile-nav-cta"><i class="fa-solid fa-microscope"></i><span>Pulsuz Diaqnostika</span></a>
+    <div class="mobile-nav-item">
+      <div class="mobile-nav-row"><a href="../index.html#footer" class="mobile-nav-label">Əlaqə</a></div>
+    </div>
+    <a href="index.html" class="mobile-nav-cta"><i class="fa-solid fa-microscope"></i><span>Pulsuz
+        Diaqnostika</span></a>
   </div>
 
   <section class="diag-section">
@@ -309,7 +220,8 @@
       <div class="diag-hero">
         <div class="diag-badge"><i class="fa-solid fa-microscope"></i> Pulsuz Diaqnostika</div>
         <h1>Müəssisəniz qida təhlükəsizliyi<br>tələblərinə uyğundurmu?</h1>
-        <p>24 suallı peşəkar diaqnostika ilə uyğunluq faizinizi öyrənin, hüquqi risklərinizdən xəbərdar olun və AR Qida Təhlükəsizliyi Qanununa uyğun fəaliyyət göstərin.</p>
+        <p>24 suallı peşəkar diaqnostika ilə uyğunluq faizinizi öyrənin, hüquqi risklərinizdən xəbərdar olun və AR Qida
+          Təhlükəsizliyi Qanununa uyğun fəaliyyət göstərin.</p>
       </div>
       <div class="diag-grid">
         <div class="diag-form-card">
@@ -348,15 +260,29 @@
               <input type="text" id="dProduct" placeholder="Məhsulun adını daxil edin" />
               <div class="diag-field-err">İstehsal olunan məhsul mütləq doldurulmalıdır.</div>
             </div>
-            <button type="submit" class="diag-submit-btn">Diaqnostikaya Başla <i class="fa-solid fa-arrow-right"></i></button>
+            <button type="submit" class="diag-submit-btn">Diaqnostikaya Başla <i
+                class="fa-solid fa-arrow-right"></i></button>
           </form>
-          <p class="diag-privacy"><i class="fa-solid fa-lock"></i> Məlumatlarınız tamamilə gizli saxlanılır. Spam göndərilmir.</p>
+          <p class="diag-privacy"><i class="fa-solid fa-lock"></i> Məlumatlarınız tamamilə gizli saxlanılır. Spam
+            göndərilmir.</p>
         </div>
         <div class="diag-info">
-          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-list-check"></i></div><div><strong>24 Sual</strong><span>Əhatəli uyğunluq yoxlaması</span></div></div>
-          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-chart-pie"></i></div><div><strong>Dərhal Nəticə</strong><span>Faizlə uyğunluq hesabatı</span></div></div>
-          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-file-pdf"></i></div><div><strong>PDF Hesabat</strong><span>Qanuni istinadlarla detallı hesabat</span></div></div>
-          <div class="diag-info-card"><div class="diag-info-icon"><i class="fa-solid fa-scale-balanced"></i></div><div><strong>Qanuni Əsas</strong><span>AR Qida Təhlükəsizliyi Qanununa əsasən</span></div></div>
+          <div class="diag-info-card">
+            <div class="diag-info-icon"><i class="fa-solid fa-list-check"></i></div>
+            <div><strong>24 Sual</strong><span>Əhatəli uyğunluq yoxlaması</span></div>
+          </div>
+          <div class="diag-info-card">
+            <div class="diag-info-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <div><strong>Dərhal Nəticə</strong><span>Faizlə uyğunluq hesabatı</span></div>
+          </div>
+          <div class="diag-info-card">
+            <div class="diag-info-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <div><strong>PDF Hesabat</strong><span>Qanuni istinadlarla detallı hesabat</span></div>
+          </div>
+          <div class="diag-info-card">
+            <div class="diag-info-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div><strong>Qanuni Əsas</strong><span>AR Qida Təhlükəsizliyi Qanununa əsasən</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -365,11 +291,15 @@
   <div class="quiz-overlay" id="quizOverlay">
     <div class="quiz-container" id="quizContainer">
       <div class="q-header">
-        <button class="q-back-btn q-hidden" id="qBackBtn" onclick="quizBack()"><i class="fa-solid fa-arrow-left"></i> Geri</button>
-        <div class="q-progress-wrap"><div class="q-progress-fill" id="qProgressFill"></div></div>
+        <button class="q-back-btn q-hidden" id="qBackBtn" onclick="quizBack()"><i class="fa-solid fa-arrow-left"></i>
+          Geri</button>
+        <div class="q-progress-wrap">
+          <div class="q-progress-fill" id="qProgressFill"></div>
+        </div>
         <span class="q-step-label" id="qStepLabel">1 / 24</span>
         <div class="q-lang-wrap">
-          <button class="q-lang-btn" id="qLangBtn"><i class="fa-solid fa-globe"></i> AZ <i class="fa-solid fa-chevron-down" style="font-size:9px"></i></button>
+          <button class="q-lang-btn" id="qLangBtn"><i class="fa-solid fa-globe"></i> AZ <i
+              class="fa-solid fa-chevron-down" style="font-size:9px"></i></button>
           <ul class="q-lang-dropdown" id="qLangDd">
             <li><a href="index.html" class="q-lang-active">🇦🇿 Azərbaycan</a></li>
             <li><a href="../../en/diagnostic/index.html">🇬🇧 English</a></li>
@@ -386,7 +316,7 @@
         <div class="q-text" id="qText"></div>
         <div class="q-answer-btns">
           <button class="q-answer-btn q-yes" onclick="quizAnswer(true)"><i class="fa-solid fa-check"></i> Bəli</button>
-          <button class="q-answer-btn q-no"  onclick="quizAnswer(false)"><i class="fa-solid fa-xmark"></i> Xeyr</button>
+          <button class="q-answer-btn q-no" onclick="quizAnswer(false)"><i class="fa-solid fa-xmark"></i> Xeyr</button>
         </div>
         <div class="q-dots" id="qDots"></div>
       </div>
@@ -399,11 +329,10 @@
         <div class="result-score-grid">
           <div class="result-ring-wrap">
             <svg class="result-ring-svg" viewBox="0 0 130 130">
-              <circle cx="65" cy="65" r="55" fill="none" stroke="#e5e7eb" stroke-width="11"/>
+              <circle cx="65" cy="65" r="55" fill="none" stroke="#e5e7eb" stroke-width="11" />
               <circle id="resultArc" cx="65" cy="65" r="55" fill="none" stroke="#22c55e" stroke-width="11"
-                stroke-linecap="round" stroke-dasharray="345.4" stroke-dashoffset="345.4"
-                transform="rotate(-90 65 65)"
-                style="transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1),stroke .4s ease"/>
+                stroke-linecap="round" stroke-dasharray="345.4" stroke-dashoffset="345.4" transform="rotate(-90 65 65)"
+                style="transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1),stroke .4s ease" />
             </svg>
             <div class="result-ring-pct" id="resultPct">0%</div>
           </div>
@@ -422,7 +351,8 @@
           <p>Müəssisəniz bütün qida təhlükəsizliyi tələblərinə tam uyğundur.</p>
         </div>
         <div class="result-table-section" id="resultTableSection" style="display:none">
-          <h3><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b;margin-right:6px"></i>Uyğunsuzluq Aşkar Edilmiş Sahələr</h3>
+          <h3><i class="fa-solid fa-triangle-exclamation" style="color:#f59e0b;margin-right:6px"></i>Uyğunsuzluq Aşkar
+            Edilmiş Sahələr</h3>
           <div class="result-table-wrap">
             <table class="result-table">
               <thead>
@@ -437,8 +367,10 @@
           </div>
         </div>
         <div class="result-actions">
-          <button class="result-dl-btn" onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> Hesabatı PDF Yüklə</button>
-          <button class="result-restart-btn" onclick="quizRestart()"><i class="fa-solid fa-rotate-right"></i> Yenidən Başla</button>
+          <button class="result-dl-btn" onclick="downloadPDF()"><i class="fa-solid fa-file-pdf"></i> Hesabatı PDF
+            Yüklə</button>
+          <button class="result-restart-btn" onclick="quizRestart()"><i class="fa-solid fa-rotate-right"></i> Yenidən
+            Başla</button>
         </div>
       </div>
     </div>
@@ -447,30 +379,42 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-logo" style="margin-bottom:1.25rem"><img src="../../images/asr_logo.png" alt="ASR Development Consulting Group" style="height:48px;width:auto;object-fit:contain" /></div>
-        <p class="footer-tagline-txt">Strateji həllər, dayanıqlı inkişaf. qida təhlükəsizliyi, idarəetmə və hüquqi ekspertiza sahəsində 15 illik peşəkar xidmət.</p>
-        <div class="footer-contact-item"><i class="fa-solid fa-location-dot" style="color:#fff;position:relative;top:10px"></i><span class="footer-contact-text">Baki şəhəri, Nərimanov rayonu, Əhməd Rəcəbli 204, Nobel plaza</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-phone" style="color:#fff"></i><span class="footer-contact-text">+994 50 208 58 38</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-envelope" style="color:#fff"></i><span class="footer-contact-text" style="position:relative;bottom:3px">office@asrgroup.az</span></div>
+        <div class="footer-logo" style="margin-bottom:1.25rem"><img src="../../images/asr_logo.png"
+            alt="ASR Development Consulting Group" style="height:48px;width:auto;object-fit:contain" /></div>
+        <p class="footer-tagline-txt">Strateji həllər, dayanıqlı inkişaf. qida təhlükəsizliyi, idarəetmə və hüquqi
+          ekspertiza sahəsində 15 illik peşəkar xidmət.</p>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"
+            style="color:#fff;position:relative;top:10px"></i><span class="footer-contact-text">Baki şəhəri, Nərimanov
+            rayonu, Əhməd Rəcəbli 204, Nobel plaza</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone" style="color:#fff"></i><span
+            class="footer-contact-text">+994 50 208 58 38</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope" style="color:#fff"></i><span
+            class="footer-contact-text" style="position:relative;bottom:3px">office@asrgroup.az</span></div>
         <div class="social-icons-container">
-          <a href="https://www.instagram.com/asrgroupagency?igsh=MTBuZ2FxbXA2bDJhdQ%3D%3D&utm_source=qr" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/company/asrgroupconsulting/" class="social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://www.facebook.com/people/ASR-Development-Consulting-Group/61589704797832/" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.instagram.com/asrgroupagency?igsh=MTBuZ2FxbXA2bDJhdQ%3D%3D&utm_source=qr"
+            class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/asrgroupconsulting/" class="social-link" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/people/ASR-Development-Consulting-Group/61589704797832/" class="social-link"
+            aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/asrgroupconsulting?igsh=cDdxMTBvcGJhZzA1" class="social-link"
+            aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </div>
       </div>
       <div>
         <div class="footer-col-title">Xidmətlər</div>
         <div class="footer-col-links">
           <a href="../services/project-management/index.html">İnkişaf layihələrinin idarəolunması</a>
-          <a href="../services/legislative-drafting/index.html">Qanunvericilik layihələri hazırlanması və ekspertizası</a>
+          <a href="../services/legislative-drafting/index.html">Qanunvericilik layihələri hazırlanması və
+            ekspertizası</a>
           <a href="../services/strategic-management/index.html">Strateji idarəetmə xidmətləri</a>
           <a href="../services/business-development/index.html">Biznesin inkişafı xidmətləri</a>
           <a href="../services/food-safety/index.html">Qida təhlükəsizliyi xidmətləri</a>
           <a href="../services/government-relations/index.html">Dövlət qurumları ilə əlaqələrin idarə olunması</a>
           <a href="../services/plant-health/index.html">Bitki Sağlamlığı və Aqronomluq Xidmətləri</a>
         </div>
-        <a href="https://wa.me/994502085838"><i class="fa-brands fa-whatsapp whatsapp-icon" style="color:rgb(0,255,37);cursor:pointer"></i></a>
+        <a href="https://wa.me/994502085838"><i class="fa-brands fa-whatsapp whatsapp-icon"
+            style="color:rgb(0,255,37);cursor:pointer"></i></a>
       </div>
       <div>
         <div class="footer-col-title">Şirkət</div>
@@ -495,8 +439,10 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom"><span class="footer-copy">© <span id="footer-year"></span> ASR Development Consulting Group. Bütün hüquqlar qorunur.</span></div>
-    <p style="text-align:center;font-size:12px;font-weight:600;color:#aaacac;position:relative;bottom:20px">Designed By Elmaddin &amp; Aysun</p>
+    <div class="footer-bottom"><span class="footer-copy">© <span id="footer-year"></span> ASR Development Consulting
+        Group. Bütün hüquqlar qorunur.</span></div>
+    <p style="text-align:center;font-size:12px;font-weight:600;color:#aaacac;position:relative;bottom:20px">Designed By
+      Elmaddin &amp; Aysun</p>
   </footer>
 
   <button id="backToTop" class="back-to-top" onclick="scrollToTop()"><i class="fa-solid fa-chevron-up"></i></button>
@@ -505,266 +451,7 @@
   <script src="../../js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
-  <script>
-  var QUESTIONS=[
-    {id:1,q:"Müəssisə qida təhlükəsizliyi sahəsində tələb olunan qeydiyyat və təsdiq prosedurlarını yerinə yetirirmi?",law:"AR Qanunu — Maddə 24, 25",cor:"Müəssisəni qida təhlükəsizliyi orqanında qeydiyyata aldırın; dövlət qeydiyyatı tələb olunan məhsullar üçün müvafiq sənədləri hazırlayın.",pen:"AR İXM 220.1/220.2: Fiziki — 200–300 AZN; Vəzifəli — 800–1000 AZN; Hüquqi — 2000–2500 AZN"},
-    {id:2,q:"Müəssisənin fəaliyyəti qida təhlükəsizliyi sahəsində qüvvədə olan texniki normativ-hüquqi aktların tələblərinə uyğundurmu?",law:"AR Qanunu — Maddə 16",cor:"Qüvvədə olan texniki normativ-hüquqi aktları nəzərdən keçirin, uyğunsuzluqları müəyyən edin və daxili prosedurları yeniləyin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:3,q:"Müəssisənin ərazisi, bina və istehsal sahələrinin layihələndirilməsi tələblərə uyğundurmu?",law:"AR Qanunu — Maddə 16.3",cor:"Bina layihəsini qida təhlükəsizliyi mütəxəssisləri ilə nəzərdən keçirin; normativ tələblərə uyğun renovasiya planı hazırlayın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:4,q:"Döşəmə, divar, tavan, qapı və pəncərələr sanitar-gigiyenik tələblərə uyğundurmu?",law:"AR Qanunu — Maddə 16.3",cor:"İstehsal sahəsinin bütün konstruktiv elementlərini qiymətləndirin; mövcud uyğunsuzluqları aradan qaldırın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:5,q:"Əlyuma məntəqələri, sanitar qovşaqlar, soyunub-geyinmə və məişət sahələri tələb olunan şəraitə malikdirmi?",law:"AR Qanunu — Maddə 16.3",cor:"Əlyuma məntəqələri, sanitar qovşaqlar və soyunub-geyinmə otaqlarını normativ tələblərə uyğun qurun; avadanlıqları yeniləyin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:6,q:"Havalandırma, isitmə və işıqlandırma sistemləri qida təhlükəsizliyini təmin edirmi?",law:"AR Qanunu — Maddə 16.3",cor:"Ventilyasiya, qızdırma və işıqlandırma sistemlərini mütəxəssis tərəfindən yoxladın; normativ göstəriciləri təmin etmək üçün lazımi dəyişiklikləri edin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:7,q:"Avadanlıq, inventar və qida ilə təmasda olan səthlər təhlükəsizlik tələblərinə cavab verirmi?",law:"AR Qanunu — Maddə 16.3, 17.1",cor:"Qida ilə təmasda olan bütün avadanlıq və səthlərin auditini keçirin; uyğun olmayan avadanlıqları dəyişdirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:8,q:"Ölçmə vasitələri, termometrlər və digər nəzarət cihazları kalibrlənir və işlək vəziyyətdə saxlanılırmı?",law:"AR Qanunu — Maddə 16.2, 16.4",cor:"Bütün ölçmə vasitələri üçün kalibrasiya cədvəli hazırlayın; müntəzəm texniki xidmət prosedurlarını tətbiq edin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:9,q:"İstehsalatda istifadə olunan su və buz təhlükəsizlik tələblərinə cavab verirmi?",law:"AR Qanunu — Maddə 14, 16.3",cor:"Suyun keyfiyyət sertifikatlarını alın; müntəzəm laboratoriya müayinələri aparın; buz istehsalı prosedurlarını sənədləşdirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:10,q:"Soyutma, dondurma, donun açılması və termiki emal prosesləri normativ tələblərə uyğun həyata keçirilirmi?",law:"AR Qanunu — Maddə 16.1, 16.2",cor:"Bu proseslər üçün yazılı prosedurlar hazırlayın; temperatur jurnallarını tətbiq edin; işçiləri öyrədin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:11,q:"Kanalizasiya və drenaj sistemləri təhlükəsiz və effektiv şəkildə fəaliyyət göstərirmi?",law:"AR Qanunu — Maddə 16.3",cor:"Kanalizasiya sisteminin texniki baxışını keçirin; normativ tələblərə uyğun drenaj sistemini qurun; müntəzəm baxım keçirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:12,q:"Təmizlik və dezinfeksiya tədbirləri sistemli şəkildə həyata keçirilirmi?",law:"AR Qanunu — Maddə 16.2, 16.3",cor:"Rəsmi təmizlik və dezinfeksiya proqramı hazırlayın; icranı jurnallarda qeydə alın; istifadə olunan məhsulların sertifikatlarını saxlayın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:13,q:"Dezinseksiya, deratizasiya və zərərvericilərlə mübarizə tədbirləri effektiv təşkil olunubmu?",law:"AR Qanunu — Maddə 16.3",cor:"Lisenziyalı zərərverici nəzarət şirkəti ilə müqavilə bağlayın; müntəzəm müayinə cədvəli tətbiq edin; aparılan tədbirləri qeydə alın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:14,q:"İstehsalat və qida tullantıları təhlükəsiz şəkildə idarə olunurmu?",law:"AR Qanunu — Maddə 16.3",cor:"Tullantıların idarəedilməsi üçün yazılı prosedur hazırlayın; bütün tullantı axınlarını qeydə alın; ayrılmış saxlama sahəsi müəyyən edin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:15,q:"İşçi heyətin şəxsi gigiyenası, tibbi müayinələri və sağlamlıq vəziyyəti nəzarətdə saxlanılırmı?",law:"AR Qanunu — Maddə 16.3",cor:"Bütün işçilər üçün tibbi müayinə cədvəli tərtibi edin; şəxsi gigiyena qaydalarını sənədləşdirin; gigiyena maarifləndirməsini həyata keçirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:16,q:"Xammalın, köməkçi materialların və daxil olan məhsulların qəbulu zamanı uyğunluq nəzarəti aparılırmı?",law:"AR Qanunu — Maddə 16.1",cor:"Gelen məhsulların qəbulunda rəsmi yoxlama proseduru hazırlayın; uyğunluq yoxlama jurnalı tətbiq edin; təchizatçıları qiymətləndirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:17,q:"Xüsusi təyinatlı, zənginləşdirilmiş, bioloji aktiv və GMO tərkibli məhsullarla bağlı tələblərə əməl olunurmu?",law:"AR Qanunu — Maddə 11, 12, 13, 25",cor:"Xüsusi məhsulların qeydiyyat sənədlərini nəzərdən keçirin; GMO və bio-aktiv məhsullar üçün tələb olunan icazələri əldə edin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:18,q:"İstehsal proseslərində qida təhlükəsizliyi riskləri və çarpaz çirklənmə effektiv idarə olunurmu?",law:"AR Qanunu — Maddə 16.2, 16.4",cor:"HACCP planını nəzərdən keçirin; çarpaz çirklənmə nəzarəti üçün ayrılmış prosedurlar hazırlayın; kritik nəzarət nöqtələrini sənədləşdirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:19,q:"Məhsulların etiketlənməsi, markalanması və istehlakçıya təqdim edilən məlumatlar qanunvericiliyin tələblərinə uyğundurmu?",law:"AR Qanunu — Maddə 17",cor:"Bütün məhsulların etiketlərini yoxlayın; tələb olunan bütün məlumatların (tərkib, istehsal tarixi, saxlama şərtləri) mövcudluğunu təmin edin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:20,q:"Məhsulların saxlanması, daşınması və logistika prosesləri təhlükəsizlik tələblərinə cavab verirmi?",law:"AR Qanunu — Maddə 16.3",cor:"Saxlama şərtlərini sənədləşdirin; temperatur nəzarəti jurnalları tətbiq edin; daşıma vasitələrinin gigiyena tələblərinə uyğunluğunu yoxlayın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:21,q:"İşçilər qida təhlükəsizliyi və gigiyena sahəsində müvafiq təlimlərə cəlb olunurlarmı?",law:"AR Qanunu — Maddə 16.2",cor:"İşçilər üçün müntəzəm qida təhlükəsizliyi və gigiyena təlimləri keçirin; iştirak qeydlərini saxlayın; bilik yoxlamaları aparın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:22,q:"Qida ilə təmasda olan materiallar və qablaşdırma vasitələri qanunvericiliyin tələblərinə cavab verirmi?",law:"AR Qanunu — Maddə 17.1, 24.1",cor:"Qida ilə təmasda olan bütün materialların uyğunluq sertifikatlarını əldə edin; sertifikatsız materialları dərhal dəyişdirin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:23,q:"Məhsulların reklamı, təqdimatı, markalanması və istehlakçıların məlumatlandırılması qanunvericiliyin tələblərinə uyğundurmu?",law:"AR Qanunu — Maddə 8, 17",cor:"Bütün reklam materiallarını nəzərdən keçirin; yanıltıcı iddiaları aradan qaldırın; şəffaf məlumatlandırma siyasəti hazırlayın.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"},
-    {id:24,q:"Müəssisədə məhsulların izlənəbilənliyi, geri çağırılması və təchizat zənciri üzrə nəzarət sistemi effektiv fəaliyyət göstərirmi?",law:"AR Qanunu — Maddə 24",cor:"Məhsul izlənəbilənliyi sistemini tətbiq edin; geri çağırma prosedurlarını hazırlayın, sınaqdan keçirin; lot nömrələmə sistemini tətbiq edin.",pen:"AR İXM 220.3: Fiziki — 100–150 AZN; Vəzifəli — 400–600 AZN; Hüquqi — 1000–1500 AZN"}
-  ];
-
-  var userInfo={};
-  var answers=[];
-  var currentQ=0;
-  var TOTAL=QUESTIONS.length;
-
-  document.getElementById('diagForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!validateForm())return;
-    userInfo={
-      objName:document.getElementById('dObjName').value.trim(),
-      phone:document.getElementById('dPhone').value.trim(),
-      email:document.getElementById('dEmail').value.trim(),
-      activity:document.getElementById('dActivity').value,
-      product:document.getElementById('dProduct').value.trim()
-    };
-    quizOpen();
-  });
-
-  function validateForm(){
-    var ok=true;
-    function chk(wid,iid,fn){
-      var w=document.getElementById(wid),el=document.getElementById(iid),pass=fn(el.value.trim());
-      w.classList.toggle('has-err',!pass);el.classList.toggle('err',!pass);if(!pass)ok=false;
-    }
-    chk('df-objname','dObjName',function(v){return v.length>=2;});
-    chk('df-phone','dPhone',function(v){return v.length>=7;});
-    chk('df-email','dEmail',function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);});
-    chk('df-activity','dActivity',function(v){return v!=='';});
-    chk('df-product','dProduct',function(v){return v.length>=2;});
-    return ok;
-  }
-
-  function quizOpen(){
-    var i; answers=[];
-    for(i=0;i<TOTAL;i++){answers[i]=null;}
-    currentQ=0;
-    document.getElementById('quizResultScreen').style.display='none';
-    document.getElementById('quizQScreen').style.display='block';
-    document.getElementById('quizOverlay').classList.add('active');
-    document.body.style.overflow='hidden';
-    showQuestion(0);
-  }
-
-  function quizClose(){
-    if(window.confirm('Diaqnostikadan çıxmaq istədiyinizdən əminsinizmi? Cavablar silinəcək.')){
-      document.getElementById('quizOverlay').classList.remove('active');
-      document.body.style.overflow='';
-    }
-  }
-
-  function showQuestion(idx){
-    currentQ=idx;
-    var q=QUESTIONS[idx];
-    document.getElementById('qNumLabel').textContent='Sual '+(idx+1)+' / '+TOTAL;
-    document.getElementById('qStepLabel').textContent=(idx+1)+' / '+TOTAL;
-    document.getElementById('qProgressFill').style.width=((idx/TOTAL)*100)+'%';
-    document.getElementById('qBackBtn').className='q-back-btn'+(idx===0?' q-hidden':'');
-    var t=document.getElementById('qText');
-    t.textContent=q.q;
-    t.classList.remove('q-fade');
-    void t.offsetWidth;
-    t.classList.add('q-fade');
-    renderDots(idx);
-  }
-
-  function quizAnswer(isYes){
-    answers[currentQ]=isYes;
-    if(currentQ<TOTAL-1){showQuestion(currentQ+1);}else{showResults();}
-  }
-
-  function quizBack(){if(currentQ>0)showQuestion(currentQ-1);}
-
-  function renderDots(cur){
-    var h='',i,c;
-    for(i=0;i<TOTAL;i++){
-      c='q-dot';
-      if(i===cur)c+=' q-dot-cur';
-      else if(answers[i]===true)c+=' q-dot-yes';
-      else if(answers[i]===false)c+=' q-dot-no';
-      h+='<span class="'+c+'"></span>';
-    }
-    document.getElementById('qDots').innerHTML=h;
-  }
-
-  function showResults(){
-    var correct=0,i;
-    for(i=0;i<TOTAL;i++){if(answers[i]===true)correct++;}
-    var failed=TOTAL-correct,score=Math.round((correct/TOTAL)*100);
-    document.getElementById('quizQScreen').style.display='none';
-    document.getElementById('quizResultScreen').style.display='block';
-    document.getElementById('quizContainer').scrollTop=0;
-    document.getElementById('qProgressFill').style.width='100%';
-    document.getElementById('qStepLabel').textContent='Tamamlandı';
-    document.getElementById('qBackBtn').className='q-back-btn q-hidden';
-    document.getElementById('resultSubtitle').textContent=userInfo.objName+' · '+userInfo.activity;
-    var circ=345.4,offset=circ*(1-score/100);
-    var color=score>=80?'#22c55e':score>=60?'#f59e0b':'#ef4444';
-    var arc=document.getElementById('resultArc');
-    arc.style.stroke=color;
-    setTimeout(function(){arc.style.strokeDashoffset=offset;},80);
-    animateCount('resultPct',0,score,'%',1400);
-    document.getElementById('statOk').textContent=correct;
-    document.getElementById('statFail').textContent=failed;
-    var badge=document.getElementById('resultBadge');
-    var lbl=score>=80?'Yüksək Uyğunluq':score>=60?'Orta Uyğunluq':'Aşağı Uyğunluq';
-    var bc=score>=80?'badge-green':score>=60?'badge-orange':'badge-red';
-    badge.textContent=lbl;badge.className='result-badge '+bc;
-    if(failed>0){
-      document.getElementById('resultPerfect').style.display='none';
-      document.getElementById('resultTableSection').style.display='block';
-      var rows='';
-      for(i=0;i<TOTAL;i++){
-        if(answers[i]===false){
-          rows+='<tr><td>'+QUESTIONS[i].q+'</td><td>'+QUESTIONS[i].law+'</td><td>'+QUESTIONS[i].cor+'</td></tr>';
-        }
-      }
-      document.getElementById('resultTableBody').innerHTML=rows;
-    }else{
-      document.getElementById('resultTableSection').style.display='none';
-      document.getElementById('resultPerfect').style.display='block';
-    }
-  }
-
-  function animateCount(id,from,to,sfx,dur){
-    var el=document.getElementById(id),start=null;
-    function step(ts){
-      if(!start)start=ts;
-      var p=Math.min((ts-start)/dur,1);
-      el.textContent=Math.round(from+(to-from)*p)+sfx;
-      if(p<1)requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
-  function quizRestart(){
-    var i;for(i=0;i<TOTAL;i++){answers[i]=null;}
-    currentQ=0;
-    document.getElementById('quizResultScreen').style.display='none';
-    document.getElementById('quizQScreen').style.display='block';
-    document.getElementById('quizContainer').scrollTop=0;
-    showQuestion(0);
-  }
-
-  function az(s){
-    return String(s)
-      .replace(/ə/g,'e').replace(/Ə/g,'E')
-      .replace(/ı/g,'i').replace(/İ/g,'I')
-      .replace(/ğ/g,'g').replace(/Ğ/g,'G')
-      .replace(/ş/g,'s').replace(/Ş/g,'S')
-      .replace(/ü/g,'u').replace(/Ü/g,'U')
-      .replace(/ö/g,'o').replace(/Ö/g,'O')
-      .replace(/ç/g,'c').replace(/Ç/g,'C')
-      .replace(/–/g,'-').replace(/—/g,'-');
-  }
-
-  function downloadPDF(){
-    var doc=new window.jspdf.jsPDF('p','mm','a4');
-    var correct=0,i;
-    for(i=0;i<TOTAL;i++){if(answers[i]===true)correct++;}
-    var failed=TOTAL-correct,score=Math.round((correct/TOTAL)*100);
-    var today=new Date();
-    var ds=today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
-    var col=score>=80?[34,197,94]:score>=60?[245,158,11]:[239,68,68];
-    var rlbl=score>=80?'Yuksek Uygunluq':score>=60?'Orta Uygunluq':'Asagi Uygunluq';
-    doc.setFillColor(17,24,39);doc.rect(0,0,210,36,'F');
-    doc.setTextColor(255,255,255);doc.setFontSize(14);doc.setFont('helvetica','bold');
-    doc.text('ASR Development Consulting Group',105,14,{align:'center'});
-    doc.setFontSize(10);doc.setFont('helvetica','normal');
-    doc.text('Qida Tehlukesizliyi Diaqnostika Hesabati',105,24,{align:'center'});
-    doc.setFontSize(8);doc.setTextColor(156,163,175);
-    doc.text('Tarix: '+ds,196,32,{align:'right'});
-    doc.setTextColor(40,40,40);doc.setFillColor(249,250,251);
-    doc.roundedRect(14,42,182,40,3,3,'F');
-    doc.setFontSize(9);doc.setFont('helvetica','bold');doc.text('Muessise Melumatlari',20,52);
-    doc.setFont('helvetica','normal');doc.setFontSize(8.5);
-    doc.text('Obyektin adi: '+az(userInfo.objName),20,61);
-    doc.text('Telefon:      '+az(userInfo.phone),20,69);
-    doc.text('Fealiyyet:    '+az(userInfo.activity),110,61);
-    doc.text('E-mail:       '+az(userInfo.email),110,69);
-    doc.text('Mehsul:       '+az(userInfo.product),20,77);
-    doc.setFillColor(col[0],col[1],col[2]);
-    doc.roundedRect(14,90,52,30,3,3,'F');
-    doc.setTextColor(255,255,255);doc.setFontSize(24);doc.setFont('helvetica','bold');
-    doc.text(score+'%',40,109,{align:'center'});
-    doc.setTextColor(40,40,40);doc.setFontSize(8.5);doc.setFont('helvetica','bold');
-    doc.text(rlbl,40,126,{align:'center'});
-    doc.setFont('helvetica','normal');doc.setFontSize(9);
-    doc.text('Uygun:     '+correct+' / '+TOTAL,76,100);
-    doc.text('Uygunsuz: '+failed+' / '+TOTAL,76,109);
-    doc.setFontSize(8);doc.setTextColor(107,114,128);
-    doc.text('AR Qida Tehlukesizliyi Qanununa esasen qiymetlendirme',76,118);
-    if(failed>0){
-      var rows=[];
-      for(i=0;i<TOTAL;i++){
-        if(answers[i]===false){
-          rows.push([QUESTIONS[i].id+'. '+az(QUESTIONS[i].q),az(QUESTIONS[i].law),az(QUESTIONS[i].cor)]);
-        }
-      }
-      doc.autoTable({
-        startY:136,
-        head:[['Uygunsuzluq askar edilmis sual','Normativ Istinad','Duzeldici tedbir']],
-        body:rows,
-        styles:{fontSize:8,cellPadding:3,overflow:'linebreak',font:'helvetica'},
-        headStyles:{fillColor:[180,142,66],textColor:255,fontStyle:'bold',fontSize:8},
-        columnStyles:{0:{cellWidth:76},1:{cellWidth:44},2:{cellWidth:62}},
-        alternateRowStyles:{fillColor:[250,250,250]},
-        margin:{left:14,right:14}
-      });
-    }else{
-      doc.setFontSize(11);doc.setTextColor(22,163,74);doc.setFont('helvetica','bold');
-      doc.text('Mukemmel netice! Muessise butun teleblerle tam uygunluq gosterir.',105,148,{align:'center'});
-    }
-    var pages=doc.internal.getNumberOfPages();
-    for(i=1;i<=pages;i++){
-      doc.setPage(i);doc.setFontSize(7.5);doc.setTextColor(156,163,175);doc.setFont('helvetica','normal');
-      doc.line(14,285,196,285);
-      doc.text('ASR Development Consulting Group  |  office@asrgroup.az  |  +994 50 208 58 38',105,290,{align:'center'});
-      doc.text('Seh. '+i+'/'+pages,196,290,{align:'right'});
-    }
-    doc.save('ASR-Diaqnostika-'+ds+'.pdf');
-  }
-
-  document.getElementById('qLangBtn').addEventListener('click',function(e){
-    e.stopPropagation();
-    document.getElementById('qLangDd').classList.toggle('open');
-  });
-  document.addEventListener('click',function(){
-    document.getElementById('qLangDd').classList.remove('open');
-  });
-
-  var fy=document.getElementById('footer-year');
-  if(fy)fy.textContent=new Date().getFullYear();
-  </script>
+  <script src="../../js/pages/diagnostic-az.js"></script>
 </body>
+
 </html>
