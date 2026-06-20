@@ -1426,7 +1426,7 @@ body.dark-mode .process-grid::before {
   max-width: 320px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  margin-left: 230px;
+  margin-left: 164px;
   margin-top: -60px;
   margin-bottom: 30px;
 }
