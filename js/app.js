@@ -346,6 +346,10 @@ function scrollToTop() {
     expCurrent = ((idx % tot) + tot) % tot;
     var gap   = 24;
     var cardW = (expOuter.offsetWidth - (pv - 1) * gap) / pv;
+    expCards.forEach(function(c) {
+      c.style.width    = cardW + 'px';
+      c.style.minWidth = cardW + 'px';
+    });
     expTrack.style.transform = 'translateX(-' + (expCurrent * pv * (cardW + gap)) + 'px)';
     expDots.querySelectorAll('.exp-dot').forEach(function(d, i) {
       d.classList.toggle('active', i === expCurrent);

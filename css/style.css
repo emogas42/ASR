@@ -1602,15 +1602,17 @@ body.modal-open { overflow: hidden; }
 /* Track */
 .experts-track {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 24px;
   transition: transform 0.6s cubic-bezier(0.77, 0, 0.18, 1);
   will-change: transform;
 }
 
-/* Individual card */
+/* Individual card — width is set in px by JS */
 .exp-card {
-  flex: 0 0 calc(33.333% - 1rem);
-  min-width: calc(33.333% - 1rem);
+  flex: 0 0 auto;
+  min-width: 0;
   background:var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -1753,23 +1755,11 @@ body.modal-open { overflow: hidden; }
   border-radius: 50px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .exp-card {
-    flex: 0 0 calc(50% - 0.75rem);
-    min-width: calc(50% - 0.75rem);
-  }
-}
+/* Responsive — card widths are set by JS; only adjust container margins & image height */
 @media (max-width: 640px) {
-  .exp-card {
-    flex: 0 0 85%;
-    min-width: 85%;
-  }
   .experts-track-outer {
-    margin: 0 48px;
+    margin: 0 20px;
   }
-  .exp-prev { left: 4px; }
-  .exp-next { right: 4px; }
   .exp-card-img-wrap { height: 200px; }
 }
 
@@ -1871,23 +1861,6 @@ body.dark-mode .exp-arrow:hover {
   }
   
 
-}
-@media (max-width: 640px) {
-
-  .exp-card {
-    flex: 0 0 100%; 
-    min-width: 100%;
-  }
-
-
-  .experts-track-outer {
-    margin: 0 20px; 
-  }
-
-
-  .experts-track {
-    gap: 24px; 
-  }
 }
 
 .btn-primary {
@@ -5014,15 +4987,6 @@ body:not(.dark-mode) .asr-svc-eyebrow-dot {
 
   .bsstat-num  { font-size: 1.3rem; }
   .bsstat-lbl  { font-size: 0.55rem; }
-}
-.exp-arrow{
-  
- top: 61%;
-}
-@media (max-width:768px){
-  .exp-arrow{
-    top: 54.5%;
-  }
 }
 
 
