@@ -374,14 +374,27 @@ function scrollToTop() {
     }
   });
  
+  function expSetArrows() {
+    var cb = expPrev.offsetParent;
+    if (!cb) return;
+    var trackRect = expTrack.getBoundingClientRect();
+    var cbRect    = cb.getBoundingClientRect();
+    var topVal    = (trackRect.top + trackRect.height / 2) - cbRect.top;
+    expPrev.style.top = topVal + 'px';
+    expNext.style.top = topVal + 'px';
+  }
+
   var expResizeT;
   window.addEventListener('resize', function() {
     clearTimeout(expResizeT);
-    expResizeT = setTimeout(function() { expBuildDots(); expGoTo(expCurrent); }, 200);
+    expResizeT = setTimeout(function() { expBuildDots(); expGoTo(expCurrent); expSetArrows(); }, 200);
   });
- 
+
   expBuildDots();
   expGoTo(0);
+  // Defer so browser finishes full layout (image + text heights) before measuring
+  setTimeout(expSetArrows, 0);
+  window.addEventListener('load', expSetArrows);
   expRestart();
 })();
 

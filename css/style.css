@@ -1786,8 +1786,8 @@ body:not(.dark-mode) .exp-card:hover .exp-cert-badge {
 
 /* Yenilənmiş Slayd Oxları Dizaynı */
 .exp-arrow {
-  position:absolute;
-  top: 50.3%; /* Kartların mərkəzinə daha yaxın */
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 25;
   width: 54px;
