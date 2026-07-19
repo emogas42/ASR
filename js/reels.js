@@ -29,7 +29,8 @@ class ReelCarousel {
 
     this.navUp = document.querySelector('.reel-nav-up');
     this.navDown = document.querySelector('.reel-nav-down');
- 
+    this.modalVideo = document.getElementById('modalVideo');
+
     if (!this.videosGrid) return;
  
     this.setupData();
@@ -54,6 +55,13 @@ class ReelCarousel {
  
   setupData() {
     this.reelVideos = [
+      {
+        id: 0,
+        thumbnail: '', // upload thumbnail later
+        video: '../videoes/Press_reliz_gorus.mp4',
+        title: 'UZAZ Biznes Klubu – Rəsmi Təqdimat',
+        description: 'Daşkənd, 18 İyul 2026'
+      },
       {
         id: 1,
         thumbnail: 'https://img.youtube.com/vi/WZSk9IL6Ryo/hqdefault.jpg',
@@ -128,14 +136,24 @@ class ReelCarousel {
     this.reelVideos.forEach((reel, index) => {
       const card = document.createElement('div');
       card.className = 'reel-card';
+      const isLocalVideo = !reel.thumbnail && reel.video && !this.getYouTubeId(reel.video);
+      const thumbContent = reel.thumbnail
+        ? `<img class="reel-card-image" src="${reel.thumbnail}" alt="${reel.title}" />`
+        : isLocalVideo
+          ? `<video class="reel-card-image" src="${reel.video}" preload="metadata" muted playsinline></video>`
+          : `<div class="reel-card-image" style="background:#111;width:100%;height:100%;"></div>`;
       card.innerHTML = `
-        <img class="reel-card-image" src="${reel.thumbnail}" alt="${reel.title}" />
+        ${thumbContent}
         <div class="reel-card-overlay">
           <button class="reel-play-btn" aria-label="Oynat">
             <i class="fas fa-play"></i>
           </button>
         </div>
       `;
+      if (isLocalVideo) {
+        const vt = card.querySelector('video.reel-card-image');
+        vt.addEventListener('loadedmetadata', function () { this.currentTime = 3; });
+      }
       
       card.addEventListener('click', () => this.openModal(index));
       this.videosGrid.appendChild(card);
@@ -245,10 +263,16 @@ class ReelCarousel {
       // YouTube embed
       this.modalIframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1`;
       this.modalIframe.style.display = 'block';
-    } else {
-      // Direct video fallback
+      if (this.modalVideo) { this.modalVideo.pause(); this.modalVideo.src = ''; this.modalVideo.style.display = 'none'; }
+    } else if (reel.video) {
+      // Local video file
       this.modalIframe.src = '';
       this.modalIframe.style.display = 'none';
+      if (this.modalVideo) {
+        this.modalVideo.src = reel.video;
+        this.modalVideo.style.display = 'block';
+        this.modalVideo.play().catch(function(){});
+      }
     }
     this.modalTitle.textContent = reel.title;
     this.modalDesc.textContent = reel.description;
@@ -344,10 +368,8 @@ class ReelCarousel {
     document.body.style.top = '';
     document.body.style.width = '';
     window.scrollTo(0, this._savedScrollY || 0);
-    // Stop the iframe by clearing src
-    if (this.modalIframe) {
-      this.modalIframe.src = '';
-    }
+    if (this.modalIframe) { this.modalIframe.src = ''; }
+    if (this.modalVideo) { this.modalVideo.pause(); this.modalVideo.src = ''; }
   }
 }
  
