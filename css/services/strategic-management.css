@@ -77,7 +77,30 @@
       background: var(--accent-light); color: var(--accent);
       border: 1px solid rgba(26,86,219,0.15);
     }
- 
+    .pillar-read-more {
+      flex-basis: 100%;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, gap 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+    .pillar-card:hover .read-more-btn {
+      border-bottom-color: var(--gold);
+      gap: 10px;
+    }
+
     /* ── PROCESS SECTION ──────────────────────────────────── */
     .process-section { background: var(--bg); }
  
